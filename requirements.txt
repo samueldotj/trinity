@@ -1,3 +1,7 @@
 beautifulsoup4
 lxml
 requests
+anthropic
+fastembed
+rapidfuzz
+numpy

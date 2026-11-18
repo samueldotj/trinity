@@ -1,0 +1,13 @@
+﻿8598 questions; embedding...
+5788 groups (1143 with 2+ questions, largest 30); merging...
+8598 questions -> 6613 canonical questions; merge cost $10.16
+review: C:\Users\samue\trinity\corpus\qa\questions_run4.md
+6613 questions in 752 groups; naming topics...
+  merge round 1: 2322 -> 1704 topics
+  merge round 2: 1704 -> 1481 topics
+  merge round 3: 1481 -> 1293 topics
+  merge round 4: 1293 -> 1094 topics
+2322 topics -> 1094 after merging
+writing comparisons for 563 multi-author topics...
+1094 topics, 6613 questions; topic cost $22.73
+review: C:\Users\samue\trinity\corpus\qa\kb_run4.md
