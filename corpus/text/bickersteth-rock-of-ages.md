@@ -1,0 +1,1629 @@
+# The Rock of Ages; or, Scripture Testimony to the One Eternal Godhead (later: The Trinity)
+
+**Author:** Edward Henry Bickersteth  
+**Date:** 1859  
+**Translator:** —  
+**Edition:** Simpkin, Marshall 1859 (newscriptorium.com transcription; spelling selectively modernized)  
+**Source:** https://newscriptorium.com/assets/books/anglican/miscellany/Bickersteth_Rock_of_Ages_Trinity.htm
+
+## Front matter *(editorial)*
+
+The Rock of Ages;
+
+Or
+
+Scripture Testimony to the One Eternal Godhead of
+
+The Father, and of The Son, and of The Holy Ghost.
+
+By Edward Henry Bickersteth
+
+Simpkin, Marshall, 1859.
+
+[Spelling selectively modernized. Bible citations converted to all Arabic numerals. Footnotes moved into or near their places of citation.]
+
+## Preface
+
+The title page of this Treatise may sufficiently indicate the line of argument I have attempted to pursue. My standard of reference throughout, has been, the memorable precept, “Trust ye in the Lord forever, for in the Lord Jehovah is the Rook of Ages.” (Isa. 26:4.) That the one infinite God claims our supreme and undivided confidence; that the same confidence is, on the warrant of Scripture, to be reposed in the Father, and in the Son, and in the Holy Ghost; and that therefore Father, Son, and Spirit are equally God over all, blessed forever, the Triune Jehovah, in whose name alone we trust, on whose arm alone we rely, and whose majesty alone we adore and love: – such is the brief outline of a train of thought indelibly impressed many years ago on my own mind.
+
+Local circumstances, to which I allude in my opening chapter, induced me this autumn to commit these thoughts to paper. I intended to write only a brief pamphlet. But I found that proofs from the written word accumulated upon me so rapidly, that I could not duly sketch this most momentous of subjects in so cursory a way. I therefore suffered Scripture as it were to lead me by the hand: until by compiling and illustrating Bible evidence alone, my little essay swelled to nearly its present dimensions. And when the rough draft of my manuscript was to some extent completed, I did not scruple to avail myself of the labours of those authors, to which I have from time to time referred, so far as my limited leisure permitted me to consult them. I especially allude to Dr. Pye Smith’s “Scripture Testimony to the Messiah”: my readers will find how much I am indebted to that truly learned and elaborate work. I would also mention a short but valuable treatise, now out of print, by the late Mr. Serjeant Sellon; Dwight’s Theology, vol. ii; Wardlaw’s Discourses; Serle’s Horae Solitariae; Lectures at Christ Church, Liverpool; Scholefield’s Hints; Dr. Gordon’s Supreme Godhead of Christ; and Jones’ Catholic Doctrine of a Trinity: though to many of these authors I have only been able to refer, as isolated passages led me to desire to know their judgment on contested interpretations. With respect to the last, “Jones’ Catholic Doctrine,” which contains so much in so brief a space, I had not seen it until my Treatise was almost finished. His system of proof is in some respects similar to mine: but even my threefold comparison in the last chapter of this work, which resembles his arrangement the nearest, was commenced before the possession of his work enabled me to enrich this and two or three earlier sections likewise, with some most apposite quotations gleaned by him from the Word of God. I mention this only to show that my collection of Scriptural evidence was, in the main, independent; for in such a subject, of all others, claims of originality can have no place. Here eminently, κοινα τα των Φίλων. But while speaking of other writers, may I be permitted to urge any, who do not know them, to study some essays “On the Religions of Man and the Religion of God,” by the late Professor Vinet, of Lausanne? [The work is called “Vital Christianity”: and is well translated by an American pastor. It is published in a very cheap form, by W. Collins, Paternoster Row, London.] Space alone prevented my quoting at the close of this book a large portion of his admirable remarks on the mysteries of Christianity. He is not unjustly called the Chalmers of Switzerland; for in his hands the deepest subjects bloom with life and love.
+
+But after all, our appeal must be to One Book. I have honestly tried to understand the views of sincere Unitarians; but I can come to no other conclusion, than that while sometimes freely using the language of Scripture with respect to our Lord, they regard Him only as a most highly exalted and divinely endowed Creature. In a word, to them He is not God. And therefore, on their hypothesis, if men trust in Him for eternal salvation, reposing their entire confidence in Him, they are trusting in a creature, which is idolatry. (Jer. 17:5–8.) Whereas if they do not so trust in Him, they are rejecting the only name under heaven given among men whereby we must be saved. (Acts 4:12.) From this disastrous alternative I see no possible escape.
+
+I rejoice to think, however, they are bound down by no definite creed of error. They are, to use their own emphatic expression, “a drifting body”. O that it might please God that the movement amongst the American Unitarians might spread to our own land! And whilst they profess to draw their faith from the oracles of truth, who can despair of their being brought back to the one flock, and the one Shepherd? For “the law of the Lord is perfect, converting the soul”; “the entrance of thy words giveth light”; “the sword of the Spirit is the word of God.” In the humble hope that some may be led to search anew, and to believe at last the Scriptures which testify of Jesus, these pages have been written: and utterly disclaiming all confidence in any other weapons, my one prayer is that the Divine Spirit may cast down imaginations and every high thing that exalteth itself against the knowledge of God, and may bring into captivity every thought to the obedience of Christ.
+
+Christ Church Parsonage, Hampstead.
+
+7th December, 1859.
+
+## Chapter 1. Introduction. Preparation of heart. Our position before God.
+
+A deep conviction that many who refuse to acknowledge the Godhead of our Lord Jesus Christ, have never duly examined one line of Scriptural argument which presents to my own mind the most conclusive evidence of this foundation truth, induces me though “in weakness and in fear and in much trembling” to ask their patient and prayerful perusal of this Treatise. My hesitation arises not from the least doubt of the security of the doctrine; but from consciousness how unequal I am to do justice to the proofs which establish it, from a most affectionate concern for the souls of those to whom I write, and from a deep assurance that in the rejection or cordial acceptance of this truth are bound up the issues of eternal death or eternal life. (John 3:36; 2 John 9.)
+
+I am well aware that many larger and more elaborate treatises, written by far abler advocates, are within their reach: but sometimes, an essay written by a neighbour will be read with courteous interest when volumes of far deeper research are passed by. And my lot has been cast where many Unitarians [I use the word “Unitarians” as the distinctive name they have assumed: but under protest, that it does not fairly set forth the points at issue betwixt us, if for no other reason, for this that we cleave to the Unity of God as tenaciously as they.] reside: their acts of kindness and benevolence are continually making themselves felt amongst us, and proofs are multiplied on every side of their own mental culture, and of their desire for the moral elevation of the poor. Who that delights in things lovely and of good report can refrain from loving their excellencies? I long over them: and yet my opportunities of intercourse are of necessity casual and limited. Hence, if it will not seem presumptuous, I know not how better to account for my present Address than in the language of St. Paul on behalf of his kinsmen – “Brethren, my heart’s desire and prayer to God for Israel is that they might be saved.” (Rom. 10:1.)
+
+Another motive weighs with me – may I ask my reader’s forgiveness for any personal allusion? – but I believe few can have passed through years of more incessant spiritual conflict than myself, and this long after I had embraced the Gospel with the affections of my soul. Apparent scriptural contradictions staggered me: for I found to my cost the Tempter could assail us as he assailed our Master, (Matt. 4:6) saying, “It is written.” The battle raged over the whole field of revealed truth, though chiefly around the central fact of our holy faith, the Divinity of the Son of God. The bible was my only sword, prayer my only resource, until, through the infinite mercy of God, those very truths around which skeptical doubts had once clustered most thickly, became the strongest bulwarks to which, when assailed on other points, I used to resort. Since that time, in the course of my ministry during the last ten years, I have had many difficulties brought before me by Unitarians and others, but scarcely ever a perplexity which had not been suggested to my own mind, and over which I had not fought oftentimes a painful fight. So that at least I can say with Virgil’s heroine, “Non ignara mali miseris succurrere disco”: and I can conceive no purer joy on earth than that of being permitted to lead some other tempest-tossed spirit to that faith where I have found security and peace. Those I address will at least find here no artificial fencing, for I am no trained swordsman in this controversy: but sometimes it has pleased God to overcome gigantic error, not by the skillful gladiator clad in the panoply of learning, but by a few smooth stones from the sling of a shepherd boy.
+
+And here if any earnest student designs to give me his attention I would ask him to pause, and to pour out his heart in prayer that he may be guided into all truth. Such an enquirer feels with me, that eternal life is wrapped up in “the knowledge of the only true God, and of Jesus Christ, whom He hath sent”; that “God is, and that He is a rewarder of the man that diligently seeks him”; (John 17:3, Heb. 11:6) and will therefore feel no difficulty in uniting with me in such or such like petitions, every clause of which is taken from Scripture: –
+
+“Almighty God, the God and Father of our Lord Jesus Christ, who inhabitest eternity, who dwellest in the high and holy place, (Eph. 1:3) but with him also who is of a contrite and humble spirit, to revive the spirit of the humble, and to revive the heart of the contrite ones (Isa. 57:15): grant me to understand the fear of the Lord, (Prov. 2:5) and to find the knowledge of God. (Job. 11:7.) I cannot by searching find out Thee unto perfection, the King, eternal, immortal, invisible. (1 Tim. 1:17.) But look down from heaven, and behold from the habitation of thy holiness and of thy glory. (Isa. 63:15–16.) Doubtless thou art my Father. Show mercy upon me, and be gracious unto me. Search me, O God, and know my heart, try me and know my thoughts, and see if there be any way of grief in me, and lead me in the way everlasting. (Ex. 33:19. Psa. 139:23–24. See margin.) I plead the promise of Jesus, if ye being evil, know how to give good things to your children, how much more shall your heavenly Father give the Holy Spirit to those that ask him. (Luke 11:13.) Hear me speedily, O Lord, (Psa. 143:7, 10) hide not thy face from me – thy Spirit is good: lead me. For I ask in the name of Jesus, who is able to save to the uttermost those that come unto Thee by him, seeing He ever liveth to make intercession for them, and who hath said, whatsoever ye shall ask in my name, that will I do, that the Father may be glorified in the Son.” (Heb. 17:25, John 14:13.)
+
+O solemn and blessed pursuit! We are seeking the Lord. Strip the words, I pray you, of every unmeaning association, and yield your whole being, understanding, heart, conscience, will, to the momentous enquiry. Let us humble ourselves with the, recollection, (Isa. 45:15) “Verily, thou art a God that hidest thyself, O God of Israel, the Saviour.” Let us encourage ourselves with the quickly succeeding assurance, (verse 19) “I said not unto the seed of Jacob, seek ye me in vain.” Thus though there will, there must be in the self-revelation of Him, whose ways are past finding out, mysteries beyond the reach and range of our finite capacities, all necessary and saving knowledge is promised to the humble student; for the words of the Psalmist have lost nothing of their significance by the lapse of time, “Though the Lord be high yet hath He respect unto the lowly, but the proud he knoweth afar off,” and again, “The Lord is nigh unto them that are of a broken heart, and saveth such as be of a contrite spirit.” (Psa. 138:6, 34:18.)
+
+These words point to a preparation of the heart. I ask not then, my friends, that you should enquire first of all into the nature of God’s mysterious Being, the Divinity of Jesus Christ, and the personality of the Holy Spirit. There is a prior investigation which demands your earnest heed, and which pursued with prayerful study of the word of God, will by his grace awaken and cultivate that disposition of mind which is fitted for the after enquiry. Starting from those truths you acknowledge, What, I ask, is your relation to God, what your position before Him as recorded in Scripture?
+
+You admit that God is the Supreme Creator and Father, and Governor, and Judge of all men. You confess that He is infinitely holy, and just, and good. You acknowledge that He is himself perfect love, and must of necessity require the perfect love of his creatures for the sake of his own glory and of their happiness. That grand epitome of his righteous code of government commends itself to your inmost conscience, “Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy strength: and thou shalt love thy brother as thyself.” (Matt. 22:37–39.) If you look higher than man to the pure intelligences around the throne of glory, you can conceive no other law binding together the perfect society of heaven. It is the utterance of the mind of the blessed God. But now, looking abroad as a practical and thoughtful man upon the world as it is, what meets your eye? selfishness, misery, discord, enmity, rebellion, in one word, sin. Some sights of woe move you to compassionate tears, and your heart is wrung for the calamities of human kind; some deeds of rapine excite in you a righteous indignation, and you exclaim “such atrocities worthily deserve to be punished.” You are pitiful and you are just. But remember your sense of pity and of equity is only a faint reflection from that in the bosom of the infinite Jehovah. His compassions fail not. His righteousness is everlasting. (Lam. 3:22. Psa. 119:142.) He is Father, and Legislator, and Judge in one. Sin violates every obligation: it wounds the heart of the eternal Father. Listen to his pathetic appeal, “Hear, O heavens, and give ear O earth, for the Lord hath spoken: I have nourished and brought up children and they have rebelled against me.” (Isa. 1:2.) It sets at naught the wise regulations of the Lawgiver. He complains, “I gave them my statutes, and showed them my judgements, which if a man do he shall even live in them; notwithstanding the children rebelled against me, they walked not in my statutes, neither kept my judgements to do them.” (Ez. 20:11, 21.) It is provoking the judicial condemnation of Him who now expostulates, “Knowest thou not that the goodness of God leadeth thee to repentance, but after thy hardness and impenitent heart treasurest up unto thyself wrath against the day of wrath and revelation of the righteous judgement of God, who will render to every man according to his deeds.” (Rom. 2:4–6.)
+
+To enquire then what is the nature of sin, its character, course, and issue, is only the part of a rational, intelligent being. But herein, especially, it behooves us to lay aside all prejudice and pride, to remember how distasteful all revelations of our own corruptions must be to the natural heart, and to reflect that the plague, the diagnosis of which we would learn, itself impairs our perceptive faculties. Here then, let us humble ourselves as a little child. Here, as we open the sure word of God, let us answer with Samuel of old, “Speak, Lord, for thy servant heareth.” (Matt. 18:3–4. 1 Sam. 3:9.) And here, if the probe cut deep, let us be assured, “Faithful are the wounds of a friend,” and loving is the correction of a Father who smites that he may heal and “bind up the broken in heart.” (Prov. 27:6. Isa. 61:1.)
+
+This evil of sin is not superficial, but radical. It pervades human life from the cradle to the grave. Behold, I was shapen in iniquity and in sin did my mother conceive me. The thought of foolishness is sin. Foolishness is bound up in the heart of a child. The imagination of man’s heart is evil from his youth. The heart is deceitful above all things and desperately wicked. From within, out of the heart, proceed evil thoughts ... all these evil things come from within and defile the man. (Psa. 51:5. Prov. 24:9, 22:15. Gen. 8:21. Jer. 17:9. Mark 7:21–23.)
+
+This evil is not partial, but universal. None have escaped from it. “There is not a just man upon earth that doeth good and sinneth not.” There is none righteous, no not one. All the world becomes guilty before God. All have sinned and come short of the glory of God. (Eccl. 7:20. Rom. 3:10, 19, 23.)
+
+This evil is not self-remedial; but so far as lies in man, incurable. Who can bring a clean thing out of an unclean? Not one. How then can man be justified with God? or how can he be clean that is born of a woman? Can the Ethiopian change his skin, or the leopard his spots? then may ye also do good that are accustomed to do evil. (Jer. 30:15. Job 14:4, 25:4.)
+
+This evil is fatal. “In the day thou eatest thereof, (Gen. 2:17) dying thou shalt die,” was the warning of faithful love to Adam, and upon the fall moral and spiritual death marched like a pestilence through man’s noble soul. The land was as the garden of Eden before it, and behind it a desolate wilderness. Hence disease and decay, those symbols of a deeper malady. (James 1:15.) And sin, when it is finished, bringeth forth death. Death passes upon all men, for that all have sinned. And to those who die in their sins, (Rom. 5:12) this death of the body is the awful introduction of that second death, when “whosoever not found written in the book of life is cast into the lake of fire.” (Rev. 20:14–15.)
+
+Let us then return to the question what is our own position by nature before God? (O merciful Father, teach me who write and those who read these lines to know ourselves!) Does not that law of perfect love condemn us? does it not bring us in guilty before Him whose eyes are as a flame of fire? have not we rebelled against the majesty of Jehovah? have we not deeply wounded the paternal heart of Him who is infinite love? Alas, we have not escaped this universal corruption. We are convicts, self-condemned. We are sinners. Oh, to realize the true meaning of the word! When a man sins against his fellow, a child against his parent, a servant against his master, we appreciate the guilt. But who shall estimate the ingratitude of sin against God? All other facts are trivial compared with this – we are sinners – for sin uncleansed and unchecked is present defilement and final death.
+
+Such is our position: a humiliating one in truth to the awakened conscience: guilty, and therefore craving pardon; weak, and therefore casting about for help; in darkness, and therefore crying out for light. What must I do to be saved? until this is answered, every other question is a grand impertinence – saved from sin, its guilt, its power, its issue? Lord, to whom shall we go? the cry pierces heaven, and reaches the throne of the Eternal. Lord, to whom shall we go? And the response is given in the lively oracles of truth: “There is no God else beside me, a just God and a Saviour, there is none beside me. Look unto me and be ye saved all the ends of the earth, for I am God and there is none else.” (Isa. 45:21–22.)
+
+## Chapter 2. That Scripture, in the Old and the New Testament alike, detaches our ultimate confidence from man the creature, and attaches it to God the Creator; – by contrasting the sinfulness and feebleness of mortal man with the goodness and omnipotence of the Eternal Jehovah: by direct prohibition and precept: by exhibiting the holy Jealousy of God.
+
+And this brings me to the first great proposition I would establish –
+
+That Scripture, in the Old and the New Testament alike, detaches our ultimate confidence from man, the creature, and attaches it to God, the Creator.
+
+This is enforced by three parallel lines of truth, (1) by contrasting the sinfulness and feebleness of mortal man with the goodness and omnipotence of the Eternal Jehovah; (2) by direct prohibition and precept; (3) by declaration of the awful jealousy of the Creator if any creature usurp His position in our affiance and in our regard.
+
+(1) The most casual glance at the contrast testimony of Scripture might convince us that such is the design of God.
+
+Scripture Testimony of Man.
+
+Scripture Testimony to God.
+
+1. We are but of yesterday And know nothing Because our days upon earth are a shadow. – Job. 8:9.
+
+1. Thou art from everlasting. – Psa. 93:2. All things naked to his eyes. – Heb. 4:13. He inhabiteth eternity. – Isa. 57:15.
+
+2. Ye are not able to do that thing which is least. – Luke 12:26.
+
+2. With God all things are possible. – Matt. 19:26.
+
+3. Thou art upon earth. – Eccl. 5:2.
+
+3. God is in heaven. – ib.
+
+4. We that are in this tabernacle do groan, being burdened. – 2 Cor. 5:4.
+
+Them that dwell in houses of clay, Whose foundation is in the dust, Which are crushed before the moth. – Job. 4:19.
+
+4. He stretcheth out the heavens as a curtain, and spreadeth them out as a tent to dwell in. – Isa.40:22. The heaven of heavens cannot contain thee. – 1 Kings 8:27. God is a Spirit. – John 4:24. The Lord God omnipotent. – Rev. 19:6.
+
+5. The thoughts of man – are vanity. – Psa. 94:11. Let not the wise man glory in his wisdom. – Jer. 9:23. He turneth wise men backward and maketh their knowledge foolish. – Isa. 44:25.
+
+5. The counsel of Jehovah standeth forever, And the thoughts of his heart to all generations. – Psa. 33:11. The immutability of his counsel. – Heb. 6:17.
+
+6. All flesh is grass, and all The goodliness thereof as the flower of the field. – Isa. 40:6.
+
+6. The eternal God – Deut. 33:27. The glory of Jehovah shall endure forever. –Psa. 104:31.
+
+7. There is none righteous, no, not one. – Rom 3:10.
+
+7. There is none holy as Jehovah. – 1 Sam. 2:2. There is none good but one, that is Good. – Matt. 19:17.
+
+8. The heart is deceitful above all things, and desperately wicked, Who can know it? – Jer. 17:9. Man looketh on the outward appearance. – 1 Sam. 16:7.
+
+8. God is light and in Him is no darkness at all. – 1 John 1:5. I the Lord search the heart. – Jer. 17:l0. But the Lord looketh at the heart. – 1 Sam. 16:7.
+
+9. A man that shall die. – Isa. 51:12.
+
+9. Who only hath immortality. – 1 Tim. 6:16.
+
+10. In Him we live and move and have our being. – Acts 17:28.
+
+10. The Father hath life in Himself. – John 5:26.
+
+11. Woe to him that striveth with his maker! Shall the clay say to Him that fashioneth it, What makest Thou? – Isa. 45:9.
+
+11. I have made the earth and created man upon it. – Isa. 45:12. He fashioneth the hearts (of the sons of men) alike. – Psa. 33:15.
+
+12. O Israel thou hast destroyed thyself. – Hosea 13:9.
+
+12. But in me is thy help. –ib.
+
+This testimony might be almost indefinitely prolonged; the above may suffice. But I would venture to draw your attention to three or four passages, where the contrast is forced upon our notice by the sacred writer himself.
+
+If, for example, we turn to the prayer of Moses, he reposes supreme trust in the Eternal – “Lord, Thou hast been our dwelling place for all generations. Before the mountains were brought forth or ever thou hadst formed the earth and the world, even from everlasting to everlasting thou art God,” (Psa. 90:1–2) – and contrasts this immutability of the Most High with the brief life of men – “They are as a sleep: in the morning they are like grass which groweth up. In the morning it flourisheth, and groweth up; in the evening it is cut down and withereth.” (verses 5–6) [I would pray the reader to compare the way in which this same figure, this parable to all nations, is enlarged upon Isa. 40:6–8, and is enforced in the New Testament, 1 Peter 1:24, James 1:10.] This was the lesson so often and so painfully taught Israel of old, by a Father’s solemn chastisements and forgiving love. From frequent expostulations I select one: “Woe to them that go down to Egypt for help, and stay on horses, and trust in chariots, because they are many, and in horsemen because they are very strong, but they look not unto the Holy One of Israel, neither seek the Lord.” (Isa. 31:1.) And what is the reason given? “Now the Egyptians are men and not God, and their horses flesh, and not Spirit.” (verse 3.) And what is the urgent entreaty founded thereon? “Turn ye unto Him, from whom the children of Israel have deeply revolted.” (verse 6) Again, this message is sent to captive Zion: “I, even I am He that comforteth you. Who art thou, that thou shouldest be afraid of a man that shall die, and of the son of man which shall be made as grass, and forgettest the Lord thy Maker that hath stretched forth the heavens and laid the foundations of the earth.” (Isa. 51:12–13. See verse 15.) Observe, in all these passages, how much stress is laid on the creative power of God as proof of his infinite preeminence. The Maker alone is mighty to save. And if it be so in temporal deliverances, how much more in respect of that eternal salvation which must engross the regards of every thoughtful man, seeing that the Psalmist says of the rich men of earth, “None can by any means redeem his brother, nor give to God a ransom for him, – for the, redemption of their soul is precious.” (Psa. 49:7–8.) “But God,” as he shortly after cries in the rebounding exultation of faith, “God will redeem my soul from the power of the grave, for He shall receive me.” (verse 15.)
+
+(2) Furthermore, the prohibitions and precepts are direct and express. “Put not your trust in princes nor in the son of man in whom there is no help. His breath goeth forth, he returneth to his earth, in that very day his thoughts perish. Happy is he that hath the God of Jacob for his help, and whose hope is in the Lord his God, which made heaven and earth, the sea, and all that therein is, who keepeth truth forever.” (Psa. 146:3–6.) So again, Isaiah having spoken of the fear of the Lord, and of the glory of his Majesty, says, “Cease ye from man, whose breath is in his nostrils, for wherein is he to be accounted of?” (Isa. 2:22.) I need not multiply passages to prove that the explicit commands of Scripture with one consentient voice require in the words of St. Peter, that our “faith and hope be in God.” (1 Peter 1:21.)
+
+(3) But nothing can prove this fundamental truth more solemnly than the words heard by Moses on Sinai, “Thou shalt worship no other God. For the Lord, whose name is Jealous, is a jealous God.” (Ex. 34:14.) Jealousy, as usually understood, is that peculiar uneasiness which arises from the fear that another may rob us of our due honor or affection. And with fallen man towards his fallen fellows this attribute of our being, from taking an exaggerated view of our own rights and claims, from unduly depreciating those of others, and frequently from unjustly suspecting their innocent conduct, becomes the readiest vent for the outflowings of selfishness. And hence the ill name of jealousy. But not always even among men. Thus we speak of a man, jealous for the fair name and best interests of his friend; as S. Paul says of the Corinthians, “I am jealous over you with Godly jealousy.” (2 Cor. 11:2.) And thus a man may be justly jealous of his own reputation, that “good name which is rather to be chosen than great riches.” (Prov. 22:1.) In this use it is closely allied to self-respect, and springs from a due sense of our own position and powers, of the claims which we have upon others, and of those mutual obligations, domestic, social, national, which lie upon us all. Now, in a sinless world, this estimate would be exactly true, and these requirements every moment perfectly satisfied. But when sin breaks in, the claims of man on man are violated: and justice of necessity conceives a holy anger and a pure indignation at that which is unjust and unequal. We see a broken fragmentary image of it in man, like the sun struggling through mist, and reflected on agitated waters. But in God it is without fault, or flaw, or cloud. He has an absolutely perfect knowledge of his own supreme majesty and goodness: He forms an absolutely perfect estimate of the claims that supremacy has on his creatures: and He conceives an absolutely perfect jealousy when those obligations are set at naught.
+
+Now, the Lord declares Himself to be Self-Existent from eternity, Omnipresent, Immutable, Almighty, Incomprehensible, Omniscient, the Good One, the Holy One, the Creator, Preserver and Administrator of all things in heaven and earth, the Searcher of hearts, and the Most High Judge of all. These attributes, indeed, would appertain to Him as governing a world which sin had never defiled, and sorrow never darkened, and death never desolated. But when man had broken his commands, and trodden the seductive paths of disobedience and guilt, the Lord gives a farther and deeper revelation of his Divine goodness and grace. He reveals himself as the Alone Being who forgives iniquity, transgression, and sin, as the Alone Refuge for the fugitive, as the Alone Saviour, Deliverer, and Redeemer of his people.
+
+Further, He claims the supreme dependence, love, worship, and service of his creatures. (Isa. 26:4. Deut. 6:4–5, 10:20–21, and verse 29.) This you would not for a moment deny, so that you could without scruple subscribe to the language of the Church of England, “my duty to God is to believe in him, to fear him, and to love him with all my heart, with all my mind, with all my soul, and with all my strength; to worship him, to give him thanks, to put my whole trust in him; to call upon him, to honour his holy name and his word, and to serve him truly all the days of my life.”
+
+But how does He regard it if any creature usurp his rightful prerogatives and steal away the homage of our hearts from Him who says, “I am Jehovah; that is my name: and my glory will I not give to another?” (Isa. 42:8.) Let me answer in the language of Scripture: “Thus saith the Lord, cursed be the man that trusteth in man, and maketh flesh his arm, and whose heart departeth from the Lord: for he shall be like the heath in the desert, and shall not see when good cometh; but shall inhabit the parched places in the wilderness, in a salt land and not inhabited. Blessed is the man that trusteth in the Lord, and whose hope the Lord is: for he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.” (Jer. 17:5–8.)
+
+It is impossible in a brief treatise to exhibit the strength of this declaration. These verses do not stand isolated from the rest of Scripture. They only gather up and present to us, in a few words, its concurrent testimony from Genesis to Revelation. (O Lord, cleanse Thou the thoughts of our hearts from all creature confidence, by the inspiration of thy Holy Spirit, that we may perfectly love Thee, and worthily magnify thy Holy Name!) For this truth stands on the forefront of the temple of Religion: “I am God, and there is none else.” (Isa. 46:9.) The dedication stone bears this golden inscription – “To the Alone Supreme, Eternal Jehovah.” And as you bow low within its holy precincts, this is the first and great commandment – “Thou shalt have none other Gods but Me.” And the response of every faithful worshipper is in the spirit of the Levitical adoration – “O Lord our God, blessed be thy glorious name, which is exalted above all blessing and praise. Thou, even thou, art Lord alone: thou hast made heaven, the heaven of heavens, with all their host, the earth, and all things that are therein, the seas, and all that is therein, and thou preservest them all; and the host of heaven worshipeth Thee. Thou art the Lord.” (Neh. 9:5–7.) Such adoration as is re-echoed in the courts of heavenly glory – “Thou art worthy, O Lord, to receive glory, and honour and power; for thou hast created all things, and for thy pleasure they are, and were created.” (Rev. 4:11.)
+
+## Chapter 3. That Scripture, in the Old and the New Testament alike, requires us to repose our ultimate confidence in the Lord Jesus Christ: as One who is distinct from the Father: as One to whom all the attributes of essential Deity are ascribed: as One whose infinite perfections claim supreme trust, adoration, and love.
+
+I would proceed then to my second proposition: – That Scripture, in the Old and New Testament alike, requires us to repose our ultimate confidence in the Lord Jesus Christ.
+
+Or in other words, I maintain that Scripture brings before us One mysterious Person, the Son of God, the Son of man, in wondrous union with the Father, but of distinct personality from the Father, to whom all these Divine attributes are ascribed, and who claims and receives, without protest, yea, as his just and inalienable right, equal trust, adoration, love, and service, with him who says, “I am Jehovah, my Name is Jealous, and my glory will I not give to another.”
+
+That the personality of the Father and the Son is distinct, and that they are neither to be identified nor confounded, is so self-evident a truth, and is so seldom denied by those to whom I write, that two or three Scripture proofs will abundantly suffice. At his baptism and transfiguration the voice of the Father was heard saying of him, “This is my beloved Son, in whom I am well pleased. (Matt. 3:17, 17:5.) Jesus addresses his Father in prayer. Jesus says, “It is written in your law, The testimony of two men is true. I am one that bear witness of myself, and the Father that sent me beareth witness of me” (John 8:17–18.): and further, which is incontrovertible evidence – for the will is the essence of personality – “I came down from heaven not to do mine own will, but the will of him that sent me.” (John 6:38.) But the tenets of Noetus and Sabellius, who denied this truth are so rarely affirmed by Unitarians, that with this brief notice I may at office proceed to bring scriptural testimony of all Divine attributes being predicated of the Son.
+
+For is the Father Eternal? Bethlehem was the predicted birthplace into our world of One “whose goings forth have been from of old, from everlasting.” (Micah 5:2.) The word who was made flesh and dwelt among us (John 1:2, 14) “was in the beginning with God”: and Himself assumes the incommunicable coeternal Name, I AM. (John 8:58) And He who appeared in vision to John in Patmos like unto the Son of man, declares, “I am Alpha and Omega, the beginning and the ending, which is, and which was, and which is to come, I am the first and the last. [“The strongest assertion that eternity past and to come belongs to Himself.” – Dwight. Compare Isa. 48:12.] I am He that liveth and was dead, and behold I am alive forevermore.” (Rev. 1:8, 13, 17–18. Cf. ch. 2:8.)
+
+Is the Father Omnipresent? Jesus says “Where two or three are gathered together in my name there am I in the midst of them.” (Matt. 18:20.) “There I am, not there I will be, referring to his Divine presence at all times. Two or three of his people (says Scott) may be thus met together in ten thousand places all over the earth at the same time, this must therefore be allowed to be a direct assertion of his omnipresent Deity. Again, “Lo, I am with you alway, even unto the end of the world.” (Matt. 28:20.) Is not this a positive declaration that He is with the apostles and succeeding ministers always unto the end of the world. But who can be so in all the separate and distinct regions in which they preached and do preach, except that Divine Being who filleth all things, that Divine Essence which occupies all space, that God who is a Spirit.” [Sellon’s Treatise on the Deity of Christ, pp. 22. The Unitarian suggestion that the end of the world signifies the end of the Jewish age, while it does not disprove the above argument, for such unfailing presence of a mere man with his apostles in their widespread evangelistic labours was as impossible for forty years as for eighteen centuries, is negatived by the only other instances of St. Matthew’s use of this phrase η συντέλεια του αιωνος, ch. 13:39–40, 49, where it plainly indicates the final day of judgment: and ch. 24:3, where a careful consideration of the two-fold question of the disciples, founded on the two-fold declaration ch. 23:38–39, and of the two-fold answer it receives, proves that the end of the world respects the second advent of Christ in glory. The further suggestion that the promise, “Lo, I am with you alway,” was fulfilled to St. Paul and others by the invisible bodily presence of Christ is refuted by St. Peter, who says of him, “Whom the heaven must receive until the times of the restitution of all things” – Acts 3:21, and by Christ Himself, who says, “And now I am no more in the world” – John 17:11. See Dwight on this passage.]
+
+Is the Father Immutable? “Jesus Christ is the same yesterday, today, and forever,” and, Unto the Son He saith, … “Thou, Lord, … art the same, and thy years shall not fail.” (Heb. 13:8. Heb. 1:8, 10, 12.)
+
+Is the Father Almighty? Creation demands omnipotence – “All things were made by him.” (John 1:3.) The sustentation of all things demands omnipotence – “By him all things consist.” (Col. 1:17.) Universal government demands omnipotence – “All authority in heaven and earth is given unto him.” (Matt. 28:18.) Coextensive operation with God the Father in a boundless empire demands omnipotence, and Jesus Christ, when explaining his words, My Father worketh hitherto and I work, declares, “What things soever He (the Father) doeth, these also doeth the Son likewise.” (John 5:17–19.) And a careful comparison of Rev. 1:8, with 5:13, 17, ch. 2:8, 22:13, need, as it seems to me, leave no doubt upon our mind that the Son of man declares of himself, “I am the Almighty.”
+
+Is the Father Himself Incomprehensible while comprehending all things? St. Peter said to our Lord absolutely, without qualification, and with reference to that prerogative of omniscience, heart-knowledge, “Lord, Thou knowest all things.” (John 21:17.) And Christ Jesus says of himself, “No man knoweth the Son but the Father, neither knoweth any man the Father save the Son, and he to whom the Son will reveal Him.” (Matt. 11:27.) “In this passage both the omniscience and incomprehensibility of Christ are declared by himself. He who knows the Father is omniscient; He who is known only by the Father is incomprehensible.” Dwight vol. ii. 77. John 10:15. Eph. 3:8, 19.) Also, he says, As the Father knoweth me, even so know I the Father. The riches of Christ are declared to be unsearchable. His love passeth knowledge. And, In him are hid all the treasures of wisdom and knowledge. (Col. 2:3.)
+
+Is the Father infinitely Good and Holy? so that “there is none good but one, that is God,” (Matt. 19:17) and again, “there is none holy, save Jehovah.” Jesus says, “I am the Good Shepherd,” (ο ποιμην ο καλός) the absolutely good one. Jesus is called, “The Holy One and the Just – the one who knew no sin – without sin, without spot –holy, harmless, undefiled – Jesus Christ the righteous, in whom is no sin – full of grace and truth.” (Acts 3:14, etc. Heb. 7:26. 1 John 2:2, etc.
+
+Is the Father the Creator, Preserver, and Governor of all things in heaven and earth? Jesus is the Creator, for “by him (the Son of his love) were all things created that are in heaven and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him and for him.” And without him (the Word) was not even one thing made that hath been made. Jesus Christ is the Preserver: for He, the Son, upholds all things by the word of his power. In him was life, and the life was the light of men – and because I live, He says, ye shall live also. Jesus is the supreme Governor: for to the Son He saith, Thy throne, O God, is forever and ever. He is over all, God blessed forever. He is King of kings and Lord of lords. And his dominion is an everlasting dominion which shall not pass away, and his kingdom that which shall not be destroyed. (Col. 1:16. John 1:3. Heb. 1:3. John 1:4. John 14:19. Heb. 1:8. Rom. 9:5. Rev. 19:16. Dan. 7:14. Compare also Luke 2:33.)
+
+Is the Father the Searcher of hearts? “These things saith the Son of God ... all the churches shall know that I am He who searcheth the reins and hearts”; and He, writes St. John, knew all men, and needed not that any should testify of man, for He knew what was in man. (Rev. 2:23. John 2:24–25.)
+
+Is the Father the Most High Judge of all? Jesus Christ likewise stands forth as the appointed Judge of all men. For it is written, “We must all appear before the judgment seat of Christ.” (2 Cor. 5:10.) And “when the Son of man shall come in his glory, and all the holy angels with him, then shall He sit upon the throne of his glory, and before him shall be gathered all nations, and He shall separate them one from another.” (Matt. 25:31–32.)
+
+Here then we have all the essential attributes [The only attribute ascribed to the Father, and not ascribed to Christ in Scripture is, so far as I am aware, “Invisible.” But having proved that in his Divine nature He is incomprehensible, the reason of this is manifest from the character He sustains as the medium of communication betwixt the Creator and the creatures of his hand.] of Godhead ascribed to Christ: and this, not in one or two obscure passages, but by a general consensus of those holy men who spake as they were moved by the Holy Ghost. Many other proof texts of similar character, if space had permitted, might have been brought forward. But these suffice. What do you who are seeking the Lord learn from them of your relation to Jesus Christ? He stands forth before you, who are but of yesterday, as Himself from everlasting (Job 8:9.): before you, whose life is a vapor, as having life in Himself: before you, who are tied to a narrow spot of earth, as Omnipresent: before you, a mutable man, as unchangeably the same: before you, who without him can do nothing, as Almighty: before you, who are not sufficient to think anything of yourself, as the Omniscient One whose riches are unsearchable (John 15:5. 2 Cor. 3:5.): before you, frail and defective, as the Holy and the Just One without sin: before you, a creature of the dust, as your Creator: before you, whose goodliness is as the flower of the field, as your Preserver: and before you, who confess your feebleness in self-government, your shortsightedness in self-knowledge, and your reliance on a court of final appeal, as the Ruler of all things, the Searcher of all hearts, and the Judge of all men. Can it be, that in the presence of such infinite goodness and glory, no feelings of adoration arise in your heart? It is not that He is at an immeasurable distance from you, so that what He is and what you are, have no intimate connection. But He made you, sustains you, watches you. The offices He fills towards you are those of God. And He is so unutterably good and gracious. What remains? If you believe this testimony, you must confide in him – you must love him – you must adore him. No other feelings than those of entire reliance and supreme love would at all answer the claims of such an one upon you. And they are the Scriptures of truth which, by portraying so gracious a Lord, have elicited that confidence and warranted that affection.
+
+But this is not all. Thus far we might argue with unfallen beings, and thus might urge those holy intelligences who left not their first estate, to obey the Divine command, (Heb. 1:6) “Let all the angels of God worship Him.” Let us remember our position before God, fallen, guilty, strengthless, and as reasonable beings, enquiring with the deepest anxiety, “What must I do to be saved?” Now it is not too much to say that the hopes of all mankind with regard to salvation, from the wreck of Paradise lost to the prophetic vision of Paradise restored, are fixed on this mysterious Son of Man. On Him, as the seed of the woman (Gen. 3:15) who should bruise the head of the serpent: as the Lord whose future advent (Jude 14) cheered the saintly Enoch: as the living Redeemer on whom the patriarch Job rested his hopes of immortality (Job 19:25): as the son of Abraham, a benefactor, (Gen. 2:18) in whom all the families of the earth should be blessed: as the Shiloh of Jacob’s dying bed (Gen. 49:10): as the angel of the and burning bush and of the fiery pillar (Ex. 3:2, 14:19. 32:34): as the Captain who fought for Israel and nerved the arm of her warriors: as and the Begotten Son of God, the assessor of His throne, the Priest forever, predicted by the sweet Psalmist of Israel (Psa. 2:7. 110:1, 4): as the virgin-born Emmanuel, foretold by Isaiah, the child and ix. 6. endowed with a name of lustrous Deity, Wonderful, Counsellor, the Mighty God, the Father of Eternity, the Prince of Peace (Isa. 7:14, 9:6): as the Lord our righteousness, anticipated by Jeremiah (Jer. 23:6): as the appearance of a man on the sapphire throne, seen in vision by Ezekiel (Ez. 1:26): as the Messiah announced to Daniel who should be cut off but not for Himself, and should bring in everlasting righteousness (Dan. 9:24, 26): as the desire of all nations, of whom Haggai wrote (Hag. 2:7): and as the Sun of righteousness, seen from afar by Malachi, who should rise on the benighted world with healing in his wings (Mal. 4:2): – on Him, from age to age the faith of every believer was fastened, by promise and by prophecy.
+
+Let me, ere I pass on, select two passages from the Old Testament for your careful consideration. That same Psalm which proclaims the Divine decree – “Jehovah hath said unto me, Thou art my Son, this day have I begotten thee,” (Psa. 2:7) – closes thus – “Kiss the Son, lest he be angry and ye perish from the way, when his wrath is kindled but a little. Blessed are all they that put their trust in him.” Remember the solemn denunciation, “Cursed be the man
+
+that trusteth in man, and maketh flesh his arm.” Is there not food here for the most thoughtful enquiry? How can you reconcile these texts? I venture to assert only in the Gospel of the Son of God.
+
+Again, if you turn to the fifty-third chapter of Isaiah, you find, “All we like sheep have gone astray, we have turned every one to his own way.” (Isa. 53:6.) Comprehensive words! embracing the transgressions of six thousand years. If the sins of those many generations were gathered together, how vast the accumulation, how insufferable the load of guilt! It is done: for Scripture continues, “The Lord hath laid on (hath made to meet on) him the iniquity of us all.” (Isa. 42:1.) On him: on whom? On the chosen servant of God in whom his soul delighteth, but whose visage is marred more than any man – on one who grows up as a tender plant, who is despised and rejected of men, a man of sorrows and acquainted with grief. (Isa. 52:13.) On him, the sins of all were laid. He was wounded for our transgressions. He was bruised for our iniquities. [Nay more – It is, not only that He was (verse 3) acquainted with grief, but (verse 10) the Lord hath put him to grief: not only (verse 6) He was bruised for our iniquities, but (verse 10) it pleased the Lord to bruise him: not only (verse 12) He bare the sin of many, but (verse 6) the Lord hath laid on him the iniquity of us all: not only (verse 7) He is brought as a lamb to the slaughter, but (verse 10) Thou shalt make his soul an offering for sin. If Jesus were only a spotless, sinless man, offering no vicarious atonement, how was it that a holy and just Good – we will not say permitted such sufferings to light upon a perfectly innocent being, – but Himself caused him to suffer.] But can He sustain the load? Remember how earnest and awakened men would hold their breath in suspense, to catch an answer on which an immortality of weal or woe depended. Can He endure the burden? He can: He dies in the endurance. His soul is made an offering for sin. But death is swallowed up in victory. (Isa. 25:8.) He lives – He sees his seed. The pleasure of the Lord prospers in his hand. He sees of the travail of his soul, and is satisfied – our Redeemer, our Mediator, our Advocate. I beseech you, my friends, to weigh that chapter on your knees. See you not; how the confidence of all mankind centers and clusters around that spontaneous victim, that dying man, that triumphant Saviour? The Lord grant that this same Scripture which was the message of life to the eunuch of Ethiopia, may lead you to believe with all your heart in the Divinity of the Son of God! (Acts. 8:32–37.)
+
+But now let us follow the course of history. At length the fullness of the time was come, and God sent forth his Son. (Gal. 4:4.) Are not the eyes of all designedly pointed to him? Angels from heaven announce the glad tidings, Unto you is born a Saviour (Luke 2:8–20): simple shepherds salute him: and eastern wise men worship him. (Matt. 2:11.) He grows up as foretold, a despised Nazarene. But at his baptism, the heavens are opened, the Spirit of God descends like a dove upon him, and the voice of the Eternal Father proclaims, “This is my beloved Son, in whom I am well pleased.” (Matt. 3:17.) Soon the devil assaults him – and angels minister to him, their Lord. (Matt. 4:1. His herald points him out, (John 1:29.) “Behold the Lamb of God which taketh away the sin of the world.” He speaks as man never spake. He works wonders of goodness and of grace, such as man never wrought. (John 7:46, 15:24.) He introduces a morality of unequalled simplicity and purity and worth. He preaches the glad tidings of the kingdom of heaven. But his own received him not. He is betrayed, condemned, and crucified. He dies, the Just for the unjust. (1 Peter 3:18.) He lays down his life. He has power to take it again. (John 10:18.) He rises. He ascends to the right hand of God. There He receives gifts for men. He sheds forth his Spirit. (Psa. 68:18.) He gives repentance and remission of sins. (Acts 5:31.) He ever lives to make intercession for us. He is preparing a place in glory for his children (Heb. 7:25): and thence He shall shortly come again and take us unto himself, that where He is there we may be also. (John 14:1–3.)
+
+Who, I ask, can believe this simple story of redeeming grace, and not repose their whole confidence in this Saviour? Who can refrain from trusting him with supreme reliance? Who can forbear loving him with the most absorbing love? If Scripture forbade these emotions, as being due only to the infinite Father, what force we must lay upon ourselves to prevent them springing up in the trustful heart. But does Scripture forbid them? nay, verily. Prophecy, as we have seen, foretold that thus it should be, and blessed the confidence. And when the Saviour walked our fallen world, suppliant sinners worship him, and He refuses it not. They put their whole trust in him, and He declares it not only suitable – but essential. (John 9:35–38.) Upon it hangs eternity. “God so loved the world that He gave his only-begotten Son, that whosoever believeth on him should not perish, but have eternal life.” (John 3:16.) But is this trust altogether identical with that we are required to repose in the Father? It is one and the same. He says, “Believe in God: believe also in me.” (John 14:1.) His invitations penetrate the weary heart – “Come unto me all ye that labour and are heavy laden, and I will give you rest” (Matt. 11:28): and his words fall like dew on the parched and thirsty soul – “If any man thirst, let him come unto me and drink.” He insists that “all men should honour the Son, even as they honour the Father.” (John 5:23.) He concentrates the affection and the affiance of his people upon himself as the one Mediator. He invites us to offer up our prayers in his prevalent name. And finally, he assures us, “He gives eternal life” unto his own disciples, and “will raise them up at the last day.” (Matt. 11:27. John 16:23–24, 10:28, 6:40.)
+
+And after his ascension to glory, what is the conduct and the testimony of his chosen apostles? In the name of Jesus Christ they do all their mighty works. For Jesus Christ’s sake they suffer the loss of all things. They uniformly preach Jesus Christ: and the Holy Spirit seals their message. (1 Cor. 2:1–3.) They know nothing among men, but Jesus Christ and Him crucified. Yea, I should have to transcribe a great portion of the Epistles if I wanted to transfer to these pages all the evidence those letters afford, that Scripture requires us to repose our supreme reliance on the Lord Jesus Christ. The most casual glance might make us suspect, that a name which meets our eye every few lines was none other than that of the Divine Saviour of the world. Why else its perpetual recurrence? A deeper search only confirms this. Take for instance the first few verses of the epistle to the Ephesians:–
+
+1. “Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus:
+
+2. “Grace be to you, and peace, from God our Father, and from the Lord Jesus Christ.
+
+3. “Blessed be the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly places in Christ:
+
+4. “According as He hath chosen us in him before the foundation of the world, that we should be holy, and without blame before him in love:
+
+5. “Having predestinated us according to the adoption of children, according to the good pleasure of his will,
+
+6. “To the praise of the glory of his grace wherein He hath made us accepted in the Beloved:
+
+7. “In whom we have redemption through his blood, even the forgiveness of sins, according to the riches of his grace.”
+
+The privileges are surpassingly great, but mark how they are all ours IN CHRIST. It is the apostle of Jesus Christ who writes. The Church is described as the faithful “in Christ Jesus”. The benediction is given from God our Father, and coordinately “from the Lord Jesus Christ”. God is praised: it is as “the God and Father of our Lord Jesus Christ”. All spiritual blessings are ours: they are ours “in Christ”. We are chosen: it is “in Him”. We are predestinated unto the adoption of children: it is “by Jesus Christ”. We are accepted: it is “in the Beloved”. We have redemption, even the forgiveness of sins: it is “in Him through his blood”. We are indebted to Christ for all. We are compelled to look up unto him, and say – “O Lord, my trust is in Thee.”
+
+The force of this reasoning will appear more strongly, if you attempt to substitute here for the name of Jesus that of any man, however exalted and self-devoted, or of any creature, however lofty in the scale of creation. Make the trial. Read the passage given above, substituting the name of Michael the archangel, or of Moses the legal mediator, or of Stephen who sealed his witness with his blood, for that only “name under heaven given among men whereby we must be saved.” (Acts 4:12.) You cannot do it. You stop short. It is an intolerable discord. It is blasphemy. For you feel this would be reposing in the creature an exhaustive confidence due only to the Infinite Creator, and offering to man a supreme gratitude which is the prerogative of God our Saviour.
+
+Such passages might be easily multiplied. I would mention the first chapter of the Epistle to the Colossians, of St. Peter’s first Epistle, of St. John’s first Epistle; I study all, and in all I find Jesus my Saviour. Do you admit the cry of the awakened conscience is “What must I do to be saved?” You must acknowledge that the reply of the New Testament from end to end, – from the angel’s message to Joseph, “Thou shalt call his name Jesus, for He shall save his people from their sins,” (Matt. 1:21.) to the ascription of praise recorded by the aged John in Patmos, “To Him who loved us, and washed us from our sins in his own blood, and hath made us kings and priests unto God and our Father” – the reply, I say, is plain and unhesitating, “Believe in the Lord Jesus Christ and thou shalt be saved.” (Acts 16:31.) It is not only that one of illimitable goodness and infinite perfections, your Creator and Preserver, stands before you, a man of limited and finite capacities: but He presents himself to you fallen, and guilty, and lost, as one who is able and willing to raise you from the lowest depths of sin and make you members of a Royal Priesthood, and cause you to reign with him among the sons of light forever and forever. No utterance but one like Mary’s satisfies his claims: “My spirit hath rejoiced in God my Saviour.” (Luke 1:47.) The Lord grant unto you and me like precious faith, that resting on these exceeding great and precious promises, an entrance may be ministered unto us into the everlasting kingdom of our Lord and Saviour Jesus Christ! (2 Peter 1:1, 4, 11.)
+
+## Chapter 4. That Scripture, in the Old and the New Testament alike, proves the coequal Deity of Jesus Christ with that of the eternal Father; – by a comparison of the attributes, the majesty, and the claims of the Father and the Son: by the appearances of God to the Old Testament saints: by the direct and Divine worship paid to Christ: by the conjunction of the Father and the Son in Divine offices: by explicit assertions that Christ is Jehovah and God.
+
+The preceding truths will have prepared the way for my third proposition: – That Scripture in the Old and the New Testament alike, proves the coequal Deity of Jesus Christ with that of the Eternal Father: by a comparison of the attributes, the majesty, and the claims of the Father and the Son; by the appearances of God to the Old Testament saints; by the direct and Divine worship paid to Christ; by the conjunction of the Father and the Son in Divine offices; by explicit assertions that Christ is Jehovah and God.
+
+And here I would ask your further honest application of that great principle of heavenly scholarship, “the comparing spiritual things with spiritual.” For just as in algebra, from the combination of two known quantities the unknown is found out; as in trigonometry, if out of the six parts of a triangle any three, one being a side, are given, the others are discoverable, from which simple law have resulted all the triumphs of astronomy; so in searching the Scriptures, those humble students who receive the words not which man’s wisdom teacheth but which the Holy Ghost teacheth, prayerfully comparing and combining them, shall know the things which are freely given to us of God. (1 Cor. 2:12–13.)
+
+(1.) I would first then place side by side the witness of Scripture to the attributes, the majesty, and the claims of the Father and the Son. Only a selection from the abundant materials could of course be made. I have exercised a rigid caution in the verses adduced in testimony of Christ, setting many aside which I fully believe bear witness of him. But, if after candid investigation you think one, or more than one, inapplicable to the Messiah, I pray you draw your pencil through those which may seem to you even ambiguous. Sufficient, and more than sufficient will, I am persuaded, remain uncancelled. Some marked with an asterisk are discussed or illustrated in other, portions of this treatise. I earnestly ask your calm, dispassionate collation of these passages: and I pray you, whilst you proceed, to suffer the full weight of these solemn words to rest upon your mind and memory, “I am Jehovah – that is my name, and my glory will I not give to another.”
+
+Scripture Testimony to God the Father, or to God absolutely.
+
+Scripture Testimony to Christ.
+
+[In some of the passages in the left hand column, I believe the primary reference to be not to the Father but to the Son, but this does not invalidate the testimony to be derived from them, as in every case the witness is said to be of God, or of the Lord Jehovah, and no one who denied the Deity of Christ could maintain that a single passage there adduced designates the Messiah, without contradicting himself.]
+
+1. From everlasting to everlasting thou art God. – Psalm 90:2. Thy throne is established of old; Thou art from everlasting. – Psalm 93:2. I am the first, and I am the last, and besides me there is no God. – Isa. 44:6.
+
+1. Whose goings forth have been from of old, from everlasting. – Mic. 5:2. Unto the Son, he saith, thy throne, O God, is forever and ever. – Heb. 1:8. I am the first and the last. I am He that liveth and was dead. – Rev. 1:17–18.
+
+2. Do not I fill heaven and earth, saith the Lord 4 – Jer. 23:24. The Lord, He it is that doth go before thee – He will be with thee, He will not fail thee. – Deut. 31:8.
+
+2. He that descended is the same also that ascended up far above all heavens, that He might fill all things. – Eph. 4:10. Lo, I am with you alway, even unto the end of the world. – Matt. 28:20.
+
+3. I am Jehovah – I change not. – Malachi 3:6.
+
+3. Jesus Christ, the same yesterday, today, and forever. – Heb. 13:8.
+
+4. I am the Almighty God. – Gen. 17:1. Whatsoever the Lord pleased, that did He in heaven and in earth. – Psa. 135:6.
+
+4. I am ... the Almighty. Rev. 1:8. Whatsoever things He doeth, these also doeth the Son likewise. – John 5:19.
+
+5. Canst thou by searching find out God? – Job 11:7. As the Father knoweth me. – John 10:15. O the depth of the riches, both of the wisdom and knowledge of God! His ways past finding out (ανεξιχνίαστοι trackless) – Rom. 11:33. Thy footsteps (τα ίχνη σου – LXX) are not known. – Psa. 77:19.
+
+5. No man knoweth the Son but the Father. – Matt. 11:27. – Even so know I the Father. – John 10:15. The unsearchable (ανεξιχνίαστον) riches of Christ. – Eph. 3:8. The love of Christ which passeth knowledge – Eph. 3:19.
+
+6. I am the Lord, the Holy One (ο άγιος LXX) of Israel. – Isa.43:3. A God of truth, and without iniquity. – Deut. 32:4.
+
+6. Ye denied the Holy One (τόν άγιον) and the Just. – Acts 3:14. I am ... the Truth. – John 14:6. Without sin. – Heb. 4:15.
+
+7. In the beginning God created the heavens and the earth. – Gen. 1:1. I am Jehovah that maketh all things, that stretcheth forth the heaven alone, that spreadeth abroad the earth by Myself. – Isa. 44:24. The Lord hath made all things for Himself. – Prov. 16:4.
+
+7. In the beginning was the Word. All things were made by Him. – John 1:1, 3. By Him were all things created, that are in heaven and that are in earth, visible and invisible, whether thrones, or dominions, or principalities, or powers: All things were created by him and for him. – Col. 1:16.
+
+8. Thou preservest them all. – Neh. 9:6. In Him we live. – Acts 17:28.
+
+8. By Him all things consist. – Col. 1:17. Because I live, ye shall live also. – John 14:19.
+
+9. The King of kings, and Lord of lords. – 1 Tim. 6:15. Thy kingdom is an everlasting kingdom, and thy dominion endureth throughout all generations. – Psa. 145:13.
+
+9. King of kings, and Lord of lords. – Rev. 19:16. His dominion is an everlasting dominion ... and his kingdom that which shall not be destroyed. – Dan. 7:14.
+
+10. Thou, even Thou only, knowest the hearts of all the children of men. – 1 Kings 8:39.
+
+10. All the churches shall know that I am He that searcheth the reins and hearts. – Rev. 2:23.
+
+11. Shall not the Judge of all the earth do right? – Gen. 18:25.
+
+11. We must all appear before the judgement seat of Christ. – 2 Cor. 5:10.
+
+12. His kingdom ruleth over all. – Psa. 103:19. The Lord shall be king over all the earth. In that day there shall be one Lord, and his name one. – Zech. 104:9. Thou whose name alone is Jehovah, art the most high over all the earth. – Psa. 83:18.
+
+12. He is Lord of all. – Acts 10:36. To us there is but one Lord Jesus Christ, by whom are all things, and we by Him. – 1 Cor. 8:6. God hath given Him a name which is above every name. – Phil. 2:9. That in all things he might have the preeminence. – Col. 1:18.
+
+13. Upon the wicked He shall rain snares, (or quick burning coals) fire and brimstone, and an horrible (or a burning) tempest. – Psa. 11:6. Vengeance is mine; I will repay, with the Lord. – Rom. 12:19. The day of wrath and revelation of the righteous judgment of God. – Rom. 2:5.
+
+13. The Lord Jesus shall be revealed from heaven with His mighty angels, in flaming fire, Taking vengeance on them that know not God. – 2 Thess. 1:7–8. And from the wrath of the Lamb, for the great day of His wrath is come and who shall be able to stand? – Rev. 6:16–17.
+
+14. Behold the Lord God will come with strong hand – His reward is with him. – Isa. 40:10. Thou renderest to every man according to his work. Psa. 62:12.
+
+14. Behold, I come quickly, and my reward is with me, to give it. Every man according as his work shall be. – Rev. 22:12.
+
+15. To whom then will ye liken God? – Isa. 40:18. Thee, the only true God (τον μόνον αληθινον Θεον) [and Jesus Christ whom Thou heat sent.] – John 17:3.
+
+15. The image of the invisible God. – Col. 1:15. The express image of his Person. – Heb. 1:3. ... His Son, Jesus Christ. This (person) is the true God (ουτός εστιν ο αληθινος Θεος) and eternal life. – 1 John 5:20.
+
+16. The Lord thy God, to him shalt thou cleave. – Deut. 10:20. Lord, Thou heat been our dwelling-place for all generations. – Psa. 90:1. From Me is thy fruit found. – Hosea 14:8.
+
+16. Abide in Me, and I in you. As the branch cannot bear fruit except it abide in the vine, no more can ye except ye abide in Me, ... for without Me ye can do nothing. – John 15:4–5.
+
+17. Strengthen Thou me according to Thy word. – Psa. 119:28.
+
+17. I can do all things through Christ that strengtheneth me. – Phil. 4:13.
+
+18. Lord, my hope is in Thee. – Psa. 39:7.
+
+18. Jesus Christ, which is our hope. – 1 Tim. 1:1.
+
+19. The Lord did ... set His love upon you and choose you ... because the Lord loved you. – Deut. 7:7–8. The Lord’s portion is His people. – Deut. 32:9.
+
+19. I have chosen you. – John 15:16. In my name, because ye belong to Christ (Χριστου ιστε). – Mark 9:41.
+
+20. I, even I, am Jehovah, and beside Me there is no Saviour. – Isa. 43:11.
+
+20. Jesus, for He shall save his people from their sins. – Matt. 1:21. Christ Jesus came into the world to save sinners. – 1 Tim. 1:15. We believe that through the grace of our Lord Jesus Christ we shall be saved. – Acts 15:11. He is the Author of eternal salvation unto all them that obey Him. – Heb. 5:9. He is able to save to the uttermost those that come unto God by Him. – Heb. 7:25. Jesus who delivered us from the wrath to come. – 1 Thess. 1:10. Our Lord and Saviour Jesus Christ. – 2 Peter 3:18. Neither is there salvation in any other, for there is no other name under heaven given among men whereby we must be saved. – Acts 4:12.
+
+21. All flesh shall know that I am the Lord thy Saviour, And thy Redeemer, The mighty one of Israel. – Isa. 49:16. Let Israel hope in Jehovah ... and He shall redeem Israel from all his iniquities (και αυτος λυτρώεται τον Ισραηλ εκ πασων των ανομιων αυτου. LXX.) – Psalm 130:8.
+
+21. Our great God and Saviour Jesus Christ, Who gave Himself for us, That He might redeem us from all iniquity (ίνα λυτρώσηται ημας απο πάσης ανομίας) – Titus 2:13–14.
+
+22. With Thee is the fountain of life, in thy light shall we see light – Psa. 36:9.
+
+22. In Him (the Word) was life, and the life was the light of men. – John 1:4.
+
+23. He (Jehovah of hosts) will swallow up death in victory. – Isa. 25:8. I will ransom them from the power of the grave; I will redeem them from death: O death, I will be thy plagues; O grave, I will be thy destruction. – Hosea 13:14.
+
+23. Our Saviour Jesus Christ, who hath abolished death. – 2 Tim. 1:10. That through death He (Jesus) might destroy him that had the power of death, that is the devil, and deliver them who through fear of death were all their lifetime subject to bondage. – Heb. 2:14–15.
+
+If I were to ask you to select a passage from the Old Testament, which should declare most unequivocally the supreme majesty of God, could you name a more distinctive one than the following from Isaiah? Yet illustrate this by other passages of Holy Writ, and see how all this glory appertains likewise to the only-begotten of the Father.
+
+Scripture Testimony to God the Father, or to God absolutely.
+
+Scripture Testimony to Christ.
+
+24. There is no God else beside Me, A just God and a Saviour. There is none beside Me. Look up to Me and be ye saved. All the ends of the earth, For I am God, and there is none else. I have sworn by myself, the word is gone out of my mouth in righteousness, and shall not return, That unto me every knee shall bow, every tongue shall swear. Surely shall one say, In the Lord, have I righteousness, And strength, Even to him shall men come; And all that are incensed against him shall be ashamed. In the Lord shall all the seed of Israel be justified, And shall glory. – Isa. 45:21–25.
+
+24. The Word was God. – John 1:1. Jesus Christ the righteous; He is the propitiation for our sins. – 1 John 2:2. Behold the Lamb of God, who taketh away the sin of the world. – John 1:29. I shall give thee the uttermost parts of the earth. – Psalm 2:8. Every one which seeth the Son and believeth on him may have everlasting life. – John 6:40. We shall all stand at the judgment seat of Christ; for it is written, as I live saith the Lord, every knee shall bow to me, and every tongue shall confess to God. – Rom. 14:10–11. In the name of Jesus, every knee should bow of things in heaven, and things in earth, and things under the earth. – Phil. 2:10. The Branch – the Lord our righteousness. – Jer. 23:5–6. Without me, ye can do nothing. – John 15:5. I will draw all men unto me. – John 12:32. The enemies of the cross of Christ, whose end is destruction. – Phil. 3:18–19. He was raised again for our justification. – Rom. 4:25. God forbid that I should glory save in cross of our Lord Jesus Christ. – Gal. vi. 14.
+
+25. I, even I, am He that blotteth out thy transgressions for mine own sake. – Isa. 43:25. Forgiving iniquity. – Ex. 34:7.
+
+25. The blood of Jesus Christ his Son, cleanseth us from all sin. – 1 John 1:7. When He had by himself purged our sins. – Heb. 1:3. Son, thy sins be forgiven thee. – Mark 2:5.
+
+26. Thou hast been ... a refuge from the storm, a shadow from the heat. – Isa. 25:4.
+
+26. A man shall be ... a covert from the tempest, ... as the shadow of a great Rock in a weary land. – Isa. 32:2.
+
+27. He maketh the storm a calm, so that the waves thereof are still. – Psa. 107:29.
+
+27. He arose and rebuked the winds and sea, and there was a great calm. – Matt. 8:26.
+
+28. I have satiated the weary soul. – Jer. 31:25.
+
+28. Come unto me all ye that labour, ... and ye shall find rest to your souls. – Matt. 11:28–29.
+
+29. I will pour out My Spirit upon all flesh. – Joel 2:28. The Lord God and his Spirit. – Isa. 48:16. The Spirit of your Father. – Matt. 10:20.
+
+29. I will send the Comforter unto you. – John 16:7. Spirit of Christ. – Rom. 8:9. The Spirit of his Son. Gal. 4:6. He hath shed forth this. – Acts 2:33.
+
+30. This is the love of God, that we keep his commandments. – 1 John 5:3. Thou shalt guide me with Thy counsel, and afterward receive me to glory. – Psa. 73:24.
+
+30. If ye love Me, keep my commandments. – John 14:15. I will receive you unto myself. – John 14:3. The glory which Thou hast given me, I have given them. – John 17:22.
+
+31. If I be a Master, where is my fear? saith the Lord of hosts. – Mal. 1:6. Him shalt thou serve. – Deut. 20:20.
+
+31. One is your Master, even Christ. – Matt. 23:8, 10. Ye serve the Lord Christ. – Col. 3:24.
+
+32. Thy Maker is thine Husband: the Lord of hosts is his name. – Isa. 64:5.
+
+32. He that hath the bride, is the Bridegroom. – John 3:29. The Bride, the Lamb’s wife. – Rev. 21:9.
+
+33. By the grace of God, I am what I am. – 1 Cot. 15:10. The grace of God that bringeth salvation. – Titus 2:11.
+
+33. Be strong in the grace that is in Christ Jesus. – 2 Tim. 2:1. By the grace of the Lord Jesus Christ, we shall be saved. – Acts 15:11. (quoted above.)
+
+34. The love of God shed abroad in our hearts. – Rom. 5:5. Alive unto God (ζωντας τω Θεω) – Rom. 6:11. Them that love God. – Rom. 8:28.
+
+34. The love of Christ constraineth us that we Should live to him that died for us. (ζωσιν τω αποθανόντι) – 2 Cor. 5:14–15. If any love not the Lord Jesus Christ. – 1 Cor. 16:22.
+
+35. Thy word have I hid in my heart. – Psa. 119:11. Thou shalt say, Thus saith the Lord God. – Ez. 2:4.
+
+35. Let the word of Christ dwell in you richly. – Col. 3:16. I say unto you. – Matt. 5:22, 28, etc.
+
+36. Give ear, O Shepherd of Israel, thou that leadest Joseph like a flock. – Psa. 80:1. I will feed my flock, I will cause them to lie down, saith the Lord God. – Ez. 34:15. The flock of God. – 1 Peter 2. I will seek that which was lost (το απολωλός – LXX) – Ez. 34:16. Jehovah is my Shepherd, I shall not want: He maketh me to lie down in green pastures: He leadeth me beside still waters. – Psa. 23:1, 3.
+
+36. Our Lord Jesus, that great Shepherd of the sheep. – Heb. 13:20. The chief Shepherd shall appear. – 1 Peter 5:4. I am the good Shepherd ... there shall be one flock (ποίμνη) one shepherd. – John 10:14, 16. My lambs, my sheep. – John 21:15–16. The Son of man is come to seek and to save that which was lost (το απολωλός). – Luke 19:10. The Shepherd ... of your souls. – 1 Peter 2:25. My sheep shall never perish. – John 10:28. The Lamb ... shall feed them, and shall lead them to living fountains of water. – Rev. 7:17.
+
+37. Whom Jehovah loveth, He correcteth. – Prov. 3:12.
+
+37. As many as I love, I rebuke and chasten. – Rev. 3:19.
+
+38. God will render to them ... eternal life. – Rom. 2:5. 7.
+
+38. Be thou faithful unto death, and I will give thee a crown of life. – Rev. 2:10.
+
+39. Blessed is the man that trusteth in the Lord, and whose hope the Lord is. – Jer. 17:7. The name of the Lord is a strong tower. – Prov. 18:10.
+
+39. Blessed are all they that put their trust in him. – Psa. 2:12. Christ in you, the hope of glory. – Col. 1:27. In his name shall the Gentiles trust. – Matt. 12:21.
+
+40. I will greatly rejoice in the Lord, my soul shall be joyful in my God: for He hath clothed me with the garments of salvation. – Isa. 61:10.
+
+40. Jesus Christ whom, having not seen ye love, in whom, though now ye see him not, yet, believing, ye rejoice with joy unspeakable and full of glory, receiving the end of your faith, even the salvation of your souls. – 1 Peter 1:8–9.
+
+41. That God may be all in all (τα πάντα εν πασιν) – 1 Cor. 15:28.
+
+41. Christ, all and in all (τα πάντα και εν πασιν) – Col. 3:11.
+
+42. God and our Father, to whom be glory forever and ever. Amen. – Gal. 1:4–5.
+
+42. Our Lord and Saviour, Jesus Christ: to him be glory both now and forever. Amen. – 2 Peter 3:18.
+
+Let us ponder these passages with prayer. Here Scripture asserts that the Father is eternal, and the Son eternal. Now, One who is from everlasting must needs be God. But there are not two Gods. Therefore the Son is one with God, and is God.
+
+In like manner Scripture asserts that the Son, equally with the Father, is the first and the last; is omnipresent, immutable, almighty; is incomprehensible, absolutely holy, indefectible; is the Creator, Preserver, and Governor of all things in heaven and earth; is the Searcher of all hearts, the final Judge, and the Awarder of everlasting life and death. Now, One possessing such properties and fulfilling such offices, must needs be God. But there are not two Gods. Therefore the Son is one with God, and is God.
+
+So, likewise, Scripture asserts that unto the Son equally with the Father his people are to cleave, in him to abide, from him to draw their strength, and on him to repose their hope and trust; that the Son, equally with the Father, is the alone Saviour and Redeemer of mankind; that looking up to the Son, equally with the Father, sinners are pardoned and souls are saved; that unto the supereminent Father, and equally unto the supereminent Son, every knee shall bow; that the Son, equally with the Father, is the righteousness and strength and rock, the Shepherd and the Master of his people; forgives sins, calms the conscience, gives his holy Spirit, legislates for his people on earth, and will receive them to his glory; that the Son, equally with the Father, claims the supreme affiance of all, and is to those who believe in him the Author of unspeakable joy and everlasting salvation. New, One who is the object of such ultimate confidence, homage, and delight, must needs be God. But there are not two Gods. Therefore the Son is one with God, and is God.
+
+These Scriptures are amply sufficient to bear the weight of this most solemn conclusion, and I might with blessed expectation ask – “Dost thou new believe in the Son of God?” But abounding and independent evidence remains.
+
+(2) For the appearances of Jehovah to the Old Testament saints, taken in connection with the assertion to Moses, (Ex. 33:20) “Thou canst not see my face for there shall no man see me and live,” and with the parallel declaration of the New Testament, (John 1:18) “No man hath seen God at any time; the only-begotten Son, which is in the bosom of the Father, He hath declared him,” sufficiently prove that He, who thus manifested himself, was the Lord Jesus.
+
+Now Jacob says, (Gen. 32:30) “I have seen God face to face, and my life is preserved,” and this after wrestling all night long in tangible conflict with One now called a man, now the angel, now God, now the Lord God of hosts. The elders saw the God of Israel. (Hosea 12:3–4. Ex. 24:10, 33:11.) Unto Moses, the Lord spake face, to face as a man speaketh with his friend. Joshua conversed with the adorable captain of Jehovah’s host. Manoah feared, saying, “We shall surely die, because we have seen God.” (Joshua 5:15, cf. Ex.3:5. Judges 13:22.) Isaiah cries, “Woe is me, for I am undone, ... for mine eyes have seen the King, the Lord of hosts.” (Isa. 6:5.) Of the message then recorded, we are expressly told – These things said Esaias, when he saw his (Christ’s) glory, and spake of him. (John 12:41.)
+
+These are only selected passages. There are many others (compare Genesis 18:1–2 with 17; Gen. 31:11 with 13; Gen. 18:15 with 16: Exod. 3:2 with 4, 6; Exod. 13:21 with 14:19; Judges 6:12 with 14, 22 with 23) in which the one who appears under the form of an angel or a man, is, in the immediate context, declared to be God, or Jehovah. Who, I ask, was this mysterious being? the Angel, or Sent One: He whom the Lord calls “my presence”: the visible similitude of Jehovah: an Angel of whom the Lord says, “Beware of Him, and obey his voice – provoke him not, for He will not pardon your transgressions, for my name is in him?” (Ex. 33:14, Num. 12:8, Ex. 23:20–21.) This glorious being was not God the Father, for no man hath seen him at any time. But He is declared to be Jehovah and God. Are we not compelled to acknowledge that He was the Divine Word, the Son, the brightness of His Father’s glory, the express image of his person? Therefore the Word is Jehovah God.
+
+(3) This is further established by the consideration that Scripture sanctions prayer to Christ, and commands the highest adoration and worship to be paid to him.
+
+It was not God the Father, but God the Son with whom Abraham interceded for Sodom and Gomorrah. (Gen. 18:23–33.) It was God the Son with whom Jacob wrestled in prayer, for we are told – “he had power with God; yea, he had power with the Angel and prevailed,” when he cried, “I will not let thee go, except thou bless me.” (Hosea 12:3–4.) It was God the Son, whose benediction he besought for his grandchildren, when he prayed, “The God which fed me, all my life long: the Angel which redeemed me from all evil, bless the lads.” (Gen. 48:15–16.) In all these instances, there is direct prayer to Christ.
+
+Again, it was God the Son, called the Angel of Jehovah, whom Moses worshipped at the bush. It was God the Son, who appeared as a man, (Josh. 5:13) before whom Joshua fell on his face and worshipped. It was God the Son whose glory, Gideon feared, and to whom he built the altar which records that living prayer, Jehovah-shalom. (Jud. 6:24. The Lord send peace.) It was God the Son, the angel of Jehovah, whose name was Wonderful, who rose in the smoke of Manoah’s sacrifice. (Jud. 12:17–20.) It was God the Son, for “upon the likeness of the throne was the likeness of the appearance of a man above upon it,” before whom Ezekiel fell upon his face. (Ezek. 1:26) In all these instances, we have direct worship paid to Christ.
+
+Further we read expressly in the Gospel, that the Lord Jesus was again and again worshipped, and we never find that He refused this adoration. I cannot consent for a moment to relinquish this word “worship” on the demand of some [Thus Dr. Channing writes in reply to this argument, “It is wonderful that this fallacy so often exposed should be still repeated. Jesus indeed received worship or homage, but this was not as adoration to the infinite God: it was the homage which, according to the custom of the age, and of the Eastern world, was paid to men invested with great authority, whether in civil or religious concerns.” – Quoted by Dr. Gordon.] Unitarian writers, that it was only such reverent salutation as was by custom offered to those in authority. But at the same time this demand requires that we carefully and candidly investigate the instances of its occurrence. No one denies that the word translated worship (προσκυνέω) is often used in classical writers for humble and prostrate salutation. But the great question remains, what is its New Testament usage? I confess I was not prepared when I began my search for such preponderating proof of its almost universal application to Divine homage. The word occurs sixty times, and the noun formed from it (προσκυνήτης) once. The references are given below.
+
+On the use of the word προσκυνέω in the New Testament:–
+
+Worship offered to God.
+
+Worship offered to Christ.
+
+Matt. 4:10, Luke 4:8, Thou shalt worship the Lord thy God.
+
+Matt. 2:2, 8, 11, by the magi.
+
+John 4:20–24, it occurs ten times including the noun – of the worship of the Father.
+
+Matt. 8:2, by the leper.
+
+1 Cor. 14:25, he will worship God.
+
+Matt. 9:18, by the ruler.
+
+Rev. 4:10, Rev. 5:14, worship him that liveth forever and ever.
+
+Matt. 14:33, by the disciples after the storm.
+
+Rev. 7:11, 11:16, worshipped God.
+
+Matt. 15:25, by the woman of Tyre.
+
+Rev. 14:7, worship him that made heaven.
+
+Matt. 20:20, by Salome.
+
+Rev. 15:4, worship before Thee, O Lord.
+
+Matt. 28:9, 17‚ by the women and by the disciples after is resurrection.
+
+Rev. 19:4, worshipped God that sate on the throne.
+
+Luke 24:52, by the disciples as He ascended.
+
+Rev. 19:10, 22:9, worship God.
+
+John 9:38, by the man born blind.
+
+Heb. 1:6, by all the angels.
+
+[These are two instances of a distinct character:]
+
+Mark 5:6, by the possessed.
+
+Mark 15:19, worship offered in mockery.
+
+Idolatrous worship repudiated.
+
+Worship used intransitively.
+
+Matt. 4:9, Luke 4:7, worship of Satan.
+
+John 12:20, Greeks came up to worship.
+
+Acts 7:43, worship of figures.
+
+Acts 8:27, of the eunuch.
+
+Acts 10:25, human worship refused.
+
+Acts 24:11, of S. Paul.
+
+Rev. 9:20, idolatry.
+
+Heb. 11:21, of Jacob.
+
+Rev. 13:4, (twice), 13:8, 12, 15; 14:9, 11; 16:2, 19:20, 20:4, worship of the dragon, the beast on his image.
+
+Rev. 11:1, worshippers in the temple.
+
+Rev. 19:10, 22:8, saintly or angelic worship refused.
+
+[There remain two instances in which it is used of allowed salutation to man:]
+
+Matt. 18:26, by the unmerciful servant.
+
+Rev. 3:9, I will make them come and worship before thy feet.
+
+From which we arrive at this result that there are twenty-two instances in which it is used of worship offered to God the Father, or absolutely to God; and five of divine worship used intransitively; fifteen instances of worship to Jesus Christ; seventeen of idolatrous worship condemned, and two of human salutation. Of these two, moreover, in one (Matt. 18:26), the king to whom the worship is paid is evidently in his royalty a type of God: and immediately after, when the story represents a like transaction between fellow men, the word worshiped is exchanged for besought. (Matt. 18:29.) We are, therefore, virtually reduced to one solitary instance, and taking the New Testament for our guide, it would be as unnatural to deny, that divine worship is paid to Christ, as it would be just to accuse us of offering only human salutation to God, when we profess to worship him in his house, because we have lately addressed one of our civil magistrates as “the worshipful the mayor”.
+
+But the proportion of instances only presents a part of the evidence. When this same homage, described by the same word (προσκυνέω) was offered to a man or angel, where it could possibly be misunderstood, as by Cornelius to Peter, or by John to his prophetic guide, the action was immediately rebuked, and the worship straightway diverted from the creature to the Creator.
+
+Nor is this all: it is not only, that Jesus was worshipped, but the affections and petitions, which accompanied that worship, manifest, if not always distinct recognition of his true Godhead, at least, such humble dependence on his aid, as Divine aid, that if He were not God, he must needs have rectified so dangerous an approximation to idolatry. The leper not only worshipped him, but besought superhuman assistance (Matt. 8:2): “Lord, if thou wilt, thou canst make me clean.” The ruler not only worshipped him, but implored his Divine interference – (Matt. 9:18) “My daughter is even now dead: but come and lay thy hand upon her, and she shall live.” [The distinction betwixt such petitions, and the request to the apostles for assistance, (as Acts 9:38) is transparent, as Jesus in his own right, as the Messiah of God, wrought his mighty works; and they, utterly repudiating self-dependence, (Acts 3:12) wrought all in the name and by the power of Jesus Christ.] It was after He had manifested his God-like power in quelling the storm, that the disciples worshipped him, (Matt. 14:33) saying, “of a truth, thou art the Son of God.” He demanded the implicit confidence of the man born blind, ere he received his worship. Natural love found utterance in that piercing prayer, (John 9:38, Matt. 15:25) when the woman of Tyre worshipped him, saying, “Lord, help me.” His resurrection power challenged, and compelled the adoring worship of the Marys and the Apostles: and the glory of the ascension warranted the homage they paid on Olivet. (Matt. 28:9. Luke 24:52.)
+
+Nor are we confined to the word worship. What was it but trustful prayer, when the disciples in the storm fulfilled the Psalmist’s description of tempest-tossed mariners, “who cry unto the Lord in their trouble,” (Psa. 107:28. Matt. 8:25) by betaking themselves to Jesus, “Lord, save us, we perish.” What was it but prayer, when the two blind men implored a blessing no human power could bestow, crying, “Thou Son of David, have mercy on us.” (Matt. 9:27.) The reader will easily multiply examples of these supplications from the Gospel history.
+
+Moreover, Jesus Christ inculcated prayer to himself. What petition could embrace a more glorious gift than that He would persuade the woman of Samaria, to offer: – “Thou wouldst have asked of him, and He would have given thee living water; ... springing up into everlasting life.” (Joh 4:10, 14.) Again, He invites the weary and heavy laden to come to him for rest. (Matt. 11:28.) How are we to come but by prayer? So he upbraids the Jews: “Ye will not come unto Me, that ye might have life.” (John 5:40.) How were they to come, but by confiding prayer? Yes, confidence in a love, reliance on a power, dependence on a wisdom beyond that of our fellowmen and beyond our own – this, is the soul of prayer, this is the essence of worship. But this trust He solicits for himself. “Let not your heart be troubled: ye believe in God, believe also in Me.” (John 14:1.) And so of praise. You admit the Divine homage to the Father, of the angelic song, “Glory to God in the highest”: You must also admit the eucharistic tribute rendered, though by humble and human lips, when the multitudes cried, “Hosanna to the son of David! Blessed be he that cometh in the name of the Lord, Hosanna in the highest.” (Matt. 11:9.) For when the chief priests and scribes were sore displeased, instead of rebuking this giving of thanks, He says, “I tell you if these should hold their peace, the stones would immediately cry out. Have ye never read, out of the mouth of babes and sucklings, thou hast perfected praise.” (Luke 19:40. Matt. 21:16.)
+
+Again, what was the dying act of the proto-martyr Stephen, but the truest adoration of the Son of God. Realize, I pray you, that scene. Stephen full of the Holy Ghost, looked up steadfastly into heaven and saw the glory of God, and Jesus, standing on the right hand of God, and said, “Behold I see the heavens opened, and the Son of man standing on the right hand of God.” Then they cried out ... and stoned Stephen invoking, [I need not remind the reader that the word God is not in the Greek.] and saying, “Lord Jesus, receive my spirit.” And he kneeled down and cried with a loud voice, “Lord, lay not this sin to their charge.” And when he had said this, he fell asleep. The Holy Ghost, who had inspired David’s devout affiance, “Into thy hands I commit my spirit: thou hast redeemed me, O Lord God of truth,” (Psa. 31:5.) and who had dictated Solomon’s declaration, (Eccl. 12:7.) “the spirit shall return to God who gave it,” – now, in the plenitude of his grace, prompted the dying martyr to pray not to God the Father alone, nor to the Father through Christ, but to pray to Christ, worshipping him with his latest breath as very and eternal God.
+
+Again, St. Paul addresses prayer to God the Father, and to the Lord Jesus Christ, without respect to order of names:–
+
+Now God himself and our Father, and our Lord Jesus Christ, direct our way unto you. – 1 Thess. 3:11.
+
+Now our Lord Jesus Christ himself, and God, even our Father, comfort your hearts. – 2 Thess. 2:16–17.
+
+Here is express and direct supplication, so that we need not marvel this was one distinctive name of Christian believers – “all that in every place call upon (επικαλουμένοις) the name of Jesus Christ our Lord.” (1 Cor. 1:2.)
+
+The testimony from (επικαλέομαι) here, and generally translated, “call upon,” is most convincing, when compared with the Septuagint usage of the word; for it is the ordinary term for the sacred invocation of God; as, to take one example out of multitudes, “The Lord is nigh unto all them that call him, to all that call upon him in truth.” (Psa. 145:18.) It is employed in the New Testament for prayer to God the Father, (1 Peter. 1:17) “If ye call upon the Father, etc.” It describes such spiritual worship that, whether offered to the Father, or to the Son, salvation is indissolubly connected with it, – “Whosoever shall call upon the name of the Lord, shall be saved.” (Acts 2:21.) And yet it is, without a shadow of a doubt, applied to the invocation of the Lord Jesus (Acts 9:14, 21) – “all that call on thy name,” “them which called on this name,” and, for the context compels us to interpret the following words of Christ, “the same Lord over all, is rich unto all, that call upon him.” (Rom. 10:12.)
+
+Before we pass on, let us ponder that declaration of St. Paul, with regard to his crucified Lord – “God hath highly exalted him, and given him a name which is above every name, that in the name of Jesus every knee should bow, of things in heaven, and things in earth, and things under the earth, and that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.” (Phil 2:9–11.) Regard this fact as you will, refine it as you may, spiritualize it to the utmost, if Jesus were man only, it would prefigure the universal exaltation of a creature. The mighty suasion of a creature’s name, would bring every intelligent being to his knees, from the highest arch-angel to the feeblest saint: the name of a creature, would swell the tide of celestial adoration, and tremble on the lips of the contrite penitent: and the supremacy of a creature would overshadow heaven, and earth, and hell. Could this tend to the glory of God the Father? Nay, verily. That name, which is above every name, is Christ’s, with emphatic propriety, “God, our Saviour.”
+
+The latest revelation of Scripture confirms this truth, beyond contradiction. Is it Divine worship of the Father, when St. Peter, having prayed the God of all grace to perfect, stablish, strengthen, and settle his people, closes his solemn prayer, with the equally solemn doxology, “To Him, be glory and dominion, forever and ever. Amen.” You admit it, you call it “adoration to the infinite God.” (1 Peter 5:11.) Only be consistent. John, in Patmos, cries, “Unto him that loved us, and washed us from our sins in his own blood, and hath made us kings and priests unto God and his Father, to him be glory and dominion forever and ever. Amen.” (Rev. 1:5–6.) The words both in Greek and English are identical; the adoration is the same; and the Beings worshipped – the God of all grace, and the bleeding ) Saviour – are one indivisible Jehovah. (Compare also the doxology to Christ, 2 Peter 3:18.)
+
+And when the veil is drawn aside in the celestial temple, what is, I pray you, the nature of their worship? O Spirit of the living God, engrave this transparent evidence on every doubting heart! (Rev. 5:8–14.) “The four living creatures and the four-and-twenty elders fell down before the Lamb, having every one of them, harps and golden vials, full of odors, which are the prayers of saints, and they sung a new song, saying, ‘Thou art worthy to take the book and to open the seals, for thou wast slain, and hast redeemed us to God by thy blood, out of every kindred, and tongue, and people, and nation, and heat made us unto our God, kings and priests, and we shall reign on the earth.’
+
+“And I beheld, and I heard the voice of many angels round about the throne, and the living creatures, and the elders, and the number of them was ten thousand times ten thousand and thousands of thousands, saying, with a loud voice, ‘Worthy is the Lamb that was slain, to receive power, and riches, and wisdom, and strength, and honour, and glory, and blessing.’
+
+“And every creature which is in heaven, and on the earth, and under the earth, and such as are in the sea, and all that are in them heard I saying, ‘Blessing, and honour, said glory, and power, be unto him that sitteth upon the throne and unto the Lamb, forever and ever.’
+
+“And the four living creatures said, ‘Amen.’ And the four-and-twenty elders fell down, and worshipped him, that liveth forever and ever.”
+
+This testimony is guarded on every side. You have first, the redeemed adoring the Lamb only, with prostrate adoration. Then numbers without number of the angels, adore the Lamb likewise. Then the whole universe in similar adoration bless both the eternal Father and the Lamb. And, lastly, there is the expressive echo of praise to the eternal Father alone. You cannot say it is not the highest worship, for once it is offered to the Eternal alone. [Or if, as is the most probable reading, you omit, with Tregelles, in verse 14 the words, “Him that liveth forever and ever,” the worship is addressed absolutely to the Deity. It will scarcely be believed, that those who have refused to admit adoration in (προσκυείω) when applied to Jesus Christ, have objected that here the selfsame word is applied only to the Father.] You cannot say it is offered to the Father alone, for once the Lamb is united with the Father. Your cannot say it is offered to the Father only through the Son, for twice it is offered alone to the Lamb that was slain. It is the utmost homage heaven can pay. The spirits of the just made perfect have no higher tribute to give. The angels of light can offer no more exhaustive ascription of their devotion. No vision that you could have conceived, no language that you could have employed, could more distinctly authorize our rendering to Christ the highest and the deepest adoration, seraphic love, confiding trust, everlasting praise.
+
+I have dwelt the longer on this portion of my argument, for this is, of itself, sufficient to set the question at rest forever, when we remember that Jesus Christ himself, gathering up the testimony of Scripture, says, “It is written, thou shalt worship (προσκυείω) the Lord thy God, and Him only shalt thou serve.” (Matt. 4:10.) But we have seen that the highest worship and service on earth, and in heaven, is rendered to the Son. Therefore, He is the Lord our God.
+
+(4) Once more this truth is proved, by the conjunction of the name of the Lord Jesus with that of our heavenly Father, in offices where the association of the Creator with his creature, would confound the infinite distinction betwixt God and man.
+
+This evidence, though somewhat of a circumstantial and incidental character is, from the exceeding solemnity of its use in the New Testament, peculiarly conclusive. The combination of the name of the Most High with one subordinately employed in the evident capacity of his servant, is of easy explanation: (As Ex. 14:31. Jud. 7:20.) though even this is rare in Scripture: but the conjunction of the infinite God, with one coordinately engaged in manifest equality of rank, is utterly inexplicable on the Unitarian hypothesis. Examples will most readily illustrate my meaning:–
+
+“Go ye, and disciple all nations, baptizing them into the name of the Father, and of the Son, and of the Holy Ghost.” (Matt. 28:19.) Is it, for a moment, conceivable, that He who sees the end from the begin, and knew that this would be the standard formula of Christian baptism, would suffer that in this most solemn rite, the name of a creature with a derived being, should coalesce into his own name, which alone is Jehovah, the increate Father?
+
+“He that loveth me shall be loved of my Father, and I will love him: and will manifest myself unto him. ... If a man love me he will keep my words, and my Father will love him, and we will come unto him, and make our abode with him.” (John 14:21, 23.) The love of the Father and of the Son is represented as an equal privilege, – the access of the Father and of his Son to the soul of the obedient believer is a common access, – and the indwelling of the Father and of the Son a combined habitation. What created being could use such language? It warrants the parallel declaration of St. John’s Epistle, (1 John 1:3) “Truly our fellowship is with the Father and with his Son Jesus Christ,” but it obliges us, at the same time to confess, that Jesus, in saying God was His Father, made himself equal with God.
+
+“This is life eternal to know Thee the only true God, and Jesus Christ whom thou hast sent.” (John 17:3.) Compare with this (2 Peter. 1:2) – “Grace and peace be multiplied unto you, through the knowledge of God, and of Jesus our Lord.” If Jesus Christ were only an angelic or human prophet, revealing the Father, is it credible that the intimate heart-knowledge of the expositor should be put on the same level with the knowledge of God, as equally essential to the life of the soul, and equally indispensable for the sustenance of that life?
+
+Again, I take up the Epistles. The prefaces are most suggestive, whether you regard the embassy of the writers, or the designation of the church addressed, or the benediction implored.
+
+As to the commission by virtue of which they acted, you find almost every combination employed:–
+
+“Paul, a servant of God, and an apostle of Jesus Christ.” (Titus. 1:1.)
+
+“James, a servant of God, and of the Lord Jesus Christ.” (James 1:1.)
+
+“Peter, an apostle of Jesus Christ” (1 Peter 1:1.)
+
+“Simon Peter, a servant and an apostle of Jesus Christ.” (2 Peter 1:1.)
+
+“Jude, the servant of Jesus Christ.” (Jude 1.)
+
+“Paul, an apostle, ... by Jesus Christ, and God the Father, who raised him from the dead.” (Gal. 1:1.)
+
+Would not this interchangeable variety, if Christ were man only, confuse every reverential distinction betwixt the Creator and the creature? Though here the difference betwixt the loftiest monarch and his lowliest subject sinks into nothing, can you imagine an earthly plenipotentiary sent forth, now styling himself “a servant of the emperor and an ambassador of the chancellor”; now “a servant of the emperor and of the chancellor”; now “an ambassador of the chancellor”; now “a servant and an ambassador of the chancellor”; now “the servant of the chancellor”; now “an ambassador (sent) by the chancellor and by the emperor?” Who would not think that the imperial supremacy was greatly compromised by such language? And yet, there the distinction to be observed is only between two men of equal nature, though unequal rank. But no distinction is drawn in this celestial commission: – Is not then the original authority equal?
+
+The designation of the churches addressed, is also perfectly unrestricted:–
+
+“Unto the church of God which is at Corinth, to them that are sanctified in Christ Jesus.” (1 Cor. 1:2.)
+
+“To the saints which are at Ephesus, and to the faithful in Christ Jesus.” (Eph. 1:1.)
+
+“To all the saints in Christ Jesus, which are at Philippi.” (Phil. 1:1.)
+
+“Unto the church of the Thessalonians, which is in God the Father, and in the Lord Jesus Christ.” (1 Thess. 1:1.) Also, “The church ... in God our Father, and the Lord Jesus Christ.” (2 Thess. 1:1.)
+
+It is to these two last descriptions of the Thessalonian church, I would especially direct your attention. Was then their spiritual status equally, indiscriminately consistent in the Father and the Son? Then to that church the Father and the Son were equally the Rock of their salvation.
+
+And to complete the evidence, the benediction besought by the great apostle of the’ Gentiles is almost invariably in these words [I may mention, in passing, there is a remarkable addition in the apostolic Epistles to Timothy and Titus. All the others that bear the name of Paul, begin with “Grace and peace”; these have a most gracious enlargement, “Grace, mercy, and peace.” He who knew so well a minister’s heart, interlined, as it were, his usual salutation prayer, with mercy. How precious a word to ministers! And never more precious, than when treating of the awful mysteries of the faith.]:–
+
+“Grace be unto you, and peace from God our Father, and the Lord Jesus Christ.”
+
+Why this mutual derivation of spiritual blessing from the Father and the Son? Surely, because equally in the Father and in the Son have we eternal life.
+
+I might also adduce the prayers (quoted p. 44.) where, (Thess. 3:11) without regard to precedence of names, blessings are implored from God the Father, and the Lord Jesus Christ himself as coequal in their power to grant the petition urged. (2 Thess. 2:16–17.)
+
+But I hasten to that wondrous benediction which has dropped, as the gentle dew from heaven, upon the church of Christ for eighteen centuries – “The grace of the Lord Jesus Christ, and the love of God, and the communion of the Holy Ghost, be with you all. Amen.” (2 Cor. 13:14.)
+
+Consider, I pray you, in the baptismal and in this benedictory formula, the meaning for which those who insist on the mere humanity of Jesus Christ contend. The first, as expounded by them, would run thus:–
+
+Baptizing them into the name of the Father, and of an exalted man, and of a certain influence of the Father.
+
+The second would be thus interpreted:–
+
+The grace of a creature, and the love of the Creator, and the communion of creative energy, be with you all. Amen.
+
+Your reason and conscience alike, refuse to believe that this inextricable confusion betwixt God and man, between a person and an abstraction, is sanctioned by Scripture. And then in 2 Cor. 13:14, why this notable change of the order observed in Matt. 28:19, if not to show that “in this Trinity, none is afore or after other, none is greater or less than another?” (Creed of St. Athanasius.) These two verses, pondered and prayed over, seem to me sufficient to decide the controversy forever.
+
+But if further testimony is needed, we have that of every creature in heaven, and on the earth, and under the earth, and such as are in the sea, and all that are in them, who cry without intermission and without pause, and therefore without the possibility of any distinction (as between the dulia and latria of the Romanists,) being drawn in their adoration – “Blessing, and honour, and glory, and power, be unto him that sitteth on the throne, and unto the Lamb forever and ever.” (Rev. 5:13.)
+
+And, finally, of the glory of the heavenly Jerusalem, we read, “I saw no temple therein, for the Lord God Almighty, and the Lamb, are the temple of it. And the city had no need of the sun, neither of the moon, to shine in it, for the glory of God did lighten it, and the Lamb is the light thereof.” (Rev. 21:22–23.)
+
+Why (I press the question on your conscience) this coequal and cooperating glory of the Lamb with the omnipotent God? Could you substitute any created man or angel for His excellent Name? Never. For He alone, in the unity of the Holy Ghost, is One with God, and is God. The Lord, of his infinite mercy, grant that I who write, and they who read these pages, may stand with that palm-bearing multitude of the redeemed, who have washed their robes, and made them white in the blood of Jesus, and who cry aloud evermore, “Salvation to our God who sitteth on the throne, and unto the Lamb.” (Rev. 7:10.)
+
+(5) It remains that we consider the explicit assertions that Jesus Christ is Jehovah and God.
+
+These assertions are neither few, nor obscure. But I would venture again to remind my readers that the momentous enquiry in which we are engaged is no mere intellectual problem, to be grasped by the power of human reason, and to be solved by the skill of human analysis: for “that no man can say that Jesus is the Lord, but by the Holy Ghost.” (1 Cor. 12:3.) And I would ask them to lift up their hearts with me, that the Spirit of truth may guide us into all truth, that He may glorify Jesus, and that He may take of the things of Christ, and show them unto us. (John 16:13–14.)
+
+“The title JEHOVAH is the grand, the peculiar, and the incommunicable name of God. It neither is applied to any created being throughout the Scriptures, nor can be applied in reason, for it imports the necessary, independent, and eternal existence of the Most High. Of the infinite, self-existent essence implied by this name, it is impossible for us to form a full and adequate idea; – because we and all other creatures have but a finite derivative essence. Our most sublime notions of such uncircumscribed existence must fall infinitely more short of the truth, than the smallest animalcule or atom floating in the air of the vast dimensions of universal nature. We could not even have conceived anything of the peculiarities, which this name teaches us of the Almighty; if He had not been pleased to reveal himself under it, and to declare those distinguishing peculiarities to us. Jehovah, Ehjah, and Jah, are names expressive of the incommunicable essence; not names of office. The word Jah, stands simply for the Divine essence, or for Him who is, and who necessarily must be. The name Ehjah, occurs nowhere but in Ex. 3:14, and means not only Him who necessarily is, but who necessarily will be. It regards the future Eternal, and demonstrates the immutability of the Divine existence. The title Jehovah, includes the past, the present, and the future Eternal; that is, according to our conceptions, for all things and every division of that duration which we understand by time, are present with him though successive to us. Thus the inspired apostle, finding no word in Greek to represent the idea of the Hebrew, uses a periphrasis or comment on the word, and expresses the name Jehovah by “He that is, that was, and that is to come.” The word Jehovah (which contains the other two) imports in itself an independent essence; and it denotes to us and to the whole creation, both the source of life and the continual maintenance of it.” (Serle’s Horae Solitariae.)
+
+Now we find certain prophetic declarations in the Old Testament regarding Jehovah fulfilled, as ruled by the New Testament, in Christ Jesus. This is perhaps, the most conclusive evidence that could be adduced – an inspired interpretation of an inspired text – so that, if I may adapt the apostle’s words, “by two immutable things in which it is impossible for God to lie, we might have a strong consolation, who have fled for refuge to lay hold upon the hope set before us.” (Heb. 6:18.)
+
+The voice of him that crieth in the wilderness, Prepare ye the way of Jehovah! make straight in the desert a highway for our God. – Isa. 40:3.
+
+This is He that was spoken of by Esaias the prophet, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord. – Matt. 3:3.
+
+Now John Baptist’s voice, without controversy, was heard in the wilderness, preparing the way for Christ. Therefore, Christ is Jehovah, our God. [So it results from a comparison of Luke 1:76, and Matt. 11:10, that Jesus Christ is the Lord and the Highest. Cf. Jones, p. 4.]
+
+Sanctify Jehovah of hosts himself; and let him be your fear, and let him be your dread, and He shall be for a sanctuary; but for a stone of stumbling, and for a rook of offence to both the houses of Israel. – Isa. 8:13–14.
+
+Unto you, therefore, which believe, He (Christ) is precious; ... but a stone of stumbling, and a rock of offence, even to them which stumble at the word, being disobedient. – 1 Peter 2:7–8.
+
+The stone of stumbling, as Isaiah affirms, is “Jehovah of hosts himself,” but as St. Peter interprets it (for he is referring to what is contained in the Scripture, verse 6), this stone is Christ. Therefore, Christ is Jehovah of hosts himself.
+
+And I (Jehovah, which stretcheth forth heavens, etc. see verse 1) will pour upon the house of David, and upon the inhabitants of Jerusalem, the Spirit of grace and supplication, and they shall look upon me whom they have pierced. – Zech. 12:10.
+
+And again, another Scripture saith, “they shall look on him (Christ) whom they pierced.” – John 12:37.
+
+The prophet declares the One who is pierced is Jehovah speaking of himself, but according to St. John’s inspired interpretation, Christ crucified is here predicted. Therefore, Christ is “Jehovah, which stretcheth forth the heavens, and layeth the foundation of the earth, and formeth the spirit of man within him.”
+
+Mine eyes have seen the King, Jehovah of hosts. – Isa. 6:5.
+
+These things said Esaias, when he saw his glory, and spake of him. – John 12:41.
+
+The message recorded determines the occasion to be the same. Therefore, Jesus Christ, of whom the inspired apostle is speaking, is Jehovah of hosts, before whom the seraphim veiled their faces in lowliest adoration.
+
+I (Jehovah) have sworn by myself … that unto me every knee shall bow, every tongue shall swear. – Isa. 45:23.
+
+We shall all stand at the judgment seat of Christ: for it is written, As I live, saith the Lord, every knee shall bow to me, and every tongue shall confess to God – Rom. 14:11.
+
+St. Paul incontrovertibly establishes his assertion, that we shall stand at the judgment seat of Christ, by this solemn oath of Jehovah, recorded by Isaiah. Therefore, Christ is Jehovah, who says, (verse 21) “There is no God else beside me, a just God and a Saviour: there is none beside me.”
+
+When we remember the solemn protest of Him who calls himself the Jealous God – “I am Jehovah; that is my Name: and my glory will I not give to another,” (Isa. 42:8.) – and when we reflect on the awful judgments denounced on those who render to the creature the supreme worship due to the Creator, the above comparison of Scripture with Scripture, wherein the Holy Ghost interprets, explains, and applies his own language, presents the most irrefragable proof that Jesus Christ is the Eternal, Increate, Alone, Jehovah of hosts, the Highest, the Lord our God.
+
+And here may be the most convenient place to introduce a few remarks on the witness we derive from the word “Lord”. No doubt it is often used by classical, and sometimes by the sacred writers, as a human appellation. But then the facts remain, that it is the word, equivalent to Adonai, which the Jews, through their reluctance to pronounce the awful name Jehovah, continually employed as its synonym; that it is the word by which Jehovah is uniformly translated by the Septuagint, even in Exodus 6:3; and further, that standing by itself in the New Testament, it designates in multiplied passages the Infinite Father. We must look, therefore, broadly to its general use by Christ and his apostles. And what is the result? The word (Κύριος) occurs 737 times in the New Testament – of these, in 18 instances it is confessedly applied to man or men. In 54 instances it appears in the discourses and parables of Christ, where the master described as Lord represents or typifies the Father or Himself: and in 665 cases, the vast remainder, it is applied indiscriminately to the Eternal Father or to the Son. Lists of the two first classes are given below.
+
+Instances in which the word κύριος occurs in the discourses and parables of the Gospels, where the Lord, master, or householder represents or typifies God the Father, or God the Son:–
+
+Instances in which the word κύριος is used of man:–
+
+Matt. 6:24, 10:24–25, 13:27, 18:25–27, 31–32, 34; 20:8, 21:30, 40; 24:45–46, 48, 50; 25:18–26, ten times.
+
+Matt. 27:63, by the Jews to Pilate. Luke 19:33, of the owners of the colt. John 12:21, by the Greeks to Philip.
+
+Mark 12:9, 13:35.
+
+Acts 16:16, 19, masters of the damsel; 16:30, by the jailor to Paul and Silas; 25:26, by Festus, of Augustus.
+
+Luke 10:2, 12:36–47, seven times; 13:8, 14:21–23, 16:3 5, 5, 8; 19:16, 18, 20, 25; 20:13, 15.
+
+1 Cor. 8:5, lords many.
+
+Gal. 4:1, of the heir.
+
+John 13:16, 15:15, 20.
+
+Eph. 6:5, 9; Col. 3:22, 4:1, of masters.
+
+I was in some doubt whether to add to this list – Matt. 25:11, Luke 13:25, but in these addresses the parable seems almost lost in the reality.
+
+1 Tim. 6:15, [Lord] of lords.
+
+1 Peter 3:6, by Sara, of Abraham.
+
+Rev. 7:14, by John to the elder; 17:14, 19:16, [Lord] of lords.
+
+Now it is trifling with this question to assert that the passages adduced in the second column, invalidate all the proof to be derived from the hundreds of passages in which Jesus Christ is called Lord, and as Lord is believed in, served, and worshiped. The servant of a nobleman who addresses him as “my lord,” does not confound his duty to his master and his God.
+
+Now of these eighteen instances with scarcely an exception, was there the remotest possibility of Divine worship being intended to the party thus designated? Indeed, in twelve of these cases, the word is in the plural. But what of those very numerous instances in which it is applied to Jesus Christ? (Acts 10:36, 9:17; 2 Cor. 12:8–9; 1 Cor. 15:47.) Therein, He is described as “Lord of all:” as the Lord, even Jesus, He appeared to Saul in vision: as the Lord, St. Paul besought him to remove his thorn in the flesh: He is declared to be the second man, the Lord from heaven: and as the Lord, the righteous judge, He will give a crown of righteousness to all them that love His appearing. Now to one thus described as Lord, seeing that the name is applied to the Father and the Son indiscriminately, so that, in many places, the difficulty is very great of knowing whether the Eternal Father or the Lord Jesus Christ be intended, the risk of ascribing Divine worship would be imminent indeed. The collation of two passages from the Old, with two passages from the New Testament, seems to clinch the argument:–
+
+Hear, O Israel, the Lord our God is one Lord (Κύριος ο Θεος ημως, Κύριος εις εστι – LXX) – Deut. 6:4.
+
+There is one Lord (εις Κύριος) – Eph. 4:5.
+
+And the Lord shall be king over all the earth. In that day, there shall be one Lord, and his name One (Κύριος εις και το όνομα αυτου εν – LXX) – Zech. 14:9.
+
+To us ... there is ... one Lord (εις Κύριος) Jesus Christ, by whom are all things, and we by him. – 1 Cor. 8:6.
+
+Here the apostle uses the very words to which the Jews clung with such tenacity, as establishing the fundamental truth of the Unity of God; and adapting the very words of the common version, the Septuagint, applies them to Jesus Christ. There appears, therefore, in this name of Christ, as used in the New Testament, explicit declaration that He is the Eternal Jehovah.
+
+As a link of connection between the testimony of the Old and New Testament to the person of the Messiah, I would now entreat the reader’s calm and prayerful consideration of the two first chapters of the Epistle to the Hebrews. St. Paul is proving the preeminence of Christ over all other prophets, and the essential difference betwixt his and the angelic nature. If exorbitant views of his Divine dignity had crept into the church, here, at least, we should look for the correction of error, and for definition of the truth. And how then is He described?
+
+“God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets, hath in these last days spoken unto us by his Son, whom He hath appointed heir of all things, by whom also made the worlds. (Or “in many fragments” πολυμερως little by little. Cf. 1 Cor. 13:9, εκ μέρους.)
+
+“Who being the brightness of his glory, and the express image of his person, (υποστάσεως) and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high; being made so much better than the angels, as he hath by inheritance obtained a more excellent name than they.
+
+“For unto which of the angels said He at any time, ‘Thou art my Son, this day have I begotten thee?’ And again, ‘I will be to him a Father, and he shall be to me a Son.’ And again, when He bringeth in the first-begotten into the world, He saith, ‘And let all the angels of God worship him.’
+
+“And of the angels, He saith, ‘Who maketh his angels spirits, and his ministers a flame of fire.’
+
+“But unto the Son He saith, ‘Thy throne, O God, is forever and ever: a scepter of righteousness is the scepter of thy kingdom: Thou hast loved righteousness and hated iniquity; therefore God, even thy God, hath anointed thee with the oil of gladness above thy fellows.’ And, Thou, Lord, in the beginning hast laid the foundation of the earth; and the heavens are the works of thy hands; They shall perish, but Thou remainest, and they all shall wax old as doth a garment; and as a vesture shalt Thou fold them up, and they shall be changed; but Thou art the same, and thy years shall not fail.” (Heb. 1:1–12.) [The most severe criticism has not really brought one sustained objection against the received version.]
+
+I would only here again remind you, we have a Divine interpretation of the Divine Scriptures. Whatever be your preconceived view of these verses, the apostle, writing as he was moved by the Holy Ghost, adduces them as proof texts of the glory of Christ. In the following chapter, we find this wonderful Saviour made a little lower than the angels, for the suffering of death, perfected through suffering, taking part of flesh and blood, in all things made like unto his brethren, having suffered, being tempted: but in these verses I have quoted, how transcendent his Majesty! (Heb. 2:9–10, 14, 17–18.) The goodly fellowship of the prophets were his forerunners. The innumerable company of angels are his worshippers. He is seated on the everlasting throne. He is the only-begotten Son of the Father. He is addressed as God. He is adored as the immutable, immortal Jehovah. I feel any attempt to enforce this evidence may mar its impressive grandeur, and I can only pray that the word of God may here be quick and powerful, and sharper than any two-edged sword, in the hand of the Almighty Spirit of God.
+
+I might well close this part of my argument here. Scripture declares that our God, whose name alone is Jehovah, is One Jehovah, and is jealous of his own attributes and of our confidence. In a word, we rest on God. At the same time, Scripture declares that all these Divine attributes, belong to Jesus Christ, who claims equal adoration and equal trust, as being himself Jehovah, our God and Saviour. Our faith centers on Jesus Christ. Christ is all, and in all, to the Christian. In a word, we rest on Christ. Here is our Rock, inexpugnabile saxum. You cannot add to its security, for it is impregnable. You cannot increase its stability, for it is immoveable. You cannot make absolute certainty, more certain. Nevertheless, many express assertions remain. And if I may return to my former illustration from trigonometry, in the solution of a triangle if a side be measured and two angles be observed, nothing can add to the perfect certainty with which a mathematician tells you the number of degrees in the third angle, and the length of the remaining sides. Nothing would increase his assurance. His conclusion is demonstrably true. Still, if an independent observer could tell you the measurement of those parts which were the object of algebraic investigation, the fact of their precise coincidence, which of course and of necessity appears, is a further proof with what security you may always rest on the results of mathematical science. I would then, draw into a brief compass, some few of these positive deductions. They state expressly what other Scriptures prove demonstratively.
+
+Let us then humbly weigh that passage, against which, skeptical criticism has directed its fiercest attacks, but from which they have all recoiled, and which stands impregnable as ever, a rock foundation for the faith of the humble believer.
+
+“In the beginning was the Word, and the Word was with God, and the Word was God: the same was in the beginning with God: all things were made by him, and without him was not anything made that was made. In him was life, and the life was the light of men. ... (John 1:1–4.) He was in the world and the world was made by him, (verse 10) and the world knew him not ... And the Word was made flesh and dwelt among us, and we beheld his glory (the glory as of the only-begotten of the Father,) full of grace and truth. ... (verse 14.) No man hath seen God at any time: the only-begotten Son which is in the bosom of the Father, He hath declared him.” (verse 18.) [I earnestly commend to reader to weigh Dr. Pye Smith’s lucid exposition of this passage, and pray that the question he puts into the lips of the sincere Unitarian may be applied with Divine power. – “Am I not inwardly sensible that in my attempts to frame an interpretation of this paragraph, which may wear at all the semblance of consistency, I am rowing against the stream; I am putting language to the torture; I am affixing significations to words and phrases, which all my efforts can scarcely keep me from exclaiming that they could never have been in the contemplation of the original writer? Have I not then awakening reasons for the suspicion that I have not framed my opinions with that close, and faithful investigation, which the solemn greatness of the case requires? Am I not bound to review the whole subject in the sight of the all-seeing God, and under the sense of my accountableness to him as the author and revealer of truth?”]
+
+If anything of man could add strength to this Divine testimony to Jesus, it would be the fact of Philo, a Jew of Alexandria, cotemporary with Christ, but manifestly ignorant of his history, describing the Divine Word, as the Son of God, the First Begotten, the Image of God, the Angel, a second God, the instrument of Deity in the creation, the High Priest and Mediator, perfectly sinless himself, and the fountain of virtue to men: and of St. John adopting this self-same name, as one indicative of the Messiah, and understood by those who should read his Gospel. But Scripture is its own best interpreter. And this same apostle, writing in after years of the advent of Christ, says, “He was clothed in a vesture dipped in blood, and his name is called the Word of God.” (Rev. 19:18.) Christ then, is the Word, Christ is the Creator, Christ is God. This introduction to his Gospel was, I doubt not, constructed by the inspired apostle to be a bulwark against every doubt, and accordingly, for near two thousand years, “as a tower of strength, | Which stood four-square to every wind that blew,” it has kept the hearts of innumerable believers in perfect peace.
+
+There is another passage I cannot pass over, though space forbids me to enter into it fully, John 5:17–29; when, the Jews having accused our Lord of making himself equal with God, because He said God was his Father, instead of protesting against their construction of his words, which, if only a man, He would have done with indignation and abhorrence, He proceeded, while acknowledging the subordination of his mission as man, to set forth the original and essential supremacy of his person as God. For if the Son doeth all things what things soever the Father doeth: if the Son quickeneth whom He will: if the dead shall hear his voice and live: if he executes judgment on the universe: if all men must honour the Son, even as they honour the Father: then is He equally Almighty: equally the communicative fountain of life: equally God who alone can raise the dead: equally the Omniscient who alone can judge an assembled world: and equally the center of universal homage and adoration. (verses 18, 21, 27, 23.)
+
+I proceed to the utterance of Thomas, when the permitted touch of his risen Saviour scattered the dark clouds of unbelief – “My Lord and my God!” (John 20:28.) I know that it has been alleged that this was an exclamation of surprise, addressed to God the Father: but I can hardly believe any earnest seeker after truth can thus be bared. No one who knows the language of the heart, can here misinterpret it. The apostle had given up all for Jesus Christ: his master had been seized, and crucified, and buried: and Thomas’ faith was sorely tried. But now his Lord stood before him – he could doubt no more; and “he answered and said,” (not without reason is the word “answered” here inserted – the words were addressed as an answer to One who stood his proven Saviour before him: – it was the deep response of the heart of Thomas to Christ) “he answered and said, ‘My Lord and my God!’”
+
+I append other passages with a few brief remarks of the most learned and impartial critics:–
+
+“Of whom, as concerning the flesh, Christ came, who is over all, God blessed forever.” – Rom. 9:5.
+
+“Every Greek scholar must admit, that the fair and just construction of the sentence is that which is generally received.” – P. Smith, vol. ii. p. 683.
+
+Col. 2:9, – “For in him dwelleth all the fulness of the Godhead bodily.”
+
+“The Godhead, i.e. Deity, the essential being of God – bodily, i.e. manifested corporeally in his present glorified body. Before his incarnation, it dwelt in him as the λόγος άσαρχος, but not σωματικως, as now that He is the λόγος ένσαρκος.” – Alford.
+
+Ephes. 5:5 – “The kingdom of [him who is] Christ and God (εν τή βασιλεία του Χριστου και Θεου).
+
+“Not only the principle of the rule and the invariable practice of the New Testament with respect to Θεος, and all other attributives, compel us to acquiesce in the identity of Χριστου και Θεου but the same truth is evinced by the examination of the Greek fathers” .... Middleton, quoted by P. Smith, who says “If this text had no relation to any controversy, and were judged of solely by the common law of Greek construction, no person would ever have disputed the propriety, or rather necessity, of considering the two concluding nouns as referring to one and the same object.”
+
+Titus 2:13, – “the glorious appearing of our great God and Saviour, Jesus Christ.
+
+Cf. Scholefield’s note in his “Hints”. Middleton says, “If here the sacred writer did not mean to identify the great God and the Saviour, he expressed himself in a manner which [could not but] mislead his readers.’ – Quoted by P. Smith.
+
+2 Peter 1:1, – “the righteousness of our God and Saviour, Jesus Christ, (εν δικαιοσυνη τω Θεω ημων και σωτήρος Ιησου Χριστου)”: for construction compare the expression a little below, – (verse 11) “the everlasting kingdom of our Lord and Saviour Jesus Christ (την αιωνιον βασιλείαν Κυρίου ημων καί σωτηρος Ιησου Χριστου).” [If the Unitarians insist that both the Father and the Son are intended in these three passages, granting for a moment this were possible, then as an argumentum ad seipsos, all the force of the previous section (4) applies, and we find the conjunction of the names God and Christ, where such association would confound the distinction betwixt the Creator and his creature.]
+
+And lastly, 1 John 5:20, – “We are in him that is true, in his Son Jesus Christ. This (person) is the true God, and eternal life.”
+
+“The circumstance which, in my mind, places the matter beyond dispute is, that the same person is here most evidently spoken of as ‘the true God and Eternal Life’. It will be granted that a writer is the best interpreter of his own phraseology. Observe, then, the expression which he uses in the beginning of the Epistle. ‘The life was manifested, and we have seen it, and show unto you that Eternal Life, which was with the Father and was manifested unto us.” (1 John 1:2) In these words it is admitted that the eternal life is a title given to Jesus Christ. Compare, then, the two passages. Is not the conclusion of the Epistle a clear explanation of its beginning?” – Wardlaw’s Discourses, p. 59.
+
+I would only ask you to compare with this, the confession of the prophet, “Jehovah is the true God. He is the living God.” (Jer. 10:10.) And here we have another invincible argument that Jesus Christ is Jehovah, very and eternal God.
+
+This treatise does not profess to enter deeply into a critical examination of the text of the New Testament, but it may be a satisfaction to those whose minds have been disturbed by rash assertions of the uncertainty of manuscripts and versions, to know, that not one of the texts here relied on, are set aside by that learned and eminent man, Dr. Griesbach. [On the doctrine before us, Griesbach says: “So numerous and clear are the arguments and the testimonies of Scripture in favour of the true Deity of Christ, that I can hardly imagine how, upon the admission of the Divine authority of Scripture, and with regard to fair rules of interpretation, this doctrine can by any man be called in doubt. Especially the passage, John 1:1–3, is so clear, and so superior to all exception, that by no daring efforts of either commentators or critics, can it ever be overturned or be snatched out of the hands of the defenders of the truth.” – Quoted by P. Smith, vol. ii, p. 540.] To him Unitarians constantly appeal. Of him Dr. P. Smith writes: “No man ever devoted, through a long life, such a persevering assiduity of labour to the critical study of the New Testament, and no man has ever so completely united the confidence of all denominations of Christians in the sagacity, judgment, and integrity of his critical decisions.” There are indeed three texts often contended for, which the authority of this distinguished professor precludes my bringing forward as evidence: 1 John 5:7, he believes to be an interpolation; in Acts 20:28, he prefers κυρίου to Θεου; and in 1 Timothy 3:16, he would substitute ός for Θεος. But to these three texts, that we may not be drawn into needless disputations, I have simply forborne to refer. The argument does not demand them. It is incontrovertible without them. And therefore the enquirer may be certified on the one hand, that if he rejected the positive assertions that Christ is God, the great God our Saviour, in whom dwelleth all the fullness of the Godhead bodily, he would be violating those rules of sound common sense which he must apply, to interpret every other classical work; and on the other hand, he may be assured, that in resting on these declarations he is, so far as the most calm and learned scholars can assure him, relying on the yew exact meaning of the words intended by those who wrote under the inspiration of the Holy Ghost.
+
+And here, I would pause: and pray the reader to review the impressive strength of that evidence which the word of God has afforded.
+
+Let us remember how earnestly Scripture detaches our ultimate confidence from any creature, and exclusively claims it for the one Infinite Creator: how vivid is the contrast drawn betwixt man and God: how direct axe the prohibitions against trusting in man, how express the precepts to rest on God: and moreover how awful is the holy jealousy of the Most High, if any one usurp the incommunicable glories of his name, or intrude upon the claims of his supremacy; so that the first great lesson of spiritual education may be summed up in the words – “Blessed is the man that trusteth in the Lord, and whose hope the Lord is.” (Jer. 17:7.)
+
+Further let us remember, how confessedly Scripture requires us to repose our ultimate confidence in the Lord Jesus Christ: setting him before us as possessed of all those incommunicable attributes of Godhead; as our Creator, Preserver, and final Judge; as the hope of fallen man to whom the eye of every believer was directed by prophecy before his first advent; and as the great object of religious trust, a trust claimed by himself when He came into the world, conceded by his followers, and commanded by his inspired apostles: so that the second great lesson of spiritual education may be summed up in the words – “Whosoever believeth in the Son of man shall not perish, but have eternal life.” (John 3:15.)
+
+Further let us remember that, comparing spiritual things with spiritual, not only does Scripture ascribe to Christ all the attributes of essential Deity and thus, seeing there is one God and none else, establish the unity and equality of the Son with the Father; but moreover, represents the Son as fulfilling towards us all those offices of infinite greatness and goodness which God only can sustain: that the appearances of God Jehovah to the Old Testament saints, combined with the declaration “No man hath seen God at any time,” are utterly inexplicable on any other hypothesis, and are absolutely decisive when the New Testament assures us, it was the glory of the Lord Jesus they saw: that the direct and Divine worship rendered to and received by Christ, in earth and heaven, compels us to acknowledge He is the Lord our God: that the name of Jesus Christ is united with that of our heavenly. Father in offices where the coalition of the Creator with his creature would blend and confuse the infinite distinction betwixt God and man: that, whereas the most sensitive jealousy appears throughout Scripture, of any created being usurping the name of the supreme Creator, inspired interpretations of inspired texts assure us that Jesus Christ is the Eternal, Jehovah of hosts, the Lord our God: that as Lord, the one Lord, He requires obedience and is obeyed, claims trust and is trusted, demands adoration and is adored: and that finally, He is addressed as God and Lord; that He, the Word, is declared to be God, to be with God in the beginning, to be the Creator of all; that He claims equal honour; that He is over all God blessed forever; that his righteousness is the righteousness, and his future advent the appearance of our great God and Saviour Jesus Christ; and that of him St. John declares, “this is the true God and eternal life.”
+
+Let us ponder these things, and reflect how cumulative is this evidence. I earnestly pray that the Divine Spirit may present it with irresistible power to every conscience. If, after weighing the solemn declarations of Jehovah, guarding his own inalienable glories, we had found the essential attributes of Deity assigned in Scripture to Jesus Christ, this would have been an unanswerable argument. If, after considering our miserable condition as lost sinners, we had found that in the matter of eternal salvation, our hopes are there directed to Jesus as our Saviour, this would have been conclusive evidence, when we remember “I am God, and beside me there is no Saviour.” If, leaving this line of proof, we review the appearances of the Lord to the Old Testament saints, this would have been a new and interesting series of demonstrations which would lead us to the same result. If again, quitting this, we carefully ponder the Divine worship offered to him, and accepted by him, this is decisive, when we remember, “Thou shalt worship the Lord thy God, and him only shalt thou serve.” If, pursuing another path of investigation, we study those Scriptures where, in offices of the highest solemnity the name of Jesus Christ is so united with that of our heavenly Father, that to accept this as the conjunction of the Creator with his creature would confound all distinction betwixt God and man, we are again led irresistibly to the conclusion, that the Godhead of the Father, and of the Son is one, the glory equal, and the majesty coeternal. If, once more, we see how prophecies regarding God Jehovah are claimed by the New Testament as being fulfilled in Jesus Christ, here is inspired testimony to the supreme Godhead of the Messiah. And finally, when we find the awful names of God, and Saviour, and Redeemer, and Lord, ascribed to Him again and again in a subject where misdirected faith were idolatry and death, this again is explicit assertion and transparent proof. I say, the evidence is cumulative. It is not a long elaborate catena, the strength of which is the strength of its weakest link. If the reader thinks any text is inapplicable, let him dismiss it. This proof rests on hundreds of texts. The whole drift of Scripture, from Genesis to Revelation, establishes it. It is interwoven with the very texture of the sacred writings. The lines of argument are distinct and independent, and yet, when presented in their collective strength, they are so mutually corroborative, that it seems as if we heard the voice again from heaven saying, “This is my beloved Son, hear ye him”: and when we humbly ask, “who is the Lord, that I might believe in him?” and bend a reverential ear to catch the import of the answer, it is this, “Unto you is born a Saviour, which is Christ the Lord, Emmanuel, Wonderful, Counsellor, the mighty God, the Father of eternity, the Prince of peace.”
+
+But cordially to embrace this, needs I know the convincing power of the Holy Ghost. I feel my helplessness. I give myself to prayer. The altar is built as once on Carmel, the trench is made, the wood is piled, the sacrifice disposed in order. But it needs the fire from heaven. “Hear me, O Lord, hear me, glorify thy Son that thy Son also may glorify thee. Reveal thy Son to those who seek thee. Draw them unto him. Thou commandedst the light to shine out of darkness: shine in their hearts, in my heart, to give the light of the knowledge of the glory of God in the face of Jesus Christ.” (Gal. 1:16. John 6:44. 2 Cor. 4:6.)
+
+Bear with me, my friends, for giving utterance to prayers which have been long pleaded at the throne of grace. They have not been offered in vain. And when the fire of the Lord falls on any heart, it shall consume the sacrifice, and the wood, and the stones, and the dust: and the deep response of that believing soul shall be, “My Redeemer, thou art the Lord – my Saviour, thou art God.”
+
+## Chapter 5. That Scripture, in the Old and the New Testament alike, •presents to us the incarnation and the mission of the Saviour, as the extremity of condescension in Jehovah, that thereby He might exalt us to everlasting life. The Scriptural order to be observed in this enquiry. The moral and spiritual majesty of the incarnation of Christ. The examination of those passages which assert his humanity by the light of others which assert his Divinity. The derived glory to which He raises believers compared with his own essential glories.
+
+I proceed, therefore, to my fourth proposition: – That Scripture, in the Old and in the New Testament alike, presents to us the incarnation and the mission of the Saviour, as the extremity of condescension in Jehovah, that thereby He might exalt us to everlasting life.
+
+(1) The Scriptures already cited prove beyond contradiction the coequal, coessential, coeternal Godhead of the Son. And here we have attained that vantage ground from which, I am persuaded, we may most safely with the adoring angels stoop down and look into the humiliation and the humanity of Jesus Christ. (1 Peter 1:12.)
+
+Let us only follow the pathway along which Scripture does as it were lead us by the hand. Let us acknowledge the infinite perfections of him who is the Alone Supreme Jehovah. Let us confess the infinite demerit of rebellion against him. Let us admit that He has opened out to us in his word a way of access whereby we, the sinful and the sunken, may be brought nigh to him, the absolutely Holy and Good One, who is “of purer eyes than to behold evil, and cannot look on iniquity.” (Hab. 1:13.) Let us remember that this reconcilement is spoken of as a salvation, which to accomplish Omnipotence travels in the greatness of its strength, (Isa. 63:1) and which Omniscience declares to have been a mystery hidden in God from the beginning of the world (Eph. 3:9): and that to fulfill this work we find a wondrous mission revealed, in which the Lord God and his Spirit send forth, and the Eternal I AM is the sent One. (Isa. 48:16.) Let us then on the sure testimony of Scripture acknowledge that all the attributes, the honours, and the rights of Jehovah are ascribed to this Sent One, whose name is called Jesus, for He shall save his people from their sins; who claims himself equality with God as his only-begotten Son; and who is associated with God in every supreme office of Deity. And lastly, let us accept the simple fact, as recorded in the Bible, (John 1:1, 14; 3:13, 8:42, 17:5) of Christ’s descent from above; that He, the Word, who in the beginning was with God and was God, was made flesh and dwelt among us; that He came down from heaven; that He proceeded forth and came from God, forsaking the glory which He had with the Father before the world was; that being originally (υπάρχων) in the form of God, He emptied himself, and took upon him the form of a servant, and was made in the likeness of men (Phil. 2:6–7): that by him the universal Creator – by him incarnate and crucified – it pleased the Godhead to reconcile all things unto himself (Col. 1:19–20): that He being the brightness of his Father’s glory and the express image of his person, in the bringing many sons of God to glory, forasmuch as the children were partakers of flesh and blood, also himself likewise partook of the same, that through death He might destroy him that had the power of death, that is the devil, and deliver them who through fear of death were all their life subject to bondage. (Heb. 1:3, 2:14.)
+
+Now our whole souls are filled with one thought – the condescension of God. Now we shall not be stumbled at passages which speak of the exceeding humiliation to which He stooped. As we assign no limit to the height of his glory, we shall assign none to the depths of his grace. Yea, so far from taking offence at the inferiority of the position which He assumed, the very lowliness of his incarnation and the very degradation of the death He died, will kindle in us a brighter and a more burning gratitude, when we remember that though rich it was for our sakes He became poor, and that for us, his wayward and wandering sheep, the chief Shepherd offered up himself as the Lamb of God, laying down his life of his own accord, and taking it again to die no more. (2 Cor. 8:9.)
+
+(2) Perhaps to some minds it might have seemed more congruous with the Divine Majesty, supposing it needful for our salvation that God should humble himself at all, that the descent should have been less steep, and the humiliation less lowly. They would have chosen not some little insignificant planet like earth as the scene of his self-abnegation, but some central orb of metropolitan grandeur, and would have gathered the whole intelligent creation as spectators around the splendid arena. They would fain have had him assume not the body of our abasement but haply an angelic nature, wherein, as some seraph of surpassing brightness, He should have wrought deeds of miraculous beneficence. And chiefly, they would. have shunned for him the ignominy of the cross, and have selected what they deemed some more glorious method of self-sacrifice, whereby He should have paid the price of our redemption. This they would have called a salvation worthy God. But surely, as the heavens are higher than the earth, so are the ways of Jehovah higher than our ways and his thoughts than our thoughts. His work is perfect. (Isa. 55:9.) Let us remember that whatever of material and physical glory we add to the mission of Christ, beyond what is needful for the evidence of that mission, we subtract from its moral and spiritual glory. Between the unapproachable splendors of the Godhead and the lowest forms of created intelligence there are gradations absolutely without number. For the increate Jehovah to have assumed the nature of the highest archangel would have been an infinite descent. Let us thus far confide with childlike confidence, that herein was manifested omniscient love when God chose the world – this little world of ours – to be the theatre of the mighty conflict, and sent his only-begotten Son in the likeness of sinful flesh to suffer death upon the cross, and to be the propitiation for our sins. (Rom. 8:3. 1 John 4:9–10.)
+
+“The Word was made flesh, and dwelt among us.” There is a majestic condescension in these few words that nothing can equal. He was made man. “By himself, by his friends and disciples, by his enemies and persecutors, Jesus Christ was spoken of as a proper human being. His childhood was adorned with filial affection, and the discharge of filial duty. (Luke 2:40–52.) His intellectual powers, like those of other children, were progressive. In his earliest years, He embraced with eagerness the means of improvement. He had large experience of human suffering. His lot was one of severe labour, poverty, weariness, hunger and thirst. He affected no austerity of manners, nor did he enjoin it upon his followers. While He mingled in the common sociability and the innocent festivities of life, He sustained a weight of inward anguish which no mortal could know. He was a man of sorrows and acquainted with grief. He looked forward to the accumulation of suffering which He knew would attend his last hours, with feelings on the rack of agony, with a heart exceedingly sorrowful even unto death, but with a meek and resigned resolution, a tender and trembling constancy, unspeakably superior in moral grandeur to the stern bravery of the proudest hero. In his last hours, with a bitterness of soul more excruciating than any bodily sufferings, He cried, “My God, my God, why hast thou forsaken me” while yet, He promised heaven to a penitent fellow sufferer, and died in an act of devotional confidence, triumphing that his work was finished Thus He died, but rose again, that He might be the Lord of both the dead and living; and He ascended to his Father and our Father, to his God and our God. This was the man Christ Jesus: a man demonstrated from God by miracles, and prodigies, and signs, which God did by him: a man ordained by God, to be the judge of the living and the dead. (Acts 2:22. 17:31.)
+
+“It is delightful to dwell on the character of this unrivalled man: not only because in no other, since the foundation of the world, has the intellectual and moral perfection of our nature been exhibited, but because the contemplation of such excellence refreshes and elevates the mind, and encourages to the beneficial effort of imitation. He always did the things which pleased his heavenly Father. Love, zeal, purity, a perfect acquiescence in the Divine will on every occasion, and the most exalted habits of devotion had their full place and exercise in his mind. The most refined generosity but without affectation or display; mildness, lowliness, tenderness, fidelity, candour, a delicate respect for the feelings as well as the rights and interests of others, prudence, discriminating sagacity, the soundest wisdom, and the noblest fortitude shone from this Son of righteousness with a luster that never was impaired.” [I make no apology for condensing and abstracting the two preceding paragraphs from the profound treatise of Dr. Pye Smith, to which I have frequently referred, on “Scripture Testimony to the Messiah” (vol. II. 334–337). Permit me to take this opportunity of urging any who need a calm and candid investigation of this momentous subject, to study his noble apology for our faith. Most thankful should I be, if my humble essay formed the stepping stone which should lead any to that truly great work.]
+
+Believe me, we yield to none in the strength of conviction with which we hold to the humanity of Jesus Christ. “The Word was made flesh, and dwelt among us.” (John 1:14.) We take our stand fearlessly on this. This unlocks all those texts on which Unitarians are wont to insist, asserting the inferiority and subordination of the Son of man to the Father. We do not hide these truths. We do not gloss them over. We do not explain them away. They are essential to our faith. As combined with the revelations of his essential Godhead, they form that inimitable grace which is our salvation. The foot of the ladder must rest on earth, as the top of it reaches to heaven. (Gen. 28:12. John 1:51.)
+
+If our doctrine is the truth, that there subsist in the essence of One Jehovah, three who are called the Father, the Son, and the Holy Spirit, coequal and coeternal; and that it is the design of the Father, and the will of the Son, with the consenting pleasure of the Holy Spirit, that the Son, for the recovery of fallen man, should empty himself, not of his Godhead, which were impossible, but of his glory, and take our human nature into mysterious union with his Divine nature, so that God and man make one Christ: if this is spoken of in Scripture as the extremity of Divine condescension, and humiliation, devised and accomplished, that hereby guilty men might have a medium of access to the Holy Deity, – or rather foregoing abstract terms, that we might have a mediator betwixt us and God, one with God by reason of his eternal essence, one with us by reason of the humanity He deigned to assume: how otherwise could such a relationship have been expressed than in such or such like words – “There is one God and one mediator betwixt God and man; the man Christ Jesus, who gave himself a ransom for all?” (1 Tim. 2:5–6) – or such a salvation be described than “This is life eternal, that they should know thee, the only true God and Jesus Christ, whom thou hast sent?” (John 17:3.) Looking forward, as the man Christ Jesus, to his translation from this world of suffering to the glory of his Father’s throne (remember He had emptied himself, taken upon him the form of a servant, humbled himself – if these words mean anything, they imply a spontaneous descent from the higher to the lower), how otherwise could He describe his return from that present estate of afflicted humanity, than in such or such like words – “If ye loved me ye would rejoice, because I said, I go unto the Father, for my Father is greater than I.” (John 14:28.) Having descended with the express design of doing his Father’s pleasure, of serving a perfect service, of rendering a spotless obedience to the law, of exhibiting a Divine model of self-denial; how otherwise could He declare his mission than in these or similar terms (John 6:38. Heb. 12:2.) – “I came down from heaven not to do mine own will, but the will of him that sent me?” Standing forth, the author and finisher of the faith (της πίστεως); the exemplar of that faith we are to copy; AS MAN working his miracles not by virtue of his Divinity ever inherent in him, but by virtue of a perfect faith in, the power of the Father; that faith which with us is intermittent and often overborne, being with him constant without defect, and victorious without defeat; how otherwise could He reveal the secret and entire dependence of his soul on God, than in language such as this, – “I can of mine own self do nothing.” “My Father that dwelleth in me, He doeth the works?” (John 5:30, 14:10.)
+
+(3) These passages affirm his proper humanity, and his humble mission as a servant. This humanity we assert as strongly, this mission we believe as verily as yourselves. All that faith requires is to act upon the great principle of comparing spiritual things with spiritual; and, wherever we find any assertion of his subordination as man, if we can place by its side a parallel assertion of his supremacy as God, faith demands nothing more. Often, the immediate context will supply the corrective, and adjust the balance. If not, we shall never consult in vain the whole counsel of the lively oracles of God.
+
+Thus in the Old Testament, as man the heel of the seed of the woman is bruised: as God He achieves a victory surpassing human strength, He bruises the serpent’s head. (Gen. 3:15.) Against him as man, we read in the second Psalm, the kings of the earth set themselves: to him as the Anointed Son of God, Divine royalty is ascribed and universal trust attracted. (Psa. 2:2, 7, 12.) As man He appears at the close of the 110th Psalm, like a weary traveler, drinking of the wayside brook and revived therewith: but the opening verses described him as the victorious Lord of all on the throne with Jehovah. (Psa. 110:1, 7.) If you regard his humanity, Unto us a child is born: if you regard his Deity, His name is the Mighty God. (Isa. 9:6.) As David’s son, He is the rod out of the stem of Jesse: as David’s Lord, He shall smite the earth with the rod of his mouth, (Isa. 11:1, 4.) and with the breath of his life shall he slay the wicked. In respect of his manhood He grows up as a tender plant, despised and rejected (Isa. 53:3, 6): in virtue of his Godhead he bears the iniquity of us all, and with his stripes we are healed. As man He is the pierced smitten shepherd: as God He is Jehovah’s fellow. (Zech. 12:10, 13:7.)
+
+And when we come to the New Testament, the evidence is yet more abundant. Space forbids to do more than place side by side, with a very few remarks, those Scriptures which reveal the characteristics of his manhood and his Godhead. Those on the left hand will record his functionary subordination as man; those on the right his essential supremacy as God:–
+
+I came down from heaven not to do mine own will, but the will of him that sent me. – John 6:38.
+
+Father, I will (θέλ??) – John 17:24.
+
+Lord if thou wilt ... “I will. – Matt. 8:3.
+
+His will, therefore, as man, was subjected to that of his Father: as God, was ever in perfect harmony with his Father’s will, but was self-existent, free, efficacious.
+
+Of that day and hour knoweth no man, no, not the angels which are in heaven, neither the Son, but the Father. – Mark 13:32.
+
+The Father showeth the Son all things that himself doeth. – John 5:20.
+
+As the Father knoweth me even so know I the Father. – John 10:15.
+
+Lord, Thou knowest all things. – John 21:17.
+
+Just as we read, (Luke 2:52) Jesus increased in wisdom, and therefore there were subjects unknown to him at twelve years of age, which were acquired by him or revealed to him afterwards: so in Mark 13:32, Jesus is speaking in his human nature. This point was not made known to him as man, by the Spirit. And since his manhood is spoken of as a condition of his prophetical office (Deut. 18:15. of thy brethren) He is declaring as an ambassador, what lay within his commission, and this day and hour he was not empowered, as Prophet, to reveal. [“Admiranda est in motibus animae Christi varietas. Interdum habuit sensum excelsum, ut vix videretur meminisse, se esse Hominem in terris ambulantem: interdum habuit sensum humilem, ut paene videri posset oblitus, se esse Dominum ex coelo. Et pro praesenti semper affectu solitus est eloqui; mode tanquam Is, qui cum Patre erat unum; modo rursum sic, quasi ea duntaxat conditione esset, qua sunt omnes homines sancti. Saepe haec duo mira verietate inter se temperantur. Hoc loco humillime loquitur, sensumque suae gloriae, quem sermo de judicio afferebat, temperat. Dices: Cur appellatur h. l. Filius, non sumta denominatione a natura humana? Resp. In enunciatis de Salvatore, cum praedicato glorioso copulari solet subjectum demissum; Matt. 16:28. John 1:51, 3:13: cum praedicato demisso, subjectum gloriosum; Matt. 21:3. 1 Cor. 2:8. et h. l. est antitheton ad Patrem. – Bengel.] The contrast verses sufficiently prove He shared the infinite counsels of his Father, comprehended the Incomprehensible, and is himself Omniscient.
+
+I go unto the Father, for my Father is greater than I. – John 14:28.
+
+Making himself equal with God. – John 5:18. With our Lord’s consequent discourse, 5:19–29. (See in Chapter 4.)
+
+Inferiority of rank as man, as mediator, as the apostle and servant of his Father, – having for us spontaneously stooped from the throne of his glory, – is asserted in the first quotation: equality of nature as to cooperation, self-existence, infinite knowledge, universal trust, is proved in the second.
+
+The very texts which most strongly declare the humanity of Jesus, are sufficient, as Coleridge somewhere observes, to refute those who from them would deny his Deity. How could a mere man without absurd presumption, solemnly announce that God the Father was greater than He? How could He be made flesh? How it be a proof of his humility that He was made in the likeness of man.
+
+This may be the fittest opportunity to say a few words on the answer of Christ to the ruler, “Why callest thou me good? There is none good but one, that is God. But if thou wilt enter into life, keep the commandments.” (Matt. 19:16–17.) This young man, coming to Christ and exclaiming, “Good teacher, what good thing (διδάσκαλε αγαθε, τί αγαθον) shall I do that I may have eternal life?” manifestly only recognized him as a human teacher, as such, called him good; nay put his own good works on the same level of merit. The Lord refused such homage. It was founded on false assumptions. Its acceptance would have strengthened a yet unhumbled self-righteousness. “Why,” he asked, “why callest thou me good?” The stress is on the “why”. The answer to that “why” would discover an unsuspected depth of self-ignorance. But the Lord proceeded to probe the young man’s heart, and tried him by the second table of the law wherein he rested. The ruler was found wanting. We knew not his after history: but thus, at least, one barrier was broken down which, unremoved, must have ever kept him from confessing his need of an atonement for sin, from imploring the advocacy of Jesus Christ the righteous, and from trusting in the perfect goodness of him before whom, unconsciously, then He knelt, Jehovah our righteousness. But to resume.
+
+To sit on my right hand, and on my left, is not mine to give, except to those for whom it is prepared of my Father. – Matt. 20:23.
+
+To him that overcometh will I grant to sit with me in my throne. – Rev. 3:21.
+
+The translation given above of our Lord’s reply to Salome simply omits the words which are not in the original. [Cf. Scholefield’s “Hints,” and Alford; and for construction αλλ’ οίς ητοίμασται compare precisely similar idiom in the previous chapter, verse 11, αλλ’ οίς δέδοται, where it is properly translated “save”.] The promise to the church of Laodicea sufficiently proves that in respect of heavenly dignities, Jesus Christ does as He wills with his own.
+
+God so loved the world that He gave his only begotten Son. – John 3:16.
+
+Christ also loved the Church, and gave himself for her. – Eph. 5:25.
+
+It pleased the Lord to bruise him; He hath put him to grief: when Thou shalt make his soul an offering for sin. – Isa. 53:10.
+
+I lay down my life that I might take it again. No one (ουδείς) taketh it from me. I have power [Unitarians object to εξουσία being here translated “power,” (they would prefer “authority,”) but it is so rendered of the Father’s power, Luke 12:5, Acts 1:7, and as they would add Jude 25. The previous clause declares the spontaneity of the gift. ] to lay it down, and I have power to take it again. – John 10:17–18.
+
+Whom God hath raised up, having loosed the pains of death. – Acts 2:24.
+
+Destroy this temple (his body), and in three days I will raise it up. – John 2:19.
+
+He (the Father of glory) set him at his own right hand in the heavenly places, far above all principality and power. – Eph. 1:20–21.
+
+He ascended up on high, He led captivity captive. – Eph. 4:8.
+
+Having spoiled principalities and powers, He made them a show of openly. – Col. 2:15.
+
+In these passages you will observe that, on the one hand, the death, resurrection, and ascension of Jesus as man, being subordinate to the Father and at his disposal, are said to have taken place at his Father’s ordination: while on the other hand, as God, Christ gives himself, raises himself, ascends in his own might, and as the King of glory, the Lord of hosts mighty in battle, enters the everlasting doors.
+
+And now, Lord ... grant ... that signs and wonders may be done by the name of thy holy child Jesus. – Acts 4:29–30.
+
+Eneas, Jesus Christ maketh thee whole. – Acts 9:34.
+
+If the first exalts the Father; the second, as distinctly, exalts the Son as the immediate Author of miraculous healing.
+
+Forgiving one another, even as God for Christ’s sake hath forgiven you. – Eph. 4:32.
+
+Forgiving one another, even as Christ forgave you. – Col. 3:13.
+
+Now the Father, now the Son, is referred to as the first cause of forgiveness.
+
+To us (there is but) one God the Father, of whom (ιξ ου) are all things, and we unto (εις) Him. – 1 Cor. 8:6.
+
+And one Lord Jesus Christ, by whom (δι’ ου) are all things, and we by him. – ib.
+
+On this, Dr. P. Smith says “Lord is not put as a designation secondary and inferior to God. It attributes dominion; and the extent of the dominion must be according to the nature of the case in any given instance. Is there anything, then, in this case to direct our conception? Yes: all things are ‘by Him,’ or ‘through Him,’ as their immediate and efficient Cause. The identical phrase is used, which is twice by the same writer employed with regard to the Eternal Father (Rom. 11:36, Heb. 2:10): by whom (δι’ ου τα πάντα) are all things.” Myself believing the reference to be to Deut. 6:4, as stated p. 57, no proof could be stronger than this of the Divine supremacy of the Messiah. But at all events, the Deity of Christ can no more be denied because the Father is here called the “One God,” than the dominion of the Father can be denied because the Son is called the “One Lord.”*
+
+*[There are two other passages to which Unitarians sometimes refer, but the deduction they draw from them is in each case refuted by the context.
+
+(1) “The firstborn of all creation” πρωτότοκος πάσης κτίσεως, or “of the whole creation.” – Col. 1:15.
+
+But the apostle continues – “For by him were all things created.” (verse 16.)
+
+If you regard the word firstborn in its general acceptation among Eastern nations, it imports lordship; excellence, dignity; and as such the clause might well have been translated here, “The chief of all creation.” But if you press for a more exact significance, it absolutely resists the interpretation that Christ is himself a creation of God, for then it would have been πρωτόκτιστος, first created, as Chrysostom observes (see Scott), not πρωτότοκος, firstborn. The (-τοκος) guards this, and the πρωτό-, so far from assuming him to be the first creature, declares his preexistent priority to all creation, according to the well-known Greek usage of the superlative for the comparative, (see John 1:15) ότι πρωτός μου ην, for He was before me: and the clause might have been rendered by that in our version of the Athanasian creed. “Begotten before the worlds.” Thus the phrase by itself is an unambiguous testimony to his Deity: and the succeeding clauses, ascribing to him the creation of all, prove him increate; for, if a creature, He made himself, which is absurd.
+
+(2) The beginning of the creation of God, η αρχή. Rev. 3:14. Compare with this “I am, saith the Lord, the beginning and the end (η αρχη και το τέλος). Rev. 1:8, 21:6, 22:13.
+
+The above comprise all the instances of the use of αρχή in the Apocalypse, and sufficiently prove that, as used in ch. 3:14, it regards the preexistent eternity, the “from everlasting” of the Lord, and as such declares him to be the beginning, or origin, or originator, or precisely as we say, the First Cause of the creation of God.]
+
+Ye are Christ’s: and Christ is God’s. – 1 Cor. 3:23.
+
+I am in the Father and the Father in me. – John 14:10.
+
+The head of Christ is God. – 1 Cor. 11:3.
+
+He (the Son) is the head of the body, the church. – Col. 1:18.
+
+Then cometh the end, when He shall have delivered up the kingdom to God, even the Father, ...
+
+Of his (Christ’s) kingdom there shall be no end. – Luke 1:33.
+
+The everlasting kingdom of our Lord and Saviour Jesus Christ. – 2 Peter 1:11.
+
+Then shall the Son also himself be subject unto him that put all things under him, that God may be all in all. – 1 Cor. 15:24, 28.
+
+Thy throne O God is forever and ever ... Thou art the same. Sit on my right hand. – Heb. 1:8, 12–13.
+
+Christ is all and in all. – Col. 3:11.
+
+From these passages, on the one side, we learn that Jesus Christ as the second Man, the federal Head of his church, in ascending to our God and Father has ascended to his God and Father: and that as our surety He does his Father’s will: and that a time will come when He will no longer exercise his mediatorial office, by pleading the virtue of his blood for penitent sinners (seeing that sin and death are forever abolished); but as the Representative of us, his blood-bought children (for the memory of his dying love shall never fade throughout eternity), will keep his Father’s commandments and abide in his love, and that thus forever and forever Jehovah shall fill the universe with the unclouded effulgence of his everlasting name and essence, Love. On the other hand, we learn that Christ and his Father are one, that He has a real and undivided supremacy, that his kingdom shall never wax old, his glory never pale, his royalty never pass away; and that for the endless ages of immortality in heaven and earth the manifestation of the love of God shall be through him, who is the brightness of his Father’s glory, and is seated on the right hand of the Majesty on high.
+
+I append only one couplet more, for the same principle applies to all the passages which have been, or can be, brought forward to prove the subordination of the Son.
+
+In the midst of the throne and of the four living creatures, and in the midst of the elders, stood a Lamb as it had been slain. – Rev. 5:6.
+
+A pure river of water of life, clear as crystal, proceeding out of the throne of God and of the Lamb. – Rev. 22:1.
+
+Do you gather from the first passage that in Christ glorified there are ineffaceable traces of Jesus and him crucified? – from the last you learn that the perennial and transparent stream of felicity – the joy of the Holy Ghost – flows equally and coordinately from the eternal Father and the eternal Son.
+
+I have now, I believe, brought forward the principal of those passages on which Unitarians rely. Is there anything in any one of them, or in all collectively, to prevent our reposing supreme confidence in Jesus Christ? – do they rebuke our absolute dependence upon him? – do they warn us against loving him with every affection of our soul?
+
+The Scriptures adduced in the two last chapters, brought before us One of such Divine perfections, that if He were not God, not the object of supreme reliance, we should at least have needed a caveat every few lines – “Art thou tempted to worship him? See thou do it not. Though the instrument, He is not the author of eternal salvation. Though Godlike, He is not God. Though wearing vice-regal honours, He is not king. Be on your guard. Control your feelings. Curb your affections. Moderate your admiration. Keep your trust in check. He is only a creature after all. Beware of idolatry: and again I say, beware!” Now I ask, do the passages affirming his subordination as man, contain that caveat? – or anything like such a warning? – or any, even the faintest intimation of the possibility of loving him too much, or trusting in him too entirely? You must confess they do not. Yea more, as you stoop down and look into these mysteries of his humiliation, they touch deeper and deeper springs within you, they awaken the finer sensibilities of your nature, and when you believe that He, who was in the form of God, emptied himself for you, and took upon him the form of a servant, confidence and affection alike reach a standard that nothing can transcend. You trust him, you love him, you adore him supremely, for that exceeding great and costly love wherewith He loved you and gave himself for you. (Gal. 2:20.)
+
+And now every generous feeling within you brands it as the basest ingratitude to allege these proofs of his humanity in disproof of his Deity, to trample on his lowliness that you may pluck the diadem from his brow, and to find cause in the true sympathy of him who was in all points tempted like as we are, and touched with the feeling of our infirmities, for denying the excellence of that glory which he had with the Father before the world was. If a sick and suffering prisoner in Newgate, nursed, and tended, and taught, by the philanthropic Howard, had argued from the self-devotion of that noble man spending long hours in the loathsome cell, that he could not possess a princely mansion, and a fortune of his own; and even if he had reproached that ministering angel saying, “you must surely be a wretched convict like myself,” we might pity his infatuation and pardon his ingratitude: – but can we forgive ourselves, if we deliberately select the instances of our Lord’s lowest humiliation and cast them in his teeth, as proving that He never dwelt from eternity in the light that no man can approach unto, nor inhabited from everlasting that shrine of unfathomable delights, the bosom of his Father? Let us beware, my friends, and remember the solemn warning of Jesus, “Whosever shall fall on this stone (himself in prostrate humility) shall be broken; but on whomsoever it shall fall, (himself returning in glory) it will grind him to powder.” (Matt. 21:44.)
+
+(4) The Word was made flesh. O wondrous humiliation of the Creator! But this is not all. “He came, and as many as received him, to them gave He power to become the sons of God.” (John 1:11–12.) O wondrous exaltation of us his creatures! They are two mysteries, of which the second is only less marvelous than the first. He, the Infinite One, stooped to the extremity of woe that He might elevate us to the highest life which a created being can enjoy – the life of God. And this explains another series of truths, which I blush for myself and for human nature to confess once troubled my peace, and is I know at the present moment darkening the faith of many: I mean the exalted expressions which Scripture contains of our privileges in Christ.
+
+What argument, Unbelief Suggests, can you draw from the infinite mutual love of the Father and the Son, when Jesus says, (John 15:9) “As the Father loved me, so have I loved you?” –
+
+Or from the infinite knowledge possessed by the Son of the Father, when He says, No one knoweth the Father save the Son, (Matt. 11:27) and He to whom the Son will reveal him? –
+
+Or from the Son being the express image of his person, when it is said, (2 Cor. 3:18) we are changed into the same image from glory to glory? –
+
+Or from his Divine nature as the Son of God, when (Rom. 8:17, 29; 2 Peter 1:4) we are joint heirs with him who is the firstborn among many brethren, and are ourselves partakers of a Divine nature? –
+
+Or from his words, “I and my Father are one,” when He prays for his people(John 17:22) ‘that they may be one even as we are one’? –
+
+Or from his own mighty miracles, when He promises his faithful disciple, (John 14:12) Greater works than these (of mine) shall he do? –
+
+Or from his session on the eternal throne, when he says, (Rev. 3:21) we shall share his throne? –
+
+Or from his saying, He that hath seen me hath seen the Father: when He also says, (Luke 10:16) He that heareth you heareth me? –
+
+Or from his assurance, “As the Father knoweth me even so know I the Father,” when St. Paul says in the confidence of faith, (1 Cor. 13:12) then shall I know even as also I am known?
+
+Or from the infinite comprehension implied in the words “The Father showeth the Son all things that himself doeth,” when Jesus says, (John 15:15) All things that I have heard of my Father, I have made known unto you? –
+
+Or from the name of Jesus, “The Saviour of the world, who shall save his people from their sins,” when, among the Old Testament saints we find there were saviours who saved them; when St. Paul says, I became all things to all men that I might by all means save some; and when St. James avers, he that converteth a sinner from the error of his way shall save a soul from death? – (Neh. 9:27. 1 Cor. 9:22. James 5:20.)
+
+Or from the express definition, “the Word was God:” when Christ declares, (John 10:85) He called them gods to whom the word of God came? –
+
+Or from the solemn affirmation, “In him dwelleth all the fullness of the Godhead bodily,” when Scripture records the prayer, (Eph. 3:19.) “that ye might be filled even to all the fullness of God?”
+
+O base unbelief! O hateful suspicion! If I have done wrong in giving consistent expression to thoughts which have been flung as fiery darts against the shield of faith, the Lord pardon his servant in this thing! But the answer is conclusive, and the suggestion unanswered may rankle in many breasts. I do not now insist on the exceeding ingratitude of the return – to take advantage of the infinite love of Christ and say, the believer is advanced to so high a dignity, and is admitted to such Divine delights, there can surely be no difference betwixt him and the eternal Son of God; but, I ask, what saith the Scripture to this objection of the glories of Christ, and of his redeemed, being from time to time described in apparently similar terms?
+
+In the first place most of the attributes and names of Christ are never predicated of his people: they are his own essential prerogatives: they are incommunicable. Then if we take up one by one, those passages whose force is thought to be neutralized by the corresponding privileges of saints, we shall see how, in each case, the privilege of the believer is derived from Christ, or from the Father through Christ, (the context compelling this) and is limited by the finite capacity of the creature; while the supereminent glory of Christ is either underived, eternal, increate, – or, if given, is expressly given to him in his subordinate character as Mediator. And, lastly, no pretension of trust in any saint or saints is founded on the privileges conferred on him or them in the Gospel.
+
+As to the first point, you may easily verify it for yourself, by referring to chapters 3 and 4. Where is any saint said to be the only-begotten Son of God, the First and the Last, from everlasting, the same yesterday today and forever, omnipresent, omniscient, infinitely good, the creator and preserver of all things, the chief shepherd of the flock, the one master and lord, the bridegroom of the bride, Jehovah? Nowhere. Therefore setting these disputed passages aside for a while, even without them the proof remains incontrovertible.
+
+Secondly, let us examine this alleged similarity more closely. But to deprecate a hasty conclusion from a bare resemblance of words, I would remind you, there are a few instances in Scripture in which the same phrase denotes a prerogative of the Supreme Father, and a privilege of his believing child. Thus we find, “With God all things are possible.” (Matt. 19:26.) And again, “All things are possible to him that believeth.” (Mark 9:23.) Would you, because of the sameness of the terms employed, deny the omnipotence of God, or ascribe omnipotence to the believer? Again, “Be ye therefore perfect, even as your Father in heaven is perfect.” (Matt. 5:48.) Would you, because of the perfection of the saint, deny the infinite goodness of the Father; or because of the absolute perfection of the Father, ascribe illimitable goodness to the saint? (Prov. 14:6.) Here, indeed, “ Knowledge is easy to him that understandeth.” Let us, however, proceed to examine them:–
+
+The Father loveth the Son, and hath given all things unto his hands. He that believeth on the Son hath everlasting life. – John 3:35–36.
+
+As the Father hath loved me, so have I loved you: continue ye in my love. If ye keep my commandments, ye shall abide in my love. – John 15:9–10.
+
+In the first quotation, supreme authority is assigned to Christ, as the heir of all things for his Church; and the trust of mankind centers on him. In the second, He is urging his disciples as defectible beings, by the plea of the infinite fullness of his love towards them, infinite so far as regarded himself, to abide in that love from which without him they would assuredly fall, for without me, as He had just said, ye can do nothing. (John 15:6.)
+
+All things are delivered unto me of my Father, and no one knoweth the Son but the Father; neither knoweth anyone the Father, save the Son; – Matt. 11:27.
+
+And he to whomsoever the Son will reveal him. – ib.
+
+The first part is again accompanied by the declaration of the Son’s unlimited inheritance of all things. The second is qualified by the previous assertion that these things were revealed to babes, and their finite knowledge of the Father is granted through the Son, as the efficient cause.
+
+The express image of his person. – Heb. 1:3.
+
+Changed into the same image. – 2 Cor. 3:18.
+
+The first clause is extracted from that chapter which so illustriously proves the Godhead of Christ. The second refers all the transformation to the view of the glory of God in the face of Jesus Christ, revealed progressively by the Lord, the Spirit. (2 Cor. 4:6.)
+
+Unto which of the angels said He at any time: Thou art my Son, this day have I begotten thee. – Heb. 1:5.
+
+Sons of God.
+
+Joint heirs with Christ.
+
+[The firstborn] among many brethren. – Rom. 8:14, 17, 29.
+
+We have here another testimony to Christ, which connects itself with all those passages affirming that in a sense peculiar to himself He is the Son of God; standing forth as the Son, the only-begotten of the Father, the Son of his love, his own Son, the Son of the living God, the Son of the Blessed, the Son of the Highest. (John 1:14. Col. 1:13. Rom.8:32. Matt. 16:16. Mark 14:61. Luke 1:32.) From a cursory glance into the eighth of Romans, we see how infinite the difference betwixt that essential Sonship, and our privileges, as adopted sons, which are only ours in Christ; and thus it is, as St. Peter writes, through the righteousness of our God and Saviour, Jesus Christ, through the knowledge of God and of Jesus our Lord, that we become partakers of a (not the) Divine nature. (2 Peter 1:4.)
+
+I and my Father are one. – John 10:30.
+
+That they may be one even as we are one. – John 17:22.
+
+On the first hangs the security of the church universal, which is safe, whether held in his hand, or, to vary the aspect of truth, held in his Father’s hand; equally safe, for He and his Father are one in essence, power, operation, and will. From the second, we learn how intimate is the union of the saints with each other, and the Lord; but, unutterably glorious as are the privileges besought by Christ for his people in that sublime prayer, they all flow equally from the Father, and from himself (verse 3) as the one fountain of eternal life.
+
+The works that I do, in my Father’s name, bear witness of me. – John 10:25.
+
+Greater works than these shall he do. – John 14:12.
+
+In the former, the works are appealed to as proof of his right to be the Shepherd of his flock, and the Messiah of Israel. In the latter, all the miracles, as He had just stated, are wrought by faith in him, “he that believeth on me, the works that I do shall he do also.”
+
+To the Son he saith, Thy throne O God is forever and ever. – Heb. 1:8.
+
+To him that overcometh will I grant to sit with me in my throne. – Rev. 3:21.
+
+It only needs the collation of the verses, to see the immeasurable difference betwixt the universal supremacy belonging of right to Christ forever, and the favour granted by him to his people of reigning with him.
+
+He that hath seen me hath seen the Father. – John 14:9.
+
+He that heareth you heareth me. – Luke 10:16.
+
+The first explains, how knowledge of himself embraces knowledge of the Father, and vindicates his claim to be the way, and the truth, and the life. The second, clothes his messengers with an ambassador’s official authority, as speaking in loco regis.
+
+As the Father knoweth me, even so know I the Father. – John 10:15.
+
+Then shall I know even as also I am known. – 1 Cor. 13:12.
+
+The good Shepherd, who is to know thoroughly all his sheep, needs omniscience; this, the first proves. (John 10:14.) From the second, we are assured that in heaven our knowledge will be not fragmentary as here, but, so far as it extends, will resemble Christ’s knowledge of us, being perfect, symmetrical, unperplexed.
+
+The Father showeth the Son all things that himself doeth. – John 5:20.
+
+All things that I have heard of my Father, I have made known unto you. – John 15:15.
+
+The first is accompanied (see above) with every Divine claim. The second, is qualified by the quickly succeeding assurance, “I have yet many things to say unto you, but ye cannot bear them now.” (John 16:12.)
+
+Christ, the Saviour of the world. – John 4:42.
+
+Thou gavest them saviours, who saved them. – Neh. 9:27.
+
+Jesus, who delivered us from the wrath to come. – 1 Thess. 1:10.
+
+He that converteth a sinner ... shall save a soul from death. – James 5:20.
+
+It needs only a glance at the parallel passages, (above, No. 20,) to see how infinite is the difference betwixt him who stands forth emphatically the Author of eternal salvation, and those who were deliverers of their country from oppression, or were instruments as the ministers of Jesus Christ in the salvation of souls.
+
+The Word was God. – John 1:11.
+
+He called them gods, to whom the word of God came. – John 10:35.
+
+In the first, the context compels us to understand (Θεος) God, when applied to the Word, in the same sense as when immediately before and after applied to the Father: the Word is essentially God, the Creator of all. The second, conceding indeed that there is a lower sense in which men were sometimes officially called gods, (though the passage adduced marks their mortality – they shortly die like other men,) contrasts with this the Divine Sonship of the Messiah. (Psa. 82:6–7.)
+
+In him dwelleth all the fullness of the Godhead bodily. – Col. 2:9.
+
+That ye might be filled even to all (εις παν) the fullness of God. – Eph. 3:19.
+
+The first affirms the incarnate Godhead of Christ as the One in whom (see next clause, verse 10,) we are complete, for He is the head of all principality said power. The second (somewhat obscured by the received translation) imports that we may be filled “each in our degree and to the utmost bound of our finite capacity, even as God is full, with Divine goodness”: and this again flows from our knowledge of the illimitable love of Christ.
+
+The difficulties, when fairly tried by the context in each case, crumble into dust; and the formidable line of objections founded on them melt like embankments of snow, when exposed to the full light of other Scriptures which assert the true Godhead of the Son.
+
+But now, I ask, do these contrasted truths divert us from reposing supreme trust in Jesus Christ? Do they, even so far as this, confuse our confidence, by setting up any other as the recipient of equal honour? Because the saints are loved with Divine love, know God, are changed into his image, are called his sons, are made one with the Father and with Christ, work mighty works by his power, are raised to Christ’s throne, shall hereafter possess a perfect knowledge, are made acquainted with the mysteries of Gospel grace, may even officially be called gods, and what is a fax higher privilege, be filled with all Divine goodness, – is any claim set up on their behalf for trust or worship? Gather together all the privileges of Christians here set forth; entwine them into one radiant crown; place that crown, as you are perfectly warranted in doing, upon the head of some eminent saint, Peter, or Paul, or John, or upon the head of the Church Catholic, the Bride, is there in all these lustrous glories any temptation held out to confide in absolutely, or supremely to love that saint or that church?
+
+We acknowledge the extremity of abasement to which Jesus descended. We believe the summit of glory to which He will raise his people. We accept the simple declarations of Scripture with regard to both these facts. But for a man to take his stand alternately on the lowest step of Christ’s humiliation, and on the highest step of his children’s exaltation, and thence to deny the Supreme Deity of him who stooped so low that He might draw us up so high, seems an ingratitude of which our dealings with our fellow men afford no parallel.
+
+We referred before to the opening of the Epistle to the Ephesians – Scripture does not contain a more rich (see above) exhibition of those things which are ours in Christ: now if St. Paul had closed that chapter by arrogating Christlike honours or Christlike homage to himself and his brethren, there would have been some ground for alarm that the dignities of his people were eclipsing the supremacy of their Lord. How different is the spirit breathed through his glowing prayer:–
+
+“That the God and Father of our Lord Jesus Christ, the Father of glory, may give unto you the spirit of wisdom and revelation in the knowledge of him; the eyes of your understanding being enlightened that ye may know what is the hope of his calling, and what the riches of the glory of his inheritance in the saints, and what is the exceeding greatness of his power to us-ward who believe, according to the working of his mighty power, which he wrought in Christ, when He raised him from the dead, and set him at his own right hand in the heavenly places, far above all principality, and power, and might, and dominion, and every name that is named, not only in this world, but also in that which is to come; and hath put all things under his feet, and gave him to be the head over all things to the church, which is his body, the fullness of him that filleth all in all.” (Eph. 1:17–23.)
+
+Behold, the Son is on the everlasting throne: and we are under his feet. Moved indeed, by Divine compassion, He once forsook that throne, and came forth from the bosom of his Father, that He might gather together the children of God which are scattered abroad, and present them as one family before the presence of his glory with exceeding joy. Is your trust weakened in him because of his exceeding humiliation? or do you think the less of him for the glory to which He elevates his people? Nay, verily: gratitude can find no words to express itself when we believe on him who, being over all, God blessed forever, partook of our flesh and blood, and now seated fax above all principality and power, is not ashamed to call us brethren. (Heb. 2:11.)
+
+## Chapter 6. That Scripture, in the Old and the New Testament alike, proves the coequal Godhead of the Holy Spirit with that of the Father and of the Son: as One who is to be distinguished from the Father and the Son: as One to whom such personal properties and actions are assigned as prove independent and intelligent personality: as One to whom Divine attributes are ascribed and by whom Divine offices are exercised: as One worshipped in parity with the Father and the Son: as One declared to be Jehovah and God.
+
+And now I would state my next proposition, and briefly sketch the testimony on which it rests.
+
+That Scripture in the Old and the New Testament alike proves the coequal Godhead of the Holy Spirit with that of the Father and of the Son.
+
+May the same Spirit grant us reverence, and humility, and Godly fear in this solemn enquiry!
+
+The reader will not fail to observe what strong collateral evidence of the possible plurality in unity, and therefore of the possible coequal Deity of the Father and of the Son, we shall obtain, if another be revealed in Scripture; as one who is to be distinguished from the Father and the Son; as one to whom such personal properties and actions are assigned as prove independent and intelligent personality; as one to whom Divine attributes are ascribed, and by whom Divine offices are exercised; as one worshipped in parity with the Father and the Son; as one declared to be Jehovah and God. Here, indeed, we might expect the evidence to be more subjective: for the peculiar office of the Holy Ghost in the economy of redemption, is ever represented as the quickening and fostering of the hidden life within. It is, however, none the less conclusive. If, as we gaze on the sun shining in the firmament, we see any faint adumbration of the doctrine of the Trinity in the fontal orb, the light ever generated, and the heat proceeding from the sun and its beams – threefold and yet one, the sun its light and its heat: – that luminous globe, and the radiance ever flowing from it, are both evident to the eye, but the vital warmth is felt, not seen, and is only manifested in the life it transfuses through creation. The proof of its real existence is self-demonstrating.
+
+(1) That the Divine Spirit is to be distinguished from the Father and the Son, appears from all those passages in holy Scripture, which reveal to us the simultaneous cooperation of three infinite agents.
+
+Thus when we read, at our Lord’s baptism, of the voice of the Father, of the human presence of Jesus, of the visible descent of the Spirit, for “the heaven was opened, and the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son, in thee I am well pleased” (Luke 3:21–22): – we are compelled to say, that the descending Spirit is distinct from the baptized Saviour, and from the approving Father.
+
+And when Jesus says, (John 14:16) “I will pray the Father, and He shall give you another Comforter, that He may abide with you forever”: and when this promise being fulfilled on the day of Pentecost, we find that the Holy Ghost appeared seated on the disciples as cloven tongues of fire (Acts 2:3): we are constrained to acknowledge that the apparent Spirit is distinct from the mediating Saviour, and the Father who decreed the gift. And when we read of “the name of the Father, and of the Son, and of the Holy Ghost,” (Matt. 28:19) and again of “the grace of the Lord Jesus Christ, and the love of God, and the fellowship of the Holy Spirit,” (2 Cor. 13:14) it is impossible to deny the necessary distinction here affirmed.
+
+And when the saints are described as “elect according to the foreknowledge of God the Father through sanctification of the Spirit unto obedience and sprinkling of the blood of Jesus Christ,” (1 Peter 1:2) Scripture leads us to conclude that as the bleeding Saviour is distinct from the predestinating Father, so the sanctifying Spirit is himself distinct.
+
+And when the benediction of grace and peace is implored from (από) him which is, and which was, and which is to come; and from (και από) (Rev. 1:4–5) “the seven spirits which are before the throne;* and from (και από) Jesus Christ, the faithful witness,” we are assured that as there is a distinction intended between the eternal Father and the Lord Jesus, so is there likewise betwixt them and the sevenfold Spirit of God.
+
+*[The phrase is emblematical, but not the less definitive and precise when compared with other Scriptures. Indeed, emblems are a kind of universal language for every age and country. After all that has been written on this subject, I feel persuaded that the word is here its own plain interpreter. The principal passages bearing on this are –
+
+(1) “The Spirit of Jehovah shall rest on him; the spirit of wisdom and understanding, the spirit of counsel and might, the spirit of knowledge and of the fear of Jehovah, and shall make him of quick understanding in the fear of Jehovah.” (Isa. 11:2–3.) I do not think any stress can be laid on the number here, as the Hebrew only enumerates six, repeating the last with a preposition – (Though the Septuagint distinguish seven, πνευμα σοφίας, συνέσεως, βουλης, ισχύος, γνώσεως, ευσιβείας; adding as the seventh, πνευμα φόβου Θεου) – but on the multiplicity of perfections designated by various names and comprised in one, the Spirit of Jehovah.
+
+(2) “Upon one stone shall be seven eyes.” (Zech. 3:9.)
+
+“Those seven; they are the eyes of Jehovah, which run to and fro through the whole earth.” (Zech. 4:10.) The Septuagint translate the seven in the same clause with the eyes, επτα ουτοι οφθαλμοί εισιν οι επιβλέποντες επι πασαν την γην.
+
+(3) “And from the seven spirits which are before the throne.” (Rev. 1:4.)
+
+(4) “These things saith He that hath the seven spirits of God.” (Rev. 3:1.)
+
+(5) “And seven lamps of fire, burning before the throne, which are the seven spirits of God.” (Rev. 4:5.)
+
+(6) “In the midst of the throne and of the four living creatures, and (Rev. 5:6) in the midst of the elders, stood a Lamb as it had been slain, having seven horns and seven eyes, which are the seven spirits of God sent forth into all the earth.” (οφθαλμους επτα οί εισιν τα επτα του Θεου πνεύματα τα απεσταλμένα εις πασαν την γην). No one can fail remarking the designed coincidence betwixt this and the Septuagint version, given above, of Zech. 4:10.
+
+Here we learn, from (3) and (5) the distinction to be observed between God and the seven spirits – for they are said to be before the throne. Therefore you could not identify them with the Father or the Lamb.
+
+– from (2) and (4) and (6) the mysterious union betwixt God and them – for they are called the eyes of Jehovah; the spirits whom the Son of man hath – the eyes of the Lamb.
+
+– from (3) again, that they denote a willing intelligence and not an abstract power – for to imagine that St. John prays to seven abstractions in parity with the Father and the Son for grace and peace is inconceivable.
+
+That they cannot be angels is manifest, for the worshipping of angels is expressly forbidden. (Col. 2:18.)
+
+Comparing, therefore, the other passages (Isa. 61:1, Luke 4:21) with (1) – remembering how Jesus Christ says that the Scripture “The Spirit of the Lord God is upon me” was fulfilled in himself – and knowing that “in the oriental style the perfection of any quality is expressed by the number seven,” – we may fairly conclude this expression represents to us “this heavenly Agent, the Holy Ghost, in his own original and infinite perfection, in the consummate wisdom of his operations, and in the gracious munificence of his gifts.”]
+
+In this stage of our enquiry it will be enough to ask ourselves, in the cases cited above, was the cooperating Spirit identical with the Father or with the Son? Could you say it was the Father or the Son who descended on Christ at his baptism, or on the apostles at Pentecost? Could you assert that we are baptized into the name of the Father, and of the Son, and of one who likewise is the Father, or the Son? Or that grace and peace are besought from the eternal Father, and from one who under another name is also the Father, and from Jesus Christ? No one could maintain this for a moment. The Holy Ghost therefore, cannot be identified or confounded either with the eternal Father, or with his Son Jesus Christ our Lord.
+
+(2) I proceed then, to consider, that such personal properties and actions are ascribed to the Spirit as prove independent, and intelligent personality.
+
+But, it is asked, do we not read of the Spirit of God being “poured out,” and “given in greater or less degree”? If He were a Person, how could He be thus effused or divided? Here we fully admit that the terms “spirit” and “holy spirit,” do sometimes denote not the person, but the operations, the gifts, the influences of the Holy Ghost: as, for example, when it is said, “I will take of the spirit that is upon thee.” (Num. 11:17.) But the question is not whether some passages may not be brought forward which denote the operations and influences of the Spirit, and therefore do not establish the point; but whether besides these there are not very numerous portions of Scripture which do positively and unanswerably establish his personality. Just as if I were studying a work on horticulture, and because the writer here and there used the term “sun” to denote the influences of the sun, directing me to place certain plants in the sun, or that more or less sun should be admitted, I were to contend, that the author could not believe there was actually such a globe of light in the heavens, although in many other parts he had spoken in most strict astronomical language of our planetary system. You would justly assure me that the occasional recurrence of such familiar phrases as “more or less sun, etc.” was no valid argument against his conviction of the sun’s real existence, stated elsewhere in the volume plainly and positively. Now, we admit that by “the spirit” are sometimes intended the gifts and graces of the Spirit. These graces may be poured out – these gifts distributed. But “all these worketh that one and the self-same Spirit, dividing to every man severally as He will.” (1 Cor. 12:11.) [The substance of the above paragraph is taken from a valuable sermon of the Rev. J. E. Bates, “On the Holy Spirit”.]
+
+Now if, altogether apart from this investigation, you had been asked to name those qualities which evidence personal existence, you would have been quite content to answer: show me that which has mind, and affection, and will, which can act, and speak, and direct; and that sentient, loving, determining agent, speaker, and ruler, must possess personality, or personality cannot exist.
+
+But we read in Scripture of –
+
+The mind of the Spirit. “He that searcheth the hearts knoweth what is the mind (or intention) of the Spirit, because He maketh intercession.” (Rom. 8:27.)
+
+The infinite comprehension of the Spirit. “The things of God knoweth no one, save the Spirit of God.” (1 Cor. 2:11.) See next section, where this passage is referred to more at length.
+
+The foreknowledge of the spirit. “He will show you things to come.” (John 16:13.)
+
+The power of the Spirit. “That ye may abound in hope through the power of the Holy Ghost.” (Rom. 15:13.) If the Spirit were a metonymy for the power of God, this would be a most unlikely combination.
+
+The love of the Spirit. “I beseech you for the love of the Spirit” (δια της αγάπης του Πνεύματος) (Rom. 15:30.): – a plea exactly corresponding with one he had used shortly before. “I beseech you, by the mercies of God” (δια των οικτιρμων του Θεου). (Rom. 12:1.)
+
+The self-determining will of the Spirit. “Dividing to every man severally as he will.” (1 Cor. 12:11.)
+
+We find –
+
+He creates and gives life. “The Spirit of God hath made me, and the breath of the Almighty hath given me life.” (Job. 33:4.) And again, “By the word of the Lord were the heavens made, and all the host of them by the breath (Spirit) of his mouth.”
+
+He strives with the ungodly. “My Spirit shall not always strive with man.” (Gen. 6:3).
+
+He convinces of sin, righteousness, and judgment. John 16:8.
+
+He new creates the soul. “Born of the Spirit.” John 3:5–8.
+
+He commands and forbids. “The Spirit said to Philip, “Go near. – The Spirit bade me go with them. – The Holy Ghost said, Separate me Barnabas and Saul. – Being forbidden by the Holy Ghost to preach. – The Spirit suffered them not.” (Acts 8:29, 11:12, 13:2, 16:6–7.)
+
+He appoints Ministers in the Church. “The flock over which the Holy Ghost hath made you overseers.” (Acts 20:28.)
+
+He inspired the sacred writers. “Holy men spake as they were moved by the Holy Ghost.” (2 Peter 1:21.)
+
+He speaketh expressly of events in the latter times. (1 Tim. 4:1.)
+
+He saith to the Churches the messages of the Son of man. (Rev. 2:7, etc.)
+
+He performs miracles. “So the Spirit took me up, and I heard behind me a voice (Ezek. 3:12). – The Spirit lifted me up between the earth and the heaven.” The Spirit gave them utterance at Pentecost (Ezek. 8:3). The Spirit of the Lord caught away Philip. Mighty signs and wonders (were done) by the power of the Spirit of God. (Acts 2:4, 8:39. Rom. 15:19.)
+
+He caused the virgin Mary to conceive. (Luke 1:35.)
+
+He works in all saints, dispensing divers gifts with independent spontaneity of choice. 1 Cor. 12:4–11.)
+
+“He regenerates and seals His people, for we are saved by His renewing; – and are sealed unto the day of redemption by the Holy Spirit of God. (Titus 3:5. Eph. 4:30.)
+
+He intercedes for us in prayers, for He helpeth our infirmities ... and maketh intercession for us. (Rom. 8:26.)
+
+He teaches and comforts and guides us into all truth. For Christ promises, “The Comforter which is the Holy Ghost, whom the Father will send in my name, He (εκεινος) shall teach you all things – shall testify of me – shall guide you into all truth – shall glorify me – aid shall take of mine, and show it unto you.” (John 14:26, 16:13–14.)
+
+He can be vexed and grieved. “They returned and vexed his Holy Spirit.” “Grieve not the Holy Spirit of God.” (Isa. 63:10. Eph. 4:30.)
+
+He is designated by the use of masculine pronouns, though the noun itself, Spirit, is neuter. “When He, the Spirit (εκεινος το Πνευμα) of truth is come, He will guide you,” (John 16:13) and so continually in this context, where it might be rendered “This person the Spirit.” Thus, likewise: “That holy Spirit of promise, who (ός) is the earnest.” (John 16:13. Eph. 1:14.)
+
+He testifies with personal witnesses. “He shall testify, and ye also testify.” – “We are his witnesses of these things, and so is also the Holy Ghost.” (John 15:26–27. Acts 5:32.)
+
+He approves with personal counsellors. “It seemed good to the Holy Ghost, and to us.” (Acts 15:28.)
+
+He invites with personal messengers. “The Spirit and the bride say, Come.” (Rev. 22:17.)
+
+He is personally present in a sense in which Jesus is personally absent. “It is expedient for you that I go away, for if I go not away the Comforter will not come unto you.” (John 16:7.)
+
+He can be personally blasphemed (as Christ may be personally blasphemed) but only upon peril of eternal condemnation. “Whosoever speaketh a word against the Son of man, it shall be forgiven him, but whosoever speaketh against the Holy Ghost, it shall not be forgiven him, neither in this world neither in the world to come.” (Matt. 12:32.)
+
+He cries in our hearts, “Abbe Father.” (Gal. 4:6.)
+
+He repeats the beatitude pronounced on those who sleep in Jesus. “Yea, saith the Spirit, for they rest from their labours.” (Rev. 14:13.)
+
+Surely from a calm and comprehensive study of this testimony, we must conclude that if these qualities and actions do not prove personality, there are none, however explicit and exact, which can do so. Unitarians axe wont to speak of the Spirit, as an effusion or emanation separate from God, or an influence or power exercised by God. Can you speak of the mind of an effusion? – of an emanation, knowing the depths of him from whom it distils? – of an influence, or power, or aught impersonal, revealing future events; possessing a power, and love, and will of its own; creating, striving, convincing, recreating; enjoying, prohibiting, commissioning; inspiring, speaking expressly, addressing the church; performing miracles, transporting, giving utterance; energizing, regenerating, sealing; interceding, teaching, comforting, guiding.; being vexed and grieved; testifying, approving, inviting; being present as a personal Comforter who may be personally blasphemed, crying in us until He teaches us to cry Abba Father, and repeating on earth the heaven-sent benediction on departed saints? If in some few instances you might thus personify an influence, most of those adduced, taken singly, resist such an interpretation; and taken collectively, would, if thus understood, confuse all the laws of language, and thus derange the first principles of truth.
+
+It is not easy to translate into our own tongue the proof we obtain from a study of the original here. But suppose in a volume of history you met with the following passage: – “The prince having left this province thought good that his majesty’s power should occupy his room: as for this power, he knew the secret counsels of the king; he had an independent will; he strove with the ill-affected, and was grieved and vexed with the obstinacy of some, while others he convinced of their infatuation, and was enabled to train us good citizens; he consoled the well-disposed; he issued commands and restrictions at his own pleasure; he appointed subordinate officers; he spoke expressly of the certain issue of some incipient plots; he accomplished prodigies of benevolence: indeed such was the authority of this power, that whoever willfully insulted him, was by the king’s command imprisoned for life, while on the other hand, he was accustomed to repeat assurances, which came direct from court, of the favour awarded there to faithful subjects.” Would you, could you doubt for a moment whether or not this power was a personal intelligent agent? And if a few pages further on in the book, you read, “And thus his Majesty’s power was extended and his dominion consolidated,” would you because of the repetition of the term power, or his Majesty’s power, confuse the latter abstraction with the former person – would you gainsay your previous unhesitating conclusion, that the power left in that province was a living person? It is impossible. You would say, honest language, though capable of metaphor, is incapable of such delusive impersonations. So likewise the witness of Scripture, which we have heard, is unequivocal that the Holy Spirit is a living Agent working with consciousness, will, and love.
+
+(3) Now to this agent Divine attributes are ascribed, and by him Divine offices are exercised towards us.
+
+He is eternal. “Christ through the eternal (αιωνίου) Spirit offered himself.” This is the same word which is used of the self-existence from everlasting to everlasting of Jehovah. (Heb. 9:14. Rom. 16:26.)
+
+He is omnipresent. “Whither shall I go from thy Spirit? Or whither shall I flee from thy presence? If I ascend up into heaven Thou art there.” (Psa. 139:7–8.) Having proved his distinct personality, this establishes his omnipresence: which truth is indeed self-evident, from the simultaneous work he is carrying on in ten thousand thousand hearts throughout the universe.
+
+He is omniscient. For He alone with the infinite Son, comprehends the incomprehensible Jehovah. “God hath revealed them to us by his Spirit. For the Spirit searcheth all things, even the deep things of God. For what man knoweth the things of man, save the spirit of man which is in him? Even so, the things of God knoweth no one but the Spirit of God.” The word search, as used in Scripture, does not necessarily imply that successive acquisition of knowledge which belongs to a finite being, for Jehovah says, “I, the Lord, search the heart.” (Jer. 17:10.) “And that the Spirit here is not a mere quality of Divine nature, as consciousness is of the human mind, appears from the first clause, ‘God hath revealed them to us by his Spirit,’ which clearly implies a personal distinction for it could not be said that a man makes anything known to others by his consciousness.” (P. Smith. Appendix II.)
+
+He is prescient and unveils futurity. “It was revealed to him (Simeon) by the Holy Ghost that he should not see death before he had seen the Lord Christ.” “He will show you things to come.” And St. John was in the Spirit when he was enabled to cast his eye across the chart of providence. (Luke 2:26. John 16:13. Rev. 1:10, 4:1–2.)
+
+He is absolutely free and independent. “Uphold me with thy free Spirit. The wind bloweth where it listeth – so is every one that is born of the Spirit. (Psa. 51:12. John 3:8.) Dividing as He willeth. Where the Spirit of the Lord is, there is liberty.” (1 Cor. 12:11. 2 Cor. 3:17.)
+
+He is infinitely good and holy. “Thou gavest thy good Spirit to instruct them.” (Neh. 9:20.) “Thy Spirit is good.” (Psa. 154:10.) He is called in the Old Testament emphatically, the Holy Spirit of God. (Psa. 51:11. Isa. 63:10–11.) He is repeatedly styled by our Lord, the Holy Spirit. And this is his distinctive designation by the apostles throughout the New Testament. He is likewise called the Spirit of truth, and the Spirit of holiness, as the fountain of verity and goodness. (Luke 11:13. John 14:26, etc., 17. Rom. 1:4.)
+
+He is the Almighty Creator of all things. Here it may suffice to quote one passage which may well set the question at rest forever. “Who hath measured the waters in the hollow of his hand, and meted out heaven with a span, and comprehended the dust of the earth in a measure, and weighed the mountains in scales, and the hills in a balance? Who hath directed the Spirit of the Lord, or being his counsellor, hath taught him? With whom took He counsel, and who instructed him?” (Isa 40:12–14.) No words could express more plainly an intelligent Creator, inferior to none, whose wisdom was his own, whose counsel was underived, whose omnipotence was inherent. What reflex light this casts on the simple declaration of Genesis, “The Spirit of God moved on the face of the waters.” (Gen. 1:2.)
+
+In his hands are the issues of life and death. “The Spirit of God hath made me. – Thou sendest forth thy Spirit: they are created. – The grass withereth, the flower fadeth, because the Spirit of the Lord bloweth upon it; surely the people is grass.” (Job. 33:4. Psa. 104:29–30. Isa. 40:7.)
+
+And then, as to the life of God within us, He is the author and finisher of it. He begets and quickens the soul, once dead in trespasses and sins. (John 3:6. Rom. 8:26.) He teaches us to pray. He dwells in us, as in his temple. He produces his own celestial fruits. He sheds abroad the love of God in our hearts. He seals us unto the day of redemption. (1 Cor. 3:16. Gal. 5:22–23. Eph. 4:30.) He works in us, educates us, comforts us, leads us, and bears witness with our spirit that we are the children of God. (Rom. 8:9–16.) He carries on the work of sanctification, changes us into the Divine image from glory to glory. And by him, as the One who quickened Christ our Head, will God quicken our mortal bodies at the last day. (2 Cor. 3:18. 1 Peter 3:18. Rom. 8:11.)
+
+Now I venture to ask, as I asked respecting the testimony of Jesus, who can believe these explicit declarations of the character and work of the Holy Spirit, and not repose their whole confidence in him – resting on him with supreme reliance, and loving him with entire devotion? Consider, He is eternal, everywhere present, infinite in wisdom, prescient, absolutely just, and is perfect in goodness and grace and truth! Consider, further, so close and necessary is our relationship to him, that He is the Almighty Creator of that world in which we live; that He gives us every breath we draw, and that He suspends that breath when we die. Consider, the whole work of the spiritual life within us, from its earliest germ to its latest development, is his operation. What frail and finite creature, like man, believing this testimony, could, in the presence of such an One, refuse to render him adoring trust and love? If Scripture forbade these emotions, as due only to Deity, we should be rent in twain. But does Scripture forbid them? Nay, verily. You cannot find the faintest hint against depending on the Holy Spirit too absolutely. There is no jealousy of his claims. The most humble submission to his education is ever enforced; (Eph. 4:30. 1 Thess. 5:19.) any violation of reverent regard is deprecated with a plaintive earnestness of expostulation; and willful blasphemy against him is fenced with the most awful warning in the whole word of God. Such is the efficacy of his personal presence, that it is represented as compensating the personal absence of Jesus. Every affectionate and trustful desire is awakened in you; for in the comfort He imparts, as explained by Christ, is comprised the communication of every Divine blessing. The claims of no benefactor can transcend those of him who gives us life and light, emancipating us from the thralldom of sin, and bringing us into the freedom of love. Only believe these Scriptures and you must, perforce, trust and love this Divine Spirit supremely. This homage belongs to God alone, whose name is Jealous, who will not give his glory to another. Therefore we conclude and confess that the Holy Ghost is one with God, and is himself God, himself Jehovah.
+
+(4) This is further established by the fact that the Spirit of God is revealed in Scripture as the object of religious worship in parity with the Father and the Son.
+
+The sixth chapter of Isaiah compared with John 12:41, has already proved to us that God manifested himself to the prophet by the express image of his Person, his only-begotten Son. The voice which spake is distinctly said to be the voice of Jehovah. (Isa. 6:8.) But the message then sent is again recorded by St. Paul, and is prefaced with this remarkable introduction (Acts 28:25): “Well spake the Holy Ghost by Esaias the prophet.” The glory of Jehovah of hosts was then revealed by Jesus Christ, and the voice of Jehovah was the utterance of the Holy Ghost. Now we decipher the true significance of the threefold adoration of the veiled seraphim, “Holy, Holy, Holy, Lord of Hosts,” and dimly apprehend why it was asked, “Who will go for us? “The angels of light, therefore, worship the Holy Spirit with the Father and the Son. (Isa. 6:3, 8.)
+
+I would mention in passing, without laying stress upon it, the impressive vision of Ezekiel, in the valley of dry bones, in which he is commanded to address the wind, (πνευμα LXX) “prophesy unto the wind, prophesy, son of man, and say to the wind, Thus saith the Lord God; Come from the four winds, O breath, and breathe upon these slain that they may live.” (Ezek. 37:9.) The wind is evidently typical of the Spirit, for it is said in the interpretation of the vision, “I will put my Spirit in you, and ye shall live” (verse 14): and to my own mind the proclamation to the wind is typical of prayer to the Spirit for his energizing power in quickening dead souls to the life of God. (Compare chapter 36:27 with 37.)
+
+The baptismal formulary, however, affords an unambiguous testimony. For “baptism is a solemn act of worship, denoting entire consecration to him in whose name we are baptized. (1 Peter 3:21.) It is the stipulation (επερώτημα, Greek legal term) of a good conscience toward God. Now the existence of a stipulation implies the presence, or in some way the knowledge and acceptance of, the person to whom the engagement is made. It supposes then, in this case, the presence or cognizance of the Son and the Spirit equally with that of the Father.” (P. Smith.) Here again we have, by our Lord’s express command, adoring homage paid to the Holy Ghost in union with the Father and himself, at this sacred profession of every Christian’s faith.
+
+I would also ask you to compare –
+
+O come let us worship and bow down: let us kneel before the Lord our Maker. For He is the Lord our God, and we are the people of his pasture and the sheep of his hand. Today, if ye will hear his voice harden not your hearts, as in the provocation, and as in the day of temptation in the wilderness: when your fathers tempted me, proved me, and saw my works. – Psa. 95:6–9.
+
+Wherefore, as the Holy Ghost saith, Today if ye will hear his voice, harden not your hearts, as in the provocation, in the day of temptation in the wilderness, when your fathers tempted me. – Heb. 3:9.
+
+They vexed his Holy Spirit. – Isa. 63:10.
+
+Your fathers resisted the Holy Ghost. – Acts 7:51.
+
+[The context in the two last shows it refers to the provocation in the wilderness.]
+
+We may fairly conclude that the One whom the Psalmist calls upon us to worship is the same One whom he says, the Israelites provoked. This One the parallel passages assure us was eminently the Eternal Spirit. I say eminently, for I do not think these and other like Scriptures warrant us in excluding thoughts of the Father and the Son. While establishing the personal Godhead of the Spirit, we must not forget his essential unity with the Father and the Son. To those who believe this, every simple command “worship God” embraces the worship of the Holy Spirit; but in the above it was eminently the Spirit. The Spirit was the One of the sacred Trinity most prominently tempted and grieved by the Israelites, and therefore the One most prominently to be supplicated.
+
+Pray ye, therefore, the Lord of the harvest that He will thrust forth labourers into his harvest. – Matt. 9:38.
+
+The Holy Ghost said, Separate me Barnabas and Saul for the work. ... So they being sent forth by the Holy Ghost. – Acts 13:–4.
+
+Here Christ himself enjoins prayer to him who sends forth ministers. That this is one especial office of the Holy Ghost, we learn from the Acts; and we have, therefore, Christ’s warrant for praying to the Spirit.
+
+Again, bearing in mind that (Rom. 5:5) “the love of God is shed abroad in our hearts by the Holy Ghost,” this being his peculiar office, I pray you to ponder the following prayers:
+
+“The Lord make you to increase and abound in love one toward another and toward all men, as we do toward you, to the end he may establish your hearts unblameable in holiness before God, even our Father, at the coming of our Lord Jesus Christ” – 1 Thess. 3:13.
+
+“The Lord direct your hearts into the love of God, and into the patient waiting for Christ.” – 2 Thess. 3:5.
+
+In both these supplications we have the Father and Christ named besides the One to whom the prayer is addressed; may we not be assured that this One is especially the blessed Spirit of Love?
+
+The book of Revelation seals the testimony. For, as we have seen, the bestowal of grace and peace is implored equally from the eternal Father and from the Seven Spirits which are before his throne, and from Jesus Christ. (Rev. 1:4–5.) This is direct supplication. And lastly, we have in the fourth and fifth chapters a view, couched in symbolic but most expressive language, of the celestial worship. A throne is set in heaven. It is then a question of absorbing interest who is the adorable Being, who there concentrates around himself this homage of saints and angels. So singular and sublime a revelation must needs draw the closest regards of every reverent mind; “for though the secret things belong to the Lord our God, the things which are revealed belong to us and to our children.” (Deut. 29:29.) Is then the unity of the One there worshipped so simple an unity as to preclude any plurality subsisting therein? The throne was set in heaven, and One sat on the throne. But is this One alone in infinite solitariness? The Lord enable us to keep our foot as we draw near to his unutterable glory! What saith the Scripture? The voice of the Son of man was only now silent. “I overcame, and am set down with my Father in his throne” (Rev. 3:21.) [An evident distinction is here drawn betwixt the throne of Christ, which his people were admitted to share, and the throne of the Father, the supreme glories of which the Son alone partakes.]: and in strict accordance with this we find, “Lo! in the midst of the throne [If any object that, in ch. 4:6, it is said, “the living creatures were in the midst of the throne, and round about the throne,” I believe the answer is given in the parallel vision of Ezekiel 1:5, 22, 26, where the throne is on the firmament, and the firmament rests on the heads of the living creatures; “so that to one approaching the throne they would seem to be around it, though their bodies were under or ‘in the midst’ of it as a support.” – Barnes. That they did not occupy the throne and receive adoration is plain; for (ch. 5:6) the Lamb appears in the midst of the living creatures, as well as in the midst of the elders; and verse 8, they, with the elders, fall down before him.] ... stood a Lamb as it had been slain” (Rev. 5:6): and the universal worship of heaven is addressed equally “to him that sate on the throne, and unto the Lamb forever.” But is this all? Have we now reached the limit of that revealed? I think not. The question must press on every reflective student, what position do the “Seven Spirits of God” hold amid this tide of celestial adoration? Are they among the worshippers, or are they worshipped? In the benediction of the first chapter they mysteriously intervene betwixt the Father and the Son, as one of the Blessed Three who are the fountain of grace and peace. In the third chapter the Son of man describes himself as having the Seven Spirits of God. In the fourth chapter they appear as seven lamps of fire burning before the throne. But what when next we read of them? “In the midst of the throne, and of the four living creatures, and in the midst of the elders, stood a Lamb as it had been slain, [If one passing mention only had been made of them, as of the seven horns, we might have said these shadowed forth perfect knowledge, as those perfect power: but the repeated and varied way in which they are introduced prevents our resting in this abstract interpretation; and hence the conjunction of the seven horns in this verse seems equivalent to such expressions as “Jesus returned in the power of the Spirit (the same personal Spirit who had descended on him at his baptism, and led him into the wilderness,) into Galilee”: or, “God anointed Jesus of Nazareth with the Holy Ghost and with power.” (Luke 4:14, 3:22 and 4:1. Acts.10:38.)] having seven horns and seven eyes, which are the Seven Spirits of God sent forth into all the earth.” (Rev. 5:6.) This implies their closest union with the Lamb; therefore, when He, together with the eternal Father, received that wondrous universal homage, the sevenfold Spirit of God must have received it with him. How beautiful now appears the harmony with the opening benedictory prayer; and how appropriate now the threefold cherubic adoration, “Holy, holy, holy, Lord God Almighty, which was, and is, and is to come.” (Rev. 4:8 here only and in Isa. 6:3.) The vision is symbolic, but it symbolizes truth; and it is most suggestive of the highest adoration being received on the eternal throne by the Father, and by the Son, and by the Holy Ghost.
+
+Divine worship is, therefore, on the authority of Scripture, rendered to the Spirit. I admit that in some of the cases the evidence is rather circumstantial than direct. But this we should have a priori expected; for in the economy of redemption it is the office of the Holy Ghost to kindle in us the spirit of grace, and of supplications, to intercede for us and with us; and to enable us, in the spirit of adoption, to pray as Jesus taught his disciples, “Our Father which art in heaven.” (Zech. 12:10. Rom. 8:15, 26–27.)
+
+(5) Finally, the comparison of Scripture with Scripture demonstrates that the Divine Spirit [This appellative is not modern. Thrice, at least, is the Hebrew “Spirit of God” rendered by the LXX. Πνευμα θειον – Ex. 31:3. Job 27:3, and 33:4.] is Jehovah and God. (Cf. Serle and Jones.)
+
+And the Lord said, My Spirit shall not always strive with man. – Gen. 6:3.
+
+The long suffering of God waited in the days of Noah. – 1 Peter 3:20.
+
+It was then the forbearance of God the Spirit with which they before the flood contended.
+
+They vexed his Holy Spirit. ... Where is He that put his Holy Spirit within him? ... that led them through the deep. ... The Spirit of Jehovah caused him to rest. – Isa. 63:10–14.
+
+Jehovah said to Moses, How long will this people provoke me? – Num. 14:11.
+
+Jehovah alone did lead him, – Deut. 32:12.
+
+Compare also the parallel passages (p. 106). Here we learn that the One provoked was the Holy Spirit, and was Jehovah. Therefore the Spirit is Jehovah.
+
+The Spirit of the Lord spoke by me; and his word was in my tongue. – 2 Sam. 23:2.
+
+The God of Israel said, and the Rock of Israel spake to me. – Ib. v. 3.
+
+Therefore, unless you admit that there were three, or at least two, Divine speakers who inspired David, the Spirit of Jehovah is the God and the Rock of Israel.
+
+Well spake the Holy Ghost by Esaias the prophet. – Acts 28:25.
+
+The Lord God of Israel ... spake by the mouth of his holy prophets, which have been since the world began. – Luke 1:68–70.
+
+Holy men of God spoke as they were moved by the Holy Ghost. – 2 Peter 1:21.
+
+All Scripture is given by inspiration of God. – 2 Tim. 3:16.
+
+The Spirit, therefore, is God, yea, the Lord God of Israel. I append a few other passages (selected from many), the conclusion from which is similarly self-evident.
+
+That which is born of the Spirit (το γεγεννημένον εκ του Πνευματος). – John 3:6.
+
+That which is born of God (το γεγεννημένον εκ του Θεου). – 1 John 5:4.
+
+Christ wrought by me, through mighty signs and wonders by the power of the Holy Ghost. – Rom. 15:19.
+
+Jehovah, ... the Lord of lords ... the God of gods, ... alone doeth great wonders – Psa. 136:1–4.
+
+The Comforter, (ο Παράκλητος) which is the Holy Ghost. – John 14:26.
+
+I, even I, am He that comforteth (ο παρακαλων – LXX) you. – Isa. 51:12.
+
+Walking ... in the comfort of the Holy Ghost. – Acts 9:31.
+
+The God of all comfort, who comforteth us. – 2 Cor. 1:3–4.
+
+Why hath Satan filled thine heart to lie to the Holy Ghost? – Acts 5:3.
+
+Thou hast not lied unto men, but unto God. – ib. v. 4.
+
+How is it that ye have agreed to tempt the Spirit of the Lord? – Acts 5:9.
+
+Thou shalt not tempt the Lord thy God. – Matt. 4:7.
+
+Your body is the temple of the Holy Ghost. – 1 Cor. 6:19.
+
+The Spirit of God dwelleth in you. – 1 Cor. 3:16.
+
+Ye are the temple of the living God: as God hath said, I will dwell in them. – 2 Cor. 6:16.
+
+These pages might be greatly multiplied; but from this comparison, observing the way in which the names and offices of God and of the Holy Spirit are interchanged, we conclude that this same Eternal Spirit is Jehovah, the God of Israel, the Lord God, the Lord of Lords, the God of Gods, the living God, the Divine being who quickens and comforts – in one word, He is God.* And, accordingly, St. Paul affirms, (2 Cor. 3:17) “Now the Lord (Κύριος) is that Spirit.” He had just said, (verse 16) “When it (or rather he) shall turn to the Lord,” (Κύριον) referring to Moses entering the presence of Jehovah, “the veil shall be taken away.” At all events, the word Lord, as used in verse 16, designates the Most High; and the apostle continuing without intermission says, “But the Lord is the Spirit”: and we have in this plain, unambiguous affirmation a crowning and convincing argument that the Holy Ghost is one with the Father and the Son, – very and Eternal God.
+
+*[I might here add two remarks:
+
+(1) The Godhead of Christ being proved, the very fact of the Holy Spirit anointing this infinite Saviour for all the work of redemption proves his own Divine infinitude; – for who but God could empower God?
+
+(2) As in the Old Testament we find Christ as the Angel of God’s presence saying, “I am the God of thy father, – I will send thee”; (Ex. 3:3, 6,10) thus claiming supreme authority: and as from thence we may securely infer the Deity of this glorious leader, so in the New Testament, when we find the Spirit said to Peter, “Arise, go, for I have sent thee,” (Acts 10:19–20) thus in his own right, setting aside the ceremonial law, we may safely argue this is a Divine person, who, in the absence of the Son of God, according to his promise, acts in his place and governs his church.]
+
+If any object that He is said to be sent by the Father and the Son, and that this mission implies inferiority, we answer that even among men the being sent is by no means always a mark of subordination. “The members of a senate consult together relative to some negotiation, in executing which great wisdom, judgment, and experience are required. It is resolved to send one of their number. Is it any mark of inferiority to be selected and sent on such a service? And the mission of the Comforter is spoken of regarding the office He has undertaken in the economy of grace, – the work of sanctifying the elect people of God, – a work which none less than God can effect, and the glorious accomplishment of which will redound to his praise through the countless ages of eternity.” (Bates)
+
+If, again, any ask why the ambiguity inseparable from the name Spirit of God, when compared with the phrase spirit of a man – an ambiguity which, unless explained, would have tended to conceal his personality – was permitted? I would suggest that his name is no arbitrary choice; that it is the only one which would reveal to us the distinctive character of this holy Being, as the name the Son could alone describe the Eternal Word: and that the very similarity of designation may be needful to express his fellowship with us, his spiritual indwelling, and the high communion carried on, while the Spirit itself bears witness with our spirit that we are the children of God. (Rom. 8:16.) This similarity testifies to us our union with the Divine Comforter who renews us, as our common humanity testifies our union with the Divine Saviour who redeemed us.
+
+And if once more it is asked why He is not more prominently set forth in Scripture as the object of adoration, besides the answer given above, there seems in this, if I may venture so to express myself, a principle of Divine equipoise in the parts sustained in our salvation, by the coequal and coeternal Three. The love of the Father, loving us so that He gave his Son to redeem and his Spirit to sanctify us, shines preeminent: it bathes the sacred page with light, and commands our homage, and compels our love. The grace of the Lord Jesus, for us incarnate, for us crucified, for us interceding, absorbs every thought, and attracts every affection: and a large portion of Scripture is taken up with setting forth the eternal Godhead of Emmanuel, and requiring us to regard him with equal love and with equal confidence. Once more, a third is revealed, the Divine Comforter: the glories of his Person are beyond doubt affirmed, but they are only rarely disclosed in full view; his worship is enjoined, but it is comparatively withdrawn from observation: when, however, we look into the subjective work carried on by him, there is an amplitude and plenitude of evidence from Holy Writ which entirely compensates any seclusion of his visible majesty. The variety of his Divine operations in us as far exceeds in glory, as the brightness of his presence is concealed. The ministration of the Spirit is as mighty, as his voice is mysteriously still.
+
+But here, even when we would feel our way with the utmost reverence, how soon are we beyond our depth: the waters are risen, waters to swim in, a river that cannot be passed over. (Ezek. 47:5.) Thanks be to God, the necessary truth is clear as the light: – that the Holy Spirit is distinct from the Father and the Son; that such personal properties are assigned to him as demonstrate intelligent personality; that all Divine attributes, such as self-existence from eternity, omnipresence, infinite wisdom and foreknowledge, absolute freedom and goodness, creative providential and spiritual power – attributes any one of which would prove his Godhead – are assigned to him; that He is associated in Divine offices with the Father and the Son; that He with them is worshipped and glorified; that He is Jehovah and God: – these things are written, as with a sunbeam, in the Scriptures of truth.
+
+But here I would remind myself and my readers that no evidence, however conclusive, can ensure a saving belief in the Divinity of the Holy Ghost. The understanding may be convinced, while the heart may rebel. For the Lord Jesus says to his disciples, “I will pray the Father; and he shall give you another Comforter, that he may abide with you forever, even the Spirit of truth, whom the world cannot receive, because it seeth him not neither knoweth him.” (John 14:16–17.) And the apostle Paul, while in conscious integrity he declares, “We speak the things freely given to us of God, not in the words which man’s wisdom teacheth, but which the Holy Ghost teacheth, comparing spiritual things with spiritual” (1 John 2:12–13): seems to chasten his hopes with the humbling recollection, “the natural man receiveth not the things of the Spirit of God, neither can he know them, for they are spiritually discerned.” (verse 14.) And therefore rather, seeing we have an High Priest who is touched with the feeling of our infirmities, let us kneel together at the throne of grace, and plead in prayer his own royal promise, “If ye being evil, know how to give good gifts unto your children, how much more shall your heavenly Father give the Holy Spirit to them that ask him,” (Luke 11:13) – that we all with open face beholding as in a glass, the glory of the Lord, may be changed into the same image from glory to glory, as by the Lord the Spirit. (2 Cor. 3:18.)
+
+## Chapter 7. That Scripture, in the Old and the New Testament alike, assures us that in the trustful knowledge of one God, the Father, the Son, and the Holy Ghost, is the spiritual life of man now and forever. On the mysteries of faith. On the revealed evidences of faith. On creeds or definitions of faith. On the obedience of faith. On the full satisfaction of faith.
+
+And now I must seek to draw this treatise, which has extended far beyond the limits I designed, to a conclusion. I would therefore state my last proposition in these words: –
+
+That Scripture in the Old and in the New Testament alike, assures us that in the trustful knowledge of One God, – the Father, the Son, and the Holy Ghost, – is the spiritual life of man now and forever.
+
+The Lord grant that we may continue to bring to the study of his word, that humble spirit which prays – “That which I see not, teach Thou me!” (Job. 34:32.)
+
+(1) To one who receives with meekness the engrafted word which is able to save our souls, the Scriptures already adduced prove beyond contradiction that as the Father is God, so is Jesus Christ God, and so the Holy Spirit is God. This truth, however, must be combined with another, which is revealed with equal clearness and enforced with equal solemnity: – “I am Jehovah, and there is none else, there is no God beside me.” (Isa. 45:5.) The combination of these truths establishes the doctrine of the Holy Trinity, for “these Three must together subsist in one infinite Divine essence, called Jehovah or God; and as this essence must be indivisible, each of them must possess not a part or portion of it, but the, whole fullness or perfection of the essential Godhead forming, in an unity of nature, One Eternal Jehovah, and therefore revealed by a plural noun* as the Jehovah Elohim, which comprehends these Three; but with this solemn qualification, that the Jehovah Elohim is in truth but one Jehovah, a Triune God, Father Son and Holy Ghost.” (Adapted from Sellon, pp. 46–47.)
+
+*[The reader will observe throughout this treatise, that I have given no prominence to the argument derivable from the plural form of Elohim, and to the yet more suggestive language used by God, (Gen. 1:28) “Let us make man in our image, after our likeness,” and again, (Isa. 6:8) “Who will go for us?” But I should be doing injustice to my own convictions if I did not state, that I believed this language was intended to foster when kindled, and to awaken when dormant, the persuasion that there subsisted a mysterious plurality in the essential unity of Jehovah. Thus far, I think the following extracts from Dr. P. Smith’s essay abundantly bear me out: –
+
+“The most usual appellation of the Deity in the original Scriptures of the Old Testament is Elohim, which is constantly translated ‘God’; but it is the regular plural of Eloah, which also occurs, though much less frequently than in the plural form, and is always translated in the same manner.
+
+“This plural appellation is generally put in agreement with singular verbs, pronouns, and adjectives, as in Gen. 1:1, Elohim created; – creavit Dii; – les Dieux créa. This is the ordinary construction through the whole Hebrew Bible.
+
+“But sometimes the apposition is made with verbs, pronouns, and adjectives, in the plural number likewise, and sometime singulars and plurals are put together in the same agreement: as Gen. 20:13, God (plural) caused me to wander – vagari me fecerunt Dii; – les Dieux m’ort fait égarer. Deut. 5:26, heard the voice of the living God (plural) – audivit vocem Deorum Viventium; – des Dieux vivans, etc.
+
+“To these may be added the similar expressions, though without the word Elohim: –
+
+Psalm 149:2, Israel shall rejoice in his Maker (plural) – in Creatoribus suis; – de sese Créateurs.
+
+Isaiah 54:5, For thy Creator (plural) is thy husband (plural).
+
+Eccles. 12:1, Remember thy Creator (plural).
+
+“The fact which principally requires our attention is the constant use of Elohim, to designate the one and only God. It is not a little remarkable that, in the sacred books of a people who were separated from all other nations for this express object, that they should bear a public and continual protest against polytheism, the ordinary name and style of the only living and true God should be in a plural form. Did some strange and insuperable necessity lie in the way? Was the language so poor that it could furnish no other term? Or, if so, could not the wisdom of inspiration have suggested a new appellative, and forever abolish the hazardous word? None of these reasons existed. The language was rich and copious. Besides “that glorious and fearful name, Jehovah,” the appropriated and unique style of the true God, there was the singular form ‘Eloah’ of the very word in question.
+
+“Hear O Israel, Jehovah, our Elohim, one Jehovah?” (Deut. 6:4.) This sentence was proclaimed as a kind of oracular effatum, – a solemn and authoritative principle to the Israelites. Had it been intended to assert such a unity in the Divine nature, as is absolutely solitary, and exclusive of every modification of plurality, would not the expression of necessity have been this, ‘Hear O Israel, Jehovah, our Elohim, one Eloah?’ But as the words actually stand, they appear to be in the most definite and expressive manner designed to convey the idea, that, notwithstanding a real plurality intimated in the form Elohim, Jehovah is still ONE.”]
+
+This supreme mystery must transcend all the powers of human thought; and the question must recur again and again, what saith the Scripture? Our imaginations must be counted as the small dust of the balance. Thus, do you conceive that the very names “the Father, the Son” imply a certain point in duration beyond which the Father inhabited eternity alone? Your conception cannot countervail the assertion of Scripture, that the goings-forth of the Saviour have been from everlasting; or the words of Christ himself, adopting the formula which declares the Divine self-existence from eternity to eternity, “I am the first and the last.” [The illustration, before adduced, of the sun, its beams of light, and its vital heat, may offer some faint resemblance of this great mystery: for the beams of light are generated by the central orb; and yet the aim could not have existed, so far as we know, for a moment without emitting its radiance, nor the radiance have existed without diffusing its warmth: so that “one is not before another, but only in on order and relation to one another.” (Beveridge on Art. I.) But no creature can adequately image forth the Creator, who asks “To whom then will ye liken God, or what likeness will ye compare unto him?” (Isa. 40:18.)]
+
+Again, do you imagine that the name of him who is alone Jehovah, cannot comprehend a Trinity in Unity? Your imagination is as nothing in contradiction of the words of Christ revealing the one Divine name, as “the name of the Father, and of the Son, and of the Holy Ghost.” Do you asseverate the impossibility of three subsistences in one eternal essence? Remember, I pray you, the words, “Canst thou find out the Almighty unto perfection?” (Job. 11:7.) What do we know of the essence of created things? The pure white light seems indissolubly one; an unscientific man would, without hesitation, pronounce it uniform, and would utterly deny any plurality subsisting in its transparent simplicity. The colours of the rainbow seem evidently manifold; and the same man might refuse to credit their unity. Science stoops to analyze light; and we are told that –
+
+The prismatic spectrum consists in reality of three spectra of nearly equal length, each of uniform colour, superposed one upon another; and that the colours which the actual spectrum exhibit arise from the mixture of the uniform colours of these three spectra superposed. The colours of these three elementary spectra, according to Sir David Brewster, are red, yellow, and blue. He shows that by a combination of these three, not only all the colours exhibited in the prismatic spectrum may be reproduced, but their combination also produces white light. He contends, therefore, that the white light of the sun consists, not of seven, but of three constituent lights. (Lardner’s Museum, vol. vii. p. 78.)
+
+The unlearned man then, in his incredulity, would have denied an established fact. The unity of that pure white light was not so simple as he affirmed. More constituents than one subsist in its ethereal essence. But has science now fathomed the mysteries of light? So far from it, we read –
+
+Light is now proved to consist in the waves of a subtle and elastic ether, which pervades all space and serves to communicate every impulse, from one part of the universe to another, with a speed almost inconceivable. ... In this luminous ether, matter seems to emulate the subtlety of thought. Invisible, and yet the only means by which all things are made visible; impalpable, and yet nourishing all material objects into life and beauty; so elastic, that when touched at one point, swift glances of light tremble through the universe; and still so subtle that the celestial bodies traverse its depths freely, and even the most vaporous comet scarcely exhibits a sensible retardation in its course; – there is something in the very nature of this medium which seems to baffle the powers of human science, and to say to the pride of human intellect, “Hitherto shalt thou come, and no farther; and here shall thy proud waves be stayed.” Here, indeed, the most brilliant and profound analysts have continually to guess their way when they would trace out a few of the simplest laws resulting from the existence of such an ether, and unfold their application to the various phenomena of reflected and refracted light. It is a great deep of mystery. Science grows dizzy on its verge when it strives to explore the nature of this subtle, immense, imponderable ocean, which bathes all worlds in light, and itself remains, by its own nature, invisible forever. (Birks’ Treasures of Wisdom, pp. 99–106.)
+
+Is such the modest confession of truth after all the triumphs of human wisdom? Is man only wading, with tremulous footstep, into the shallow waters of that unfathomable sea called into existence by the fiat of God, when He said, “Let there be light, and there was light?” Are we so soon out of our depth in seeking to understand one of his works? How much rather may we expect to be humbled as we meditate, and to be baked if we think we can comprehend, the glorious Creator himself? Is light a mystery? How much rather He who dwelleth in the light that no man can approach unto! We know him only as He reveals himself.
+
+This self-revelation involves a yet greater self-concealment. There will be the manifestation of God in the voluntary condescension of his love: and there will be the necessary seclusion within the clouds of his unapproachable glory. When a finite being seeks to understand anything of the Infinite, it must always be so. There will be the fragment of truth which the student has made and is making his own, and the illimitable expanse beneath, above, and beyond him. Thus in the field of nature we read, “The works of the Lord are great, sought out of all them that have pleasure therein.” (Psa. 111:2.) Here is our knowledge. But “No man,” says Solomon, “can find out the work that God maketh from the beginning to the end.” (Ecc. 3:11.) There is the limit of our knowledge. We are invited to consider his heavens, to trace his footprints, and to regard the operations of his hands. And yet after all, “Lo! these are parts of his ways; how faint a whisper is heard of him! the thunder of his power who can understand?” (Job. 26:14.) So, in the majestic course of his patient providence we adoringly acknowledge, “Just and true are thy ways, thou King of saints” (Rev. 15:3): and yet we must confess, “Thy way is in the sea, and thy path in the great waters, and thy footsteps are not known.” (Psa. 77:19.)
+
+Humble students are treading an upland path. Their horizon widens every step they take. The angels of light, standing on a higher eminence, see farther than they. Still there must be a boundary line which limits angelic intuition: and whatever lies beyond that line must be a mystery to them, or, if made known to them, made known by revelation. We rebuke the want of modesty in the unlearned peasant, who argues from his ignorance against the declarations of science: surely those blessed spirits would rebuke us, if we, through preconceived notions of our own, refused to credit the simple revelations of God regarding his own mysterious Being.
+
+He reveals himself by his names, his attributes, and his acts. And, therefore, if combined with assertions that God is one, we find Three revealed in Scripture to whom the same names, attributes, and acts are ascribed, the same so far as a personal distinction allows; if we look vainly for any fourth Divine one, or any intimation of more than three; if we connect with this the intimate and necessary union affirmed to exist betwixt the Father, and the Son, and the Spirit, as when the Lord Jesus says, “I and my Father are one,” and when St. Paul says, “The Spirit searches the depths of God”; if, then, we find that every Christian is baptized into one Name, – the Name of the Father, and of the Son, and of the Holy Ghost – we are led swiftly and irresistibly up to the doctrine (call it by what name you will) of the Trinity in Unity.
+
+(2) Hence, at the risk of apparent repetition, I shall bring together again some few bible testimonies to the Godhead of the Father, the Son, and the Holy Ghost; combining them in one view; and adding a further declaration from Scripture of our sole dependence on the alone Jehovah; so that you may see at a glance, we are compelled by the Christian verity, “to acknowledge the glory of the eternal Trinity, and in the power of the Divine Majesty to worship the Unity.” (Collect for Trinity Sunday.)
+
+I. The Father, the Son, and the Holy Ghost are eternal.
+
+1. I am the first, and I am the last. – Isa. 44:6. The everlasting (αιωνίου) God. – Rom. 16:26.
+
+2. I am the first and the last. – Rev. 1:17. Whose goings forth have been from of old, from everlasting (απ’ αρχης εξ ημερων αιωνος – LXX) – Micah 5:2.
+
+3. The eternal (αιωνίου) Spirit. – Heb. ix. 14.
+
+The One Eternal is our trust. The eternal God is thy refuge, and underneath are the everlasting arms. – Deut. 33:27.
+
+II. The Father, the Son, and the Holy Ghost created all things.
+
+1. One God, the Father, of whom are all things. – 1 Cor. 8:6. The Lord ... it is He that hath made us. – Psa. 100:3.
+
+2. By him (the Word) were all things made. – John 1:3. All things were created by him, etc. – Col. 1:16.
+
+3. Who hath measured, etc. – who hath directed the Spirit of the Lord. – Isa. 40:13. The Spirit of God hath made me. – Job 33:4.
+
+The One Almighty is our trust. Commit the keeping of your souls to him as unto a faithful Creator. – 1 Peter 4:19.
+
+III. The Father, the Son, and the Holy Ghost are omnipresent.
+
+1. Do not I fill heaven and earth, saith the Lord? – Jer. 23:24.
+
+2. Lo, I am with you alway. – Matt. 28:20.
+
+3. Whither shall I go from thy Spirit? – Psa. 139:7.
+
+The One omnipresent God is our trust. He is not far from every one of us, for in him we live and move, and have our being. – Acts 17:27–28.
+
+IV. The Father, the Son, and the Holy Ghost are incomprehensible and omniscient.
+
+1. No one knoweth the Father save the Son. – Matt. 11:27. Known unto God are all his works, etc. – Acts 15:18.
+
+2. No one knoweth the Son save the Father. – Matt. 11:27. Lord, thou knowest all things. – John 21:17.
+
+3. Who being his counsellor hath taught him? – Isa. 40:13. The Spirit searcheth all things. – 1 Cor. 2:10.
+
+We worship the One all-seeing God. All things are naked and opened to the eyes of him with whom we have to do. – Heb. 4:13.
+
+V. The Father, the Son, and the Holy Ghost are true, holy, and good.
+
+1. He that sent me is true. – John 7:28. Holy (άγιε) Father. Righteous (δίκαιε) Father. – John 17:11, 25. The Lord is good. – Psalm 34:8.
+
+2. I am ... the truth. – John 14:6. The holy One and the just (τον άγιον και τον δίκαιον). – Acts 3:14. The good Shepherd. – John 10:11.
+
+3. The Spirit is truth. –1 John 5:6. The Spirit, the holy one. – John 14:26. Thy Spirit, is good. – Psalm 143:10.
+
+We adore the One Lord of infinite goodness. Who shall not fear thee and magnify thy name, for thou only art holy. – Rev. 15:4.
+
+VI. The Father, the Son, and the Holy Ghost have each a self-regulating will.
+
+1 Him that worketh all things after the counsel of his own will (την βουλην του θελήματος). – Eph. 1:11.
+
+2. The Son wills (βούληται) to reveal him. – Matt. 11:27. Father I will (θέλω). – John 17:24.
+
+3. Dividing to every one severally as He wills (βούλεται). 1 Cor. 12:11.
+
+We rest on the will of him who alone is Jehovah. The will of the Lord be done. – Acts 21:14.
+
+VII. The Father, the Son, and the Holy Ghost are the fountain of life.
+
+1. With thee is the fountain of life. – Psa. 36:9. God hath quickened us. – Eph. 2:4–5.
+
+2. In him (the Word) was life. – John 1:4. The Son quickeneth whom He will – John 5:21.
+
+3. The Spirit is life. – Rom. 8:10. Born of the Spirit. – John 3:8.
+
+We depend on one life-giving God. Love the Lord thy God, ... cleave unto him, ... for He is thy life. Deut. 30:20.
+
+VIII. The Father, the Son, and the Holy Ghost strengthen, comfort, and sanctify us.
+
+1. Thou strengthenedst me with strength in my soul. Psa. 138:3. I will comfort you. – Isa. 66:13. – Sanctified by God the Father. – Jude 1.
+
+2. I can do all things through Christ which strengtheneth me. – Phil. 4:13. If any consolation in Christ. – Phil. 2:1. Sanctified in Christ Jesus. – 1 Cor. 1:2.
+
+3. Strengthened with might by his Spirit in the inner man. – Eph. 3:16. The Comforter, the Holy Ghost. – John 14:26. Being sanctified by the Holy Ghost. – Rom. 15:16.
+
+We trust in One God for spiritual power. My God, my strength, in whom I will trust. – Psa. 18:2.
+
+IX. The Father, the Son, and the Holy Ghost fill the soul with Divine love.
+
+1. Every one that loveth him that begat. – 1 John 5:1. If any man love the world, the love of the Father is not in him. – 1 John 2:15.
+
+2. The love of Christ constraineth us. – 2 Cor. 5:14. If any man love not the Lord Jesus Christ. – 1 Cor. 16:22.
+
+3. I beseech you for the love of the Spirit. – Rom. 15:30. Your love in the Spirit. – Col. 1:8.
+
+The love of the One living and true God characterizes the saint. Thou shalt love the Lord thy God with all thy heart. – Deut. 6:5.
+
+X. The Father, the Son, and the Holy Ghost gave the Divine law.
+
+1. The law of the Lord is perfect. – Psa. 19:7. The word of our God. – Isa. 40:8. Thus saith the Lord God. – Ezek. 2:4.
+
+2. The law of Christ. – Gal. 6:2. The word of Christ. – Col. 3:16. These things saith the Son of God. – Rev. 2:18.
+
+3. The law of the Spirit of life. – Rom. 8:2. Holy men spake as they were moved by the Holy Ghost. – 2 Peter 1:21. The Holy Ghost said. – Acts 13:2.
+
+The word of One Legislator is the believer’s rule. There is One lawgiver who is able to save. – James 4:12.
+
+XI. The Father, the Son, and the Holy Ghost dwell in the hearts of believers.
+
+1. I will dwell in them. – 2 Cor. 6:16. God is in you of a truth. – 1 Cor. 14:25. Our fellowship is with the Father. – 1 John 1:3.
+
+2. Christ may dwell in your hearts by faith. – Eph. 3:17. Christ in you, the hope of glory. – Col. 1:27. Our fellowship ... with his Son Jesus Christ. – 1 John 1:3.
+
+3. The Spirit dwelleth with you and shall be in you. – John 14:17. The communion of the Holy Ghost. – 2 Cor. 13:14.
+
+The contrite heart receives One Divine guest. Thus saith the high and lofty One who inhabiteth eternity, I dwell with him that is of a contrite and humble heart. – Isa. 57:15.
+
+XII. The Father, the Son and the Holy Ghost are, each by himself, the supreme
+
+Jehovah and God.
+
+1. I am Jehovah, thy God. – Ex. 20:2. Thou, Lord, art most High forevermore. – Psa. 92:8.
+
+2. Jehovah our God. – Isa. 40:3. with Matt. 3:3 (see above). The Highest. – Luke 1:76, with Matt. 11:10.
+
+3. Jehovah God. – Ezek. 8:1, 3 (see above). The Highest. – Luke. 1:35.
+
+The One supreme Lord God is our God forever and ever. Jehovah, our Elohim, One Jehovah. – Deut. 6:4.
+
+From this brief comparison which might be elaborated at far greater length (if the reader asks for farther proof of any statement, I earnestly entreat him to refer back to the more detailed exposition), Scripture assures us that the Father the Son and the Holy Ghost have the same Divine attributes, concur with a mind, and will, and heart personally independent, but unitedly harmonious in the same Divine acts, and are addressed by the same Divine names. (Cf. Jones.) And farther, we learn that our trust is not dispersed or confused by this coequal Godhead of the Sacred Three: but that (a way of access being opened in the Gospel through the revelation of the Father in Christ by the Spirit) we rest on, we worship, and we love One God. Thus, these Three are One: or, in the language of the first Article of the Church of England –
+
+“There is but One living and true God, everlasting; without body, parts, or passions; of infinite power wisdom, and goodness; the Maker and Preserver of all things, both visible and invisible. And in Unity of this Godhead, there be Three persons of one substance, power, and eternity; the Father, the Son, and the Holy Ghost.”
+
+(3) Are you tempted to say, “such a brief article as this enunciated by Christ, himself, and recorded by the apostles, would have settled every controversy forever: why, oh why, was it not contained in Scripture?” Haply, Elihu might quell the rising suspicion, “Behold in this thou art not just. I will answer thee, that God is greater than man. Why dost thou strive against him? for He giveth not account of any of his matters. – For God speaketh once, yea twice, but man perceiveth it not.” (Job. 33:12–14.) But it is by no means certain that such an article would have settled every doubt. It would have been handed down from age to age: many manuscripts must needs be collated: possibly some obscure variation might be discovered. But even if the text were as impregnable as the opening of St. John’s Gospel, I doubt whether it would have convinced such minds as remain unconvinced of the Godhead of Christ, after weighing those transparent declarations. (Eph. 2:8.) Saving faith is the gift of God. Granting, however, that it had materially shortened the path by which sincere enquirers attain the true faith (for Scripture assures us that none, who heartily seek the Lord, stop short of Jesus Christ), what would have been its effect on the church at large? Permit me here to quote some admirable remarks from “Cautions for the Times”.
+
+There is another reason against the providing in Scripture of a regular systematic statement of Christian doctrines. Supposing such a summary of Gospel truths had been drawn up, and could have been contrived with such exquisite skill as to be sufficient and well adapted for all, of every age and country, what would have been the probable result? It would have commanded the unhesitating assent of all Christians who would, with deep veneration, have stored up the very words of it in their memory, without any need of laboriously searching the rest of the Scriptures, to ascertain its agreement with them; which is what we do (at least, are evidently called on to do) with a human exposition of the faith: and the absence of thin labour, together with the tranquil security as to the correctness of their belief, which would have been thus generated, would have ended in a careless and contented apathy. There would have been ... no call for vigilant attention in the investigation of truth – none of that effort of mind which is now requisite, in comparing one passage with another, and collecting instruction from the scattered, oblique, and incidental references to various doctrines in the existing Scriptures; and in consequence none of that excitement of the best feelings, and that improvement of the heart, which are the natural and, doubtless, the designed result of an humble, diligent, and sincere study of the Christian Scriptures.
+
+In fact all study, properly so called, of the rest of Scripture – all lively interest in its perusal – would have nearly been superseded by such an inspired compendium of doctrine; to which alone, as by far the most convenient for that purpose, habitual reference would have been made in any question that might arise. Both would have been regarded indeed as of Divine authority: but the compendium as the fused and purified metal; the other as the mine containing the crude ore. And the compendium itself being not like the existing Scriptures, that from which the faith is to be learned, but the very thing to be learned would have come to be regarded by most with an indolent, unthinking veneration, which would have exercised little or no influence on the character. Their orthodoxy would have been as it were petrified; like the bodies of those animals we read of incrusted in the ice of the polar regions – firm fixed, indeed, and preserved unchangeable; but cold, motionless, lifeless. It is only when our energies are roused, and our faculties exercised, and our attention kept awake by an ardent pursuit of truth and anxious watchfulness against error – when, in short, we feel ourselves to be doing something towards acquiring, or retaining, or improving our knowledge – it is then only that that knowledge makes the requisite practical impression on the heart and on the conduct.
+
+To the Church then, has her all-wise Founder left the office of teaching – to the Scriptures, that of proving the Christian doctrine: to the Scriptures, He has left the delineation of Christian principles – to each Church, the application of those principles, in their Symbols or Articles of religion – in their forms of worship – and in their Ecclesiastical regulations. – pp. 443–444.
+
+I would only add that the exceeding value of such symbols or creeds, (Art. 8) as may be proved by most certain warrants of holy Scripture, appears from the daily shifting opinions of Unitarian congregations on those articles of faith which it is of the last importance should be settled and stable. This may teach us that articles of faith received, because demonstrable by Scripture, are beyond all price: while, probably, if themselves incorporated in Holy Writ, seeing how many nominal Christians, professors of an orthodox creed, have too plainly the form without the power of godliness, they would have only stereotyped more hopelessly the apathy of those who have a name to live and are dead.
+
+How beautiful is the analogy here between the word of God and the natural creation. Had we been told that the earth was to be so arranged that eight hundred millions of human beings could live thereon, should we not, in thought, have done away with the vast unproductive forests, the superfluous mountains, the exorbitant ocean, and have divided it into so many plots for agriculture, like the veriest pauper field? This was not God’s way. The woods, and hills, and seas minister to the clouds, and the clouds drop fatness on the fertile field and the luxurious plain; and thus He opens his hand and supplies all things living with plenteousness. So is it with the Scriptures of truth. We should, perhaps, have expected definitions, and articles, and formularies, and canons, and creeds. This was not God’s method. There is the incident of touching simplicity, the solemn majesty of law, the flame of patriotic zeal, the heart-experience which speaks to our heart, the grandest poetry, the most magnificent songs of praise, the rapid changes on the prophetic harp, the inimitable story of redeeming love, the calm deductions of logical argument, the echo of angelic joy, the unbarring of the gates of glory, and the reflection of the light of eternity. And yet, amid all these manifold combinations, the simple rule of our faith in the One living and true God – Father Son and Spirit, the source of creation, redemption, and sanctification, – is marked out with a precision that he who runs may read.
+
+But, do you ask, is it needful for every believer to pass through such a long process of proof as even this little treatise sets forth? Assuredly not. The Bible is eminently the poor man’s book. These things are hidden from the wise and prudent, and revealed unto babes. (Matt. 5:25 and 18:3.) And to such a childlike mind a very few simple truths generally carry conviction, and with conviction life and peace. “I am God, and beside me there is no Saviour.” “Behold the Lamb of God, who taketh away the sin of the world.” “I will send the Comforter to you.” His Father, his Redeemer, his Sanctifier, are equally indispensable to him: and he knows that he was baptized into the name of the Father, the Son, and the Holy Ghost. He needs no more. Without any laboured syllogisms, he believes these Three are One. The truth finds him. He does not expect to fathom the mystery: but his whole heart embraces that which satisfies his whole necessity.
+
+If, however, doubts and suspicions assail these first principles when implanted, or keep back an enquirer from believing them, then the word of God, reverently consulted, affords a complete answer to every, what I may call, rational objection. The armory supplies a weapon for every encounter. We are ready to give every man a reason of the hope that is in us. (1 Peter 3:15.) Therefore, if held back by these doubts from faith in Christ, you must give yourself, heart and soul, to this momentous enquiry; you must shake off that deadly indifference which would leave this question undecided; you must watch and pray; and then be assured the promise shall never fail. – “I know the thoughts that I think towards you, saith the Lord, thoughts of peace and not of evil, to give you an expected end. Then shall ye call upon me, and ye shall go and pray unto me, and I will hearken unto you; and ye shall seek me and find me when ye shall search for me with all your heart.” (Jer. 29:11–13.)
+
+Mortal life, stretching forth into immortality, is to each man like a precious cabinet stored with priceless jewels. But the cabinet is locked, and to those without Christ the key is wanting. The Gospel is that key. It is proffered to all. How many, alas, carelessly thrust it aside! But some, you may think with a modest caution, refuse to make the trial, lest haply they should hamper the lock, until they have been assured by a careful sifting of documents, by a comparing of outlines of the hidden wards with the key, and by other infallible proofs, that the key in question was the one made and designed for the cabinet. This investigation they pursue with untiring assiduity, until, satisfied of the credibility of the evidence adduced, they try the bolt with a trembling hand; it yields to the touch and the cabinet is their own; they are rich forever. Many others, however, have more trustfulness, and less fearfulness. They feel their poverty; they believe the offer, is to be relied on; they know that many of their neighbours have found it so; and without further delay they also try the lock. It yields, and the cabinet is theirs. You can never argue them out of their persuasion that the key they hold in their hands is the key of the cabinet. No other unlocks it; and this does. That is enough for them. They may not have so intelligent a knowledge of the way in which that elaborate key turns back one secret spring after another; that knowledge, whenever acquired, belongs to the patient painstaking investigator. But both alike possess the jewels.
+
+So is it with the Gospel of Jesus Christ: it exactly fits the intricate wards of the human heart. It unlocks the inestimable treasures of human life. He that uses it is rich indeed; rich towards God; rich for eternity. Whether he has been led to faith in Christ through long and painful enquiries, as may be the case especially with those who have much time for thought and keen intellectual powers; or whether with a more confiding alacrity, which is the experience of most Christians (for “God hath chosen the poor of this world rich in faith,” (James 2:5)), he has obeyed the Gospel at once, the lifegiving efficacy is the same. To as many as received him to them gave He power to become the sons of God. (John 1:12.) The question is one of obedience or of disobedience. “The mystery of the Gospel of Jesus Christ is now according to the commandment of the everlasting God made known to all nations, for the obedience of faith.” Obedience is life. “He that believeth on the Son hath everlasting life”: and disobedience is death; for the same Scripture continues, “he that believeth not the Son shall not see life, but the wrath of God abideth on him.” (John 3:36.)
+
+(4) Do you say, is not a trustful knowledge of God the Father sufficient? Scripture answers there is no true knowledge of God the Father, except in God the Son: for Jesus Christ says, “I am the way, the truth, and the life; no man cometh unto the Father but by me.” And St. John writes (John 14:6), “Whosoever denieth the Son, the same hath not the Father.” And again, (1 John 2:23) “Whosoever transgresseth and abideth not in the doctrine of Christ, hath not God: he that abideth in the doctrine of Christ, he hath both the Father and the Son.” Now Scripture has proved (2 John 9) to us the coessential Godhead of the Son with the Father: and, if once the Holy Spirit convince you of this, you will be the first to ask, what can denial of the Son be, if to deny his Godhead be not this negation? With your keen sense of honour, you will be the first to acknowledge that such denial destroys the glory of his Person; tears the crown from his brow; empties the atonement of its virtue; and, however undesignedly, charges the church of Christ with idolatry, and the word of God with equivocation and untruthfulness. For he who denies the Deity of our Lord “believeth not the record that God hath given of his Son. (1 John 5:10.) There are indeed many, who professedly believing the Divinity of the Son of God, by their works deny him: theirs, perhaps, is an aggravated guilt: – but those who professedly disbelieve his divinity, seeing that such unbelief extracts all saving efficacy from his work, are rejecting the only name under heaven given among men whereby we must be saved. (Acts 4:12.)
+
+Farther do you say, God is love, and will not visit with eternal condemnation the creatures of his hand? My friends, you are making to yourselves a God of your own imagination, a God of mercy and compassion only, but without holy jealousy and righteousness. Such an one is not the God of creation, or of providence, or of the bible. He is not the God of creation, for even there, amid the abounding evidence of his goodness, there are things which tell of his severity; there is not only the sunshine, and the summer, and the dew, and the calm, – but also the terrible darkness, and the wintry blast, and the storm, and the volcano. Such an one is not the God of permissive providence: for there is not only the happy home, and prattling childhood, and the mart of peaceful merchandise, and the honourable senate, – but also the chamber of suffering, and the creeping infirmities of age, and the wail of oppression, and the battlefield strewn with corpses. Nor is such an one the God of the bible: God is love indeed – but love embraces all his attributes, not mercy only, but righteousness likewise; “for love is strong as death, jealousy is hard as the grave, the coals thereof are coals of fire which hath a most vehement flame.” (Song 8:6. See margin.) Oh, surely not in vain was the cry of the Gospel herald, “Flee from the wrath to come.” (Matt. 3:7.) Not in vain the warning of Jesus Christ, “If ye believe not that I am He, ye shall die in your sins.” Not in vain the awakening question of St. Peter, “What shall the end be of them that obey not the Gospel of God?” (John 8:24. 1 Peter 4:17.)
+
+It is so often asserted that the inflexible righteousness manifested under the old dispensation as in the deluge, in the destruction of the cities of the plain, in the plagues on Egypt, or in the chastisements on Israel, has been modified by the “milder genius of the Gospel” (See Luke 17:26–33. Rom. 9:17. 1 Cor. 10:6–11) – though they who make the assertion forget, that these cases are adduced as examples in the New Testament, – that I bring before you in the note below* some portion of the witness of the New Testament to the immutable justice of God. I fully grant you that now God is withholding his judgments, it is the day of grace, it is the time of love, the goodness of God leadeth us to repentance: but the season is limited, and when once the master of the house has risen up (Luke 13:25) and has shut to the door, then the last hour of pardoning mercy will have passed away, and He whose name is love declares, “Then shall ye call upon me but I will not answer, ye shall seek me early but ye shall not find me.” (Prov. 1:28.) But if Jesus wept, when foretelling the judgments on Jerusalem, well may the heart of a poor pardoned sinner bleed, to gather such cumulative proof of his holy indignation. (Heb. 12:21.) So terrible is the evidence that, like Moses at Sinai, “I exceedingly fear and quake.” If it were only one isolated passage, you might urge it was figurative language: but here it is written in history, prophecy, sermon, epistle, vision, – all alike proving that our God is a consuming fire, and that of the enemies of the cross the end is destruction. I repeat, you may conceive a God of compassion only, and fall down and worship him, but such an one is not the righteous Judge of all the earth: and you may beautify the name of the Father whom you adore with every trait of benevolence, and tenderness, and grace, but it is not the name of the one living and true God, for that is the name of the Father, and of the Son, and of the Holy Ghost.
+
+*[Testimony under the new covenant to the righteous severity of God.
+
+Matt. 3:7–12, John Baptist warns to flee from the wrath to come.
+
+Matt. 5:26–29, Jesus speaks of the eternal prison, and of the unholy being cast into hell.
+
+Matt. 7:13, of the broad way leading to destruction; and verse 23, of the hour when He will say, Depart from me.
+
+[These last are taken from the sermon on the mount, in which the Fatherly character of God shines as a golden thread interwoven throughout.]
+
+Matt. 8:12, the children of the kingdom cast out into outer darkness.
+
+Matt. 10:15, more tolerable for Sodom in the day of judgment; and verse 28, Fear him who is able to destroy both body and soul in hell.
+
+[This last in closest connection with filial trust towards God.]
+
+Matt. 11:20–24, the woes on Chorazin.
+
+Matt. 12:32, the unpardonable sin.
+
+Matt. 13:41–42, 49–50, the judgment of the wicked.
+
+Matt. 18:6–9, the end of those who cause offences.
+
+Matt. 21:44, the stone falling on the disobedient.
+
+Matt. 22:13, the guest expelled into outer darkness.
+
+Matt. 23. the woes on the Pharisees.
+
+Matt. 24. the foretold destruction of Jerusalem, typical of the last judgment.
+
+Matt. 25:12, the foolish virgins disowned; verse 30, the unprofitable servant cast out; verse 41, the sentence upon those on the left hand – “Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels.”
+
+Mark 16:16, after the resurrection, the same inflexible law – “He that believeth and is baptized shall be saved, but he that believeth not shall be damned.”
+
+Luke 12:46, the unfaithful servant’s end.
+
+Luke 13:28, a scene of future remorse sketched, which the prescient Christ only could sketch.
+
+Luke 16:22–23, “the rich man also died and was buried, and in hell he lift up his eyes being in torments.”
+
+Luke :17:26–30, the deluge and the destruction of Sodom, types of the end of the wicked at the second Advent.
+
+John 3:18, the unbeliever condemned already; and verse 36, the wrath of God abideth on him.
+
+John 5:29, the resurrection of damnation.
+
+John 8:24, ye shall die in your sins.
+
+Acts 3:23, the disobedient soul destroyed.
+
+Acts 5:1â€“11, the judgment on Ananias and Sapphira.
+
+Acts 13:40â€“41, see the peroration of S. Paulâ€™s sermon at Antioch:
+
+Acts 28:25â€“27, and of his address to the Jews.
+
+Rom. 1:18, the wrath of God revealed against all ungodliness.
+
+Rom. 2:4â€“11, wrath treasured up against the day of wrath; â€“ indignation and wrath, tribulation and anguish, rendered to every evil doer.
+
+Rom. 6:23, the wages of sin is death.
+
+Rom. 12:19, vengeance is mine: I will repay, with the Lord.
+
+1 Cor. 3:17, if any man, etc. him shall God destroy.
+
+1 Cor. 6:9, the unrighteous shall not inherit the kingdom of God.
+
+1 Cor. 16:22, if any man love not the Lord Jesus Christ, let him be Anathema Maranatha.
+
+2 Cor. ii. 16, to them that perish we are the savour of death unto death.
+
+2 Cor. 4:3, the Gospel hid in them that are lost.
+
+Gal. 1:8, the solemn anathema on those who pervert the Gospel.
+
+Gal. 6:8, he that soweth to his flesh .... reaping corruption.
+
+Eph. 2:3, we were children of wrath.
+
+Phil. 3:18â€“19, I tell you, even weeping, that they are the enemies of the cross of Christ, whose end is destruction.
+
+2 Thess. 1:7â€“9, the Lord Jesus shall be revealed from heaven in flaming fire, taking vengeance on them that know not God, and that obey not the Gospel of our Lord Jesus Christ; who shall be punished with an everlasting destruction ... .
+
+2 Thess. 2:12, that they all might be damned which believed not the truth, etc.
+
+Heb. 2:3, how shall we escape if we neglect so great salvation?
+
+Heb. 10:27â€“31, a certain fearful looking for of judgment and fiery indignation which shall devour the adversaries â€¦ It is a fearful thing to fall into the hands of the living God.
+
+Heb. 12:29, for our God is a consuming fire.
+
+James 2:10, whosoever shall keep the whole law and yet offend in one point, he is guilty of all.
+
+1 Peter 2:8, [Jesus Christ] a stone of stumbling and a rock of offence, even to them which stumble at the word, being disobedient, whereunto also they were appointed.
+
+1 Peter 4:17â€“18, what shall the end be of them that obey not the Gospel of God? ... where shall the ungodly and the sinner appear?
+
+2 Peter 2:17, to whom the mist of darkness is reserved forever.
+
+2 Peter 3:7, the day of judgment and perdition of ungodly men.
+
+1 John 5:19, the whole world lieth in wickedness.
+
+Jude 14â€“15, the Lord cometh ... to execute judgment.
+
+Rev. 6:16, hide us from the face of him that sitteth upon the throne, and from the wrath of the Lamb.
+
+Rev. 19:3, her smoke rose up forever and ever.
+
+Rev. 19:15, and out of his mouth goeth forth a sharp sword, that with it he should smite the nations: and he shall rule them with a rod of iron, and he treadeth the winepress of the fierceness and wrath of Almighty God.
+
+Rev. 20:15, and whosoever was not found written in the book of life was cast into the lake of fire.
+
+Rev. 21:8, but the fearful, and unbelieving, and the abominable, and murderers, and whoremongers, and idolaters, and all liars, shall have their part in the lake which burneth with fire and brimstone, which is the second death ... .
+
+Rev. 22:11, he that is unjust let him be unjust still, and he that is filthy let him be filthy still!]
+
+God forbid that I should write with anything of bitterness or pride. I feel far too deeply for that. You will not accuse me of it. Shipwrecked in one common fall with us, you have adopted principles of your own, and staked your immortality of weal or woe upon them. We have embarked upon that we know

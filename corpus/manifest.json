@@ -1,0 +1,130 @@
+[
+  {
+    "id": "irenaeus-against-heresies",
+    "sections": 175,
+    "words": 219161,
+    "footnotes": 2148,
+    "scripture_refs": 1594,
+    "chunks": 308
+  },
+  {
+    "id": "hippolytus-against-noetus",
+    "sections": 1,
+    "words": 6350,
+    "footnotes": 108,
+    "scripture_refs": 60,
+    "chunks": 7
+  },
+  {
+    "id": "novatian-on-the-trinity",
+    "sections": 34,
+    "words": 32708,
+    "footnotes": 302,
+    "scripture_refs": 251,
+    "chunks": 45
+  },
+  {
+    "id": "athanasius-against-arians",
+    "sections": 42,
+    "words": 118621,
+    "footnotes": 1626,
+    "scripture_refs": 1020,
+    "chunks": 148
+  },
+  {
+    "id": "basil-on-the-holy-spirit",
+    "sections": 31,
+    "words": 35891,
+    "footnotes": 656,
+    "scripture_refs": 607,
+    "chunks": 53
+  },
+  {
+    "id": "gregory-nyssa-not-three-gods",
+    "sections": 1,
+    "words": 5521,
+    "footnotes": 24,
+    "scripture_refs": 12,
+    "chunks": 7
+  },
+  {
+    "id": "gregory-nyssa-against-eunomius",
+    "sections": 114,
+    "words": 250017,
+    "footnotes": 1165,
+    "scripture_refs": 844,
+    "chunks": 337
+  },
+  {
+    "id": "hilary-on-the-trinity",
+    "sections": 13,
+    "words": 181355,
+    "footnotes": 850,
+    "scripture_refs": 803,
+    "chunks": 204
+  },
+  {
+    "id": "ambrose-on-the-holy-spirit",
+    "sections": 55,
+    "words": 57162,
+    "footnotes": 673,
+    "scripture_refs": 658,
+    "chunks": 78
+  },
+  {
+    "id": "augustine-on-the-trinity",
+    "sections": 244,
+    "words": 191849,
+    "footnotes": 1085,
+    "scripture_refs": 1029,
+    "chunks": 318
+  },
+  {
+    "id": "owen-communion-with-god",
+    "sections": 30,
+    "words": 137285,
+    "footnotes": 361,
+    "scripture_refs": 2285,
+    "chunks": 159
+  },
+  {
+    "id": "owen-brief-declaration-trinity",
+    "sections": 7,
+    "words": 43624,
+    "footnotes": 13,
+    "scripture_refs": 413,
+    "chunks": 48
+  },
+  {
+    "id": "waterland-vindication",
+    "sections": 32,
+    "words": 130992,
+    "footnotes": 0,
+    "scripture_refs": 208,
+    "chunks": 146
+  },
+  {
+    "id": "edwards-essay-on-the-trinity",
+    "sections": 1,
+    "words": 7822,
+    "footnotes": 0,
+    "scripture_refs": 68,
+    "chunks": 8
+  },
+  {
+    "id": "bickersteth-rock-of-ages",
+    "sections": 9,
+    "words": 49485,
+    "footnotes": 0,
+    "scripture_refs": 1029,
+    "chunks": 55
+  },
+  {
+    "id": "warfield-biblical-doctrine-trinity",
+    "sections": 1,
+    "words": 15314,
+    "footnotes": 0,
+    "scripture_refs": 125,
+    "chunks": 18
+  }
+]
