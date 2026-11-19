@@ -101,7 +101,7 @@ p { margin: 0; }
 .teach { display: flex; align-items: center; gap: 6px; min-height: 40px; text-align: left; padding: 6px 10px; border: 0; border-radius: 8px; font-size: 14px; line-height: 1.3; background: transparent; color: var(--ink); font-weight: 500; }
 .teach[aria-current="true"] { background: var(--ink); color: #fff; font-weight: 600; }
 .teach .num { flex: 0 0 26px; font-size: 12px; font-weight: 600; opacity: .7; }
-.split { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.split, .content.split { display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
 .diagram-card { flex: 1 1 528px; min-width: 0; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .diagram-scroll { width: 100%; overflow-x: auto; display: flex; justify-content: center; }
 .diagram { position: relative; flex: 0 0 480px; width: 480px; height: 510px; }
@@ -109,7 +109,7 @@ p { margin: 0; }
 .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; font-size: 12px; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend i { width: 22px; height: 3px; display: inline-block; }
-.explain { flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.explain { flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
 .explain h2 { font-size: 34px; line-height: 1.15; }
 .explain .detail { font-size: 18px; color: var(--ink-2); }
 .verses { padding: 18px 22px; display: flex; flex-direction: column; gap: 14px; }
