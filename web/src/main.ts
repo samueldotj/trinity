@@ -1,5 +1,6 @@
 import './style.css';
 import { esc } from './util';
+import { editingAvailable, editingOn, initEditing, setEditingOn } from './edit';
 import { renderExplanations } from './screens/explanations';
 import { renderReference } from './screens/reference';
 import { renderTopics } from './screens/topics';
@@ -36,6 +37,7 @@ function rail(current: string): string {
     <nav class="rail-nav" aria-label="Main">${links}</nav>
     <div class="rail-foot">
       <span class="tri" aria-hidden="true"></span>
+      ${editingAvailable() ? `<button type="button" class="edit-switch" id="edit-switch" aria-pressed="${editingOn()}">Edit mode: ${editingOn() ? 'on' : 'off'}<small>local only</small></button>` : ''}
       <a href="#/writings"${current === 'writings' ? ' aria-current="page"' : ''}>Early Writings →</a>
       <small>Scripture: Berean Standard Bible, public domain. Classical texts: public-domain editions.</small>
     </div>`;
@@ -47,6 +49,10 @@ function route(): void {
   const id = name in SCREENS ? name : 'explanations';
   const screen = SCREENS[id];
   document.getElementById('rail')!.innerHTML = rail(id);
+  document.getElementById('edit-switch')?.addEventListener('click', () => {
+    setEditingOn(!editingOn());
+    route();
+  });
   document.getElementById('shell')!.classList.toggle('reading', !!screen.reading);
   document.title = `${screen.title} — Trinity Explained`;
   const app = document.getElementById('app')!;
@@ -57,4 +63,4 @@ function route(): void {
 }
 
 window.addEventListener('hashchange', route);
-route();
+void initEditing().then(route);

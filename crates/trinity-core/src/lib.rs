@@ -8,6 +8,9 @@ use serde_json::{Map, Value, json};
 use std::collections::HashMap;
 use std::sync::OnceLock;
 
+pub mod edits;
+pub use edits::{Field, Key, edits_json};
+
 /// Query parameters of one request (already URL-decoded).
 pub type Params = HashMap<String, String>;
 
@@ -25,6 +28,8 @@ pub fn handle(route: &str, params: &Params) -> Result<Value, String> {
         "book" => book_toc(arg(params, "id")?),
         "section" => section(arg(params, "id")?, num(params, "sec", 0)),
         "find" => find_quote(arg(params, "id")?, params.get("quote").map(String::as_str).unwrap_or("")),
+        // Deployed builds are read-only; the local dev server answers this route itself.
+        "editing" => Ok(json!({ "enabled": false, "edits": edits::count() })),
         "" => Err("missing route".into()),
         other => Err(format!("unknown route: {other}")),
     }
@@ -134,9 +139,10 @@ fn themes() -> Value {
         .map(|th| {
             let topics = th["topics"].as_array().map(Vec::as_slice).unwrap_or(&[]);
             let q: u64 = topics.iter().map(|t| t["q"].as_u64().unwrap_or(0)).sum();
+            let (desc, _) = overlay(format!("theme:{}:desc", s(&th["key"])), &th["desc"]);
             json!({
                 "key": th["key"], "title": th["title"], "short": short_label(s(&th["key"])),
-                "desc": th["desc"], "n": topics.len(), "q": q,
+                "desc": desc, "n": topics.len(), "q": q,
             })
         })
         .collect();
@@ -147,6 +153,21 @@ fn theme(key: &str) -> Result<Value, String> {
     let th = theme_list().iter().find(|t| s(&t["key"]) == key).ok_or("no such theme")?;
     let mut out = th.clone();
     out["short"] = json!(short_label(key));
+    let (desc, desc_edited) = overlay(format!("theme:{key}:desc"), &th["desc"]);
+    out["desc"] = desc;
+    out["edited"] = json!({ "desc": desc_edited });
+    for t in out["topics"].as_array_mut().into_iter().flatten() {
+        let id = t["id"].as_u64().unwrap_or(0);
+        let mut answer_edited = false;
+        if t["ans"].is_object() {
+            let (text, e) = overlay(format!("topic:{id}:answer"), &t["ans"]["text"]);
+            t["ans"]["text"] = text;
+            answer_edited = e;
+        }
+        let (cmp, cmp_edited) = overlay(format!("topic:{id}:cmp"), &t["cmp"]);
+        t["cmp"] = cmp;
+        t["edited"] = json!({ "answer": answer_edited, "cmp": cmp_edited });
+    }
     Ok(out)
 }
 
@@ -316,8 +337,9 @@ fn questions(p: &Params) -> Value {
         .take(limit)
         .map(|(_, x)| {
             let writers: Vec<Value> = x[5].as_array().into_iter().flatten().map(|i| name(authors, i)).collect();
+            let (text, _) = overlay(format!("question:{}:text", x[0]), &x[1]);
             json!({
-                "id": x[0], "question": x[1], "cat": name(cats, &x[2]), "theme": name(themes, &x[3]),
+                "id": x[0], "question": text, "cat": name(cats, &x[2]), "theme": name(themes, &x[3]),
                 "topic": name(topics, &x[4]), "writers": writers,
             })
         })
@@ -336,16 +358,74 @@ fn question(id: &str) -> Result<Value, String> {
     let d = questions_data();
     let det = d["details"].get(id).ok_or("no such question")?;
     let authors = d["authors"].as_array().map(Vec::as_slice).unwrap_or(&[]);
+    let mut answers_edited = Vec::new();
     let answers: Vec<Value> = det["a"]
         .as_array()
         .into_iter()
         .flatten()
-        .map(|a| {
+        .enumerate()
+        .map(|(n, a)| {
             let author = a[0].as_u64().and_then(|i| authors.get(i as usize)).cloned().unwrap_or(Value::Null);
-            json!({ "author": author, "work": a[1], "place": a[2], "answer": a[3], "quote": a[4], "scripture": a[5], "workId": a[6] })
+            let (answer, e) = overlay(format!("question:{id}:answer:{n}"), &a[3]);
+            answers_edited.push(e);
+            json!({ "author": author, "work": a[1], "place": a[2], "answer": answer, "quote": a[4], "scripture": a[5], "workId": a[6] })
         })
         .collect();
-    Ok(json!({ "id": id, "synthesis": det["s"], "answers": answers }))
+    let text = d["q"].as_array().and_then(|q| q.iter().find(|x| x[0].to_string() == id)).map(|x| x[1].clone()).unwrap_or(Value::Null);
+    let (text, text_edited) = overlay(format!("question:{id}:text"), &text);
+    let (synthesis, syn_edited) = overlay(format!("question:{id}:synthesis"), &det["s"]);
+    Ok(json!({ "id": id, "question": text, "synthesis": synthesis, "answers": answers,
+               "edited": { "text": text_edited, "synthesis": syn_edited, "answers": answers_edited } }))
+}
+
+// ---------- edits ----------
+
+/// The text to show for `key`: your edit if there is one, else the original. The flag says which.
+fn overlay(key: String, original: &Value) -> (Value, bool) {
+    match edits::get(&key) {
+        Some(text) => (json!(text), true),
+        None => (original.clone(), false),
+    }
+}
+
+fn topic_by_id(id: u64) -> Option<&'static Value> {
+    theme_list().iter().flat_map(|th| th["topics"].as_array().into_iter().flatten()).find(|t| t["id"].as_u64() == Some(id))
+}
+
+/// The generated (unedited) text for an edit key, or `None` if the key names nothing editable.
+pub fn original(key: &str) -> Option<String> {
+    let k = Key::parse(key)?;
+    let text = match k.field {
+        Field::ThemeDesc => theme_list().iter().find(|t| s(&t["key"]) == k.item)?["desc"].clone(),
+        Field::TopicAnswer => topic_by_id(k.item.parse().ok()?)?["ans"].get("text")?.clone(),
+        Field::TopicCompare => topic_by_id(k.item.parse().ok()?)?["cmp"].clone(),
+        Field::QuestionText => questions_data()["q"].as_array()?.iter().find(|x| x[0].to_string() == k.item)?[1].clone(),
+        Field::QuestionSynthesis => questions_data()["details"].get(&k.item)?["s"].clone(),
+        Field::QuestionAnswer(n) => questions_data()["details"].get(&k.item)?["a"].get(n)?[3].clone(),
+    };
+    text.as_str().map(String::from)
+}
+
+/// Change the text for `key`, or restore the original with `None`. Saving text equal to the
+/// original also restores it. Refuses keys that do not name an editable AI-written field.
+pub fn set_edit(key: &str, value: Option<&str>) -> Result<(), String> {
+    let orig = original(key).ok_or_else(|| format!("not an editable field: {key}"))?;
+    match value.map(str::trim) {
+        Some("") => Err("the text cannot be empty; use Restore original instead".into()),
+        Some(v) if v.chars().count() > 30_000 => Err("the text is too long".into()),
+        Some(v) if v == orig.trim() => {
+            edits::put(key, None);
+            Ok(())
+        }
+        Some(v) => {
+            edits::put(key, Some(v.to_string()));
+            Ok(())
+        }
+        None => {
+            edits::put(key, None);
+            Ok(())
+        }
+    }
 }
 
 // ---------- books ----------
@@ -490,6 +570,28 @@ mod tests {
         for item in v["items"].as_array().unwrap() {
             assert!(!item["themes"].as_array().unwrap().iter().any(|t| t["key"] == RELATED_KEY));
         }
+    }
+
+    #[test]
+    fn edits_only_touch_ai_text() {
+        assert!(set_edit("topic:1003:answer", Some("My own answer.")).is_ok());
+        let th = handle("theme", &p(&[("key", "one-god-three-persons")])).unwrap();
+        let t = th["topics"].as_array().unwrap().iter().find(|t| t["id"] == 1003).unwrap();
+        assert_eq!(t["ans"]["text"], "My own answer.");
+        assert_eq!(t["edited"]["answer"], true);
+        assert!(edits_json().contains("topic:1003:answer"));
+        assert!(set_edit("topic:1003:answer", None).is_ok());
+        assert!(!edits_json().contains("topic:1003:answer"));
+        // Text equal to the original restores it.
+        let orig = original("question:505:synthesis").unwrap();
+        set_edit("question:505:synthesis", Some(&orig)).unwrap();
+        assert!(!edits_json().contains("question:505"));
+        // Bible text, quotations, books and unknown items have no key.
+        for bad in ["verse:John 1:1:text", "topic:1003:quote", "book:augustine:text", "topic:999999:answer",
+                    "question:505:answer:99", "theme:../x:desc", "topic:1003:answer:extra"] {
+            assert!(set_edit(bad, Some("x")).is_err(), "{bad} should be refused");
+        }
+        assert!(set_edit("topic:1003:cmp", Some("  ")).is_err());
     }
 
     #[test]

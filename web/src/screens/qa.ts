@@ -1,4 +1,5 @@
 import { api } from '../api';
+import { editable, editingOn, wireEditing } from '../edit';
 import { debounce, esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Item { id: number; question: string; cat: string; theme: string; topic: string; writers: string[] }
@@ -7,6 +8,8 @@ interface Result {
   themes: string[]; cats: string[]; writers: { id: number; name: string }[];
 }
 interface Detail {
+  question: string;
+  edited?: { text: boolean; synthesis: boolean; answers: boolean[] };
   synthesis: string;
   answers: { author: string; work: string; place: string; answer: string; quote: string; scripture: string[]; workId: string }[];
 }
@@ -42,15 +45,17 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     const writers = (x.writers.length === 1 ? 'Answered by ' : `${x.writers.length} writers: `) + x.writers.join(', ');
     let body = '';
     if (isOpen && detail) {
-      const answers = detail.answers.map((a) => `<div class="answer">
+      const d = detail;
+      const answers = d.answers.map((a, n) => `<div class="answer">
           <div class="row" style="gap: 4px 10px; align-items: baseline"><b>${esc(a.author)}</b>
             <a href="${href('reader', { work: a.workId, quote: a.quote })}" style="font-size: 14px; font-weight: 500">${esc(a.place ? `${a.work} · ${a.place}` : a.work)}</a></div>
-          <p style="font-size: 15px; color: var(--ink-2)">${esc(a.answer)}</p>
+          ${editable(`question:${x.id}:answer:${n}`, `<p style="font-size: 15px; color: var(--ink-2)">${esc(a.answer)}</p>`, { text: a.answer, edited: d.edited?.answers[n], label: `${a.author}’s answer` })}
           <blockquote class="quote">“${esc(a.quote)}”</blockquote>
           <div class="row">${a.scripture.map((r) => `<a class="chip" href="${href('reference', { exact: r })}">${esc(r)}</a>`).join('')}</div>
         </div>`).join('');
       body = `<div class="qa-body">
-        ${detail.synthesis ? `<div class="soft"><span class="small-caps">Across the sources</span><p style="font-size: 15px">${esc(detail.synthesis)}</p></div>` : ''}
+        ${editingOn() ? editable(`question:${x.id}:text`, `<span class="small-caps">Question wording</span><p class="q" style="font-family: var(--display); font-size: 19px">${esc(d.question)}</p>`, { text: d.question, edited: d.edited?.text, label: 'question wording' }) : ''}
+        ${d.synthesis ? `<div class="soft"><span class="small-caps">Across the sources</span>${editable(`question:${x.id}:synthesis`, `<p style="font-size: 15px">${esc(d.synthesis)}</p>`, { text: d.synthesis, edited: d.edited?.synthesis, label: 'summary across the sources' })}</div>` : ''}
         ${answers}
         <div class="row"><a class="chip dark" href="${href('topics', { title: x.topic })}">Topic: ${esc(x.topic)}</a></div>
       </div>`;
@@ -88,6 +93,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     input.focus();
     input.setSelectionRange(input.value.length, input.value.length);
   }
+  wireEditing(root, () => void renderQA(root, params));
   root.querySelector<HTMLInputElement>('#qa-q')!.addEventListener('input', debounce((e: Event) => set({ q: (e.target as HTMLInputElement).value })));
   for (const k of ['theme', 'writer', 'cat', 'sort'] as const) {
     root.querySelector<HTMLSelectElement>(`#qa-${k}`)!.addEventListener('change', (e) => set({ [k]: (e.target as HTMLSelectElement).value }));

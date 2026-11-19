@@ -29,6 +29,23 @@ async function call(route: string, params: Record<string, string>): Promise<unkn
   return data;
 }
 
+/** Forget fetched data, e.g. after an edit changes it. */
+export function clearCache(): void {
+  cache.clear();
+}
+
+/** Save one edit to the local dev server (edit mode only). `value: null` restores the original. */
+export async function saveEdit(key: string, value: string | null): Promise<void> {
+  const res = await fetch('/api/edit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ key, value }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || data.error) throw new Error(data.error || `The server answered ${res.status}.`);
+  clearCache();
+}
+
 /** Fetch one route; identical requests are made once and shared. */
 export function api<T>(route: string, params: Params = {}): Promise<T> {
   const p = clean(params);

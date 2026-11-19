@@ -50,6 +50,17 @@ npx vercel --prod
 
 API responses are cached at the edge for a day (`vercel.json` headers), since the data only changes when you redeploy.
 
+## Editing the AI-written text (local only)
+
+1. Build the site and run the local server from the repo root: `cd web && npm run build && cd ..`, then `cargo run -p dev-server --release -- web/dist`.
+2. Open http://localhost:3001. The rail shows **Edit mode: on** (click to hide the pencils while you read).
+3. On Topics and Q&A, every AI-written block has an **Edit** button: topic answers, "What earlier Christian writers thought", theme descriptions, question wording, "Across the sources" and each writer's answer summary. Save, Cancel (Esc), Save with Ctrl+Enter, or **Restore original**.
+4. Edits are written to `data/edits.json` at once. Review them with `git diff data/edits.json`, commit, and deploy: the Rust core compiles the edits in, so the published site shows your text.
+
+Bible verses, quotations from the books and the books themselves have no edit key, and the server refuses any key that is not an AI-written field. The deployed Vercel function and the desktop app have no save route, so they are read-only. The save endpoint only accepts requests from pages on this computer.
+
+Edits live apart from the generated files, so regenerating the answers keeps them; if the generated text changes, compare it with your edit before deploying.
+
 ## Changing the data
 
 1. Rebuild the corpus outputs if needed (`scripts/…`, see `corpus/README.md`).

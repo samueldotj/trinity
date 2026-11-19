@@ -245,6 +245,25 @@ p { margin: 0; }
 .tone-dark .reader-aside .card { background: #141A2E; color: var(--on-night); }
 .tone-dark .para .pn { color: #7D849E; }
 
+/* ---------- edit mode (local dev server only) ---------- */
+.edit-switch { min-height: 44px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0; padding: 6px 12px; border-radius: 10px; border: 1px dashed #F0B37E; background: transparent; color: #FFD9B8; font-weight: 600; text-align: left; }
+.edit-switch[aria-pressed="true"] { background: #F0B37E; color: var(--night); border-style: solid; }
+.edit-switch small { font-size: 11px; font-weight: 500; opacity: .8; }
+.editable { position: relative; display: flex; flex-direction: column; gap: 8px; margin: -8px -10px; padding: 8px 10px; border-radius: 12px; outline: 1px dashed transparent; transition: outline-color .15s; }
+.editable:hover, .editable:focus-within { outline-color: #E2A06A; }
+.editable.is-edited { background: #FFF6EC; }
+.edit-tools { display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+.ai-tag, .edited-tag { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.edited-tag { color: #9A4A12; }
+.edit-btn { min-height: 32px; display: inline-flex; align-items: center; gap: 6px; padding: 0 12px; border-radius: 999px; border: 1px solid #E2A06A; background: #FFFFFF; color: #8A3F0E; font-size: 13px; font-weight: 600; }
+.editable.editing { outline: 2px solid #E2A06A; background: #FFFFFF; }
+.edit-form { display: flex; flex-direction: column; gap: 10px; }
+.edit-form textarea { width: 100%; min-height: 120px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--control); font-family: var(--read); font-size: 18px; line-height: 1.55; color: var(--ink); resize: vertical; }
+.edit-form .btn { min-height: 42px; }
+.edit-status { font-size: 13px; color: #9B2C2C; }
+.card.dark .editable.is-edited { background: rgba(255, 246, 236, .08); }
+.card.dark .ai-tag { color: var(--on-night-muted); }
+
 /* ---------- small screens: the rail becomes a top bar ---------- */
 @media (max-width: 900px) {
   .shell { flex-direction: column; }

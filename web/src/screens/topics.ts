@@ -1,10 +1,15 @@
 import { api } from '../api';
+import { editable, wireEditing } from '../edit';
 import { esc, failure, href, icon, loading } from '../util';
 
 interface ThemeSummary { key: string; title: string; short: string; desc: string; n: number; q: number }
 interface Ref { author: string; work: string; workId: string; place: string; quote: string }
-interface Topic { id: number; title: string; q: number; cmp: string; refs: Ref[]; ans?: { text: string; scripture: string[] } }
-interface Theme { key: string; title: string; desc: string; topics: Topic[] }
+interface Topic {
+  id: number; title: string; q: number; cmp: string; refs: Ref[];
+  ans?: { text: string; scripture: string[] };
+  edited?: { answer: boolean; cmp: boolean };
+}
+interface Theme { key: string; title: string; desc: string; topics: Topic[]; edited?: { desc: boolean } }
 interface Teachings { teachings: { n: number; short: string; topic: { theme: string } }[] }
 
 const DEFAULT_THEME = 'one-god-three-persons';
@@ -48,10 +53,10 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
         <span class="who"><b>${esc(r.author)}</b><span>${esc(r.place ? `${r.work} · ${r.place}` : r.work)}</span></span>
         <span class="quote">“${esc(r.quote)}”</span></a>`).join('');
     const body = open ? `<div class="topic-body">
-        ${tp.ans ? `<p class="read-text">${esc(tp.ans.text)}</p><div class="row">${verses}</div>` : ''}
+        ${tp.ans ? editable(`topic:${tp.id}:answer`, `<p class="read-text">${esc(tp.ans.text)}</p>`, { text: tp.ans.text, edited: tp.edited?.answer, label: 'answer' }) + `<div class="row">${verses}</div>` : ''}
         <div class="soft">
           <span class="small-caps">What earlier Christian writers thought</span>
-          <p style="font-size: 15px; color: var(--ink-2)">${esc(tp.cmp)}</p>
+          ${editable(`topic:${tp.id}:cmp`, `<p style="font-size: 15px; color: var(--ink-2)">${esc(tp.cmp)}</p>`, { text: tp.cmp, edited: tp.edited?.cmp, label: 'summary of the earlier writers' })}
           ${refs}
           <a href="${href('qa', { topic: tp.title })}" style="font-weight: 600">${tp.q} questions answered by the writers →</a>
         </div>
@@ -82,7 +87,7 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
         <div class="card dark theme-panel">
           <span class="small-caps">Theme</span>
           <h2>${esc(theme.title)}</h2>
-          <p>${esc(theme.desc)}</p>
+          ${editable(`theme:${key}:desc`, `<p>${esc(theme.desc)}</p>`, { text: theme.desc, edited: theme.edited?.desc, label: 'theme description' })}
           <div class="stats"><span><b>${cur.n}</b>topics</span><span><b>${cur.q}</b>questions</span></div>
         </div>
         ${start ? `<a class="card start-card" href="${href('explanations', { t: start.n })}"><span class="small-caps">Start with the teaching</span><span>${start.n} · ${esc(start.short)}</span><span>Open in Explanations →</span></a>` : ''}
@@ -101,6 +106,7 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
     root.querySelector<HTMLElement>('#topic-none')!.hidden = shown > 0;
   };
   applyFilter();
+  wireEditing(root, () => void renderTopics(root, params));
   root.querySelector<HTMLInputElement>('#topic-filter')!.addEventListener('input', (e) => {
     filter = (e.target as HTMLInputElement).value;
     applyFilter();
