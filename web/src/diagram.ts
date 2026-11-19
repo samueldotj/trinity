@@ -106,7 +106,7 @@ export function draw(n: number, fallbackNotes: string[]): any {
   const RLABEL = { eternal: 'no beginning · no end', spirit: 'no body · no parts', unchanging: 'does not change', invisible: 'cannot be seen', everywhere: 'not limited by space', single: 'one, undivided' };
   const notes = Object.assign({ F: fallbackNotes[0] || '', S: fallbackNotes[1] || '', P: fallbackNotes[2] || '', G: fallbackNotes[3] || '' }, sp.n || {});
   if (!sp.n && sp.spk) { notes.F = notes.S = notes.P = ''; }
-  const sonBg = sp.split ? 'linear-gradient(90deg, #FBEDE3 50%, #FFFFFF 50%)' : '#FBEDE3';
+  const sonBg = sp.split ? 'linear-gradient(90deg, #C2581B 50%, #7E3A10 50%)' : '#C2581B';
   const gHollow = sp.hollow;
   const alt = 'Diagram: ' + sp.cap;
   return {
@@ -114,10 +114,10 @@ export function draw(n: number, fallbackNotes: string[]): any {
     rings: (RINGS[sp.ring] || []).map(([r, css]) => ({ style: ringBase(r, css) })),
     hasRingLabel: !!sp.ring, ringLabel: RLABEL[sp.ring] || '',
     ringLabelStyle: 'position: absolute; z-index: 3; left: 240px; top: 2px; transform: translateX(-50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: 12px; font-weight: 600;',
-    nF: node('F', '#EAF0FA', '#2E5AAC', '#1F3F7A'),
-    nS: node('S', sonBg, '#B5561C', '#7E3A10'),
-    nP: node('P', '#E3F2EF', '#1D7366', '#11514A'),
-    nG: node('G', gHollow ? '#FFFFFF' : '#1B1E27', '#1B1E27', gHollow ? '#1B1E27' : '#FFFFFF'),
+    nF: node('F', '#2E5AAC', '#2E5AAC', '#FFFFFF'),
+    nS: node('S', sonBg, '#C2581B', '#FFFFFF'),
+    nP: node('P', '#157A6E', '#157A6E', '#FFFFFF'),
+    nG: node('G', gHollow ? '#FFFFFF' : '#12172B', '#12172B', gHollow ? '#12172B' : '#FFFFFF'),
     tF: notes.F, tS: sp.split && !sp.n ? 'God | man' : (sp.split ? notes.S + ' · God | man' : notes.S), tP: notes.P, tG: notes.G,
     hasBox: !!sp.box, box: sp.box || '',
     boxStyle: 'position: absolute; z-index: 2; left: 130px; top: 440px; width: 220px; height: 52px; box-sizing: border-box; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10px; background: #F1EEE8; border: 2px solid #9AA0AD; color: #1B1E27; font-size: 15px; font-weight: 600;'

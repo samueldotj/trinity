@@ -24,7 +24,8 @@ const BOOKS: [string, string][] = [
   ['warfield-biblical-doctrine-trinity', 'Warfield — Biblical Doctrine of the Trinity'],
 ];
 
-const prefs = { size: 20, tone: 'light' };
+const prefs = { size: 21, tone: 'light' };
+let tocOpen = false;
 try {
   Object.assign(prefs, JSON.parse(localStorage.getItem('reader-prefs') || '{}'));
 } catch { /* private mode: defaults */ }
@@ -73,51 +74,56 @@ export async function renderReader(root: HTMLElement, params: URLSearchParams): 
   }
 
   const contents = toc.toc.map((s, i) => `<button type="button" data-sec="${i}" class="${s.r === 'editorial' ? 'ed' : ''}" aria-current="${i === sec}" style="padding-left: ${10 + Math.max(0, (s.d || 1) - 1) * 12}px">${esc(short(s.t || `Section ${i + 1}`, 90))}</button>`).join('');
-  const paras = section.p.map((t, i) => `<div class="para${i === focus ? ' focus' : ''}" id="para-${i}"><span class="pn">¶${i + 1}</span><p>${paragraph(t, i === focus ? mark : '')}</p></div>`).join('');
-  const notes = section.n.length ? `<footer class="notes"><span class="small-caps">Notes</span>${section.n.map(([n, t]) => `<p id="fn-${esc(n)}"><strong>${esc(n)}</strong> ${esc(t)}</p>`).join('')}</footer>` : '';
-  const about = [toc.translator ? `Translated by ${toc.translator}.` : '', toc.edition ? `${toc.edition}.` : '', 'Public domain.'].filter(Boolean).join(' ');
+  const paras = section.p.map((t, i) => `<div class="para${i === focus ? ' focus' : ''}" id="para-${i}"><span class="pn">${i + 1}</span><p>${paragraph(t, i === focus ? mark : '')}</p></div>`).join('');
+  const notes = section.n.map(([n, t]) => `<p id="fn-${esc(n)}"><strong>${esc(n)}</strong> ${esc(t)}</p>`).join('');
+  const about = [toc.translator ? `Translated by ${toc.translator}` : '', toc.edition || '', 'Public domain'].filter(Boolean).join(' · ');
   const goSec = (i: number) => navigate('reader', { work, sec: i }, true);
+  const pct = Math.round(((sec + 1) / toc.toc.length) * 100);
+  const canGoBack = history.length > 1;
 
-  root.innerHTML = `<div class="reader">
-    <div class="toolbar"><div class="bar">
-      <div class="row" style="gap: 10px 16px">
-        <a class="btn" href="${href('writings')}" style="border: 0; padding: 0">${icon.left}All early writings</a>
-        <label class="field" style="flex-direction: row; align-items: center; flex: 0 1 auto">Book
-          <select id="rd-book">${BOOKS.map(([id, label]) => `<option value="${id}"${id === work ? ' selected' : ''}>${esc(label)}</option>`).join('')}</select></label>
-      </div>
-      <div class="row" style="gap: 16px">
-        <div class="row" role="group" aria-label="Text size"><span class="small-caps">Text</span>
-          <button type="button" class="btn" data-size="-2" aria-label="Smaller text">A−</button>
-          <button type="button" class="btn" data-size="2" aria-label="Larger text">A+</button></div>
-        <div class="row" role="group" aria-label="Page tone"><span class="small-caps">Page</span>
-          ${['light', 'sepia', 'dark'].map((t) => `<button type="button" class="pill" data-tone="${t}" aria-pressed="${prefs.tone === t}">${t[0].toUpperCase() + t.slice(1)}</button>`).join('')}</div>
-      </div>
-    </div></div>
-    <div class="page" style="flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 28px">
-      <nav class="side" aria-label="Contents" style="display: flex; flex-direction: column; gap: 14px">
-        <details class="card" open><summary class="small-caps" style="min-height: 40px; display: flex; align-items: center; padding: 0 10px; cursor: pointer">Contents · ${toc.toc.length} sections</summary><div class="toc">${contents}</div></details>
-        <div class="card" style="padding: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted)">
-          <b style="color: var(--ink)">About this edition</b><span>${esc(about)}</span>
-          ${toc.source ? `<a href="${esc(toc.source)}" target="_blank" rel="noopener">Source text</a>` : ''}
+  root.innerHTML = `<div class="reader tone-${esc(prefs.tone)}">
+    <header class="reader-bar">
+      <div class="inner">
+        <div class="row" style="gap: 10px 20px">
+          <a class="back" href="${href('writings')}" id="rd-back">${icon.left}${canGoBack ? 'Back' : 'All early writings'}</a>
+          <span class="reader-title"><b>${esc(toc.title)}</b><small>${esc(toc.author)} · ${esc(toc.date)}</small></span>
         </div>
-      </nav>
-      <article class="reader-page tone-${esc(prefs.tone)}" style="font-size: ${prefs.size}px">
+        <div class="row" style="gap: 8px">
+          <button type="button" class="bar-btn" id="rd-toc" aria-expanded="${tocOpen}" aria-controls="rd-toc-panel"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14 M3 10h14 M3 15h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Contents</button>
+          <label><span class="sr-only">Book</span><select id="rd-book">${BOOKS.map(([id, label]) => `<option value="${id}"${id === work ? ' selected' : ''}>${esc(label)}</option>`).join('')}</select></label>
+          <button type="button" class="bar-btn circle" data-size="-2" aria-label="Smaller text" style="font-size: 14px">A</button>
+          <button type="button" class="bar-btn circle" data-size="2" aria-label="Larger text" style="font-size: 19px">A</button>
+          <span class="row" role="group" aria-label="Page tone" style="gap: 6px; padding-left: 4px">
+            <button type="button" class="swatch" data-tone="light" aria-label="Light page" aria-pressed="${prefs.tone === 'light'}" style="background: #FBFAF7"></button>
+            <button type="button" class="swatch" data-tone="sepia" aria-label="Sepia page" aria-pressed="${prefs.tone === 'sepia'}" style="background: #EFE3CC"></button>
+            <button type="button" class="swatch" data-tone="dark" aria-label="Dark page" aria-pressed="${prefs.tone === 'dark'}" style="background: #0B0F1C"></button>
+          </span>
+        </div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Position in book" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><div style="width: ${pct}%"></div></div>
+    </header>
+    <nav class="toc-panel" id="rd-toc-panel" aria-label="Contents"${tocOpen ? '' : ' hidden'}><div class="toc">${contents}</div></nav>
+    <main class="reader-main">
+      <article class="reader-page" style="font-size: ${prefs.size}px">
         <header>
-          <span class="sans small-caps" style="color: inherit; opacity: .75">${esc(toc.author)} · ${esc(toc.date)}</span>
-          <span style="font-size: 18px; font-style: italic; opacity: .8">${esc(toc.title)}</span>
-          ${(section.c || []).map((c) => `<span class="sans" style="font-size: 13px; opacity: .7">${esc(short(c, 140))}</span>`).join('')}
+          ${(section.c || []).map((c) => `<span class="sans small-caps" style="color: inherit; opacity: .75">${esc(short(c, 140))}</span>`).join('')}
           <h1>${esc(section.t)}</h1>
+          <span class="sans" style="font-size: 14px; opacity: .75">${esc(about)}</span>
           ${section.r === 'editorial' ? `<span class="sans chip small" style="align-self: flex-start">Editor’s or translator’s introduction</span>` : ''}
         </header>
-        ${focus !== null ? `<div class="banner sans" style="background: var(--accent)"><span>The quoted passage is highlighted in ¶${focus + 1}.</span><a href="#para-${focus}" data-jump="${focus}" style="color: #fff; font-weight: 600">Go to it</a></div>` : ''}
+        ${focus !== null ? `<div class="focus-banner"><span>The quoted passage is highlighted in paragraph ${focus + 1}.</span><a href="#para-${focus}" data-jump="${focus}">Go to it</a></div>` : ''}
         ${paras}
-        ${notes}
-        <div class="row sans" style="justify-content: space-between">
-          ${sec > 0 ? `<button type="button" class="btn" data-sec="${sec - 1}">← ${esc(short(toc.toc[sec - 1].t || '', 48))}</button>` : '<span></span>'}
-          ${sec < toc.toc.length - 1 ? `<button type="button" class="btn primary" data-sec="${sec + 1}">${esc(short(toc.toc[sec + 1].t || '', 48))} →</button>` : ''}
-        </div>
+        <nav class="row sans" aria-label="Sections" style="justify-content: space-between; padding-top: 12px">
+          ${sec > 0 ? `<button type="button" class="btn" data-sec="${sec - 1}">← ${esc(short(toc.toc[sec - 1].t || '', 40))}</button>` : '<span></span>'}
+          ${sec < toc.toc.length - 1 ? `<button type="button" class="btn primary" data-sec="${sec + 1}">${esc(short(toc.toc[sec + 1].t || '', 40))} →</button>` : ''}
+        </nav>
       </article>
-    </div>
+      <aside class="reader-aside" aria-label="Notes and edition">
+        ${notes ? `<div class="card"><span class="small-caps">Notes</span>${notes}</div>` : ''}
+        <div class="card"><span class="small-caps">Your place</span><span>Section ${sec + 1} of ${toc.toc.length}</span>
+          ${toc.source ? `<a href="${esc(toc.source)}" target="_blank" rel="noopener">Source text</a>` : ''}</div>
+      </aside>
+    </main>
   </div>`;
 
   // In-page anchors (footnotes, "Go to it") must not change the route.
@@ -126,17 +132,26 @@ export async function renderReader(root: HTMLElement, params: URLSearchParams): 
     const id = a.dataset.fn ? `fn-${a.dataset.fn}` : `para-${a.dataset.jump}`;
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }));
-  root.querySelectorAll<HTMLButtonElement>('[data-sec]').forEach((b) => b.addEventListener('click', () => goSec(Number(b.dataset.sec))));
+  root.querySelector<HTMLAnchorElement>('#rd-back')!.addEventListener('click', (e) => {
+    if (canGoBack) { e.preventDefault(); history.back(); }
+  });
+  root.querySelector('#rd-toc')!.addEventListener('click', () => {
+    tocOpen = !tocOpen;
+    root.querySelector('#rd-toc')!.setAttribute('aria-expanded', String(tocOpen));
+    root.querySelector<HTMLElement>('#rd-toc-panel')!.hidden = !tocOpen;
+  });
+  root.querySelectorAll<HTMLButtonElement>('[data-sec]').forEach((b) => b.addEventListener('click', () => { tocOpen = false; goSec(Number(b.dataset.sec)); }));
   root.querySelector<HTMLSelectElement>('#rd-book')!.addEventListener('change', (e) => navigate('reader', { work: (e.target as HTMLSelectElement).value }));
   root.querySelectorAll<HTMLButtonElement>('[data-size]').forEach((b) => b.addEventListener('click', () => {
     prefs.size = Math.min(26, Math.max(16, prefs.size + Number(b.dataset.size)));
     savePrefs();
-    void renderReader(root, params);
+    root.querySelector<HTMLElement>('.reader-page')!.style.fontSize = `${prefs.size}px`;
   }));
   root.querySelectorAll<HTMLButtonElement>('[data-tone]').forEach((b) => b.addEventListener('click', () => {
     prefs.tone = b.dataset.tone!;
     savePrefs();
-    void renderReader(root, params);
+    root.querySelector<HTMLElement>('.reader')!.className = `reader tone-${prefs.tone}`;
+    root.querySelectorAll<HTMLElement>('[data-tone]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.tone === prefs.tone)));
   }));
   if (focus !== null) document.getElementById(`para-${focus}`)?.scrollIntoView({ block: 'center' });
 }

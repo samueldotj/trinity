@@ -9,54 +9,52 @@ import { renderReader } from './screens/reader';
 
 export type Screen = (root: HTMLElement, params: URLSearchParams) => void | Promise<void>;
 
-const SCREENS: Record<string, { title: string; render: Screen; nav?: string }> = {
+const ICONS: Record<string, string> = {
+  explanations: '<path d="M10 3 3 17h14L10 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>',
+  reference: '<path d="M4 3h9l3 3v11H4V3Z M7 8h6 M7 11h6 M7 14h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+  topics: '<path d="M3 5h14 M3 10h14 M3 15h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',
+  qa: '<path d="M4 4h12v9H9l-4 3v-3H4V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+};
+
+const SCREENS: Record<string, { title: string; render: Screen; nav?: string; reading?: boolean }> = {
   explanations: { title: 'Explanations', render: renderExplanations, nav: 'Explanations' },
   reference: { title: 'Reference', render: renderReference, nav: 'Reference' },
   topics: { title: 'Topics', render: renderTopics, nav: 'Topics' },
   qa: { title: 'Q&A', render: renderQA, nav: 'Q&A' },
   writings: { title: 'Early Writings', render: renderWritings },
-  reader: { title: 'Reader', render: renderReader },
+  reader: { title: 'Reader', render: renderReader, reading: true },
 };
 
-const LOGO = `<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="9" r="6" fill="none" stroke="#2E5AAC" stroke-width="2"/><circle cx="9" cy="23" r="6" fill="none" stroke="#B5561C" stroke-width="2"/><circle cx="25" cy="23" r="6" fill="none" stroke="#1D7366" stroke-width="2"/></svg>`;
+const LOGO = `<svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="11" r="7" fill="#2E5AAC"/><circle cx="10.5" cy="24" r="7" fill="#C2581B" fill-opacity="0.92"/><circle cx="25.5" cy="24" r="7" fill="#157A6E" fill-opacity="0.92"/></svg>`;
 
-function header(current: string): string {
+function rail(current: string): string {
   const links = Object.entries(SCREENS)
     .filter(([, s]) => s.nav)
-    .map(([id, s]) => `<a href="#/${id}"${id === current ? ' aria-current="page"' : ''}>${esc(s.nav)}</a>`)
+    .map(([id, s]) => `<a href="#/${id}"${id === current ? ' aria-current="page"' : ''}><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true">${ICONS[id]}</svg>${esc(s.nav)}</a>`)
     .join('');
-  return `<div class="bar">
-    <a class="brand" href="#/explanations">${LOGO}<span class="brand-name"><b>Trinity Explained</b><small>through the classical writers</small></span></a>
-    <nav class="nav" aria-label="Main">${links}</nav>
-  </div>`;
+  return `<a class="brand" href="#/explanations">${LOGO}<b>Trinity<br> Explained</b></a>
+    <nav class="rail-nav" aria-label="Main">${links}</nav>
+    <div class="rail-foot">
+      <span class="tri" aria-hidden="true"></span>
+      <a href="#/writings"${current === 'writings' ? ' aria-current="page"' : ''}>Early Writings →</a>
+      <small>Scripture: Berean Standard Bible, public domain. Classical texts: public-domain editions.</small>
+    </div>`;
 }
-
-function footer(): string {
-  return `<div class="bar">
-    <span class="brand-name"><b>Trinity Explained</b></span>
-    <nav class="row" aria-label="Footer"><a href="#/writings">Early Writings</a></nav>
-    <span class="credits">Scripture: Berean Standard Bible (BSB), public domain. Classical texts: public-domain editions.</span>
-  </div>`;
-}
-
-let renderId = 0;
 
 function route(): void {
   const raw = location.hash.replace(/^#\/?/, '');
   const [name, query = ''] = raw.split('?');
   const id = name in SCREENS ? name : 'explanations';
   const screen = SCREENS[id];
-  document.getElementById('site-header')!.innerHTML = header(id);
+  document.getElementById('rail')!.innerHTML = rail(id);
+  document.getElementById('shell')!.classList.toggle('reading', !!screen.reading);
   document.title = `${screen.title} — Trinity Explained`;
   const app = document.getElementById('app')!;
-  const mine = ++renderId;
-  app.dataset.render = String(mine);
   const sameScreen = app.dataset.screen === id;
   app.dataset.screen = id;
   void screen.render(app, new URLSearchParams(query));
   if (!sameScreen) window.scrollTo({ top: 0 });
 }
 
-document.getElementById('site-footer')!.innerHTML = footer();
 window.addEventListener('hashchange', route);
 route();
