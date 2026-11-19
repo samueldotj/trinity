@@ -94,14 +94,16 @@ export function draw(n: number, fallbackNotes: string[], caption = ''): any {
   [['F', 'S'], ['F', 'P'], ['S', 'P']].forEach(([a, b]) => { if (!has(a, b)) seg(a, b, '', '', 'faint'); });
   if (sp.spk && !sp.hideG) sp.spk[0].split('').forEach((k) => seg('G', k, sp.spk[1], '', 'is'));
   list.forEach((e) => seg(e[0], e[1], e[2], e[3], e[4]));
-  const ringBase = (r, extra) => 'position: absolute; z-index: 0; box-sizing: border-box; left: ' + (240 - r) + 'px; top: ' + (228 - r) + 'px; width: ' + 2 * r + 'px; height: ' + 2 * r + 'px; border-radius: 50%; ' + extra;
+  // Single rings are centred on the middle of the triangle (y 244) and sized so their inside edge
+  // clears every Person's circle by about 12px; the "everywhere" ripples stay centred on God.
+  const ringBase = (r, extra, cy = 244) => 'position: absolute; z-index: 0; box-sizing: border-box; left: ' + (240 - r) + 'px; top: ' + (cy - r) + 'px; width: ' + 2 * r + 'px; height: ' + 2 * r + 'px; border-radius: 50%; ' + extra;
   const RINGS = {
-    eternal: [[226, 'border: 4px solid #33449A;']],
-    spirit: [[226, 'border: 3px dotted #33449A;']],
-    unchanging: [[226, 'border: 6px double #33449A;']],
-    invisible: [[226, 'border: 2px dashed #9AA0AD;']],
-    everywhere: [[150, 'border: 2px solid rgba(51,68,154,0.35);'], [190, 'border: 2px solid rgba(51,68,154,0.25);'], [228, 'border: 2px solid rgba(51,68,154,0.15);']],
-    single: [[226, 'border: 7px solid #1B1E27;']]
+    eternal: [[250, 'border: 4px solid #33449A;']],
+    spirit: [[250, 'border: 3px dotted #33449A;']],
+    unchanging: [[250, 'border: 6px double #33449A;']],
+    invisible: [[250, 'border: 2px dashed #9AA0AD;']],
+    everywhere: [[150, 'border: 2px solid rgba(51,68,154,0.35);', 228], [190, 'border: 2px solid rgba(51,68,154,0.25);', 228], [228, 'border: 2px solid rgba(51,68,154,0.15);', 228]],
+    single: [[250, 'border: 7px solid #1B1E27;']]
   };
   const RLABEL = { eternal: 'no beginning · no end', spirit: 'no body · no parts', unchanging: 'does not change', invisible: 'cannot be seen', everywhere: 'not limited by space', single: 'one, undivided' };
   const notes = Object.assign({ F: fallbackNotes[0] || '', S: fallbackNotes[1] || '', P: fallbackNotes[2] || '', G: fallbackNotes[3] || '' }, sp.n || {});
@@ -111,9 +113,9 @@ export function draw(n: number, fallbackNotes: string[], caption = ''): any {
   const alt = 'Diagram: ' + caption;
   return {
     alt, cap: caption, edges, labels,
-    rings: (RINGS[sp.ring] || []).map(([r, css]) => ({ style: ringBase(r, css) })),
+    rings: (RINGS[sp.ring] || []).map(([r, css, cy]) => ({ style: ringBase(r, css, cy) })),
     hasRingLabel: !!sp.ring, ringLabel: RLABEL[sp.ring] || '',
-    ringLabelStyle: 'position: absolute; z-index: 3; left: 240px; top: 2px; transform: translateX(-50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: 12px; font-weight: 600;',
+    ringLabelStyle: 'position: absolute; z-index: 3; left: 240px; top: 436px; transform: translate(-50%, -50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: 12px; font-weight: 600;',
     nF: node('F', '#2E5AAC', '#2E5AAC', '#FFFFFF'),
     nS: node('S', sonBg, '#C2581B', '#FFFFFF'),
     nP: node('P', '#157A6E', '#157A6E', '#FFFFFF'),

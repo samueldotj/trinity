@@ -71,7 +71,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         </div>
       </section>
       <figure class="card diagram-card">
-        <div class="diagram-scroll"><div class="diagram" role="img" aria-label="${esc(dg.alt)}">${diagram}</div></div>
+        <div class="diagram-scroll"><div class="diagram" role="img" aria-label="${esc(dg.alt)}"><div class="diagram-inner">${diagram}</div></div></div>
         <figcaption class="caption">${editable(`teaching:${cur.n}:caption`, esc(dg.cap), { text: cur.cap, edited: cur.edited?.caption, label: 'diagram caption' })}</figcaption>
         <div class="legend">
           <span><i style="background: #1B1E27"></i>is</span>
