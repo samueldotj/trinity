@@ -44,7 +44,7 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
   const cur = themes.find((t) => t.key === key)!;
   const start = teachings.teachings.find((t) => t.topic.theme === theme.title);
 
-  const pills = themes.map((t) => `<a class="pill" href="${href('topics', { theme: t.key })}" aria-pressed="${t.key === key}" title="${esc(t.title)}">${esc(t.short || t.title)}${t.key === key ? ` · ${t.n}` : ''}</a>`).join('');
+  const pills = themes.map((t) => `<a class="theme-link" href="${href('topics', { theme: t.key })}"${t.key === key ? ' aria-current="page"' : ''} title="${esc(t.title)}"><span>${esc(t.short || t.title)}</span><small>${t.n}</small></a>`).join('');
 
   const card = (tp: Topic) => {
     const open = toggled.has(tp.id) ? toggled.get(tp.id)! : tp.id === focus;
@@ -77,22 +77,22 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
       <label class="search"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m13.5 13.5 3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
         <span class="sr-only">Filter topics in this theme</span><input id="topic-filter" type="search" value="${esc(filter)}" placeholder="Filter ${cur.n} topics in this theme"></label>
     </div>
-    <nav class="pills" aria-label="Themes">${pills}</nav>
-    <div class="cols">
+    <div class="cols topics-cols">
+      <nav class="card theme-rail" aria-label="Themes"><span class="small-caps">Themes</span>${pills}</nav>
       <section class="content" aria-label="Topics in ${esc(theme.title)}">
-        ${theme.topics.map(card).join('')}
-        <p class="status" id="topic-none" hidden>No topics in this theme match.</p>
-      </section>
-      <aside class="side" aria-label="About this theme">
         <div class="card dark theme-panel">
           <span class="small-caps">Theme</span>
           <h2>${esc(theme.title)}</h2>
           ${editable(`theme:${key}:desc`, `<p>${esc(theme.desc)}</p>`, { text: theme.desc, edited: theme.edited?.desc, label: 'theme description' })}
           ${editingOn() ? editable(`theme:${key}:short`, `<span class="small-caps">Label in menus and on passages</span><p style="color: #fff; font-weight: 600">${esc(theme.short)}</p>`, { text: theme.short, edited: theme.edited?.short, label: 'theme label' }) : ''}
-          <div class="stats"><span><b>${cur.n}</b>topics</span><span><b>${cur.q}</b>questions</span></div>
+          <div class="theme-panel-foot">
+            <div class="stats"><span><b>${cur.n}</b>topics</span><span><b>${cur.q}</b>questions</span></div>
+            ${start ? `<a class="start-link" href="${href('explanations', { t: start.n })}">Start with teaching ${start.n} · ${esc(start.short)} →</a>` : ''}
+          </div>
         </div>
-        ${start ? `<a class="card start-card" href="${href('explanations', { t: start.n })}"><span class="small-caps">Start with the teaching</span><span>${start.n} · ${esc(start.short)}</span><span>Open in Explanations →</span></a>` : ''}
-      </aside>
+        ${theme.topics.map(card).join('')}
+        <p class="status" id="topic-none" hidden>No topics in this theme match.</p>
+      </section>
     </div>
   </div>`;
 
@@ -116,6 +116,12 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
     toggled.set(Number(b.dataset.topic), b.getAttribute('aria-expanded') !== 'true');
     void renderTopics(root, params).then(() => document.querySelector<HTMLButtonElement>(`[data-topic="${b.dataset.topic}"]`)?.focus());
   }));
-  root.querySelector('.pills [aria-pressed="true"]')?.scrollIntoView({ block: 'nearest', inline: 'center' });
+  const curLink = root.querySelector<HTMLElement>('.theme-rail [aria-current="page"]');
+  const rail = root.querySelector<HTMLElement>('.theme-rail');
+  if (curLink && rail) {
+    // Bring the current theme into view inside the list without scrolling the page.
+    if (rail.scrollHeight > rail.clientHeight) rail.scrollTop = curLink.offsetTop - rail.clientHeight / 2;
+    else rail.scrollLeft = curLink.offsetLeft - rail.clientWidth / 2;
+  }
   if (focus && !toggled.has(focus)) document.getElementById(`topic-${focus}`)?.scrollIntoView({ block: 'start' });
 }
