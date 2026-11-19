@@ -102,6 +102,57 @@ T = [
     (4, 'Nature unchanged', 'The incarnation did not change the divine nature', '', 'Heb. 13:8; Phil. 2:6–8', 1023, 'son', ['', 'unchanged', '', '']),
 ]
 
+
+# Diagram captions, one per teaching: how to read the picture (editable in the app).
+CAPTIONS = {
+    1: 'Each Person is God, and all three are the one God at the centre. There are not three Gods.',
+    2: 'God is Spirit. The dotted circle holds no body and no material parts.',
+    3: 'The unbroken circle: God has no beginning and no end.',
+    4: 'The arrow runs one way. Creation depends on God, and God depends on nothing He made.',
+    5: 'The double circle stands for a nature that does not change.',
+    6: 'The divine essence cannot be seen with physical eyes. The Son makes the Father known.',
+    7: 'The circles spread outward: God fills every place and no place contains Him.',
+    8: 'One undivided being. The Persons are not three pieces of God.',
+    9: 'Solid lines: each Person is God. Dashed lines: no Person is another. One being, three Persons.',
+    10: 'The Father is God: the line joins the Father to the one God.',
+    11: 'The Son is God: the line joins the Son to the one God.',
+    12: 'The Holy Spirit is God: the line joins the Spirit to the one God.',
+    13: 'Three distinct Persons. Every dashed line reads “is not”.',
+    14: 'The Father is not the Son.',
+    15: 'The Son is not the Holy Spirit.',
+    16: 'The Holy Spirit is not the Father.',
+    17: 'Each line carries the whole of God. No Person is a third of God.',
+    18: 'No Person came first. All three have always been.',
+    19: 'Every side is equal: none is lesser in divine nature.',
+    20: 'Three real Persons, counted one, two, three. Not one Person appearing in three ways.',
+    21: 'Arrows both ways: each Person dwells in the others.',
+    22: 'The Father has always been Father of the Son. It is not a role He took up.',
+    23: 'The arrow runs from the Father to the Son: eternally begotten, not created.',
+    24: 'The Spirit proceeds from the Father. The dashed arrow is the Western addition, “and from the Son”.',
+    25: 'Only these relations tell the Persons apart. The nature in the centre is one and the same.',
+    26: 'The Father has loved the Son from before the world began.',
+    27: 'The glory runs both ways: the Son shared it with the Father before the world existed.',
+    28: 'All three share the one will at the centre, not three wills side by side.',
+    29: 'Every work is from the Father, through the Son, in the Spirit, and it is one act of the one God.',
+    30: 'Each is God to the same degree. The Father is not a greater God.',
+    31: 'The Father sends the Son into the world.',
+    32: 'The Father and the Son send the Spirit to the Church.',
+    33: 'Whoever has seen the Son has seen the Father.',
+    34: 'The arrow runs from the Spirit to the Son: the Spirit glorifies Him.',
+    35: 'The Son speaks to the Father in prayer: one Person to another.',
+    36: 'The Father’s voice speaks to the Son, another Person.',
+    37: 'The Spirit speaks, teaches and chooses, as only a Person can.',
+    38: 'One Creator: all things come from the Father, through the Son, by the Spirit.',
+    39: 'The Father chooses, the Son redeems, the Spirit seals. One salvation.',
+    40: 'Believers are baptised into one name: of the Father, and of the Son, and of the Holy Spirit.',
+    41: 'Only the Son took on human nature.',
+    42: 'The Son took on humanity and never stopped being God.',
+    43: 'One Person, two natures: the divine and the human, united.',
+    44: 'His divine nature is eternal. His human nature was created when He became man.',
+    45: 'The Son suffered and died in His human nature. The Father did not suffer.',
+    46: 'Nothing was taken from His deity. Humanity was added.',
+}
+
 topics = {}
 for th_i, th in enumerate(json.load(open(topics_path, encoding='utf8'))):
     for t in th['topics']:
@@ -122,7 +173,7 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
         if v['missing']:
             problems.append((i + 1, v['missing']))
         del v['missing']
-    out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail, 'refs': refs,
+    out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail, 'refs': refs, 'cap': CAPTIONS[i + 1],
                 'verses': verses, 'mode': mode, 'notes': notes,
                 'topic': {'id': tid, 'title': tp['title'], 'theme': theme, 'q': tp['q'], 'cmp': first_sentence(tp['cmp'])},
                 'quote': ref and {'author': ref['author'], 'work': ref['work'], 'workId': ref['workId'],

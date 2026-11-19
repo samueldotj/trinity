@@ -1,11 +1,14 @@
 import { api } from '../api';
 import { draw } from '../diagram';
+import { editable, wireEditing } from '../edit';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
   n: number; g: number; short: string; title: string; detail: string; refs: string;
   verses: { label: string; text: string; ref: string }[];
   notes: string[];
+  cap: string;
+  edited?: { caption: boolean };
   topic: { id: number; title: string; theme: string; q: number };
 }
 interface Data { groups: { title: string; note: string }[]; teachings: Teaching[] }
@@ -33,7 +36,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     T.filter((t) => t.g === gi).map((t) => `<option value="${t.n}"${t.n === cur.n ? ' selected' : ''}>${t.n} · ${esc(t.short)}</option>`).join('')
   }</optgroup>`).join('');
 
-  const dg = draw(cur.n, cur.notes);
+  const dg = draw(cur.n, cur.notes, cur.cap);
   const diagram = `
     ${dg.rings.map((r: { style: string }) => `<div style="${r.style}"></div>`).join('')}
     ${dg.edges.map((e: { line: string; head: string; tail: string }) => `<div style="${e.line}"><div style="${e.head}"></div><div style="${e.tail}"></div></div>`).join('')}
@@ -69,7 +72,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       </section>
       <figure class="card diagram-card">
         <div class="diagram-scroll"><div class="diagram" role="img" aria-label="${esc(dg.alt)}">${diagram}</div></div>
-        <figcaption class="caption">${esc(dg.cap)}</figcaption>
+        <figcaption class="caption">${editable(`teaching:${cur.n}:caption`, esc(dg.cap), { text: cur.cap, edited: cur.edited?.caption, label: 'diagram caption' })}</figcaption>
         <div class="legend">
           <span><i style="background: #1B1E27"></i>is</span>
           <span><i style="height: 0; border-top: 3px dashed #6B7080"></i>is not</span>
@@ -92,6 +95,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     </section>
   </div>`;
 
+  wireEditing(root, () => void renderExplanations(root, params));
   root.querySelector<HTMLSelectElement>('#jump')!.addEventListener('change', (e) =>
     navigate('explanations', { t: (e.target as HTMLSelectElement).value }, true));
 }

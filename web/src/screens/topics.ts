@@ -1,5 +1,5 @@
 import { api } from '../api';
-import { editable, wireEditing } from '../edit';
+import { editable, editingOn, wireEditing } from '../edit';
 import { esc, failure, href, icon, loading } from '../util';
 
 interface ThemeSummary { key: string; title: string; short: string; desc: string; n: number; q: number }
@@ -9,7 +9,7 @@ interface Topic {
   ans?: { text: string; scripture: string[] };
   edited?: { answer: boolean; cmp: boolean };
 }
-interface Theme { key: string; title: string; desc: string; topics: Topic[]; edited?: { desc: boolean } }
+interface Theme { key: string; title: string; short: string; desc: string; topics: Topic[]; edited?: { desc: boolean; short: boolean } }
 interface Teachings { teachings: { n: number; short: string; topic: { theme: string } }[] }
 
 const DEFAULT_THEME = 'one-god-three-persons';
@@ -88,6 +88,7 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
           <span class="small-caps">Theme</span>
           <h2>${esc(theme.title)}</h2>
           ${editable(`theme:${key}:desc`, `<p>${esc(theme.desc)}</p>`, { text: theme.desc, edited: theme.edited?.desc, label: 'theme description' })}
+          ${editingOn() ? editable(`theme:${key}:short`, `<span class="small-caps">Label in menus and on passages</span><p style="color: #fff; font-weight: 600">${esc(theme.short)}</p>`, { text: theme.short, edited: theme.edited?.short, label: 'theme label' }) : ''}
           <div class="stats"><span><b>${cur.n}</b>topics</span><span><b>${cur.q}</b>questions</span></div>
         </div>
         ${start ? `<a class="card start-card" href="${href('explanations', { t: start.n })}"><span class="small-caps">Start with the teaching</span><span>${start.n} · ${esc(start.short)}</span><span>Open in Explanations →</span></a>` : ''}

@@ -17,7 +17,7 @@ pub type Params = HashMap<String, String>;
 /// Answer one API request. `route` names the query; `params` are its arguments.
 pub fn handle(route: &str, params: &Params) -> Result<Value, String> {
     match route {
-        "teachings" => Ok(teachings().clone()),
+        "teachings" => Ok(teachings_with_edits()),
         "themes" => Ok(themes()),
         "theme" => theme(arg(params, "key")?),
         "topic" => find_topic(params),
@@ -123,8 +123,13 @@ const SHORT_LABELS: &[(&str, &str)] = &[
 ];
 const RELATED_KEY: &str = "related-questions";
 
-fn short_label(key: &str) -> &'static str {
-    SHORT_LABELS.iter().find(|(k, _)| *k == key).map(|(_, v)| *v).unwrap_or("")
+fn builtin_label(key: &str) -> Option<&'static str> {
+    SHORT_LABELS.iter().find(|(k, _)| *k == key).map(|(_, v)| *v)
+}
+
+/// The label to show for a theme: your edit if you made one, else the built-in label.
+fn short_label(key: &str) -> String {
+    edits::get(&format!("theme:{key}:short")).unwrap_or_else(|| builtin_label(key).unwrap_or("").to_string())
 }
 
 fn theme_list() -> &'static [Value] {
@@ -139,9 +144,10 @@ fn themes() -> Value {
         .map(|th| {
             let topics = th["topics"].as_array().map(Vec::as_slice).unwrap_or(&[]);
             let q: u64 = topics.iter().map(|t| t["q"].as_u64().unwrap_or(0)).sum();
-            let (desc, _) = overlay(format!("theme:{}:desc", s(&th["key"])), &th["desc"]);
+            let key = s(&th["key"]);
+            let (desc, _) = overlay(format!("theme:{key}:desc"), &th["desc"]);
             json!({
-                "key": th["key"], "title": th["title"], "short": short_label(s(&th["key"])),
+                "key": key, "title": th["title"], "short": short_label(key),
                 "desc": desc, "n": topics.len(), "q": q,
             })
         })
@@ -155,7 +161,7 @@ fn theme(key: &str) -> Result<Value, String> {
     out["short"] = json!(short_label(key));
     let (desc, desc_edited) = overlay(format!("theme:{key}:desc"), &th["desc"]);
     out["desc"] = desc;
-    out["edited"] = json!({ "desc": desc_edited });
+    out["edited"] = json!({ "desc": desc_edited, "short": edits::get(&format!("theme:{key}:short")).is_some() });
     for t in out["topics"].as_array_mut().into_iter().flatten() {
         let id = t["id"].as_u64().unwrap_or(0);
         let mut answer_edited = false;
@@ -380,6 +386,18 @@ fn question(id: &str) -> Result<Value, String> {
 
 // ---------- edits ----------
 
+/// The teachings, with your caption edits laid over the generated captions.
+fn teachings_with_edits() -> Value {
+    let mut out = teachings().clone();
+    for t in out["teachings"].as_array_mut().into_iter().flatten() {
+        let n = t["n"].as_u64().unwrap_or(0);
+        let (cap, edited) = overlay(format!("teaching:{n}:caption"), &t["cap"]);
+        t["cap"] = cap;
+        t["edited"] = json!({ "caption": edited });
+    }
+    out
+}
+
 /// The text to show for `key`: your edit if there is one, else the original. The flag says which.
 fn overlay(key: String, original: &Value) -> (Value, bool) {
     match edits::get(&key) {
@@ -397,6 +415,11 @@ pub fn original(key: &str) -> Option<String> {
     let k = Key::parse(key)?;
     let text = match k.field {
         Field::ThemeDesc => theme_list().iter().find(|t| s(&t["key"]) == k.item)?["desc"].clone(),
+        Field::ThemeShort => json!(builtin_label(&k.item)?),
+        Field::TeachingCaption => {
+            let n: u64 = k.item.parse().ok()?;
+            teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?["cap"].clone()
+        }
         Field::TopicAnswer => topic_by_id(k.item.parse().ok()?)?["ans"].get("text")?.clone(),
         Field::TopicCompare => topic_by_id(k.item.parse().ok()?)?["cmp"].clone(),
         Field::QuestionText => questions_data()["q"].as_array()?.iter().find(|x| x[0].to_string() == k.item)?[1].clone(),
@@ -413,6 +436,9 @@ pub fn set_edit(key: &str, value: Option<&str>) -> Result<(), String> {
     match value.map(str::trim) {
         Some("") => Err("the text cannot be empty; use Restore original instead".into()),
         Some(v) if v.chars().count() > 30_000 => Err("the text is too long".into()),
+        Some(v) if matches!(Key::parse(key).map(|k| k.field), Some(Field::ThemeShort)) && v.chars().count() > 30 => {
+            Err("a theme label must be at most 30 characters".into())
+        }
         Some(v) if v == orig.trim() => {
             edits::put(key, None);
             Ok(())
@@ -592,6 +618,20 @@ mod tests {
             assert!(set_edit(bad, Some("x")).is_err(), "{bad} should be refused");
         }
         assert!(set_edit("topic:1003:cmp", Some("  ")).is_err());
+
+        // Theme labels and diagram captions.
+        set_edit("theme:one-god-three-persons:short", Some("The One God")).unwrap();
+        let themes = handle("themes", &p(&[])).unwrap();
+        assert!(themes.as_array().unwrap().iter().any(|t| t["short"] == "The One God"));
+        assert!(set_edit("theme:one-god-three-persons:short", Some("a label that is far too long to fit")).is_err());
+        set_edit("theme:one-god-three-persons:short", None).unwrap();
+        set_edit("teaching:23:caption", Some("My caption.")).unwrap();
+        let t = handle("teachings", &p(&[])).unwrap();
+        assert_eq!(t["teachings"][22]["cap"], "My caption.");
+        assert_eq!(t["teachings"][22]["edited"]["caption"], true);
+        set_edit("teaching:23:caption", None).unwrap();
+        assert!(set_edit("teaching:99:caption", Some("x")).is_err());
+        assert!(set_edit("theme:no-such-theme:short", Some("x")).is_err());
     }
 
     #[test]

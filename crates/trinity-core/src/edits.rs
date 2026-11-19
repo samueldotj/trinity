@@ -14,6 +14,10 @@ use std::sync::{OnceLock, RwLock};
 pub enum Field {
     /// A theme's description: `theme:<key>:desc`.
     ThemeDesc,
+    /// A theme's one- or two-word label: `theme:<key>:short`.
+    ThemeShort,
+    /// The caption under a teaching's diagram: `teaching:<n>:caption`.
+    TeachingCaption,
     /// A topic's plain-language answer: `topic:<id>:answer`.
     TopicAnswer,
     /// "What earlier Christian writers thought": `topic:<id>:cmp`.
@@ -38,6 +42,8 @@ impl Key {
         let parts: Vec<&str> = key.split(':').collect();
         let field = match parts.as_slice() {
             ["theme", _, "desc"] => Field::ThemeDesc,
+            ["theme", _, "short"] => Field::ThemeShort,
+            ["teaching", _, "caption"] => Field::TeachingCaption,
             ["topic", _, "answer"] => Field::TopicAnswer,
             ["topic", _, "cmp"] => Field::TopicCompare,
             ["question", _, "text"] => Field::QuestionText,
