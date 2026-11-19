@@ -1,0 +1,9 @@
+[package]
+name = "trinity-core"
+version = "0.1.0"
+edition = "2024"
+description = "Data and queries for the Trinity Explained app, shared by the Vercel API and the Tauri desktop app"
+publish = false
+
+[dependencies]
+serde_json = "1"

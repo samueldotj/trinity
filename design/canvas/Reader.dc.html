@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Book reader — Trinity Explained</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0;background:#F6F5F1}
+a{color:#33449A}a:hover{color:#232F6E}
+button,select{font:inherit}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F6F5F1; color: #1B1E27; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #DEDBD3">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1B1E27">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="9" r="6" fill="none" stroke="#2E5AAC" stroke-width="2"></circle><circle cx="9" cy="23" r="6" fill="none" stroke="#B5561C" stroke-width="2"></circle><circle cx="25" cy="23" r="6" fill="none" stroke="#1D7366" stroke-width="2"></circle></svg>
+<span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-family: Newsreader, Georgia, serif; font-size: 22px; font-weight: 600">Trinity Explained</span><span style="font-size: 12px; color: #5A5F6B">through the classical writers</span></span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px">
+<a href="Main.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Explanations</a>
+<a href="Bible.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Reference</a>
+<a href="Topics.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Topics</a>
+<a href="Questions.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Q&amp;A</a>
+</nav>
+</div>
+</header>
+
+<div style="background: #FFFFFF; border-bottom: 1px solid #DEDBD3">
+<div style="max-width: 1240px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px">
+<a href="Books.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>All early writings</a>
+<label style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #4A4F5B">Book
+<select value="{{work}}" onChange="{{onBook}}" style="min-height: 44px; max-width: 340px; padding: 0 10px; border-radius: 10px; border: 1px solid #C9C5BB; background: #FFFFFF; font-size: 14px; font-weight: 400; color: #1B1E27">
+<sc-for list="{{bookOptions}}" as="o" hint-placeholder-count="3"><option value="{{o.value}}">{{o.label}}</option></sc-for>
+</select></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<div role="group" aria-label="Text size" style="display: flex; gap: 4px; align-items: center">
+<span style="font-size: 13px; font-weight: 600; color: #4A4F5B; padding-right: 4px">Text</span>
+<button type="button" onClick="{{smaller}}" aria-label="Smaller text" style="width: 44px; height: 44px; border-radius: 10px; border: 1px solid #C9C5BB; background: #FFFFFF; color: #1B1E27; cursor: pointer; font-size: 14px; font-weight: 600">A−</button>
+<button type="button" onClick="{{larger}}" aria-label="Larger text" style="width: 44px; height: 44px; border-radius: 10px; border: 1px solid #C9C5BB; background: #FFFFFF; color: #1B1E27; cursor: pointer; font-size: 18px; font-weight: 600">A+</button>
+</div>
+<div role="group" aria-label="Page tone" style="display: flex; gap: 4px; align-items: center">
+<span style="font-size: 13px; font-weight: 600; color: #4A4F5B; padding-right: 4px">Page</span>
+<sc-for list="{{tones}}" as="t" hint-placeholder-count="3">
+<button type="button" onClick="{{t.pick}}" aria-pressed="{{t.selected}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 32px 24px 72px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+<nav aria-label="Contents" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<details open="{{true}}" style="background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 12px; padding: 6px">
+<summary style="min-height: 40px; display: flex; align-items: center; padding: 0 10px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A5F6B">Contents · {{secCount}} sections</summary>
+<div style="max-height: 640px; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; padding: 4px">
+<sc-for list="{{contents}}" as="s" hint-placeholder-count="8">
+<button type="button" onClick="{{s.pick}}" aria-current="{{s.current}}" style="{{s.style}}">{{s.label}}</button>
+</sc-for>
+</div>
+</details>
+<div style="padding: 14px; background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 12px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #4A4F5B">
+<span style="font-weight: 600; color: #1B1E27">About this edition</span>
+<span>{{about}}</span>
+<sc-if value="{{hasSource}}" hint-placeholder-val="{{ false }}"><a href="{{source}}" style="font-weight: 600">Source text</a></sc-if>
+</div>
+</nav>
+
+<article style="{{pageStyle}}">
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 15px; opacity: 0.75">{{loadingText}}</p>
+</sc-if>
+<sc-if value="{{ready}}" hint-placeholder-val="{{ true }}">
+<header style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 20px; border-bottom: 1px solid {{rule}}">
+<span style="font-family: Inter, system-ui, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75">{{author}} · {{date}}</span>
+<span style="font-size: 18px; font-style: italic; opacity: 0.8">{{bookTitle}}</span>
+<sc-for list="{{crumbs}}" as="c" hint-placeholder-count="1"><span style="font-family: Inter, system-ui, sans-serif; font-size: 13px; opacity: 0.7">{{c.text}}</span></sc-for>
+<h1 style="margin: 0; font-size: 34px; line-height: 1.15; font-weight: 500">{{secTitle}}</h1>
+<sc-if value="{{editorial}}" hint-placeholder-val="{{ false }}"><span style="align-self: flex-start; font-family: Inter, system-ui, sans-serif; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; border: 1px solid {{rule}}">Editor’s or translator’s introduction</span></sc-if>
+</header>
+
+<sc-if value="{{hasFocus}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-family: Inter, system-ui, sans-serif; font-size: 14px; padding: 10px 14px; border-radius: 10px; background: #33449A; color: #FFFFFF">
+<span style="flex: 1 1 260px">The quoted passage is highlighted in ¶{{focusNum}}.</span>
+<a href="#para-{{focusIdx}}" style="color: #FFFFFF; font-weight: 600">Go to it</a>
+</div>
+</sc-if>
+
+<sc-for list="{{paras}}" as="p" hint-placeholder-count="6">
+<div id="para-{{p.idx}}" style="{{p.style}}">
+<span style="flex: 0 0 30px; font-family: Inter, system-ui, sans-serif; font-size: 12px; font-weight: 600; padding-top: 0.45em; opacity: 0.55">¶{{p.num}}</span>
+<p style="margin: 0; flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere"><sc-for list="{{p.segs}}" as="g" hint-placeholder-count="1"><sc-if value="{{g.text}}" hint-placeholder-val="{{ true }}"><span>{{g.t}}</span></sc-if><sc-if value="{{g.mark}}" hint-placeholder-val="{{ false }}"><mark style="{{markStyle}}">{{g.t}}</mark></sc-if><sc-if value="{{g.note}}" hint-placeholder-val="{{ false }}"><sup><a href="#fn-{{g.t}}" style="font-family: Inter, system-ui, sans-serif; font-size: 12px; font-weight: 600">{{g.t}}</a></sup></sc-if></sc-for></p>
+</div>
+</sc-for>
+
+<sc-if value="{{hasNotes}}" hint-placeholder-val="{{ false }}">
+<footer style="margin-top: 8px; padding-top: 16px; border-top: 1px solid {{rule}}; display: flex; flex-direction: column; gap: 8px; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.5">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.7">Notes</span>
+<sc-for list="{{notes}}" as="n" hint-placeholder-count="2">
+<p id="fn-{{n.n}}" style="margin: 0; overflow-wrap: anywhere"><strong>{{n.n}}</strong> {{n.t}}</p>
+</sc-for>
+</footer>
+</sc-if>
+
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: Inter, system-ui, sans-serif">
+<sc-if value="{{hasPrev}}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{prev}}" style="min-height: 44px; max-width: 100%; padding: 0 16px; border-radius: 10px; border: 1px solid #C9C5BB; background: #FFFFFF; color: #1B1E27; cursor: pointer; font-size: 15px; font-weight: 600; text-align: left">← {{prevLabel}}</button>
+</sc-if>
+<sc-if value="{{hasNext}}" hint-placeholder-val="{{ true }}">
+<button type="button" onClick="{{next}}" style="min-height: 44px; max-width: 100%; margin-left: auto; padding: 0 16px; border-radius: 10px; border: 0; background: #33449A; color: #FFFFFF; cursor: pointer; font-size: 15px; font-weight: 600; text-align: left">{{nextLabel}} →</button>
+</sc-if>
+</div>
+</sc-if>
+</article>
+</div>
+<footer style="margin-top: 48px; background: #1B1E27; color: #D5D8E0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-size: 14px">
+<span style="font-family: Newsreader, Georgia, serif; font-size: 18px; color: #FFFFFF">Trinity Explained</span>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href="Books.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; color: #FFFFFF; font-weight: 600; text-decoration: underline">Early Writings</a>
+</nav>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.BOOKS = [
+      ['irenaeus-against-heresies', 'Irenaeus — Against Heresies', '4024054698f396fe879410a6ab7f6769'],
+      ['hippolytus-against-noetus', 'Hippolytus — Against Noetus', '2a6d728eb6cdc4f1873d1e7471b8ecee'],
+      ['novatian-on-the-trinity', 'Novatian — On the Trinity', 'fd90153bd94e94f08421edb835a71544'],
+      ['athanasius-against-arians', 'Athanasius — Against the Arians', '940ef8c438690520e6ef8d58986790a1'],
+      ['hilary-on-the-trinity', 'Hilary — On the Trinity', '391e3bffae9acf18906aabdd49baef71'],
+      ['basil-on-the-holy-spirit', 'Basil — On the Holy Spirit', '095975896b6fb1e1804d67e15b5e9055'],
+      ['gregory-nyssa-not-three-gods', 'Gregory of Nyssa — On “Not Three Gods”', '83dd759b5371dcbbd0bd0b536dbde7da'],
+      ['gregory-nyssa-against-eunomius', 'Gregory of Nyssa — Against Eunomius', 'ce34c7a0836321247591efa769733bb9'],
+      ['ambrose-on-the-holy-spirit', 'Ambrose — On the Holy Spirit', 'a9e606e885cda65cedda2c506fe0e34e'],
+      ['augustine-on-the-trinity', 'Augustine — On the Holy Trinity', '67d9a3800cf2b85aa8554b96d09418f8'],
+      ['owen-communion-with-god', 'Owen — Communion with God', '8c1c43f89e90a0799151a06c8ace04f0'],
+      ['owen-brief-declaration-trinity', 'Owen — Brief Declaration of the Trinity', '2fbace4f726d8ba6fed0059860d098c4'],
+      ['waterland-vindication', 'Waterland — Vindication of Christ’s Divinity', '589ebc56cc3185a136b5bafe74375b85'],
+      ['edwards-essay-on-the-trinity', 'Edwards — Essay on the Trinity', 'ba48e451959478a9d6da9983bd051591'],
+      ['bickersteth-rock-of-ages', 'Bickersteth — The Rock of Ages', '5dc0e954a33e677354ccff9e3061f852'],
+      ['warfield-biblical-doctrine-trinity', 'Warfield — Biblical Doctrine of the Trinity', 'b16492cdc5df6d5ff60a9ac4ead136ae']
+    ];
+    this.cache = {};
+    this.norms = {};
+    this.state = { size: 20, tone: 'light', work: null, sec: 0, focus: null, quote: '', failed: false, rev: 0 };
+  }
+  componentDidMount() {
+    let opened = false;
+    this.listenNav('reader', (m) => { opened = true; this.open(m.work, m.quote || ''); });
+    if (!opened) this.open('gregory-nyssa-not-three-gods', 'issuing from the Father as from a spring, brought into operation by the Son, and perfecting its grace by the power of the Spirit');
+  }
+  componentWillUnmount() { if (this.navOff) this.navOff(); }
+  componentDidUpdate(prev, prevState) {
+    const s = this.state;
+    if (s.work !== prevState.work || s.sec !== prevState.sec || s.focus !== prevState.focus) {
+      setTimeout(() => {
+        const el = s.focus !== null ? document.getElementById('para-' + s.focus) : null;
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        else if (s.work !== prevState.work || s.sec !== prevState.sec) window.scrollTo({ top: 0 });
+      }, 80);
+    }
+  }
+  norm(s) {
+    return String(s || '').toLowerCase().replace(/\[\^[^\]]*\]/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+  open(work, quote) {
+    const row = this.BOOKS.find((b) => b[0] === work);
+    if (!row) return;
+    this.setState({ work, quote, sec: 0, focus: null, failed: false });
+    const apply = () => {
+      const book = this.cache[work];
+      const hit = quote ? this.findQuote(work, quote) : null;
+      if (hit) this.setState({ sec: hit[0], focus: hit[1], rev: this.state.rev + 1 });
+      else {
+        const first = book.sections.findIndex((s) => s.r === 'primary' && s.p.length);
+        this.setState({ sec: first < 0 ? 0 : first, focus: null, rev: this.state.rev + 1 });
+      }
+    };
+    if (this.cache[work]) { apply(); return; }
+    fetch('/_blob/' + row[2])
+      .then((r) => r.json())
+      .then((book) => {
+        this.cache[work] = book;
+        this.norms[work] = book.sections.map((s) => s.p.map((p) => this.norm(p)));
+        if (this.state.work === work) apply();
+      })
+      .catch(() => { if (this.state.work === work) this.setState({ failed: true }); });
+  }
+  findQuote(work, quote) {
+    const n = this.norms[work];
+    const q = this.norm(quote);
+    for (const len of [80, 40, 24]) {
+      const probe = q.slice(0, len).trim();
+      if (probe.length < 12) continue;
+      for (let s = 0; s < n.length; s++) for (let p = 0; p < n[s].length; p++) if (n[s][p].indexOf(probe) >= 0) return [s, p];
+    }
+    return null;
+  }
+  segments(text, mark) {
+    const out = [];
+    const parts = text.split(/\[\^([^\]]+)\]/);
+    parts.forEach((part, i) => {
+      if (i % 2 === 1) { out.push({ t: part, note: true }); return; }
+      if (!part) return;
+      const at = mark ? part.indexOf(mark) : -1;
+      if (at >= 0) {
+        if (at) out.push({ t: part.slice(0, at), text: true });
+        out.push({ t: mark, mark: true });
+        if (at + mark.length < part.length) out.push({ t: part.slice(at + mark.length), text: true });
+      } else out.push({ t: part, text: true });
+    });
+    return out;
+  }
+  listenNav(to, fn) {
+    const take = (m) => { if (m && m.to === to && Date.now() - m.t < 15000) fn(m); };
+    try {
+      const raw = localStorage.getItem('trinity-nav');
+      if (raw) { const m = JSON.parse(raw); if (m.to === to) { localStorage.removeItem('trinity-nav'); take(m); } }
+    } catch (e) {}
+    const onStorage = (e) => { if (e.key === 'trinity-nav' && e.newValue) { try { take(JSON.parse(e.newValue)); } catch (x) {} } };
+    window.addEventListener('storage', onStorage);
+    let bc = null;
+    try { bc = new BroadcastChannel('trinity-nav'); bc.onmessage = (e) => take(e.data); } catch (e) {}
+    this.navOff = () => { window.removeEventListener('storage', onStorage); if (bc) bc.close(); };
+  }
+  renderVals() {
+    const P = {
+      light: { bg: '#FFFFFF', fg: '#1B1E27', rule: '#E4E1DA', hl: '#EEF1FA', mark: '#D3DBF4' },
+      sepia: { bg: '#F4ECDC', fg: '#3A2E1E', rule: '#DCCDB0', hl: '#EADFC6', mark: '#E3CF9F' },
+      dark:  { bg: '#1B1E27', fg: '#E9EAEE', rule: '#3A3F4C', hl: '#262A36', mark: '#3B4470' }
+    };
+    const { size, tone, work, sec, focus, quote, failed } = this.state;
+    const pal = P[tone];
+    const book = work ? this.cache[work] : null;
+    const short = (s, n) => (s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s);
+    const base = {
+      work: work || '',
+      bookOptions: this.BOOKS.map((b) => ({ value: b[0], label: b[1] })),
+      onBook: (e) => this.open(e.target.value, ''),
+      smaller: () => this.setState({ size: Math.max(16, size - 2) }),
+      larger: () => this.setState({ size: Math.min(26, size + 2) }),
+      tones: [['light', 'Light'], ['sepia', 'Sepia'], ['dark', 'Dark']].map(([id, label]) => ({
+        label, selected: id === tone ? 'true' : 'false',
+        pick: () => this.setState({ tone: id }),
+        style: 'min-height: 44px; padding: 0 12px; border-radius: 10px; cursor: pointer; font-size: 14px; font-weight: 600; ' +
+          (id === tone ? 'background: #1B1E27; color: #FFFFFF; border: 1px solid #1B1E27;' : 'background: #FFFFFF; color: #1B1E27; border: 1px solid #C9C5BB;')
+      })),
+      rule: pal.rule,
+      markStyle: 'background: ' + pal.mark + '; color: inherit; padding: 1px 2px; border-radius: 3px;',
+      pageStyle: 'flex: 999 1 560px; min-width: 0; max-width: 780px; box-sizing: border-box; padding: 40px clamp(20px, 5vw, 48px); border-radius: 16px; border: 1px solid #DEDBD3; display: flex; flex-direction: column; gap: 18px; font-family: Newsreader, Georgia, serif; line-height: 1.65; background: ' + pal.bg + '; color: ' + pal.fg + '; font-size: ' + size + 'px;'
+    };
+    if (!book) {
+      return { ...base, loading: true, ready: false, loadingText: failed ? 'This book could not be loaded. Reload the page to try again.' : 'Opening the book…',
+        contents: [], secCount: 0, about: '', hasSource: false, source: '', paras: [], notes: [], hasNotes: false, hasFocus: false, crumbs: [] };
+    }
+    const S = book.sections;
+    const cur = S[sec] || S[0];
+    const markText = (() => {
+      if (focus === null || !quote) return '';
+      const raw = cur.p[focus] || '';
+      for (const len of [quote.length, 120, 60]) {
+        const probe = quote.slice(0, len);
+        if (probe.length >= 20 && raw.replace(/\[\^[^\]]*\]/g, '').indexOf(probe) >= 0) return probe;
+      }
+      return '';
+    })();
+    const paras = cur.p.map((text, i) => ({
+      idx: i, num: i + 1,
+      segs: this.segments(text, i === focus ? markText : ''),
+      style: 'scroll-margin-top: 80px; display: flex; gap: 14px; ' + (i === focus ? 'margin: 0 -16px; padding: 14px 16px; border-radius: 12px; background: ' + pal.hl + '; box-shadow: inset 3px 0 0 #33449A;' : '')
+    }));
+    const go = (i) => () => this.setState({ sec: i, focus: null });
+    return {
+      ...base, loading: false, ready: true,
+      author: book.author, date: book.date, bookTitle: book.title,
+      about: [book.translator ? 'Translated by ' + book.translator + '.' : '', book.edition ? book.edition + '.' : '', 'Public domain.'].filter(Boolean).join(' '),
+      hasSource: !!book.source, source: book.source || '',
+      secCount: S.length,
+      contents: S.map((s, i) => ({
+        label: short(s.t || 'Section ' + (i + 1), 90), current: i === sec ? 'true' : 'false', pick: go(i),
+        style: 'min-height: 40px; text-align: left; padding: 6px 10px 6px ' + (10 + Math.max(0, (s.d || 1) - 1) * 12) + 'px; border: 0; border-radius: 8px; cursor: pointer; font-size: 13px; line-height: 1.35; ' +
+          (i === sec ? 'background: #1B1E27; color: #FFFFFF; font-weight: 600;' : 'background: transparent; color: ' + (s.r === 'editorial' ? '#5A5F6B' : '#1B1E27') + '; font-weight: 500;')
+      })),
+      crumbs: (cur.c || []).map((t) => ({ text: short(t, 140) })),
+      secTitle: cur.t, editorial: cur.r === 'editorial',
+      paras,
+      notes: cur.n.map(([n, t]) => ({ n, t })), hasNotes: cur.n.length > 0,
+      hasFocus: focus !== null, focusNum: focus === null ? 0 : focus + 1, focusIdx: focus === null ? 0 : focus,
+      hasPrev: sec > 0, hasNext: sec < S.length - 1,
+      prevLabel: sec > 0 ? short(S[sec - 1].t || '', 48) : '', nextLabel: sec < S.length - 1 ? short(S[sec + 1].t || '', 48) : '',
+      prev: go(sec - 1), next: go(sec + 1)
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -2,3 +2,17 @@
 __pycache__/
 corpus/raw/
 .cache/
+
+# Rust and web build output
+target/
+web/node_modules/
+web/dist/
+web/src-tauri/target/
+web/src-tauri/gen/
+
+# Vercel
+.vercel/
+
+# AI batch bookkeeping and superseded answer runs
+corpus/qa/*.batch.json
+corpus/qa/*.style1.json

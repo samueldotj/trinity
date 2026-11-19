@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Explanations — Trinity Explained</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0;background:#F6F5F1}
+a{color:#33449A}a:hover{color:#232F6E}
+button{font:inherit}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F6F5F1; color: #1B1E27; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #DEDBD3">
+<div style="max-width: 1320px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1B1E27">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="9" r="6" fill="none" stroke="#2E5AAC" stroke-width="2"></circle><circle cx="9" cy="23" r="6" fill="none" stroke="#B5561C" stroke-width="2"></circle><circle cx="25" cy="23" r="6" fill="none" stroke="#1D7366" stroke-width="2"></circle></svg>
+<span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-family: Newsreader, Georgia, serif; font-size: 22px; font-weight: 600">Trinity Explained</span><span style="font-size: 12px; color: #5A5F6B">through the classical writers</span></span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px">
+<a href="Main.dc.html" aria-current="page" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #33449A">Explanations</a>
+<a href="Bible.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Reference</a>
+<a href="Topics.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Topics</a>
+<a href="Questions.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Q&amp;A</a>
+</nav>
+</div>
+</header>
+
+<main style="max-width: 1320px; margin: 0 auto; padding: 40px 24px 72px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 780px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #33449A">Explanations</span>
+<h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 48px; line-height: 1.1; font-weight: 500">Teachings on the Trinity, step by step</h1>
+<p style="margin: 0; font-size: 18px; color: #4A4F5B">Five parts, from the nature of God to the incarnation. Each teaching shows the picture, the Bible passages behind it, and what the classical writers said, with links to where they said it.</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+<nav aria-label="Teachings" style="flex: 1 1 280px; min-width: 0; max-width: 100%; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="5">
+<details open="{{g.open}}" style="background: #FFFFFF; border: 1px solid #C9CEE6; border-radius: 12px; overflow: hidden">
+<summary style="min-height: 48px; display: flex; align-items: center; gap: 8px; padding: 0 14px; cursor: pointer; font-size: 14px; font-weight: 600; background: #33449A; color: #FFFFFF"><span style="color: #C9D2F2">{{g.num}}.</span> {{g.title}}<span style="margin-left: auto; font-size: 12px; font-weight: 500; color: #D5DBF3">{{g.range}}</span></summary>
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 6px">
+<sc-for list="{{g.items}}" as="t" hint-placeholder-count="6">
+<button type="button" onClick="{{t.pick}}" aria-current="{{t.current}}" style="{{t.style}}"><span style="flex: 0 0 26px; font-size: 12px; font-weight: 600; opacity: 0.7">{{t.n}}</span><span>{{t.short}}</span></button>
+</sc-for>
+</div>
+</details>
+</sc-for>
+</nav>
+
+<div style="flex: 999 1 640px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+<section aria-label="Diagram" style="flex: 1 1 528px; min-width: 0; background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 18px">
+<div style="width: 100%; overflow-x: auto; display: flex; justify-content: center">
+<div role="img" aria-label="{{dg.alt}}" style="position: relative; flex: 0 0 480px; width: 480px; height: 510px">
+<sc-for list="{{dg.rings}}" as="r" hint-placeholder-count="0"><div style="{{r.style}}"></div></sc-for>
+<sc-for list="{{dg.edges}}" as="e" hint-placeholder-count="3">
+<div style="{{e.line}}"><div style="{{e.head}}"></div><div style="{{e.tail}}"></div></div>
+</sc-for>
+<div style="{{dg.nF}}"><span style="font-family: Newsreader, Georgia, serif; font-size: 20px; font-weight: 600">Father</span><span style="font-size: 11px; line-height: 1.2">{{dg.tF}}</span></div>
+<div style="{{dg.nS}}"><span style="font-family: Newsreader, Georgia, serif; font-size: 20px; font-weight: 600">Son</span><span style="font-size: 11px; line-height: 1.2">{{dg.tS}}</span></div>
+<div style="{{dg.nP}}"><span style="font-family: Newsreader, Georgia, serif; font-size: 20px; font-weight: 600">Spirit</span><span style="font-size: 11px; line-height: 1.2">{{dg.tP}}</span></div>
+<div style="{{dg.nG}}"><span style="font-family: Newsreader, Georgia, serif; font-size: 22px; font-weight: 600">God</span><span style="font-size: 11px; line-height: 1.2">{{dg.tG}}</span></div>
+<sc-if value="{{dg.hasBox}}" hint-placeholder-val="{{ false }}"><div style="{{dg.boxStyle}}">{{dg.box}}</div></sc-if>
+<sc-for list="{{dg.labels}}" as="l" hint-placeholder-count="3"><span style="{{l.style}}">{{l.text}}</span></sc-for>
+<sc-if value="{{dg.hasRingLabel}}" hint-placeholder-val="{{ false }}"><span style="{{dg.ringLabelStyle}}">{{dg.ringLabel}}</span></sc-if>
+</div>
+</div>
+<p style="margin: 0; max-width: 440px; text-align: center; font-size: 15px; line-height: 1.45; color: #33373F">{{dg.cap}}</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; font-size: 12px; color: #4A4F5B">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 22px; height: 3px; background: #1B1E27"></span>is</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 22px; height: 0; border-top: 3px dashed #6B7080"></span>is not</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 22px; height: 3px; background: #33449A"></span>relation or act</span>
+</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center">
+<button type="button" onClick="{{prev}}" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #C9C5BB; background: #FFFFFF; color: #1B1E27; cursor: pointer; display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>Previous</button>
+<button type="button" onClick="{{next}}" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 0; background: #33449A; color: #FFFFFF; cursor: pointer; display: flex; align-items: center; gap: 8px">Next teaching<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+</div>
+</section>
+
+<section aria-label="Explanation" style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<sc-if value="{{loading}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; color: #4A4F5B">{{loadingText}}</p>
+</sc-if>
+<sc-if value="{{ready}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 600; color: #5A5F6B">Teaching {{t.n}} · {{t.group}}</span>
+<h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 36px; line-height: 1.15; font-weight: 500">{{t.title}}</h2>
+<sc-if value="{{t.hasDetail}}" hint-placeholder-val="{{ true }}"><p style="margin: 0; font-size: 18px; color: #33373F">{{t.detail}}</p></sc-if>
+</div>
+
+<div style="background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 14px; padding: 18px 22px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A5F6B">From the Bible · {{t.refs}}</span>
+<sc-for list="{{t.verses}}" as="v" hint-placeholder-count="2">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="Bible.dc.html" onClick="{{v.go}}" style="font-size: 14px; font-weight: 600">{{v.label}}</a>
+<p style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 19px; line-height: 1.45">{{v.text}}</p>
+</div>
+</sc-for>
+<span style="font-size: 12px; color: #5A5F6B">Berean Standard Bible (BSB), public domain.</span>
+</div>
+
+<sc-if value="{{t.hasNote}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; padding: 12px 16px; border-radius: 10px; background: #F1F3FA; font-size: 14px; color: #2A2E37"><strong>Note.</strong> {{t.note}}</p>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="Topics.dc.html" onClick="{{goTopic}}" style="flex: 1 1 260px; min-height: 44px; text-decoration: none; background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; color: #1B1E27"><span style="font-size: 12px; font-weight: 600; color: #5A5F6B">Topic · {{t.theme}}</span><span style="font-weight: 600; color: #33449A">{{t.topic}}</span></a>
+<a href="Questions.dc.html" onClick="{{goQuestions}}" style="flex: 1 1 180px; min-height: 44px; text-decoration: none; background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; color: #1B1E27"><span style="font-size: 12px; font-weight: 600; color: #5A5F6B">Questions answered</span><span style="font-weight: 600; color: #33449A">{{t.q}} questions →</span></a>
+</div>
+</sc-if>
+</section>
+</div>
+</div>
+</main>
+<footer style="margin-top: 48px; background: #1B1E27; color: #D5D8E0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-size: 14px">
+<span style="font-family: Newsreader, Georgia, serif; font-size: 18px; color: #FFFFFF">Trinity Explained</span>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href="Books.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; color: #FFFFFF; font-weight: 600; text-decoration: underline">Early Writings</a>
+</nav>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { i: 0, data: null, failed: false }; }
+  componentDidMount() {
+    fetch('/_blob/382fba4d771fb2b0cba3c09b17e18f09')
+      .then((r) => r.json())
+      .then((data) => this.setState({ data }))
+      .catch(() => this.setState({ failed: true }));
+  }
+  sendNav(msg) {
+    const m = Object.assign({}, msg, { t: Date.now() });
+    try { localStorage.setItem('trinity-nav', JSON.stringify(m)); } catch (e) {}
+    try { const bc = new BroadcastChannel('trinity-nav'); bc.postMessage(m); bc.close(); } catch (e) {}
+  }
+  spec(n) {
+    // hi: Persons lit (F S P G); spk: [which Persons join the centre, label]; e: [from, to, label, arrows '>' '<' '<>' '', kind]
+    // kinds: is (solid dark), not (dashed grey), rel (blue arrow), eq (solid grey), west (dashed blue)
+    // ring: eternal | spirit | unchanging | invisible | everywhere | single; box: a thing outside God; split: Son shown as God and man
+    const not3 = [['F', 'S', 'is not', '', 'not'], ['F', 'P', 'is not', '', 'not'], ['S', 'P', 'is not', '', 'not']];
+    const eq3 = (l) => [['F', 'S', l, '', 'eq'], ['F', 'P', l, '', 'eq'], ['S', 'P', l, '', 'eq']];
+    const S = {
+      1: { hi: 'G', spk: ['FSP', 'is'], n: { G: 'one God' }, cap: 'Each Person is God, and all three are the one God at the centre. There are not three Gods.' },
+      2: { hi: 'G', spk: ['FSP', 'is'], ring: 'spirit', hollow: true, n: { G: 'Spirit' }, cap: 'God is Spirit. The dotted circle holds no body and no material parts.' },
+      3: { hi: 'G', spk: ['FSP', 'is'], ring: 'eternal', n: { G: 'eternal' }, cap: 'The unbroken circle: God has no beginning and no end.' },
+      4: { hi: 'G', spk: ['FSP', 'is'], box: 'Creation', e: [['G', 'X', 'made by God', '>', 'rel']], n: { G: 'uncreated' }, cap: 'The arrow runs one way. Creation depends on God, and God depends on nothing He made.' },
+      5: { hi: 'G', spk: ['FSP', 'is'], ring: 'unchanging', n: { G: 'unchanging' }, cap: 'The double circle stands for a nature that does not change.' },
+      6: { hi: 'G', spk: ['FSP', 'is'], ring: 'invisible', hollow: true, n: { G: 'unseen' }, cap: 'The divine essence cannot be seen with physical eyes. The Son makes the Father known.' },
+      7: { hi: 'G', spk: ['FSP', 'is'], ring: 'everywhere', n: { G: 'everywhere' }, cap: 'The circles spread outward: God fills every place and no place contains Him.' },
+      8: { hi: 'G', spk: ['FSP', 'is'], ring: 'single', n: { G: 'no parts' }, cap: 'One undivided being. The Persons are not three pieces of God.' },
+      9: { hi: 'FSPG', spk: ['FSP', 'is'], e: not3, n: { F: 'Person', S: 'Person', P: 'Person', G: 'one being' }, cap: 'Solid lines: each Person is God. Dashed lines: no Person is another. One being, three Persons.' },
+      10: { hi: 'FG', spk: ['F', 'is God'], cap: 'The Father is God: the line joins the Father to the one God.' },
+      11: { hi: 'SG', spk: ['S', 'is God'], cap: 'The Son is God: the line joins the Son to the one God.' },
+      12: { hi: 'PG', spk: ['P', 'is God'], cap: 'The Holy Spirit is God: the line joins the Spirit to the one God.' },
+      13: { hi: 'FSP', e: not3, cap: 'Three distinct Persons. Every dashed line reads “is not”.' },
+      14: { hi: 'FS', e: [['F', 'S', 'is not', '', 'not']], cap: 'The Father is not the Son.' },
+      15: { hi: 'SP', e: [['S', 'P', 'is not', '', 'not']], cap: 'The Son is not the Holy Spirit.' },
+      16: { hi: 'FP', e: [['F', 'P', 'is not', '', 'not']], cap: 'The Holy Spirit is not the Father.' },
+      17: { hi: 'FSPG', spk: ['FSP', 'fully God'], n: { G: 'not ⅓ each' }, cap: 'Each line carries the whole of God. No Person is a third of God.' },
+      18: { hi: 'FSP', e: eq3('always'), n: { F: 'eternal', S: 'eternal', P: 'eternal' }, cap: 'No Person came first. All three have always been.' },
+      19: { hi: 'FSP', e: eq3('='), n: { F: 'equal', S: 'equal', P: 'equal' }, cap: 'Every side is equal: none is lesser in divine nature.' },
+      20: { hi: 'FSP', e: not3, n: { F: '1', S: '2', P: '3', G: 'not one Person in three roles' }, cap: 'Three real Persons, counted one, two, three. Not one Person appearing in three ways.' },
+      21: { hi: 'FSP', e: [['F', 'S', 'in', '<>', 'rel'], ['F', 'P', 'in', '<>', 'rel'], ['S', 'P', 'in', '<>', 'rel']], cap: 'Arrows both ways: each Person dwells in the others.' },
+      22: { hi: 'FS', e: [['F', 'S', 'always Father of', '>', 'rel']], n: { F: 'always Father', S: 'always Son' }, cap: 'The Father has always been Father of the Son. It is not a role He took up.' },
+      23: { hi: 'FS', e: [['F', 'S', 'begets', '>', 'rel']], n: { F: 'unbegotten', S: 'begotten, not made' }, cap: 'The arrow runs from the Father to the Son: eternally begotten, not created.' },
+      24: { hi: 'FP', e: [['F', 'P', 'proceeds from', '>', 'rel'], ['S', 'P', 'West: and the Son', '>', 'west']], n: { P: 'proceeds' }, cap: 'The Spirit proceeds from the Father. The dashed arrow is the Western addition, “and from the Son”.' },
+      25: { hi: 'FSP', e: [['F', 'S', 'begets', '>', 'rel'], ['F', 'P', 'proceeds', '>', 'rel']], n: { F: 'unbegotten', S: 'begotten', P: 'proceeds', G: 'one nature' }, cap: 'Only these relations tell the Persons apart. The nature in the centre is one and the same.' },
+      26: { hi: 'FS', e: [['F', 'S', 'loves', '>', 'rel']], n: { F: 'loves', S: 'beloved' }, cap: 'The Father has loved the Son from before the world began.' },
+      27: { hi: 'FS', e: [['F', 'S', 'one glory', '<>', 'rel']], n: { F: 'glory', S: 'glory' }, cap: 'The glory runs both ways: the Son shared it with the Father before the world existed.' },
+      28: { hi: 'FSPG', spk: ['FSP', 'one will'], n: { G: 'one will' }, cap: 'All three share the one will at the centre, not three wills side by side.' },
+      29: { hi: 'FSPG', e: [['F', 'S', 'through', '>', 'rel'], ['S', 'P', 'in', '>', 'rel'], ['G', 'X', 'one act', '>', 'rel']], box: 'One work', n: { F: 'from', S: 'through', P: 'in' }, cap: 'Every work is from the Father, through the Son, in the Spirit, and it is one act of the one God.' },
+      30: { hi: 'FSP', spk: ['FSP', 'is'], e: eq3('='), cap: 'Each is God to the same degree. The Father is not a greater God.' },
+      31: { hi: 'FS', e: [['F', 'S', 'sends', '>', 'rel'], ['S', 'X', 'comes', '>', 'rel']], box: 'The world', hideG: true, cap: 'The Father sends the Son into the world.' },
+      32: { hi: 'FSP', e: [['F', 'P', 'sends', '>', 'rel'], ['S', 'P', 'sends', '>', 'rel'], ['P', 'X', 'given', '>', 'rel']], box: 'The Church', hideG: true, cap: 'The Father and the Son send the Spirit to the Church.' },
+      33: { hi: 'FS', e: [['F', 'S', 'seen in', '>', 'eq'], ['S', 'X', 'makes the Father known', '>', 'rel']], box: 'Us', hideG: true, cap: 'Whoever has seen the Son has seen the Father.' },
+      34: { hi: 'SP', e: [['P', 'S', 'glorifies', '>', 'rel']], cap: 'The arrow runs from the Spirit to the Son: the Spirit glorifies Him.' },
+      35: { hi: 'FS', e: [['S', 'F', 'prays to', '>', 'rel']], cap: 'The Son speaks to the Father in prayer: one Person to another.' },
+      36: { hi: 'FS', e: [['F', 'S', 'speaks to', '>', 'rel']], n: { S: 'beloved Son' }, cap: 'The Father’s voice speaks to the Son, another Person.' },
+      37: { hi: 'P', e: [['P', 'X', 'speaks · teaches · wills', '>', 'rel']], box: 'The Church', hideG: true, n: { P: 'a Person' }, cap: 'The Spirit speaks, teaches and chooses, as only a Person can.' },
+      38: { hi: 'FSPG', e: [['F', 'S', 'through', '>', 'rel'], ['S', 'P', 'by', '>', 'rel'], ['G', 'X', 'creates', '>', 'rel']], box: 'All creation', n: { F: 'from', S: 'through', P: 'by' }, cap: 'One Creator: all things come from the Father, through the Son, by the Spirit.' },
+      39: { hi: 'FSP', e: [['F', 'X', 'chooses', '>', 'rel'], ['S', 'X', 'redeems', '>', 'rel'], ['P', 'X', 'seals', '>', 'rel']], box: 'Believers', hideG: true, cap: 'The Father chooses, the Son redeems, the Spirit seals. One salvation.' },
+      40: { hi: 'FSP', e: [['F', 'X', '', '', 'is'], ['S', 'X', '', '', 'is'], ['P', 'X', '', '', 'is']], box: 'One name', hideG: true, cap: 'Believers are baptised into one name: of the Father, and of the Son, and of the Holy Spirit.' },
+      41: { hi: 'S', e: [['S', 'X', 'became flesh', '>', 'rel']], box: 'Human nature', hideG: true, n: { F: 'not incarnate', P: 'not incarnate' }, cap: 'Only the Son took on human nature.' },
+      42: { hi: 'SG', split: true, spk: ['S', 'still God'], e: [['S', 'X', 'took on', '>', 'rel']], box: 'Human nature', cap: 'The Son took on humanity and never stopped being God.' },
+      43: { hi: 'S', split: true, e: [['S', 'X', 'united', '', 'is']], box: 'Human nature', hideG: true, n: { S: 'one Person' }, cap: 'One Person, two natures: the divine and the human, united.' },
+      44: { hi: 'S', split: true, e: [['S', 'X', 'took on in time', '>', 'rel']], box: 'Human nature (created)', hideG: true, n: { S: 'eternal God' }, cap: 'His divine nature is eternal. His human nature was created when He became man.' },
+      45: { hi: 'FS', e: [['S', 'X', 'suffered as man', '>', 'rel'], ['F', 'X', 'did not suffer', '', 'not']], box: 'The cross', hideG: true, split: true, cap: 'The Son suffered and died in His human nature. The Father did not suffer.' },
+      46: { hi: 'SG', split: true, spk: ['S', 'unchanged'], e: [['S', 'X', 'added', '>', 'rel']], box: 'Human nature', cap: 'Nothing was taken from His deity. Humanity was added.' }
+    };
+    return S[n] || S[1];
+  }
+  draw(n, fallbackNotes) {
+    const sp = this.spec(n);
+    const P = { F: [240, 72, 54], S: [86, 330, 54], P: [394, 330, 54], G: [240, 228, 48], X: [240, 466, 30] };
+    const COL = { is: '#1B1E27', not: '#6B7080', rel: '#33449A', eq: '#6B7080', west: '#33449A', faint: '#C9C5BB' };
+    const hi = sp.hi || '';
+    const nodeState = (k) => (sp.hideG && k === 'G') ? 'display: none;' : (hi.indexOf(k) >= 0 ? 'opacity: 1; box-shadow: 0 0 0 6px rgba(51,68,154,0.16);' : (hi ? 'opacity: 0.35;' : 'opacity: 1;'));
+    const node = (k, bg, border, fg) => {
+      const [x, y, r] = P[k];
+      return 'position: absolute; left: ' + (x - r) + 'px; top: ' + (y - r) + 'px; width: ' + 2 * r + 'px; height: ' + 2 * r + 'px; box-sizing: border-box; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 8px; gap: 2px; z-index: 2; background: ' + bg + '; border: 2px solid ' + border + '; color: ' + fg + '; ' + nodeState(k);
+    };
+    const edges = [], labels = [];
+    const seg = (a, b, label, dir, kind) => {
+      const [x1, y1, r1] = P[a], [x2, y2, r2] = P[b];
+      const dx = x2 - x1, dy = y2 - y1, d = Math.sqrt(dx * dx + dy * dy), ux = dx / d, uy = dy / d;
+      const sx = x1 + ux * (r1 + 4), sy = y1 + uy * (r1 + 4), len = d - r1 - r2 - 8;
+      const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+      const c = COL[kind];
+      const thick = kind === 'faint' ? 2 : 3;
+      const paint = (kind === 'not' || kind === 'west')
+        ? 'background: repeating-linear-gradient(90deg, ' + c + ' 0 8px, transparent 8px 14px);'
+        : 'background: ' + c + ';';
+      const arrow = (side) => 'position: absolute; top: 50%; ' + side + ': -2px; width: 0; height: 0; transform: translateY(-50%); border-top: 7px solid transparent; border-bottom: 7px solid transparent; ' +
+        (side === 'right' ? 'border-left: 12px solid ' : 'border-right: 12px solid ') + c + ';';
+      edges.push({
+        line: 'position: absolute; z-index: 1; left: ' + sx + 'px; top: ' + (sy - thick / 2) + 'px; width: ' + len + 'px; height: ' + thick + 'px; transform-origin: 0 50%; transform: rotate(' + ang + 'deg); ' + paint,
+        head: dir.indexOf('>') >= 0 ? arrow('right') : 'display: none;',
+        tail: dir.indexOf('<') >= 0 ? arrow('left') : 'display: none;'
+      });
+      if (label) {
+        const mx = sx + ux * len / 2, my = sy + uy * len / 2;
+        labels.push({ text: label, style: 'position: absolute; z-index: 3; left: ' + mx + 'px; top: ' + my + 'px; transform: translate(-50%, -50%); white-space: nowrap; padding: 2px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid ' + c + '; color: ' + (kind === 'faint' ? '#5A5F6B' : c) + '; font-size: 12px; font-weight: 600;' });
+      }
+    };
+    const list = sp.e || [];
+    const has = (a, b) => list.some((e) => (e[0] === a && e[1] === b) || (e[0] === b && e[1] === a));
+    [['F', 'S'], ['F', 'P'], ['S', 'P']].forEach(([a, b]) => { if (!has(a, b)) seg(a, b, '', '', 'faint'); });
+    if (sp.spk && !sp.hideG) sp.spk[0].split('').forEach((k) => seg('G', k, sp.spk[1], '', 'is'));
+    list.forEach((e) => seg(e[0], e[1], e[2], e[3], e[4]));
+    const ringBase = (r, extra) => 'position: absolute; z-index: 0; box-sizing: border-box; left: ' + (240 - r) + 'px; top: ' + (228 - r) + 'px; width: ' + 2 * r + 'px; height: ' + 2 * r + 'px; border-radius: 50%; ' + extra;
+    const RINGS = {
+      eternal: [[226, 'border: 4px solid #33449A;']],
+      spirit: [[226, 'border: 3px dotted #33449A;']],
+      unchanging: [[226, 'border: 6px double #33449A;']],
+      invisible: [[226, 'border: 2px dashed #9AA0AD;']],
+      everywhere: [[150, 'border: 2px solid rgba(51,68,154,0.35);'], [190, 'border: 2px solid rgba(51,68,154,0.25);'], [228, 'border: 2px solid rgba(51,68,154,0.15);']],
+      single: [[226, 'border: 7px solid #1B1E27;']]
+    };
+    const RLABEL = { eternal: 'no beginning · no end', spirit: 'no body · no parts', unchanging: 'does not change', invisible: 'cannot be seen', everywhere: 'not limited by space', single: 'one, undivided' };
+    const notes = Object.assign({ F: fallbackNotes[0] || '', S: fallbackNotes[1] || '', P: fallbackNotes[2] || '', G: fallbackNotes[3] || '' }, sp.n || {});
+    if (!sp.n && sp.spk) { notes.F = notes.S = notes.P = ''; }
+    const sonBg = sp.split ? 'linear-gradient(90deg, #FBEDE3 50%, #FFFFFF 50%)' : '#FBEDE3';
+    const gHollow = sp.hollow;
+    const alt = 'Diagram: ' + sp.cap;
+    return {
+      alt, cap: sp.cap, edges, labels,
+      rings: (RINGS[sp.ring] || []).map(([r, css]) => ({ style: ringBase(r, css) })),
+      hasRingLabel: !!sp.ring, ringLabel: RLABEL[sp.ring] || '',
+      ringLabelStyle: 'position: absolute; z-index: 3; left: 240px; top: 2px; transform: translateX(-50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: 12px; font-weight: 600;',
+      nF: node('F', '#EAF0FA', '#2E5AAC', '#1F3F7A'),
+      nS: node('S', sonBg, '#B5561C', '#7E3A10'),
+      nP: node('P', '#E3F2EF', '#1D7366', '#11514A'),
+      nG: node('G', gHollow ? '#FFFFFF' : '#1B1E27', '#1B1E27', gHollow ? '#1B1E27' : '#FFFFFF'),
+      tF: notes.F, tS: sp.split && !sp.n ? 'God | man' : (sp.split ? notes.S + ' · God | man' : notes.S), tP: notes.P, tG: notes.G,
+      hasBox: !!sp.box, box: sp.box || '',
+      boxStyle: 'position: absolute; z-index: 2; left: 130px; top: 440px; width: 220px; height: 52px; box-sizing: border-box; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10px; background: #F1EEE8; border: 2px solid #9AA0AD; color: #1B1E27; font-size: 15px; font-weight: 600;'
+    };
+  }
+  renderVals() {
+    const { i, data, failed } = this.state;
+    if (!data) {
+      return { dg: this.draw(1, ['', '', '', '']), groups: [], loading: true, ready: false,
+        loadingText: failed ? 'The teachings could not be loaded. Reload the page to try again.' : 'Loading the teachings…',
+        prev: () => {}, next: () => {}, t: {} };
+    }
+    const T = data.teachings, cur = T[i], N = T.length;
+    const grp = data.groups[cur.g];
+    const groups = data.groups.map((g, gi) => {
+      const items = T.filter((t) => t.g === gi);
+      return {
+        num: gi + 1, title: g.title, open: false,
+        range: items[0].n + '–' + items[items.length - 1].n,
+        items: items.map((t) => {
+          const j = t.n - 1, sel = j === i;
+          return {
+            n: t.n, short: t.short, current: sel ? 'true' : 'false',
+            pick: () => this.setState({ i: j }),
+            style: 'display: flex; align-items: center; gap: 6px; min-height: 40px; text-align: left; padding: 6px 10px; border: 0; border-radius: 8px; cursor: pointer; font-size: 14px; line-height: 1.3; ' +
+              (sel ? 'background: #1B1E27; color: #FFFFFF; font-weight: 600;' : 'background: transparent; color: #1B1E27; font-weight: 500;')
+          };
+        })
+      };
+    });
+    const q = cur.quote;
+    return {
+      dg: this.draw(cur.n, cur.notes),
+      groups, loading: false, ready: true,
+      t: {
+        n: cur.n, group: grp.title, title: cur.title, detail: cur.detail, hasDetail: !!cur.detail,
+        refs: cur.refs,
+        verses: cur.verses.map((v) => ({ label: v.label, text: v.text, go: () => this.sendNav({ to: 'bible', ref: v.ref }) })),
+        hasNote: !!grp.note, note: grp.note,
+        cmp: cur.topic.cmp, theme: cur.topic.theme, topic: cur.topic.title, q: cur.topic.q,
+        hasQuote: !!q, quote: q ? q.text : '', author: q ? q.author : '', where: q ? (q.place ? q.work + ', ' + q.place : q.work) : ''
+      },
+      goQuote: () => q && this.sendNav({ to: 'reader', work: q.workId, quote: q.text }),
+      goTopic: () => this.sendNav({ to: 'topics', topicId: cur.topic.id }),
+      goQuestions: () => this.sendNav({ to: 'questions', topicTitle: cur.topic.title }),
+      prev: () => this.setState({ i: (i + N - 1) % N }),
+      next: () => this.setState({ i: (i + 1) % N })
+    };
+  }
+}
+</script>
+</body>
+</html>

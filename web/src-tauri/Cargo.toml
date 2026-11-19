@@ -1,0 +1,27 @@
+[package]
+name = "trinity-desktop"
+version = "0.1.0"
+edition = "2024"
+description = "Trinity Explained desktop app: the web front end with the data compiled in"
+publish = false
+
+[lib]
+name = "trinity_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde_json = "1"
+trinity-core = { path = "../../crates/trinity-core" }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+strip = true
+
+# Built on its own, outside the root workspace that Vercel compiles.
+[workspace]

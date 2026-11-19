@@ -1,0 +1,15 @@
+# Keep uploads small: Vercel builds the Rust function and the web app from source.
+target/
+web/node_modules/
+web/dist/
+src-tauri/target/
+src-tauri/gen/
+corpus/raw/
+corpus/backup/
+corpus/text/
+corpus/*.db
+corpus/*.log
+corpus/qa/*.md
+design/
+.venv/
+.cache/

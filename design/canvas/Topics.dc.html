@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Topics — Trinity Explained</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0;background:#F6F5F1}
+a{color:#33449A}a:hover{color:#232F6E}
+button{font:inherit}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F6F5F1; color: #1B1E27; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #DEDBD3">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1B1E27">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="9" r="6" fill="none" stroke="#2E5AAC" stroke-width="2"></circle><circle cx="9" cy="23" r="6" fill="none" stroke="#B5561C" stroke-width="2"></circle><circle cx="25" cy="23" r="6" fill="none" stroke="#1D7366" stroke-width="2"></circle></svg>
+<span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-family: Newsreader, Georgia, serif; font-size: 22px; font-weight: 600">Trinity Explained</span><span style="font-size: 12px; color: #5A5F6B">through the classical writers</span></span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px">
+<a href="Main.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Explanations</a>
+<a href="Bible.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Reference</a>
+<a href="Topics.dc.html" aria-current="page" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #33449A">Topics</a>
+<a href="Questions.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Q&amp;A</a>
+</nav>
+</div>
+</header>
+
+<main style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 72px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 720px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #33449A">Topics</span>
+<h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 44px; line-height: 1.1; font-weight: 500">Themes and topics on the Trinity</h1>
+<p style="margin: 0; font-size: 17px; color: #4A4F5B">Every topic links to the exact paragraph where each writer makes the point.</p>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; color: #4A4F5B; flex: 0 1 340px">Search topics
+<input type="search" placeholder="e.g. eternal generation" style="min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid #C9C5BB; background: #FFFFFF; font: inherit; font-weight: 400; color: #1B1E27"></label>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+<nav aria-label="Themes" style="flex: 1 1 280px; min-width: 0; background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 14px; padding: 10px; display: flex; flex-direction: column; gap: 2px">
+<span style="padding: 8px 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A5F6B">Themes</span>
+<sc-for list="{{themes}}" as="t" hint-placeholder-count="26">
+<button type="button" onClick="{{t.pick}}" aria-pressed="{{t.selected}}" title="{{t.full}}" style="{{t.style}}"><span style="flex: 1 1 auto">{{t.title}}</span><span style="font-size: 12px; color: {{t.countColor}}">{{t.n}}</span></button>
+</sc-for>
+</nav>
+
+<section aria-label="Topics in theme" style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; color: #5A5F6B">Theme · {{cur.n}} topics · {{cur.q}} questions</span>
+<h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 34px; line-height: 1.15; font-weight: 500">{{cur.title}}</h2>
+<p style="margin: 0; color: #33373F">{{cur.desc}}</p>
+</div>
+
+<sc-if value="{{hasTopics}}" hint-placeholder-val="{{ true }}">
+<sc-for list="{{topics}}" as="tp" hint-placeholder-count="3">
+<article id="topic-{{tp.id}}" style="{{tp.cardStyle}}">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: center">
+<button type="button" onClick="{{tp.toggle}}" aria-expanded="{{tp.expanded}}" style="flex: 1 1 360px; min-height: 44px; display: flex; align-items: center; gap: 14px; padding: 0; border: 0; background: transparent; color: #1B1E27; cursor: pointer; text-align: left">
+<span style="{{tp.chevron}}"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 8 5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+<span style="font-family: Newsreader, Georgia, serif; font-size: 23px; line-height: 1.3; font-weight: 600">{{tp.title}}</span>
+</button>
+<a href="Questions.dc.html" onClick="{{tp.goQuestions}}" style="font-size: 14px; font-weight: 600; white-space: nowrap">{{tp.q}} questions →</a>
+</div>
+<sc-if value="{{tp.open}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 4px">
+<sc-if value="{{tp.hasAns}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #33449A">Answer</span>
+<p style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 19px; line-height: 1.6; color: #1B1E27; white-space: pre-line">{{tp.ans}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; align-items: center">
+<sc-for list="{{tp.verses}}" as="v" hint-placeholder-count="2"><a href="Bible.dc.html" onClick="{{v.go}}" style="display: inline-flex; align-items: center; min-height: 30px; padding: 3px 10px; border-radius: 999px; border: 1px solid #C9CEE6; background: #F5F6FB; text-decoration: none; color: #232F6E; font-size: 13px; font-weight: 500">{{v.ref}}</a></sc-for>
+</div>
+</div>
+</sc-if>
+<div style="background: #F1F3FA; border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #33449A">What earlier Christian writers thought</span>
+<p style="margin: 0; font-size: 15px; color: #2A2E37">{{tp.cmp}}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 0">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #5A5F6B; padding-bottom: 6px">Where they say it</span>
+<sc-for list="{{tp.refs}}" as="r" hint-placeholder-count="3">
+<a href="Reader.dc.html" onClick="{{r.go}}" style="display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 12px 0; border-top: 1px solid #ECEAE4; text-decoration: none; color: #1B1E27">
+<span style="flex: 0 0 200px; display: flex; flex-direction: column; font-size: 14px"><span style="font-weight: 600">{{r.author}}</span><span style="color: #33449A; font-weight: 500">{{r.where}}</span></span>
+<span style="flex: 1 1 320px; font-family: Newsreader, Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.45; color: #2A2E37">“{{r.quote}}”</span>
+</a>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</article>
+</sc-for>
+</sc-if>
+<sc-if value="{{noTopics}}" hint-placeholder-val="{{ false }}">
+<div style="background: #FFFFFF; border: 1px dashed #C9C5BB; border-radius: 14px; padding: 28px; color: #4A4F5B">{{emptyText}}</div>
+</sc-if>
+</section>
+</div>
+</main>
+<footer style="margin-top: 48px; background: #1B1E27; color: #D5D8E0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-size: 14px">
+<span style="font-family: Newsreader, Georgia, serif; font-size: 18px; color: #FFFFFF">Trinity Explained</span>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href="Books.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; color: #FFFFFF; font-weight: 600; text-decoration: underline">Early Writings</a>
+</nav>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { k: 'one-god-three-persons', data: null, failed: false, focus: null, navTarget: null }; this.themeOrder = []; }
+  componentDidMount() {
+    fetch('/_blob/8f8630d3410720d75e2b36de19feabba')
+      .then((r) => r.json())
+      .then((list) => {
+        const map = {};
+        list.forEach((th) => { map[th.key] = th; });
+        this.themeOrder = list.map((th) => th.key);
+        this.setState({ data: map }, () => this.resolveNav());
+      })
+      .catch(() => this.setState({ failed: true }));
+    this.listenNav('topics', (m) => this.setState({ navTarget: m }, () => this.resolveNav()));
+  }
+  componentDidUpdate(prev, prevState) {
+    if (this.state.focus && this.state.focus !== prevState.focus) {
+      setTimeout(() => {
+        const el = document.getElementById('topic-' + this.state.focus);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+    }
+  }
+  componentWillUnmount() { if (this.navOff) this.navOff(); }
+  norm(s) { return String(s || '').toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim(); }
+  resolveNav() {
+    const m = this.state.navTarget, data = this.state.data;
+    if (!m || !data) return;
+    if (typeof m.themeIndex === 'number' && this.themeOrder[m.themeIndex]) {
+      this.setState({ k: this.themeOrder[m.themeIndex], focus: null, navTarget: null });
+      return;
+    }
+    const want = this.norm(m.topicTitle);
+    for (const key of this.themeOrder) {
+      const hit = data[key].topics.find((t) => t.id === m.topicId || (want && this.norm(t.title) === want));
+      if (hit) { this.setState({ k: key, focus: hit.id, navTarget: null }); return; }
+    }
+    this.setState({ navTarget: null });
+  }
+  sendNav(msg) {
+    const m = Object.assign({}, msg, { t: Date.now() });
+    try { localStorage.setItem('trinity-nav', JSON.stringify(m)); } catch (e) {}
+    try { const bc = new BroadcastChannel('trinity-nav'); bc.postMessage(m); bc.close(); } catch (e) {}
+  }
+  listenNav(to, fn) {
+    const take = (m) => { if (m && m.to === to && Date.now() - m.t < 15000) fn(m); };
+    try {
+      const raw = localStorage.getItem('trinity-nav');
+      if (raw) { const m = JSON.parse(raw); if (m.to === to) { localStorage.removeItem('trinity-nav'); take(m); } }
+    } catch (e) {}
+    const onStorage = (e) => { if (e.key === 'trinity-nav' && e.newValue) { try { take(JSON.parse(e.newValue)); } catch (x) {} } };
+    window.addEventListener('storage', onStorage);
+    let bc = null;
+    try { bc = new BroadcastChannel('trinity-nav'); bc.onmessage = (e) => take(e.data); } catch (e) {}
+    this.navOff = () => { window.removeEventListener('storage', onStorage); if (bc) bc.close(); };
+  }
+  renderVals() {
+    const T = [
+      ['method-faith-reason','Approaching the Mystery: Faith, Reason and Authority',10,197,'Faith & Reason'],
+      ['knowing-god','Knowing God and His Incomprehensibility',11,150,'Knowing God'],
+      ['divine-names-language','Divine Names and Theological Language',9,259,'Divine Names'],
+      ['divine-nature-attributes','The Divine Nature and Attributes',9,182,'God’s Nature'],
+      ['one-god-three-persons','One God: Monotheism and the Trinity',11,292,'One God'],
+      ['persons-and-essence','Persons, Essence and Their Distinction',9,206,'Three Persons'],
+      ['the-father','God the Father',7,71,'The Father'],
+      ['eternal-generation','The Eternal Generation of the Son',8,401,'Begotten Son'],
+      ['son-eternity','The Son’s Eternity and Pre-existence',9,373,'Eternal Son'],
+      ['son-deity','The Full Deity of the Son',9,521,'Son’s Deity'],
+      ['son-equality','The Son’s Equality and Texts of Subordination',12,344,'Son’s Equality'],
+      ['son-titles-images','Word, Wisdom, Image and Radiance',9,104,'Word & Wisdom'],
+      ['son-creator','The Son as Creator and Proverbs 8',8,161,'Creator Son'],
+      ['spirit-deity-personhood','The Holy Spirit’s Deity and Personhood',8,434,'Spirit’s Deity'],
+      ['spirit-procession-mission','The Spirit’s Procession, Names and Mission',10,257,'Spirit’s Procession'],
+      ['inseparable-operations','Inseparable Works and Distinct Roles',11,188,'One Work'],
+      ['old-testament-revelation','The Trinity in the Old Testament',13,286,'Old Testament'],
+      ['incarnation-person-of-christ','The Incarnation and the Person of Christ',10,404,'Incarnation'],
+      ['redemption-mediation','Redemption, Atonement and Christ’s Mediation',14,330,'Redemption'],
+      ['worship-and-honour','Worship, Glory and Baptism in the Triune Name',12,212,'Worship'],
+      ['communion-with-god','Communion with the Father, Son and Spirit',9,155,'Communion'],
+      ['image-of-trinity-in-mind','The Image of the Trinity in the Human Mind',10,276,'God’s Image'],
+      ['key-new-testament-texts','Key New Testament Texts on Father and Son',13,142,'New Testament'],
+      ['controversies-and-fathers','Arian Controversy and Patristic Witness',9,105,'Early Church'],
+      ['one-creator-against-gnostics','One Creator God against Gnostics and Marcion',11,314,'One Creator'],
+      ['related-questions','Related Questions beyond the Trinity',21,249,'Related']
+    ];
+    const D = {
+      'one-god-three-persons': {
+        desc: 'How confessing the Son and Spirit as God fits with there being one God, answering charges of tritheism and readings of texts on the one, only and true God.',
+        topics: [
+          { id: 1003, title: 'How can the Son and Spirit be God without there being more than one God?', q: 156,
+            cmp: 'All the authors agree that confessing the Son and Spirit as God introduces neither a second or third God nor a single Person under several names. Hilary, Hippolytus, Ambrose, Augustine, Novatian, Waterland and Bickersteth all reject the Sabellian or modalist reading.',
+            refs: [
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book IV', quote: 'God is not robbed, He is still God, if His Son share the Godhead. For the case is that of God from God, of One from One, of God Who is One because God is from Him.' },
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book V', quote: 'I shall take care that in our assertion of the One true God I give no cover to the Sabellian heresy that the Father is one Person with the Son' },
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book VII', quote: 'Our adversaries are blind to the fact that His assertion that He is not alone is consistent with unity; that though He is One He is not solitary.' }
+            ] },
+          { id: 526, title: 'Does confessing the Son as God mean worshipping two Gods?', q: 27,
+            cmp: 'All the authors answer no: confessing and worshipping the Son as God does not make two Gods, and Hilary, Athanasius and Hippolytus equally insist that God is not one solitary Person, so the Father–Son distinction is real.',
+            refs: [
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book V', quote: 'We teach that it is by no confusion of the Two that God is One; we do not rend Him in pieces by preaching a plurality of Gods, nor yet do we profess a distinction only in name.' },
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book VI', quote: 'true God the Father and true God the Son, must be confessed as One true God, by unity of nature and not by confusion of Persons' }
+            ] }
+        ] },
+      'persons-and-essence': {
+        desc: 'Whether the Father, Son and Spirit are really distinct, which words express three Persons in one God, and how each Person dwells in the others.',
+        topics: [
+          { id: 1002, title: 'Are the Father, Son and Holy Spirit really distinct Persons in one undivided substance?', q: 96,
+            cmp: 'All the authors agree that the Father, Son and Holy Spirit are really distinct and not one Person under several names, and they reject Sabellius, Noetus and Praxeas while holding one God.',
+            refs: [
+              { author: 'Augustine of Hippo', work: 'On the Holy Trinity', place: 'Book VII', quote: 'there is both Father, and Son, and Holy Spirit; and that the Son is not the same with the Father, nor the Holy Spirit the same with the Father or the Son' },
+              { author: 'Ambrose of Milan', work: 'On the Holy Spirit', place: 'Book II, Chapter I', quote: 'for the Holy Spirit and the Son are not one Person [unus] but one Substance [unum].' }
+            ] },
+          { id: 215, title: 'What does the mutual indwelling of the Persons mean?', q: 9,
+            cmp: 'Hilary of Poitiers and Basil of Caesarea agree that the Father being in the Son and the Son in the Father expresses one shared nature while the Persons stay distinct.',
+            refs: [
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book VIII', quote: 'to confess the Father in the Son and the Son in the Father through the unity of an indivisible nature, not confused but inseparable, not intermingled but identical, not conjoined but coexisting' },
+              { author: 'Hilary of Poitiers', work: 'On the Trinity', place: 'Book VII', quote: 'this being in God is not the presence of one thing within another, as a body inside another body, but that the life and subsistence of Christ is such that He is within the subsisting God' }
+            ] }
+        ] }
+    };
+    const { k, data, failed, focus } = this.state;
+    const row = T.find((t) => t[0] === k);
+    const raw = (data && data[k]) || D[k];
+    const d = raw && {
+      desc: raw.desc,
+      topics: raw.topics.map((tp) => ({
+        ...tp,
+        cardStyle: 'scroll-margin-top: 24px; background: #FFFFFF; border-radius: 14px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; ' +
+          (tp.id === focus ? 'border: 2px solid #33449A; box-shadow: 0 0 0 6px rgba(51,68,154,0.12);' : 'border: 1px solid #DEDBD3;'),
+        goQuestions: () => this.sendNav({ to: 'questions', topicTitle: tp.title }),
+        hasAns: !!tp.ans, ans: tp.ans ? tp.ans.text : '',
+        ...(() => {
+          const shown = (this.state.openTopics || {})[tp.id];
+          const open = shown === undefined ? tp.id === focus : shown;
+          return {
+            open, expanded: open ? 'true' : 'false',
+            chevron: 'flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; background: #F1F3FA; color: #33449A; display: flex; align-items: center; justify-content: center; ' + (open ? 'transform: rotate(180deg);' : ''),
+            toggle: () => this.setState({ openTopics: Object.assign({}, this.state.openTopics, { [tp.id]: !open }) })
+          };
+        })(),
+        verses: tp.ans ? tp.ans.scripture.map((ref) => ({ ref, go: () => this.sendNav({ to: 'bible', ref }) })) : [],
+        refs: tp.refs.map((r) => ({
+          ...r, where: r.place ? r.work + ' · ' + r.place : r.work,
+          go: () => this.sendNav({ to: 'reader', quote: r.quote,
+            work: r.workId || ({ 'Hilary of Poitiers': 'hilary-on-the-trinity', 'Ambrose of Milan': 'ambrose-on-the-holy-spirit', 'Augustine of Hippo': 'augustine-on-the-trinity' })[r.author] })
+        }))
+      }))
+    };
+    return {
+      themes: T.map((t) => ({
+        title: t[4] || t[1], full: t[1], n: t[2], selected: t[0] === k ? 'true' : 'false',
+        countColor: t[0] === k ? '#D5D8E0' : '#5A5F6B',
+        pick: () => this.setState({ k: t[0], focus: null }),
+        style: 'display: flex; gap: 10px; align-items: center; text-align: left; min-height: 44px; padding: 8px 10px; border: 0; border-radius: 8px; cursor: pointer; font-size: 14px; line-height: 1.3; ' +
+          (t[0] === k ? 'background: #1B1E27; color: #FFFFFF; font-weight: 600;' : 'background: transparent; color: #1B1E27; font-weight: 500;')
+      })),
+      cur: { title: row[1], n: row[2], q: row[3], desc: d ? d.desc : 'Topics in this theme, each with how the writers compare and links to their words.' },
+      topics: d ? d.topics : [],
+      hasTopics: !!d, noTopics: !d,
+      emptyText: failed ? 'The topics could not be loaded. Reload the page to try again.' : 'Loading the topics in this theme…'
+    };
+  }
+}
+</script>
+</body>
+</html>

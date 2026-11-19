@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Early Writings — Trinity Explained</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap">
+<style>
+body{margin:0;background:#F6F5F1}
+a{color:#33449A}a:hover{color:#232F6E}
+button{font:inherit}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F6F5F1; color: #1B1E27; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.55">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #DEDBD3">
+<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1B1E27">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="9" r="6" fill="none" stroke="#2E5AAC" stroke-width="2"></circle><circle cx="9" cy="23" r="6" fill="none" stroke="#B5561C" stroke-width="2"></circle><circle cx="25" cy="23" r="6" fill="none" stroke="#1D7366" stroke-width="2"></circle></svg>
+<span style="display: flex; flex-direction: column; line-height: 1.15"><span style="font-family: Newsreader, Georgia, serif; font-size: 22px; font-weight: 600">Trinity Explained</span><span style="font-size: 12px; color: #5A5F6B">through the classical writers</span></span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px">
+<a href="Main.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Explanations</a>
+<a href="Bible.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Reference</a>
+<a href="Topics.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Topics</a>
+<a href="Questions.dc.html" style="padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #1B1E27">Q&amp;A</a>
+</nav>
+</div>
+</header>
+
+<main style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 72px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 760px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #33449A">Early Writings</span>
+<h1 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 44px; line-height: 1.1; font-weight: 500">Early Christian writings</h1>
+<p style="margin: 0; font-size: 17px; color: #4A4F5B">The public-domain texts behind every answer on this site. Read any of them here, chapter by chapter, with footnotes and Scripture references.</p>
+</div>
+
+<div role="group" aria-label="Era" style="display: flex; gap: 6px; flex-wrap: wrap">
+<sc-for list="{{eras}}" as="e" hint-placeholder-count="5">
+<button type="button" onClick="{{e.pick}}" aria-pressed="{{e.selected}}" style="{{e.style}}">{{e.label}}</button>
+</sc-for>
+</div>
+
+<sc-for list="{{groups}}" as="g" hint-placeholder-count="4">
+<section style="display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 28px; font-weight: 500">{{g.label}}</h2>
+<span style="font-size: 14px; color: #5A5F6B">{{g.range}}</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 16px">
+<sc-for list="{{g.books}}" as="b" hint-placeholder-count="4">
+<a href="Reader.dc.html" onClick="{{b.go}}" style="text-decoration: none; color: #1B1E27; background: #FFFFFF; border: 1px solid #DEDBD3; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column">
+<div style="{{g.cover}}">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85">{{b.date}}</span>
+<span style="font-family: Newsreader, Georgia, serif; font-size: 22px; line-height: 1.2; font-weight: 600">{{b.title}}</span>
+</div>
+<div style="padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1 1 auto">
+<span style="font-weight: 600">{{b.author}}</span>
+<span style="font-size: 13px; color: #5A5F6B">{{b.tradition}}</span>
+<span style="font-size: 13px; color: #5A5F6B">{{b.words}} words · {{b.refs}} Bible references</span>
+<span style="margin-top: auto; padding-top: 10px; font-size: 14px; font-weight: 600; color: #33449A">Read the book →</span>
+</div>
+</a>
+</sc-for>
+</div>
+</section>
+</sc-for>
+</main>
+<footer style="margin-top: 48px; background: #1B1E27; color: #D5D8E0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; font-size: 14px">
+<span style="font-family: Newsreader, Georgia, serif; font-size: 18px; color: #FFFFFF">Trinity Explained</span>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 20px">
+<a href="Books.dc.html" style="min-height: 44px; display: inline-flex; align-items: center; color: #FFFFFF; font-weight: 600; text-decoration: underline">Early Writings</a>
+</nav>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { era: 'all' }; }
+  sendNav(msg) {
+    const m = Object.assign({}, msg, { t: Date.now() });
+    try { localStorage.setItem('trinity-nav', JSON.stringify(m)); } catch (e) {}
+    try { const bc = new BroadcastChannel('trinity-nav'); bc.postMessage(m); bc.close(); } catch (e) {}
+  }
+  renderVals() {
+    const B = [
+      ['pre-nicene', 'Against Heresies', 'Irenaeus of Lyons', 'c. 180', 'Patristic (East/West)', '219,161', '1,594'],
+      ['pre-nicene', 'Against the Heresy of One Noetus', 'Hippolytus of Rome', 'c. 200–210', 'Patristic (West)', '6,350', '60'],
+      ['pre-nicene', 'A Treatise Concerning the Trinity', 'Novatian', 'c. 250', 'Patristic (West)', '32,708', '251'],
+      ['nicene', 'Four Discourses Against the Arians', 'Athanasius of Alexandria', 'c. 339–359', 'Patristic (East)', '118,621', '1,020'],
+      ['nicene', 'On the Trinity (De Trinitate)', 'Hilary of Poitiers', 'c. 356–360', 'Patristic (West)', '181,355', '803'],
+      ['nicene', 'On the Holy Spirit (De Spiritu Sancto)', 'Basil of Caesarea', 'c. 375', 'Patristic (East)', '35,891', '607'],
+      ['nicene', 'On “Not Three Gods” (To Ablabius)', 'Gregory of Nyssa', 'c. 375–390', 'Patristic (East)', '5,521', '12'],
+      ['nicene', 'Against Eunomius', 'Gregory of Nyssa', 'c. 380–383', 'Patristic (East)', '250,017', '844'],
+      ['nicene', 'On the Holy Spirit', 'Ambrose of Milan', '381', 'Patristic (West)', '57,162', '658'],
+      ['nicene', 'On the Holy Trinity (De Trinitate)', 'Augustine of Hippo', 'c. 400–416', 'Patristic (West)', '191,849', '1,029'],
+      ['post-reformation', 'Of Communion with God the Father, Son, and Holy Ghost', 'John Owen', '1657', 'Reformed (Puritan)', '137,285', '2,285'],
+      ['post-reformation', 'A Brief Declaration and Vindication of the Doctrine of the Trinity', 'John Owen', '1669', 'Reformed (Puritan)', '43,624', '413'],
+      ['post-reformation', 'A Vindication of Christ’s Divinity', 'Daniel Waterland', '1719', 'Anglican', '130,992', '208'],
+      ['post-reformation', 'An Unpublished Essay on the Trinity', 'Jonathan Edwards', 'c. 1730s', 'Reformed (New England)', '7,822', '68'],
+      ['modern', 'The Rock of Ages', 'Edward Henry Bickersteth', '1859', 'Anglican (Evangelical)', '49,485', '1,029'],
+      ['modern', 'The Biblical Doctrine of the Trinity', 'Benjamin B. Warfield', '1915', 'Reformed (Princeton)', '15,314', '125']
+    ];
+    const E = [
+      ['pre-nicene', 'Before Nicaea', 'c. 180–250', '#2E5AAC'],
+      ['nicene', 'The Nicene Fathers', 'c. 339–416', '#7E3A10'],
+      ['post-reformation', 'After the Reformation', '1657–1730s', '#11514A'],
+      ['modern', 'Modern', '1859–1915', '#33373F']
+    ];
+    const IDS = {
+      'Against Heresies|Irenaeus of Lyons': 'irenaeus-against-heresies',
+      'Against the Heresy of One Noetus|Hippolytus of Rome': 'hippolytus-against-noetus',
+      'A Treatise Concerning the Trinity|Novatian': 'novatian-on-the-trinity',
+      'Four Discourses Against the Arians|Athanasius of Alexandria': 'athanasius-against-arians',
+      'On the Trinity (De Trinitate)|Hilary of Poitiers': 'hilary-on-the-trinity',
+      'On the Holy Spirit (De Spiritu Sancto)|Basil of Caesarea': 'basil-on-the-holy-spirit',
+      'On “Not Three Gods” (To Ablabius)|Gregory of Nyssa': 'gregory-nyssa-not-three-gods',
+      'Against Eunomius|Gregory of Nyssa': 'gregory-nyssa-against-eunomius',
+      'On the Holy Spirit|Ambrose of Milan': 'ambrose-on-the-holy-spirit',
+      'On the Holy Trinity (De Trinitate)|Augustine of Hippo': 'augustine-on-the-trinity',
+      'Of Communion with God the Father, Son, and Holy Ghost|John Owen': 'owen-communion-with-god',
+      'A Brief Declaration and Vindication of the Doctrine of the Trinity|John Owen': 'owen-brief-declaration-trinity',
+      'A Vindication of Christ’s Divinity|Daniel Waterland': 'waterland-vindication',
+      'An Unpublished Essay on the Trinity|Jonathan Edwards': 'edwards-essay-on-the-trinity',
+      'The Rock of Ages|Edward Henry Bickersteth': 'bickersteth-rock-of-ages',
+      'The Biblical Doctrine of the Trinity|Benjamin B. Warfield': 'warfield-biblical-doctrine-trinity'
+    };
+    const era = this.state.era;
+    const pills = [['all', 'All eras']].concat(E.map((e) => [e[0], e[1]]));
+    return {
+      eras: pills.map(([id, label]) => ({
+        label, selected: id === era ? 'true' : 'false',
+        pick: () => this.setState({ era: id }),
+        style: 'min-height: 44px; padding: 0 16px; border-radius: 999px; cursor: pointer; font-size: 15px; font-weight: 600; ' +
+          (id === era ? 'background: #1B1E27; color: #FFFFFF; border: 1px solid #1B1E27;' : 'background: #FFFFFF; color: #1B1E27; border: 1px solid #C9C5BB;')
+      })),
+      groups: E.filter((e) => era === 'all' || e[0] === era).map((e) => ({
+        label: e[1], range: e[2],
+        cover: 'min-height: 128px; box-sizing: border-box; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; color: #FFFFFF; background: ' + e[3] + ';',
+        books: B.filter((b) => b[0] === e[0]).map((b) => ({ title: b[1], author: b[2], date: b[3], tradition: b[4], words: b[5], refs: b[6],
+          go: () => this.sendNav({ to: 'reader', work: IDS[b[1] + '|' + b[2]] }) }))
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
