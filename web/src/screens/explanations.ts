@@ -10,7 +10,7 @@ interface Teaching {
   notes: string[];
   cap: string;
   note?: { title: string; text: string; see: number };
-  /** "What does this mean?" and "How these passages support it" (AI-written). */
+  /** "What does this mean?" and how the supporting verses support it (AI-written). */
   meaning?: string;
   support?: string;
   edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean };
@@ -51,7 +51,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
           <h2 id="explain-h" class="small-caps">What does this mean?</h2>
           ${editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${linkTerms(cur.meaning, gl, seen, cur.n)}</p>`, { text: cur.meaning, edited: cur.edited?.meaning, label: 'explanation' })}
         </section>` : '';
-  const support = cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support"><strong>How these passages support it.</strong> ${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
+  const support = cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support">${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
 
   const verses = cur.verses.map((v) => `<a class="card verse-card" href="${href('reference', { exact: v.ref })}"><b>${esc(v.label)}</b><span class="verse-text">${esc(v.text)}</span></a>`).join('');
 
@@ -92,9 +92,9 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       </figure>
     </div>
 
-    <section aria-label="From the Bible" style="display: flex; flex-direction: column; gap: 14px">
+    <section aria-label="Supporting verses" style="display: flex; flex-direction: column; gap: 14px">
       <div class="row" style="justify-content: space-between; align-items: baseline">
-        <h2 style="font-size: 26px">From the Bible</h2>
+        <h2 style="font-size: 26px">Supporting verses</h2>
         <span style="font-size: 13px; color: var(--muted)">${esc(cur.refs)} · Berean Standard Bible</span>
       </div>
       ${support}

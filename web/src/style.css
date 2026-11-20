@@ -144,8 +144,7 @@ p { margin: 0; }
 .kw-def { font-family: var(--read); font-size: 18px; line-height: 1.6; color: var(--ink); max-width: 75ch; }
 .kw-used { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; }
 .kw-used .small-caps { margin-right: 4px; }
-.support { font-family: var(--read); font-size: 17px; line-height: 1.6; color: var(--ink-2); max-width: 75ch; }
-.support strong { font-family: var(--sans); font-size: 15px; color: var(--ink); }
+.support { font-family: var(--read); font-size: 17px; line-height: 1.6; color: var(--ink-2); }
 .lesson-nav { display: flex; flex-wrap: wrap; gap: 12px; }
 .note { padding: 14px 18px; border-radius: 16px; background: var(--mist); font-size: 14px; color: var(--ink-2); }
 .diagram-card { flex: 1 1 520px; min-width: 0; margin: 0; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
