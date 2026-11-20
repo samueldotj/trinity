@@ -46,7 +46,7 @@ def parse_refs(s):
 
 
 GROUPS = [
-    ('The Nature of God', 'Indivisibility and one divine essence are theological conclusions drawn from Scripture rather than statements expressed in those exact technical terms.'),
+    ('The Nature of God', ''),
     ('The Three Divine Persons', ''),
     ('Relationships Within the Trinity', 'The terms eternal generation, procession, perichoresis, and inseparable operations are theological formulations that explain the combined biblical witness.'),
     ('How God Reveals Himself', ''),
