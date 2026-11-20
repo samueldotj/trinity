@@ -1,6 +1,7 @@
 import { api } from '../api';
 import { draw, LAYOUT } from '../diagram';
 import { editable, wireEditing } from '../edit';
+import { type Glossary, linkTerms } from '../glossary';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
@@ -12,13 +13,10 @@ interface Teaching {
   /** "What does this mean?" and "How these passages support it" (AI-written). */
   meaning?: string;
   support?: string;
-  /** Glossary keys for the key words this teaching uses. */
-  terms?: string[];
   edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean };
   topic: { id: number; title: string; theme: string; q: number };
 }
-interface Term { term: string; def: string; edited?: boolean }
-interface Data { groups: { title: string; note: string }[]; glossary?: Record<string, Term>; teachings: Teaching[] }
+interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; teachings: Teaching[] }
 
 export async function renderExplanations(root: HTMLElement, params: URLSearchParams): Promise<void> {
   if (!root.querySelector('.lesson')) root.innerHTML = loading('Loading the teachings…');
@@ -45,16 +43,15 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
 
   const dg = draw(cur.n, cur.notes, cur.cap);
 
+  // Key words in the title and explanation link to the Key words page, the first mention of each only.
+  const gl = data.glossary || {};
+  const seen = new Set<string>();
+  const title = linkTerms(cur.title, gl, seen, cur.n);
   const meaning = cur.meaning ? `<section class="explain" aria-labelledby="explain-h">
           <h2 id="explain-h" class="small-caps">What does this mean?</h2>
-          ${editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${esc(cur.meaning)}</p>`, { text: cur.meaning, edited: cur.edited?.meaning, label: 'explanation' })}
+          ${editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${linkTerms(cur.meaning, gl, seen, cur.n)}</p>`, { text: cur.meaning, edited: cur.edited?.meaning, label: 'explanation' })}
         </section>` : '';
-  const terms = (cur.terms || []).map((k) => [k, data.glossary?.[k]] as const).filter((e): e is readonly [string, Term] => !!e[1]);
-  const keyWords = terms.length ? `<section class="key-words" aria-labelledby="kw-h">
-          <h2 id="kw-h" class="small-caps">Key words</h2>
-          <dl>${terms.map(([k, g]) => `<div><dt>${esc(g.term)}</dt><dd>${editable(`term:${k}:def`, esc(g.def), { text: g.def, edited: g.edited, label: `definition of ${g.term}` })}</dd></div>`).join('')}</dl>
-        </section>` : '';
-  const support = cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support"><strong>How these passages support it.</strong> ${esc(cur.support)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
+  const support = cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support"><strong>How these passages support it.</strong> ${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
 
   const verses = cur.verses.map((v) => `<a class="card verse-card" href="${href('reference', { exact: v.ref })}"><b>${esc(v.label)}</b><span class="verse-text">${esc(v.text)}</span></a>`).join('');
 
@@ -70,10 +67,9 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     <div class="lesson">
       <section class="lesson-text" aria-label="Teaching">
         <span class="lesson-num" aria-hidden="true">${cur.n}</span>
-        <h1><span class="sr-only">Teaching ${cur.n}: </span>${esc(cur.title)}</h1>
+        <h1><span class="sr-only">Teaching ${cur.n}: </span>${title}</h1>
         ${cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${esc(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : ''}
         ${meaning}
-        ${keyWords}
         ${cur.note ? `<aside class="note teaching-note" aria-label="${esc(cur.note.title)}"><strong>${esc(cur.note.title)}.</strong> ${esc(cur.note.text)}${
           T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: ${esc(T[cur.note.see - 1].title)} →</a>` : ''}</aside>` : ''}
         ${grp.note ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}

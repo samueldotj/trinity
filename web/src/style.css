@@ -123,12 +123,27 @@ p { margin: 0; }
 .lesson-text h1 { font-size: clamp(32px, 3.6vw, 46px); line-height: 1.08; }
 .lesson-text .detail { font-size: 19px; color: var(--ink-2); }
 .explain { display: flex; flex-direction: column; gap: 8px; }
-.explain h2, .key-words h2 { font-family: var(--sans); letter-spacing: 0.08em; }
+.explain h2 { font-family: var(--sans); letter-spacing: 0.08em; }
 .explain-text { font-family: var(--read); font-size: 18px; line-height: 1.6; color: var(--ink); }
-.key-words { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
-.key-words dl { margin: 0; display: flex; flex-direction: column; gap: 10px; }
-.key-words dt { font-weight: 600; font-size: 15px; color: var(--ink); }
-.key-words dd { margin: 2px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+/* A key word in an explanation: links to its definition on the Key words page. */
+.term-link { color: inherit; text-decoration: underline dotted var(--link); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.term-link:hover { color: var(--link-ink); text-decoration-style: solid; }
+
+/* ---------- Key words ---------- */
+.kw-head { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.kw-head h1 { font-size: clamp(32px, 3.6vw, 46px); line-height: 1.08; }
+.kw-head .detail { font-size: 18px; color: var(--ink-2); max-width: 60ch; }
+.kw-index { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+.kw-index a { min-height: 36px; display: inline-flex; align-items: center; padding: 0 12px; border: 1px solid var(--control); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: 14px; text-decoration: none; }
+.kw-index a:hover { border-color: var(--link); color: var(--link-ink); }
+.kw-list { display: flex; flex-direction: column; gap: 14px; }
+.kw-entry { padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; scroll-margin-top: 16px; }
+.kw-entry h2 { font-size: 26px; }
+.kw-entry.is-target { box-shadow: 0 0 0 3px var(--link); }
+.kw-entry:focus { outline: none; }
+.kw-def { font-family: var(--read); font-size: 18px; line-height: 1.6; color: var(--ink); max-width: 75ch; }
+.kw-used { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; }
+.kw-used .small-caps { margin-right: 4px; }
 .support { font-family: var(--read); font-size: 17px; line-height: 1.6; color: var(--ink-2); max-width: 75ch; }
 .support strong { font-family: var(--sans); font-size: 15px; color: var(--ink); }
 .lesson-nav { display: flex; flex-wrap: wrap; gap: 12px; }
