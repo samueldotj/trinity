@@ -16,6 +16,10 @@ interface Detail {
 
 const PAGE = 25;
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const plural = (n: number, word: string) => `${n} ${word}${n === 1 ? '' : 's'}`;
+/** "1 answer", "3 answers", or "9 answers from 7 writers" when some writers answer more than once. */
+const answersLabel = (answers: number, writers: number) =>
+  answers === writers ? plural(answers, 'answer') : `${plural(answers, 'answer')} from ${plural(writers, 'writer')}`;
 
 export async function renderQA(root: HTMLElement, params: URLSearchParams): Promise<void> {
   const state = {
@@ -46,21 +50,27 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     let body = '';
     if (isOpen && detail) {
       const d = detail;
-      const answers = d.answers.map((a, n) => `<div class="answer">
-          <div class="row" style="gap: 4px 10px; align-items: baseline"><b>${esc(a.author)}</b>
-            <a href="${href('reader', { work: a.workId, quote: a.quote })}" style="font-size: 14px; font-weight: 500">${esc(a.place ? `${a.work} · ${a.place}` : a.work)}</a></div>
-          ${editable(`question:${x.id}:answer:${n}`, `<p style="font-size: 15px; color: var(--ink-2)">${esc(a.answer)}</p>`, { text: a.answer, edited: d.edited?.answers[n], label: `${a.author}’s answer` })}
-          <blockquote class="quote">“${esc(a.quote)}”</blockquote>
-          <div class="row">${a.scripture.map((r) => `<a class="chip" href="${href('reference', { exact: r })}">${esc(r)}</a>`).join('')}</div>
-        </div>`).join('');
+      const answers = d.answers.map((a, n) => `<li class="answer">
+          <span class="a-badge" aria-hidden="true">A</span>
+          <div class="answer-main">
+            <div class="answer-head"><b>${esc(a.author)}</b>
+              <a href="${href('reader', { work: a.workId, quote: a.quote })}">${esc(a.place ? `${a.work} · ${a.place}` : a.work)} →</a></div>
+            ${editable(`question:${x.id}:answer:${n}`, `<p class="answer-text">${esc(a.answer)}</p>`, { text: a.answer, edited: d.edited?.answers[n], label: `${a.author}’s answer` })}
+            <blockquote class="quote">“${esc(a.quote)}”</blockquote>
+            ${a.scripture.length ? `<div class="row">${a.scripture.map((r) => `<a class="chip" href="${href('reference', { exact: r })}">${esc(r)}</a>`).join('')}</div>` : ''}
+          </div>
+        </li>`).join('');
       body = `<div class="qa-body">
         ${editingOn() ? editable(`question:${x.id}:text`, `<span class="small-caps">Question wording</span><p class="q" style="font-family: var(--display); font-size: 19px">${esc(d.question)}</p>`, { text: d.question, edited: d.edited?.text, label: 'question wording' }) : ''}
-        ${answers}
-        <div class="row"><a class="chip dark" href="${href('topics', { title: x.topic })}">Topic: ${esc(x.topic)}</a></div>
+        <span class="small-caps answers-label">${answersLabel(d.answers.length, new Set(d.answers.map((a) => a.author)).size)}</span>
+        <ol class="answers" aria-label="Answers">${answers}</ol>
+        <div class="qa-foot"><a class="chip dark" href="${href('topics', { title: x.topic })}">Topic: ${esc(x.topic)}</a>
+          <button type="button" class="linkish" data-q="${x.id}">Close this question</button></div>
       </div>`;
     }
-    return `<article class="card qa">
+    return `<article class="card qa${isOpen ? ' open' : ''}">
       <button type="button" class="qa-toggle" data-q="${x.id}" aria-expanded="${isOpen}">
+        <span class="q-badge" aria-hidden="true">Q</span>
         <span class="txt"><span class="meta">${esc(cap(x.cat))} · ${esc(x.theme)}</span><span class="q">${esc(x.question)}</span><span class="who">${esc(writers)}</span></span>
         <span class="round">${icon.chevron}</span>
       </button>${body}
@@ -83,7 +93,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     </div>
     ${res.topicName ? `<div class="banner"><span>Questions on the topic <strong>${esc(res.topicName)}</strong></span><button type="button" id="qa-clear">Show all questions</button></div>` : ''}
     <p class="status" role="status">${status}</p>
-    <div style="display: flex; flex-direction: column; gap: 12px">${items}</div>
+    <div class="qa-list">${items}</div>
     ${res.total > state.shown ? `<div class="more"><button type="button" class="btn" id="qa-more">Show ${PAGE} more questions</button></div>` : ''}
   </div>`;
 
