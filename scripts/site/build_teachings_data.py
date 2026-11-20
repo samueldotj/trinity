@@ -1,5 +1,6 @@
 """Build the 46 Explanations teachings: user's list + BSB verse text + a matched writers' topic and quote."""
 import json, re, sys
+from pathlib import Path
 
 bsb_path, topics_path, out_path = sys.argv[1:4]
 
@@ -198,6 +199,11 @@ def first_sentence(s):
     return m.group(1) if m else s
 
 
+# AI-written explanations and glossary, from scripts/build_teaching_explanations.py (optional).
+QA = Path(__file__).resolve().parents[2] / 'corpus' / 'qa'
+EXPLAIN = json.load(open(QA / 'teaching_explanations.json', encoding='utf8')) if (QA / 'teaching_explanations.json').exists() else {}
+GLOSSARY = json.load(open(QA / 'glossary.json', encoding='utf8')) if (QA / 'glossary.json').exists() else {}
+
 out, problems = [], []
 for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
     theme, tp = topics[tid]
@@ -210,11 +216,13 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
     out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail or DETAILS.get(i + 1, ''),
                 'refs': refs, 'cap': CAPTIONS[i + 1],
                 **({'note': dict(zip(('title', 'text', 'see'), TEACHING_NOTES[i + 1]))} if i + 1 in TEACHING_NOTES else {}),
+                **({'meaning': EXPLAIN[str(i + 1)]['meaning'], 'support': EXPLAIN[str(i + 1)]['support'],
+                    'terms': [k for k in EXPLAIN[str(i + 1)]['terms'] if k in GLOSSARY]} if str(i + 1) in EXPLAIN else {}),
                 'verses': verses, 'mode': mode, 'notes': notes,
                 'topic': {'id': tid, 'title': tp['title'], 'theme': theme, 'q': tp['q'], 'cmp': first_sentence(tp['cmp'])},
                 'quote': ref and {'author': ref['author'], 'work': ref['work'], 'workId': ref['workId'],
                                   'place': ref['place'], 'text': ref['quote']}})
 
-json.dump({'groups': [{'title': t, 'note': n} for t, n in GROUPS], 'teachings': out},
+json.dump({'groups': [{'title': t, 'note': n} for t, n in GROUPS], 'glossary': GLOSSARY, 'teachings': out},
           open(out_path, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 print('teachings', len(out), 'problems', problems)

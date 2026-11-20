@@ -386,16 +386,28 @@ fn question(id: &str) -> Result<Value, String> {
 
 // ---------- edits ----------
 
-/// The teachings, with your caption edits laid over the generated captions.
+/// The teachings and glossary, with your edits laid over the generated text.
 fn teachings_with_edits() -> Value {
     let mut out = teachings().clone();
     for t in out["teachings"].as_array_mut().into_iter().flatten() {
         let n = t["n"].as_u64().unwrap_or(0);
-        let (cap, cap_edited) = overlay(format!("teaching:{n}:caption"), &t["cap"]);
-        let (detail, detail_edited) = overlay(format!("teaching:{n}:detail"), &t["detail"]);
-        t["cap"] = cap;
-        t["detail"] = detail;
-        t["edited"] = json!({ "caption": cap_edited, "detail": detail_edited });
+        let mut edited = serde_json::Map::new();
+        for (field, name) in [("cap", "caption"), ("detail", "detail"), ("meaning", "meaning"), ("support", "support")] {
+            if t.get(field).is_none() {
+                continue;
+            }
+            let (text, was_edited) = overlay(format!("teaching:{n}:{name}"), &t[field]);
+            t[field] = text;
+            edited.insert(name.to_string(), json!(was_edited));
+        }
+        t["edited"] = Value::Object(edited);
+    }
+    if let Some(gl) = out.get_mut("glossary").and_then(Value::as_object_mut) {
+        for (key, entry) in gl.iter_mut() {
+            let (def, was_edited) = overlay(format!("term:{key}:def"), &entry["def"]);
+            entry["def"] = def;
+            entry["edited"] = json!(was_edited);
+        }
     }
     out
 }
@@ -418,11 +430,17 @@ pub fn original(key: &str) -> Option<String> {
     let text = match k.field {
         Field::ThemeDesc => theme_list().iter().find(|t| s(&t["key"]) == k.item)?["desc"].clone(),
         Field::ThemeShort => json!(builtin_label(&k.item)?),
-        Field::TeachingCaption | Field::TeachingDetail => {
+        Field::TeachingCaption | Field::TeachingDetail | Field::TeachingMeaning | Field::TeachingSupport => {
             let n: u64 = k.item.parse().ok()?;
-            let field = if k.field == Field::TeachingCaption { "cap" } else { "detail" };
-            teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?[field].clone()
+            let field = match k.field {
+                Field::TeachingCaption => "cap",
+                Field::TeachingDetail => "detail",
+                Field::TeachingMeaning => "meaning",
+                _ => "support",
+            };
+            teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?.get(field)?.clone()
         }
+        Field::TermDef => teachings()["glossary"].get(&k.item)?["def"].clone(),
         Field::TopicAnswer => topic_by_id(k.item.parse().ok()?)?["ans"].get("text")?.clone(),
         Field::TopicCompare => topic_by_id(k.item.parse().ok()?)?["cmp"].clone(),
         Field::QuestionText => questions_data()["q"].as_array()?.iter().find(|x| x[0].to_string() == k.item)?[1].clone(),
@@ -640,6 +658,19 @@ mod tests {
         set_edit("teaching:10:detail", None).unwrap();
         assert!(handle("teachings", &p(&[])).unwrap()["teachings"].as_array().unwrap().iter().all(|t| t["detail"] != ""));
         assert!(set_edit("teaching:99:caption", Some("x")).is_err());
+        set_edit("teaching:21:meaning", Some("My meaning.")).unwrap();
+        set_edit("teaching:21:support", Some("My support.")).unwrap();
+        set_edit("term:person:def", Some("My definition.")).unwrap();
+        let t = handle("teachings", &p(&[])).unwrap();
+        assert_eq!(t["teachings"][20]["meaning"], "My meaning.");
+        assert_eq!(t["teachings"][20]["edited"]["support"], true);
+        assert_eq!(t["glossary"]["person"]["def"], "My definition.");
+        assert_eq!(t["glossary"]["person"]["edited"], true);
+        set_edit("teaching:21:meaning", None).unwrap();
+        set_edit("teaching:21:support", None).unwrap();
+        set_edit("term:person:def", None).unwrap();
+        assert!(handle("teachings", &p(&[])).unwrap()["teachings"].as_array().unwrap().iter().all(|t| t["meaning"] != ""));
+        assert!(set_edit("term:no-such-term:def", Some("x")).is_err());
         assert!(set_edit("theme:no-such-theme:short", Some("x")).is_err());
     }
 
