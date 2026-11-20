@@ -56,9 +56,21 @@ export function spec(n: number): any {
   };
   return S[n] || S[1];
 }
-export function draw(n: number, fallbackNotes: string[], caption = ''): any {
+// Two layouts. wide: the design canvas (480 x 510 drawing in a 500 x 516 frame).
+// compact: for phones — a narrower triangle (360 x 510 drawing in a 372 x 516 frame) with larger text,
+// so that once it is scaled down to a phone's width the labels stay readable.
+export const LAYOUT = {
+  wide: { w: 500, h: 516, ix: 10, iy: 6, iw: 480, ih: 510 },
+  compact: { w: 372, h: 516, ix: 6, iy: 6, iw: 360, ih: 510 }
+};
+export function draw(n: number, fallbackNotes: string[], caption = '', compact = false): any {
   const sp = spec(n);
-  const P = { F: [240, 72, 54], S: [86, 330, 54], P: [394, 330, 54], G: [240, 228, 48], X: [240, 466, 30] };
+  const P = compact
+    ? { F: [180, 66, 50], S: [66, 326, 50], P: [294, 326, 50], G: [180, 222, 48], X: [180, 466, 30] }
+    : { F: [240, 72, 54], S: [86, 330, 54], P: [394, 330, 54], G: [240, 228, 48], X: [240, 466, 30] };
+  const cx = compact ? 180 : 240;
+  // Font sizes in drawing pixels: names, God's name, notes inside the circles, line labels, the box.
+  const fs = compact ? { name: 22, god: 24, note: 14, label: 14, box: 16 } : { name: 20, god: 22, note: 11, label: 12, box: 15 };
   const COL = { is: '#1B1E27', not: '#6B7080', rel: '#33449A', eq: '#6B7080', west: '#33449A', faint: '#C9C5BB' };
   const hi = sp.hi || '';
   const nodeState = (k) => (sp.hideG && k === 'G') ? 'display: none;' : (hi.indexOf(k) >= 0 ? 'opacity: 1; box-shadow: 0 0 0 6px rgba(51,68,154,0.16);' : (hi ? 'opacity: 0.35;' : 'opacity: 1;'));
@@ -86,7 +98,7 @@ export function draw(n: number, fallbackNotes: string[], caption = ''): any {
     });
     if (label) {
       const mx = sx + ux * len / 2, my = sy + uy * len / 2;
-      labels.push({ text: label, style: 'position: absolute; z-index: 3; left: ' + mx + 'px; top: ' + my + 'px; transform: translate(-50%, -50%); white-space: nowrap; padding: 2px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid ' + c + '; color: ' + (kind === 'faint' ? '#5A5F6B' : c) + '; font-size: 12px; font-weight: 600;' });
+      labels.push({ text: label, style: 'position: absolute; z-index: 3; left: ' + mx + 'px; top: ' + my + 'px; transform: translate(-50%, -50%); white-space: nowrap; padding: 2px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid ' + c + '; color: ' + (kind === 'faint' ? '#5A5F6B' : c) + '; font-size: ' + fs.label + 'px; font-weight: 600;' });
     }
   };
   const list = sp.e || [];
@@ -96,7 +108,11 @@ export function draw(n: number, fallbackNotes: string[], caption = ''): any {
   list.forEach((e) => seg(e[0], e[1], e[2], e[3], e[4]));
   // Single rings are centred on the middle of the triangle (y 244) and sized so their inside edge
   // clears every Person's circle by about 12px; the "everywhere" ripples stay centred on God.
-  const ringBase = (r, extra, cy = 244) => 'position: absolute; z-index: 0; box-sizing: border-box; left: ' + (240 - r) + 'px; top: ' + (cy - r) + 'px; width: ' + 2 * r + 'px; height: ' + 2 * r + 'px; border-radius: 50%; ' + extra;
+  // In the compact layout the rings become upright ellipses, keeping the same clearance around the Persons.
+  const ringBase = (r, extra, cy = 244) => {
+    const rx = compact ? r * 186 / 250 : r;
+    return 'position: absolute; z-index: 0; box-sizing: border-box; left: ' + (cx - rx) + 'px; top: ' + (cy - r) + 'px; width: ' + 2 * rx + 'px; height: ' + 2 * r + 'px; border-radius: 50%; ' + extra;
+  };
   const RINGS = {
     eternal: [[250, 'border: 4px solid #33449A;']],
     spirit: [[250, 'border: 3px dotted #33449A;']],
@@ -112,16 +128,16 @@ export function draw(n: number, fallbackNotes: string[], caption = ''): any {
   const gHollow = sp.hollow;
   const alt = 'Diagram: ' + caption;
   return {
-    alt, cap: caption, edges, labels,
+    alt, cap: caption, edges, labels, fs,
     rings: (RINGS[sp.ring] || []).map(([r, css, cy]) => ({ style: ringBase(r, css, cy) })),
     hasRingLabel: !!sp.ring, ringLabel: RLABEL[sp.ring] || '',
-    ringLabelStyle: 'position: absolute; z-index: 3; left: 240px; top: 436px; transform: translate(-50%, -50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: 12px; font-weight: 600;',
+    ringLabelStyle: 'position: absolute; z-index: 3; left: ' + cx + 'px; top: 436px; transform: translate(-50%, -50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: ' + fs.label + 'px; font-weight: 600;',
     nF: node('F', '#2E5AAC', '#2E5AAC', '#FFFFFF'),
     nS: node('S', sonBg, '#C2581B', '#FFFFFF'),
     nP: node('P', '#157A6E', '#157A6E', '#FFFFFF'),
     nG: node('G', gHollow ? '#FFFFFF' : '#12172B', '#12172B', gHollow ? '#12172B' : '#FFFFFF'),
     tF: notes.F, tS: sp.split && !sp.n ? 'God | man' : (sp.split ? notes.S + ' · God | man' : notes.S), tP: notes.P, tG: notes.G,
     hasBox: !!sp.box, box: sp.box || '',
-    boxStyle: 'position: absolute; z-index: 2; left: 130px; top: 440px; width: 220px; height: 52px; box-sizing: border-box; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10px; background: #F1EEE8; border: 2px solid #9AA0AD; color: #1B1E27; font-size: 15px; font-weight: 600;'
+    boxStyle: 'position: absolute; z-index: 2; left: ' + (cx - 110) + 'px; top: 440px; width: 220px; height: 52px; box-sizing: border-box; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 10px; background: #F1EEE8; border: 2px solid #9AA0AD; color: #1B1E27; font-size: ' + fs.box + 'px; font-weight: 600;'
   };
 }

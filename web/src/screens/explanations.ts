@@ -1,5 +1,5 @@
 import { api } from '../api';
-import { draw } from '../diagram';
+import { draw, LAYOUT } from '../diagram';
 import { editable, wireEditing } from '../edit';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
@@ -37,16 +37,6 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   }</optgroup>`).join('');
 
   const dg = draw(cur.n, cur.notes, cur.cap);
-  const diagram = `
-    ${dg.rings.map((r: { style: string }) => `<div style="${r.style}"></div>`).join('')}
-    ${dg.edges.map((e: { line: string; head: string; tail: string }) => `<div style="${e.line}"><div style="${e.head}"></div><div style="${e.tail}"></div></div>`).join('')}
-    <div style="${dg.nF}"><span style="font-family: var(--display); font-size: 20px; font-weight: 600">Father</span><span style="font-size: 11px; line-height: 1.2">${esc(dg.tF)}</span></div>
-    <div style="${dg.nS}"><span style="font-family: var(--display); font-size: 20px; font-weight: 600">Son</span><span style="font-size: 11px; line-height: 1.2">${esc(dg.tS)}</span></div>
-    <div style="${dg.nP}"><span style="font-family: var(--display); font-size: 20px; font-weight: 600">Spirit</span><span style="font-size: 11px; line-height: 1.2">${esc(dg.tP)}</span></div>
-    <div style="${dg.nG}"><span style="font-family: var(--display); font-size: 22px; font-weight: 600">God</span><span style="font-size: 11px; line-height: 1.2">${esc(dg.tG)}</span></div>
-    ${dg.hasBox ? `<div style="${dg.boxStyle}">${esc(dg.box)}</div>` : ''}
-    ${dg.labels.map((l: { style: string; text: string }) => `<span style="${l.style}">${esc(l.text)}</span>`).join('')}
-    ${dg.hasRingLabel ? `<span style="${dg.ringLabelStyle}">${esc(dg.ringLabel)}</span>` : ''}`;
 
   const verses = cur.verses.map((v) => `<a class="card verse-card" href="${href('reference', { exact: v.ref })}"><b>${esc(v.label)}</b><span class="verse-text">${esc(v.text)}</span></a>`).join('');
 
@@ -71,7 +61,10 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         </div>
       </section>
       <figure class="card diagram-card">
-        <div class="diagram-scroll"><div class="diagram" role="img" aria-label="${esc(dg.alt)}"><div class="diagram-inner">${diagram}</div></div></div>
+        <button type="button" class="diagram-open" aria-label="Enlarge diagram. ${esc(dg.alt)}">
+          <span class="diagram-fit" aria-hidden="true"></span>
+          <span class="diagram-hint">${icon.expand}Tap to enlarge</span>
+        </button>
         <figcaption class="caption">${editable(`teaching:${cur.n}:caption`, esc(dg.cap), { text: cur.cap, edited: cur.edited?.caption, label: 'diagram caption' })}</figcaption>
         <div class="legend">
           <span><i style="background: #1B1E27"></i>is</span>
@@ -95,7 +88,105 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     </section>
   </div>`;
 
+  const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
+  fitDiagram(open.querySelector<HTMLElement>('.diagram-fit')!, cur, root.querySelector<HTMLElement>('.diagram-card')!);
+  open.addEventListener('click', () => enlargeDiagram(cur, dg.cap));
+
   wireEditing(root, () => void renderExplanations(root, params));
   root.querySelector<HTMLSelectElement>('#jump')!.addEventListener('change', (e) =>
     navigate('explanations', { t: (e.target as HTMLSelectElement).value }, true));
+}
+
+type Layout = 'wide' | 'compact';
+
+function diagramHtml(t: Teaching, layout: Layout): string {
+  const dg = draw(t.n, t.notes, t.cap, layout === 'compact');
+  const L = LAYOUT[layout];
+  const name = (text: string, size: number) => `<span style="font-family: var(--display); font-size: ${size}px; font-weight: 600">${text}</span>`;
+  const note = (text: string) => `<span style="font-size: ${dg.fs.note}px; line-height: 1.2">${esc(text)}</span>`;
+  return `<div class="diagram" style="width: ${L.w}px; height: ${L.h}px"><div class="diagram-inner" style="left: ${L.ix}px; top: ${L.iy}px; width: ${L.iw}px; height: ${L.ih}px">
+    ${dg.rings.map((r: { style: string }) => `<div style="${r.style}"></div>`).join('')}
+    ${dg.edges.map((e: { line: string; head: string; tail: string }) => `<div style="${e.line}"><div style="${e.head}"></div><div style="${e.tail}"></div></div>`).join('')}
+    <div style="${dg.nF}">${name('Father', dg.fs.name)}${note(dg.tF)}</div>
+    <div style="${dg.nS}">${name('Son', dg.fs.name)}${note(dg.tS)}</div>
+    <div style="${dg.nP}">${name('Spirit', dg.fs.name)}${note(dg.tP)}</div>
+    <div style="${dg.nG}">${name('God', dg.fs.god)}${note(dg.tG)}</div>
+    ${dg.hasBox ? `<div style="${dg.boxStyle}">${esc(dg.box)}</div>` : ''}
+    ${dg.labels.map((l: { style: string; text: string }) => `<span style="${l.style}">${esc(l.text)}</span>`).join('')}
+    ${dg.hasRingLabel ? `<span style="${dg.ringLabelStyle}">${esc(dg.ringLabel)}</span>` : ''}
+  </div></div>`;
+}
+
+// Draws the diagram into `holder` and scales it to the card's width, never scrolling sideways.
+// Where the full design does not fit, the compact layout is used instead: its larger text keeps the
+// labels readable once scaled. Re-fits whenever the space changes (rotation, window resize).
+function fitDiagram(holder: HTMLElement, t: Teaching, card: HTMLElement): void {
+  let shown: Layout | '' = '';
+  const fit = () => {
+    if (!holder.isConnected) { ro.disconnect(); return; }
+    const cs = getComputedStyle(card);
+    const avail = card.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    if (avail <= 0) return;
+    const layout: Layout = avail >= LAYOUT.wide.w ? 'wide' : 'compact';
+    if (layout !== shown) { holder.innerHTML = diagramHtml(t, layout); shown = layout; }
+    const L = LAYOUT[layout], s = Math.min(1, avail / L.w);
+    holder.style.width = `${L.w * s}px`;
+    holder.style.height = `${L.h * s}px`;
+    holder.querySelector<HTMLElement>('.diagram')!.style.transform = `scale(${s})`;
+    card.classList.toggle('is-compact', layout === 'compact');
+  };
+  const ro = new ResizeObserver(fit);
+  ro.observe(card);
+  fit();
+}
+
+// Full-screen view: the diagram as large as the screen allows (turning a phone sideways gives more room),
+// in whichever layout shows the text larger. "Zoom in" doubles it and lets the reader pan around.
+function enlargeDiagram(t: Teaching, caption: string): void {
+  const dlg = document.createElement('dialog');
+  dlg.className = 'diagram-dialog';
+  dlg.setAttribute('aria-label', 'Diagram, enlarged');
+  dlg.innerHTML = `
+    <div class="diagram-dialog-bar">
+      <p class="caption">${esc(caption)}</p>
+      <button type="button" class="btn zoom" aria-pressed="false">Zoom in</button>
+      <button type="button" class="btn primary close">Close</button>
+    </div>
+    <div class="diagram-dialog-stage"><div class="diagram-fit" role="img" aria-label="Diagram: ${esc(caption)}"></div></div>`;
+  document.body.appendChild(dlg);
+  const stage = dlg.querySelector<HTMLElement>('.diagram-dialog-stage')!;
+  const holder = dlg.querySelector<HTMLElement>('.diagram-fit')!;
+  const zoomBtn = dlg.querySelector<HTMLButtonElement>('.zoom')!;
+  let zoom = 1, shown: Layout | '' = '';
+  const fit = () => {
+    const aw = stage.clientWidth - 24, ah = stage.clientHeight - 24;
+    const scale = (l: Layout) => Math.max(0.2, Math.min(aw / LAYOUT[l].w, ah / LAYOUT[l].h));
+    // Pick the layout whose note text (11px wide, 14px compact) comes out larger on this screen.
+    const layout: Layout = scale('wide') * 11 >= scale('compact') * 14 ? 'wide' : 'compact';
+    if (layout !== shown) { holder.innerHTML = diagramHtml(t, layout); shown = layout; }
+    const L = LAYOUT[layout], s = scale(layout) * zoom;
+    holder.style.width = `${L.w * s}px`;
+    holder.style.height = `${L.h * s}px`;
+    holder.querySelector<HTMLElement>('.diagram')!.style.transform = `scale(${s})`;
+  };
+  const ro = new ResizeObserver(fit);
+  const close = () => dlg.close();
+  zoomBtn.addEventListener('click', () => {
+    zoom = zoom === 1 ? 2 : 1;
+    zoomBtn.textContent = zoom === 1 ? 'Zoom in' : 'Fit to screen';
+    zoomBtn.setAttribute('aria-pressed', String(zoom !== 1));
+    fit();
+    stage.scrollTo({ left: (stage.scrollWidth - stage.clientWidth) / 2, top: 0 });
+  });
+  dlg.querySelector('.close')!.addEventListener('click', close);
+  window.addEventListener('hashchange', close);
+  dlg.addEventListener('close', () => {
+    ro.disconnect();
+    window.removeEventListener('hashchange', close);
+    dlg.remove();
+    document.querySelector<HTMLElement>('.diagram-open')?.focus();
+  });
+  dlg.showModal();
+  ro.observe(stage);
+  fit();
 }

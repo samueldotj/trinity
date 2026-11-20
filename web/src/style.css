@@ -125,10 +125,21 @@ p { margin: 0; }
 .lesson-nav { display: flex; flex-wrap: wrap; gap: 12px; }
 .note { padding: 14px 18px; border-radius: 16px; background: var(--mist); font-size: 14px; color: var(--ink-2); }
 .diagram-card { flex: 1 1 520px; min-width: 0; margin: 0; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.diagram-scroll { width: 100%; overflow-x: auto; display: flex; justify-content: center; }
-/* 500 x 516 leaves room for the outer ring (radius 250 around the triangle's middle). */
-.diagram { position: relative; flex: 0 0 500px; width: 500px; height: 516px; }
-.diagram-inner { position: absolute; left: 10px; top: 6px; width: 480px; height: 510px; }
+/* The diagram is drawn at a fixed size (wide 500 x 516, or the compact phone layout 372 x 516; see
+   LAYOUT in diagram.ts) and scaled to the card's width by fitDiagram(), so it never scrolls sideways. */
+.diagram-open { align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 0; border: 0; border-radius: 12px; background: transparent; color: inherit; text-align: inherit; cursor: zoom-in; }
+.diagram-fit { position: relative; display: block; overflow: hidden; flex: 0 0 auto; }
+.diagram { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.diagram-inner { position: absolute; }
+.diagram-hint { display: none; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; background: var(--mist); color: var(--link-ink); font-size: 13px; font-weight: 600; }
+.diagram-card.is-compact .diagram-hint { display: inline-flex; }
+.diagram-dialog { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--surface); flex-direction: column; }
+.diagram-dialog[open] { display: flex; }
+.diagram-dialog::backdrop { background: rgba(18, 23, 43, 0.6); }
+.diagram-dialog-bar { flex: 0 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 10px 12px; border-bottom: 1px solid var(--line-2); }
+.diagram-dialog-bar .caption { flex: 1 1 200px; max-width: none; text-align: left; font-size: 14px; }
+.diagram-dialog-stage { flex: 1 1 auto; min-height: 0; overflow: auto; display: flex; padding: 12px; }
+.diagram-dialog-stage .diagram-fit { margin: auto; }
 .caption { max-width: 440px; text-align: center; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
 .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; font-size: 12px; color: var(--muted); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
