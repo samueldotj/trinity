@@ -10,9 +10,11 @@ web/dist/
 web/src-tauri/target/
 web/src-tauri/gen/
 
-# Vercel
+# Vercel (local link and pulled environment files)
 .vercel/
+.env*
 
 # AI batch bookkeeping and superseded answer runs
 corpus/qa/*.batch.json
 corpus/qa/*.style1.json
+
