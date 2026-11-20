@@ -31,7 +31,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   const i = Math.min(Math.max(Number(params.get('t') || 1), 1), T.length) - 1;
   const cur = T[i];
   const grp = data.groups[cur.g];
-  const inPart = T.filter((t) => t.g === cur.g);
+  const inPart = T.filter((t) => t.g === cur.g);  // the part's note shows once, on its first teaching
   const prev = T[(i + T.length - 1) % T.length];
   const next = T[(i + 1) % T.length];
   const link = (t: Teaching) => href('explanations', { t: t.n });
@@ -72,7 +72,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         ${meaning}
         ${cur.note ? `<aside class="note teaching-note" aria-label="${esc(cur.note.title)}"><strong>${esc(cur.note.title)}.</strong> ${esc(cur.note.text)}${
           T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: ${esc(T[cur.note.see - 1].title)} →</a>` : ''}</aside>` : ''}
-        ${grp.note ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}
+        ${grp.note && inPart[0] === cur ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}
         <div class="lesson-nav">
           <a class="btn" href="${link(prev)}">${icon.left}${prev.n} · ${esc(prev.short)}</a>
           <a class="btn primary" href="${link(next)}">${next.n} · ${esc(next.short)}${icon.right}</a>
