@@ -3,10 +3,12 @@
 Each teaching gets "What does this mean?" (3-4 sentences), "How do these passages support it?"
 (2-3 sentences) and the glossary words it relies on. Uses the standard API: 47 requests in all.
 
-    python scripts/build_teaching_explanations.py glossary [--ids procession,filioque]
+    python scripts/build_teaching_explanations.py glossary [--ids procession,person]
                                                                        # writes corpus/qa/glossary.json
     python scripts/build_teaching_explanations.py teachings [--ids 21,23,25]
                                                                        # writes corpus/qa/teaching_explanations.json
+    python scripts/build_teaching_explanations.py translate [--ids person,trinity]
+                                                                       # writes corpus/qa/glossary.ta.json (Tamil)
 Then rebuild the site data:  python scripts/site/build_teachings_data.py ...  (or scripts/site/build_all.py)
 
 Reads data/teachings.json for each teaching's statement and its Bible passages (BSB text).
@@ -42,7 +44,6 @@ TERMS = {
     "perichoresis": ("Perichoresis", "the mutual indwelling of the Persons: each is fully in the others, without merging"),
     "eternal-generation": ("Eternal generation", "the Son being 'begotten' of the Father. Say explicitly that it has no beginning in time, involves no bodily reproduction, and does not divide God or make a second God; the Son receives the whole divine essence from the Father eternally"),
     "procession": ("Procession", "the Spirit's eternal coming forth from the Father and the Son, as from one source; different from begetting; not the same as the Spirit being sent at Pentecost"),
-    "filioque": ("Filioque", "Latin 'and the Son': the words of the creed confessing that the Holy Spirit proceeds from the Father and the Son, as from one source, and what that means; teach it as the church's doctrine"),
     "relations-of-origin": ("Relations of origin", "how the Persons are distinguished: the Father begets and is unbegotten, the Son is begotten of the Father, the Spirit proceeds from the Father and the Son; these relations, not different natures or ranks, are what distinguish them"),
     "inseparable-operations": ("Inseparable operations", "every work of God outside Himself is done by all three Persons together, as one act"),
     "appropriation": ("Appropriation", "attributing a shared work especially to one Person, e.g. creation to the Father, redemption to the Son, sanctification to the Spirit, without denying the others act too"),
@@ -183,9 +184,103 @@ def teachings(args):
     print(f"Wrote {len(out)} explanations to {OUT}; cost ${total:.2f}; failed: {failed}")
 
 
+# ---------- Tamil ----------
+GLOSSARY_TA = QA_DIR / "glossary.ta.json"
+
+# The Tamil word for each key word, fixed here so every definition uses the same one. Bible words follow
+# the Tamil Indian Revised Version (IRV, eBible "tam2017", © 2017, 2019 Bridge Connectivity Solutions,
+# CC BY-SA 4.0): தேவன், பிதா, குமாரன், பரிசுத்த ஆவியானவர், வார்த்தை, ஒரேபேறான (John 1:14, 18),
+# புறப்படு (John 15:26), தேவத்துவம் (Col 2:9). Theological terms follow established Tamil church usage.
+TERMS_TA = {
+    "essence": "சாராம்சம்",
+    "nature": "சுபாவம்",
+    "person": "ஆள்தத்துவம்",
+    "trinity": "திரித்துவம்",
+    "eternal": "நித்தியம்",
+    "immutable": "மாறாத்தன்மை",
+    "omnipresent": "சர்வவியாபி",
+    "indivisible": "பிரிக்கமுடியாத்தன்மை",
+    "coeternal": "சம நித்தியம்",
+    "coequal": "சமத்துவம்",
+    "perichoresis": "பரஸ்பர உள்ளுறைதல் (பெரிகொரேசிஸ்)",
+    "eternal-generation": "நித்திய ஜெனிப்பித்தல்",
+    "procession": "புறப்படுதல்",
+    "relations-of-origin": "தோற்ற உறவுகள்",
+    "inseparable-operations": "பிரிக்கமுடியாத செயல்பாடுகள்",
+    "appropriation": "உரித்தாக்குதல்",
+    "incarnation": "மனுவுருவாதல்",
+    "hypostatic-union": "ஆள்தத்துவ ஐக்கியம்",
+}
+
+# IRV wording the translation may quote (verbatim fragments from eBible tam2017).
+IRV = """John 1:1: ஆரம்பத்திலே வார்த்தை இருந்தது, அந்த வார்த்தை தேவனிடம் இருந்தது, அந்த வார்த்தை தேவனாக இருந்தது.
+John 1:14: அந்த வார்த்தை சரீரமாகி … பிதாவிற்கு ஒரே பேறானவருடைய மகிமைக்கு ஏற்ற மகிமையாகவே இருந்தது.
+John 1:18: … பிதாவின் மடியில் இருக்கிற ஒரேபேறான குமாரனே அவரை வெளிப்படுத்தினார்.
+John 4:24: தேவன் ஆவியாக இருக்கிறார்
+John 10:30: நானும் பிதாவும் ஒன்றாக இருக்கிறோம்
+John 14:10: நான் பிதாவிலும், பிதா என்னிலும் இருக்கிறதை நீ விசுவாசிக்கிறதில்லையா?
+John 15:26: … பிதாவினிடத்திலிருந்து புறப்படுகிறவருமாகிய சத்திய ஆவியான தேற்றரவாளன் …
+Matthew 28:19: … பிதா குமாரன் பரிசுத்த ஆவியின் நாமத்தினாலே அவர்களுக்கு ஞானஸ்நானங்கொடுத்து …
+Colossians 2:9: தேவத்துவத்தின் பரிபூரணமெல்லாம் சரீரப்பிரகாரமாக அவருக்குள் குடிகொண்டிருக்கிறது.
+Philippians 2:6: அவர் தேவனுடைய உருவமாக இருந்தும் … தேவனுக்குச் சமமாக இருப்பதைக் கொள்ளையாடின பொருளாக நினைக்காமல்
+Hebrews 1:3: இவர் பிதாவுடைய மகிமையின் பிரகாசமும், அவருடைய குணத்தின் சாயலாகவும் இருந்து
+1 John 4:8: தேவன் அன்பாகவே இருக்கிறார்.
+Galatians 4:6: … தேவன் தமது குமாரனுடைய ஆவியை உங்களுடைய இருதயங்களில் அனுப்பினார்.
+James 1:17: நன்மையான எந்த ஈவும் பூரணமான எந்த வரமும் பரலோகத்திலிருந்து உண்டாகி"""
+
+TRANSLATE = f"""You translate a glossary of Christian theological words from English into Tamil for a website that explains the Trinity to ordinary Tamil-speaking Christians of any church, with no training in theology.
+
+- Translate faithfully: keep every claim and nuance of the English, add nothing and leave nothing out. This is doctrine, so precision matters more than elegance. In particular: “Person” in the Trinity never means a separate being; the Holy Spirit proceeds from the Father and the Son as from one source; eternal generation has no beginning in time, nothing bodily, and does not divide God.
+- Write natural, clear, everyday Tamil in short sentences, in the respectful register Tamil churches use. Refer to God and the divine Persons with respectful forms (அவர், -ார் endings).
+- Use the Bible vocabulary of the Tamil Indian Revised Version (IRV): தேவன் (God), பிதா (Father), குமாரன் (Son), பரிசுத்த ஆவியானவர் (Holy Spirit), வார்த்தை (the Word), ஒரேபேறான (only begotten), புறப்படு (proceed), தேவத்துவம் (Deity).
+- Each key word has a fixed Tamil term, given with the entry. Use that exact term whenever the word appears, in its own definition and in any other.
+- Quote the Bible only in the exact IRV words below; otherwise give the sense in your own words. Keep any Bible references (e.g. John 15:26) in the form “யோவான் 15:26”.
+- Use Tamil script throughout, except a Latin or Greek word that is itself the term (e.g. perichoresis), which may follow in brackets.
+
+IRV wording you may quote:
+{IRV}"""
+
+TA_SCHEMA = {
+    "type": "object",
+    "properties": {"terms": {"type": "array", "items": {
+        "type": "object",
+        "properties": {"key": {"type": "string"}, "def": {"type": "string"}},
+        "required": ["key", "def"], "additionalProperties": False}}},
+    "required": ["terms"], "additionalProperties": False,
+}
+
+
+def translate(args):
+    """Translate the glossary into Tamil (all entries, or --ids only), keeping the fixed terms."""
+    gl = json.loads(GLOSSARY.read_text(encoding="utf8"))
+    keys = args.ids.split(",") if args.ids else list(TERMS)
+    # Tamil script costs many tokens, so translate a few entries per request, in parallel. Every
+    # request lists all the fixed terms, so the definitions stay consistent with one another.
+    fixed = "Fixed Tamil terms for all the key words:\n" + "\n".join(f"- {gl[k]['term']}: {TERMS_TA[k]}" for k in TERMS)
+    client = anthropic.Anthropic()
+
+    def batch(ks):
+        prompt = fixed + "\n\nTranslate each definition below. Return every key exactly as given.\n\n" + "\n\n".join(
+            f"key: {k}\nEnglish word: {gl[k]['term']}\nTamil term to use: {TERMS_TA[k]}\nDefinition: {gl[k]['def']}" for k in ks)
+        return call(client, TRANSLATE, prompt, TA_SCHEMA)
+
+    got, c = {}, 0.0
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for data, cost_ in pool.map(batch, [keys[i:i + 5] for i in range(0, len(keys), 5)]):
+            got.update({e["key"]: e["def"] for e in data["terms"]})
+            c += cost_
+    missing = [k for k in keys if k not in got]
+    if missing:
+        sys.exit(f"Translation is missing {missing}; nothing written.")
+    old = json.loads(GLOSSARY_TA.read_text(encoding="utf8")) if GLOSSARY_TA.exists() else {}
+    out = {k: {"term": TERMS_TA[k], "def": got[k] if k in keys else old[k]["def"]} for k in TERMS}
+    GLOSSARY_TA.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf8")
+    print(f"Wrote {len(out)} Tamil terms to {GLOSSARY_TA}; cost ${c:.2f}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["glossary", "teachings"])
+    ap.add_argument("cmd", choices=["glossary", "teachings", "translate"])
     ap.add_argument("--ids", default="")
     args = ap.parse_args()
-    {"glossary": glossary, "teachings": teachings}[args.cmd](args)
+    {"glossary": glossary, "teachings": teachings, "translate": translate}[args.cmd](args)

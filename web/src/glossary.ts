@@ -23,7 +23,6 @@ const FORMS: Record<string, string[]> = {
   perichoresis: ['perichoresis', 'mutual indwelling'],
   'eternal-generation': ['eternal generation', 'eternally begotten', 'begotten', 'begetting', 'begets'],
   procession: ['procession', 'proceeds'],
-  filioque: ['filioque', '“and the Son”', '“and the Son,”'],
   'relations-of-origin': ['relations of origin'],
   'inseparable-operations': ['inseparable operations', 'inseparably'],
   appropriation: ['appropriation'],

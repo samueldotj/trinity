@@ -402,11 +402,13 @@ fn teachings_with_edits() -> Value {
         }
         t["edited"] = Value::Object(edited);
     }
-    if let Some(gl) = out.get_mut("glossary").and_then(Value::as_object_mut) {
-        for (key, entry) in gl.iter_mut() {
-            let (def, was_edited) = overlay(format!("term:{key}:def"), &entry["def"]);
-            entry["def"] = def;
-            entry["edited"] = json!(was_edited);
+    for (field, suffix) in [("glossary", ""), ("glossary_ta", ":ta")] {
+        if let Some(gl) = out.get_mut(field).and_then(Value::as_object_mut) {
+            for (key, entry) in gl.iter_mut() {
+                let (def, was_edited) = overlay(format!("term:{key}:def{suffix}"), &entry["def"]);
+                entry["def"] = def;
+                entry["edited"] = json!(was_edited);
+            }
         }
     }
     out
@@ -441,6 +443,7 @@ pub fn original(key: &str) -> Option<String> {
             teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?.get(field)?.clone()
         }
         Field::TermDef => teachings()["glossary"].get(&k.item)?["def"].clone(),
+        Field::TermDefTa => teachings()["glossary_ta"].get(&k.item)?["def"].clone(),
         Field::TopicAnswer => topic_by_id(k.item.parse().ok()?)?["ans"].get("text")?.clone(),
         Field::TopicCompare => topic_by_id(k.item.parse().ok()?)?["cmp"].clone(),
         Field::QuestionText => questions_data()["q"].as_array()?.iter().find(|x| x[0].to_string() == k.item)?[1].clone(),
@@ -671,6 +674,13 @@ mod tests {
         set_edit("term:person:def", None).unwrap();
         assert!(handle("teachings", &p(&[])).unwrap()["teachings"].as_array().unwrap().iter().all(|t| t["meaning"] != ""));
         assert!(set_edit("term:no-such-term:def", Some("x")).is_err());
+        set_edit("term:person:def:ta", Some("என் வரையறை.")).unwrap();
+        let t = handle("teachings", &p(&[])).unwrap();
+        assert_eq!(t["glossary_ta"]["person"]["def"], "என் வரையறை.");
+        assert_eq!(t["glossary_ta"]["person"]["edited"], true);
+        assert_eq!(t["glossary"]["person"]["edited"], false);
+        set_edit("term:person:def:ta", None).unwrap();
+        assert!(set_edit("term:no-such-term:def:ta", Some("x")).is_err());
         assert!(set_edit("theme:no-such-theme:short", Some("x")).is_err());
     }
 

@@ -26,6 +26,8 @@ pub enum Field {
     TeachingSupport,
     /// A glossary definition shown in the teachings' key words: `term:<key>:def`.
     TermDef,
+    /// The Tamil translation of a glossary definition, on the Key words page: `term:<key>:def:ta`.
+    TermDefTa,
     /// A topic's plain-language answer: `topic:<id>:answer`.
     TopicAnswer,
     /// "What earlier Christian writers thought": `topic:<id>:cmp`.
@@ -56,6 +58,7 @@ impl Key {
             ["teaching", _, "meaning"] => Field::TeachingMeaning,
             ["teaching", _, "support"] => Field::TeachingSupport,
             ["term", _, "def"] => Field::TermDef,
+            ["term", _, "def", "ta"] => Field::TermDefTa,
             ["topic", _, "answer"] => Field::TopicAnswer,
             ["topic", _, "cmp"] => Field::TopicCompare,
             ["question", _, "text"] => Field::QuestionText,

@@ -203,6 +203,7 @@ def first_sentence(s):
 QA = Path(__file__).resolve().parents[2] / 'corpus' / 'qa'
 EXPLAIN = json.load(open(QA / 'teaching_explanations.json', encoding='utf8')) if (QA / 'teaching_explanations.json').exists() else {}
 GLOSSARY = json.load(open(QA / 'glossary.json', encoding='utf8')) if (QA / 'glossary.json').exists() else {}
+GLOSSARY_TA = json.load(open(QA / 'glossary.ta.json', encoding='utf8')) if (QA / 'glossary.ta.json').exists() else {}  # Tamil
 
 out, problems = [], []
 for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
@@ -222,6 +223,6 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
                 'quote': ref and {'author': ref['author'], 'work': ref['work'], 'workId': ref['workId'],
                                   'place': ref['place'], 'text': ref['quote']}})
 
-json.dump({'groups': [{'title': t, 'note': n} for t, n in GROUPS], 'glossary': GLOSSARY, 'teachings': out},
+json.dump({'groups': [{'title': t, 'note': n} for t, n in GROUPS], 'glossary': GLOSSARY, 'glossary_ta': GLOSSARY_TA, 'teachings': out},
           open(out_path, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 print('teachings', len(out), 'problems', problems)
