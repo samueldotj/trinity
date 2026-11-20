@@ -18,6 +18,8 @@ interface Teaching {
 }
 interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; teachings: Teaching[] }
 
+let lastShown = '';
+
 export async function renderExplanations(root: HTMLElement, params: URLSearchParams): Promise<void> {
   if (!root.querySelector('.lesson')) root.innerHTML = loading('Loading the teachings…');
   let data: Data;
@@ -28,13 +30,28 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     return;
   }
   const T = data.teachings;
+  // Moving to another teaching (or the completion page) starts at the top, like turning a page.
+  // Re-rendering the same one, e.g. after an edit, keeps the reader's place.
+  const shown = params.has('done') ? 'done' : String(Math.min(Math.max(Number(params.get('t') || 1), 1), T.length));
+  if (lastShown && shown !== lastShown) window.scrollTo({ top: 0 });
+  lastShown = shown;
+  if (params.has('done')) {
+    renderComplete(root, data);
+    return;
+  }
   const i = Math.min(Math.max(Number(params.get('t') || 1), 1), T.length) - 1;
   const cur = T[i];
   const grp = data.groups[cur.g];
   const inPart = T.filter((t) => t.g === cur.g);  // the part's note shows once, on its first teaching
-  const prev = T[(i + T.length - 1) % T.length];
-  const next = T[(i + 1) % T.length];
+  // A course, not a carousel: the first teaching has no "previous", and the last leads to the completion page.
+  const prev = i > 0 ? T[i - 1] : null;
+  const next = i < T.length - 1 ? T[i + 1] : null;
   const link = (t: Teaching) => href('explanations', { t: t.n });
+
+  const outline = data.groups.map((g, gi) => `<li>
+      <h2 class="outline-part">Part ${gi + 1} · ${esc(g.title)}</h2>
+      <ol>${T.filter((t) => t.g === gi).map((t) => `<li><a href="${link(t)}"${t.n === cur.n ? ' aria-current="page"' : ''}${t.n < cur.n ? ' class="done"' : ''}><span class="outline-n">${t.n}</span>${esc(t.title)}</a></li>`).join('')}</ol>
+    </li>`).join('');
 
   const steps = inPart.map((t) => `<li><a href="${link(t)}" class="${t.n < cur.n ? 'done' : ''}"${t.n === cur.n ? ' aria-current="step"' : ''} aria-label="Teaching ${t.n}: ${esc(t.short)}"><span></span></a></li>`).join('');
   const jump = data.groups.map((g, gi) => `<optgroup label="${gi + 1}. ${esc(g.title)}">${
@@ -58,10 +75,14 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   root.innerHTML = `<div class="page">
     <div class="lesson-top">
       <div class="row">
-        <span class="eyebrow">Part ${cur.g + 1} of ${data.groups.length} · ${esc(grp.title)}</span>
+        <p class="course-progress"><b>Teaching ${cur.n} of ${T.length}</b><span class="eyebrow">Part ${cur.g + 1} of ${data.groups.length} · ${esc(grp.title)}</span></p>
         <label class="jump">Jump to <select id="jump">${jump}</select></label>
       </div>
       <ol class="steps" aria-label="Teachings in this part">${steps}</ol>
+      <details class="outline">
+        <summary>Course outline${icon.chevron}</summary>
+        <ol class="outline-parts">${outline}</ol>
+      </details>
     </div>
 
     <div class="lesson">
@@ -74,8 +95,9 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
           T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: ${esc(T[cur.note.see - 1].title)} →</a>` : ''}</aside>` : ''}
         ${grp.note && inPart[0] === cur ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}
         <div class="lesson-nav">
-          <a class="btn" href="${link(prev)}">${icon.left}${prev.n} · ${esc(prev.short)}</a>
-          <a class="btn primary" href="${link(next)}">${next.n} · ${esc(next.short)}${icon.right}</a>
+          ${prev ? `<a class="btn" href="${link(prev)}">${icon.left}${prev.n} · ${esc(prev.short)}</a>` : ''}
+          ${next ? `<a class="btn primary" href="${link(next)}">${next.n} · ${esc(next.short)}${icon.right}</a>`
+            : `<a class="btn primary" href="${href('explanations', { done: 1 })}">Finish the course${icon.right}</a>`}
         </div>
       </section>
       <figure class="card diagram-card">
@@ -114,6 +136,38 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   wireEditing(root, () => void renderExplanations(root, params));
   root.querySelector<HTMLSelectElement>('#jump')!.addEventListener('change', (e) =>
     navigate('explanations', { t: (e.target as HTMLSelectElement).value }, true));
+}
+
+/** The page after the last teaching: what was covered, and where to go next. */
+function renderComplete(root: HTMLElement, data: Data): void {
+  const T = data.teachings;
+  const last = T[T.length - 1];
+  const parts = data.groups.map((g, gi) => {
+    const inPart = T.filter((t) => t.g === gi);
+    return `<li class="card complete-part">
+        <span class="small-caps">Part ${gi + 1} · ${inPart.length} teachings</span>
+        <b>${esc(g.title)}</b>
+        <a href="${href('explanations', { t: inPart[0].n })}">Review from teaching ${inPart[0].n} →</a>
+      </li>`;
+  }).join('');
+  root.innerHTML = `<div class="page complete">
+    <a class="btn complete-back" href="${href('explanations', { t: last.n })}">${icon.left}Back to teaching ${last.n}</a>
+    <header class="complete-head">
+      <span class="eyebrow">Course complete</span>
+      <h1>You have worked through all ${T.length} teachings</h1>
+      <p class="detail">From the one God, through the three Persons and their relations, to the incarnation of the Son: ${data.groups.length} parts, each grounded in the Bible passages that support it.</p>
+    </header>
+    <ol class="complete-parts" aria-label="What the course covered">${parts}</ol>
+    <section class="complete-next" aria-labelledby="next-h">
+      <h2 id="next-h">Keep going</h2>
+      <div class="row">
+        <a class="btn primary" href="${href('keywords')}">Review the key words</a>
+        <a class="btn" href="${href('topics')}">Explore the topics</a>
+        <a class="btn" href="${href('qa')}">Read the questions</a>
+        <a class="btn" href="${href('explanations', { t: 1 })}">Start again from teaching 1</a>
+      </div>
+    </section>
+  </div>`;
 }
 
 type Layout = 'wide' | 'compact';

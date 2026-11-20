@@ -73,9 +73,25 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
   const fs = compact ? { name: 22, god: 24, note: 14, label: 14, box: 16 } : { name: 20, god: 22, note: 11, label: 12, box: 15 };
   const COL = { is: '#1B1E27', not: '#6B7080', rel: '#33449A', eq: '#6B7080', faint: '#C9C5BB' };
   const hi = sp.hi || '';
-  const nodeState = (k) => (sp.hideG && k === 'G') ? 'display: none;' : (hi.indexOf(k) >= 0 ? 'opacity: 1; box-shadow: 0 0 0 6px rgba(51,68,154,0.16);' : (hi ? 'opacity: 0.35;' : 'opacity: 1;'));
+  // A Person the teaching is not about is drawn in a pale tint of its colour with dark text, not faded
+  // with opacity: faded white-on-colour text measured 1.6:1, while every tint/ink pair here is at
+  // least 6.8:1 (WCAG AA needs 4.5:1). Full fills all carry white text at 5.2:1 or more.
+  const DIM = {
+    F: { bg: '#E6EBF5', border: '#96ACD6', ink: '#22437F' },
+    S: { bg: '#F5EAE3', border: '#D6A68B', ink: '#7E3A10', split: 'linear-gradient(90deg, #F5EAE3 50%, #F0E7E2 50%)' },
+    P: { bg: '#E3EFEE', border: '#8ABCB6', ink: '#0E5A51' },
+    G: { bg: '#E3E3E6', border: '#888B95', ink: '#12172B' }
+  };
+  const isDim = (k) => !!hi && hi.indexOf(k) < 0;
+  const nodeState = (k) => (sp.hideG && k === 'G') ? 'display: none;' : (hi.indexOf(k) >= 0 ? 'box-shadow: 0 0 0 6px rgba(51,68,154,0.16);' : '');
   const node = (k, bg, border, fg) => {
     const [x, y, r] = P[k];
+    if (isDim(k)) {
+      const d = DIM[k];
+      bg = k === 'S' && sp.split ? d.split : (k === 'G' && sp.hollow ? '#FFFFFF' : d.bg);
+      border = d.border;
+      fg = d.ink;
+    }
     return 'position: absolute; left: ' + (x - r) + 'px; top: ' + (y - r) + 'px; width: ' + 2 * r + 'px; height: ' + 2 * r + 'px; box-sizing: border-box; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 8px; gap: 2px; z-index: 2; background: ' + bg + '; border: 2px solid ' + border + '; color: ' + fg + '; ' + nodeState(k);
   };
   const edges = [], labels = [];
@@ -124,7 +140,8 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
   const RLABEL = { eternal: 'no beginning · no end', spirit: 'no body · no parts', unchanging: 'does not change', invisible: 'cannot be seen', everywhere: 'not limited by space', single: 'one, undivided' };
   const notes = Object.assign({ F: fallbackNotes[0] || '', S: fallbackNotes[1] || '', P: fallbackNotes[2] || '', G: fallbackNotes[3] || '' }, sp.n || {});
   if (!sp.n && sp.spk) { notes.F = notes.S = notes.P = ''; }
-  const sonBg = sp.split ? 'linear-gradient(90deg, #C2581B 50%, #7E3A10 50%)' : '#C2581B';
+  // The Son's fill is a shade darker than the brand orange (#C2581B, 4.46:1 with white) so white text passes.
+  const sonBg = sp.split ? 'linear-gradient(90deg, #AE4C17 50%, #7E3A10 50%)' : '#AE4C17';
   const gHollow = sp.hollow;
   const alt = 'Diagram: ' + caption;
   return {
@@ -133,7 +150,7 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
     hasRingLabel: !!sp.ring, ringLabel: RLABEL[sp.ring] || '',
     ringLabelStyle: 'position: absolute; z-index: 3; left: ' + cx + 'px; top: 436px; transform: translate(-50%, -50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: ' + fs.label + 'px; font-weight: 600;',
     nF: node('F', '#2E5AAC', '#2E5AAC', '#FFFFFF'),
-    nS: node('S', sonBg, '#C2581B', '#FFFFFF'),
+    nS: node('S', sonBg, '#AE4C17', '#FFFFFF'),
     nP: node('P', '#157A6E', '#157A6E', '#FFFFFF'),
     nG: node('G', gHollow ? '#FFFFFF' : '#12172B', '#12172B', gHollow ? '#12172B' : '#FFFFFF'),
     tF: notes.F, tS: sp.split && !sp.n ? 'God | man' : (sp.split ? notes.S + ' · God | man' : notes.S), tP: notes.P, tG: notes.G,

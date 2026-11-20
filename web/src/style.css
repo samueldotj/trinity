@@ -117,6 +117,23 @@ p { margin: 0; }
 .steps a span { display: block; height: 6px; border-radius: 3px; background: var(--line); }
 .steps a.done span { background: var(--link); }
 .steps a[aria-current="step"] span { background: var(--night); }
+.course-progress { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.course-progress b { font-size: 15px; font-weight: 600; color: var(--ink); }
+/* Course outline: every part and teaching, the current one marked. */
+.outline summary { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border: 1px solid var(--control); border-radius: 999px; background: var(--surface); font-size: 14px; font-weight: 600; color: var(--ink); cursor: pointer; }
+.outline summary::-webkit-details-marker { display: none; }
+.outline summary svg { transition: transform .15s; }
+.outline[open] summary svg { transform: rotate(180deg); }
+.outline[open] summary { margin-bottom: 14px; }
+.outline-parts { list-style: none; margin: 0; padding: 18px 20px; border-radius: 18px; background: var(--surface); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px 28px; }
+.outline-part { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.outline-parts ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.outline-parts a { display: flex; gap: 10px; padding: 6px 8px; margin: 0 -8px; border-radius: 10px; font-size: 14px; line-height: 1.35; color: var(--ink-2); text-decoration: none; }
+.outline-parts a:hover { background: var(--mist); color: var(--link-ink); }
+.outline-parts a[aria-current="page"] { background: var(--night); color: #fff; }
+.outline-n { flex: 0 0 22px; text-align: right; font-weight: 600; color: var(--muted); }
+.outline-parts a.done .outline-n { color: var(--link); }
+.outline-parts a[aria-current="page"] .outline-n { color: #fff; }
 .lesson { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
 .lesson-text { flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
 .lesson-num { font-family: var(--display); font-size: 72px; line-height: .9; font-weight: 500; color: var(--line); }
@@ -346,7 +363,27 @@ p { margin: 0; }
 }
 @media (max-width: 640px) {
   .page { padding: 24px 16px 40px; }
+  /* Lessons: a smaller number and tighter spacing, so the explanation and diagram come sooner. */
+  .lesson-top { gap: 8px; }
+  .lesson { gap: 18px; }
+  .lesson-text { gap: 12px; }
+  .lesson-num { font-size: 36px; }
+  .lesson-text h1 { font-size: 28px; }
+  .lesson-text .detail { font-size: 17px; }
+  .jump { display: none; } /* the course outline does this job on phones */
   .diagram-card { padding: 16px; }
   .topic, .passage { padding: 16px 18px; }
   .para.focus { margin: 6px -12px; padding: 16px 12px; }
 }
+
+/* ---------- Course complete ---------- */
+.complete-back { align-self: flex-start; }
+.complete-head { display: flex; flex-direction: column; gap: 12px; }
+.complete-head h1 { font-size: clamp(32px, 3.6vw, 46px); line-height: 1.08; }
+.complete-head .detail { font-size: 19px; color: var(--ink-2); max-width: 62ch; }
+.complete-parts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 14px; }
+.complete-part { padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+.complete-part b { font-family: var(--display); font-size: 20px; font-weight: 500; line-height: 1.2; }
+.complete-part a { margin-top: auto; padding-top: 6px; font-size: 14px; font-weight: 600; }
+.complete-next { display: flex; flex-direction: column; gap: 12px; }
+.complete-next h2 { font-size: 26px; }
