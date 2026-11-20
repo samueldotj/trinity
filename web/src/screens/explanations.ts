@@ -8,6 +8,7 @@ interface Teaching {
   verses: { label: string; text: string; ref: string }[];
   notes: string[];
   cap: string;
+  note?: { title: string; text: string; see: number };
   edited?: { caption: boolean; detail: boolean };
   topic: { id: number; title: string; theme: string; q: number };
 }
@@ -54,6 +55,8 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         <span class="lesson-num" aria-hidden="true">${cur.n}</span>
         <h1><span class="sr-only">Teaching ${cur.n}: </span>${esc(cur.title)}</h1>
         ${cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${esc(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : ''}
+        ${cur.note ? `<aside class="note teaching-note" aria-label="${esc(cur.note.title)}"><strong>${esc(cur.note.title)}.</strong> ${esc(cur.note.text)}${
+          T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: ${esc(T[cur.note.see - 1].title)} →</a>` : ''}</aside>` : ''}
         ${grp.note ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}
         <div class="lesson-nav">
           <a class="btn" href="${link(prev)}">${icon.left}${prev.n} · ${esc(prev.short)}</a>

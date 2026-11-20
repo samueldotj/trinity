@@ -129,6 +129,14 @@ DETAILS = {
     46: 'Becoming man did not change God; the Son stayed fully what He always was.',
 }
 
+# Notes for teachings that could seem to contradict one another: (heading, text, related teaching).
+TWO_WILLS = ('Father, Son, and Holy Spirit share one divine will. In becoming human, the Son also assumed a human will. '
+             'Jesus’ prayer in Gethsemane expresses His human obedience to the Father, not disagreement within God’s divine will.')
+TEACHING_NOTES = {
+    28: ('One divine will, and Jesus’ human will', TWO_WILLS, 35),
+    35: ('One divine will, and Jesus’ human will', TWO_WILLS, 28),
+}
+
 # Diagram captions, one per teaching: how to read the picture (editable in the app).
 CAPTIONS = {
     1: 'Each Person is God, and all three are the one God at the centre. There are not three Gods.',
@@ -201,6 +209,7 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
         del v['missing']
     out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail or DETAILS.get(i + 1, ''),
                 'refs': refs, 'cap': CAPTIONS[i + 1],
+                **({'note': dict(zip(('title', 'text', 'see'), TEACHING_NOTES[i + 1]))} if i + 1 in TEACHING_NOTES else {}),
                 'verses': verses, 'mode': mode, 'notes': notes,
                 'topic': {'id': tid, 'title': tp['title'], 'theme': theme, 'q': tp['q'], 'cmp': first_sentence(tp['cmp'])},
                 'quote': ref and {'author': ref['author'], 'work': ref['work'], 'workId': ref['workId'],
