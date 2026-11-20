@@ -2,7 +2,7 @@
 // spec(n) describes the picture for teaching n; draw(n) turns it into positioned boxes, lines and labels.
 export function spec(n: number): any {
   // hi: Persons lit (F S P G); spk: [which Persons join the centre, label]; e: [from, to, label, arrows '>' '<' '<>' '', kind]
-  // kinds: is (solid dark), not (dashed grey), rel (blue arrow), eq (solid grey), west (dashed blue)
+  // kinds: is (solid dark), not (dashed grey), rel (blue arrow), eq (solid grey)
   // ring: eternal | spirit | unchanging | invisible | everywhere | single; box: a thing outside God; split: Son shown as God and man
   const not3 = [['F', 'S', 'is not', '', 'not'], ['F', 'P', 'is not', '', 'not'], ['S', 'P', 'is not', '', 'not']];
   const eq3 = (l) => [['F', 'S', l, '', 'eq'], ['F', 'P', l, '', 'eq'], ['S', 'P', l, '', 'eq']];
@@ -30,8 +30,8 @@ export function spec(n: number): any {
     21: { hi: 'FSP', e: [['F', 'S', 'in', '<>', 'rel'], ['F', 'P', 'in', '<>', 'rel'], ['S', 'P', 'in', '<>', 'rel']] },
     22: { hi: 'FS', e: [['F', 'S', 'always Father of', '>', 'rel']], n: { F: 'always Father', S: 'always Son' } },
     23: { hi: 'FS', e: [['F', 'S', 'begets', '>', 'rel']], n: { F: 'unbegotten', S: 'begotten, not made' } },
-    24: { hi: 'FP', e: [['F', 'P', 'proceeds from', '>', 'rel'], ['S', 'P', 'West: and the Son', '>', 'west']], n: { P: 'proceeds' } },
-    25: { hi: 'FSP', e: [['F', 'S', 'begets', '>', 'rel'], ['F', 'P', 'proceeds', '>', 'rel']], n: { F: 'unbegotten', S: 'begotten', P: 'proceeds', G: 'one nature' } },
+    24: { hi: 'FSP', e: [['F', 'P', 'proceeds from', '>', 'rel'], ['S', 'P', 'and the Son', '>', 'rel']], n: { P: 'proceeds' } },
+    25: { hi: 'FSP', e: [['F', 'S', 'begets', '>', 'rel'], ['F', 'P', 'proceeds', '>', 'rel'], ['S', 'P', 'proceeds', '>', 'rel']], n: { F: 'unbegotten', S: 'begotten', P: 'proceeds', G: 'one nature' } },
     26: { hi: 'FS', e: [['F', 'S', 'loves', '>', 'rel']], n: { F: 'loves', S: 'beloved' } },
     27: { hi: 'FS', e: [['F', 'S', 'one glory', '<>', 'rel']], n: { F: 'glory', S: 'glory' } },
     28: { hi: 'FSPG', spk: ['FSP', 'one will'], n: { G: 'one will' } },
@@ -71,7 +71,7 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
   const cx = compact ? 180 : 240;
   // Font sizes in drawing pixels: names, God's name, notes inside the circles, line labels, the box.
   const fs = compact ? { name: 22, god: 24, note: 14, label: 14, box: 16 } : { name: 20, god: 22, note: 11, label: 12, box: 15 };
-  const COL = { is: '#1B1E27', not: '#6B7080', rel: '#33449A', eq: '#6B7080', west: '#33449A', faint: '#C9C5BB' };
+  const COL = { is: '#1B1E27', not: '#6B7080', rel: '#33449A', eq: '#6B7080', faint: '#C9C5BB' };
   const hi = sp.hi || '';
   const nodeState = (k) => (sp.hideG && k === 'G') ? 'display: none;' : (hi.indexOf(k) >= 0 ? 'opacity: 1; box-shadow: 0 0 0 6px rgba(51,68,154,0.16);' : (hi ? 'opacity: 0.35;' : 'opacity: 1;'));
   const node = (k, bg, border, fg) => {
@@ -86,7 +86,7 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
     const ang = Math.atan2(dy, dx) * 180 / Math.PI;
     const c = COL[kind];
     const thick = kind === 'faint' ? 2 : 3;
-    const paint = (kind === 'not' || kind === 'west')
+    const paint = kind === 'not'
       ? 'background: repeating-linear-gradient(90deg, ' + c + ' 0 8px, transparent 8px 14px);'
       : 'background: ' + c + ';';
     const arrow = (side) => 'position: absolute; top: 50%; ' + side + ': -2px; width: 0; height: 0; transform: translateY(-50%); border-top: 7px solid transparent; border-bottom: 7px solid transparent; ' +

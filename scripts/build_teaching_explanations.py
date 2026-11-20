@@ -3,7 +3,8 @@
 Each teaching gets "What does this mean?" (3-4 sentences), "How do these passages support it?"
 (2-3 sentences) and the glossary words it relies on. Uses the standard API: 47 requests in all.
 
-    python scripts/build_teaching_explanations.py glossary            # writes corpus/qa/glossary.json
+    python scripts/build_teaching_explanations.py glossary [--ids procession,filioque]
+                                                                       # writes corpus/qa/glossary.json
     python scripts/build_teaching_explanations.py teachings [--ids 21,23,25]
                                                                        # writes corpus/qa/teaching_explanations.json
 Then rebuild the site data:  python scripts/site/build_teachings_data.py ...  (or scripts/site/build_all.py)
@@ -40,9 +41,9 @@ TERMS = {
     "coequal": ("Coequal", "equal in deity, power and glory"),
     "perichoresis": ("Perichoresis", "the mutual indwelling of the Persons: each is fully in the others, without merging"),
     "eternal-generation": ("Eternal generation", "the Son being 'begotten' of the Father. Say explicitly that it has no beginning in time, involves no bodily reproduction, and does not divide God or make a second God; the Son receives the whole divine essence from the Father eternally"),
-    "procession": ("Procession", "the Spirit's eternal coming forth from the Father; different from begetting; not the same as the Spirit being sent at Pentecost"),
-    "filioque": ("Filioque", "Latin 'and the Son': the Western creed's addition that the Spirit proceeds from the Father and the Son; the East confesses 'from the Father'"),
-    "relations-of-origin": ("Relations of origin", "how the Persons are distinguished: the Father begets and is unbegotten, the Son is begotten, the Spirit proceeds; these relations, not different natures or ranks, are what distinguish them"),
+    "procession": ("Procession", "the Spirit's eternal coming forth from the Father and the Son, as from one source; different from begetting; not the same as the Spirit being sent at Pentecost"),
+    "filioque": ("Filioque", "Latin 'and the Son': the words of the creed confessing that the Holy Spirit proceeds from the Father and the Son, as from one source, and what that means; teach it as the church's doctrine"),
+    "relations-of-origin": ("Relations of origin", "how the Persons are distinguished: the Father begets and is unbegotten, the Son is begotten of the Father, the Spirit proceeds from the Father and the Son; these relations, not different natures or ranks, are what distinguish them"),
     "inseparable-operations": ("Inseparable operations", "every work of God outside Himself is done by all three Persons together, as one act"),
     "appropriation": ("Appropriation", "attributing a shared work especially to one Person, e.g. creation to the Father, redemption to the Son, sanctification to the Spirit, without denying the others act too"),
     "incarnation": ("Incarnation", "the Son of God becoming man, taking a full human nature, body and soul"),
@@ -52,7 +53,8 @@ TERMS = {
 STYLE = """You write for a website that explains the Trinity to ordinary Christians: churchgoers of any denomination, with no training in theology. You present the core, historic teaching of the Christian church, as confessed from the early creeds onward, in plain words.
 
 - Plain words, short sentences. Explain, do not just restate. Where a word is technical, say what it means.
-- Do not name theologians, church fathers, confessions, catechisms, denominations or traditions, except that the Eastern and Western churches may be named where they differ (the filioque).
+- Do not name theologians, church fathers, confessions, catechisms, denominations or traditions.
+- Teach the Holy Spirit’s procession as the church’s doctrine: the Spirit proceeds eternally from the Father and the Son, as from one source. Never present it as one tradition’s view, and do not mention Eastern or Western churches or any disagreement about it.
 - Write in your own words; do not quote any writer. Quote the Bible only in the exact words of the Berean Standard Bible (BSB) text you are given; otherwise give the sense in your own words.
 - Use curly apostrophes and quotation marks (’ “ ”). Capitalise pronouns for God (He, His, Him) and "Person" when it means a divine Person."""
 
@@ -83,8 +85,11 @@ MUST = {
     20: "Contrast this with the idea that one Person merely appears in three roles or modes.",
     21: "Explain mutual indwelling concretely: each Person is wholly in the others, they are never apart, yet they do not merge into one Person. Name the term perichoresis and say what it means.",
     23: "Explain what eternal generation means and say explicitly that it has no beginning in time (there was never a time when the Son was not), involves no bodily reproduction, and does not divide God or produce a second God. Contrast begetting (the Son shares the Father’s own nature) with creating (making something of a different, lesser kind).",
-    24: "Explain procession, distinguish it from the Son’s being begotten, and present the Western addition “and the Son” fairly alongside the Eastern view, briefly.",
-    25: "Explain the phrase “relations of origin” itself: the Father is from no one, the Son is begotten of the Father, the Spirit proceeds; these relations are the only thing that distinguishes the Persons, since they share the one nature completely.",
+    15: "Where you say how the Son and the Spirit are distinguished, say that the Spirit proceeds from the Father and the Son.",
+    16: "Where you say how the Father and the Spirit are related, say that the Spirit proceeds from the Father and the Son.",
+    24: "Explain procession and how it differs from the Son’s being begotten. Teach plainly that the Spirit proceeds eternally from the Father and the Son, as from one source (the creed’s “and the Son”), and that the Son has this from the Father. In support, show how the passages together teach it: the Spirit proceeds from the Father, the Son sends the Spirit, the Spirit receives from what is the Son’s because all the Father has is the Son’s, and He is called the Spirit of the Son.",
+    25: "Explain the phrase “relations of origin” itself: the Father is from no one, the Son is begotten of the Father, the Spirit proceeds from the Father and the Son; these relations are the only thing that distinguishes the Persons, since they share the one nature completely.",
+    30: "Where you mention procession, say that the Spirit proceeds from the Father and the Son.",
     28: "The page also notes that the incarnate Son has a human will as well as the one divine will; do not contradict this.",
     29: "Explain that particular works are still attributed to particular Persons (appropriation) without the others being absent.",
     35: "The page also notes that Jesus’ prayer in Gethsemane expresses His human will’s obedience to the Father, not disagreement within the one divine will; keep consistent with this.",
@@ -92,10 +97,11 @@ MUST = {
 }
 
 
-def glossary_prompt():
-    lines = ["Write a short glossary entry (one to three sentences) for each of these words, for the site’s “Key words” boxes. "
+def glossary_prompt(keys):
+    lines = ["Write a short glossary entry (one to three sentences) for each of these words, for the site’s Key words page. "
              "Each entry must make sense on its own. Return every key exactly as given.\n"]
-    for k, (word, cover) in TERMS.items():
+    for k in keys:
+        word, cover = TERMS[k]
         lines.append(f"- key: {k}; word: {word}; cover: {cover}")
     return "\n".join(lines)
 
@@ -133,13 +139,16 @@ def call(client, system, prompt, schema):
     return json.loads(next(b.text for b in msg.content if b.type == "text")), cost(msg.usage)
 
 
-def glossary(_args):
-    data, c = call(anthropic.Anthropic(), STYLE, glossary_prompt(), GLOSSARY_SCHEMA)
+def glossary(args):
+    """Write every entry, or with --ids only those keys (the others are kept)."""
+    keys = args.ids.split(",") if args.ids else list(TERMS)
+    data, c = call(anthropic.Anthropic(), STYLE, glossary_prompt(keys), GLOSSARY_SCHEMA)
     got = {e["key"]: e["def"] for e in data["terms"]}
-    missing = [k for k in TERMS if k not in got]
+    missing = [k for k in keys if k not in got]
     if missing:
         sys.exit(f"Glossary is missing {missing}; nothing written.")
-    out = {k: {"term": TERMS[k][0], "def": got[k]} for k in TERMS}
+    old = json.loads(GLOSSARY.read_text(encoding="utf8")) if GLOSSARY.exists() else {}
+    out = {k: {"term": TERMS[k][0], "def": got[k] if k in keys else old[k]["def"]} for k in TERMS}
     GLOSSARY.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf8")
     print(f"Wrote {len(out)} terms to {GLOSSARY}; cost ${c:.2f}")
 
