@@ -18,6 +18,8 @@ pub enum Field {
     ThemeShort,
     /// The caption under a teaching's diagram: `teaching:<n>:caption`.
     TeachingCaption,
+    /// The one- or two-line description under a teaching's title: `teaching:<n>:detail`.
+    TeachingDetail,
     /// A topic's plain-language answer: `topic:<id>:answer`.
     TopicAnswer,
     /// "What earlier Christian writers thought": `topic:<id>:cmp`.
@@ -44,6 +46,7 @@ impl Key {
             ["theme", _, "desc"] => Field::ThemeDesc,
             ["theme", _, "short"] => Field::ThemeShort,
             ["teaching", _, "caption"] => Field::TeachingCaption,
+            ["teaching", _, "detail"] => Field::TeachingDetail,
             ["topic", _, "answer"] => Field::TopicAnswer,
             ["topic", _, "cmp"] => Field::TopicCompare,
             ["question", _, "text"] => Field::QuestionText,

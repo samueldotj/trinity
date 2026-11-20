@@ -8,7 +8,7 @@ interface Teaching {
   verses: { label: string; text: string; ref: string }[];
   notes: string[];
   cap: string;
-  edited?: { caption: boolean };
+  edited?: { caption: boolean; detail: boolean };
   topic: { id: number; title: string; theme: string; q: number };
 }
 interface Data { groups: { title: string; note: string }[]; teachings: Teaching[] }
@@ -63,7 +63,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       <section class="lesson-text" aria-label="Teaching">
         <span class="lesson-num" aria-hidden="true">${cur.n}</span>
         <h1><span class="sr-only">Teaching ${cur.n}: </span>${esc(cur.title)}</h1>
-        ${cur.detail ? `<p class="detail">${esc(cur.detail)}</p>` : ''}
+        ${cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${esc(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : ''}
         ${grp.note ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}
         <div class="lesson-nav">
           <a class="btn" href="${link(prev)}">${icon.left}${prev.n} · ${esc(prev.short)}</a>

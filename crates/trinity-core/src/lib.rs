@@ -391,9 +391,11 @@ fn teachings_with_edits() -> Value {
     let mut out = teachings().clone();
     for t in out["teachings"].as_array_mut().into_iter().flatten() {
         let n = t["n"].as_u64().unwrap_or(0);
-        let (cap, edited) = overlay(format!("teaching:{n}:caption"), &t["cap"]);
+        let (cap, cap_edited) = overlay(format!("teaching:{n}:caption"), &t["cap"]);
+        let (detail, detail_edited) = overlay(format!("teaching:{n}:detail"), &t["detail"]);
         t["cap"] = cap;
-        t["edited"] = json!({ "caption": edited });
+        t["detail"] = detail;
+        t["edited"] = json!({ "caption": cap_edited, "detail": detail_edited });
     }
     out
 }
@@ -416,9 +418,10 @@ pub fn original(key: &str) -> Option<String> {
     let text = match k.field {
         Field::ThemeDesc => theme_list().iter().find(|t| s(&t["key"]) == k.item)?["desc"].clone(),
         Field::ThemeShort => json!(builtin_label(&k.item)?),
-        Field::TeachingCaption => {
+        Field::TeachingCaption | Field::TeachingDetail => {
             let n: u64 = k.item.parse().ok()?;
-            teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?["cap"].clone()
+            let field = if k.field == Field::TeachingCaption { "cap" } else { "detail" };
+            teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?[field].clone()
         }
         Field::TopicAnswer => topic_by_id(k.item.parse().ok()?)?["ans"].get("text")?.clone(),
         Field::TopicCompare => topic_by_id(k.item.parse().ok()?)?["cmp"].clone(),
@@ -630,6 +633,12 @@ mod tests {
         assert_eq!(t["teachings"][22]["cap"], "My caption.");
         assert_eq!(t["teachings"][22]["edited"]["caption"], true);
         set_edit("teaching:23:caption", None).unwrap();
+        set_edit("teaching:10:detail", Some("My description.")).unwrap();
+        let t = handle("teachings", &p(&[])).unwrap();
+        assert_eq!(t["teachings"][9]["detail"], "My description.");
+        assert_eq!(t["teachings"][9]["edited"]["detail"], true);
+        set_edit("teaching:10:detail", None).unwrap();
+        assert!(handle("teachings", &p(&[])).unwrap()["teachings"].as_array().unwrap().iter().all(|t| t["detail"] != ""));
         assert!(set_edit("teaching:99:caption", Some("x")).is_err());
         assert!(set_edit("theme:no-such-theme:short", Some("x")).is_err());
     }

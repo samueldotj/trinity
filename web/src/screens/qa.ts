@@ -55,7 +55,6 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
         </div>`).join('');
       body = `<div class="qa-body">
         ${editingOn() ? editable(`question:${x.id}:text`, `<span class="small-caps">Question wording</span><p class="q" style="font-family: var(--display); font-size: 19px">${esc(d.question)}</p>`, { text: d.question, edited: d.edited?.text, label: 'question wording' }) : ''}
-        ${d.synthesis ? `<div class="soft"><span class="small-caps">Across the sources</span>${editable(`question:${x.id}:synthesis`, `<p style="font-size: 15px">${esc(d.synthesis)}</p>`, { text: d.synthesis, edited: d.edited?.synthesis, label: 'summary across the sources' })}</div>` : ''}
         ${answers}
         <div class="row"><a class="chip dark" href="${href('topics', { title: x.topic })}">Topic: ${esc(x.topic)}</a></div>
       </div>`;
@@ -73,7 +72,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     <div class="intro">
       <span class="eyebrow">Q&amp;A</span>
       <h1>Questions answered by early Christian writers on the Trinity</h1>
-      <p>Open a question to see each writer’s answer, his own words, and where to find them. Where several writers answer, a summary shows how they compare.</p>
+      <p>Open a question to see each writer’s answer, his own words, and where to find them.</p>
     </div>
     <div class="card filters">
       <label class="field wide">Search questions<input id="qa-q" type="search" value="${esc(state.q)}" placeholder="Ask about the Son, the Spirit, a verse…"></label>

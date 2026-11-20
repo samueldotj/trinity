@@ -103,6 +103,32 @@ T = [
 ]
 
 
+
+# Short descriptions for teachings whose list entry had none (editable in the app).
+DETAILS = {
+    10: 'The Father is fully God, the source of all things and the one to whom Jesus prays.',
+    11: 'Jesus, the Son, is fully God, not a created being or a lesser god.',
+    12: 'The Holy Spirit is fully God, not just a force or influence coming from God.',
+    13: 'Father, Son and Spirit are three real Persons, each distinct from the others, yet one God.',
+    14: 'The Father and the Son are two different Persons, not one Person with two names.',
+    15: 'The Son and the Holy Spirit are distinct Persons; Jesus calls the Spirit another Helper.',
+    16: 'The Holy Spirit is a different Person from the Father, sent by Him and speaking of Him.',
+    26: 'The love between the Father and the Son did not begin at creation; it has always been.',
+    27: 'Before the world began, the Son shared the Father’s glory as one equal with Him.',
+    31: 'Out of love, the Father sent the Son into the world to save it.',
+    32: 'The Spirit is sent to believers by the Father and by the Son together.',
+    33: 'To see Jesus is to see what the Father is like; the Son makes the unseen God known.',
+    34: 'The Spirit points people to Jesus and makes Him known, rather than drawing attention to Himself.',
+    36: 'At Jesus’ baptism and afterwards, the Father speaks to the Son from heaven: two Persons, not one.',
+    38: 'The Father, Son and Spirit made all things together; creation is one work of the one God.',
+    39: 'The Father chooses, the Son redeems and the Spirit makes us holy: one salvation from the one God.',
+    40: 'Christians are baptised into the one name of the Father, the Son and the Holy Spirit.',
+    42: 'When the Son became man He did not stop being God; He added humanity without losing His deity.',
+    43: 'Jesus is one Person who is truly God and truly man, without the two natures being mixed.',
+    44: 'The Son has always existed as God, but His human body and soul began when He was conceived.',
+    46: 'Becoming man did not change God; the Son stayed fully what He always was.',
+}
+
 # Diagram captions, one per teaching: how to read the picture (editable in the app).
 CAPTIONS = {
     1: 'Each Person is God, and all three are the one God at the centre. There are not three Gods.',
@@ -173,7 +199,8 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
         if v['missing']:
             problems.append((i + 1, v['missing']))
         del v['missing']
-    out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail, 'refs': refs, 'cap': CAPTIONS[i + 1],
+    out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail or DETAILS.get(i + 1, ''),
+                'refs': refs, 'cap': CAPTIONS[i + 1],
                 'verses': verses, 'mode': mode, 'notes': notes,
                 'topic': {'id': tid, 'title': tp['title'], 'theme': theme, 'q': tp['q'], 'cmp': first_sentence(tp['cmp'])},
                 'quote': ref and {'author': ref['author'], 'work': ref['work'], 'workId': ref['workId'],
