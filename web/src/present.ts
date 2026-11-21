@@ -19,6 +19,8 @@ export interface Slide {
   html: string;
   /** Shrink `.slide-fit` text until it fits the slide. */
   fit?: boolean;
+  /** Runs after the slide is drawn, e.g. to size a picture to the room it has. */
+  onShow?: (body: HTMLElement) => void;
 }
 
 /** What a thought bubble shows: a key word's definition or a verse's text. */
@@ -349,6 +351,7 @@ export function present(deck: Deck): void {
     nextBtn.innerHTML = last ? 'Finish' : icon.right;
     nextBtn.setAttribute('aria-label', last ? 'Finish the presentation' : 'Next slide');
     fitText();
+    s.onShow?.(body);
     paint();
   };
 
@@ -439,7 +442,7 @@ export function present(deck: Deck): void {
   scale();
   show(0);
   slideEl.focus();
-  void document.fonts?.ready.then(() => { if (dlg.open) fitText(); });
+  void document.fonts?.ready.then(() => { if (dlg.open) { fitText(); slides[at].onShow?.(body); } });
 
   // The dialog itself goes full screen, so it stays above the page. Where the browser allows it (Chrome,
   // Edge), Esc is locked so the page receives it and can ask; leaving full screen then takes holding Esc.

@@ -267,6 +267,7 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
 
   slides.push({
     kind: 'diagram',
+    onShow: fitSlideDiagram,
     html: `<div class="slide-diagram">
         <div class="slide-diagram-fit" role="img" aria-label="${esc(mdPlain(draw(cur.n, cur.notes, cur.cap).alt))}">${diagramHtml(cur, 'wide')}</div>
         <div class="slide-diagram-side">
@@ -359,6 +360,38 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
   };
 
   return { where: `Teaching ${cur.n}`, title: cur.short, slides, explain, onClose };
+}
+
+/**
+ * The diagram on its slide, as large as the slide allows. The drawing keeps room for parts most
+ * teachings don't use (a box below, labels on a ring), so it is cropped to what it actually draws first.
+ */
+function fitSlideDiagram(body: HTMLElement): void {
+  const holder = body.querySelector<HTMLElement>('.slide-diagram-fit');
+  const dg = holder?.querySelector<HTMLElement>('.diagram');
+  const legend = body.querySelector<HTMLElement>('.slide-diagram-side');
+  if (!holder || !dg || !legend) return;
+  dg.style.transform = 'none';
+  const box = dg.getBoundingClientRect();
+  const k = dg.offsetWidth / box.width;  // screen pixels to the drawing's own
+  let x1 = Infinity, y1 = Infinity, x2 = -Infinity, y2 = -Infinity;
+  for (const el of dg.querySelectorAll<HTMLElement>('.diagram-inner *')) {
+    const r = el.getBoundingClientRect();
+    if (!r.width && !r.height) continue;
+    x1 = Math.min(x1, r.left); y1 = Math.min(y1, r.top); x2 = Math.max(x2, r.right); y2 = Math.max(y2, r.bottom);
+  }
+  if (!isFinite(x1)) return;
+  const m = 12;  // breathing room, in the drawing's pixels
+  const cx = (x1 - box.left) * k - m, cy = (y1 - box.top) * k - m;
+  const cw = (x2 - x1) * k + 2 * m, ch = (y2 - y1) * k + 2 * m;
+  const cs = getComputedStyle(body);
+  const aw = body.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+  const ah = body.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom) - legend.offsetHeight - 18;
+  const s = Math.min(aw / cw, ah / ch, 1.8);
+  holder.style.width = `${cw * s}px`;
+  holder.style.height = `${ch * s}px`;
+  dg.style.transformOrigin = '0 0';
+  dg.style.transform = `scale(${s}) translate(${-cx}px, ${-cy}px)`;
 }
 
 type Layout = 'wide' | 'compact';
