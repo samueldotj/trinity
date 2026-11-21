@@ -405,7 +405,7 @@ fn question(id: &str) -> Result<Value, String> {
 fn heresies() -> Value {
     let mut out = heresies_data().clone();
     let titles: HashMap<u64, Value> = teachings()["teachings"].as_array().into_iter().flatten()
-        .filter_map(|t| Some((t["n"].as_u64()?, json!({ "n": t["n"], "short": t["short"], "title": t["title"] }))))
+        .filter_map(|t| Some((t["n"].as_u64()?, json!({ "n": t["n"], "short": t["short"], "title": t["title"], "title_ta": t["title_ta"] }))))
         .collect();
     for h in out["heresies"].as_array_mut().into_iter().flatten() {
         let denied: Vec<Value> = h["denies"].as_array().into_iter().flatten()
@@ -416,11 +416,11 @@ fn heresies() -> Value {
     out
 }
 
-/// The heresies that deny teaching `n`, in the page's order: `{ id, name, year }` each.
+/// The heresies that deny teaching `n`, in the page's order: `{ id, name, year, name_ta, year_ta }` each.
 fn heresies_denying(n: u64) -> Vec<Value> {
     heresies_data()["heresies"].as_array().into_iter().flatten()
         .filter(|h| h["denies"].as_array().is_some_and(|d| d.iter().any(|x| x.as_u64() == Some(n))))
-        .map(|h| json!({ "id": h["id"], "name": h["name"], "year": h["year"] }))
+        .map(|h| json!({ "id": h["id"], "name": h["name"], "year": h["year"], "name_ta": h["name_ta"], "year_ta": h["year_ta"] }))
         .collect()
 }
 

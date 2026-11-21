@@ -5,11 +5,10 @@ import { type Lang, langSwitch, pickLang, tamilCredit } from '../lang';
 import { mdParas } from '../markdown';
 import { esc, failure, href, icon, loading } from '../util';
 
-interface Teaching { n: number; short: string; title: string; meaning?: string; support?: string }
+interface Teaching { n: number; short: string; title: string; title_ta?: string; meaning?: string; support?: string }
 interface Data { glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
-// The page's own words in each language. Teaching titles stay English (marked lang="en"): only the
-// teachings' explanations are translated.
+// The page's own words in each language.
 const UI: Record<Lang, { title: string; intro: string; used: string; back: (n: number) => string; index: string; loading: string }> = {
   en: {
     title: 'Key words',
@@ -21,7 +20,7 @@ const UI: Record<Lang, { title: string; intro: string; used: string; back: (n: n
   },
   ta: {
     title: 'முக்கியச் சொற்கள்',
-    intro: 'போதனைகளில் பயன்படுத்தப்படும் இறையியல் சொற்கள். ஒவ்வொரு போதனையின் விளக்கத்திலும் இந்தச் சொற்கள் இந்தப் பக்கத்துடன் இணைக்கப்பட்டுள்ளன. போதனைகளின் தலைப்புகள் ஆங்கிலத்தில் உள்ளன; அவற்றின் விளக்கங்கள் தமிழிலும் உள்ளன.',
+    intro: 'போதனைகளில் பயன்படுத்தப்படும் இறையியல் சொற்கள். ஒவ்வொரு போதனையின் விளக்கத்திலும் இந்தச் சொற்கள் இந்தப் பக்கத்துடன் இணைக்கப்பட்டுள்ளன.',
     used: 'இவற்றில் வருகிறது',
     back: (n) => `போதனை ${n}-க்குத் திரும்பு`,
     index: 'முக்கியச் சொற்கள்',
@@ -63,7 +62,9 @@ export async function renderKeywords(root: HTMLElement, params: URLSearchParams)
       ${lang === 'ta' && en[k] ? `<p class="kw-en" lang="en">${esc(en[k].term)}</p>` : ''}
       ${editable(editKey, mdParas(g.def, 'kw-def'), { text: g.def, edited: g.edited, label: `definition of ${en[k]?.term || g.term}${lang === 'ta' ? ' (Tamil)' : ''}` })}
       ${used.length ? `<p class="kw-used"><span class="small-caps">${esc(ui.used)}</span> ${used.map((t) =>
-        `<a href="${href('explanations', { t: t.n })}" lang="en">${t.n} · ${esc(t.short)}</a>`).join('')}</p>` : ''}
+        lang === 'ta' && t.title_ta
+          ? `<a href="${href('explanations', { t: t.n })}">${t.n} · ${esc(t.title_ta)}</a>`
+          : `<a href="${href('explanations', { t: t.n })}" lang="en">${t.n} · ${esc(t.short)}</a>`).join('')}</p>` : ''}
     </section>`;
   }).join('');
 
@@ -74,7 +75,7 @@ export async function renderKeywords(root: HTMLElement, params: URLSearchParams)
   root.innerHTML = `<div class="page keywords" lang="${lang}">
     <header class="kw-head">
       <div class="kw-top">
-        ${back ? `<a class="btn" href="${href('explanations', { t: back.n })}">${icon.left}${esc(ui.back(back.n))} · <span lang="en">${esc(back.short)}</span></a>` : ''}
+        ${back ? `<a class="btn" href="${href('explanations', { t: back.n })}">${icon.left}${esc(ui.back(back.n))} · ${lang === 'ta' && back.title_ta ? esc(back.title_ta) : `<span lang="en">${esc(back.short)}</span>`}</a>` : ''}
         ${switcher}
       </div>
       <h1>${esc(ui.title)}</h1>

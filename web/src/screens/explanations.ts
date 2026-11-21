@@ -27,10 +27,19 @@ interface Teaching {
   edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean; detail_ta?: boolean; meaning_ta?: boolean; support_ta?: boolean };
   topic: { id: number; title: string; theme: string; q: number };
   /** Heresies that deny this teaching, from the Heresies page. */
-  heresies?: { id: string; name: string; year?: string }[];
+  heresies?: { id: string; name: string; year?: string; name_ta?: string; year_ta?: string }[];
 }
 /** A heresy as the Heresies page has it: the presentation shows what it taught in a bubble. */
-interface HeresyEntry { id: string; name: string; year: string; place: string; founder: string; summary: string }
+interface HeresyEntry {
+  id: string; name: string; year: string; place: string; founder: string; summary: string;
+  name_ta?: string; year_ta?: string; place_ta?: string; founder_ta?: string; summary_ta?: string;
+}
+
+/** A heresy's name and year in the reader's language: Tamil where translated, else English. */
+function heresyIn(h: { name: string; year?: string; name_ta?: string; year_ta?: string }, lang: Lang) {
+  const ta = lang === 'ta' && !!h.name_ta;
+  return { name: ta ? h.name_ta! : h.name, year: (ta && h.year_ta) || h.year || '', ta };
+}
 interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
 /** A teaching's title in the reader's language: Tamil where it has been translated, else English. */
@@ -171,9 +180,9 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     </section>
 
     ${cur.heresies?.length ? `<section class="denied-by" aria-labelledby="denied-h">
-      <h2 id="denied-h" class="small-caps">Heresies that deny this teaching</h2>
-      <ul>${cur.heresies.map((h) => `<li><a href="${href('heresies', { h: h.id, t: cur.n })}">${esc(h.name)}</a></li>`).join('')}</ul>
-      <a class="denied-all" href="${href('heresies', { t: cur.n })}">Read what each one teaches →</a>
+      <h2 id="denied-h" class="small-caps"${taAttr(lang === 'ta')}>${lang === 'ta' ? 'இந்தப் போதனையை மறுக்கும் வேதப்புரட்டுகள்' : 'Heresies that deny this teaching'}</h2>
+      <ul>${cur.heresies.map((h) => `<li><a href="${href('heresies', { h: h.id, t: cur.n })}"${taAttr(heresyIn(h, lang).ta)}>${esc(heresyIn(h, lang).name)}</a></li>`).join('')}</ul>
+      <a class="denied-all" href="${href('heresies', { t: cur.n })}"${taAttr(lang === 'ta')}>${lang === 'ta' ? 'ஒவ்வொன்றும் என்ன போதிக்கிறது என்று வாசியுங்கள் →' : 'Read what each one teaches →'}</a>
     </section>` : ''}
 
     <section class="explore" aria-label="Keep exploring">
@@ -335,10 +344,10 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     slides.push({
       kind: 'heresies',
       html: `<div class="slide-head-row">
-          <h2 class="slide-heading">Heresies</h2>
-          <p class="slide-eyebrow">${H.length} that deny this teaching · oldest first</p>
+          <h2 class="slide-heading"${taAttr(lang === 'ta')}>${lang === 'ta' ? 'வேதப்புரட்டுகள்' : 'Heresies'}</h2>
+          <p class="slide-eyebrow"${taAttr(lang === 'ta')}>${lang === 'ta' ? `இந்தப் போதனையை மறுக்கும் ${H.length} · பழமையானது முதலில்` : `${H.length} that deny this teaching · oldest first`}</p>
         </div>
-        <ul class="slide-heresies" style="grid-template-rows: repeat(${Math.ceil(H.length / 3)}, auto)">${H.map((h) => `<li><a href="${href('heresies', { h: h.id, t: cur.n })}"><b>${esc(h.name)}</b>${h.year ? `<span>${esc(h.year)}</span>` : ''}</a></li>`).join('')}</ul>`,
+        <ul class="slide-heresies" style="grid-template-rows: repeat(${Math.ceil(H.length / 3)}, auto)">${H.map((h) => { const x = heresyIn(h, lang); return `<li><a href="${href('heresies', { h: h.id, t: cur.n })}"${taAttr(x.ta)}><b>${esc(x.name)}</b>${x.year ? `<span>${esc(x.year)}</span>` : ''}</a></li>`; }).join('')}</ul>`,
     });
   }
 
@@ -370,6 +379,12 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     if (route === 'heresies') {
       const h = heresies?.get(q.get('h') || '');
       if (!h) return null;
+      if (lang === 'ta' && h.summary_ta) {
+        return {
+          title: h.name_ta || h.name, meta: [h.year_ta || h.year, h.place_ta || h.place, h.founder_ta || h.founder].filter(Boolean).join(' · '),
+          html: mdParas(h.summary_ta, 'bubble-para'), lang: 'ta', wide: true,
+        };
+      }
       return {
         title: h.name, meta: [h.year, h.place, h.founder].filter(Boolean).join(' · '),
         html: mdParas(h.summary, 'bubble-para'), lang: 'en', wide: true,
