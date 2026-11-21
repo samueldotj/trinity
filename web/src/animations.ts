@@ -72,7 +72,7 @@ const isPill = (x: number, y: number) =>
   `<g transform="translate(${x},${y})"><g class="a-pill"><rect x="-17" y="-12" width="34" height="24" rx="12" fill="#FFFFFF" stroke="#1B1E27"></rect><text y="4.5" text-anchor="middle" font-size="13" font-weight="600" fill="#1B1E27" ${P}>is</text></g></g>`;
 
 function godIsOne(): string {
-  const svg = `<svg class="anim-svg" viewBox="0 0 600 480" role="img" aria-label="Animation: one God at the centre, one in essence. The Father, the Son and the Holy Spirit come out from Him, each joined to Him by the word is. Pulled apart they would be three gods, which is struck out. They come back together: one what, three who.">
+  const svg = `<svg class="anim-svg" viewBox="0 -24 600 504" role="img" aria-label="Animation: one God at the centre, one in essence. The Father, the Son and the Holy Spirit come out from Him, each joined to Him by the word is. Pulled apart they would be three gods, which is struck out. They come back together: one what, three who.">
       <line class="a-tri" x1="300" y1="80" x2="130" y2="370" stroke="#C9C5BB" stroke-width="2"></line>
       <line class="a-tri" x1="300" y1="80" x2="470" y2="370" stroke="#C9C5BB" stroke-width="2"></line>
       <line class="a-tri" x1="130" y1="370" x2="470" y2="370" stroke="#C9C5BB" stroke-width="2"></line>

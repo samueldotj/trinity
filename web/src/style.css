@@ -584,7 +584,7 @@ p { margin: 0; }
 
 /* ---------- Animated illustrations (animations.ts) ---------- */
 /* On the illustration slide: scene labels, the picture, and the caption for the current scene. */
-.anim { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.anim { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
 .anim-bar { display: flex; align-items: center; gap: 10px; }
 .anim-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--night); background: var(--night); color: #fff; display: flex; align-items: center; justify-content: center; }
 .anim.is-paused .anim-toggle { background: var(--surface); color: var(--night); }
