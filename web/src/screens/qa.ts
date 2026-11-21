@@ -72,7 +72,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     return `<article class="card qa${isOpen ? ' open' : ''}">
       <button type="button" class="qa-toggle" data-q="${x.id}" aria-expanded="${isOpen}">
         <span class="q-badge" aria-hidden="true">Q</span>
-        <span class="txt"><span class="meta">${esc(cap(x.cat))} · ${esc(x.theme)}</span><span class="q">${esc(x.question)}</span><span class="who">${esc(writers)}</span></span>
+        <span class="txt"><span class="meta"><span class="q-num">Q${x.id}</span> · ${esc(cap(x.cat))} · ${esc(x.theme)}</span><span class="q">${esc(x.question)}</span><span class="who">${esc(writers)}</span></span>
         <span class="round">${icon.chevron}</span>
       </button>${body}
     </article>`;
@@ -86,7 +86,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
       <p>Open a question to see each writer’s answer, his own words, and where to find them.</p>
     </div>
     <div class="card filters">
-      <label class="field wide">Search questions<input id="qa-q" type="search" value="${esc(state.q)}" placeholder="Ask about the Son, the Spirit, a verse…"></label>
+      <label class="field wide">Search questions<input id="qa-q" type="search" value="${esc(state.q)}" placeholder="Ask about the Son, the Spirit, a verse, or a number like Q505…"></label>
       <label class="field">Theme<select id="qa-theme">${opt(res.themes.map((t, i) => ({ v: String(i), label: t })), state.theme, 'All themes')}</select></label>
       <label class="field">Writer<select id="qa-writer">${opt(res.writers.map((w) => ({ v: String(w.id), label: w.name })), state.writer, 'All writers')}</select></label>
       <label class="field">Kind<select id="qa-cat">${opt(res.cats.map((c, i) => ({ v: String(i), label: cap(c) })), state.cat, 'All kinds')}</select></label>

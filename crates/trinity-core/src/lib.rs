@@ -299,6 +299,15 @@ fn question_texts() -> &'static Vec<String> {
     })
 }
 
+/// The question number in a search word such as "505", "q505" or "#505".
+fn question_number(word: &str) -> Option<u64> {
+    let digits = word.trim_start_matches(['q', '#']);
+    if digits.is_empty() || !digits.bytes().all(|b| b.is_ascii_digit()) {
+        return None;
+    }
+    digits.parse().ok()
+}
+
 fn questions(p: &Params) -> Value {
     let d = questions_data();
     let authors = d["authors"].as_array().map(Vec::as_slice).unwrap_or(&[]);
@@ -327,7 +336,8 @@ fn questions(p: &Params) -> Value {
         .filter(|(_, x)| theme.is_none_or(|t| x[3].as_u64() == Some(t)))
         .filter(|(_, x)| cat.is_none_or(|c| x[2].as_u64() == Some(c)))
         .filter(|(_, x)| writer.is_none_or(|w| x[5].as_array().is_some_and(|a| a.iter().any(|i| i.as_u64() == Some(w)))))
-        .filter(|(i, _)| words.iter().all(|w| texts[*i].contains(w.as_str())))
+        // A search word can also be a question's number, as the page shows it: "505", "q505" or "#505".
+        .filter(|(i, x)| words.iter().all(|w| texts[*i].contains(w.as_str()) || question_number(w) == x[0].as_u64()))
         .collect();
     let nwriters = |x: &Value| x[5].as_array().map_or(0, Vec::len);
     if sort == "many" {
@@ -620,6 +630,10 @@ mod tests {
         let q = handle("questions", &p(&[("q", "Father one"), ("limit", "3")])).unwrap();
         assert!(q["total"].as_u64().unwrap() > 0);
         assert!(handle("question", &p(&[("id", "505")])).unwrap()["answers"].is_array());
+        for word in ["505", "Q505", "#505"] {
+            let q = handle("questions", &p(&[("q", word)])).unwrap();
+            assert_eq!((q["total"].as_u64(), q["items"][0]["id"].as_u64()), (Some(1), Some(505)), "{word}");
+        }
         assert_eq!(handle("books", &p(&[])).unwrap().as_array().unwrap().len(), 16);
         let f = handle("find", &p(&[("id", "gregory-nyssa-not-three-gods"),
             ("quote", "issuing from the Father as from a spring")])).unwrap();
