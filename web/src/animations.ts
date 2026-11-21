@@ -6,15 +6,52 @@
 const F = 'font-family="Fraunces, Georgia, serif"';
 const P = 'font-family="IBM Plex Sans, sans-serif"';
 
-/** A scene's label above the picture, and the caption shown under it during that scene. */
-interface Scene { label: string; caption: string }
+/**
+ * A scene's label above the picture, the caption shown under it during that scene, and when it starts,
+ * as a fraction of the loop (matching its caption's keyframes in style.css).
+ */
+interface Scene { label: string; caption: string; at: number }
 
-function frame(n: number, scenes: Scene[], svg: string): string {
+const PAUSE = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/></svg>';
+const PLAY = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z" fill="currentColor"/></svg>';
+
+/** `ms`: the loop's length, as in its .anim-t<n> rule. */
+function frame(n: number, ms: number, scenes: Scene[], svg: string): string {
   return `<div class="anim anim-t${n}">
-      <ol class="anim-steps" aria-label="Scenes">${scenes.map((s, i) => `<li class="anim-step${i + 1}">${i + 1} · ${s.label}</li>`).join('')}</ol>
+      <div class="anim-bar">
+        <button type="button" class="anim-toggle" aria-pressed="false" aria-label="Pause (K)" title="Pause (K)">${PAUSE}</button>
+        <ol class="anim-steps" aria-label="Scenes">${scenes.map((s, i) => `<li><button type="button" class="anim-step${i + 1}" data-at="${Math.round(s.at * ms)}" title="Go to this scene">${i + 1} · ${s.label}</button></li>`).join('')}</ol>
+      </div>
       ${svg}
       <div class="anim-caps">${scenes.map((s, i) => `<p class="anim-cap${i + 1}">${s.caption}</p>`).join('')}</div>
     </div>`;
+}
+
+/**
+ * Pause and play, for explaining a scene: the button, K, or a click on the picture. A scene's label goes
+ * to the start of that scene, keeping it paused if it was. Runs each time the slide is shown.
+ */
+export function wireAnimation(body: HTMLElement): void {
+  const box = body.querySelector<HTMLElement>('.anim');
+  if (!box) return;
+  const toggle = box.querySelector<HTMLButtonElement>('.anim-toggle')!;
+  const all = () => box.getAnimations({ subtree: true });
+  let paused = false;
+  const set = (p: boolean) => {
+    paused = p;
+    all().forEach((a) => (p ? a.pause() : a.play()));
+    box.classList.toggle('is-paused', p);
+    toggle.setAttribute('aria-pressed', String(p));
+    toggle.innerHTML = p ? PLAY : PAUSE;
+    toggle.title = p ? 'Play (K)' : 'Pause (K)';
+    toggle.setAttribute('aria-label', toggle.title);
+  };
+  toggle.addEventListener('click', () => set(!paused));
+  box.querySelector('.anim-svg')?.addEventListener('click', () => set(!paused));
+  box.querySelectorAll<HTMLButtonElement>('[data-at]').forEach((b) => b.addEventListener('click', () => {
+    const t = Number(b.dataset.at);
+    all().forEach((a) => { a.currentTime = t; });
+  }));
 }
 
 // ---------- Teaching 1: God is One ----------
@@ -59,11 +96,11 @@ function godIsOne(): string {
         <text y="6" text-anchor="middle" font-size="17" font-weight="600" fill="#9B1C1C" text-decoration="line-through" ${P}>Not three gods</text>
       </g></g>
     </svg>`;
-  return frame(1, [
-    { label: 'One essence', caption: 'There is only one divine being: God is one in essence, what God is.' },
-    { label: 'Three Persons', caption: 'He is three in Person, who God is: the Father, the Son and the Holy Spirit.' },
-    { label: 'Not three gods', caption: 'Not three separate gods working together like a team.' },
-    { label: 'One God', caption: 'One “what” and three “who”: no contradiction.' },
+  return frame(1, 16000, [
+    { label: 'One essence', at: 0, caption: 'There is only one divine being: God is one in essence, what God is.' },
+    { label: 'Three Persons', at: 0.22, caption: 'He is three in Person, who God is: the Father, the Son and the Holy Spirit.' },
+    { label: 'Not three gods', at: 0.46, caption: 'Not three separate gods working together like a team.' },
+    { label: 'One God', at: 0.72, caption: 'One “what” and three “who”: no contradiction.' },
   ], svg);
 }
 

@@ -1,4 +1,4 @@
-import { animationFor } from '../animations';
+import { animationFor, wireAnimation } from '../animations';
 import { api } from '../api';
 import { draw, LAYOUT } from '../diagram';
 import { editable, wireEditing } from '../edit';
@@ -268,7 +268,7 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
 
   // A teaching with an animated illustration shows that; the others, the diagram from the page.
   const animation = animationFor(cur.n);
-  slides.push(animation ? { kind: 'diagram', html: animation } : {
+  slides.push(animation ? { kind: 'diagram', html: animation, onShow: wireAnimation } : {
     kind: 'diagram',
     onShow: fitSlideDiagram,
     html: `<div class="slide-diagram">

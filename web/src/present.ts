@@ -419,6 +419,7 @@ export function present(deck: Deck): void {
     else if (k === 'End') { e.preventDefault(); show(slides.length - 1); }
     else if (k === 'p' || k === 'P') setTool(tool === 'pen' ? null : 'pen');
     else if (k === 'h' || k === 'H') setTool(tool === 'marker' ? null : 'marker');
+    else if (k === 'k' || k === 'K') body.querySelector<HTMLButtonElement>('.anim-toggle')?.click();  // pause or play an animation
   });
   // The keydown above normally stops Esc from closing the dialog; this catches any other way it is asked to.
   dlg.addEventListener('cancel', (e) => { e.preventDefault(); onEscape(); });

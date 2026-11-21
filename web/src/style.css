@@ -585,9 +585,14 @@ p { margin: 0; }
 /* ---------- Animated illustrations (animations.ts) ---------- */
 /* On the illustration slide: scene labels, the picture, and the caption for the current scene. */
 .anim { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.anim-bar { display: flex; align-items: center; gap: 10px; }
+.anim-toggle { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--night); background: var(--night); color: #fff; display: flex; align-items: center; justify-content: center; }
+.anim.is-paused .anim-toggle { background: var(--surface); color: var(--night); }
 .anim-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.anim-steps li { display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--line); color: #6B7290; font-size: 13px; font-weight: 600; }
-.anim-svg { flex: 0 1 auto; width: auto; height: 456px; max-width: 100%; }
+.anim-steps button { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: #6B7290; font-size: 13px; font-weight: 600; }
+.anim-steps button:hover { background: var(--mist); }
+.anim-svg { cursor: pointer; }
+.anim-svg { flex: 0 1 auto; width: auto; height: 448px; max-width: 100%; }
 .anim-caps { position: relative; width: 100%; height: 44px; }
 .anim-caps p { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--read); font-size: 30px; line-height: 1.35; color: var(--ink); opacity: 0; }
 .anim .a-tag, .anim .a-not { opacity: 0; }
@@ -596,7 +601,7 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .anim * { animation: none !important; }
   .anim-caps p:last-child { opacity: 1; }
-  .anim-steps li:last-child { color: var(--ink); border-color: var(--ink); }
+  .anim-steps li:last-child button { color: var(--ink); border-color: var(--ink); }
 }
 
 /* Teaching 1, God is One: 16 seconds in four scenes. */
