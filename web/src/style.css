@@ -284,7 +284,9 @@ p { margin: 0; }
 .qa-toggle .txt { flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .qa-toggle .meta { font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--muted); }
 /* The question's number, for referring to it: the same number as in its link (?open=505). */
-.qa-toggle .q-num { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--night); color: #fff; font-size: calc(12px + 1pt); font-weight: 700; letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+.qa-toggle .q-num { font-size: calc(12px + 1pt); font-weight: 700; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+/* On the open question the header is dark, so the number becomes a white pill, like the Q badge. */
+.qa.open .qa-toggle .q-num { display: inline-block; padding: 1px 8px; border-radius: 999px; background: #fff; color: var(--night); letter-spacing: .02em; }
 .qa-toggle .q { font-family: var(--display); font-size: 21px; line-height: 1.3; font-weight: 500; }
 .qa-toggle .who { font-size: 13px; color: var(--muted); }
 .qa.open .qa-toggle .meta, .qa.open .qa-toggle .who { color: var(--on-night-muted); }
