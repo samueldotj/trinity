@@ -226,6 +226,8 @@ EXPLAIN = json.load(open(QA / 'teaching_explanations.json', encoding='utf8')) if
 GLOSSARY = json.load(open(QA / 'glossary.json', encoding='utf8')) if (QA / 'glossary.json').exists() else {}
 GLOSSARY_TA = json.load(open(QA / 'glossary.ta.json', encoding='utf8')) if (QA / 'glossary.ta.json').exists() else {}  # Tamil
 EXPLAIN_TA = json.load(open(QA / 'teaching_explanations.ta.json', encoding='utf8')) if (QA / 'teaching_explanations.ta.json').exists() else {}  # Tamil
+# Tamil titles and descriptions, translated from the English in T and DETAILS.
+TITLES_TA = json.load(open(QA / 'teaching_titles.ta.json', encoding='utf8')) if (QA / 'teaching_titles.ta.json').exists() else {}
 
 out, problems = [], []
 for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
@@ -237,6 +239,7 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
             problems.append((i + 1, v['missing']))
         del v['missing']
     out.append({'n': i + 1, 'g': g, 'short': short, 'title': title, 'detail': detail or DETAILS.get(i + 1, ''),
+                **({'title_ta': TITLES_TA[str(i + 1)]['title'], 'detail_ta': TITLES_TA[str(i + 1)]['detail']} if str(i + 1) in TITLES_TA else {}),
                 'refs': refs, 'cap': CAPTIONS[i + 1],
                 **({'note': dict(zip(('title', 'text', 'see'), TEACHING_NOTES[i + 1]))} if i + 1 in TEACHING_NOTES else {}),
                 **({'meaning': EXPLAIN[str(i + 1)]['meaning'], 'support': EXPLAIN[str(i + 1)]['support']} if str(i + 1) in EXPLAIN else {}),

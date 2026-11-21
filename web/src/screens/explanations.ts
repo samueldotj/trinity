@@ -21,7 +21,10 @@ interface Teaching {
   /** The same two, translated into Tamil. */
   meaning_ta?: string;
   support_ta?: string;
-  edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean; meaning_ta?: boolean; support_ta?: boolean };
+  /** The title and description, translated into Tamil. */
+  title_ta?: string;
+  detail_ta?: string;
+  edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean; detail_ta?: boolean; meaning_ta?: boolean; support_ta?: boolean };
   topic: { id: number; title: string; theme: string; q: number };
   /** Heresies that deny this teaching, from the Heresies page. */
   heresies?: { id: string; name: string; year?: string }[];
@@ -29,6 +32,13 @@ interface Teaching {
 /** A heresy as the Heresies page has it: the presentation shows what it taught in a bubble. */
 interface HeresyEntry { id: string; name: string; year: string; place: string; founder: string; summary: string }
 interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
+
+/** A teaching's title in the reader's language: Tamil where it has been translated, else English. */
+function titleIn(t: Teaching, lang: Lang): { text: string; ta: boolean } {
+  return lang === 'ta' && t.title_ta ? { text: t.title_ta, ta: true } : { text: t.title, ta: false };
+}
+/** `lang="ta"` for an element holding Tamil text. */
+const taAttr = (ta: boolean) => (ta ? ' lang="ta"' : '');
 
 let lastShown = '';
 
@@ -63,7 +73,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
 
   const outline = data.groups.map((g, gi) => `<li>
       <h2 class="outline-part">Part ${gi + 1} · ${esc(g.title)}</h2>
-      <ol>${T.filter((t) => t.g === gi).map((t) => `<li><a href="${link(t)}"${t.n === cur.n ? ' aria-current="page"' : ''}${t.n < cur.n ? ' class="done"' : ''}><span class="outline-n">${t.n}</span>${esc(t.title)}</a></li>`).join('')}</ol>
+      <ol>${T.filter((t) => t.g === gi).map((t) => `<li><a href="${link(t)}"${t.n === cur.n ? ' aria-current="page"' : ''}${t.n < cur.n ? ' class="done"' : ''}><span class="outline-n">${t.n}</span><span${taAttr(titleIn(t, lang).ta)}>${esc(titleIn(t, lang).text)}</span></a></li>`).join('')}</ol>
     </li>`).join('');
 
   const steps = inPart.map((t) => `<li><a href="${link(t)}" class="${t.n < cur.n ? 'done' : ''}"${t.n === cur.n ? ' aria-current="step"' : ''} aria-label="Teaching ${t.n}: ${esc(t.short)}"><span></span></a></li>`).join('');
@@ -76,12 +86,17 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   // Key words in the title and explanation link to the Key words page, the first mention of each only.
   const gl = data.glossary || {};
   const seen = new Set<string>();
-  const title = linkTerms(cur.title, gl, seen, cur.n);
-  // In Tamil, only the explanation and how the passages support it are translated; the rest stays English.
-  // A teaching without a translation shows its English.
+  // In Tamil, the title, description, explanation and how the passages support it are translated;
+  // the rest stays English. A part without a translation shows its English.
   const ta = lang === 'ta' && !!cur.meaning_ta;
   const glTa = data.glossary_ta || {};
   const seenTa = new Set<string>();
+  const titleTa = titleIn(cur, lang).ta;
+  const title = titleTa ? linkTermsTa(cur.title_ta!, glTa, seenTa, cur.n, gl) : linkTerms(cur.title, gl, seen, cur.n);
+  const detailTa = lang === 'ta' && cur.detail_ta;
+  const detail = detailTa
+    ? `<div lang="ta">${editable(`teaching:${cur.n}:detail:ta`, `<p class="detail">${mdInline(detailTa)}</p>`, { text: detailTa, edited: cur.edited?.detail_ta, label: 'teaching description (Tamil)' })}</div>`
+    : cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${mdInline(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : '';
   const meaningText = ta ? cur.meaning_ta! : cur.meaning;
   const meaning = meaningText ? `<section class="explain" aria-labelledby="explain-h"${ta ? ' lang="ta"' : ''}>
           <h2 id="explain-h" class="small-caps">${ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?'}</h2>
@@ -120,11 +135,11 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     <div class="lesson">
       <section class="lesson-text" aria-label="Teaching">
         <span class="lesson-num" aria-hidden="true">${cur.n}</span>
-        <h1><span class="sr-only">Teaching ${cur.n}: </span>${title}</h1>
-        ${cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${mdInline(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : ''}
+        <h1><span class="sr-only">Teaching ${cur.n}: </span><span${taAttr(titleTa)}>${title}</span></h1>
+        ${detail}
         ${meaning}
         ${cur.note ? `<aside class="note teaching-note" aria-label="${esc(cur.note.title)}"><strong>${esc(cur.note.title)}.</strong> ${esc(cur.note.text)}${
-          T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: ${esc(T[cur.note.see - 1].title)} →</a>` : ''}</aside>` : ''}
+          T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: <span${taAttr(titleIn(T[cur.note.see - 1], lang).ta)}>${esc(titleIn(T[cur.note.see - 1], lang).text)}</span> →</a>` : ''}</aside>` : ''}
         ${grp.note && inPart[0] === cur ? `<p class="note"><strong>Note.</strong> ${esc(grp.note)}</p>` : ''}
         <div class="lesson-nav">
           ${prev ? `<a class="btn" href="${link(prev)}">${icon.left}${prev.n} · ${esc(prev.short)}</a>` : ''}
@@ -245,11 +260,12 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
   const linkEn = (p: string) => linkTerms(p, gl, seen, cur.n);
   const linkTa = (p: string) => linkTermsTa(p, glTa, seenTa, cur.n, gl);
   const verseHref = (v: Teaching['verses'][number]) => href('reference', { exact: v.ref });
+  const slideDetail = (lang === 'ta' && cur.detail_ta) || cur.detail;
   const slides: Slide[] = [{
     kind: 'title', fit: true,
     html: `<p class="slide-eyebrow">Teaching ${cur.n} of ${T.length} · Part ${cur.g + 1} · ${esc(data.groups[cur.g].title)}</p>
-      <h1 class="slide-title slide-fit">${esc(cur.title)}</h1>
-      ${cur.detail ? `<p class="slide-sub">${mdInline(cur.detail)}</p>` : ''}`,
+      <h1 class="slide-title slide-fit"${taAttr(titleIn(cur, lang).ta)}>${esc(titleIn(cur, lang).text)}</h1>
+      ${slideDetail ? `<p class="slide-sub"${taAttr(slideDetail === cur.detail_ta)}>${mdInline(slideDetail)}</p>` : ''}`,
   }];
 
   const meaning = (ta ? cur.meaning_ta : cur.meaning)?.trim();

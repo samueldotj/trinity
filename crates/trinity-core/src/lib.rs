@@ -437,6 +437,7 @@ fn teachings_with_edits() -> Value {
             ("detail", "detail"),
             ("meaning", "meaning"),
             ("support", "support"),
+            ("detail_ta", "detail:ta"),
             ("meaning_ta", "meaning:ta"),
             ("support_ta", "support:ta"),
         ] {
@@ -485,6 +486,7 @@ pub fn original(key: &str) -> Option<String> {
         | Field::TeachingDetail
         | Field::TeachingMeaning
         | Field::TeachingSupport
+        | Field::TeachingDetailTa
         | Field::TeachingMeaningTa
         | Field::TeachingSupportTa => {
             let n: u64 = k.item.parse().ok()?;
@@ -492,6 +494,7 @@ pub fn original(key: &str) -> Option<String> {
                 Field::TeachingCaption => "cap",
                 Field::TeachingDetail => "detail",
                 Field::TeachingMeaning => "meaning",
+                Field::TeachingDetailTa => "detail_ta",
                 Field::TeachingMeaningTa => "meaning_ta",
                 Field::TeachingSupportTa => "support_ta",
                 _ => "support",
@@ -761,6 +764,12 @@ mod tests {
         assert_eq!(t24["edited"]["meaning"], false);
         assert_eq!(t24["edited"]["support_ta"], false);
         set_edit("teaching:24:meaning:ta", None).unwrap();
+        set_edit("teaching:1:detail:ta", Some("என் விவரம்.")).unwrap();
+        let t1 = &handle("teachings", &p(&[])).unwrap()["teachings"][0];
+        assert_eq!(t1["detail_ta"], "என் விவரம்.");
+        assert_eq!(t1["edited"]["detail_ta"], true);
+        assert_eq!(t1["edited"]["detail"], false);
+        set_edit("teaching:1:detail:ta", None).unwrap();
         assert!(set_edit("teaching:99:support:ta", Some("x")).is_err());
         assert!(set_edit("term:no-such-term:def:ta", Some("x")).is_err());
         assert!(set_edit("theme:no-such-theme:short", Some("x")).is_err());
