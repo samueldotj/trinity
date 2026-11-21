@@ -1,8 +1,8 @@
 // Presentation mode: a teaching shown as full-screen slides for teaching a group.
 //
 // Each slide is drawn on a fixed 1280 x 720 stage and scaled to fit the screen, so it looks the same on a
-// laptop and a projector. → / Space / PageDown go forward, ← / PageUp back, Home / End to the ends; Esc (or
-// Exit) leaves full screen and returns to the page.
+// laptop and a projector. → / Space / PageDown go forward, ← / PageUp back, Home / End to the ends. Exit
+// returns to the page; Esc asks first, since it is easy to press by accident.
 //
 // The presenter can draw on a slide with a pen (P) or highlighter (H); each slide keeps its drawing until
 // the presentation ends. Clicking a key word, a verse or a heresy opens it in a thought bubble; the next
@@ -360,8 +360,50 @@ export function present(deck: Deck): void {
   steps.forEach((b, k) => b.addEventListener('click', () => show(k)));
   $('.slide-exit').addEventListener('click', close);
 
+  // ---------- leaving ----------
+  // Esc is easy to press by accident, so it asks first. The Exit and Finish buttons leave at once.
+  const ask = document.createElement('div');
+  ask.className = 'present-ask';
+  ask.hidden = true;
+  ask.innerHTML = `<div class="present-ask-card" role="alertdialog" aria-modal="true" aria-labelledby="present-ask-h" aria-describedby="present-ask-p">
+      <h2 id="present-ask-h">Leave the presentation?</h2>
+      <p id="present-ask-p"></p>
+      <div class="present-ask-actions">
+        <button type="button" class="btn primary present-keep">Keep presenting</button>
+        <button type="button" class="btn present-leave">Exit</button>
+      </div>
+    </div>`;
+  dlg.appendChild(ask);
+  const keepBtn = ask.querySelector<HTMLButtonElement>('.present-keep')!;
+  let wasFullscreen = false;
+  const askToLeave = () => {
+    closeBubble();
+    ask.querySelector('p')!.textContent = ink.some((s) => s.length)
+      ? 'Your drawings on the slides will be cleared.'
+      : 'You can come back to it with the Present button.';
+    ask.hidden = false;
+    keepBtn.focus();
+  };
+  const keepPresenting = () => {
+    ask.hidden = true;
+    slideEl.focus();
+    // If Esc took the browser out of full screen, this click is allowed to put it back.
+    if (wasFullscreen && !document.fullscreenElement) goFullscreen();
+  };
+  keepBtn.addEventListener('click', keepPresenting);
+  ask.querySelector('.present-leave')!.addEventListener('click', close);
+  // Esc first closes an open bubble, then puts the pen down, then asks.
+  const onEscape = () => {
+    if (!ask.hidden) keepPresenting();
+    else if (bubbleEls.length) closeBubble();
+    else if (tool) setTool(null);
+    else askToLeave();
+  };
+
   dlg.addEventListener('keydown', (e) => {
     const k = e.key;
+    if (k === 'Escape') { e.preventDefault(); onEscape(); return; }
+    if (!ask.hidden) return;  // the question's own buttons take Enter, Space and Tab
     if ((e.ctrlKey || e.metaKey) && !e.altKey && k.toLowerCase() === 'z') { e.preventDefault(); undo(); return; }
     if (e.altKey || e.ctrlKey || e.metaKey) return;
     if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) {
@@ -375,14 +417,12 @@ export function present(deck: Deck): void {
     else if (k === 'p' || k === 'P') setTool(tool === 'pen' ? null : 'pen');
     else if (k === 'h' || k === 'H') setTool(tool === 'marker' ? null : 'marker');
   });
-  // Outside full screen, Esc first closes an open bubble or puts the pen down, then leaves.
-  dlg.addEventListener('cancel', (e) => {
-    if (bubbleEls.length) { e.preventDefault(); closeBubble(); }
-    else if (tool) { e.preventDefault(); setTool(null); }
-  });
+  // The keydown above normally stops Esc from closing the dialog; this catches any other way it is asked to.
+  dlg.addEventListener('cancel', (e) => { e.preventDefault(); onEscape(); });
 
-  // In full screen the browser takes the first Esc to leave full screen: that ends the presentation too.
-  const onFullscreen = () => { if (!document.fullscreenElement) close(); };
+  // In full screen the browser keeps Esc for itself where it can't be locked (see goFullscreen): leaving
+  // full screen then asks too, and "Keep presenting" goes back into it.
+  const onFullscreen = () => { if (!document.fullscreenElement && dlg.open && ask.hidden) askToLeave(); };
   const ro = new ResizeObserver(scale);
   window.addEventListener('hashchange', close);  // a link was followed
   dlg.addEventListener('close', () => {
@@ -401,10 +441,18 @@ export function present(deck: Deck): void {
   slideEl.focus();
   void document.fonts?.ready.then(() => { if (dlg.open) fitText(); });
 
-  // The dialog itself goes full screen, so it stays above the page.
-  if (dlg.requestFullscreen && !document.fullscreenElement) {
+  // The dialog itself goes full screen, so it stays above the page. Where the browser allows it (Chrome,
+  // Edge), Esc is locked so the page receives it and can ask; leaving full screen then takes holding Esc.
+  function goFullscreen(): void {
+    if (!dlg.requestFullscreen || document.fullscreenElement) return;
     dlg.requestFullscreen({ navigationUI: 'hide' })
-      .then(() => document.addEventListener('fullscreenchange', onFullscreen))
+      .then(() => {
+        wasFullscreen = true;
+        document.addEventListener('fullscreenchange', onFullscreen);
+        const kb = (navigator as Navigator & { keyboard?: { lock?: (keys: string[]) => Promise<void> } }).keyboard;
+        return kb?.lock?.(['Escape']);
+      })
       .catch(() => {});  // not allowed here (e.g. some webviews): present in the window instead
   }
+  goFullscreen();
 }
