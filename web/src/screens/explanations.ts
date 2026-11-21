@@ -170,9 +170,9 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       </figure>
     </div>
 
-    <section class="verses-section" aria-label="Supporting verses" style="display: flex; flex-direction: column; gap: 14px">
+    <section class="verses-section" aria-label="Verses" style="display: flex; flex-direction: column; gap: 14px">
       <div class="row" style="justify-content: space-between; align-items: baseline">
-        <h2 style="font-size: 26px">Supporting verses</h2>
+        <h2 style="font-size: 26px">Verses</h2>
         <span style="font-size: 13px; color: var(--muted)">${esc(cur.refs)} · ${versesTa ? 'Tamil Indian Revised Version (IRV)' : 'Berean Standard Bible'}</span>
       </div>
       ${support}
@@ -336,7 +336,7 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     : cur.verses.map((v) => `<p class="slide-para"${versesTa ? ' lang="ta"' : ''}><b>${esc(versesTa ? v.label_ta! : v.label)}</b> ${esc(versesTa ? v.text_ta! : v.text)}</p>`).join('');
   slides.push({
     kind: 'verses', fit: true,
-    html: `<h2 class="slide-heading">Supporting Verses</h2>
+    html: `<h2 class="slide-heading">Verses</h2>
       <div class="slide-fit slide-support"${supportTa ? ' lang="ta"' : ''}>${body}</div>
       <div class="slide-chips">${chips}<span>${versesTa ? 'Tamil Indian Revised Version (IRV)' : 'Berean Standard Bible'}</span></div>`,
   });
