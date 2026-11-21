@@ -741,3 +741,46 @@ p { margin: 0; }
 @keyframes t4-ghosttag { 0%, 50% { opacity: 0; transform: translateY(-6px); } 53%, 68% { opacity: 1; transform: translateY(0px); } 71%, 100% { opacity: 0; } }
 @keyframes t4-ghoststrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 68% { opacity: 1; stroke-dashoffset: 0; } 71%, 100% { opacity: 0; stroke-dashoffset: 0; } }
 @keyframes t4-divider { 0%, 76% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Teaching 5, God is Immutable: 24 seconds in four scenes. */
+.anim-t5 * { animation-duration: 24s; }
+.anim-t5 .a-chip, .anim-t5 .a-nochange, .anim-t5 .a-ground, .anim-t5 .a-sun, .anim-t5 .a-shadow, .anim-t5 .a-noshadow, .anim-t5 .a-virtue, .anim-t5 .a-card, .anim-t5 .a-year1, .anim-t5 .a-year2, .anim-t5 .a-year3 { opacity: 0; }
+.anim-t5 .a-god { animation-name: t5-god; }
+.anim-t5 .a-ring { animation-name: t5-ring; }
+.anim-t5 .a-chip { animation-name: t5-chip; }
+.anim-t5 .a-nochange { animation-name: t5-nochange; }
+.anim-t5 .a-ground { animation-name: t5-ground; }
+.anim-t5 .a-sun { animation-name: t5-sun; }
+.anim-t5 .a-shadow { animation-name: t5-shadow; }
+.anim-t5 .a-noshadow { animation-name: t5-noshadow; }
+.anim-t5 .a-virtue { animation-name: t5-virtue; }
+.anim-t5 .a-card { animation-name: t5-card; }
+.anim-t5 .a-year1 { animation-name: t5-year1; }
+.anim-t5 .a-year2 { animation-name: t5-year2; }
+.anim-t5 .a-year3 { animation-name: t5-year3; }
+.anim-t5 .a-people { animation-name: t5-people; }
+.anim-t5 .a-prayer { animation-name: t5-prayer; }
+.anim-t5 .a-prayerlabel { animation-name: t5-prayerlabel; }
+.anim-t5 .a-answer { animation-name: t5-answer; }
+.anim-t5 .a-answerlabel { animation-name: t5-answerlabel; }
+.anim-t5 .a-same { animation-name: t5-same; }
+.anim-t5 .a-prayer { animation-timing-function: linear; }
+@keyframes t5-god { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t5-ring { 0%, 2% { opacity: 0; transform: scale(.8); } 7% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t5-chip { 0%, 3% { opacity: 0; transform: translateY(var(--dy)); } 5% { opacity: 1; transform: translateY(var(--dy)); } 11% { opacity: 1; transform: translateY(0px); } 12.5% { transform: translateY(calc(var(--dy) * .12)); } 14% { opacity: 1; transform: translateY(calc(var(--dy) * .08)); } 18%, 100% { opacity: 0; transform: translateY(calc(var(--dy) * .3)); } }
+@keyframes t5-nochange { 0%, 14% { opacity: 0; } 17%, 21% { opacity: 1; } 23%, 100% { opacity: 0; } }
+@keyframes t5-ground { 0%, 22% { opacity: 0; } 25%, 44% { opacity: 1; } 47%, 100% { opacity: 0; } }
+@keyframes t5-sun { 0%, 22% { opacity: 0; transform: translate(-100px, 40px); } 25% { opacity: 1; transform: translate(-100px, 40px); } 33.5% { transform: translate(0px, 0px); } 42% { opacity: 1; transform: translate(100px, 40px); } 45%, 100% { opacity: 0; transform: translate(100px, 40px); } }
+@keyframes t5-shadow { 0%, 22% { opacity: 0; transform: scaleX(1.2); } 25% { opacity: 1; transform: scaleX(1.2); } 33.5% { transform: scaleX(.08); } 42% { opacity: 1; transform: scaleX(-1.2); } 45%, 100% { opacity: 0; transform: scaleX(-1.2); } }
+@keyframes t5-noshadow { 0%, 27% { opacity: 0; } 30%, 44% { opacity: 1; } 47%, 100% { opacity: 0; } }
+@keyframes t5-virtue { 0%, 47% { opacity: 0; transform: scale(.7); } 50% { opacity: 1; transform: scale(1); } 56% { transform: scale(1.08); } 57% { transform: scale(1); } 62% { transform: scale(1.08); } 63% { transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 72%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t5-card { 0%, 48% { opacity: 0; } 50%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t5-year1 { 0%, 49% { opacity: 0; } 51%, 54.5% { opacity: 1; } 56%, 100% { opacity: 0; } }
+@keyframes t5-year2 { 0%, 55% { opacity: 0; } 57%, 60.5% { opacity: 1; } 62%, 100% { opacity: 0; } }
+@keyframes t5-year3 { 0%, 61% { opacity: 0; } 63%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t5-people { 0%, 72% { opacity: 0; transform: scale(.6); } 75% { opacity: 1; transform: scale(.7); } 92% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t5-prayer { 0% { stroke-dashoffset: 0; opacity: 0; } 76% { opacity: 0; } 79%, 95% { opacity: 1; } 100% { stroke-dashoffset: -330; opacity: 0; } }
+@keyframes t5-prayerlabel { 0%, 77% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t5-answer { 0%, 80% { opacity: 1; stroke-dashoffset: 1; } 86% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t5-answerlabel { 0%, 85% { opacity: 0; } 87%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t5-same { 0%, 82% { opacity: 0; } 86%, 95% { opacity: 1; } 100% { opacity: 0; } }
