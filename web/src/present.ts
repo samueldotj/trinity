@@ -5,8 +5,9 @@
 // Exit) leaves full screen and returns to the page.
 //
 // The presenter can draw on a slide with a pen (P) or highlighter (H); each slide keeps its drawing until
-// the presentation ends. Clicking a key word or a verse opens it in a thought bubble; the next click
-// anywhere closes it.
+// the presentation ends. Clicking a key word, a verse or a heresy opens it in a thought bubble; the next
+// click anywhere closes it. With the pen or highlighter on, the presenter draws over the bubble instead,
+// and that drawing goes when the bubble closes.
 
 import { esc, icon } from './util';
 
@@ -25,14 +26,19 @@ export interface Bubble {
   title: string;
   /** Already-safe HTML. */
   html: string;
+  /** A line under the title, e.g. a heresy's date, place and founder. */
+  meta?: string;
   /** A line under the text, e.g. the Bible translation. */
   cite?: string;
+  /** Longer text: a wider bubble. */
+  wide?: boolean;
   lang?: string;
 }
 
 export interface Deck {
-  /** Shown at the top of every slide but the first, e.g. "Teaching 1 · God is One". */
+  /** Shown at the top of every slide but the first, e.g. "Teaching 1", then the `title`, "God is One". */
   where: string;
+  title: string;
   slides: Slide[];
   /** The bubble for a link on a slide, or null to follow the link as usual. */
   explain?: (link: HTMLAnchorElement) => Bubble | null;
@@ -43,7 +49,8 @@ export interface Deck {
 const W = 1280, H = 720, INK_SCALE = 2;
 
 type Tool = 'pen' | 'marker' | null;
-interface Stroke { tool: 'pen' | 'marker'; color: string; points: [number, number][] }
+/** `onBubble`: drawn while a bubble was open, so it is cleared when the bubble closes. */
+interface Stroke { tool: 'pen' | 'marker'; color: string; points: [number, number][]; onBubble?: boolean }
 
 const PEN_COLORS = [
   { name: 'Red', value: '#D42A3C' },
@@ -66,12 +73,12 @@ export function present(deck: Deck): void {
 
   const dlg = document.createElement('dialog');
   dlg.className = 'present';
-  dlg.setAttribute('aria-label', `Presentation: ${deck.where}`);
+  dlg.setAttribute('aria-label', `Presentation: ${deck.where}, ${deck.title}`);
   dlg.innerHTML = `
     <div class="present-stage">
       <div class="slide" tabindex="-1">
         <header class="slide-top">
-          <span class="slide-where"><span class="tri" aria-hidden="true"></span><span class="slide-where-text">${esc(deck.where)}</span></span>
+          <span class="slide-where"><span class="tri" aria-hidden="true"></span><span class="slide-where-text">${esc(deck.where)} · <span class="slide-where-title">${esc(deck.title)}</span></span></span>
           <div class="slide-tools" role="toolbar" aria-label="Drawing">
             <button type="button" class="ink-tool" data-tool="pen" aria-pressed="false" aria-label="Pen (P)" title="Pen (P)">${toolIcon.pen}</button>
             <span class="ink-colors" hidden>${PEN_COLORS.map((c, i) => `<button type="button" class="ink-color" data-color="${c.value}" aria-pressed="${i === 0}" aria-label="${c.name} pen" style="--ink: ${c.value}"><span></span></button>`).join('')}</span>
@@ -178,7 +185,6 @@ export function present(deck: Deck): void {
     colorsEl.hidden = t !== 'pen';
     slideEl.classList.toggle('is-inking', !!t);
     slideEl.dataset.tool = t || '';
-    closeBubble();
   };
   toolBtns.forEach((b) => b.addEventListener('click', () => setTool(tool === b.dataset.tool ? null : b.dataset.tool as Tool)));
   colorBtns.forEach((b) => b.addEventListener('click', () => {
@@ -193,7 +199,7 @@ export function present(deck: Deck): void {
     if (!tool || e.button !== 0) return;
     e.preventDefault();
     canvas.setPointerCapture(e.pointerId);
-    drawing = { tool, color: tool === 'pen' ? penColor : MARKER, points: [toSlide(e.clientX, e.clientY)] };
+    drawing = { tool, color: tool === 'pen' ? penColor : MARKER, points: [toSlide(e.clientX, e.clientY)], onBubble: bubbleEls.length > 0 };
     ink[at].push(drawing);
     repaint();
   });
@@ -214,12 +220,18 @@ export function present(deck: Deck): void {
     const els = bubbleEls;
     if (!els.length) return;
     bubbleEls = [];
+    // What was drawn on the bubble goes with it.
+    if (ink[at].some((s) => s.onBubble)) { ink[at] = ink[at].filter((s) => !s.onBubble); repaint(); }
     els.forEach((el) => el.classList.add('is-leaving'));
     setTimeout(() => els.forEach((el) => el.remove()), 200);
   }
   const openBubble = (link: HTMLAnchorElement, b: Bubble) => {
     closeBubble();
-    const r = link.getBoundingClientRect();
+    // A link that is a whole card (a heresy) points from the text of its name, which leaves room beside it.
+    const name = link.querySelector('b');
+    const range = document.createRange();
+    if (name) range.selectNodeContents(name);
+    const r = name ? range.getBoundingClientRect() : link.getBoundingClientRect();
     const [x1, y1] = toSlide(r.left, r.top), [x2, y2] = toSlide(r.right, r.bottom);
     const ax = (x1 + x2) / 2;
 
@@ -227,43 +239,52 @@ export function present(deck: Deck): void {
     card.className = 'bubble';
     card.setAttribute('role', 'note');
     if (b.lang) card.lang = b.lang;
-    card.innerHTML = `<p class="bubble-title">${esc(b.title)}</p><div class="bubble-text">${b.html}</div>${b.cite ? `<p class="bubble-cite">${esc(b.cite)}</p>` : ''}`;
+    if (b.wide) card.classList.add('is-wide');
+    card.innerHTML = `<p class="bubble-title">${esc(b.title)}</p>${b.meta ? `<p class="bubble-meta">${esc(b.meta)}</p>` : ''}<div class="bubble-text">${b.html}</div>${b.cite ? `<p class="bubble-cite">${esc(b.cite)}</p>` : ''}`;
     slideEl.appendChild(card);
     // Where it goes, in order: above or below the word at full size; beside it (left or right, whichever
-    // has more room); else on the larger of above and below with its text made smaller until it fits.
+    // has more room), its text made smaller if need be; else on the larger of above and below, smaller still.
     // Never over the word itself, the slide's edges or its controls.
     const gap = 56, top = 84, bottom = H - 84, edge = 48;
     const text = card.querySelector<HTMLElement>('.bubble-text')!;
     const size = (w: number) => { card.style.width = `${w}px`; return card.offsetHeight; };
     let side: 'above' | 'below' | 'left' | 'right';
-    let h = size(640);
+    const full = b.wide ? 780 : 640;
+    let h = size(full);
     if (y1 - gap - h >= top) side = 'above';
     else if (y2 + gap + h <= bottom) side = 'below';
     else {
       const roomL = x1 - gap - edge, roomR = W - edge - x2 - gap;
-      const sideW = Math.min(640, Math.max(roomL, roomR));
-      if (sideW >= 400 && (h = size(sideW)) <= bottom - top) side = roomL >= roomR ? 'left' : 'right';
-      else {
-        side = y1 - top >= bottom - y2 ? 'above' : 'below';
-        const room = side === 'above' ? y1 - gap - top : bottom - y2 - gap;
-        h = size(860);
+      const sideW = Math.min(full, Math.max(roomL, roomR));
+      const shrinkTo = (room: number) => {
         for (let f = parseFloat(getComputedStyle(text).fontSize); h > room && f > 18; f -= 2) {
           text.style.fontSize = `${f - 2}px`;
           h = card.offsetHeight;
         }
+        return h <= room;
+      };
+      if (sideW >= 400 && (h = size(sideW), shrinkTo(bottom - top))) side = roomL >= roomR ? 'left' : 'right';
+      else {
+        text.style.fontSize = '';
+        side = y1 - top >= bottom - y2 ? 'above' : 'below';
+        const room = side === 'above' ? y1 - gap - top : bottom - y2 - gap;
+        h = size(860);
+        shrinkTo(room);
       }
     }
     const w = card.offsetWidth;
     const clampX = (x: number) => Math.min(Math.max(x, edge), W - edge - w);
     const clampY = (y: number) => Math.min(Math.max(y, top), bottom - h);
     const ay = (y1 + y2) / 2;
-    const [left, ty] =
+    const [left, want] =
       side === 'above' ? [clampX(ax - w / 2), y1 - gap - h]
       : side === 'below' ? [clampX(ax - w / 2), y2 + gap]
-      : side === 'left' ? [x1 - gap - w, clampY(ay - h / 2)]
-      : [x2 + gap, clampY(ay - h / 2)];
+      : side === 'left' ? [x1 - gap - w, ay - h / 2]
+      : [x2 + gap, ay - h / 2];
+    // Always inside the slide, even if (with very long text) that means covering the word.
+    const ty = h > bottom - top ? top : clampY(want);
     card.style.left = `${left}px`;
-    card.style.top = `${Math.max(top, ty)}px`;
+    card.style.top = `${ty}px`;
     // The bubble grows out of the point on its edge nearest the word; the puffs lead there from the word.
     const vertical = side === 'above' || side === 'below';
     const ex = vertical ? Math.min(Math.max(ax, left + 48), left + w - 48) : side === 'left' ? left + w : left;
@@ -281,9 +302,12 @@ export function present(deck: Deck): void {
     bubbleEls = [...puffs, card];
   };
 
-  // While a bubble is open, the next press anywhere closes it and does nothing else.
+  // While a bubble is open, the next press anywhere closes it and does nothing else; but the drawing
+  // tools stay usable, so the presenter can pick up the pen and draw on the bubble itself.
   dlg.addEventListener('pointerdown', (e) => {
     if (!bubbleEls.length) return;
+    const t = e.target as Element;
+    if (t.closest('.slide-tools') || (tool && t === canvas)) return;
     e.preventDefault();
     e.stopPropagation();
     swallowClick = true;

@@ -25,6 +25,8 @@ interface Teaching {
   /** Heresies that deny this teaching, from the Heresies page. */
   heresies?: { id: string; name: string; year?: string }[];
 }
+/** A heresy as the Heresies page has it: the presentation shows what it taught in a bubble. */
+interface HeresyEntry { id: string; name: string; year: string; place: string; founder: string; summary: string }
 interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
 let lastShown = '';
@@ -319,7 +321,16 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     });
   }
 
-  // A key word opens its definition, and a passage its text, in a thought bubble on the slide.
+  // The heresies' own entries (what each taught) come from the Heresies page's data, fetched now so they
+  // are ready by the last slide. Until they arrive, a heresy link opens the Heresies page as usual.
+  let heresies: Map<string, HeresyEntry> | null = null;
+  if (cur.heresies?.length) {
+    api<{ heresies: HeresyEntry[] }>('heresies')
+      .then((d) => { heresies = new Map(d.heresies.map((h) => [h.id, h])); })
+      .catch(() => {});
+  }
+
+  // A key word opens its definition, a passage its text, and a heresy what it taught, in a thought bubble.
   const explain = (a: HTMLAnchorElement): Bubble | null => {
     const [route, query = ''] = (a.getAttribute('href') || '').replace(/^#\//, '').split('?');
     const q = new URLSearchParams(query);
@@ -335,10 +346,18 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
         ? { title: v.label_ta!, html: `<p class="bubble-para">${esc(v.text_ta!)}</p>`, cite: 'Tamil Indian Revised Version (IRV)', lang: 'ta' }
         : { title: v.label, html: `<p class="bubble-para">${esc(v.text)}</p>`, cite: 'Berean Standard Bible', lang: 'en' };
     }
+    if (route === 'heresies') {
+      const h = heresies?.get(q.get('h') || '');
+      if (!h) return null;
+      return {
+        title: h.name, meta: [h.year, h.place, h.founder].filter(Boolean).join(' · '),
+        html: mdParas(h.summary, 'bubble-para'), lang: 'en', wide: true,
+      };
+    }
     return null;
   };
 
-  return { where: `Teaching ${cur.n} · ${cur.short}`, slides, explain, onClose };
+  return { where: `Teaching ${cur.n}`, title: cur.short, slides, explain, onClose };
 }
 
 type Layout = 'wide' | 'compact';

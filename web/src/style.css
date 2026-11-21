@@ -568,3 +568,8 @@ p { margin: 0; }
   .bubble, .bubble-puff { animation: none; }
   .bubble.is-leaving, .bubble-puff.is-leaving { animation: none; opacity: 0; }
 }
+.bubble.is-wide .bubble-text { font-size: 24px; line-height: 1.45; }
+.bubble-meta { margin-top: -2px; font-size: 15px; font-weight: 600; color: var(--muted); }
+.slide[data-kind="heresies"] .slide-heresies a { cursor: help; }
+/* The teaching's title in the top bar: 2pt larger than "Teaching n" before it. */
+.slide-where-title { font-size: calc(13px + 2pt); }
