@@ -199,7 +199,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
 
   // The illustration: the teaching's animation (as in presentation mode), or its still diagram if it has none.
   const animCard = root.querySelector<HTMLElement>('.anim-card');
-  if (animCard) wireAnimation(animCard);
+  if (animCard) wireAnimation(animCard, { controls: false });  // pause and speed are for presenting only
   else {
     const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
     fitDiagram(open.querySelector<HTMLElement>('.diagram-fit')!, cur, root.querySelector<HTMLElement>('.diagram-card')!);

@@ -49,11 +49,17 @@ export function frame(n: number, ms: number, scenes: Scene[], svg: string): stri
  * Pause and play, for explaining a scene: the button, K, or a click on the picture. A scene's label goes
  * to the start of that scene, keeping it paused if it was. The speed menu slows or quickens the whole
  * animation, captions and labels with it, from where it is. Runs each time the slide is shown.
+ *
+ * With `controls: false` (the Explanations page, for reading rather than presenting) the pause button and
+ * speed menu are taken away and the animation simply plays at normal speed; the scene buttons stay.
  */
-export function wireAnimation(body: HTMLElement): void {
+export function wireAnimation(body: HTMLElement, { controls = true }: { controls?: boolean } = {}): void {
   const box = body.querySelector<HTMLElement>('.anim');
   if (!box) return;
-  const toggle = box.querySelector<HTMLButtonElement>('.anim-toggle')!;
+  if (!controls) {
+    box.querySelectorAll('.anim-toggle, .anim-speed').forEach((el) => el.remove());
+    box.classList.add('no-controls');
+  }
   const all = () => box.getAnimations({ subtree: true });
   // A caption too long for its strip (Tamil can be) is set smaller until it fits; again once fonts load.
   const fitCaptions = () => box.querySelectorAll<HTMLElement>('.anim-caps p').forEach((p) => {
@@ -66,6 +72,13 @@ export function wireAnimation(body: HTMLElement): void {
   });
   fitCaptions();
   void document.fonts?.ready.then(() => { if (box.isConnected) fitCaptions(); });
+  box.querySelectorAll<HTMLButtonElement>('[data-at]').forEach((b) => b.addEventListener('click', () => {
+    const t = Number(b.dataset.at);
+    all().forEach((a) => { a.currentTime = t; });
+  }));
+  if (!controls) return;
+
+  const toggle = box.querySelector<HTMLButtonElement>('.anim-toggle')!;
   const speed = box.querySelector<HTMLSelectElement>('.anim-speed select')!;
   const setSpeed = (r: number) => all().forEach((a) => { a.playbackRate = r; });
   setSpeed(Number(speed.value));
@@ -85,8 +98,4 @@ export function wireAnimation(body: HTMLElement): void {
   };
   toggle.addEventListener('click', () => set(!paused));
   box.querySelector('.anim-svg')?.addEventListener('click', () => set(!paused));
-  box.querySelectorAll<HTMLButtonElement>('[data-at]').forEach((b) => b.addEventListener('click', () => {
-    const t = Number(b.dataset.at);
-    all().forEach((a) => { a.currentTime = t; });
-  }));
 }
