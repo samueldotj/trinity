@@ -38,6 +38,7 @@
    "founder": "No known founder (later writers invented an “Ebion”)",
    "summary": "The Ebionites were Jewish followers of Jesus who kept the Law of Moses and regarded Jesus as the Messiah and a true prophet, but only as a man. Most held that he was the natural son of Joseph and Mary, and that he was chosen by God because of his perfect keeping of the Law; some said the Spirit or “the Christ” came upon him at his baptism.\n\nThey denied that the Son existed before he was born, that he is God, and that he is eternally begotten of the Father. Irenaeus, Hippolytus and Origen all describe them, and their name comes from the Hebrew word for “the poor”.",
    "denies": [
+    1,
     11,
     18,
     23,
@@ -117,6 +118,7 @@
    "founder": "Theodotus the Tanner",
    "summary": "Theodotus taught that Jesus was a man born of the virgin who lived a life of perfect holiness, and that at his baptism the Spirit or “the Christ” came upon him with divine power. Some of his followers said Jesus became God only after his resurrection. God is a single Person; the Son is a man adopted and empowered by God.\n\nIt denies that the Son is God by nature, that he is eternal and eternally begotten, and that he remained fully God when he became man. Bishop Victor of Rome excommunicated Theodotus around 190.",
    "denies": [
+    1,
     11,
     18,
     23,
@@ -133,6 +135,7 @@
    "founder": "Noetus of Smyrna (also Praxeas)",
    "summary": "Noetus taught that there is only one Person in God, the Father, and that this same Father was born of the virgin, called himself the Son, suffered and died on the cross. “Father” and “Son” are only two names for one Person at different times. The name Patripassianism means “the Father suffered”.\n\nThis denies that the Father and the Son are distinct Persons, that only the Son became incarnate, and that the Father did not suffer on the cross. When the Son prays to the Father, on this view, he is praying to himself. Hippolytus’s Against Noetus and Tertullian’s Against Praxeas answer it.",
    "denies": [
+    1,
     13,
     14,
     20,
@@ -152,6 +155,7 @@
    "founder": "Sabellius",
    "summary": "Sabellius taught that God is a single Person who shows himself in three successive modes or roles: as Father in creation and the giving of the Law, as Son in the incarnation, and as Holy Spirit in sanctifying the church. The three names are like the faces or masks of one actor, not three Persons.\n\nIt denies that Father, Son and Spirit are three distinct Persons, eternally related to one another, and that their distinctions are real relations within God. Bishop Callistus of Rome excommunicated Sabellius around 220, and “Sabellian” became the general name for every teaching that merges the Persons.",
    "denies": [
+    1,
     13,
     14,
     15,
@@ -204,6 +208,7 @@
    "founder": "Paul of Samosata, bishop of Antioch",
    "summary": "Paul taught that the Word (Logos) is not a Person but an attribute or power in God, like reason in a man. This Word dwelt in the man Jesus, born of Mary, more fully than in any prophet, and Jesus was raised to divine honour because of his moral union with God.\n\nIt denies that the Son is a distinct, eternal Person begotten of the Father, and that the Son himself is God. Councils at Antioch condemned and deposed Paul in 268, and the Council of Nicaea required his followers to be rebaptised.",
    "denies": [
+    1,
     11,
     13,
     18,
@@ -220,6 +225,7 @@
    "founder": "Arius, a priest of Alexandria",
    "summary": "Arius taught that only the Father is unbegotten and truly eternal. The Son was made by the Father out of nothing before the world, as the first and highest creature, through whom everything else was made: “there was when he was not”. The Son can be called “God” only in a lesser, honorary sense, and he does not share the Father’s essence or fully know him.\n\nThis denies that the Son is fully God, of the same essence as the Father, eternal, and equal; that he is begotten rather than made; and that the Father has always been Father. The Council of Nicaea (325) answered it with the confession that the Son is “of one essence” (homoousios) with the Father, and Athanasius spent his life opposing it.",
    "denies": [
+    1,
     9,
     11,
     17,
@@ -256,6 +262,7 @@
    "founder": "Aetius of Antioch and Eunomius of Cyzicus",
    "summary": "Aetius and his disciple Eunomius held that God’s very essence is “unbegottenness”, and that this can be fully known and defined. Since the Son is begotten, he must be of a different and unlike essence (anomoios, “unlike”) from the Father, a creature produced by the Father’s will. The Spirit is lower still, a creature made by the Son.\n\nThis denies that the three Persons share one divine essence, that the Son and the Spirit are God, and that the Persons are distinguished only by their relations rather than by different natures. Basil of Caesarea and Gregory of Nyssa (Against Eunomius) wrote the main replies.",
    "denies": [
+    1,
     9,
     11,
     12,
@@ -378,6 +385,7 @@
    "founder": "Michael Servetus",
    "summary": "In On the Errors of the Trinity (1531), Servetus attacked the doctrine of three Persons as unbiblical. He taught that the Word was a mode of God’s self-expression rather than an eternal Person, and that the Son of God is the man Jesus, who began to exist at his conception; the Spirit is God’s power at work in the world.\n\nIt denies that Father, Son and Spirit are three eternal Persons, and that the Son is eternally begotten. Both Catholic and Protestant authorities condemned him, and he was executed in Geneva in 1553, an act widely condemned since.",
    "denies": [
+    1,
     13,
     18,
     20,
@@ -394,6 +402,7 @@
    "founder": "Francis Dávid (Transylvania); Theophilus Lindsey (England); William Ellery Channing (America)",
    "summary": "Unitarians hold that God is one Person only, the Father. Jesus is honoured as a great teacher and example, in early forms as a uniquely divinely-commissioned man, but not as God; the Holy Spirit is God’s influence rather than a Person. Later Unitarianism became more broadly liberal and today often has no fixed creed.\n\nIt denies that the Son and the Spirit are God, that there are three Persons, and that the Son existed with the Father, loved and glorified by him, before the world began.",
    "denies": [
+    1,
     11,
     12,
     13,
@@ -413,6 +422,7 @@
    "founder": "Faustus Socinus (Fausto Sozzini), following his uncle Lelio",
    "summary": "The Socinians, or Polish Brethren, set out their faith in the Racovian Catechism (1605). Christ is a true man, conceived by the virgin, who did not exist before his birth; God raised him and gave him divine authority, so that he may be honoured and prayed to. The Holy Spirit is not a Person but the power of God. They also denied that Christ’s death satisfied God’s justice.\n\nIt denies that the Son is eternal and God by nature, that the Spirit is a divine Person, and that the three Persons are distinct and coeternal. John Owen’s Brief Declaration of the Trinity was written largely against Socinian teaching.",
    "denies": [
+    1,
     11,
     12,
     13,
@@ -465,6 +475,7 @@
    "founder": "Emanuel Swedenborg",
    "summary": "Swedenborg, a scientist who claimed visions of heaven and hell, taught that God is one Person, the Lord Jesus Christ. Within him there is a trinity like the soul, body and activity of a man: the Father is the divine soul, the Son the divine humanity, and the Spirit the divine activity going out from him. He rejected a trinity of Persons as belief in three Gods.\n\nIt denies that Father, Son and Spirit are three distinct Persons and that the Father and Son are not the same Person. Followers organised the New Church in London in 1787.",
    "denies": [
+    1,
     13,
     14,
     16,
@@ -498,6 +509,7 @@
    "founder": "John Thomas",
    "summary": "Christadelphians (“brothers of Christ”) hold that God is one, the Father. Jesus is the Son of God, born of the virgin, but did not exist before his birth except in God’s plan; he became immortal at his resurrection. The Holy Spirit is God’s power, not a Person.\n\nThey deny that the Son is God and eternal, that the Spirit is God and a Person who speaks and wills, and that there are three Persons.",
    "denies": [
+    1,
     11,
     12,
     13,
@@ -530,6 +542,7 @@
    "founder": "Charles Taze Russell",
    "summary": "Jehovah’s Witnesses teach that Jehovah, the Father, alone is Almighty God. Jesus is God’s first creation, identified with the archangel Michael, through whom everything else was made; he is “a god” but not Jehovah. The holy spirit is God’s active force, not a Person. Their New World Translation renders John 1:1 “the Word was a god”.\n\nThis denies that the Son is God, eternal and eternally begotten, that the Spirit is God and a Person, and that there are three coequal Persons. It closely resembles ancient Arianism.",
    "denies": [
+    1,
     11,
     12,
     13,
@@ -549,6 +562,7 @@
    "founder": "R. E. McAlister and Frank Ewart",
    "summary": "At a camp meeting at Arroyo Seco in 1913, some Pentecostals concluded that the apostles baptised only “in the name of Jesus”. They came to teach that God is one Person whose name is Jesus: the Father is the divine Spirit in Jesus, the Son is his humanity, and the Holy Spirit is the same God acting in believers. Baptism is administered in the name of Jesus only.\n\nThis is a modern form of modalism. It denies that Father, Son and Spirit are three distinct Persons, eternally related, and that only the Son, not the Father, became incarnate. It also rejects baptism into the name of the Father, Son and Holy Spirit.",
    "denies": [
+    1,
     13,
     14,
     15,
