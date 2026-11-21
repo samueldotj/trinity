@@ -581,3 +581,5 @@ p { margin: 0; }
 .present-ask-card h2 { font-size: 28px; }
 .present-ask-card p { color: var(--ink-2); }
 .present-ask-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+/* Presentation mode is for the few who teach from the page: its button sits at the bottom. */
+.present-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding-top: 18px; border-top: 1px solid var(--line-2); font-size: 14px; color: var(--muted); }

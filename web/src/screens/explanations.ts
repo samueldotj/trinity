@@ -108,7 +108,6 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         <div class="lesson-tools">
           ${langSwitch(lang, (l) => href('explanations', { t: cur.n, lang: l }))}
           <label class="jump">Jump to <select id="jump">${jump}</select></label>
-          <button type="button" class="btn primary present-btn" aria-label="Present teaching ${cur.n} as slides">${icon.present}Present</button>
         </div>
       </div>
       <ol class="steps" aria-label="Teachings in this part">${steps}</ol>
@@ -166,6 +165,10 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       <a class="q-link" href="${href('qa', { topic: cur.topic.title })}"><span class="small-caps">Questions</span><b>${cur.topic.q}</b><span>Read the answers →</span></a>
     </section>
     ${ta || supportTa || versesTa ? tamilCredit('The explanations are') : ''}
+    <div class="present-row">
+      <button type="button" class="btn present-btn" aria-label="Present teaching ${cur.n} as slides">${icon.present}Present as slides</button>
+      <span>Show this teaching full screen, for teaching a group.</span>
+    </div>
   </div>`;
 
   const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
