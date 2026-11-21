@@ -7,7 +7,8 @@ import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
   n: number; g: number; short: string; title: string; detail: string; refs: string;
-  verses: { label: string; text: string; ref: string }[];
+  /** Each passage in the BSB, and in the Tamil IRV (label_ta, text_ta) for the Tamil page. */
+  verses: { label: string; text: string; ref: string; label_ta?: string; text_ta?: string }[];
   notes: string[];
   cap: string;
   note?: { title: string; text: string; see: number };
@@ -86,7 +87,10 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     ? `<div lang="ta">${editable(`teaching:${cur.n}:support:ta`, `<p class="support">${linkTermsTa(supportTa, glTa, seenTa, cur.n)}</p>`, { text: supportTa, edited: cur.edited?.support_ta, label: 'how the passages support it (Tamil)' })}</div>`
     : cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support">${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
 
-  const verses = cur.verses.map((v) => `<a class="card verse-card" href="${href('reference', { exact: v.ref })}"><b>${esc(v.label)}</b><span class="verse-text">${esc(v.text)}</span></a>`).join('');
+  // On the Tamil page the passages are shown in the Tamil Indian Revised Version, where it has them.
+  const versesTa = lang === 'ta' && cur.verses.every((v) => v.text_ta);
+  const verses = cur.verses.map((v) => `<a class="card verse-card" href="${href('reference', { exact: v.ref })}"${versesTa ? ' lang="ta"' : ''}>${
+    versesTa ? `<b>${esc(v.label_ta!)}</b><span class="verse-text">${esc(v.text_ta!)}</span>` : `<b>${esc(v.label)}</b><span class="verse-text">${esc(v.text)}</span>`}</a>`).join('');
 
   root.innerHTML = `<div class="page">
     <div class="lesson-top">
@@ -136,7 +140,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     <section aria-label="Supporting verses" style="display: flex; flex-direction: column; gap: 14px">
       <div class="row" style="justify-content: space-between; align-items: baseline">
         <h2 style="font-size: 26px">Supporting verses</h2>
-        <span style="font-size: 13px; color: var(--muted)">${esc(cur.refs)} · Berean Standard Bible</span>
+        <span style="font-size: 13px; color: var(--muted)">${esc(cur.refs)} · ${versesTa ? 'Tamil Indian Revised Version (IRV)' : 'Berean Standard Bible'}</span>
       </div>
       ${support}
       <div class="verse-grid">${verses}</div>
@@ -146,7 +150,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       <a class="topic-link" href="${href('topics', { topic: cur.topic.id })}"><span class="small-caps">Topic · ${esc(cur.topic.theme)}</span><span>${esc(cur.topic.title)}</span></a>
       <a class="q-link" href="${href('qa', { topic: cur.topic.title })}"><span class="small-caps">Questions</span><b>${cur.topic.q}</b><span>Read the answers →</span></a>
     </section>
-    ${ta || supportTa ? tamilCredit('The explanations are') : ''}
+    ${ta || supportTa || versesTa ? tamilCredit('The explanations are') : ''}
   </div>`;
 
   const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;

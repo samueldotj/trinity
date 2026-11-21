@@ -184,6 +184,7 @@ p { margin: 0; }
 .explain:lang(ta) .small-caps { letter-spacing: 0; text-transform: none; font-size: calc(13px + 1pt); }
 .explain-text:lang(ta) { font-size: calc(18px + 1pt); line-height: 1.9; }
 .support:lang(ta) { font-size: calc(17px + 1pt); line-height: 1.9; }
+.verse-card:lang(ta) .verse-text { font-size: calc(17px + 1pt); line-height: 1.8; }
 .lesson-nav { display: flex; flex-wrap: wrap; gap: 12px; }
 .note { padding: 14px 18px; border-radius: 16px; background: var(--mist); font-size: 14px; color: var(--ink-2); }
 .diagram-card { flex: 1 1 520px; min-width: 0; margin: 0; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }

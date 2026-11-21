@@ -4,11 +4,19 @@ from pathlib import Path
 
 bsb_path, topics_path, out_path = sys.argv[1:4]
 
-bsb = {}
-for line in open(bsb_path, encoding='utf-8-sig'):
-    m = re.match(r'^(.+? \d+:\d+)\t(.*?)\s*$', line)
-    if m:
-        bsb[m.group(1)] = m.group(2)
+def load_bible(path):
+    out = {}
+    for line in open(path, encoding='utf-8-sig'):
+        m = re.match(r'^(.+? \d+:\d+)\t(.*?)\s*$', line)
+        if m:
+            out[m.group(1)] = m.group(2)
+    return out
+
+
+bsb = load_bible(bsb_path)
+# The Tamil Indian Revised Version, laid out like bsb.txt (scripts/build_irv.py), shown on the Tamil page.
+irv_path = Path(bsb_path).with_name('irv.txt')
+irv = load_bible(irv_path) if irv_path.exists() else {}
 
 ABBR = {'Gen.': 'Genesis', 'Deut.': 'Deuteronomy', 'Ps.': 'Psalm', 'Isa.': 'Isaiah', 'Jer.': 'Jeremiah',
         'Mal.': 'Malachi', 'Matt.': 'Matthew', 'Luke': 'Luke', 'John': 'John', 'Acts': 'Acts',
@@ -16,6 +24,13 @@ ABBR = {'Gen.': 'Genesis', 'Deut.': 'Deuteronomy', 'Ps.': 'Psalm', 'Isa.': 'Isai
         'Phil.': 'Philippians', 'Col.': 'Colossians', '1 Tim.': '1 Timothy', 'Heb.': 'Hebrews',
         'James': 'James', '1 Pet.': '1 Peter', 'Rev.': 'Revelation'}
 MAP_BOOK = {'Psalm': 'Psalms'}  # verse map spelling
+# Book names as the Tamil IRV spells them.
+BOOK_TA = {'Genesis': 'ஆதியாகமம்', 'Deuteronomy': 'உபாகமம்', 'Psalm': 'சங்கீதம்', 'Isaiah': 'ஏசாயா',
+           'Jeremiah': 'எரேமியா', 'Malachi': 'மல்கியா', 'Matthew': 'மத்தேயு', 'Luke': 'லூக்கா', 'John': 'யோவான்',
+           'Acts': 'அப்போஸ்தலர்', '1 Corinthians': '1 கொரிந்தியர்', '2 Corinthians': '2 கொரிந்தியர்',
+           'Galatians': 'கலாத்தியர்', 'Ephesians': 'எபேசியர்', 'Philippians': 'பிலிப்பியர்', 'Colossians': 'கொலோசெயர்',
+           '1 Timothy': '1 தீமோத்தேயு', 'Hebrews': 'எபிரெயர்', 'James': 'யாக்கோபு', '1 Peter': '1 பேதுரு',
+           'Revelation': 'வெளிப்படுத்தின விசேஷம்'}
 MAX_VERSES = 5
 
 
@@ -40,8 +55,14 @@ def parse_refs(s):
         texts = [bsb.get('%s %d:%d' % (book, c, v), '') for c, v in verses]
         missing = [f'{book} {c}:{v}' for (c, v), t in zip(verses, texts) if not t]
         text = ' '.join(texts[:MAX_VERSES]) + (' …' if len(texts) > MAX_VERSES else '')
-        out.append({'label': f'{label_book} {rest}', 'text': text,
-                    'ref': f'{MAP_BOOK.get(book, book)} {verses[0][0]}:{verses[0][1]}', 'missing': missing})
+        v = {'label': f'{label_book} {rest}', 'text': text,
+             'ref': f'{MAP_BOOK.get(book, book)} {verses[0][0]}:{verses[0][1]}', 'missing': missing}
+        if irv:
+            ta = [irv.get('%s %d:%d' % (book, c, vv), '') for c, vv in verses]
+            missing += [f'{book} {c}:{vv} (IRV)' for (c, vv), t in zip(verses, ta) if not t]
+            v['label_ta'] = f'{BOOK_TA[book]} {rest}'
+            v['text_ta'] = ' '.join(ta[:MAX_VERSES]) + (' …' if len(ta) > MAX_VERSES else '')
+        out.append(v)
     return out
 
 
