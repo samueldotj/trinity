@@ -2,6 +2,7 @@ import { api } from '../api';
 import { editable, wireEditing } from '../edit';
 import { type Glossary, termsIn } from '../glossary';
 import { type Lang, langSwitch, pickLang, tamilCredit } from '../lang';
+import { mdParas } from '../markdown';
 import { esc, failure, href, icon, loading } from '../util';
 
 interface Teaching { n: number; short: string; title: string; meaning?: string; support?: string }
@@ -60,7 +61,7 @@ export async function renderKeywords(root: HTMLElement, params: URLSearchParams)
     return `<section class="card kw-entry${k === want ? ' is-target' : ''}" id="term-${esc(k)}" aria-labelledby="h-${esc(k)}" tabindex="-1">
       <h2 id="h-${esc(k)}">${esc(g.term)}</h2>
       ${lang === 'ta' && en[k] ? `<p class="kw-en" lang="en">${esc(en[k].term)}</p>` : ''}
-      ${editable(editKey, `<p class="kw-def">${esc(g.def)}</p>`, { text: g.def, edited: g.edited, label: `definition of ${en[k]?.term || g.term}${lang === 'ta' ? ' (Tamil)' : ''}` })}
+      ${editable(editKey, mdParas(g.def, 'kw-def'), { text: g.def, edited: g.edited, label: `definition of ${en[k]?.term || g.term}${lang === 'ta' ? ' (Tamil)' : ''}` })}
       ${used.length ? `<p class="kw-used"><span class="small-caps">${esc(ui.used)}</span> ${used.map((t) =>
         `<a href="${href('explanations', { t: t.n })}" lang="en">${t.n} · ${esc(t.short)}</a>`).join('')}</p>` : ''}
     </section>`;

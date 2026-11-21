@@ -78,6 +78,7 @@ function open(box: HTMLElement, after: () => void): void {
       ${edited ? '<button type="button" class="btn" data-act="restore">Restore original</button>' : ''}
       <span class="edit-status" role="status"></span>
     </div>
+    <p class="edit-hint">Formatting: **bold**, *italic*; a blank line starts a new paragraph.</p>
   </form>`;
   const form = box.querySelector('form')!;
   const area = box.querySelector('textarea')!;

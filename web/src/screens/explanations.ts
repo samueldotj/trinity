@@ -3,6 +3,7 @@ import { draw, LAYOUT } from '../diagram';
 import { editable, wireEditing } from '../edit';
 import { type Glossary, linkTerms, linkTermsTa } from '../glossary';
 import { langSwitch, pickLang, tamilCredit } from '../lang';
+import { mdInline, mdParas, mdPlain } from '../markdown';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
@@ -79,13 +80,13 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   const meaning = meaningText ? `<section class="explain" aria-labelledby="explain-h"${ta ? ' lang="ta"' : ''}>
           <h2 id="explain-h" class="small-caps">${ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?'}</h2>
           ${ta
-            ? editable(`teaching:${cur.n}:meaning:ta`, `<p class="explain-text">${linkTermsTa(meaningText, glTa, seenTa, cur.n, gl)}</p>`, { text: meaningText, edited: cur.edited?.meaning_ta, label: 'explanation (Tamil)' })
-            : editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${linkTerms(meaningText, gl, seen, cur.n)}</p>`, { text: meaningText, edited: cur.edited?.meaning, label: 'explanation' })}
+            ? editable(`teaching:${cur.n}:meaning:ta`, mdParas(meaningText, 'explain-text', (p) => linkTermsTa(p, glTa, seenTa, cur.n, gl)), { text: meaningText, edited: cur.edited?.meaning_ta, label: 'explanation (Tamil)' })
+            : editable(`teaching:${cur.n}:meaning`, mdParas(meaningText, 'explain-text', (p) => linkTerms(p, gl, seen, cur.n)), { text: meaningText, edited: cur.edited?.meaning, label: 'explanation' })}
         </section>` : '';
   const supportTa = lang === 'ta' && cur.support_ta;
   const support = supportTa
-    ? `<div lang="ta">${editable(`teaching:${cur.n}:support:ta`, `<p class="support">${linkTermsTa(supportTa, glTa, seenTa, cur.n, gl)}</p>`, { text: supportTa, edited: cur.edited?.support_ta, label: 'how the passages support it (Tamil)' })}</div>`
-    : cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support">${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
+    ? `<div lang="ta">${editable(`teaching:${cur.n}:support:ta`, mdParas(supportTa, 'support', (p) => linkTermsTa(p, glTa, seenTa, cur.n, gl)), { text: supportTa, edited: cur.edited?.support_ta, label: 'how the passages support it (Tamil)' })}</div>`
+    : cur.support ? editable(`teaching:${cur.n}:support`, mdParas(cur.support, 'support', (p) => linkTerms(p, gl, seen, cur.n)), { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
 
   // On the Tamil page the passages are shown in the Tamil Indian Revised Version, where it has them.
   const versesTa = lang === 'ta' && cur.verses.every((v) => v.text_ta);
@@ -112,7 +113,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       <section class="lesson-text" aria-label="Teaching">
         <span class="lesson-num" aria-hidden="true">${cur.n}</span>
         <h1><span class="sr-only">Teaching ${cur.n}: </span>${title}</h1>
-        ${cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${esc(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : ''}
+        ${cur.detail ? editable(`teaching:${cur.n}:detail`, `<p class="detail">${mdInline(cur.detail)}</p>`, { text: cur.detail, edited: cur.edited?.detail, label: 'teaching description' }) : ''}
         ${meaning}
         ${cur.note ? `<aside class="note teaching-note" aria-label="${esc(cur.note.title)}"><strong>${esc(cur.note.title)}.</strong> ${esc(cur.note.text)}${
           T[cur.note.see - 1] ? ` <a href="${link(T[cur.note.see - 1])}">See teaching ${cur.note.see}: ${esc(T[cur.note.see - 1].title)} →</a>` : ''}</aside>` : ''}
@@ -124,11 +125,11 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         </div>
       </section>
       <figure class="card diagram-card">
-        <button type="button" class="diagram-open" aria-label="Enlarge diagram. ${esc(dg.alt)}">
+        <button type="button" class="diagram-open" aria-label="Enlarge diagram. ${esc(mdPlain(dg.alt))}">
           <span class="diagram-fit" aria-hidden="true"></span>
           <span class="diagram-hint">${icon.expand}Tap to enlarge</span>
         </button>
-        <figcaption class="caption">${editable(`teaching:${cur.n}:caption`, esc(dg.cap), { text: cur.cap, edited: cur.edited?.caption, label: 'diagram caption' })}</figcaption>
+        <figcaption class="caption">${editable(`teaching:${cur.n}:caption`, mdInline(dg.cap), { text: cur.cap, edited: cur.edited?.caption, label: 'diagram caption' })}</figcaption>
         <div class="legend">
           <span><i style="background: #1B1E27"></i>is</span>
           <span><i style="height: 0; border-top: 3px dashed #6B7080"></i>is not</span>
@@ -245,11 +246,11 @@ function enlargeDiagram(t: Teaching, caption: string): void {
   dlg.setAttribute('aria-label', 'Diagram, enlarged');
   dlg.innerHTML = `
     <div class="diagram-dialog-bar">
-      <p class="caption">${esc(caption)}</p>
+      <p class="caption">${mdInline(caption)}</p>
       <button type="button" class="btn zoom" aria-pressed="false">Zoom in</button>
       <button type="button" class="btn primary close">Close</button>
     </div>
-    <div class="diagram-dialog-stage"><div class="diagram-fit" role="img" aria-label="Diagram: ${esc(caption)}"></div></div>`;
+    <div class="diagram-dialog-stage"><div class="diagram-fit" role="img" aria-label="Diagram: ${esc(mdPlain(caption))}"></div></div>`;
   document.body.appendChild(dlg);
   const stage = dlg.querySelector<HTMLElement>('.diagram-dialog-stage')!;
   const holder = dlg.querySelector<HTMLElement>('.diagram-fit')!;

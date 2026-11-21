@@ -1,5 +1,6 @@
 import { api } from '../api';
 import { editable, editingOn, wireEditing } from '../edit';
+import { mdParas } from '../markdown';
 import { debounce, esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Item { id: number; question: string; cat: string; theme: string; topic: string; writers: string[] }
@@ -55,7 +56,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
           <div class="answer-main">
             <div class="answer-head"><b>${esc(a.author)}</b>
               <a href="${href('reader', { work: a.workId, quote: a.quote })}">${esc(a.place ? `${a.work} · ${a.place}` : a.work)} →</a></div>
-            ${editable(`question:${x.id}:answer:${n}`, `<p class="answer-text">${esc(a.answer)}</p>`, { text: a.answer, edited: d.edited?.answers[n], label: `${a.author}’s answer` })}
+            ${editable(`question:${x.id}:answer:${n}`, mdParas(a.answer, 'answer-text'), { text: a.answer, edited: d.edited?.answers[n], label: `${a.author}’s answer` })}
             <blockquote class="quote">“${esc(a.quote)}”</blockquote>
             ${a.scripture.length ? `<div class="row">${a.scripture.map((r) => `<a class="chip" href="${href('reference', { exact: r })}">${esc(r)}</a>`).join('')}</div>` : ''}
           </div>

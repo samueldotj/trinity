@@ -1,5 +1,6 @@
 import { api } from '../api';
 import { editable, editingOn, wireEditing } from '../edit';
+import { mdParas } from '../markdown';
 import { esc, failure, href, icon, loading } from '../util';
 
 interface ThemeSummary { key: string; title: string; short: string; desc: string; n: number; q: number }
@@ -53,10 +54,10 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
         <span class="who"><b>${esc(r.author)}</b><span>${esc(r.place ? `${r.work} · ${r.place}` : r.work)}</span></span>
         <span class="quote">“${esc(r.quote)}”</span></a>`).join('');
     const body = open ? `<div class="topic-body">
-        ${tp.ans ? editable(`topic:${tp.id}:answer`, `<p class="read-text">${esc(tp.ans.text)}</p>`, { text: tp.ans.text, edited: tp.edited?.answer, label: 'answer' }) + `<div class="row">${verses}</div>` : ''}
+        ${tp.ans ? editable(`topic:${tp.id}:answer`, mdParas(tp.ans.text, 'read-text'), { text: tp.ans.text, edited: tp.edited?.answer, label: 'answer' }) + `<div class="row">${verses}</div>` : ''}
         <div class="soft">
           <span class="small-caps">What earlier Christian writers thought</span>
-          ${editable(`topic:${tp.id}:cmp`, `<p style="font-size: 15px; color: var(--ink-2)">${esc(tp.cmp)}</p>`, { text: tp.cmp, edited: tp.edited?.cmp, label: 'summary of the earlier writers' })}
+          ${editable(`topic:${tp.id}:cmp`, `<div style="font-size: 15px; color: var(--ink-2)">${mdParas(tp.cmp, '')}</div>`, { text: tp.cmp, edited: tp.edited?.cmp, label: 'summary of the earlier writers' })}
           ${refs}
           <a href="${href('qa', { topic: tp.title })}" style="font-weight: 600">${tp.q} questions answered by the writers →</a>
         </div>
@@ -83,7 +84,7 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
         <div class="card dark theme-panel">
           <span class="small-caps">Theme</span>
           <h2>${esc(theme.title)}</h2>
-          ${editable(`theme:${key}:desc`, `<p>${esc(theme.desc)}</p>`, { text: theme.desc, edited: theme.edited?.desc, label: 'theme description' })}
+          ${editable(`theme:${key}:desc`, mdParas(theme.desc, ''), { text: theme.desc, edited: theme.edited?.desc, label: 'theme description' })}
           ${editingOn() ? editable(`theme:${key}:short`, `<span class="small-caps">Label in menus and on passages</span><p style="color: #fff; font-weight: 600">${esc(theme.short)}</p>`, { text: theme.short, edited: theme.edited?.short, label: 'theme label' }) : ''}
           <div class="theme-panel-foot">
             <div class="stats"><span><b>${cur.n}</b>topics</span><span><b>${cur.q}</b>questions</span></div>

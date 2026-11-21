@@ -1,6 +1,7 @@
 // The key words (glossary) and how they are found in the teachings' explanations.
 // The glossary itself comes with the teachings data; this file only knows which wordings
 // in the text count as each key word, so the explanations can link them to the Key words page.
+import { mdPlain } from './markdown';
 import { esc, href } from './util';
 
 export interface Term { term: string; def: string; edited?: boolean }
@@ -103,8 +104,8 @@ export function linkTermsTa(text: string, glossary: Glossary, seen: Set<string>,
     if (!key || seen.has(key)) return found;
     seen.add(key);
     // The English term links to the English Key words entry, with the English definition as its tooltip.
-    const en = english?.[key] ? ` <span class="term-en" lang="en">(<a class="term-link" href="${href('keywords', { term: key, from, lang: 'en' })}" title="${esc(english[key].def)}">${esc(english[key].term)}</a>)</span>` : '';
-    return `<a class="term-link" href="${href('keywords', { term: key, from, lang: 'ta' })}" title="${esc(glossary[key].def)}">${found}</a>${en}`;
+    const en = english?.[key] ? ` <span class="term-en" lang="en">(<a class="term-link" href="${href('keywords', { term: key, from, lang: 'en' })}" title="${esc(mdPlain(english[key].def))}">${esc(english[key].term)}</a>)</span>` : '';
+    return `<a class="term-link" href="${href('keywords', { term: key, from, lang: 'ta' })}" title="${esc(mdPlain(glossary[key].def))}">${found}</a>${en}`;
   });
 }
 
@@ -118,6 +119,6 @@ export function linkTerms(text: string, glossary: Glossary, seen: Set<string>, f
     const key = keyFor(found);
     if (!key || !glossary[key] || seen.has(key)) return found;
     seen.add(key);
-    return `<a class="term-link" href="${href('keywords', { term: key, from })}" title="${esc(glossary[key].def)}">${found}</a>`;
+    return `<a class="term-link" href="${href('keywords', { term: key, from })}" title="${esc(mdPlain(glossary[key].def))}">${found}</a>`;
   });
 }
