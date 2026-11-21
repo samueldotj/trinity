@@ -122,11 +122,10 @@ p { margin: 0; }
 .course-progress { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 .course-progress b { font-size: 15px; font-weight: 600; color: var(--ink); }
 /* Course outline: every part and teaching, the current one marked. */
-.outline summary { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border: 1px solid var(--control); border-radius: 999px; background: var(--surface); font-size: 14px; font-weight: 600; color: var(--ink); cursor: pointer; }
-.outline summary::-webkit-details-marker { display: none; }
-.outline summary svg { transition: transform .15s; }
-.outline[open] summary svg { transform: rotate(180deg); }
-.outline[open] summary { margin-bottom: 14px; }
+.lesson-where { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.outline-btn { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border: 1px solid var(--control); border-radius: 999px; background: var(--surface); font-size: 14px; font-weight: 600; color: var(--ink); cursor: pointer; }
+.outline-btn svg { transition: transform .15s; }
+.outline-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
 .outline-parts { list-style: none; margin: 0; padding: 18px 20px; border-radius: 18px; background: var(--surface); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px 28px; }
 .outline-part { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
 .outline-parts ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
@@ -187,9 +186,11 @@ p { margin: 0; }
 /* Tamil explanations on the teachings page: 1pt larger than the English, with taller lines. */
 .lesson-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
 .explain:lang(ta) .small-caps { letter-spacing: 0; text-transform: none; font-size: calc(13px + 1pt); }
-.explain-text:lang(ta) { font-size: calc(18px + 1pt); line-height: 1.9; }
-.support:lang(ta) { font-size: calc(17px + 1pt); line-height: 1.9; }
-.verse-card:lang(ta) .verse-text { font-size: calc(17px + 1pt); line-height: 1.8; }
+/* Tamil text on the teachings page is set wholly in Mukta Malar at 12pt, digits and punctuation included. */
+.explain-text:lang(ta), .support:lang(ta), .verse-card:lang(ta) .verse-text { font-family: 'Mukta Malar', system-ui, sans-serif; font-size: 12pt; line-height: 1.8; }
+.verse-card:lang(ta) b { font-family: 'Mukta Malar', system-ui, sans-serif; }
+/* The English term in brackets keeps the English reading font. */
+.explain-text:lang(ta) .term-en, .support:lang(ta) .term-en { font-family: var(--read); }
 .lesson-nav { display: flex; flex-wrap: wrap; gap: 12px; }
 .note { padding: 14px 18px; border-radius: 16px; background: var(--mist); font-size: 14px; color: var(--ink-2); }
 .diagram-card { flex: 1 1 520px; min-width: 0; margin: 0; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }

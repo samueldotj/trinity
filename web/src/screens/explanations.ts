@@ -96,17 +96,19 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   root.innerHTML = `<div class="page">
     <div class="lesson-top">
       <div class="row">
-        <p class="course-progress"><b>Teaching ${cur.n} of ${T.length}</b><span class="eyebrow">Part ${cur.g + 1} of ${data.groups.length} · ${esc(grp.title)}</span></p>
+        <div class="lesson-where">
+          <p class="course-progress"><b>Teaching ${cur.n} of ${T.length}</b><span class="eyebrow">Part ${cur.g + 1} of ${data.groups.length} · ${esc(grp.title)}</span></p>
+          <button type="button" class="outline-btn" aria-expanded="false" aria-controls="outline">Course outline${icon.chevron}</button>
+        </div>
         <div class="lesson-tools">
           ${langSwitch(lang, (l) => href('explanations', { t: cur.n, lang: l }))}
           <label class="jump">Jump to <select id="jump">${jump}</select></label>
         </div>
       </div>
       <ol class="steps" aria-label="Teachings in this part">${steps}</ol>
-      <details class="outline">
-        <summary>Course outline${icon.chevron}</summary>
+      <nav class="outline" id="outline" aria-label="Course outline" hidden>
         <ol class="outline-parts">${outline}</ol>
-      </details>
+      </nav>
     </div>
 
     <div class="lesson">
@@ -157,6 +159,15 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
   fitDiagram(open.querySelector<HTMLElement>('.diagram-fit')!, cur, root.querySelector<HTMLElement>('.diagram-card')!);
   open.addEventListener('click', () => enlargeDiagram(cur, dg.cap));
+
+  // The outline button sits beside the progress line; the outline itself opens full width below.
+  const outlineBtn = root.querySelector<HTMLButtonElement>('.outline-btn')!;
+  const outlinePanel = root.querySelector<HTMLElement>('#outline')!;
+  outlineBtn.addEventListener('click', () => {
+    const show = outlinePanel.hidden;
+    outlinePanel.hidden = !show;
+    outlineBtn.setAttribute('aria-expanded', String(show));
+  });
 
   wireEditing(root, () => void renderExplanations(root, params));
   root.querySelector<HTMLSelectElement>('#jump')!.addEventListener('change', (e) =>
