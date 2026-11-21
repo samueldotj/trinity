@@ -2,8 +2,9 @@ import { api } from '../api';
 import { draw, LAYOUT } from '../diagram';
 import { editable, wireEditing } from '../edit';
 import { type Glossary, linkTerms, linkTermsTa } from '../glossary';
-import { langSwitch, pickLang, tamilCredit } from '../lang';
+import { type Lang, langSwitch, pickLang, tamilCredit } from '../lang';
 import { mdInline, mdParas, mdPlain } from '../markdown';
+import { type Deck, present, type Slide } from '../present';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
@@ -22,7 +23,7 @@ interface Teaching {
   edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean; meaning_ta?: boolean; support_ta?: boolean };
   topic: { id: number; title: string; theme: string; q: number };
   /** Heresies that deny this teaching, from the Heresies page. */
-  heresies?: { id: string; name: string }[];
+  heresies?: { id: string; name: string; year?: string }[];
 }
 interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
@@ -105,6 +106,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
         <div class="lesson-tools">
           ${langSwitch(lang, (l) => href('explanations', { t: cur.n, lang: l }))}
           <label class="jump">Jump to <select id="jump">${jump}</select></label>
+          <button type="button" class="btn primary present-btn" aria-label="Present teaching ${cur.n} as slides">${icon.present}Present</button>
         </div>
       </div>
       <ol class="steps" aria-label="Teachings in this part">${steps}</ol>
@@ -142,7 +144,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       </figure>
     </div>
 
-    <section aria-label="Supporting verses" style="display: flex; flex-direction: column; gap: 14px">
+    <section class="verses-section" aria-label="Supporting verses" style="display: flex; flex-direction: column; gap: 14px">
       <div class="row" style="justify-content: space-between; align-items: baseline">
         <h2 style="font-size: 26px">Supporting verses</h2>
         <span style="font-size: 13px; color: var(--muted)">${esc(cur.refs)} · ${versesTa ? 'Tamil Indian Revised Version (IRV)' : 'Berean Standard Bible'}</span>
@@ -176,6 +178,15 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     outlinePanel.hidden = !show;
     outlineBtn.setAttribute('aria-expanded', String(show));
   });
+
+  const presentBtn = root.querySelector<HTMLButtonElement>('.present-btn')!;
+  presentBtn.addEventListener('click', () => present(deckFor(cur, data, lang, (s) => {
+    // Back on the page, at the part the last slide showed.
+    const at = s.kind === 'text' ? '.explain' : s.kind === 'diagram' ? '.diagram-card' : s.kind === 'verses' ? '.verses-section' : s.kind === 'heresies' ? '.denied-by' : '';
+    const el = at ? root.querySelector<HTMLElement>(at) : null;
+    if (el) el.scrollIntoView({ block: 'start' }); else window.scrollTo({ top: 0 });
+    presentBtn.focus({ preventScroll: true });
+  })));
 
   wireEditing(root, () => void renderExplanations(root, params));
   root.querySelector<HTMLSelectElement>('#jump')!.addEventListener('change', (e) =>
@@ -212,6 +223,81 @@ function renderComplete(root: HTMLElement, data: Data): void {
       </div>
     </section>
   </div>`;
+}
+
+/**
+ * The teaching as slides: its title; one slide per paragraph of "What does this mean?"; the diagram;
+ * the supporting verses; and the heresies that deny it (when there are any). Key words stay linked.
+ */
+function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']): Deck {
+  const T = data.teachings;
+  const gl = data.glossary || {}, glTa = data.glossary_ta || {};
+  const seen = new Set<string>(), seenTa = new Set<string>();
+  const ta = lang === 'ta' && !!cur.meaning_ta;
+  const linkEn = (p: string) => linkTerms(p, gl, seen, cur.n);
+  const linkTa = (p: string) => linkTermsTa(p, glTa, seenTa, cur.n, gl);
+  const slides: Slide[] = [{
+    kind: 'title', fit: true,
+    html: `<p class="slide-eyebrow">Teaching ${cur.n} of ${T.length} · Part ${cur.g + 1} · ${esc(data.groups[cur.g].title)}</p>
+      <h1 class="slide-title slide-fit">${esc(cur.title)}</h1>
+      ${cur.detail ? `<p class="slide-sub">${mdInline(cur.detail)}</p>` : ''}`,
+  }];
+
+  const meaning = (ta ? cur.meaning_ta : cur.meaning)?.trim();
+  if (meaning) {
+    const paras = meaning.split(/\n[ \t]*\n+/);
+    const head = ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?';
+    paras.forEach((p, i) => slides.push({
+      kind: 'text', fit: true,
+      html: `<p class="slide-eyebrow"${ta ? ' lang="ta"' : ''}>${head}${paras.length > 1 ? ` · ${i + 1} of ${paras.length}` : ''}</p>
+        <div class="slide-fit slide-text"${ta ? ' lang="ta"' : ''}>${mdParas(p, 'slide-para', ta ? linkTa : linkEn)}</div>`,
+    }));
+  }
+
+  slides.push({
+    kind: 'diagram',
+    html: `<div class="slide-diagram">
+        <div class="slide-diagram-fit" role="img" aria-label="${esc(mdPlain(draw(cur.n, cur.notes, cur.cap).alt))}">${diagramHtml(cur, 'wide')}</div>
+        <div class="slide-diagram-side">
+          <p class="slide-eyebrow">Illustration</p>
+          <p class="slide-caption">${mdInline(cur.cap)}</p>
+          <div class="legend">
+            <span><i style="background: #1B1E27"></i>is</span>
+            <span><i style="height: 0; border-top: 3px dashed #6B7080"></i>is not</span>
+            <span><i style="background: #33449A"></i>relation or act</span>
+          </div>
+        </div>
+      </div>`,
+  });
+
+  const supportTa = lang === 'ta' && cur.support_ta;
+  const support = supportTa || cur.support;
+  const versesTa = lang === 'ta' && cur.verses.every((v) => v.text_ta);
+  const chips = cur.verses.map((v) => `<a class="chip" href="${href('reference', { exact: v.ref })}"${versesTa ? ' lang="ta"' : ''}>${esc(versesTa ? v.label_ta! : v.label)}</a>`).join('');
+  // Without the written explanation of how the passages support it, the slide shows the passages themselves.
+  const body = support
+    ? mdParas(support, 'slide-para', supportTa ? linkTa : linkEn)
+    : cur.verses.map((v) => `<p class="slide-para"${versesTa ? ' lang="ta"' : ''}><b>${esc(versesTa ? v.label_ta! : v.label)}</b> ${esc(versesTa ? v.text_ta! : v.text)}</p>`).join('');
+  slides.push({
+    kind: 'verses', fit: true,
+    html: `<h2 class="slide-heading">Supporting Verses</h2>
+      <div class="slide-fit slide-support"${supportTa ? ' lang="ta"' : ''}>${body}</div>
+      <div class="slide-chips">${chips}<span>${versesTa ? 'Tamil Indian Revised Version (IRV)' : 'Berean Standard Bible'}</span></div>`,
+  });
+
+  if (cur.heresies?.length) {
+    const H = cur.heresies;
+    slides.push({
+      kind: 'heresies',
+      html: `<div class="slide-head-row">
+          <h2 class="slide-heading">Heresies</h2>
+          <p class="slide-eyebrow">${H.length} that deny this teaching · oldest first</p>
+        </div>
+        <ul class="slide-heresies" style="grid-template-rows: repeat(${Math.ceil(H.length / 3)}, auto)">${H.map((h) => `<li><a href="${href('heresies', { h: h.id, t: cur.n })}"><b>${esc(h.name)}</b>${h.year ? `<span>${esc(h.year)}</span>` : ''}</a></li>`).join('')}</ul>`,
+    });
+  }
+
+  return { where: `Teaching ${cur.n} · ${cur.short}`, slides, onClose };
 }
 
 type Layout = 'wide' | 'compact';

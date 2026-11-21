@@ -416,11 +416,11 @@ fn heresies() -> Value {
     out
 }
 
-/// The heresies that deny teaching `n`, in the page's order: `{ id, name }` each.
+/// The heresies that deny teaching `n`, in the page's order: `{ id, name, year }` each.
 fn heresies_denying(n: u64) -> Vec<Value> {
     heresies_data()["heresies"].as_array().into_iter().flatten()
         .filter(|h| h["denies"].as_array().is_some_and(|d| d.iter().any(|x| x.as_u64() == Some(n))))
-        .map(|h| json!({ "id": h["id"], "name": h["name"] }))
+        .map(|h| json!({ "id": h["id"], "name": h["name"], "year": h["year"] }))
         .collect()
 }
 
