@@ -185,15 +185,31 @@ p { margin: 0; }
 .support { font-family: var(--read); font-size: 17px; line-height: 1.6; color: var(--ink-2); }
 /* Tamil explanations on the teachings page: 1pt larger than the English, with taller lines. */
 .lesson-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
-.explain:lang(ta) .small-caps { letter-spacing: 0; text-transform: none; font-size: calc(13px + 1pt); }
+.explain:lang(ta) .small-caps { letter-spacing: 0; text-transform: none; font-size: calc(13px + 2pt); }
 /* Tamil text on the teachings page is set wholly in Mukta Malar at 12pt, digits and punctuation included. */
-.explain-text:lang(ta), .support:lang(ta), .verse-card:lang(ta) .verse-text { font-family: 'Mukta Malar', system-ui, sans-serif; font-size: 12pt; line-height: 1.8; }
+.explain-text:lang(ta), .support:lang(ta), .verse-card:lang(ta) .verse-text { font-family: 'Mukta Malar', system-ui, sans-serif; font-size: 13pt; line-height: 1.8; }
+/* The rest of the Explanations page's Tamil: 1pt larger than the English it stands in for. */
+.lesson-text h1 [lang="ta"] { font-size: calc(1em + 1pt); line-height: 1.25; }
+.lesson-text [lang="ta"] .detail { font-size: calc(19px + 1pt); }
+.denied-by [lang="ta"], .denied-by:lang(ta) li a { font-size: calc(14px + 1pt); }
+.denied-by h2:lang(ta) { font-size: calc(12px + 1pt); letter-spacing: 0; text-transform: none; }
+.verse-card:lang(ta) b { font-size: calc(1em + 1pt); }
 .verse-card:lang(ta) b { font-family: 'Mukta Malar', system-ui, sans-serif; }
 /* The English term in brackets keeps the English reading font. */
 .explain-text:lang(ta) .term-en, .support:lang(ta) .term-en { font-family: var(--read); }
 .lesson-nav { display: flex; flex-wrap: wrap; gap: 12px; }
 .note { padding: 14px 18px; border-radius: 16px; background: var(--mist); font-size: 14px; color: var(--ink-2); }
 .diagram-card { flex: 1 1 520px; min-width: 0; margin: 0; padding: 28px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+/* The teaching's animation in the card (the same one as in presentation mode), sized to the card's width:
+   the picture scales, the buttons may wrap, and the captions are stacked so the strip fits the longest. */
+.anim-card { padding: 20px 20px 24px; }
+.anim-card .anim { width: 100%; height: auto; gap: 12px; }
+.anim-card .anim-bar { flex-wrap: wrap; justify-content: center; }
+.anim-card .anim-steps button { min-height: 32px; padding: 0 10px; font-size: 12px; }
+.anim-card .anim-svg, .anim-card .anim.is-ta .anim-svg { width: 100%; height: auto; max-height: 520px; }
+.anim-card .anim-caps, .anim-card .anim.is-ta .anim-caps { display: grid; height: auto; }
+.anim-card .anim-caps p { position: static; grid-area: 1 / 1; font-size: 19px; line-height: 1.45; }
+.anim-card .anim-caps p:lang(ta) { font-size: calc(16px + 1pt); line-height: 1.6; }
 /* The diagram is drawn at a fixed size (wide 500 x 516, or the compact phone layout 372 x 516; see
    LAYOUT in diagram.ts) and scaled to the card's width by fitDiagram(), so it never scrolls sideways. */
 .diagram-open { align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 0; border: 0; border-radius: 12px; background: transparent; color: inherit; text-align: inherit; cursor: zoom-in; }

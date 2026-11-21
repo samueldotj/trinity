@@ -91,6 +91,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   }</optgroup>`).join('');
 
   const dg = draw(cur.n, cur.notes, cur.cap);
+  const pageAnimation = animationFor(cur.n, lang);
 
   // Key words in the title and explanation link to the Key words page, the first mention of each only.
   const gl = data.glossary || {};
@@ -156,7 +157,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
             : `<a class="btn primary" href="${href('explanations', { done: 1 })}">Finish the course${icon.right}</a>`}
         </div>
       </section>
-      <figure class="card diagram-card">
+      ${pageAnimation ? `<figure class="card diagram-card anim-card" aria-label="Illustration">${pageAnimation}</figure>` : `<figure class="card diagram-card">
         <button type="button" class="diagram-open" aria-label="Enlarge diagram. ${esc(mdPlain(dg.alt))}">
           <span class="diagram-fit" aria-hidden="true"></span>
           <span class="diagram-hint">${icon.expand}Tap to enlarge</span>
@@ -167,7 +168,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
           <span><i style="height: 0; border-top: 3px dashed #6B7080"></i>is not</span>
           <span><i style="background: #33449A"></i>relation or act</span>
         </div>
-      </figure>
+      </figure>`}
     </div>
 
     <section class="verses-section" aria-label="Verses" style="display: flex; flex-direction: column; gap: 14px">
@@ -196,9 +197,14 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     </div>
   </div>`;
 
-  const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
-  fitDiagram(open.querySelector<HTMLElement>('.diagram-fit')!, cur, root.querySelector<HTMLElement>('.diagram-card')!);
-  open.addEventListener('click', () => enlargeDiagram(cur, dg.cap));
+  // The illustration: the teaching's animation (as in presentation mode), or its still diagram if it has none.
+  const animCard = root.querySelector<HTMLElement>('.anim-card');
+  if (animCard) wireAnimation(animCard);
+  else {
+    const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
+    fitDiagram(open.querySelector<HTMLElement>('.diagram-fit')!, cur, root.querySelector<HTMLElement>('.diagram-card')!);
+    open.addEventListener('click', () => enlargeDiagram(cur, dg.cap));
+  }
 
   // The outline button sits beside the progress line; the outline itself opens full width below.
   const outlineBtn = root.querySelector<HTMLButtonElement>('.outline-btn')!;
