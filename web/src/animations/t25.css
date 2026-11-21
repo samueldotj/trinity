@@ -1,0 +1,50 @@
+/* Teaching 25, The Persons are distinguished by eternal relations of origin: 24 seconds in four scenes. */
+.anim-t25 * { animation-duration: 24s; }
+.anim-t25 .a-chip, .anim-t25 .a-rank, .anim-t25 .a-rankstrike, .anim-t25 .a-start, .anim-t25 .a-startstrike, .anim-t25 .a-lessgod, .anim-t25 .a-lessgodstrike { opacity: 0; }
+.anim-t25 .a-person { animation-name: t25-person; }
+.anim-t25 .a-nature { animation-name: t25-nature; }
+.anim-t25 .a-spoke { animation-name: t25-spoke; }
+.anim-t25 .a-share { animation-name: t25-share; }
+.anim-t25 .a-chip { animation-name: t25-chip; }
+.anim-t25 .a-rank { animation-name: t25-rank; }
+.anim-t25 .a-rankstrike { animation-name: t25-rankstrike; }
+.anim-t25 .a-fnote { animation-name: t25-fnote; }
+.anim-t25 .a-r1 { animation-name: t25-r1; }
+.anim-t25 .a-r1head { animation-name: t25-r1head; }
+.anim-t25 .a-r1label { animation-name: t25-r1label; }
+.anim-t25 .a-snote { animation-name: t25-snote; }
+.anim-t25 .a-r2 { animation-name: t25-r2; }
+.anim-t25 .a-r3 { animation-name: t25-r3; }
+.anim-t25 .a-r2head { animation-name: t25-r2head; }
+.anim-t25 .a-r3head { animation-name: t25-r3head; }
+.anim-t25 .a-r2label { animation-name: t25-r2label; }
+.anim-t25 .a-r3label { animation-name: t25-r3label; }
+.anim-t25 .a-pnote { animation-name: t25-pnote; }
+.anim-t25 .a-start { animation-name: t25-start; }
+.anim-t25 .a-startstrike { animation-name: t25-startstrike; }
+.anim-t25 .a-lessgod { animation-name: t25-lessgod; }
+.anim-t25 .a-lessgodstrike { animation-name: t25-lessgodstrike; }
+.anim-t25 .a-share { animation-timing-function: linear; }
+@keyframes t25-person { 0% { opacity: 0; transform: scale(.6); } 4%, 25% { opacity: 1; transform: scale(1); } 30%, 38% { transform: scale(var(--s)); } 43% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t25-nature { 0%, 2% { opacity: 0; transform: scale(.6); } 6% { opacity: 1; transform: scale(1); } 88% { transform: scale(1); } 90.5% { transform: scale(1.12); } 93% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t25-spoke { 0%, 6% { opacity: 1; stroke-dashoffset: 1; } 10% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t25-share { 0% { stroke-dashoffset: 0; opacity: 0; } 10% { opacity: 0; } 12%, 95% { opacity: 1; } 100% { stroke-dashoffset: -560; opacity: 0; } }
+@keyframes t25-chip { 0%, 11% { opacity: 0; transform: scale(0.7); } 14% { opacity: 1; transform: scale(1); } 19.5% { opacity: 1; transform: scale(1); } 21.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t25-rank { 0%, 27% { opacity: 0; } 29%, 40% { opacity: 1; } 42%, 100% { opacity: 0; } }
+@keyframes t25-rankstrike { 0%, 34% { opacity: 1; stroke-dashoffset: 1; } 36% { stroke-dashoffset: 0; } 40% { opacity: 1; stroke-dashoffset: 0; } 42%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t25-fnote { 0%, 47.5% { opacity: 0; } 50.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-r1 { 0%, 51% { opacity: 1; stroke-dashoffset: 1; } 55% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t25-r1head { 0%, 54.5% { opacity: 0; } 55.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-r1label { 0%, 54% { opacity: 0; } 56.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-snote { 0%, 55.5% { opacity: 0; } 58%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-r2 { 0%, 59% { opacity: 1; stroke-dashoffset: 1; } 63% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t25-r3 { 0%, 59% { opacity: 1; stroke-dashoffset: 1; } 63% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t25-r2head { 0%, 62.5% { opacity: 0; } 63.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-r3head { 0%, 62.5% { opacity: 0; } 63.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-r2label { 0%, 62% { opacity: 0; } 64.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-r3label { 0%, 62% { opacity: 0; } 64.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-pnote { 0%, 64% { opacity: 0; } 66.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t25-start { 0%, 74% { opacity: 0; } 76%, 84% { opacity: 1; } 86%, 100% { opacity: 0; } }
+@keyframes t25-startstrike { 0%, 79% { opacity: 1; stroke-dashoffset: 1; } 81% { stroke-dashoffset: 0; } 84% { opacity: 1; stroke-dashoffset: 0; } 86%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t25-lessgod { 0%, 75.5% { opacity: 0; } 77.5%, 84% { opacity: 1; } 86%, 100% { opacity: 0; } }
+@keyframes t25-lessgodstrike { 0%, 80.5% { opacity: 1; stroke-dashoffset: 1; } 82.5% { stroke-dashoffset: 0; } 84% { opacity: 1; stroke-dashoffset: 0; } 86%, 100% { opacity: 0; stroke-dashoffset: 0; } }

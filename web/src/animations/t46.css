@@ -1,0 +1,49 @@
+/* Teaching 46, The incarnation did not change the divine nature: 24 seconds in four scenes. */
+.anim-t46 * { animation-duration: 24s; }
+.anim-t46 .a-godnote, .anim-t46 .a-addv, .anim-t46 .a-addvlab, .anim-t46 .a-attr, .anim-t46 .a-morphgod, .anim-t46 .a-morphman, .anim-t46 .a-morphtag, .anim-t46 .a-morphstrike, .anim-t46 .a-asidetag, .anim-t46 .a-asidestrike, .anim-t46 .a-station, .anim-t46 .a-mini, .anim-t46 .a-hebrews { opacity: 0; }
+.anim-t46 .a-son { animation-name: t46-son; }
+.anim-t46 .a-godnote { animation-name: t46-godnote; }
+.anim-t46 .a-split { animation-name: t46-split; }
+.anim-t46 .a-attr { animation-name: t46-attr; }
+.anim-t46 .a-box { animation-name: t46-box; }
+.anim-t46 .a-addv { animation-name: t46-addv; }
+.anim-t46 .a-addvlab { animation-name: t46-addvlab; }
+.anim-t46 .a-morphgod { animation-name: t46-morphgod; }
+.anim-t46 .a-morphman { animation-name: t46-morphman; }
+.anim-t46 .a-morphtag { animation-name: t46-morphtag; }
+.anim-t46 .a-morphstrike { animation-name: t46-morphstrike; }
+.anim-t46 .a-asidetag { animation-name: t46-asidetag; }
+.anim-t46 .a-asidestrike { animation-name: t46-asidestrike; }
+.anim-t46 .a-station { animation-name: t46-station; }
+.anim-t46 .a-mini { animation-name: t46-mini; }
+.anim-t46 .a-hebrews { animation-name: t46-hebrews; }
+.anim-t46 .a-god { animation-name: t46-god; }
+.anim-t46 .a-unch { animation-name: t46-unch; }
+.anim-t46 .a-unchlab { animation-name: t46-unchlab; }
+.anim-t46 .a-addd { animation-name: t46-addd; }
+.anim-t46 .a-adddlab { animation-name: t46-adddlab; }
+.anim-t46 .a-tri { animation-name: t46-tri; }
+.anim-t46 .a-trio { animation-name: t46-trio; }
+@keyframes t46-son { 0% { opacity: 0; transform: translate(170px, -70px) scale(.6); } 4% { opacity: 1; transform: translate(170px, -70px) scale(1); } 73% { transform: translate(170px, -70px) scale(1); } 77% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t46-godnote { 0%, 14% { opacity: 1; } 16%, 100% { opacity: 0; } }
+@keyframes t46-split { 0%, 14% { opacity: 0; } 17%, 100% { opacity: 1; } }
+@keyframes t46-attr { 0%, 3% { opacity: 0; transform: scale(.7); } 6% { opacity: 1; transform: scale(1); } 17% { opacity: 1; transform: scale(1); } 18.5% { transform: scale(1.12); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t46-box { 0%, 7% { opacity: 0; transform: translateY(12px); } 10% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t46-addv { 0%, 10% { opacity: 1; stroke-dashoffset: 1; } 14% { stroke-dashoffset: 0; } 71% { opacity: 1; stroke-dashoffset: 0; } 73%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t46-addvlab { 0%, 13% { opacity: 0; } 15%, 71% { opacity: 1; } 73%, 100% { opacity: 0; } }
+@keyframes t46-morphgod { 0%, 23% { opacity: 0; transform: scale(1); } 25% { opacity: 1; transform: scale(1); } 31%, 100% { opacity: 0; transform: scale(.2); } }
+@keyframes t46-morphman { 0%, 26% { opacity: 0; transform: scale(.3); } 31% { opacity: 1; transform: scale(1); } 43% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t46-morphtag { 0%, 28% { opacity: 0; } 31%, 43% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t46-morphstrike { 0%, 32% { opacity: 1; stroke-dashoffset: 1; } 35% { stroke-dashoffset: 0; } 43% { opacity: 1; stroke-dashoffset: 0; } 46%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t46-asidetag { 0%, 35% { opacity: 0; } 37%, 43% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t46-asidestrike { 0%, 38% { opacity: 1; stroke-dashoffset: 1; } 41% { stroke-dashoffset: 0; } 43% { opacity: 1; stroke-dashoffset: 0; } 46%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t46-station { 0%, 47% { opacity: 0; transform: translateY(-8px); } 50% { opacity: 1; transform: translateY(0px); } 66% { opacity: 1; transform: translateY(0px); } 68%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t46-mini { 0%, 48% { opacity: 0; transform: scale(.5); } 51% { opacity: 1; transform: scale(1); } 66% { opacity: 1; transform: scale(1); } 68%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t46-hebrews { 0%, 60% { opacity: 0; } 63%, 69% { opacity: 1; } 71%, 100% { opacity: 0; } }
+@keyframes t46-god { 0%, 77% { opacity: 0; transform: scale(.6); } 80% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t46-unch { 0%, 79% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t46-unchlab { 0%, 80% { opacity: 0; } 83%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t46-addd { 0%, 77% { opacity: 1; stroke-dashoffset: 1; } 81% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t46-adddlab { 0%, 80% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t46-tri { 0%, 81% { opacity: 0; transform: scale(.6); } 85% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t46-trio { 0%, 86% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }

@@ -1,0 +1,42 @@
+/* Teaching 24, The Holy Spirit eternally proceeds from the Father and the Son: 24 seconds in four scenes. */
+.anim-t24 * { animation-duration: 24s; }
+.anim-t24 .a-fs, .anim-t24 .a-give, .anim-t24 .a-begets, .anim-t24 .a-alone, .anim-t24 .a-gives, .anim-t24 .a-songlow, .anim-t24 .a-less, .anim-t24 .a-lessstrike { opacity: 0; }
+.anim-t24 .a-f { animation-name: t24-f; }
+.anim-t24 .a-s { animation-name: t24-s; }
+.anim-t24 .a-fs { animation-name: t24-fs; }
+.anim-t24 .a-begets { animation-name: t24-begets; }
+.anim-t24 .a-alone { animation-name: t24-alone; }
+.anim-t24 .a-branch { animation-name: t24-branch; }
+.anim-t24 .a-stem { animation-name: t24-stem; }
+.anim-t24 .a-stemhead { animation-name: t24-stemhead; }
+.anim-t24 .a-p { animation-name: t24-p; }
+.anim-t24 .a-pflow { animation-name: t24-pflow; }
+.anim-t24 .a-blabels { animation-name: t24-blabels; }
+.anim-t24 .a-onesource { animation-name: t24-onesource; }
+.anim-t24 .a-give { animation-name: t24-give; }
+.anim-t24 .a-gives { animation-name: t24-gives; }
+.anim-t24 .a-songlow { animation-name: t24-songlow; }
+.anim-t24 .a-less { animation-name: t24-less; }
+.anim-t24 .a-lessstrike { animation-name: t24-lessstrike; }
+.anim-t24 .a-gold { animation-name: t24-gold; }
+.anim-t24 .a-pnote { animation-name: t24-pnote; }
+.anim-t24 .a-pflow, .anim-t24 .a-give { animation-timing-function: linear; }
+@keyframes t24-f { 0% { opacity: 0; transform: scale(0.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t24-s { 0%, 3% { opacity: 0; transform: scale(0.4); } 7% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t24-fs { 0%, 6% { opacity: 0; } 9%, 22% { opacity: 1; } 25%, 46% { opacity: .3; } 49%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t24-begets { 0%, 8% { opacity: 0; } 10.5%, 19.5% { opacity: 1; } 21.5%, 100% { opacity: 0; } }
+@keyframes t24-alone { 0%, 11% { opacity: 0; } 13.5%, 19.5% { opacity: 1; } 21.5%, 100% { opacity: 0; } }
+@keyframes t24-branch { 0%, 24% { opacity: 1; stroke-dashoffset: 1; } 29% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t24-stem { 0%, 29% { opacity: 1; stroke-dashoffset: 1; } 31.5% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t24-stemhead { 0%, 31% { opacity: 0; } 32%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t24-p { 0%, 30% { opacity: 0; transform: scale(.5); } 34% { opacity: 1; transform: scale(1); } 82% { transform: scale(1); } 84.5% { transform: scale(1.1); } 87% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t24-pflow { 0% { stroke-dashoffset: 0; opacity: 0; } 32% { opacity: 0; } 34%, 95% { opacity: 1; } 100% { stroke-dashoffset: -600; opacity: 0; } }
+@keyframes t24-blabels { 0%, 31% { opacity: 0; } 34%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t24-onesource { 0%, 35% { opacity: 0; transform: scale(0.8); } 38% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t24-give { 0% { stroke-dashoffset: 0; opacity: 0; } 48% { opacity: 0; } 50%, 69% { opacity: 1; } 72% { opacity: 0; } 100% { stroke-dashoffset: -480; opacity: 0; } }
+@keyframes t24-gives { 0%, 49% { opacity: 0; } 52%, 69% { opacity: 1; } 71.5%, 100% { opacity: 0; } }
+@keyframes t24-songlow { 0%, 55% { opacity: 0; } 58% { opacity: .55; } 61% { opacity: .2; } 64% { opacity: .55; } 67% { opacity: .2; } 69% { opacity: .55; } 72%, 100% { opacity: 0; } }
+@keyframes t24-less { 0%, 74% { opacity: 0; } 76%, 81% { opacity: 1; } 83%, 100% { opacity: 0; } }
+@keyframes t24-lessstrike { 0%, 78% { opacity: 1; stroke-dashoffset: 1; } 80% { stroke-dashoffset: 0; } 81% { opacity: 1; stroke-dashoffset: 0; } 83%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t24-gold { 0%, 83% { opacity: 0; transform: scale(0.8); } 87% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t24-pnote { 0%, 86% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }

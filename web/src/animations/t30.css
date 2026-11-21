@@ -1,0 +1,40 @@
+/* Teaching 30, No Person is more divine than another: 24 seconds in four scenes. */
+.anim-t30 * { animation-duration: 24s; }
+.anim-t30 .a-being, .anim-t30 .a-slice, .anim-t30 .a-share, .anim-t30 .a-slicestrike, .anim-t30 .a-fully, .anim-t30 .a-rankpill, .anim-t30 .a-rankstrike { opacity: 0; }
+.anim-t30 .a-being { animation-name: t30-being; }
+.anim-t30 .a-slice { animation-name: t30-slice; }
+.anim-t30 .a-share { animation-name: t30-share; }
+.anim-t30 .a-slicestrike { animation-name: t30-slicestrike; }
+.anim-t30 .a-whole { animation-name: t30-whole; }
+.anim-t30 .a-person { animation-name: t30-person; }
+.anim-t30 .a-fully { animation-name: t30-fully; }
+.anim-t30 .a-rankf { animation-name: t30-rankf; }
+.anim-t30 .a-ranks { animation-name: t30-ranks; }
+.anim-t30 .a-rankpill { animation-name: t30-rankpill; }
+.anim-t30 .a-rankstrike { animation-name: t30-rankstrike; }
+.anim-t30 .a-rel { animation-name: t30-rel; }
+.anim-t30 .a-relpill { animation-name: t30-relpill; }
+.anim-t30 .a-eq { animation-name: t30-eq; }
+.anim-t30 .a-people { animation-name: t30-people; }
+.anim-t30 .a-honourline { animation-name: t30-honourline; }
+.anim-t30 .a-honour { animation-name: t30-honour; }
+.anim-t30 .a-samepill { animation-name: t30-samepill; }
+.anim-t30 .a-honourline { animation-timing-function: linear; }
+@keyframes t30-being { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 21% { opacity: 1; transform: scale(1); } 25%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-slice { 0%, 5% { opacity: 0; } 8%, 18% { opacity: 1; } 21%, 100% { opacity: 0; } }
+@keyframes t30-share { 0%, 7% { opacity: 0; transform: scale(.7); } 10% { opacity: 1; transform: scale(1); } 18% { opacity: 1; transform: scale(1); } 21%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-slicestrike { 0%, 12% { opacity: 1; stroke-dashoffset: 1; } 15% { stroke-dashoffset: 0; } 18% { opacity: 1; stroke-dashoffset: 0; } 21%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t30-whole { 0%, 21% { opacity: 0; transform: translate(var(--dx), 0px) scale(1.714); } 23% { opacity: 1; transform: translate(var(--dx), 0px) scale(1.714); } 30% { opacity: 1; transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t30-person { 0%, 28% { opacity: 0; transform: scale(.5); } 32% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-fully { 0%, 33% { opacity: 0; transform: translateY(-8px); } 36% { opacity: 1; transform: translateY(0px); } 44% { opacity: 1; transform: translateY(0px); } 47%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t30-rankf { 0%, 48% { transform: translateY(0px); } 53%, 63% { transform: translateY(-56px); } 68%, 100% { transform: translateY(0px); } }
+@keyframes t30-ranks { 0%, 48% { transform: translateY(0px); } 53%, 63% { transform: translateY(64px); } 68%, 100% { transform: translateY(0px); } }
+@keyframes t30-rankpill { 0%, 52% { opacity: 0; transform: scale(.7); } 55% { opacity: 1; transform: scale(1); } 62% { opacity: 1; transform: scale(1); } 65%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-rankstrike { 0%, 56% { opacity: 1; stroke-dashoffset: 1; } 59% { stroke-dashoffset: 0; } 62% { opacity: 1; stroke-dashoffset: 0; } 65%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t30-rel { 0%, 67% { opacity: 0; } 70%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t30-relpill { 0%, 68% { opacity: 0; transform: scale(.7); } 71% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-eq { 0%, 73% { opacity: 0; transform: scale(.4); } 76% { opacity: 1; transform: scale(1.2); } 78% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-people { 0%, 77% { opacity: 0; transform: translateY(14px); } 81% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t30-honourline { 0% { stroke-dashoffset: 0; opacity: 0; } 82% { opacity: 0; } 85%, 95% { opacity: 1; } 100% { stroke-dashoffset: -330; opacity: 0; } }
+@keyframes t30-honour { 0%, 85% { opacity: 0; transform: scale(.9); } 88% { opacity: 1; transform: scale(1); } 90% { transform: scale(1.04); } 92% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t30-samepill { 0%, 86% { opacity: 0; transform: scale(.7); } 89% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

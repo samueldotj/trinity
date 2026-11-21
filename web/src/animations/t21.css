@@ -1,0 +1,30 @@
+/* Teaching 21, The Persons mutually indwell one another: 24 seconds in four scenes. */
+.anim-t21 * { animation-duration: 24s; }
+.anim-t21 .a-quote, .anim-t21 .a-blend, .anim-t21 .a-blendstrike, .anim-t21 .a-friends, .anim-t21 .a-friendsstrike { opacity: 0; }
+.anim-t21 .a-person { animation-name: t21-person; }
+.anim-t21 .a-pin { animation-name: t21-pin; }
+.anim-t21 .a-fs { animation-name: t21-fs; }
+.anim-t21 .a-rest { animation-name: t21-rest; }
+.anim-t21 .a-inlabel { animation-name: t21-inlabel; }
+.anim-t21 .a-flow { animation-name: t21-flow; }
+.anim-t21 .a-together { animation-name: t21-together; }
+.anim-t21 .a-quote { animation-name: t21-quote; }
+.anim-t21 .a-blend { animation-name: t21-blend; }
+.anim-t21 .a-blendstrike { animation-name: t21-blendstrike; }
+.anim-t21 .a-friends { animation-name: t21-friends; }
+.anim-t21 .a-friendsstrike { animation-name: t21-friendsstrike; }
+.anim-t21 .a-onegod { animation-name: t21-onegod; }
+.anim-t21 .a-flow { animation-timing-function: linear; }
+@keyframes t21-person { 0% { opacity: 0; transform: translate(0px, 0px); } 3% { opacity: 1; transform: translate(0px, 0px); } 48% { transform: translate(0px, 0px); } 55%, 61.5% { transform: translate(var(--dx), var(--dy)); } 67%, 73% { transform: translate(0px, 0px); } 78%, 83% { transform: translate(calc(var(--dx) * -.25), calc(var(--dy) * -.25)); } 88% { transform: translate(0px, 0px); } 95% { opacity: 1; transform: translate(0px, 0px); } 100% { opacity: 0; transform: translate(0px, 0px); } }
+@keyframes t21-pin { 0%, 22% { opacity: 0; transform: scale(0.6); } 26% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t21-fs { 0%, 4% { opacity: 0; } 8%, 46% { opacity: 1; } 49%, 67% { opacity: 0; } 70%, 73% { opacity: 1; } 75.5%, 86% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t21-rest { 0%, 26% { opacity: 0; } 30%, 46% { opacity: 1; } 49%, 67% { opacity: 0; } 70%, 73% { opacity: 1; } 75.5%, 86% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t21-inlabel { 0%, 100% { opacity: 1; } }
+@keyframes t21-flow { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -560; } }
+@keyframes t21-together { 0%, 31% { transform: translate(0px, 0px); } 35.5% { transform: translate(-36px, 0px); } 40.5% { transform: translate(36px, 0px); } 44.5%, 100% { transform: translate(0px, 0px); } }
+@keyframes t21-quote { 0%, 6% { opacity: 0; } 9%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t21-blend { 0%, 53.5% { opacity: 0; transform: scale(0.9); } 56% { opacity: 1; transform: scale(1); } 61% { opacity: 1; transform: scale(1); } 63%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t21-blendstrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 59% { stroke-dashoffset: 0; } 61% { opacity: 1; stroke-dashoffset: 0; } 63%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t21-friends { 0%, 76% { opacity: 0; } 78%, 84% { opacity: 1; } 86%, 100% { opacity: 0; } }
+@keyframes t21-friendsstrike { 0%, 80% { opacity: 1; stroke-dashoffset: 1; } 82% { stroke-dashoffset: 0; } 84% { opacity: 1; stroke-dashoffset: 0; } 86%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t21-onegod { 0%, 88% { opacity: 0; transform: scale(0.7); } 91% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

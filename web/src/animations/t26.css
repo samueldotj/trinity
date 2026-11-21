@@ -1,0 +1,36 @@
+/* Teaching 26, The Father loves the Son eternally: 24 seconds in four scenes. */
+.anim-t26 * { animation-duration: 24s; }
+.anim-t26 .a-world, .anim-t26 .a-before, .anim-t26 .a-lonely, .anim-t26 .a-need, .anim-t26 .a-lonelystrike, .anim-t26 .a-chip, .anim-t26 .a-steady { opacity: 0; }
+.anim-t26 .a-f { animation-name: t26-f; }
+.anim-t26 .a-s { animation-name: t26-s; }
+.anim-t26 .a-love { animation-name: t26-love; }
+.anim-t26 .a-lovedots { animation-name: t26-lovedots; }
+.anim-t26 .a-loves { animation-name: t26-loves; }
+.anim-t26 .a-world { animation-name: t26-world; }
+.anim-t26 .a-before { animation-name: t26-before; }
+.anim-t26 .a-lonely { animation-name: t26-lonely; }
+.anim-t26 .a-need { animation-name: t26-need; }
+.anim-t26 .a-lonelystrike { animation-name: t26-lonelystrike; }
+.anim-t26 .a-chip { animation-name: t26-chip; }
+.anim-t26 .a-steady { animation-name: t26-steady; }
+.anim-t26 .a-out { animation-name: t26-out; }
+.anim-t26 .a-people { animation-name: t26-people; }
+.anim-t26 .a-us { animation-name: t26-us; }
+.anim-t26 .a-notes { animation-name: t26-notes; }
+.anim-t26 .a-lovedots, .anim-t26 .a-out { animation-timing-function: linear; }
+@keyframes t26-f { 0% { opacity: 0; transform: scale(0.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t26-s { 0%, 1% { opacity: 0; transform: scale(0.6); } 5% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t26-love { 0%, 4% { opacity: 0; } 7%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t26-lovedots { 0% { stroke-dashoffset: 0; opacity: 0; } 5% { opacity: 0; } 8%, 95% { opacity: 1; } 100% { stroke-dashoffset: -540; opacity: 0; } }
+@keyframes t26-loves { 0%, 7% { opacity: 0; } 9.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t26-world { 0%, 9% { opacity: 0; } 12%, 19.5% { opacity: 1; } 21.5%, 100% { opacity: 0; } }
+@keyframes t26-before { 0%, 12% { opacity: 0; } 15%, 19.5% { opacity: 1; } 21.5%, 100% { opacity: 0; } }
+@keyframes t26-lonely { 0%, 24% { opacity: 0; transform: scale(0.8); } 27% { opacity: 1; transform: scale(1); } 40% { opacity: 1; transform: scale(1); } 42.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t26-need { 0%, 28% { opacity: 0; } 30.5%, 40% { opacity: 1; } 42.5%, 100% { opacity: 0; } }
+@keyframes t26-lonelystrike { 0%, 34% { opacity: 1; stroke-dashoffset: 1; } 36.5% { stroke-dashoffset: 0; } 40% { opacity: 1; stroke-dashoffset: 0; } 42.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t26-chip { 0%, 48% { opacity: 0; transform: translateY(var(--dy)); } 50% { opacity: 1; transform: translateY(var(--dy)); } 55% { opacity: 1; transform: translateY(0px); } 56.5% { transform: translateY(calc(var(--dy) * .12)); } 58% { opacity: 1; transform: translateY(calc(var(--dy) * .08)); } 62%, 100% { opacity: 0; transform: translateY(calc(var(--dy) * .4)); } }
+@keyframes t26-steady { 0%, 61% { opacity: 0; } 64%, 69.5% { opacity: 1; } 71.5%, 100% { opacity: 0; } }
+@keyframes t26-out { 0% { stroke-dashoffset: 0; opacity: 0; } 75% { opacity: 0; } 78%, 95% { opacity: 1; } 100% { stroke-dashoffset: -480; opacity: 0; } }
+@keyframes t26-people { 0%, 74% { opacity: 0; transform: scale(0.6); } 78% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t26-us { 0%, 79% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t26-notes { 0%, 82% { opacity: 0; } 85%, 95% { opacity: 1; } 100% { opacity: 0; } }

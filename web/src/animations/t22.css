@@ -1,0 +1,37 @@
+/* Teaching 22, The Father is eternally Father: 24 seconds in four scenes. */
+.anim-t22 * { animation-duration: 24s; }
+.anim-t22 .a-time, .anim-t22 .a-goddot, .anim-t22 .a-ask1, .anim-t22 .a-askstrike1, .anim-t22 .a-ask2, .anim-t22 .a-askstrike2, .anim-t22 .a-bars, .anim-t22 .a-mask, .anim-t22 .a-maskstrike, .anim-t22 .a-masktag, .anim-t22 .a-masktagstrike { opacity: 0; }
+.anim-t22 .a-time { animation-name: t22-time; }
+.anim-t22 .a-goddot { animation-name: t22-goddot; }
+.anim-t22 .a-ask1 { animation-name: t22-ask1; }
+.anim-t22 .a-askstrike1 { animation-name: t22-askstrike1; }
+.anim-t22 .a-ask2 { animation-name: t22-ask2; }
+.anim-t22 .a-askstrike2 { animation-name: t22-askstrike2; }
+.anim-t22 .a-f { animation-name: t22-f; }
+.anim-t22 .a-s { animation-name: t22-s; }
+.anim-t22 .a-arrow { animation-name: t22-arrow; }
+.anim-t22 .a-arrowhead { animation-name: t22-arrowhead; }
+.anim-t22 .a-oflabel { animation-name: t22-oflabel; }
+.anim-t22 .a-bars { animation-name: t22-bars; }
+.anim-t22 .a-mask { animation-name: t22-mask; }
+.anim-t22 .a-maskstrike { animation-name: t22-maskstrike; }
+.anim-t22 .a-masktag { animation-name: t22-masktag; }
+.anim-t22 .a-masktagstrike { animation-name: t22-masktagstrike; }
+.anim-t22 .a-notes { animation-name: t22-notes; }
+@keyframes t22-time { 0%, 1% { opacity: 0; } 4%, 46% { opacity: 1; } 50%, 70% { opacity: .3; } 74%, 100% { opacity: 0; } }
+@keyframes t22-goddot { 0%, 3% { opacity: 0; transform: translate(0px, 0px); } 5.5%, 11.5% { opacity: 1; transform: translate(0px, 0px); } 14.5%, 19% { opacity: 1; transform: translate(170px, 0px); } 21%, 100% { opacity: 0; transform: translate(170px, 0px); } }
+@keyframes t22-ask1 { 0%, 6% { opacity: 0; } 7.5%, 11.5% { opacity: 1; } 13%, 100% { opacity: 0; } }
+@keyframes t22-askstrike1 { 0%, 9% { opacity: 1; stroke-dashoffset: 1; } 10.5% { stroke-dashoffset: 0; } 11.5% { opacity: 1; stroke-dashoffset: 0; } 13%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t22-ask2 { 0%, 14.5% { opacity: 0; } 16%, 19.5% { opacity: 1; } 21%, 100% { opacity: 0; } }
+@keyframes t22-askstrike2 { 0%, 17% { opacity: 1; stroke-dashoffset: 1; } 18.5% { stroke-dashoffset: 0; } 19.5% { opacity: 1; stroke-dashoffset: 0; } 21%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t22-f { 0%, 21.5% { opacity: 0; transform: scale(0.6); } 25% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t22-s { 0%, 22.5% { opacity: 0; transform: scale(0.6); } 26% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t22-arrow { 0%, 26% { opacity: 1; stroke-dashoffset: 1; } 29.5% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t22-arrowhead { 0%, 29% { opacity: 0; } 30%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t22-oflabel { 0%, 29.5% { opacity: 0; } 32%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t22-bars { 0%, 32% { opacity: 0; } 36%, 46% { opacity: 1; } 50%, 70% { opacity: .3; } 74%, 100% { opacity: 0; } }
+@keyframes t22-mask { 0%, 48% { opacity: 0; transform: translate(0px, -96px); } 50% { opacity: 1; transform: translate(0px, -96px); } 53.5%, 61% { opacity: 1; transform: translate(0px, 0px); } 64.5%, 100% { opacity: 0; transform: translate(0px, 44px); } }
+@keyframes t22-maskstrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 59% { stroke-dashoffset: 0; } 61% { opacity: 1; stroke-dashoffset: 0; } 63%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t22-masktag { 0%, 53% { opacity: 0; } 55%, 63% { opacity: 1; } 65%, 100% { opacity: 0; } }
+@keyframes t22-masktagstrike { 0%, 58% { opacity: 1; stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 63% { opacity: 1; stroke-dashoffset: 0; } 65%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t22-notes { 0%, 75% { opacity: 0; } 79%, 95% { opacity: 1; } 100% { opacity: 0; } }

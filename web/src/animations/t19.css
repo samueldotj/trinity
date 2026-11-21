@@ -1,0 +1,38 @@
+/* Teaching 19, the three Persons are coequal in deity: 24 seconds in four scenes. */
+.anim-t19 * { animation-duration: 24s; }
+.anim-t19 .a-step, .anim-t19 .a-chip, .anim-t19 .a-strike, .anim-t19 .a-column, .anim-t19 .a-levelline, .anim-t19 .a-essence, .anim-t19 .a-equally, .anim-t19 .a-people, .anim-t19 .a-honour, .anim-t19 .a-honourpill, .anim-t19 .a-glow, .anim-t19 .a-sub1 { opacity: 0; }
+.anim-t19 .a-person { animation-name: t19-person; }
+.anim-t19 .a-sub1 { animation-name: t19-sub1; }
+.anim-t19 .a-sub2 { animation-name: t19-sub2; }
+.anim-t19 .a-step { animation-name: t19-step; }
+.anim-t19 .a-chip { animation-name: t19-chip; }
+.anim-t19 .a-strike { animation-name: t19-strike; }
+.anim-t19 .a-column { animation-name: t19-column; }
+.anim-t19 .a-levelline { animation-name: t19-levelline; }
+.anim-t19 .a-essence { animation-name: t19-essence; }
+.anim-t19 .a-equally { animation-name: t19-equally; }
+.anim-t19 .a-people { animation-name: t19-people; }
+.anim-t19 .a-honour { animation-name: t19-honour; }
+.anim-t19 .a-honourpill { animation-name: t19-honourpill; }
+.anim-t19 .a-glow { animation-name: t19-glow; }
+.anim-t19 .a-edge { animation-name: t19-edge; }
+.anim-t19 .a-eq { animation-name: t19-eq; }
+.anim-t19 .a-onename { animation-name: t19-onename; }
+.anim-t19 .a-honour { animation-timing-function: linear; }
+@keyframes t19-person { 0% { opacity: 0; transform: translate(var(--x1), var(--y1)) scale(.6); } 3% { opacity: 1; transform: translate(var(--x1), var(--y1)) scale(1); } 15% { transform: translate(var(--x1), var(--y1)) scale(1); } 18.5% { transform: translate(var(--x2), var(--y2)) scale(1); } 22% { transform: translate(var(--x2), var(--y2)) scale(1); } 26% { transform: translate(var(--x3), var(--y3)) scale(1); } 72% { transform: translate(var(--x3), var(--y3)) scale(1); } 77% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t19-sub1 { 0%, 29% { opacity: 1; } 31%, 100% { opacity: 0; } }
+@keyframes t19-sub2 { 0%, 30% { opacity: 0; } 32%, 100% { opacity: 1; } }
+@keyframes t19-step { 0% { opacity: 0; transform: scaleY(var(--k)); } 3% { opacity: 1; transform: scaleY(var(--k)); } 15% { transform: scaleY(var(--k)); } 18.5% { transform: scaleY(1); } 20% { opacity: 1; transform: scaleY(1); } 22.5%, 100% { opacity: 0; transform: scaleY(1); } }
+@keyframes t19-chip { 0%, 4.5% { opacity: 0; transform: translateY(-6px); } 6.5% { opacity: 1; transform: translateY(0px); } 12.5% { opacity: 1; transform: translateY(0px); } 14.5%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t19-strike { 0%, 9.5% { opacity: 1; stroke-dashoffset: 1; } 12% { stroke-dashoffset: 0; } 13% { opacity: 1; stroke-dashoffset: 0; } 14.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t19-column { 0%, 25% { opacity: 0; transform: scaleY(0); } 26% { opacity: 1; transform: scaleY(0); } 31% { transform: scaleY(1); } 43.5% { opacity: 1; transform: scaleY(1); } 46%, 100% { opacity: 0; transform: scaleY(1); } }
+@keyframes t19-levelline { 0%, 31.5% { opacity: 0; } 34%, 43.5% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t19-essence { 0%, 33% { opacity: 0; transform: scale(.7); } 35.5% { opacity: 1; transform: scale(1); } 43.5% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t19-equally { 0%, 36% { opacity: 0; transform: translateY(8px); } 38.5% { opacity: 1; transform: translateY(0px); } 43.5% { opacity: 1; transform: translateY(0px); } 46%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t19-people { 0%, 47% { opacity: 0; } 50%, 69% { opacity: 1; } 71.5%, 100% { opacity: 0; } }
+@keyframes t19-honour { 0% { opacity: 0; stroke-dashoffset: 0; } 50% { opacity: 0; } 52%, 69% { opacity: 1; } 71.5% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -500; } }
+@keyframes t19-honourpill { 0%, 55% { opacity: 0; transform: scale(.7); } 58% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t19-glow { 0%, 58% { opacity: 0; transform: scale(.8); } 61% { opacity: 1; transform: scale(1); } 63% { transform: scale(1.06); } 65% { transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t19-edge { 0%, 77% { opacity: 1; stroke-dashoffset: 1; } 81% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t19-eq { 0%, 80% { opacity: 0; transform: scale(.5); } 83% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t19-onename { 0%, 83% { opacity: 0; transform: scale(.7); } 86% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

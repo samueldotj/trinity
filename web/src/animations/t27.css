@@ -1,0 +1,41 @@
+/* Teaching 27, The Son eternally shares the Father’s glory: 24 seconds in four scenes. */
+.anim-t27 * { animation-duration: 24s; }
+.anim-t27 .a-time, .anim-t27 .a-timegold, .anim-t27 .a-timetext, .anim-t27 .a-world, .anim-t27 .a-chip, .anim-t27 .a-chipstrike, .anim-t27 .a-always, .anim-t27 .a-giftarrow, .anim-t27 .a-giftlabel, .anim-t27 .a-giftstrike, .anim-t27 .a-creature, .anim-t27 .a-nocreature { opacity: 0; }
+.anim-t27 .a-glow { animation-name: t27-glow; }
+.anim-t27 .a-link { animation-name: t27-link; }
+.anim-t27 .a-onepill { animation-name: t27-onepill; }
+.anim-t27 .a-person { animation-name: t27-person; }
+.anim-t27 .a-time { animation-name: t27-time; }
+.anim-t27 .a-timegold { animation-name: t27-timegold; }
+.anim-t27 .a-timetext { animation-name: t27-timetext; }
+.anim-t27 .a-world { animation-name: t27-world; }
+.anim-t27 .a-chip { animation-name: t27-chip; }
+.anim-t27 .a-chipstrike { animation-name: t27-chipstrike; }
+.anim-t27 .a-always { animation-name: t27-always; }
+.anim-t27 .a-giftarrow { animation-name: t27-giftarrow; }
+.anim-t27 .a-giftlabel { animation-name: t27-giftlabel; }
+.anim-t27 .a-giftstrike { animation-name: t27-giftstrike; }
+.anim-t27 .a-creature { animation-name: t27-creature; }
+.anim-t27 .a-nocreature { animation-name: t27-nocreature; }
+.anim-t27 .a-veil { animation-name: t27-veil; }
+.anim-t27 .a-shine { animation-name: t27-shine; }
+.anim-t27 .a-hidden { animation-name: t27-hidden; }
+@keyframes t27-person { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t27-glow { 0%, 3% { opacity: 0; transform: scale(.7); } 7% { opacity: 1; transform: scale(1); } 40% { transform: scale(1); } 42% { transform: scale(1.06); } 44% { transform: scale(1); } 88% { transform: scale(1); } 90% { transform: scale(1.06); } 92% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t27-link { 0%, 7% { opacity: 0; } 10%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t27-onepill { 0%, 9% { opacity: 0; transform: scale(.7); } 12% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t27-time { 0%, 2% { opacity: 0; } 5%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t27-timegold { 0%, 4% { opacity: 0; } 8%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t27-timetext { 0%, 6% { opacity: 0; } 9%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t27-world { 0%, 12% { opacity: 0; transform: scale(.5); } 15% { opacity: 1; transform: scale(1); } 19% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t27-chip { 0%, 23% { opacity: 0; transform: translateY(24px); } 27% { opacity: 1; transform: translateY(0px); } 35% { opacity: 1; transform: translateY(0px); } 38%, 100% { opacity: 0; transform: translateY(12px); } }
+@keyframes t27-chipstrike { 0%, 29% { opacity: 1; stroke-dashoffset: 1; } 32% { stroke-dashoffset: 0; } 35% { opacity: 1; stroke-dashoffset: 0; } 38%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t27-always { 0%, 37% { opacity: 0; transform: scale(.7); } 40% { opacity: 1; transform: scale(1); } 44% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t27-creature { 0%, 46% { opacity: 0; transform: translateY(16px); } 50% { opacity: 1; transform: translateY(0px); } 68% { opacity: 1; transform: translateY(0px); } 71%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t27-giftarrow { 0%, 50% { opacity: 0; } 53%, 68% { opacity: 1; } 71%, 100% { opacity: 0; } }
+@keyframes t27-giftlabel { 0%, 52% { opacity: 0; } 55%, 68% { opacity: 1; } 71%, 100% { opacity: 0; } }
+@keyframes t27-giftstrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 68% { opacity: 1; stroke-dashoffset: 0; } 71%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t27-nocreature { 0%, 60% { opacity: 0; transform: scale(.7); } 63% { opacity: 1; transform: scale(1); } 68% { opacity: 1; transform: scale(1); } 71%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t27-veil { 0%, 74% { opacity: 0; transform: translateY(30px); } 79% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t27-shine { 0%, 84% { opacity: 0; } 87% { opacity: 1; } 89% { opacity: .45; } 91%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t27-hidden { 0%, 81% { opacity: 0; transform: scale(.7); } 84% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

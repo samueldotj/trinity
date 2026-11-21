@@ -1,0 +1,49 @@
+/* Teaching 38, Creation is the work of the one Triune God: 24 seconds in four scenes. */
+.anim-t38 * { animation-duration: 24s; }
+.anim-t38 .a-wedge, .anim-t38 .a-sharestrike, .anim-t38 .a-whole, .anim-t38 .a-oneact, .anim-t38 .a-deep, .anim-t38 .a-beginning, .anim-t38 .a-hover, .anim-t38 .a-pulse, .anim-t38 .a-helper, .anim-t38 .a-helperstrike { opacity: 0; }
+.anim-t38 .a-wedge { animation-name: t38-wedge; }
+.anim-t38 .a-sharestrike { animation-name: t38-sharestrike; }
+.anim-t38 .a-whole { animation-name: t38-whole; }
+.anim-t38 .a-oneact { animation-name: t38-oneact; }
+.anim-t38 .a-world { animation-name: t38-world; }
+.anim-t38 .a-deep { animation-name: t38-deep; }
+.anim-t38 .a-item { animation-name: t38-item; }
+.anim-t38 .a-beginning { animation-name: t38-beginning; }
+.anim-t38 .a-hover { animation-name: t38-hover; }
+.anim-t38 .a-spirit { animation-name: t38-spirit; }
+.anim-t38 .a-person { animation-name: t38-person; }
+.anim-t38 .a-ring { animation-name: t38-ring; }
+.anim-t38 .a-onegod { animation-name: t38-onegod; }
+.anim-t38 .a-fs { animation-name: t38-fs; }
+.anim-t38 .a-fslabel { animation-name: t38-fslabel; }
+.anim-t38 .a-sp { animation-name: t38-sp; }
+.anim-t38 .a-splabel { animation-name: t38-splabel; }
+.anim-t38 .a-pulse { animation-name: t38-pulse; }
+.anim-t38 .a-creates { animation-name: t38-creates; }
+.anim-t38 .a-createslabel { animation-name: t38-createslabel; }
+.anim-t38 .a-alllabel { animation-name: t38-alllabel; }
+.anim-t38 .a-helper { animation-name: t38-helper; }
+.anim-t38 .a-helperstrike { animation-name: t38-helperstrike; }
+@keyframes t38-wedge { 0% { opacity: 0; transform: translate(0px, 0px); } 3% { opacity: 1; transform: translate(0px, 0px); } 7% { transform: translate(var(--dx), var(--dy)); } 13.5% { transform: translate(var(--dx), var(--dy)); } 16% { transform: translate(0px, 0px); } 17.5% { opacity: 1; transform: translate(0px, 0px); } 19%, 100% { opacity: 0; transform: translate(0px, 0px); } }
+@keyframes t38-sharestrike { 0%, 8% { opacity: 1; stroke-dashoffset: 1; } 11% { stroke-dashoffset: 0; } 13.5% { opacity: 1; stroke-dashoffset: 0; } 15%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t38-whole { 0%, 16% { opacity: 0; transform: scale(.94); } 18% { opacity: 1; transform: scale(1); } 20.5% { opacity: 1; transform: scale(1); } 22.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t38-oneact { 0%, 17% { opacity: 0; } 18.5%, 20.5% { opacity: 1; } 22.5%, 100% { opacity: 0; } }
+@keyframes t38-world { 0%, 22% { opacity: 0; } 25%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t38-deep { 0%, 22% { opacity: 0; } 25%, 65.5% { opacity: 1; } 68.5%, 100% { opacity: 0; } }
+@keyframes t38-item { 0%, 67% { opacity: 0; transform: translateY(8px); } 70% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t38-beginning { 0%, 23% { opacity: 0; } 26%, 43.5% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t38-hover { 0%, 29% { opacity: 0; } 32%, 43.5% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t38-spirit { 0%, 24% { opacity: 0; transform: translate(220px, -204px); } 27% { opacity: 1; transform: translate(220px, -204px); } 31% { transform: translate(220px, -194px); } 35% { transform: translate(220px, -204px); } 39% { transform: translate(220px, -194px); } 43% { transform: translate(220px, -204px); } 47% { transform: translate(220px, -204px); } 52% { transform: translate(0px, 0px); } 95% { opacity: 1; transform: translate(0px, 0px); } 100% { opacity: 0; transform: translate(0px, 0px); } }
+@keyframes t38-person { 0%, 46% { opacity: 0; transform: scale(.7); } 49% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t38-ring { 0%, 46% { opacity: 1; stroke-dashoffset: 1; } 51% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t38-onegod { 0%, 50% { opacity: 0; } 53%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t38-fs { 0%, 53% { opacity: 1; stroke-dashoffset: 1; } 56% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t38-fslabel { 0%, 55% { opacity: 0; } 57%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t38-sp { 0%, 56% { opacity: 1; stroke-dashoffset: 1; } 59% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t38-splabel { 0%, 58% { opacity: 0; } 60%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t38-pulse { 0%, 59.5% { opacity: 0; transform: translate(0px, 0px); } 60.5% { opacity: 1; transform: translate(0px, 0px); } 62.5% { transform: translate(-80px, 150px); } 64.5% { transform: translate(80px, 150px); } 67% { opacity: 1; transform: translate(300px, 90px); } 68.5%, 100% { opacity: 0; transform: translate(300px, 90px); } }
+@keyframes t38-creates { 0%, 73% { opacity: 1; stroke-dashoffset: 1; } 77% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t38-createslabel { 0%, 76% { opacity: 0; } 78.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t38-alllabel { 0%, 75% { opacity: 0; } 78%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t38-helper { 0%, 78% { opacity: 0; transform: scale(.8); } 80.5% { opacity: 1; transform: scale(1); } 88% { opacity: 1; transform: scale(1); } 91%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t38-helperstrike { 0%, 82% { opacity: 1; stroke-dashoffset: 1; } 85% { stroke-dashoffset: 0; } 88% { opacity: 1; stroke-dashoffset: 0; } 91%, 100% { opacity: 0; stroke-dashoffset: 0; } }

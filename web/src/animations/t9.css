@@ -1,0 +1,37 @@
+/* Teaching 9, God has one divine essence: 24 seconds in four scenes. */
+.anim-t9 * { animation-duration: 24s; }
+.anim-t9 .a-what, .anim-t9 .a-who, .anim-t9 .a-room, .anim-t9 .a-roomtag, .anim-t9 .a-roomstrike, .anim-t9 .a-figure, .anim-t9 .a-mask1, .anim-t9 .a-mask2, .anim-t9 .a-mask3, .anim-t9 .a-masktag, .anim-t9 .a-maskstrike { opacity: 0; }
+.anim-t9 .a-god { animation-name: t9-god; }
+.anim-t9 .a-person { animation-name: t9-person; }
+.anim-t9 .a-what { animation-name: t9-what; }
+.anim-t9 .a-who { animation-name: t9-who; }
+.anim-t9 .a-room { animation-name: t9-room; }
+.anim-t9 .a-roomtag { animation-name: t9-roomtag; }
+.anim-t9 .a-roomstrike { animation-name: t9-roomstrike; }
+.anim-t9 .a-figure { animation-name: t9-figure; }
+.anim-t9 .a-mask1 { animation-name: t9-mask1; }
+.anim-t9 .a-mask2 { animation-name: t9-mask2; }
+.anim-t9 .a-mask3 { animation-name: t9-mask3; }
+.anim-t9 .a-masktag { animation-name: t9-masktag; }
+.anim-t9 .a-maskstrike { animation-name: t9-maskstrike; }
+.anim-t9 .a-spoke { animation-name: t9-spoke; }
+.anim-t9 .a-is { animation-name: t9-is; }
+.anim-t9 .a-not { animation-name: t9-not; }
+.anim-t9 .a-isnot { animation-name: t9-isnot; }
+@keyframes t9-god { 0%, 1% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 21% { opacity: 1; transform: scale(1); } 23.5% { opacity: 0; transform: scale(.8); } 72% { opacity: 0; transform: scale(.6); } 75% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t9-person { 0%, 8.5% { opacity: 0; transform: translate(0px, 0px) scale(.5); } 11.5% { opacity: 1; transform: translate(0px, 0px) scale(1); } 23.5% { opacity: 1; transform: translate(0px, 0px) scale(1); } 28% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1); } 39.5% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1); } 42% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1); } 46% { opacity: 0; transform: translate(0px, 0px) scale(.5); } 73% { opacity: 0; transform: translate(0px, 0px) scale(.5); } 76% { opacity: 1; transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t9-what { 0%, 4% { opacity: 0; transform: translateX(-10px); } 7% { opacity: 1; transform: translateX(0px); } 20% { opacity: 1; transform: translateX(0px); } 22%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t9-who { 0%, 11% { opacity: 0; transform: translateX(10px); } 14% { opacity: 1; transform: translateX(0px); } 20% { opacity: 1; transform: translateX(0px); } 22%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t9-room { 0%, 23% { opacity: 0; } 26%, 39.5% { opacity: 1; } 42%, 100% { opacity: 0; } }
+@keyframes t9-roomtag { 0%, 29% { opacity: 0; } 31.5%, 39.5% { opacity: 1; } 42%, 100% { opacity: 0; } }
+@keyframes t9-roomstrike { 0%, 33% { opacity: 1; stroke-dashoffset: 1; } 36% { stroke-dashoffset: 0; } 39.5% { opacity: 1; stroke-dashoffset: 0; } 42%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t9-figure { 0%, 46% { opacity: 0; transform: translateY(10px); } 49% { opacity: 1; transform: translateY(0px); } 69% { opacity: 1; transform: translateY(0px); } 71.5%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t9-mask1 { 0%, 49% { opacity: 0; transform: scale(.6); } 51% { opacity: 1; transform: scale(1); } 54.5% { opacity: 1; transform: scale(1); } 55.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t9-mask2 { 0%, 55% { opacity: 0; transform: scale(.6); } 56.5% { opacity: 1; transform: scale(1); } 60.5% { opacity: 1; transform: scale(1); } 61.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t9-mask3 { 0%, 61% { opacity: 0; transform: scale(.6); } 62.5% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t9-masktag { 0%, 52% { opacity: 0; } 55%, 69% { opacity: 1; } 71.5%, 100% { opacity: 0; } }
+@keyframes t9-maskstrike { 0%, 64% { opacity: 1; stroke-dashoffset: 1; } 67% { stroke-dashoffset: 0; } 69% { opacity: 1; stroke-dashoffset: 0; } 71.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t9-spoke { 0%, 77% { opacity: 1; stroke-dashoffset: 1; } 81% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t9-is { 0%, 80% { opacity: 0; } 82.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t9-not { 0%, 84% { opacity: 0; } 87%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t9-isnot { 0%, 86% { opacity: 0; } 88.5%, 95% { opacity: 1; } 100% { opacity: 0; } }

@@ -1,0 +1,41 @@
+/* Teaching 42, The Son remained fully God when He became man: 24 seconds in four scenes. */
+.anim-t42 * { animation-duration: 24s; }
+.anim-t42 .a-adult, .anim-t42 .a-godnote, .anim-t42 .a-giveup, .anim-t42 .a-upstrike, .anim-t42 .a-godpart, .anim-t42 .a-manpart, .anim-t42 .a-blend, .anim-t42 .a-blendtag, .anim-t42 .a-blendstrike, .anim-t42 .a-both { opacity: 0; }
+.anim-t42 .a-god { animation-name: t42-god; }
+.anim-t42 .a-son { animation-name: t42-son; }
+.anim-t42 .a-link { animation-name: t42-link; }
+.anim-t42 .a-stillgod { animation-name: t42-stillgod; }
+.anim-t42 .a-godnote { animation-name: t42-godnote; }
+.anim-t42 .a-split { animation-name: t42-split; }
+.anim-t42 .a-box { animation-name: t42-box; }
+.anim-t42 .a-adult { animation-name: t42-adult; }
+.anim-t42 .a-baby { animation-name: t42-baby; }
+.anim-t42 .a-took { animation-name: t42-took; }
+.anim-t42 .a-tooklab { animation-name: t42-tooklab; }
+.anim-t42 .a-giveup { animation-name: t42-giveup; }
+.anim-t42 .a-upstrike { animation-name: t42-upstrike; }
+.anim-t42 .a-godpart { animation-name: t42-godpart; }
+.anim-t42 .a-manpart { animation-name: t42-manpart; }
+.anim-t42 .a-blend { animation-name: t42-blend; }
+.anim-t42 .a-blendtag { animation-name: t42-blendtag; }
+.anim-t42 .a-blendstrike { animation-name: t42-blendstrike; }
+.anim-t42 .a-both { animation-name: t42-both; }
+@keyframes t42-god { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t42-son { 0%, 2% { opacity: 0; transform: scale(.6); } 6% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t42-link { 0%, 4% { opacity: 0; } 7%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t42-stillgod { 0%, 5% { opacity: 0; transform: scale(1); } 8% { opacity: 1; transform: scale(1); } 80% { transform: scale(1); } 82% { transform: scale(1.18); } 84% { transform: scale(1); } 86% { transform: scale(1.18); } 88% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t42-godnote { 0%, 4% { opacity: 0; } 7%, 15% { opacity: 1; } 17%, 100% { opacity: 0; } }
+@keyframes t42-split { 0%, 15% { opacity: 0; } 18%, 95% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes t42-box { 0%, 7% { opacity: 0; transform: translateX(160px); } 9% { opacity: 1; transform: translateX(160px); } 13% { opacity: 1; transform: translateX(0px); } 95% { opacity: 1; transform: translateX(0px); } 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t42-adult { 0%, 72% { opacity: 1; } 75%, 100% { opacity: 0; } }
+@keyframes t42-baby { 0%, 74% { opacity: 0; transform: scale(.6); } 78% { opacity: 1; transform: scale(1); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes t42-took { 0%, 12% { opacity: 1; stroke-dashoffset: 1; } 16% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t42-tooklab { 0%, 15% { opacity: 0; } 17%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t42-giveup { 0%, 23% { opacity: 0; transform: translateX(var(--dx)); } 25% { opacity: 1; transform: translateX(var(--dx)); } 30% { opacity: 1; transform: translateX(0px); } 42% { opacity: 1; transform: translateX(0px); } 45%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t42-upstrike { 0%, 33% { opacity: 1; stroke-dashoffset: 1; } 37% { stroke-dashoffset: 0; } 42% { opacity: 1; stroke-dashoffset: 0; } 45%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t42-godpart { 0%, 47% { opacity: 0; transform: translateX(0px); } 50% { opacity: 1; transform: translateX(0px); } 55% { opacity: 1; transform: translateX(60px); } 56%, 100% { opacity: 0; transform: translateX(60px); } }
+@keyframes t42-manpart { 0%, 47% { opacity: 0; transform: translateX(0px); } 50% { opacity: 1; transform: translateX(0px); } 55% { opacity: 1; transform: translateX(-60px); } 56%, 100% { opacity: 0; transform: translateX(-60px); } }
+@keyframes t42-blend { 0%, 54% { opacity: 0; transform: scale(.7); } 56% { opacity: 1; transform: scale(1); } 68% { opacity: 1; transform: scale(1); } 71%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t42-blendtag { 0%, 55% { opacity: 0; } 58%, 68% { opacity: 1; } 71%, 100% { opacity: 0; } }
+@keyframes t42-blendstrike { 0%, 59% { opacity: 1; stroke-dashoffset: 1; } 62% { stroke-dashoffset: 0; } 68% { opacity: 1; stroke-dashoffset: 0; } 71%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t42-both { 0%, 62% { opacity: 0; } 65%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }

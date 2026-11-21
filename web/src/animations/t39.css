@@ -1,0 +1,45 @@
+/* Teaching 39, Salvation is the work of the Father, Son, and Holy Spirit: 24 seconds in four scenes. */
+.anim-t39 * { animation-duration: 24s; }
+.anim-t39 .a-chosen, .anim-t39 .a-before, .anim-t39 .a-chainl, .anim-t39 .a-chainr, .anim-t39 .a-cross, .anim-t39 .a-stern, .anim-t39 .a-sternstrike { opacity: 0; }
+.anim-t39 .a-person { animation-name: t39-person; }
+.anim-t39 .a-box { animation-name: t39-box; }
+.anim-t39 .a-people { animation-name: t39-people; }
+.anim-t39 .a-arrowf { animation-name: t39-arrowf; }
+.anim-t39 .a-labelf { animation-name: t39-labelf; }
+.anim-t39 .a-chosen { animation-name: t39-chosen; }
+.anim-t39 .a-before { animation-name: t39-before; }
+.anim-t39 .a-chainl { animation-name: t39-chainl; }
+.anim-t39 .a-chainr { animation-name: t39-chainr; }
+.anim-t39 .a-arrows { animation-name: t39-arrows; }
+.anim-t39 .a-cross { animation-name: t39-cross; }
+.anim-t39 .a-labels { animation-name: t39-labels; }
+.anim-t39 .a-arrowp { animation-name: t39-arrowp; }
+.anim-t39 .a-labelp { animation-name: t39-labelp; }
+.anim-t39 .a-seal { animation-name: t39-seal; }
+.anim-t39 .a-changed { animation-name: t39-changed; }
+.anim-t39 .a-stern { animation-name: t39-stern; }
+.anim-t39 .a-sternstrike { animation-name: t39-sternstrike; }
+.anim-t39 .a-love { animation-name: t39-love; }
+.anim-t39 .a-lovelabel { animation-name: t39-lovelabel; }
+.anim-t39 .a-one { animation-name: t39-one; }
+@keyframes t39-person { 0% { opacity: 0; transform: scale(.7); } 3% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t39-box { 0% { opacity: 0; } 4%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t39-people { 0%, 2% { opacity: 0; transform: scale(.7); } 5% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t39-arrowf { 0%, 4.5% { opacity: 1; stroke-dashoffset: 1; } 8.5% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t39-labelf { 0%, 8% { opacity: 0; } 10%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t39-chosen { 0%, 10% { opacity: 0; transform: scale(.6); } 13% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t39-before { 0%, 13.5% { opacity: 0; } 16%, 20% { opacity: 1; } 22.5%, 100% { opacity: 0; } }
+@keyframes t39-chainl { 0%, 22% { opacity: 0; transform: translateY(0px) rotate(0deg); } 24.5% { opacity: 1; transform: translateY(0px) rotate(0deg); } 31% { opacity: 1; transform: translateY(0px) rotate(0deg); } 34.5%, 100% { opacity: 0; transform: translateY(18px) rotate(-6deg); } }
+@keyframes t39-chainr { 0%, 22% { opacity: 0; transform: translateY(0px) rotate(0deg); } 24.5% { opacity: 1; transform: translateY(0px) rotate(0deg); } 31% { opacity: 1; transform: translateY(0px) rotate(0deg); } 34.5%, 100% { opacity: 0; transform: translateY(18px) rotate(6deg); } }
+@keyframes t39-arrows { 0%, 23% { opacity: 1; stroke-dashoffset: 1; } 27% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t39-cross { 0%, 26.5% { opacity: 0; transform: scale(.5); } 29.5% { opacity: 1; transform: scale(1); } 35% { opacity: 1; transform: scale(1); } 37.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t39-labels { 0%, 36% { opacity: 0; } 38.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t39-arrowp { 0%, 46.5% { opacity: 1; stroke-dashoffset: 1; } 50.5% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t39-labelp { 0%, 50% { opacity: 0; } 52%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t39-seal { 0%, 51% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.6); } 52.5% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(.6); } 57% { transform: translate(0px, 0px) scale(1.4); } 58.5% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t39-changed { 0%, 58% { opacity: 0; } 61.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t39-stern { 0%, 73% { opacity: 0; transform: scale(.8); } 75.5% { opacity: 1; transform: scale(1); } 83% { opacity: 1; transform: scale(1); } 86%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t39-sternstrike { 0%, 77% { opacity: 1; stroke-dashoffset: 1; } 80% { stroke-dashoffset: 0; } 83% { opacity: 1; stroke-dashoffset: 0; } 86%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t39-love { 0%, 84% { opacity: 1; stroke-dashoffset: 1; } 88% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t39-lovelabel { 0%, 87% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t39-one { 0%, 88% { opacity: 0; transform: scale(.8); } 91% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

@@ -1,0 +1,48 @@
+/* Teaching 14, the Father is not the Son: 24 seconds in four scenes. */
+.anim-t14 * { animation-duration: 24s; }
+.anim-t14 .a-glory, .anim-t14 .a-glorylabel, .anim-t14 .a-prayer, .anim-t14 .a-prayerhead, .anim-t14 .a-prayerlabel, .anim-t14 .a-beget, .anim-t14 .a-begethead, .anim-t14 .a-begetlabel, .anim-t14 .a-role, .anim-t14 .a-noswap, .anim-t14 .a-wline, .anim-t14 .a-witness, .anim-t14 .a-card, .anim-t14 .a-two, .anim-t14 .a-twostrike, .anim-t14 .a-badge { opacity: 0; }
+.anim-t14 .a-person { animation-name: t14-person; }
+.anim-t14 .a-beget { animation-name: t14-beget; }
+.anim-t14 .a-begethead { animation-name: t14-begethead; }
+.anim-t14 .a-begetlabel { animation-name: t14-begetlabel; }
+.anim-t14 .a-role { animation-name: t14-role; }
+.anim-t14 .a-noswap { animation-name: t14-noswap; }
+.anim-t14 .a-prayer { animation-name: t14-prayer; }
+.anim-t14 .a-prayerhead { animation-name: t14-prayerhead; }
+.anim-t14 .a-prayerlabel { animation-name: t14-prayerlabel; }
+.anim-t14 .a-glory { animation-name: t14-glory; }
+.anim-t14 .a-glorylabel { animation-name: t14-glorylabel; }
+.anim-t14 .a-badge { animation-name: t14-badge; }
+.anim-t14 .a-witness { animation-name: t14-witness; }
+.anim-t14 .a-wline { animation-name: t14-wline; }
+.anim-t14 .a-card { animation-name: t14-card; }
+.anim-t14 .a-valid { animation-name: t14-valid; }
+.anim-t14 .a-edge { animation-name: t14-edge; }
+.anim-t14 .a-isnot { animation-name: t14-isnot; }
+.anim-t14 .a-two { animation-name: t14-two; }
+.anim-t14 .a-twostrike { animation-name: t14-twostrike; }
+.anim-t14 .a-god { animation-name: t14-god; }
+.anim-t14 .a-gline { animation-name: t14-gline; }
+.anim-t14 .a-prayer, .anim-t14 .a-wline { animation-timing-function: linear; }
+@keyframes t14-person { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t14-beget { 0%, 4% { opacity: 1; stroke-dashoffset: 1; } 9% { stroke-dashoffset: 0; } 20% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t14-begethead { 0%, 8.5% { opacity: 0; } 9.5%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t14-begetlabel { 0%, 8% { opacity: 0; transform: scale(.7); } 10.5% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t14-role { 0%, 10% { opacity: 0; transform: translateX(0px); } 12% { opacity: 1; transform: translateX(0px); } 14.5% { transform: translateX(var(--dx)); } 15.5% { transform: translateX(calc(var(--dx) * .8)); } 17% { transform: translateX(0px); } 20% { opacity: 1; transform: translateX(0px); } 22%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t14-noswap { 0%, 14.5% { opacity: 0; transform: translateY(8px); } 16.5% { opacity: 1; transform: translateY(0px); } 20% { opacity: 1; transform: translateY(0px); } 22%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t14-prayer { 0% { opacity: 0; stroke-dashoffset: 0; } 24% { opacity: 0; } 26%, 44% { opacity: 1; } 46% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -600; } }
+@keyframes t14-prayerhead { 0%, 25% { opacity: 0; } 27%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t14-prayerlabel { 0%, 25% { opacity: 0; transform: translateY(8px); } 28% { opacity: 1; transform: translateY(0px); } 44% { opacity: 1; transform: translateY(0px); } 46%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t14-glory { 0%, 32% { opacity: 0; transform: scale(.9); } 36% { opacity: 1; transform: scale(1); } 44% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t14-glorylabel { 0%, 35% { opacity: 0; } 38%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t14-badge { 0%, 47% { opacity: 0; transform: scale(.5); } 50% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t14-witness { 0%, 50% { opacity: 0; } 53%, 69% { opacity: 1; } 71.5%, 100% { opacity: 0; } }
+@keyframes t14-wline { 0% { opacity: 0; stroke-dashoffset: 0; } 53% { opacity: 0; } 55%, 69% { opacity: 1; } 71.5% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -400; } }
+@keyframes t14-card { 0%, 55% { opacity: 0; transform: translateY(10px); } 58% { opacity: 1; transform: translateY(0px); } 69% { opacity: 1; transform: translateY(0px); } 71.5%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t14-valid { 0%, 61% { opacity: 0; } 63.5%, 100% { opacity: 1; } }
+@keyframes t14-edge { 0%, 73% { opacity: 0; } 77%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t14-isnot { 0%, 75% { opacity: 0; transform: scale(.6); } 78% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t14-two { 0%, 77% { opacity: 0; } 79%, 82% { opacity: 1; } 84%, 100% { opacity: 0; } }
+@keyframes t14-twostrike { 0%, 79.5% { opacity: 1; stroke-dashoffset: 1; } 81.5% { stroke-dashoffset: 0; } 82% { opacity: 1; stroke-dashoffset: 0; } 84%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t14-god { 0%, 84% { opacity: 0; transform: scale(.6); } 87% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t14-gline { 0%, 85% { opacity: 0; } 88%, 95% { opacity: 1; } 100% { opacity: 0; } }

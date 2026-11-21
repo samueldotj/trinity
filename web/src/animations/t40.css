@@ -1,0 +1,45 @@
+/* Teaching 40, Baptism identifies believers with the Father, Son, and Holy Spirit: 24 seconds in four scenes. */
+.anim-t40 * { animation-duration: 24s; }
+.anim-t40 .a-split, .anim-t40 .a-splitstrike, .anim-t40 .a-dim, .anim-t40 .a-helper, .anim-t40 .a-helperstrike, .anim-t40 .a-glow, .anim-t40 .a-ripple { opacity: 0; }
+.anim-t40 .a-water { animation-name: t40-water; }
+.anim-t40 .a-believer { animation-name: t40-believer; }
+.anim-t40 .a-ripple { animation-name: t40-ripple; }
+.anim-t40 .a-plate { animation-name: t40-plate; }
+.anim-t40 .a-f { animation-name: t40-f; }
+.anim-t40 .a-s { animation-name: t40-s; }
+.anim-t40 .a-p { animation-name: t40-p; }
+.anim-t40 .a-linef { animation-name: t40-linef; }
+.anim-t40 .a-lines { animation-name: t40-lines; }
+.anim-t40 .a-linep { animation-name: t40-linep; }
+.anim-t40 .a-belong { animation-name: t40-belong; }
+.anim-t40 .a-belonglabel { animation-name: t40-belonglabel; }
+.anim-t40 .a-named { animation-name: t40-named; }
+.anim-t40 .a-bears { animation-name: t40-bears; }
+.anim-t40 .a-split { animation-name: t40-split; }
+.anim-t40 .a-splitstrike { animation-name: t40-splitstrike; }
+.anim-t40 .a-dim { animation-name: t40-dim; }
+.anim-t40 .a-helper { animation-name: t40-helper; }
+.anim-t40 .a-helperstrike { animation-name: t40-helperstrike; }
+.anim-t40 .a-glow { animation-name: t40-glow; animation-timing-function: linear; }
+.anim-t40 .a-equal { animation-name: t40-equal; }
+@keyframes t40-water { 0% { opacity: 0; } 3%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t40-believer { 0% { opacity: 0; transform: translateY(0px); } 3% { opacity: 1; transform: translateY(0px); } 13% { transform: translateY(0px); } 15.5% { transform: translateY(72px); } 16.5% { transform: translateY(72px); } 19% { transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t40-ripple { 0%, 14.5% { opacity: 0; transform: scale(.5); } 15.5% { opacity: 1; transform: scale(.7); } 19% { opacity: 0; transform: scale(2); } 100% { opacity: 0; transform: scale(2); } }
+@keyframes t40-plate { 0%, 2% { opacity: 0; transform: scale(.8); } 4.5% { opacity: 1; transform: scale(1); } 46.5% { opacity: 1; transform: scale(1); } 48%, 57% { opacity: 0; transform: scale(1); } 59% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t40-f { 0%, 3% { opacity: 0; transform: scale(.6); } 5.5% { opacity: 1; transform: scale(1); } 76% { transform: scale(1); } 78% { transform: scale(1.1); } 80% { transform: scale(1); } 82% { transform: scale(1.1); } 84% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t40-s { 0%, 6% { opacity: 0; transform: scale(.6); } 8.5% { opacity: 1; transform: scale(1); } 76% { transform: scale(1); } 78% { transform: scale(1.1); } 80% { transform: scale(1); } 82% { transform: scale(1.1); } 84% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t40-p { 0%, 9% { opacity: 0; transform: scale(.6); } 11.5% { opacity: 1; transform: scale(1); } 76% { transform: scale(1); } 78% { transform: scale(1.1); } 80% { transform: scale(1); } 82% { transform: scale(1.1); } 84% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t40-linef { 0%, 4% { opacity: 1; stroke-dashoffset: 1; } 6.5% { stroke-dashoffset: 0; } 46.5% { opacity: 1; } 48%, 57% { opacity: .25; } 59% { opacity: 1; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t40-lines { 0%, 7% { opacity: 1; stroke-dashoffset: 1; } 9.5% { stroke-dashoffset: 0; } 46.5% { opacity: 1; } 48%, 57% { opacity: .25; } 59% { opacity: 1; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t40-linep { 0%, 10% { opacity: 1; stroke-dashoffset: 1; } 12.5% { stroke-dashoffset: 0; } 46.5% { opacity: 1; } 48%, 57% { opacity: .25; } 59% { opacity: 1; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t40-belong { 0%, 24% { opacity: 1; stroke-dashoffset: 1; } 28% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t40-belonglabel { 0%, 27.5% { opacity: 0; } 30%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t40-named { 0%, 31% { opacity: 0; } 34%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t40-bears { 0%, 33.5% { opacity: 0; transform: scale(.8); } 36.5% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t40-split { 0%, 47% { opacity: 0; transform: translateX(var(--dx)); } 48% { opacity: 1; transform: translateX(var(--dx)); } 51% { transform: translateX(0px); } 55.5% { opacity: 1; transform: translateX(0px); } 58% { opacity: 1; transform: translateX(var(--dx)); } 59%, 100% { opacity: 0; transform: translateX(var(--dx)); } }
+@keyframes t40-splitstrike { 0%, 51.5% { opacity: 1; stroke-dashoffset: 1; } 54% { stroke-dashoffset: 0; } 55.5% { opacity: 1; stroke-dashoffset: 0; } 57%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t40-dim { 0%, 58.5% { opacity: 0; } 60.5%, 68% { opacity: 1; } 70.5%, 100% { opacity: 0; } }
+@keyframes t40-helper { 0%, 59.5% { opacity: 0; transform: scale(.8); } 61.5% { opacity: 1; transform: scale(1); } 68% { opacity: 1; transform: scale(1); } 70.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t40-helperstrike { 0%, 63% { opacity: 1; stroke-dashoffset: 1; } 65.5% { stroke-dashoffset: 0; } 68% { opacity: 1; stroke-dashoffset: 0; } 70.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t40-glow { 0% { opacity: 0; stroke-dashoffset: 0; } 74% { opacity: 0; } 76.5%, 92% { opacity: 1; } 95% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -600; } }
+@keyframes t40-equal { 0%, 77% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }

@@ -1,0 +1,34 @@
+/* Teaching 20, There are exactly three divine Persons: 24 seconds in four scenes. */
+.anim-t20 * { animation-duration: 24s; }
+.anim-t20 .a-actor, .anim-t20 .a-role1, .anim-t20 .a-role2, .anim-t20 .a-role3, .anim-t20 .a-onetag, .anim-t20 .a-onestrike, .anim-t20 .a-arc, .anim-t20 .a-arclabel, .anim-t20 .a-ghost, .anim-t20 .a-ghoststrike { opacity: 0; }
+.anim-t20 .a-actor { animation-name: t20-actor; }
+.anim-t20 .a-role1 { animation-name: t20-role1; }
+.anim-t20 .a-role2 { animation-name: t20-role2; }
+.anim-t20 .a-role3 { animation-name: t20-role3; }
+.anim-t20 .a-onetag { animation-name: t20-onetag; }
+.anim-t20 .a-onestrike { animation-name: t20-onestrike; }
+.anim-t20 .a-person { animation-name: t20-person; }
+.anim-t20 .a-isnot { animation-name: t20-isnot; }
+.anim-t20 .a-isnotlabel { animation-name: t20-isnotlabel; }
+.anim-t20 .a-arc { animation-name: t20-arc; }
+.anim-t20 .a-arclabel { animation-name: t20-arclabel; }
+.anim-t20 .a-num { animation-name: t20-num; }
+.anim-t20 .a-ghost { animation-name: t20-ghost; }
+.anim-t20 .a-ghoststrike { animation-name: t20-ghoststrike; }
+.anim-t20 .a-centre { animation-name: t20-centre; }
+.anim-t20 .a-arc { animation-timing-function: linear; }
+@keyframes t20-actor { 0%, 1% { opacity: 0; } 3%, 19% { opacity: 1; } 21%, 100% { opacity: 0; } }
+@keyframes t20-role1 { 0%, 2% { opacity: 0; } 4%, 7.5% { opacity: 1; } 8.5%, 100% { opacity: 0; } }
+@keyframes t20-role2 { 0%, 7.5% { opacity: 0; } 8.5%, 12.5% { opacity: 1; } 13.5%, 100% { opacity: 0; } }
+@keyframes t20-role3 { 0%, 12.5% { opacity: 0; } 13.5%, 19% { opacity: 1; } 21%, 100% { opacity: 0; } }
+@keyframes t20-onetag { 0%, 4% { opacity: 0; } 6%, 19% { opacity: 1; } 21%, 100% { opacity: 0; } }
+@keyframes t20-onestrike { 0%, 15% { opacity: 1; stroke-dashoffset: 1; } 17.5% { stroke-dashoffset: 0; } 19% { opacity: 1; stroke-dashoffset: 0; } 21%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t20-person { 0%, 21% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.4); } 27% { opacity: 1; transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t20-isnot { 0%, 27% { opacity: 0; } 31%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t20-isnotlabel { 0%, 30% { opacity: 0; } 33%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t20-arc { 0% { stroke-dashoffset: 0; opacity: 0; } 47% { opacity: 0; } 50%, 69% { opacity: 1; } 72% { opacity: 0; } 100% { stroke-dashoffset: -480; opacity: 0; } }
+@keyframes t20-arclabel { 0%, 49% { opacity: 0; } 52%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t20-num { 0%, 74% { opacity: 0; transform: scale(.4); } 77% { opacity: 1; transform: scale(1.15); } 78.5% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t20-ghost { 0%, 81% { opacity: 0; transform: scale(0.7); } 83.5% { opacity: 1; transform: scale(1); } 89.5% { opacity: 1; transform: scale(1); } 91.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t20-ghoststrike { 0%, 85% { opacity: 1; stroke-dashoffset: 1; } 87% { stroke-dashoffset: 0; } 89.5% { opacity: 1; stroke-dashoffset: 0; } 91.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t20-centre { 0%, 86% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }

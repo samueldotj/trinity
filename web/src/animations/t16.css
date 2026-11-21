@@ -1,0 +1,48 @@
+/* Teaching 16, the Holy Spirit is not the Father: 24 seconds in four scenes. */
+.anim-t16 * { animation-duration: 24s; }
+.anim-t16 .a-people, .anim-t16 .a-asks, .anim-t16 .a-askshead, .anim-t16 .a-askslabel, .anim-t16 .a-sendline, .anim-t16 .a-gives, .anim-t16 .a-advocate, .anim-t16 .a-giver, .anim-t16 .a-given, .anim-t16 .a-same, .anim-t16 .a-samestrike, .anim-t16 .a-another, .anim-t16 .a-tag, .anim-t16 .a-tagstrike { opacity: 0; }
+.anim-t16 .a-father { animation-name: t16-father; }
+.anim-t16 .a-son { animation-name: t16-son; }
+.anim-t16 .a-sondim { animation-name: t16-sondim; }
+.anim-t16 .a-spirit { animation-name: t16-spirit; }
+.anim-t16 .a-people { animation-name: t16-people; }
+.anim-t16 .a-asks { animation-name: t16-asks; }
+.anim-t16 .a-askshead { animation-name: t16-askshead; }
+.anim-t16 .a-askslabel { animation-name: t16-askslabel; }
+.anim-t16 .a-sendline { animation-name: t16-sendline; }
+.anim-t16 .a-gives { animation-name: t16-gives; }
+.anim-t16 .a-advocate { animation-name: t16-advocate; }
+.anim-t16 .a-giver { animation-name: t16-giver; }
+.anim-t16 .a-given { animation-name: t16-given; }
+.anim-t16 .a-same { animation-name: t16-same; }
+.anim-t16 .a-samestrike { animation-name: t16-samestrike; }
+.anim-t16 .a-tag { animation-name: t16-tag; }
+.anim-t16 .a-tagstrike { animation-name: t16-tagstrike; }
+.anim-t16 .a-another { animation-name: t16-another; }
+.anim-t16 .a-edge { animation-name: t16-edge; }
+.anim-t16 .a-isnot { animation-name: t16-isnot; }
+.anim-t16 .a-note { animation-name: t16-note; }
+.anim-t16 .a-level { animation-name: t16-level; }
+.anim-t16 .a-sendline { animation-timing-function: linear; }
+@keyframes t16-father { 0% { opacity: 0; transform: translate(20px, -160px) scale(.6); } 4% { opacity: 1; transform: translate(20px, -160px) scale(1); } 72% { transform: translate(20px, -160px) scale(1); } 77% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t16-son { 0% { opacity: 0; transform: translate(130px, 10px) scale(.6); } 4% { opacity: 1; transform: translate(130px, 10px) scale(1); } 72% { transform: translate(130px, 10px) scale(1); } 77% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t16-sondim { 0%, 73% { opacity: 0; } 77%, 100% { opacity: 1; } }
+@keyframes t16-spirit { 0%, 9% { opacity: 0; transform: translate(-280px, -160px) scale(.4); } 10.5% { opacity: 1; transform: translate(-280px, -160px) scale(.5); } 16.5% { transform: translate(-150px, 50px) scale(1); } 72% { transform: translate(-150px, 50px) scale(1); } 77% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t16-people { 0%, 2% { opacity: 0; } 5%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t16-asks { 0%, 4% { opacity: 1; stroke-dashoffset: 1; } 8% { stroke-dashoffset: 0; } 20% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t16-askshead { 0%, 7.5% { opacity: 0; } 8.5%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t16-askslabel { 0%, 7% { opacity: 0; transform: scale(.7); } 9.5% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t16-sendline { 0% { opacity: 0; stroke-dashoffset: 0; } 10% { opacity: 0; } 12%, 44% { opacity: 1; } 46% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -600; } }
+@keyframes t16-gives { 0%, 15.5% { opacity: 0; } 17.5%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t16-advocate { 0%, 16% { opacity: 0; transform: translateY(8px); } 18.5% { opacity: 1; transform: translateY(0px); } 20% { opacity: 1; transform: translateY(0px); } 22%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t16-giver { 0%, 23% { opacity: 0; transform: translateY(8px); } 26% { opacity: 1; transform: translateY(0px); } 44% { opacity: 1; transform: translateY(0px); } 46%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t16-given { 0%, 25.5% { opacity: 0; transform: translateY(8px); } 28.5% { opacity: 1; transform: translateY(0px); } 44% { opacity: 1; transform: translateY(0px); } 46%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t16-same { 0%, 30.5% { opacity: 0; transform: scale(.7); } 33% { opacity: 1; transform: scale(1); } 44% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t16-samestrike { 0%, 35% { opacity: 1; stroke-dashoffset: 1; } 37.5% { stroke-dashoffset: 0; } 44% { opacity: 1; stroke-dashoffset: 0; } 46%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t16-tag { 0%, 49.5% { opacity: 0; transform: translate(130px, 208px) rotate(0deg); } 51% { opacity: 1; transform: translate(130px, 208px) rotate(0deg); } 55% { transform: translate(0px, 0px) rotate(0deg); } 62% { opacity: 1; transform: translate(0px, 0px) rotate(0deg); } 64.5% { opacity: 1; transform: translate(0px, 60px) rotate(18deg); } 66.5%, 100% { opacity: 0; transform: translate(0px, 84px) rotate(24deg); } }
+@keyframes t16-tagstrike { 0%, 58% { opacity: 1; stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 62% { opacity: 1; stroke-dashoffset: 0; } 63.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t16-another { 0%, 55.5% { opacity: 0; transform: translateY(8px); } 57.5% { opacity: 1; transform: translateY(0px); } 61.5% { opacity: 1; transform: translateY(0px); } 63%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t16-edge { 0%, 77% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t16-isnot { 0%, 78% { opacity: 0; transform: scale(.6); } 81% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t16-note { 0%, 80.5% { opacity: 0; transform: translateY(-8px); } 83.5% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t16-level { 0%, 84% { opacity: 0; transform: translateY(10px); } 87.5% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }

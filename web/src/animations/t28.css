@@ -1,0 +1,34 @@
+/* Teaching 28, The three Persons have one divine will: 24 seconds in four scenes. */
+.anim-t28 * { animation-duration: 24s; }
+.anim-t28 .a-flow, .anim-t28 .a-wish, .anim-t28 .a-wishstrike, .anim-t28 .a-three, .anim-t28 .a-threestrike { opacity: 0; }
+.anim-t28 .a-spokes { animation-name: t28-spokes; }
+.anim-t28 .a-flow { animation-name: t28-flow; }
+.anim-t28 .a-willarrow { animation-name: t28-willarrow; }
+.anim-t28 .a-willhead { animation-name: t28-willhead; }
+.anim-t28 .a-willpill { animation-name: t28-willpill; }
+.anim-t28 .a-god { animation-name: t28-god; }
+.anim-t28 .a-pf { animation-name: t28-pf; }
+.anim-t28 .a-ps { animation-name: t28-ps; }
+.anim-t28 .a-pp { animation-name: t28-pp; }
+.anim-t28 .a-wish { animation-name: t28-wish; }
+.anim-t28 .a-wishstrike { animation-name: t28-wishstrike; }
+.anim-t28 .a-three { animation-name: t28-three; }
+.anim-t28 .a-threestrike { animation-name: t28-threestrike; }
+.anim-t28 .a-human { animation-name: t28-human; }
+.anim-t28 .a-humanpill { animation-name: t28-humanpill; }
+.anim-t28 .a-flow { animation-timing-function: linear; }
+@keyframes t28-god { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 23% { opacity: 1; } 27%, 44% { opacity: .3; } 48% { opacity: 1; } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t28-spokes { 0%, 7% { opacity: 0; } 11%, 23% { opacity: 1; } 26%, 45% { opacity: 0; } 49%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t28-pf { 0%, 3% { opacity: 0; transform: translate(0px, 0px) scale(.6); } 7% { opacity: 1; transform: translate(0px, 0px) scale(1); } 23% { transform: translate(0px, 0px) scale(1); } 27%, 44% { transform: translate(0px, -16px) scale(1); } 48% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t28-ps { 0%, 4% { opacity: 0; transform: translate(0px, 0px) scale(.6); } 8% { opacity: 1; transform: translate(0px, 0px) scale(1); } 23% { transform: translate(0px, 0px) scale(1); } 27%, 44% { transform: translate(-30px, 10px) scale(1); } 48% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t28-pp { 0%, 5% { opacity: 0; transform: translate(0px, 0px) scale(.6); } 9% { opacity: 1; transform: translate(0px, 0px) scale(1); } 23% { transform: translate(0px, 0px) scale(1); } 27%, 44% { transform: translate(30px, 10px) scale(1); } 48% { transform: translate(0px, 0px) scale(1); } 95% { opacity: 1; transform: translate(0px, 0px) scale(1); } 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t28-wish { 0%, 27% { opacity: 0; } 30%, 41% { opacity: 1; } 44%, 100% { opacity: 0; } }
+@keyframes t28-wishstrike { 0%, 32% { opacity: 1; stroke-dashoffset: 1; } 35% { stroke-dashoffset: 0; } 41% { opacity: 1; stroke-dashoffset: 0; } 44%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t28-three { 0%, 34% { opacity: 0; transform: scale(.7); } 37% { opacity: 1; transform: scale(1); } 41% { opacity: 1; transform: scale(1); } 44%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t28-threestrike { 0%, 37% { opacity: 1; stroke-dashoffset: 1; } 39% { stroke-dashoffset: 0; } 41% { opacity: 1; stroke-dashoffset: 0; } 44%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t28-flow { 0% { stroke-dashoffset: 0; opacity: 0; } 49% { opacity: 0; } 52%, 68% { opacity: 1; } 71% { opacity: 0; } 100% { stroke-dashoffset: -330; opacity: 0; } }
+@keyframes t28-willarrow { 0%, 56% { opacity: 1; stroke-dashoffset: 1; } 61% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t28-willhead { 0%, 60% { opacity: 0; } 62% { opacity: 1; } 87% { opacity: 1; transform: translateY(0px); } 89% { transform: translateY(5px); } 91% { transform: translateY(0px); } 95% { opacity: 1; } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t28-willpill { 0%, 62% { opacity: 0; transform: scale(.7); } 65% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t28-human { 0%, 73% { opacity: 0; transform: rotate(-40deg); } 77% { opacity: 1; transform: rotate(-40deg); } 80% { transform: rotate(-40deg); } 85% { transform: rotate(0deg); } 87% { transform: translateY(0px); } 89% { transform: translateY(5px); } 91% { transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t28-humanpill { 0%, 75% { opacity: 0; transform: scale(.7); } 78% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

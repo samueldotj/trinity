@@ -1,0 +1,37 @@
+/* Teaching 35, The Son prays to the Father: 24 seconds in four scenes. */
+.anim-t35 * { animation-duration: 24s; }
+.anim-t35 .a-bubble1, .anim-t35 .a-you, .anim-t35 .a-actor, .anim-t35 .a-mask, .anim-t35 .a-maskpill, .anim-t35 .a-maskstrike, .anim-t35 .a-cup, .anim-t35 .a-bubble2, .anim-t35 .a-obey { opacity: 0; }
+.anim-t35 .a-person { animation-name: t35-person; }
+.anim-t35 .a-bubble1 { animation-name: t35-bubble1; }
+.anim-t35 .a-you { animation-name: t35-you; }
+.anim-t35 .a-arrow { animation-name: t35-arrow; }
+.anim-t35 .a-pray { animation-name: t35-pray; }
+.anim-t35 .a-actor { animation-name: t35-actor; }
+.anim-t35 .a-mask { animation-name: t35-mask; }
+.anim-t35 .a-maskpill { animation-name: t35-maskpill; }
+.anim-t35 .a-maskstrike { animation-name: t35-maskstrike; }
+.anim-t35 .a-cup { animation-name: t35-cup; }
+.anim-t35 .a-bubble2 { animation-name: t35-bubble2; }
+.anim-t35 .a-obey { animation-name: t35-obey; }
+.anim-t35 .a-ring { animation-name: t35-ring; }
+.anim-t35 .a-onegod { animation-name: t35-onegod; }
+.anim-t35 .a-halo { animation-name: t35-halo; }
+.anim-t35 .a-before { animation-name: t35-before; }
+.anim-t35 .a-world { animation-name: t35-world; }
+@keyframes t35-person { 0% { opacity: 0; transform: scale(.7); } 3% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t35-bubble1 { 0%, 3% { opacity: 0; transform: translateX(-300px); } 5.5% { opacity: 1; transform: translateX(-300px); } 12% { transform: translateX(0px); } 14% { opacity: 1; transform: translateX(0px); } 16.5%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t35-you { 0%, 12% { opacity: 0; transform: scale(.7); } 14.5% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t35-arrow { 0%, 14% { opacity: 1; stroke-dashoffset: 1; } 18% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t35-pray { 0%, 17% { opacity: 0; } 19.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t35-actor { 0%, 22.5% { opacity: 0; } 25%, 41% { opacity: 1; } 44%, 100% { opacity: 0; } }
+@keyframes t35-mask { 0%, 24% { opacity: 0; transform: scale(.4) rotate(-30deg); } 27% { opacity: 1; transform: scale(1.1) rotate(0deg); } 28.5% { transform: scale(1); } 41% { opacity: 1; transform: scale(1); } 44%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t35-maskpill { 0%, 28% { opacity: 0; } 30.5%, 41% { opacity: 1; } 44%, 100% { opacity: 0; } }
+@keyframes t35-maskstrike { 0%, 33% { opacity: 1; stroke-dashoffset: 1; } 37% { stroke-dashoffset: 0; } 41% { opacity: 1; stroke-dashoffset: 0; } 44%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t35-cup { 0%, 46.5% { opacity: 0; transform: translateY(14px); } 50% { opacity: 1; transform: translateY(0px); } 69% { opacity: 1; transform: translateY(0px); } 72%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t35-bubble2 { 0%, 49.5% { opacity: 0; transform: translateX(-300px); } 52% { opacity: 1; transform: translateX(-300px); } 59% { transform: translateX(0px); } 69% { opacity: 1; transform: translateX(0px); } 72%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t35-obey { 0%, 59.5% { opacity: 0; transform: scale(.8); } 62.5% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 72%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t35-ring { 0%, 73% { opacity: 1; stroke-dashoffset: 1; } 79% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t35-onegod { 0%, 77% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t35-halo { 0%, 79% { opacity: 0; transform: scale(.8); } 82.5% { opacity: 1; transform: scale(1.06); } 84.5% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t35-before { 0%, 83% { opacity: 0; } 86%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t35-world { 0%, 87% { opacity: 0; transform: scale(.5); } 90% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

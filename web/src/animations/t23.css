@@ -1,0 +1,44 @@
+/* Teaching 23, The Son is eternally begotten of the Father: 24 seconds in four scenes. */
+.anim-t23 * { animation-duration: 24s; }
+.anim-t23 .a-made, .anim-t23 .a-creature, .anim-t23 .a-creaturestrike, .anim-t23 .a-when, .anim-t23 .a-whenstrike, .anim-t23 .a-always, .anim-t23 .a-second, .anim-t23 .a-secondstrike { opacity: 0; }
+.anim-t23 .a-f { animation-name: t23-f; }
+.anim-t23 .a-fgold { animation-name: t23-fgold; }
+.anim-t23 .a-arrow { animation-name: t23-arrow; }
+.anim-t23 .a-arrowhead { animation-name: t23-arrowhead; }
+.anim-t23 .a-begets { animation-name: t23-begets; }
+.anim-t23 .a-gift { animation-name: t23-gift; }
+.anim-t23 .a-s { animation-name: t23-s; }
+.anim-t23 .a-sgold { animation-name: t23-sgold; }
+.anim-t23 .a-same { animation-name: t23-same; }
+.anim-t23 .a-made { animation-name: t23-made; }
+.anim-t23 .a-creature { animation-name: t23-creature; }
+.anim-t23 .a-creaturestrike { animation-name: t23-creaturestrike; }
+.anim-t23 .a-when { animation-name: t23-when; }
+.anim-t23 .a-whenstrike { animation-name: t23-whenstrike; }
+.anim-t23 .a-always { animation-name: t23-always; }
+.anim-t23 .a-onering { animation-name: t23-onering; }
+.anim-t23 .a-onegod { animation-name: t23-onegod; }
+.anim-t23 .a-notes { animation-name: t23-notes; }
+.anim-t23 .a-second { animation-name: t23-second; }
+.anim-t23 .a-secondstrike { animation-name: t23-secondstrike; }
+.anim-t23 .a-gift { animation-timing-function: linear; }
+@keyframes t23-f { 0% { opacity: 0; transform: scale(0.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t23-fgold { 0%, 2% { opacity: 0; transform: scale(0.8); } 6% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t23-arrow { 0%, 5% { opacity: 1; stroke-dashoffset: 1; } 9% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t23-arrowhead { 0%, 8.5% { opacity: 0; } 9.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t23-begets { 0%, 8% { opacity: 0; } 10.5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t23-gift { 0% { stroke-dashoffset: 0; opacity: 0; } 9% { opacity: 0; } 11%, 95% { opacity: 1; } 100% { stroke-dashoffset: -480; opacity: 0; } }
+@keyframes t23-s { 0%, 10.5% { opacity: 0; transform: scale(0.4); } 14.5% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t23-sgold { 0%, 13.5% { opacity: 0; transform: scale(0.8); } 17% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t23-same { 0%, 16% { opacity: 0; } 19%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t23-made { 0%, 24% { opacity: 0; } 28%, 44% { opacity: 1; } 47%, 100% { opacity: 0; } }
+@keyframes t23-creature { 0%, 34% { opacity: 0; } 36%, 42% { opacity: 1; } 44.5%, 100% { opacity: 0; } }
+@keyframes t23-creaturestrike { 0%, 38% { opacity: 1; stroke-dashoffset: 1; } 40% { stroke-dashoffset: 0; } 42% { opacity: 1; stroke-dashoffset: 0; } 44.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t23-when { 0%, 49% { opacity: 0; } 51%, 58% { opacity: 1; } 60%, 100% { opacity: 0; } }
+@keyframes t23-whenstrike { 0%, 54% { opacity: 1; stroke-dashoffset: 1; } 56% { stroke-dashoffset: 0; } 58% { opacity: 1; stroke-dashoffset: 0; } 60%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t23-always { 0%, 60% { opacity: 0; transform: scale(0.8); } 63% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t23-onering { 0%, 73% { opacity: 1; stroke-dashoffset: 1; } 79% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t23-onegod { 0%, 78% { opacity: 0; transform: scale(0.7); } 81% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t23-notes { 0%, 74% { opacity: 0; } 77%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t23-second { 0%, 82% { opacity: 0; } 84%, 90% { opacity: 1; } 92%, 100% { opacity: 0; } }
+@keyframes t23-secondstrike { 0%, 86% { opacity: 1; stroke-dashoffset: 1; } 88% { stroke-dashoffset: 0; } 90% { opacity: 1; stroke-dashoffset: 0; } 92%, 100% { opacity: 0; stroke-dashoffset: 0; } }

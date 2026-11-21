@@ -1,0 +1,45 @@
+/* Teaching 29, The three Persons act inseparably in divine works: 24 seconds in four scenes. */
+.anim-t29 * { animation-duration: 24s; }
+.anim-t29 .a-dot, .anim-t29 .a-joblines, .anim-t29 .a-job, .anim-t29 .a-jobstrike, .anim-t29 .a-team { opacity: 0; }
+.anim-t29 .a-godframe { animation-name: t29-godframe; }
+.anim-t29 .a-godpill { animation-name: t29-godpill; }
+.anim-t29 .a-arrows { animation-name: t29-arrows; }
+.anim-t29 .a-dot { animation-name: t29-dot; }
+.anim-t29 .a-ring1 { animation-name: t29-hl1; }
+.anim-t29 .a-ring2 { animation-name: t29-hl2; }
+.anim-t29 .a-ring3 { animation-name: t29-hl3; }
+.anim-t29 .a-hl1 { animation-name: t29-hl1; }
+.anim-t29 .a-hl2 { animation-name: t29-hl2; }
+.anim-t29 .a-hl3 { animation-name: t29-hl3; }
+.anim-t29 .a-person { animation-name: t29-person; }
+.anim-t29 .a-joblines { animation-name: t29-joblines; }
+.anim-t29 .a-job { animation-name: t29-job; }
+.anim-t29 .a-jobstrike { animation-name: t29-jobstrike; }
+.anim-t29 .a-team { animation-name: t29-team; }
+.anim-t29 .a-note { animation-name: t29-note; }
+.anim-t29 .a-brace { animation-name: t29-brace; }
+.anim-t29 .a-act { animation-name: t29-act; }
+.anim-t29 .a-acthead { animation-name: t29-acthead; }
+.anim-t29 .a-actpill { animation-name: t29-actpill; }
+.anim-t29 .a-box { animation-name: t29-box; }
+.anim-t29 .a-works { animation-name: t29-works; }
+.anim-t29 .a-dot { animation-timing-function: linear; }
+@keyframes t29-person { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t29-joblines { 0%, 4% { opacity: 0; } 7%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t29-job { 0%, 6% { opacity: 0; transform: translate(0px, -12px) scale(1); } 9% { opacity: 1; transform: translate(0px, 0px) scale(1); } 22% { opacity: 1; transform: translate(0px, 0px) scale(1); } 27%, 100% { opacity: 0; transform: translate(var(--dx), 110px) scale(.5); } }
+@keyframes t29-jobstrike { 0%, 13% { opacity: 1; stroke-dashoffset: 1; } 16% { stroke-dashoffset: 0; } 20% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t29-team { 0%, 9% { opacity: 0; } 12%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t29-box { 0%, 23% { opacity: 0; transform: scale(.9); } 27% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t29-note { 0%, 27% { opacity: 0; transform: translateY(-8px); } 30% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t29-arrows { 0%, 29% { opacity: 0; } 31%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-dot { 0%, 31% { opacity: 0; transform: translateX(0px); } 32% { opacity: 1; transform: translateX(0px); } 39% { opacity: 1; transform: translateX(320px); } 40%, 100% { opacity: 0; transform: translateX(320px); } }
+@keyframes t29-brace { 0%, 39% { opacity: 0; } 41%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-act { 0%, 40% { opacity: 1; stroke-dashoffset: 1; } 43% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t29-acthead { 0%, 42% { opacity: 0; } 43%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-actpill { 0%, 42% { opacity: 0; transform: scale(.7); } 45% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t29-works { 0%, 46% { opacity: 0; } 49%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-hl1 { 0%, 49% { opacity: 0; } 51%, 55% { opacity: 1; } 57%, 79% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-hl2 { 0%, 56% { opacity: 0; } 58%, 62% { opacity: 1; } 64%, 79% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-hl3 { 0%, 63% { opacity: 0; } 65%, 69% { opacity: 1; } 71%, 79% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t29-godframe { 0%, 74% { opacity: 0; transform: scale(1.06); } 78% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t29-godpill { 0%, 76% { opacity: 0; transform: scale(.7); } 79% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

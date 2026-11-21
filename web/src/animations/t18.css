@@ -1,0 +1,47 @@
+/* Teaching 18, the three Persons are coeternal: 24 seconds in four scenes. */
+.anim-t18 * { animation-duration: 24s; }
+.anim-t18 .a-wrong1, .anim-t18 .a-wrong2, .anim-t18 .a-wrong3, .anim-t18 .a-dot1, .anim-t18 .a-dot2, .anim-t18 .a-dot3, .anim-t18 .a-alone, .anim-t18 .a-wrongstrike, .anim-t18 .a-q1, .anim-t18 .a-q2, .anim-t18 .a-q3, .anim-t18 .a-spark, .anim-t18 .a-sub1 { opacity: 0; }
+.anim-t18 .a-wrong1 { animation-name: t18-wrong1; }
+.anim-t18 .a-wrong2 { animation-name: t18-wrong2; }
+.anim-t18 .a-wrong3 { animation-name: t18-wrong3; }
+.anim-t18 .a-dot1 { animation-name: t18-dot1; }
+.anim-t18 .a-dot2 { animation-name: t18-dot2; }
+.anim-t18 .a-dot3 { animation-name: t18-dot3; }
+.anim-t18 .a-alone { animation-name: t18-alone; }
+.anim-t18 .a-wrongstrike { animation-name: t18-wrongstrike; }
+.anim-t18 .a-person { animation-name: t18-person; }
+.anim-t18 .a-sub1 { animation-name: t18-sub1; }
+.anim-t18 .a-sub2 { animation-name: t18-sub2; }
+.anim-t18 .a-lane { animation-name: t18-lane; }
+.anim-t18 .a-forever { animation-name: t18-forever; }
+.anim-t18 .a-nobegin { animation-name: t18-nobegin; }
+.anim-t18 .a-made { animation-name: t18-made; }
+.anim-t18 .a-madelabel { animation-name: t18-madelabel; }
+.anim-t18 .a-q1 { animation-name: t18-q1; }
+.anim-t18 .a-q2 { animation-name: t18-q2; }
+.anim-t18 .a-q3 { animation-name: t18-q3; }
+.anim-t18 .a-tie { animation-name: t18-tie; }
+.anim-t18 .a-always { animation-name: t18-always; }
+.anim-t18 .a-spark { animation-name: t18-spark; animation-timing-function: linear; }
+@keyframes t18-wrong1 { 0%, 2% { opacity: 1; stroke-dashoffset: 1; } 7% { stroke-dashoffset: 0; } 19.5% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t18-wrong2 { 0%, 8% { opacity: 1; stroke-dashoffset: 1; } 12% { stroke-dashoffset: 0; } 19.5% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t18-wrong3 { 0%, 12% { opacity: 1; stroke-dashoffset: 1; } 15% { stroke-dashoffset: 0; } 19.5% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t18-dot1 { 0%, 2% { opacity: 0; transform: scale(.5); } 3.5% { opacity: 1; transform: scale(1); } 19.5% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-dot2 { 0%, 8% { opacity: 0; transform: scale(.5); } 9.5% { opacity: 1; transform: scale(1); } 19.5% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-dot3 { 0%, 12% { opacity: 0; transform: scale(.5); } 13.5% { opacity: 1; transform: scale(1); } 19.5% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-alone { 0%, 4% { opacity: 0; transform: translateY(8px); } 6.5% { opacity: 1; transform: translateY(0px); } 19.5% { opacity: 1; transform: translateY(0px); } 22%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t18-wrongstrike { 0%, 15.5% { opacity: 1; stroke-dashoffset: 1; } 18% { stroke-dashoffset: 0; } 19.5% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t18-person { 0% { opacity: 0; transform: scale(.6); } 3% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-sub1 { 0%, 26% { opacity: 1; } 28.5%, 100% { opacity: 0; } }
+@keyframes t18-sub2 { 0%, 27% { opacity: 0; } 29.5%, 100% { opacity: 1; } }
+@keyframes t18-lane { 0%, 23% { opacity: 1; stroke-dashoffset: 1; } 30% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t18-forever { 0%, 29.5% { opacity: 0; transform: translateX(10px); } 32% { opacity: 1; transform: translateX(0px); } 95% { opacity: 1; transform: translateX(0px); } 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t18-nobegin { 0%, 32% { opacity: 0; transform: scale(.7); } 35% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-made { 0%, 46.5% { opacity: 0; } 49%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t18-madelabel { 0%, 48% { opacity: 0; transform: translateY(8px); } 50.5% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t18-q1 { 0%, 51% { opacity: 0; transform: scale(.7); } 53.5% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-q2 { 0%, 55% { opacity: 0; transform: scale(.7); } 57.5% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-q3 { 0%, 59% { opacity: 0; transform: scale(.7); } 61.5% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-tie { 0%, 74% { opacity: 0; } 77%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t18-always { 0%, 76% { opacity: 0; transform: scale(.6); } 79% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t18-spark { 0%, 74% { opacity: 0; transform: translateX(0px); } 75% { opacity: 1; transform: translateX(0px); } 83% { opacity: 1; transform: translateX(-380px); } 84% { opacity: 0; transform: translateX(-410px); } 84.5% { opacity: 0; transform: translateX(0px); } 85.5% { opacity: 1; transform: translateX(0px); } 93.5% { opacity: 1; transform: translateX(-380px); } 95%, 100% { opacity: 0; transform: translateX(-410px); } }

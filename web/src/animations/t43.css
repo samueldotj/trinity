@@ -1,0 +1,35 @@
+/* Teaching 43, Jesus Christ has two natures, divine and human, united in one Person: 24 seconds in four scenes. */
+.anim-t43 * { animation-duration: 24s; }
+.anim-t43 .a-whats, .anim-t43 .a-who, .anim-t43 .a-blend, .anim-t43 .a-blendtag, .anim-t43 .a-blendstrike, .anim-t43 .a-ghost, .anim-t43 .a-twotag, .anim-t43 .a-twostrike, .anim-t43 .a-did { opacity: 0; }
+.anim-t43 .a-son { animation-name: t43-son; }
+.anim-t43 .a-divine { animation-name: t43-divine; }
+.anim-t43 .a-human { animation-name: t43-human; }
+.anim-t43 .a-links { animation-name: t43-links; }
+.anim-t43 .a-united { animation-name: t43-united; }
+.anim-t43 .a-unitedpill { animation-name: t43-unitedpill; }
+.anim-t43 .a-whats { animation-name: t43-whats; }
+.anim-t43 .a-who { animation-name: t43-who; }
+.anim-t43 .a-blend { animation-name: t43-blend; }
+.anim-t43 .a-blendtag { animation-name: t43-blendtag; }
+.anim-t43 .a-blendstrike { animation-name: t43-blendstrike; }
+.anim-t43 .a-ghost { animation-name: t43-ghost; }
+.anim-t43 .a-twotag { animation-name: t43-twotag; }
+.anim-t43 .a-twostrike { animation-name: t43-twostrike; }
+.anim-t43 .a-did { animation-name: t43-did; }
+.anim-t43 .a-oneson { animation-name: t43-oneson; }
+@keyframes t43-son { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 48% { opacity: 1; transform: scale(1); } 51% { opacity: .25; transform: scale(1); } 66% { opacity: .25; transform: scale(1); } 70% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t43-divine { 0%, 4% { opacity: 0; transform: translateX(-20px); } 8% { opacity: 1; transform: translateX(0px); } 24% { opacity: 1; transform: translateX(0px); } 29% { opacity: 1; transform: translateX(140px); } 39% { opacity: 1; transform: translateX(140px); } 44% { opacity: 1; transform: translateX(0px); } 95% { opacity: 1; transform: translateX(0px); } 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t43-human { 0%, 4% { opacity: 0; transform: translateX(20px); } 8% { opacity: 1; transform: translateX(0px); } 24% { opacity: 1; transform: translateX(0px); } 29% { opacity: 1; transform: translateX(-140px); } 39% { opacity: 1; transform: translateX(-140px); } 44% { opacity: 1; transform: translateX(0px); } 95% { opacity: 1; transform: translateX(0px); } 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t43-links { 0%, 7% { opacity: 0; } 10%, 22% { opacity: 1; } 24%, 43% { opacity: 0; } 46%, 47% { opacity: 1; } 49%, 68% { opacity: 0; } 71%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t43-united { 0%, 10% { opacity: 0; } 13%, 22% { opacity: 1; } 24%, 43% { opacity: 0; } 46%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t43-unitedpill { 0%, 89% { transform: scale(1); } 91% { transform: scale(1.18); } 93%, 100% { transform: scale(1); } }
+@keyframes t43-whats { 0%, 13% { opacity: 0; } 15%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t43-who { 0%, 11% { opacity: 0; } 13%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t43-blend { 0%, 28% { opacity: 0; transform: scale(.7); } 30% { opacity: 1; transform: scale(1); } 38% { opacity: 1; transform: scale(1); } 40%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t43-blendtag { 0%, 29% { opacity: 0; } 31%, 38% { opacity: 1; } 40%, 100% { opacity: 0; } }
+@keyframes t43-blendstrike { 0%, 32% { opacity: 1; stroke-dashoffset: 1; } 35% { stroke-dashoffset: 0; } 38% { opacity: 1; stroke-dashoffset: 0; } 40%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t43-ghost { 0%, 48% { opacity: 0; transform: translate(0px, 0px); } 50% { opacity: 1; transform: translate(0px, 0px); } 55% { opacity: 1; transform: translate(var(--dx), 28px); } 66% { opacity: 1; transform: translate(var(--dx), 28px); } 69%, 100% { opacity: 0; transform: translate(var(--dx), 28px); } }
+@keyframes t43-twotag { 0%, 55% { opacity: 0; } 57%, 66% { opacity: 1; } 69%, 100% { opacity: 0; } }
+@keyframes t43-twostrike { 0%, 59% { opacity: 1; stroke-dashoffset: 1; } 62% { stroke-dashoffset: 0; } 66% { opacity: 1; stroke-dashoffset: 0; } 69%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t43-did { 0%, 75% { opacity: 0; transform: translate(0px, 0px); } 77% { opacity: 1; transform: translate(0px, 0px); } 83% { opacity: 1; transform: translate(var(--dx), var(--dy)); } 85%, 100% { opacity: 0; transform: translate(var(--dx), var(--dy)); } }
+@keyframes t43-oneson { 0%, 87% { opacity: 0; } 90%, 95% { opacity: 1; } 100% { opacity: 0; } }

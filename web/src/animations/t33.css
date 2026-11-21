@@ -1,0 +1,48 @@
+/* Teaching 33, The Son reveals the Father: 24 seconds in four scenes. */
+.anim-t33 * { animation-duration: 24s; }
+.anim-t33 .a-sight, .anim-t33 .a-block, .anim-t33 .a-nosee, .anim-t33 .a-side, .anim-t33 .a-teacher, .anim-t33 .a-teacherstrike, .anim-t33 .a-renamed, .anim-t33 .a-renamedstrike { opacity: 0; }
+.anim-t33 .a-veil { animation-name: t33-veil; }
+.anim-t33 .a-us { animation-name: t33-us; }
+.anim-t33 .a-people { animation-name: t33-us; }
+.anim-t33 .a-sight { animation-name: t33-sight; }
+.anim-t33 .a-block { animation-name: t33-block; }
+.anim-t33 .a-nosee { animation-name: t33-nosee; }
+.anim-t33 .a-seen { animation-name: t33-seen; }
+.anim-t33 .a-seenpill { animation-name: t33-seenpill; }
+.anim-t33 .a-known { animation-name: t33-known; }
+.anim-t33 .a-knownpill { animation-name: t33-knownpill; }
+.anim-t33 .a-fmove { animation-name: t33-fmove; }
+.anim-t33 .a-fdim { animation-name: t33-fdim; }
+.anim-t33 .a-ffull { animation-name: t33-ffull; }
+.anim-t33 .a-echo { animation-name: t33-echo; }
+.anim-t33 .a-sonmove { animation-name: t33-sonmove; }
+.anim-t33 .a-son { animation-name: t33-son; }
+.anim-t33 .a-side { animation-name: t33-side; }
+.anim-t33 .a-quote { animation-name: t33-quote; }
+.anim-t33 .a-teacher { animation-name: t33-teacher; }
+.anim-t33 .a-teacherstrike { animation-name: t33-teacherstrike; }
+.anim-t33 .a-renamed { animation-name: t33-renamed; }
+.anim-t33 .a-renamedstrike { animation-name: t33-renamedstrike; }
+.anim-t33 .a-onegod { animation-name: t33-onegod; }
+@keyframes t33-veil { 0% { opacity: 0; transform: scale(.85); } 6% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-us { 0%, 1% { opacity: 0; } 5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t33-fdim { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-ffull { 0%, 55% { opacity: 0; } 60%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t33-fmove { 0%, 23% { transform: translateX(0px); } 27%, 47% { transform: translateX(-60px); } 52%, 100% { transform: translateX(0px); } }
+@keyframes t33-sight { 0%, 6% { opacity: 1; stroke-dashoffset: 1; } 12% { stroke-dashoffset: 0; } 19% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t33-block { 0%, 11% { opacity: 0; transform: translateY(0px); } 12.5% { opacity: 1; transform: translateY(-4px); } 14% { transform: translateY(0px); } 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t33-nosee { 0%, 13% { opacity: 0; transform: scale(.7); } 16% { opacity: 1; transform: scale(1); } 19% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-son { 0%, 25% { opacity: 0; transform: scale(.5); } 29% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-sonmove { 0%, 47% { transform: translate(60px, -186px); } 54%, 100% { transform: translate(0px, 0px); } }
+@keyframes t33-side { 0%, 30% { opacity: 0; transform: scale(.7); } 33% { opacity: 1; transform: scale(1); } 43% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-seen { 0%, 54% { opacity: 0; } 57%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t33-seenpill { 0%, 55% { opacity: 0; transform: scale(.7); } 58% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-echo { 0%, 57% { opacity: 0; transform: scale(.8); } 61% { opacity: 1; transform: scale(1); } 63% { transform: scale(1.06); } 65% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-known { 0%, 60% { opacity: 0; } 63%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t33-knownpill { 0%, 61% { opacity: 0; transform: scale(.7); } 64% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-quote { 0%, 64% { opacity: 0; transform: scale(.7); } 67% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t33-teacher { 0%, 73% { opacity: 0; } 76%, 83% { opacity: 1; } 86%, 100% { opacity: 0; } }
+@keyframes t33-teacherstrike { 0%, 77% { opacity: 1; stroke-dashoffset: 1; } 80% { stroke-dashoffset: 0; } 83% { opacity: 1; stroke-dashoffset: 0; } 86%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t33-renamed { 0%, 75% { opacity: 0; } 78%, 83% { opacity: 1; } 86%, 100% { opacity: 0; } }
+@keyframes t33-renamedstrike { 0%, 79% { opacity: 1; stroke-dashoffset: 1; } 82% { stroke-dashoffset: 0; } 83% { opacity: 1; stroke-dashoffset: 0; } 86%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t33-onegod { 0%, 86% { opacity: 0; transform: scale(.7); } 89% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

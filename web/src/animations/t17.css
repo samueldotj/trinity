@@ -1,0 +1,44 @@
+/* Teaching 17, each Person is fully God: 24 seconds in four scenes. */
+.anim-t17 * { animation-duration: 24s; }
+.anim-t17 .a-wedge, .anim-t17 .a-pieces, .anim-t17 .a-strike1, .anim-t17 .a-attr, .anim-t17 .a-token, .anim-t17 .a-chip, .anim-t17 .a-chipstrike, .anim-t17 .a-three, .anim-t17 .a-threestrike, .anim-t17 .a-godsub1 { opacity: 0; }
+.anim-t17 .a-wedge { animation-name: t17-wedge; }
+.anim-t17 .a-pieces { animation-name: t17-pieces; }
+.anim-t17 .a-strike1 { animation-name: t17-strike1; }
+.anim-t17 .a-god { animation-name: t17-god; }
+.anim-t17 .a-godsub1 { animation-name: t17-godsub1; }
+.anim-t17 .a-godsub2 { animation-name: t17-godsub2; }
+.anim-t17 .a-attr { animation-name: t17-attr; }
+.anim-t17 .a-pf { animation-name: t17-pf; }
+.anim-t17 .a-ps { animation-name: t17-ps; }
+.anim-t17 .a-pp { animation-name: t17-pp; }
+.anim-t17 .a-spoke { animation-name: t17-spoke; }
+.anim-t17 .a-token { animation-name: t17-token; }
+.anim-t17 .a-halo { animation-name: t17-halo; }
+.anim-t17 .a-chip { animation-name: t17-chip; }
+.anim-t17 .a-chipstrike { animation-name: t17-chipstrike; }
+.anim-t17 .a-three { animation-name: t17-three; }
+.anim-t17 .a-threestrike { animation-name: t17-threestrike; }
+.anim-t17 .a-fully { animation-name: t17-fully; }
+.anim-t17 .a-worshipper { animation-name: t17-worshipper; }
+.anim-t17 .a-prayer { animation-name: t17-prayer; }
+.anim-t17 .a-prayer { animation-timing-function: linear; }
+@keyframes t17-wedge { 0% { opacity: 0; transform: translate(0px, 0px) scale(.8); } 3% { opacity: 1; transform: translate(0px, 0px) scale(1); } 5% { transform: translate(0px, 0px) scale(1); } 8.5% { transform: translate(var(--dx), var(--dy)) scale(1); } 14% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1); } 17% { opacity: 1; transform: translate(0px, 0px) scale(1); } 19.5%, 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t17-pieces { 0%, 7% { opacity: 0; transform: translateY(8px); } 9.5% { opacity: 1; transform: translateY(0px); } 14.5% { opacity: 1; transform: translateY(0px); } 17%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t17-strike1 { 0%, 10% { opacity: 1; stroke-dashoffset: 1; } 12.5% { stroke-dashoffset: 0; } 14.5% { opacity: 1; stroke-dashoffset: 0; } 17%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t17-god { 0%, 15.5% { opacity: 0; transform: scale(.85); } 19% { opacity: 1; transform: scale(1); } 36% { transform: scale(1); } 38% { transform: scale(1.08); } 40% { transform: scale(1); } 81% { transform: scale(1); } 82.5% { transform: scale(1.06); } 84% { transform: scale(1); } 85% { transform: scale(1); } 86.5% { transform: scale(1.06); } 88% { transform: scale(1); } 89% { transform: scale(1); } 90.5% { transform: scale(1.06); } 92% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t17-godsub1 { 0%, 74% { opacity: 1; } 76.5%, 100% { opacity: 0; } }
+@keyframes t17-godsub2 { 0%, 75% { opacity: 0; } 78%, 100% { opacity: 1; } }
+@keyframes t17-attr { 0%, 22.5% { opacity: 0; transform: translate(0px, 0px) scale(.7); } 25.5% { opacity: 1; transform: translate(0px, 0px) scale(1); } 34% { opacity: 1; transform: translate(0px, 0px) scale(1); } 38% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.4); } 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.4); } }
+@keyframes t17-pf { 0%, 27.5% { opacity: 0; transform: scale(.6); } 30.5% { opacity: 1; transform: scale(1); } 79% { transform: scale(1); } 80.5% { transform: scale(1.08); } 82% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t17-ps { 0%, 28% { opacity: 0; transform: scale(.6); } 31% { opacity: 1; transform: scale(1); } 83% { transform: scale(1); } 84.5% { transform: scale(1.08); } 86% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t17-pp { 0%, 28.5% { opacity: 0; transform: scale(.6); } 31.5% { opacity: 1; transform: scale(1); } 87% { transform: scale(1); } 88.5% { transform: scale(1.08); } 90% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t17-spoke { 0%, 31% { opacity: 1; stroke-dashoffset: 1; } 35% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t17-token { 0%, 37% { opacity: 0; transform: translate(0px, 0px) scale(.6); } 38.5% { opacity: 1; transform: translate(0px, 0px) scale(1); } 43% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1); } 44.5%, 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1); } }
+@keyframes t17-halo { 0%, 43% { opacity: 0; transform: scale(.85); } 45.5% { opacity: 1; transform: scale(1); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes t17-chip { 0%, 48% { opacity: 0; transform: translateY(-6px); } 50.5% { opacity: 1; transform: translateY(0px); } 69% { opacity: 1; transform: translateY(0px); } 71.5%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t17-chipstrike { 0%, 53% { opacity: 1; stroke-dashoffset: 1; } 55.5% { stroke-dashoffset: 0; } 69% { opacity: 1; stroke-dashoffset: 0; } 71.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t17-three { 0%, 57% { opacity: 0; transform: scale(.7); } 59.5% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 71.5%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t17-threestrike { 0%, 61.5% { opacity: 1; stroke-dashoffset: 1; } 64% { stroke-dashoffset: 0; } 69% { opacity: 1; stroke-dashoffset: 0; } 71.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t17-fully { 0%, 73% { opacity: 0; transform: scale(.6); } 76% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t17-worshipper { 0%, 77% { opacity: 0; transform: translateY(8px); } 80% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t17-prayer { 0% { opacity: 0; stroke-dashoffset: 0; } 79% { opacity: 0; } 81%, 95% { opacity: 1; } 100% { opacity: 0; stroke-dashoffset: -400; } }

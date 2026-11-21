@@ -1,0 +1,54 @@
+/* Teaching 7, God is Omnipresent: 24 seconds in four scenes. */
+.anim-t7 * { animation-duration: 24s; }
+.anim-t7 .a-place, .anim-t7 .a-here1, .anim-t7 .a-here2, .anim-t7 .a-here3, .anim-t7 .a-stretch, .anim-t7 .a-stretchtag, .anim-t7 .a-stretchstrike, .anim-t7 .a-spot, .anim-t7 .a-whole, .anim-t7 .a-wholepill, .anim-t7 .a-world, .anim-t7 .a-ghost, .anim-t7 .a-ghosttag, .anim-t7 .a-ghoststrike, .anim-t7 .a-distinct, .anim-t7 .a-pulse1, .anim-t7 .a-pulse2, .anim-t7 .a-pulse3 { opacity: 0; }
+.anim-t7 .a-god { animation-name: t7-god; }
+.anim-t7 .a-ripples { animation-name: t7-ripples; }
+.anim-t7 .a-place { animation-name: t7-place; }
+.anim-t7 .a-here1 { animation-name: t7-here1; }
+.anim-t7 .a-here2 { animation-name: t7-here2; }
+.anim-t7 .a-here3 { animation-name: t7-here3; }
+.anim-t7 .a-stretch { animation-name: t7-stretch; }
+.anim-t7 .a-stretchtag { animation-name: t7-stretchtag; }
+.anim-t7 .a-stretchstrike { animation-name: t7-stretchstrike; }
+.anim-t7 .a-spot { animation-name: t7-spot; }
+.anim-t7 .a-whole { animation-name: t7-whole; }
+.anim-t7 .a-wholepill { animation-name: t7-wholepill; }
+.anim-t7 .a-world { animation-name: t7-world; }
+.anim-t7 .a-ghost { animation-name: t7-ghost; }
+.anim-t7 .a-ghosttag { animation-name: t7-ghosttag; }
+.anim-t7 .a-ghoststrike { animation-name: t7-ghoststrike; }
+.anim-t7 .a-distinct { animation-name: t7-distinct; }
+.anim-t7 .a-hider { animation-name: t7-hider; }
+.anim-t7 .a-hidetag { animation-name: t7-hidetag; }
+.anim-t7 .a-hidestrike { animation-name: t7-hidestrike; }
+.anim-t7 .a-glow { animation-name: t7-glow; }
+.anim-t7 .a-pulse1 { animation-name: t7-pulse1; }
+.anim-t7 .a-pulse2 { animation-name: t7-pulse2; }
+.anim-t7 .a-pulse3 { animation-name: t7-pulse3; }
+.anim-t7 .a-ringlabel { animation-name: t7-ringlabel; }
+.anim-t7 .a-pulse1, .anim-t7 .a-pulse2, .anim-t7 .a-pulse3 { animation-timing-function: linear; }
+@keyframes t7-god { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 22% { opacity: 1; transform: scale(1); } 24% { opacity: 0; transform: scale(1); } 34% { opacity: 0; transform: scale(.6); } 37% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-ripples { 0%, 2% { opacity: 0; } 6%, 22% { opacity: 1; } 24%, 35% { opacity: 0; } 38%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t7-place { 0%, 3% { opacity: 0; } 6%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t7-here1 { 0%, 6% { opacity: 0; transform: scale(.5); } 8.5% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-here2 { 0%, 10.5% { opacity: 0; transform: scale(.5); } 13% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-here3 { 0%, 15% { opacity: 0; transform: scale(.5); } 17.5% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-stretch { 0%, 23% { opacity: 0; transform: scale(.3, .8); } 27% { opacity: 1; transform: scale(1, 1); } 33% { opacity: 1; transform: scale(1, 1); } 35%, 100% { opacity: 0; transform: scale(1, 1); } }
+@keyframes t7-stretchtag { 0%, 26% { opacity: 0; } 28.5%, 33% { opacity: 1; } 35%, 100% { opacity: 0; } }
+@keyframes t7-stretchstrike { 0%, 29.5% { opacity: 1; stroke-dashoffset: 1; } 32% { stroke-dashoffset: 0; } 33% { opacity: 1; stroke-dashoffset: 0; } 35%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t7-spot { 0%, 36% { opacity: 0; } 39%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t7-whole { 0%, 39% { opacity: 1; stroke-dashoffset: 1; fill-opacity: 0; } 42% { stroke-dashoffset: 0; fill-opacity: 1; } 44% { opacity: 1; stroke-dashoffset: 0; fill-opacity: 1; } 46%, 100% { opacity: 0; stroke-dashoffset: 0; fill-opacity: 1; } }
+@keyframes t7-wholepill { 0%, 41% { opacity: 0; } 43%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t7-world { 0%, 47% { opacity: 0; transform: translateY(12px); } 50% { opacity: 1; transform: translateY(0px); } 70% { opacity: 1; transform: translateY(0px); } 72%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t7-ghost { 0%, 51% { opacity: 0; transform: scale(.7); } 54% { opacity: 1; transform: scale(1); } 61% { opacity: 1; transform: scale(1); } 63%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-ghosttag { 0%, 52% { opacity: 0; } 55%, 61% { opacity: 1; } 63%, 100% { opacity: 0; } }
+@keyframes t7-ghoststrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 59.5% { stroke-dashoffset: 0; } 61% { opacity: 1; stroke-dashoffset: 0; } 63%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t7-distinct { 0%, 63% { opacity: 0; } 65.5%, 70% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t7-hider { 0%, 72% { opacity: 0; } 75%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t7-hidetag { 0%, 74% { opacity: 0; } 77%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t7-hidestrike { 0%, 85% { opacity: 1; stroke-dashoffset: 1; } 87.5% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t7-glow { 0%, 82% { opacity: 0; transform: scale(.5); } 85% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-pulse1 { 0%, 76% { opacity: 0; transform: scale(.25); } 77% { opacity: .7; transform: scale(.28); } 84% { opacity: 0; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-pulse2 { 0%, 80% { opacity: 0; transform: scale(.25); } 81% { opacity: .7; transform: scale(.28); } 88% { opacity: 0; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-pulse3 { 0%, 84% { opacity: 0; transform: scale(.25); } 85% { opacity: .7; transform: scale(.28); } 92% { opacity: 0; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t7-ringlabel { 0%, 88% { opacity: 0; } 91%, 95% { opacity: 1; } 100% { opacity: 0; } }

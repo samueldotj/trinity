@@ -1,0 +1,36 @@
+/* Teaching 34, The Holy Spirit glorifies the Son: 24 seconds in four scenes. */
+.anim-t34 * { animation-duration: 24s; }
+.anim-t34 .a-sondim, .anim-t34 .a-beam, .anim-t34 .a-sight, .anim-t34 .a-card, .anim-t34 .a-receives, .anim-t34 .a-discloses, .anim-t34 .a-own, .anim-t34 .a-strike { opacity: 0; }
+.anim-t34 .a-son { animation-name: t34-person; }
+.anim-t34 .a-spirit { animation-name: t34-person; }
+.anim-t34 .a-sondim { animation-name: t34-sondim; }
+.anim-t34 .a-beam { animation-name: t34-beam; }
+.anim-t34 .a-halo { animation-name: t34-halo; }
+.anim-t34 .a-people { animation-name: t34-people; }
+.anim-t34 .a-sight { animation-name: t34-sight; animation-timing-function: linear; }
+.anim-t34 .a-card { animation-name: t34-card; }
+.anim-t34 .a-receives { animation-name: t34-receives; }
+.anim-t34 .a-discloses { animation-name: t34-discloses; }
+.anim-t34 .a-own { animation-name: t34-own; }
+.anim-t34 .a-strike { animation-name: t34-strike; }
+.anim-t34 .a-father { animation-name: t34-father; }
+.anim-t34 .a-flines { animation-name: t34-flines; }
+.anim-t34 .a-arrow { animation-name: t34-arrow; }
+.anim-t34 .a-glory { animation-name: t34-glory; }
+.anim-t34 .a-equal { animation-name: t34-equal; }
+@keyframes t34-person { 0% { opacity: 0; transform: scale(.7); } 3% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t34-sondim { 0% { opacity: 0; } 3%, 7% { opacity: 1; } 10.5%, 100% { opacity: 0; } }
+@keyframes t34-beam { 0%, 4% { opacity: 0; } 7.5%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t34-halo { 0%, 7% { opacity: 0; transform: scale(.8); } 11% { opacity: 1; transform: scale(1.08); } 13% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t34-people { 0%, 10% { opacity: 0; transform: scale(.7); } 13% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t34-sight { 0% { opacity: 0; stroke-dashoffset: 0; } 12.5% { opacity: 0; } 15.5%, 19.5% { opacity: 1; } 22.5% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -600; } }
+@keyframes t34-card { 0%, 23% { opacity: 0; transform: translate(0px, 0px); } 25.5% { opacity: 1; transform: translate(0px, 0px); } 31% { transform: translate(260px, 0px); } 34% { transform: translate(260px, 0px); } 41% { opacity: 1; transform: translate(130px, 232px); } 44.5%, 100% { opacity: 0; transform: translate(130px, 232px); } }
+@keyframes t34-receives { 0%, 26.5% { opacity: 0; } 29%, 43.5% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t34-discloses { 0%, 35% { opacity: 0; } 37.5%, 43.5% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t34-own { 0%, 47% { opacity: 0; transform: translateY(-40px); } 50.5% { opacity: 1; transform: translateY(0px); } 66% { opacity: 1; transform: translateY(0px); } 69.5%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t34-strike { 0%, 54% { opacity: 1; stroke-dashoffset: 1; } 57.5% { stroke-dashoffset: 0; } 66% { opacity: 1; stroke-dashoffset: 0; } 69.5%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t34-father { 0%, 72% { opacity: 0; transform: scale(.7); } 76% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t34-flines { 0%, 75% { opacity: 1; stroke-dashoffset: 1; } 79% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t34-arrow { 0%, 77% { opacity: 1; stroke-dashoffset: 1; } 81% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t34-glory { 0%, 80% { opacity: 0; } 83%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t34-equal { 0%, 84% { opacity: 0; transform: scale(.8); } 88% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }

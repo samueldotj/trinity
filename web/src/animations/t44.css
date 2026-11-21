@@ -1,0 +1,43 @@
+/* Teaching 44, The Son’s human nature is created, but His divine nature is eternal: 24 seconds in four scenes. */
+.anim-t44 * { animation-duration: 24s; }
+.anim-t44 .a-fp, .anim-t44 .a-ghostbar, .anim-t44 .a-barstrike, .anim-t44 .a-post, .anim-t44 .a-posttag, .anim-t44 .a-poststrike { opacity: 0; }
+.anim-t44 .a-son { animation-name: t44-son; }
+.anim-t44 .a-split { animation-name: t44-split; }
+.anim-t44 .a-band { animation-name: t44-band; }
+.anim-t44 .a-bandends { animation-name: t44-bandends; }
+.anim-t44 .a-fp { animation-name: t44-fp; }
+.anim-t44 .a-history { animation-name: t44-history; }
+.anim-t44 .a-ticks { animation-name: t44-ticks; }
+.anim-t44 .a-mark { animation-name: t44-mark; }
+.anim-t44 .a-marklab { animation-name: t44-marklab; }
+.anim-t44 .a-bar { animation-name: t44-bar; }
+.anim-t44 .a-bartext { animation-name: t44-bartext; }
+.anim-t44 .a-took { animation-name: t44-took; }
+.anim-t44 .a-tooklab { animation-name: t44-tooklab; }
+.anim-t44 .a-post { animation-name: t44-post; }
+.anim-t44 .a-posttag { animation-name: t44-posttag; }
+.anim-t44 .a-poststrike { animation-name: t44-poststrike; }
+.anim-t44 .a-ghostbar { animation-name: t44-ghostbar; }
+.anim-t44 .a-barstrike { animation-name: t44-barstrike; }
+.anim-t44 .a-oneperson { animation-name: t44-oneperson; }
+.anim-t44 .a-distinct { animation-name: t44-distinct; }
+@keyframes t44-son { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 75% { transform: scale(1); } 77.5% { transform: scale(1.08); } 80% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t44-split { 0%, 40% { opacity: 0; } 43%, 100% { opacity: 1; } }
+@keyframes t44-band { 0%, 3% { opacity: 1; stroke-dashoffset: 1; } 9% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t44-bandends { 0%, 8% { opacity: 0; } 11%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t44-fp { 0%, 9% { opacity: 0; transform: scale(.5); } 13% { opacity: 1; transform: scale(1); } 19% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t44-history { 0%, 23% { opacity: 1; stroke-dashoffset: 1; } 27% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t44-ticks { 0%, 25% { opacity: 0; } 28%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t44-mark { 0%, 28% { opacity: 0; transform: translateY(-30px); } 31% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t44-marklab { 0%, 30% { opacity: 0; } 33%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t44-bar { 0%, 31% { opacity: 0; transform: scaleX(0); } 32% { opacity: 1; transform: scaleX(.02); } 36% { opacity: 1; transform: scaleX(1); } 95% { opacity: 1; transform: scaleX(1); } 100% { opacity: 0; transform: scaleX(1); } }
+@keyframes t44-bartext { 0%, 35% { opacity: 0; } 37%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t44-took { 0%, 36% { opacity: 1; stroke-dashoffset: 1; } 40% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t44-tooklab { 0%, 39% { opacity: 0; } 41%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t44-post { 0%, 47% { opacity: 0; transform: translateY(-14px); } 50% { opacity: 1; transform: translateY(0px); } 57% { opacity: 1; transform: translateY(0px); } 59%, 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t44-posttag { 0%, 48% { opacity: 0; } 51%, 57% { opacity: 1; } 59%, 100% { opacity: 0; } }
+@keyframes t44-poststrike { 0%, 52% { opacity: 1; stroke-dashoffset: 1; } 55% { stroke-dashoffset: 0; } 57% { opacity: 1; stroke-dashoffset: 0; } 59%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t44-ghostbar { 0%, 59% { opacity: 0; transform: translateX(40px); } 62% { opacity: 1; transform: translateX(0px); } 69% { opacity: 1; transform: translateX(0px); } 71%, 100% { opacity: 0; transform: translateX(0px); } }
+@keyframes t44-barstrike { 0%, 64% { opacity: 1; stroke-dashoffset: 1; } 67% { stroke-dashoffset: 0; } 69% { opacity: 1; stroke-dashoffset: 0; } 71%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t44-oneperson { 0%, 74% { opacity: 0; transform: scale(.7); } 77% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t44-distinct { 0%, 79% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }

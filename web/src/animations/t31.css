@@ -1,0 +1,50 @@
+/* Teaching 31, The Father sends the Son: 24 seconds in four scenes. */
+.anim-t31 * { animation-duration: 24s; }
+.anim-t31 .a-eternal, .anim-t31 .a-begins, .anim-t31 .a-beginstrike, .anim-t31 .a-servant, .anim-t31 .a-servantstrike, .anim-t31 .a-freely, .anim-t31 .a-angry, .anim-t31 .a-angrystrike { opacity: 0; }
+.anim-t31 .a-world { animation-name: t31-world; }
+.anim-t31 .a-worldglow { animation-name: t31-worldglow; }
+.anim-t31 .a-sends { animation-name: t31-sends; }
+.anim-t31 .a-sendshead { animation-name: t31-sendshead; }
+.anim-t31 .a-love { animation-name: t31-love; }
+.anim-t31 .a-trail { animation-name: t31-trail; }
+.anim-t31 .a-trailhead { animation-name: t31-trailhead; }
+.anim-t31 .a-edgepill { animation-name: t31-edgepill; }
+.anim-t31 .a-father { animation-name: t31-father; }
+.anim-t31 .a-human { animation-name: t31-human; }
+.anim-t31 .a-sonmove { animation-name: t31-sonmove; }
+.anim-t31 .a-son { animation-name: t31-son; }
+.anim-t31 .a-eternal { animation-name: t31-eternal; }
+.anim-t31 .a-begins { animation-name: t31-begins; }
+.anim-t31 .a-beginstrike { animation-name: t31-beginstrike; }
+.anim-t31 .a-born { animation-name: t31-born; }
+.anim-t31 .a-servant { animation-name: t31-servant; }
+.anim-t31 .a-servantstrike { animation-name: t31-servantstrike; }
+.anim-t31 .a-freely { animation-name: t31-freely; }
+.anim-t31 .a-angry { animation-name: t31-angry; }
+.anim-t31 .a-angrystrike { animation-name: t31-angrystrike; }
+.anim-t31 .a-lovepill { animation-name: t31-lovepill; }
+.anim-t31 .a-save { animation-name: t31-save; }
+.anim-t31 .a-love { animation-timing-function: linear; }
+@keyframes t31-world { 0%, 1% { opacity: 0; } 5%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t31-father { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-son { 0%, 1% { opacity: 0; transform: scale(.6); } 5% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-sonmove { 0%, 24% { transform: translateY(-310px); } 32%, 100% { transform: translateY(0px); } }
+@keyframes t31-eternal { 0%, 4% { opacity: 0; transform: scale(.7); } 7% { opacity: 1; transform: scale(1); } 20% { opacity: 1; transform: scale(1); } 22%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-begins { 0%, 9% { opacity: 0; } 12%, 19% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t31-beginstrike { 0%, 13% { opacity: 1; stroke-dashoffset: 1; } 16% { stroke-dashoffset: 0; } 19% { opacity: 1; stroke-dashoffset: 0; } 22%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t31-sends { 0%, 23% { opacity: 1; stroke-dashoffset: 1; } 29% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t31-sendshead { 0%, 28% { opacity: 0; } 30%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t31-trail { 0%, 24% { opacity: 1; stroke-dashoffset: 1; } 32% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t31-trailhead { 0%, 31% { opacity: 0; } 33%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t31-edgepill { 0%, 32% { opacity: 0; transform: scale(.7); } 35% { opacity: 1; transform: scale(1); } 60% { transform: scale(1); } 62% { transform: scale(1.12); } 64% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-human { 0%, 33% { opacity: 0; transform: scale(.7); } 37% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-born { 0%, 36% { opacity: 0; transform: scale(.7); } 39% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-servant { 0%, 47% { opacity: 0; } 50%, 56% { opacity: 1; } 58%, 100% { opacity: 0; } }
+@keyframes t31-servantstrike { 0%, 51% { opacity: 1; stroke-dashoffset: 1; } 54% { stroke-dashoffset: 0; } 56% { opacity: 1; stroke-dashoffset: 0; } 58%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t31-freely { 0%, 58% { opacity: 0; transform: scale(.7); } 61% { opacity: 1; transform: scale(1); } 69% { opacity: 1; transform: scale(1); } 72%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-angry { 0%, 72% { opacity: 0; } 75%, 81% { opacity: 1; } 83%, 100% { opacity: 0; } }
+@keyframes t31-angrystrike { 0%, 76% { opacity: 1; stroke-dashoffset: 1; } 79% { stroke-dashoffset: 0; } 81% { opacity: 1; stroke-dashoffset: 0; } 83%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t31-lovepill { 0%, 83% { opacity: 0; transform: scale(.7); } 86% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-love { 0% { stroke-dashoffset: 0; opacity: 0; } 84% { opacity: 0; } 87%, 95% { opacity: 1; } 100% { stroke-dashoffset: -330; opacity: 0; } }
+@keyframes t31-save { 0%, 88% { opacity: 0; transform: scale(.7); } 91% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t31-worldglow { 0%, 88% { opacity: 0; } 91%, 95% { opacity: 1; } 100% { opacity: 0; } }

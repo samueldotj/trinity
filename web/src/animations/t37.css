@@ -1,0 +1,41 @@
+/* Teaching 37, The Holy Spirit speaks, teaches, and wills: 24 seconds in four scenes. */
+.anim-t37 * { animation-duration: 24s; }
+.anim-t37 .a-bubble, .anim-t37 .a-called, .anim-t37 .a-names, .anim-t37 .a-book, .anim-t37 .a-teach, .anim-t37 .a-said, .anim-t37 .a-gifta, .anim-t37 .a-giftb, .anim-t37 .a-determines, .anim-t37 .a-force, .anim-t37 .a-strike { opacity: 0; }
+.anim-t37 .a-spirit { animation-name: t37-spirit; }
+.anim-t37 .a-church { animation-name: t37-church; }
+.anim-t37 .a-people { animation-name: t37-people; }
+.anim-t37 .a-bubble { animation-name: t37-bubble; }
+.anim-t37 .a-called { animation-name: t37-called; }
+.anim-t37 .a-names { animation-name: t37-names; }
+.anim-t37 .a-book { animation-name: t37-book; }
+.anim-t37 .a-bookline { animation-name: t37-bookline; }
+.anim-t37 .a-booklineb { animation-name: t37-booklineb; }
+.anim-t37 .a-teach { animation-name: t37-teach; animation-timing-function: linear; }
+.anim-t37 .a-said { animation-name: t37-said; }
+.anim-t37 .a-gifta { animation-name: t37-gifta; }
+.anim-t37 .a-giftb { animation-name: t37-giftb; }
+.anim-t37 .a-determines { animation-name: t37-determines; }
+.anim-t37 .a-force { animation-name: t37-force; }
+.anim-t37 .a-strike { animation-name: t37-strike; }
+.anim-t37 .a-arrow { animation-name: t37-arrow; }
+.anim-t37 .a-label { animation-name: t37-label; }
+.anim-t37 .a-note { animation-name: t37-note; }
+@keyframes t37-spirit { 0% { opacity: 0; transform: scale(.7); } 3% { opacity: 1; transform: scale(1); } 86% { transform: scale(1); } 88% { transform: scale(1.08); } 90% { transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t37-church { 0% { opacity: 0; } 4%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t37-people { 0%, 2% { opacity: 0; transform: scale(.7); } 5% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t37-bubble { 0%, 4% { opacity: 0; transform: translateY(-70px) scale(.5); } 8% { opacity: 1; transform: translateY(0px) scale(1); } 20% { opacity: 1; transform: translateY(0px) scale(1); } 22.5%, 100% { opacity: 0; transform: translateY(0px) scale(1); } }
+@keyframes t37-called { 0%, 9.5% { opacity: 0; } 12.5%, 20% { opacity: 1; } 22.5%, 100% { opacity: 0; } }
+@keyframes t37-names { 0%, 10.5% { opacity: 0; } 13.5%, 20% { opacity: 1; } 22.5%, 100% { opacity: 0; } }
+@keyframes t37-book { 0%, 23% { opacity: 0; transform: scale(.6); } 26% { opacity: 1; transform: scale(1); } 43% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t37-bookline { 0%, 26% { stroke-dashoffset: 1; } 29%, 100% { stroke-dashoffset: 0; } }
+@keyframes t37-booklineb { 0%, 29% { stroke-dashoffset: 1; } 32%, 100% { stroke-dashoffset: 0; } }
+@keyframes t37-teach { 0% { opacity: 0; stroke-dashoffset: 0; } 31% { opacity: 0; } 34%, 43% { opacity: 1; } 46% { opacity: 0; } 100% { opacity: 0; stroke-dashoffset: -600; } }
+@keyframes t37-said { 0%, 33.5% { opacity: 0; } 36.5%, 43% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes t37-gifta { 0%, 48% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.5); } 50% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(.6); } 56% { transform: translate(0px, 0px) scale(1); } 57.5% { transform: translate(0px, 0px) scale(1.3); } 59% { transform: translate(0px, 0px) scale(1); } 69% { opacity: 1; transform: translate(0px, 0px) scale(1); } 72%, 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t37-giftb { 0%, 53% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.5); } 55% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(.6); } 61% { transform: translate(0px, 0px) scale(1); } 62.5% { transform: translate(0px, 0px) scale(1.3); } 64% { transform: translate(0px, 0px) scale(1); } 69% { opacity: 1; transform: translate(0px, 0px) scale(1); } 72%, 100% { opacity: 0; transform: translate(0px, 0px) scale(1); } }
+@keyframes t37-determines { 0%, 57% { opacity: 0; } 60%, 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t37-force { 0%, 72.5% { opacity: 0; transform: scale(.8); } 75.5% { opacity: 1; transform: scale(1); } 84% { opacity: 1; transform: scale(1); } 87%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t37-strike { 0%, 77.5% { opacity: 1; stroke-dashoffset: 1; } 81% { stroke-dashoffset: 0; } 84% { opacity: 1; stroke-dashoffset: 0; } 87%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t37-arrow { 0%, 82% { opacity: 1; stroke-dashoffset: 1; } 86% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t37-label { 0%, 85.5% { opacity: 0; } 88%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t37-note { 0%, 86% { opacity: 0; } 89%, 95% { opacity: 1; } 100% { opacity: 0; } }
