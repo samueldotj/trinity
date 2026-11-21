@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t34.css';
 
 // ---------- Teaching 34: The Holy Spirit glorifies the Son ----------
-// 40 seconds: the Spirit's light falls on the Son and people see Him; what is Christ's passes through the
+// 30 seconds: the Spirit's light falls on the Son and people see Him; what is Christ's passes through the
 // Spirit to us; a message of the Spirit's own is struck out; the Father joins, the Spirit glorifies the Son.
 
 function spiritGlorifiesSon(): string {
-  return frame(34, 40000, [
+  return frame(34, 30000, [
     { label: 'Shows us Jesus', at: 0, caption: 'The Spirit’s work is to show us who Jesus is: He opens our eyes to His glory.' },
     { label: 'Takes what is Christ’s', at: 0.22, caption: 'He takes what is Christ’s and makes it known, bringing His words home to us.' },
     { label: 'No message of His own', at: 0.46, caption: 'He brings no different message of His own, nothing beyond Christ.' },

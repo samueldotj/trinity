@@ -1,5 +1,5 @@
-/* Teaching 39, Salvation is the work of the Father, Son, and Holy Spirit: 40 seconds in four scenes. */
-.anim-t39 * { animation-duration: 40s; }
+/* Teaching 39, Salvation is the work of the Father, Son, and Holy Spirit: 30 seconds in four scenes. */
+.anim-t39 * { animation-duration: 30s; }
 .anim-t39 .a-chosen, .anim-t39 .a-before, .anim-t39 .a-chainl, .anim-t39 .a-chainr, .anim-t39 .a-cross, .anim-t39 .a-stern, .anim-t39 .a-sternstrike { opacity: 0; }
 .anim-t39 .a-person { animation-name: t39-person; }
 .anim-t39 .a-box { animation-name: t39-box; }

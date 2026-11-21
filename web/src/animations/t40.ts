@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t40.css';
 
 // ---------- Teaching 40: Baptism identifies believers with the Father, Son, and Holy Spirit ----------
-// 40 seconds: Father, Son and Spirit named into one name as a believer goes under the water; the believer
+// 30 seconds: Father, Son and Spirit named into one name as a believer goes under the water; the believer
 // is joined to that name; three gods and two helpers struck out; all three named equally, one God.
 
 function baptismOneName(): string {
-  return frame(40, 40000, [
+  return frame(40, 30000, [
     { label: 'Baptised in the name', at: 0, caption: 'Baptised “in the name of the Father and of the Son and of the Holy Spirit.”' },
     { label: 'Belonging to Him', at: 0.22, caption: 'Baptised in His name, the believer is handed over to belong to Him.' },
     { label: 'Not three gods', at: 0.46, caption: 'Not baptised into three gods, nor into the Father with two lesser helpers.' },

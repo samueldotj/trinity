@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t26.css';
 
 // ---------- Teaching 26: The Father loves the Son eternally ----------
-// 40 seconds: love flowing from the Father to the Son before the world was made; a lonely God, needing someone
+// 30 seconds: love flowing from the Father to the Son before the world was made; a lonely God, needing someone
 // to love, struck out; started, grew and faded bounce off the steady love; that love flows out to us.
 
 function fatherLovesSon(): string {
-  return frame(26, 40000, [
+  return frame(26, 30000, [
     { label: 'Before the world began', at: 0, caption: 'Before anything was made, the Father and the Son already shared perfect love.' },
     { label: 'Not lonely', at: 0.22, caption: 'God was not lonely: He did not need to make the world to have someone to love.' },
     { label: 'Never began or faded', at: 0.46, caption: 'This love never started, grew or faded: it is who God eternally is.' },

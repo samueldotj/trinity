@@ -1,5 +1,5 @@
-/* Teaching 42, The Son remained fully God when He became man: 40 seconds in four scenes. */
-.anim-t42 * { animation-duration: 40s; }
+/* Teaching 42, The Son remained fully God when He became man: 30 seconds in four scenes. */
+.anim-t42 * { animation-duration: 30s; }
 .anim-t42 .a-adult, .anim-t42 .a-godnote, .anim-t42 .a-giveup, .anim-t42 .a-upstrike, .anim-t42 .a-godpart, .anim-t42 .a-manpart, .anim-t42 .a-blend, .anim-t42 .a-blendtag, .anim-t42 .a-blendstrike, .anim-t42 .a-both { opacity: 0; }
 .anim-t42 .a-god { animation-name: t42-god; }
 .anim-t42 .a-son { animation-name: t42-son; }

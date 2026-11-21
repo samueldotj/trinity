@@ -1,5 +1,5 @@
-/* Teaching 26, The Father loves the Son eternally: 40 seconds in four scenes. */
-.anim-t26 * { animation-duration: 40s; }
+/* Teaching 26, The Father loves the Son eternally: 30 seconds in four scenes. */
+.anim-t26 * { animation-duration: 30s; }
 .anim-t26 .a-world, .anim-t26 .a-before, .anim-t26 .a-lonely, .anim-t26 .a-need, .anim-t26 .a-lonelystrike, .anim-t26 .a-chip, .anim-t26 .a-steady { opacity: 0; }
 .anim-t26 .a-f { animation-name: t26-f; }
 .anim-t26 .a-s { animation-name: t26-s; }

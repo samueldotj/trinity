@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t6.css';
 
 // ---------- Teaching 6: God is Invisible ----------
-// 40 seconds: an eye, even with a lens, finds nothing to see; a statue and a huge bright figure are struck
+// 30 seconds: an eye, even with a lens, finds nothing to see; a statue and a huge bright figure are struck
 // out; fire, a cloud and a vision show Him; the Son, Himself God, comes and makes the unseen God known.
 
 const pill6 = (cls: string, x: number, y: number, w: number, text: string, stroke = '#33449A', ink = '#33449A', fill = '#FFFFFF') =>
@@ -15,7 +15,7 @@ const label6 = (cls: string, x: number, y: number, text: string, ink = '#4A5168'
   `<g transform="translate(${x},${y})"><g class="${cls}"><text text-anchor="middle" font-size="14" font-weight="600" fill="${ink}" ${P}>${text}</text></g></g>`;
 
 function godIsInvisible(): string {
-  return frame(6, 40000, [
+  return frame(6, 30000, [
     { label: 'No eye can see Him', at: 0, caption: 'God has no body and is not made of matter: no eye, however sharp, sees Him.' },
     { label: 'No image shows Him', at: 0.22, caption: 'No statue or image, and no huge, bright creature, can show what He truly is.' },
     { label: 'Shown through signs', at: 0.46, caption: 'When people “saw” God, He showed Himself through fire, a cloud or a vision.' },

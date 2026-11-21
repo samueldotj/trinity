@@ -1,5 +1,5 @@
-/* Teaching 35, The Son prays to the Father: 40 seconds in four scenes. */
-.anim-t35 * { animation-duration: 40s; }
+/* Teaching 35, The Son prays to the Father: 30 seconds in four scenes. */
+.anim-t35 * { animation-duration: 30s; }
 .anim-t35 .a-bubble1, .anim-t35 .a-you, .anim-t35 .a-actor, .anim-t35 .a-mask, .anim-t35 .a-maskpill, .anim-t35 .a-maskstrike, .anim-t35 .a-cup, .anim-t35 .a-bubble2, .anim-t35 .a-obey { opacity: 0; }
 .anim-t35 .a-person { animation-name: t35-person; }
 .anim-t35 .a-bubble1 { animation-name: t35-bubble1; }

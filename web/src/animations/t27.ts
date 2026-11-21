@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t27.css';
 
 // ---------- Teaching 27: The Son eternally shares the Father’s glory ----------
-// 40 seconds: one glory shines round Father and Son before the world begins; received, earned, borrowed
+// 30 seconds: one glory shines round Father and Son before the world begins; received, earned, borrowed
 // struck out; glory passed to a creature struck out; as man the Son’s glory is veiled, yet still shines.
 
 function sonSharesGlory(): string {
-  return frame(27, 40000, [
+  return frame(27, 30000, [
     { label: 'Before the world', at: 0, caption: 'Before the world existed, the Son already had glory with the Father.' },
     { label: 'Not earned or borrowed', at: 0.22, caption: 'He did not receive it later, earn it or borrow it: He has always shared it.' },
     { label: 'Given to no creature', at: 0.46, caption: 'God gives His glory to no creature: the Son is not made, nor a lesser God.' },

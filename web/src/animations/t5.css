@@ -1,5 +1,5 @@
-/* Teaching 5, God is Immutable: 40 seconds in four scenes. */
-.anim-t5 * { animation-duration: 40s; }
+/* Teaching 5, God is Immutable: 30 seconds in four scenes. */
+.anim-t5 * { animation-duration: 30s; }
 .anim-t5 .a-chip, .anim-t5 .a-nochange, .anim-t5 .a-ground, .anim-t5 .a-sun, .anim-t5 .a-shadow, .anim-t5 .a-noshadow, .anim-t5 .a-virtue, .anim-t5 .a-card, .anim-t5 .a-year1, .anim-t5 .a-year2, .anim-t5 .a-year3 { opacity: 0; }
 .anim-t5 .a-god { animation-name: t5-god; }
 .anim-t5 .a-ring { animation-name: t5-ring; }

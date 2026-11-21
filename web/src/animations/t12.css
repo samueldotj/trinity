@@ -1,5 +1,5 @@
-/* Teaching 12, The Holy Spirit is God: 40 seconds in four scenes. */
-.anim-t12 * { animation-duration: 40s; }
+/* Teaching 12, The Holy Spirit is God: 30 seconds in four scenes. */
+.anim-t12 * { animation-duration: 30s; }
 .anim-t12 .a-fire, .anim-t12 .a-wave, .anim-t12 .a-forcetag, .anim-t12 .a-forcestrike, .anim-t12 .a-token, .anim-t12 .a-actline, .anim-t12 .a-act1, .anim-t12 .a-act2, .anim-t12 .a-act3, .anim-t12 .a-person, .anim-t12 .a-temple, .anim-t12 .a-pillar, .anim-t12 .a-templelabel, .anim-t12 .a-dwells, .anim-t12 .a-ananias, .anim-t12 .a-lie1, .anim-t12 .a-lie1head, .anim-t12 .a-lie1label, .anim-t12 .a-lie2, .anim-t12 .a-lie2head, .anim-t12 .a-lie2label { opacity: 0; }
 .anim-t12 .a-fire { animation-name: t12-fire; }
 .anim-t12 .a-wave { animation-name: t12-wave; }

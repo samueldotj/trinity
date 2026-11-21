@@ -1,5 +1,5 @@
-/* Teaching 34, The Holy Spirit glorifies the Son: 40 seconds in four scenes. */
-.anim-t34 * { animation-duration: 40s; }
+/* Teaching 34, The Holy Spirit glorifies the Son: 30 seconds in four scenes. */
+.anim-t34 * { animation-duration: 30s; }
 .anim-t34 .a-sondim, .anim-t34 .a-beam, .anim-t34 .a-sight, .anim-t34 .a-card, .anim-t34 .a-receives, .anim-t34 .a-discloses, .anim-t34 .a-own, .anim-t34 .a-strike { opacity: 0; }
 .anim-t34 .a-son { animation-name: t34-person; }
 .anim-t34 .a-spirit { animation-name: t34-person; }

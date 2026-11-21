@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t25.css';
 
 // ---------- Teaching 25: The Persons are distinguished by eternal relations of origin ----------
-// 40 seconds: one nature in the centre shared by all three, with power, glory, wisdom and love; sizes of more or
+// 30 seconds: one nature in the centre shared by all three, with power, glory, wisdom and love; sizes of more or
 // less divine struck out; where each comes from drawn in; a start in time and a lesser God struck out.
 
 function relationsOfOrigin(): string {
-  return frame(25, 40000, [
+  return frame(25, 30000, [
     { label: 'Everything else shared', at: 0, caption: 'In power, glory, wisdom and love the three share the one divine nature fully.' },
     { label: 'Not by rank or degree', at: 0.22, caption: 'They are not told apart by one being more divine, of higher rank, or first.' },
     { label: 'Relations of origin', at: 0.46, caption: 'The Father is from no one; the Son is begotten; the Spirit proceeds from both.' },

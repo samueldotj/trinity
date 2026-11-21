@@ -14,7 +14,7 @@ export interface Scene { label: string; caption: string; at: number }
 const PAUSE = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/></svg>';
 const PLAY = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z" fill="currentColor"/></svg>';
 
-/** Playback speeds, slowest first; "Normal" plays each loop in its own time (40 seconds). */
+/** Playback speeds, slowest first; "Normal" plays each loop in its own time (30 seconds). */
 const SPEEDS: [string, number][] = [
   ['Slowest', 0.25], ['Slower', 0.5], ['Slow', 0.75], ['Normal', 1], ['Fast', 1.5], ['Faster', 2], ['Fastest', 3],
 ];
@@ -51,9 +51,10 @@ export function frame(n: number, ms: number, scenes: Scene[], svg: string): stri
  * animation, captions and labels with it, from where it is. Runs each time the slide is shown.
  *
  * With `controls: false` (the Explanations page, for reading rather than presenting) the pause button and
- * speed menu are taken away and the animation simply plays at normal speed; the scene buttons stay.
+ * speed menu are taken away and the animation simply plays, each loop in `seconds` (default: its own
+ * length); the scene buttons stay.
  */
-export function wireAnimation(body: HTMLElement, { controls = true }: { controls?: boolean } = {}): void {
+export function wireAnimation(body: HTMLElement, { controls = true, seconds }: { controls?: boolean; seconds?: number } = {}): void {
   const box = body.querySelector<HTMLElement>('.anim');
   if (!box) return;
   if (!controls) {
@@ -76,7 +77,11 @@ export function wireAnimation(body: HTMLElement, { controls = true }: { controls
     const t = Number(b.dataset.at);
     all().forEach((a) => { a.currentTime = t; });
   }));
-  if (!controls) return;
+  if (!controls) {
+    const loop = Number(all()[0]?.effect?.getTiming().duration) || 0;
+    if (seconds && loop) all().forEach((a) => { a.playbackRate = loop / (seconds * 1000); });
+    return;
+  }
 
   const toggle = box.querySelector<HTMLButtonElement>('.anim-toggle')!;
   const speed = box.querySelector<HTMLSelectElement>('.anim-speed select')!;

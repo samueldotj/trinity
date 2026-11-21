@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t8.css';
 
 // ---------- Teaching 8: God is Indivisible ----------
-// 40 seconds: four pieces fit together as God and are struck out, and a blade cannot cut Him; a pie of three
+// 30 seconds: four pieces fit together as God and are struck out, and a blade cannot cut Him; a pie of three
 // slices is struck out; each Person is the whole God, not a third; love, justice and power flow into God.
 
 const pill8 = (cls: string, x: number, y: number, w: number, text: string, stroke = '#33449A', ink = '#33449A', fill = '#FFFFFF') =>
@@ -28,7 +28,7 @@ const attr8 = (x: number, y: number, w: number, text: string) =>
   `<g transform="translate(${x},${y})"><g class="a-attr" style="--dx: ${300 - x}px; --dy: ${200 - y}px"><rect x="${-w / 2}" y="-15" width="${w}" height="30" rx="15" fill="#E3E9F7" stroke="#2849B8"></rect><text y="5" text-anchor="middle" font-size="14" font-weight="600" fill="#1A3285" ${P}>${text}</text></g></g>`;
 
 function godIsIndivisible(): string {
-  return frame(8, 40000, [
+  return frame(8, 30000, [
     { label: 'No pieces', at: 0, caption: 'God is not built out of pieces put together, and He cannot be split up.' },
     { label: 'Not a pie in three', at: 0.22, caption: 'Father, Son and Spirit are not three slices that add up to one God.' },
     { label: 'Each the whole God', at: 0.46, caption: 'Not a third of God each: each Person is the whole God.' },

@@ -1,5 +1,5 @@
-/* Teaching 44, The Son’s human nature is created, but His divine nature is eternal: 40 seconds in four scenes. */
-.anim-t44 * { animation-duration: 40s; }
+/* Teaching 44, The Son’s human nature is created, but His divine nature is eternal: 30 seconds in four scenes. */
+.anim-t44 * { animation-duration: 30s; }
 .anim-t44 .a-fp, .anim-t44 .a-ghostbar, .anim-t44 .a-barstrike, .anim-t44 .a-post, .anim-t44 .a-posttag, .anim-t44 .a-poststrike { opacity: 0; }
 .anim-t44 .a-son { animation-name: t44-son; }
 .anim-t44 .a-split { animation-name: t44-split; }

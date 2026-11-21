@@ -1,5 +1,5 @@
-/* Teaching 22, The Father is eternally Father: 40 seconds in four scenes. */
-.anim-t22 * { animation-duration: 40s; }
+/* Teaching 22, The Father is eternally Father: 30 seconds in four scenes. */
+.anim-t22 * { animation-duration: 30s; }
 .anim-t22 .a-time, .anim-t22 .a-goddot, .anim-t22 .a-ask1, .anim-t22 .a-askstrike1, .anim-t22 .a-ask2, .anim-t22 .a-askstrike2, .anim-t22 .a-bars, .anim-t22 .a-mask, .anim-t22 .a-maskstrike, .anim-t22 .a-masktag, .anim-t22 .a-masktagstrike { opacity: 0; }
 .anim-t22 .a-time { animation-name: t22-time; }
 .anim-t22 .a-goddot { animation-name: t22-goddot; }

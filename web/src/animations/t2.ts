@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t2.css';
 
 // ---------- Teaching 2: God is Spirit ----------
-// 40 seconds: a solid disc of body, size, shape and parts cracks and falls away, leaving God, who is Spirit;
+// 30 seconds: a solid disc of body, size, shape and parts cracks and falls away, leaving God, who is Spirit;
 // a human figure grows bigger and stronger and is struck out; a hand and an eye become power and care;
 // God is Spirit, no body and no parts.
 
@@ -57,7 +57,7 @@ function godIsSpirit(): string {
       </g></g>
       <g transform="translate(300,436)"><g class="a-spiritlabel"><rect x="-90" y="-15" width="180" height="30" rx="15" fill="#FFFFFF" stroke="#33449A"></rect><text y="5" text-anchor="middle" font-size="14" font-weight="600" fill="#33449A" ${P}>no body · no parts</text></g></g>
     </svg>`;
-  return frame(2, 40000, [
+  return frame(2, 30000, [
     { label: 'No matter', at: 0, caption: 'God is not made of matter: no body, no size or shape, no physical parts.' },
     { label: 'Not a bigger human', at: 0.22, caption: 'He is not a larger, stronger version of a human being.' },
     { label: 'Pictures, not parts', at: 0.46, caption: 'His “hand” and “eyes” are pictures of His real power and care.' },

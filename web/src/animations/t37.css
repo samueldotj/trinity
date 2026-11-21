@@ -1,5 +1,5 @@
-/* Teaching 37, The Holy Spirit speaks, teaches, and wills: 40 seconds in four scenes. */
-.anim-t37 * { animation-duration: 40s; }
+/* Teaching 37, The Holy Spirit speaks, teaches, and wills: 30 seconds in four scenes. */
+.anim-t37 * { animation-duration: 30s; }
 .anim-t37 .a-bubble, .anim-t37 .a-called, .anim-t37 .a-names, .anim-t37 .a-book, .anim-t37 .a-teach, .anim-t37 .a-said, .anim-t37 .a-gifta, .anim-t37 .a-giftb, .anim-t37 .a-determines, .anim-t37 .a-force, .anim-t37 .a-strike { opacity: 0; }
 .anim-t37 .a-spirit { animation-name: t37-spirit; }
 .anim-t37 .a-church { animation-name: t37-church; }

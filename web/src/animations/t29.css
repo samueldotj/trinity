@@ -1,5 +1,5 @@
-/* Teaching 29, The three Persons act inseparably in divine works: 40 seconds in four scenes. */
-.anim-t29 * { animation-duration: 40s; }
+/* Teaching 29, The three Persons act inseparably in divine works: 30 seconds in four scenes. */
+.anim-t29 * { animation-duration: 30s; }
 .anim-t29 .a-dot, .anim-t29 .a-joblines, .anim-t29 .a-job, .anim-t29 .a-jobstrike, .anim-t29 .a-team { opacity: 0; }
 .anim-t29 .a-godframe { animation-name: t29-godframe; }
 .anim-t29 .a-godpill { animation-name: t29-godpill; }

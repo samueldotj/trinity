@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t36.css';
 
 // ---------- Teaching 36: The Father speaks to the Son ----------
-// 40 seconds: at the Jordan the voice from heaven calls Jesus "My beloved Son"; the One speaking and the One
+// 30 seconds: at the Jordan the voice from heaven calls Jesus "My beloved Son"; the One speaking and the One
 // spoken of; one actor switching between roles is struck out; the Son prays and the Father answers.
 
 function fatherSpeaksToSon(): string {
-  return frame(36, 40000, [
+  return frame(36, 30000, [
     { label: 'A voice from heaven', at: 0, caption: 'Jesus stands in the Jordan; a voice from heaven calls Him “My beloved Son.”' },
     { label: 'Two real Persons', at: 0.22, caption: 'The One speaking and the One spoken of are clearly not the same Person.' },
     { label: 'Not one actor', at: 0.46, caption: 'God is not one Person acting sometimes as Father and sometimes as Son.' },

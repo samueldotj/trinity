@@ -1,5 +1,5 @@
-/* Teaching 27, The Son eternally shares the Father’s glory: 40 seconds in four scenes. */
-.anim-t27 * { animation-duration: 40s; }
+/* Teaching 27, The Son eternally shares the Father’s glory: 30 seconds in four scenes. */
+.anim-t27 * { animation-duration: 30s; }
 .anim-t27 .a-time, .anim-t27 .a-timegold, .anim-t27 .a-timetext, .anim-t27 .a-world, .anim-t27 .a-chip, .anim-t27 .a-chipstrike, .anim-t27 .a-always, .anim-t27 .a-giftarrow, .anim-t27 .a-giftlabel, .anim-t27 .a-giftstrike, .anim-t27 .a-creature, .anim-t27 .a-nocreature { opacity: 0; }
 .anim-t27 .a-glow { animation-name: t27-glow; }
 .anim-t27 .a-link { animation-name: t27-link; }

@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t19.css';
 
 // ---------- Teaching 19: The three Persons are coequal in deity ----------
-// 40 seconds: the Persons on a stair of rank, struck out, the stair falling level; three columns rising to
+// 30 seconds: the Persons on a stair of rank, struck out, the stair falling level; three columns rising to
 // the same full height; equal honour flowing to each; a triangle with "=" on every side, one name.
 
 const pill = (cls: string, x: number, y: number, w: number, text: string, stroke: string, ink: string, style = '', size = 14) =>
@@ -34,7 +34,7 @@ const figure = (x: number) =>
   `<g transform="translate(${x},462)"><circle cy="-50" r="10" fill="#6B7080"></circle><path d="M-15,-37 Q0,-42 15,-37 L17,-14 L9,-14 L8,0 L2,0 L0,-12 L-2,0 L-8,0 L-9,-14 L-17,-14 Z" fill="#6B7080"></path></g>`;
 
 function coequal(): string {
-  return frame(19, 40000, [
+  return frame(19, 30000, [
     { label: 'Not a ladder', at: 0, caption: 'The Father, the Son and the Spirit are not ranked as greater and lesser Gods.' },
     { label: 'Equally God', at: 0.22, caption: 'Each has the whole divine essence: equally almighty, holy and glorious.' },
     { label: 'Equal honour', at: 0.46, caption: 'All should honour the Son just as they honour the Father: equally worthy.' },

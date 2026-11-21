@@ -1,5 +1,5 @@
-/* Teaching 31, The Father sends the Son: 40 seconds in four scenes. */
-.anim-t31 * { animation-duration: 40s; }
+/* Teaching 31, The Father sends the Son: 30 seconds in four scenes. */
+.anim-t31 * { animation-duration: 30s; }
 .anim-t31 .a-eternal, .anim-t31 .a-begins, .anim-t31 .a-beginstrike, .anim-t31 .a-servant, .anim-t31 .a-servantstrike, .anim-t31 .a-freely, .anim-t31 .a-angry, .anim-t31 .a-angrystrike { opacity: 0; }
 .anim-t31 .a-world { animation-name: t31-world; }
 .anim-t31 .a-worldglow { animation-name: t31-worldglow; }

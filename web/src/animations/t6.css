@@ -1,5 +1,5 @@
-/* Teaching 6, God is Invisible: 40 seconds in four scenes. */
-.anim-t6 * { animation-duration: 40s; }
+/* Teaching 6, God is Invisible: 30 seconds in four scenes. */
+.anim-t6 * { animation-duration: 30s; }
 .anim-t6 .a-eye, .anim-t6 .a-lens, .anim-t6 .a-gaze, .anim-t6 .a-nobody, .anim-t6 .a-statue, .anim-t6 .a-giant, .anim-t6 .a-tag, .anim-t6 .a-strike1, .anim-t6 .a-strike2, .anim-t6 .a-signline, .anim-t6 .a-sign, .anim-t6 .a-signlabel, .anim-t6 .a-notbeing { opacity: 0; }
 .anim-t6 .a-god { animation-name: t6-god; }
 .anim-t6 .a-ring { animation-name: t6-ring; }

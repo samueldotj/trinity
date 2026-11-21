@@ -1,5 +1,5 @@
-/* Teaching 38, Creation is the work of the one Triune God: 40 seconds in four scenes. */
-.anim-t38 * { animation-duration: 40s; }
+/* Teaching 38, Creation is the work of the one Triune God: 30 seconds in four scenes. */
+.anim-t38 * { animation-duration: 30s; }
 .anim-t38 .a-wedge, .anim-t38 .a-sharestrike, .anim-t38 .a-whole, .anim-t38 .a-oneact, .anim-t38 .a-deep, .anim-t38 .a-beginning, .anim-t38 .a-hover, .anim-t38 .a-pulse, .anim-t38 .a-helper, .anim-t38 .a-helperstrike { opacity: 0; }
 .anim-t38 .a-wedge { animation-name: t38-wedge; }
 .anim-t38 .a-sharestrike { animation-name: t38-sharestrike; }

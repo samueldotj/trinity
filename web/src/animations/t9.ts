@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t9.css';
 
 // ---------- Teaching 9: God has one divine essence ----------
-// 40 seconds: what is God? one being; who? three Persons; three beings side by side in a room is struck out;
+// 30 seconds: what is God? one being; who? three Persons; three beings side by side in a room is struck out;
 // one figure changing three masks is struck out; one being, each Person God, no Person another.
 
 const pill9 = (cls: string, x: number, y: number, w: number, text: string, stroke = '#33449A', ink = '#33449A', fill = '#FFFFFF') =>
@@ -27,7 +27,7 @@ const mask9 = (cls: string, fill: string, name: string) =>
     </g></g>`;
 
 function oneDivineEssence(): string {
-  return frame(9, 40000, [
+  return frame(9, 30000, [
     { label: 'One what, three who', at: 0, caption: 'What is God? One divine being. Who is God? Three Persons.' },
     { label: 'Not three beings', at: 0.22, caption: 'Not three beings or three gods, side by side like three people in a room.' },
     { label: 'Not three masks', at: 0.46, caption: 'Nor one God wearing three masks: the three Persons are truly distinct.' },

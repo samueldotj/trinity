@@ -1,5 +1,5 @@
-/* Teaching 23, The Son is eternally begotten of the Father: 40 seconds in four scenes. */
-.anim-t23 * { animation-duration: 40s; }
+/* Teaching 23, The Son is eternally begotten of the Father: 30 seconds in four scenes. */
+.anim-t23 * { animation-duration: 30s; }
 .anim-t23 .a-made, .anim-t23 .a-creature, .anim-t23 .a-creaturestrike, .anim-t23 .a-when, .anim-t23 .a-whenstrike, .anim-t23 .a-always, .anim-t23 .a-second, .anim-t23 .a-secondstrike { opacity: 0; }
 .anim-t23 .a-f { animation-name: t23-f; }
 .anim-t23 .a-fgold { animation-name: t23-fgold; }

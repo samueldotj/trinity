@@ -199,7 +199,8 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
 
   // The illustration: the teaching's animation (as in presentation mode), or its still diagram if it has none.
   const animCard = root.querySelector<HTMLElement>('.anim-card');
-  if (animCard) wireAnimation(animCard, { controls: false });  // pause and speed are for presenting only
+  // Pause and speed are for presenting only; on the page each loop plays in 16 seconds (30 when presenting).
+  if (animCard) wireAnimation(animCard, { controls: false, seconds: 16 });
   else {
     const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;
     fitDiagram(open.querySelector<HTMLElement>('.diagram-fit')!, cur, root.querySelector<HTMLElement>('.diagram-card')!);

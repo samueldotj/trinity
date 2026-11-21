@@ -1,5 +1,5 @@
-/* Teaching 1, God is One: 40 seconds in four scenes. */
-.anim-t1 * { animation-duration: 40s; }
+/* Teaching 1, God is One: 30 seconds in four scenes. */
+.anim-t1 * { animation-duration: 30s; }
 .anim-t1 .a-god { animation-name: t1-god; }
 .anim-t1 .a-ring { animation-name: t1-ring; }
 .anim-t1 .a-ringlabel { animation-name: t1-ringlabel; }

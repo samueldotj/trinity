@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t22.css';
 
 // ---------- Teaching 22: The Father is eternally Father ----------
-// 40 seconds: God moving along time, "becomes Father?" at creation and at Jesus’ birth struck out; Father and
+// 30 seconds: God moving along time, "becomes Father?" at creation and at Jesus’ birth struck out; Father and
 // Son side by side from before the world; a mask, a job, a title struck out; always Father, always Son.
 
 function fatherEternallyFather(): string {
-  return frame(22, 40000, [
+  return frame(22, 30000, [
     { label: 'Not from some point', at: 0, caption: 'God did not become Father when He made the world, or when Jesus was born.' },
     { label: 'Never without the Son', at: 0.22, caption: 'Father and Son were together “before the world existed”: never one alone.' },
     { label: 'Not a mask or a role', at: 0.46, caption: 'Being Father is not a job, a title or a mask: it is who this Person is.' },

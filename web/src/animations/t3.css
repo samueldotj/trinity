@@ -1,5 +1,5 @@
-/* Teaching 3, God is Eternal: 40 seconds in four scenes. */
-.anim-t3 * { animation-duration: 40s; }
+/* Teaching 3, God is Eternal: 30 seconds in four scenes. */
+.anim-t3 * { animation-duration: 30s; }
 .anim-t3 .a-ringlabel, .anim-t3 .a-timelabel, .anim-t3 .a-candle, .anim-t3 .a-flame, .anim-t3 .a-wears, .anim-t3 .a-oldtag, .anim-t3 .a-oldstrike { opacity: 0; }
 .anim-t3 .a-god { animation-name: t3-god; }
 .anim-t3 .a-ring { animation-name: t3-ring; }

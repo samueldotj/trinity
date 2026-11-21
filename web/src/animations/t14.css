@@ -1,5 +1,5 @@
-/* Teaching 14, the Father is not the Son: 40 seconds in four scenes. */
-.anim-t14 * { animation-duration: 40s; }
+/* Teaching 14, the Father is not the Son: 30 seconds in four scenes. */
+.anim-t14 * { animation-duration: 30s; }
 .anim-t14 .a-glory, .anim-t14 .a-glorylabel, .anim-t14 .a-prayer, .anim-t14 .a-prayerhead, .anim-t14 .a-prayerlabel, .anim-t14 .a-beget, .anim-t14 .a-begethead, .anim-t14 .a-begetlabel, .anim-t14 .a-role, .anim-t14 .a-noswap, .anim-t14 .a-wline, .anim-t14 .a-witness, .anim-t14 .a-card, .anim-t14 .a-two, .anim-t14 .a-twostrike, .anim-t14 .a-badge { opacity: 0; }
 .anim-t14 .a-person { animation-name: t14-person; }
 .anim-t14 .a-beget { animation-name: t14-beget; }

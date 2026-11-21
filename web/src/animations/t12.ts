@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t12.css';
 
 // ---------- Teaching 12: The Holy Spirit is God ----------
-// 40 seconds: heat flowing from a fire, as a picture of the Spirit, is struck out; the Spirit knows, acts and
+// 30 seconds: heat flowing from a fire, as a picture of the Spirit, is struck out; the Spirit knows, acts and
 // can be lied to; believers become a temple where the Spirit dwells; lying to the Spirit is lying to God.
 
 const pill12 = (cls: string, x: number, y: number, w: number, text: string, stroke = '#33449A', ink = '#33449A', fill = '#FFFFFF') =>
@@ -18,7 +18,7 @@ const wave12 = (y: number) =>
   `<path class="a-wave" d="M210,${y} q18,-12 36,0 t36,0 t36,0 t36,0 t36,0 t36,0" fill="none" stroke="#E8A33C" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 8"></path>`;
 
 function theSpiritIsGod(): string {
-  return frame(12, 40000, [
+  return frame(12, 30000, [
     { label: 'Not a force', at: 0, caption: 'Not an impersonal power God sends out, the way heat comes from a fire.' },
     { label: 'A Person', at: 0.22, caption: 'He is a Person: He knows, He acts, and He can be lied to, as no force can.' },
     { label: 'God’s temple', at: 0.46, caption: 'Believers are “God’s temple,” because “God’s Spirit dwells in you.”' },

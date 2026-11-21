@@ -1,5 +1,5 @@
-/* Teaching 45, The Father did not suffer or die on the cross: 40 seconds in four scenes. */
-.anim-t45 * { animation-duration: 40s; }
+/* Teaching 45, The Father did not suffer or die on the cross: 30 seconds in four scenes. */
+.anim-t45 * { animation-duration: 30s; }
 .anim-t45 .a-nobody, .anim-t45 .a-nobodytag, .anim-t45 .a-bodytag, .anim-t45 .a-masks, .anim-t45 .a-maskstag, .anim-t45 .a-maskstrike { opacity: 0; }
 .anim-t45 .a-father { animation-name: t45-father; }
 .anim-t45 .a-son { animation-name: t45-son; }

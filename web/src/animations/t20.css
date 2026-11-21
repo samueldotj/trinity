@@ -1,5 +1,5 @@
-/* Teaching 20, There are exactly three divine Persons: 40 seconds in four scenes. */
-.anim-t20 * { animation-duration: 40s; }
+/* Teaching 20, There are exactly three divine Persons: 30 seconds in four scenes. */
+.anim-t20 * { animation-duration: 30s; }
 .anim-t20 .a-actor, .anim-t20 .a-role1, .anim-t20 .a-role2, .anim-t20 .a-role3, .anim-t20 .a-onetag, .anim-t20 .a-onestrike, .anim-t20 .a-arc, .anim-t20 .a-arclabel, .anim-t20 .a-ghost, .anim-t20 .a-ghoststrike { opacity: 0; }
 .anim-t20 .a-actor { animation-name: t20-actor; }
 .anim-t20 .a-role1 { animation-name: t20-role1; }

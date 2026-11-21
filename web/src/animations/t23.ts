@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t23.css';
 
 // ---------- Teaching 23: The Son is eternally begotten of the Father ----------
-// 40 seconds: the Father begets the Son, who has the same gold ring of the divine nature; a builder makes a house,
+// 30 seconds: the Father begets the Son, who has the same gold ring of the divine nature; a builder makes a house,
 // another kind, and "a creature?" is struck out; no time before the Son; one God round both, a second God struck out.
 
 function sonEternallyBegotten(): string {
-  return frame(23, 40000, [
+  return frame(23, 30000, [
     { label: 'Begotten: same nature', at: 0, caption: 'Begotten: the Son comes from the Father, sharing the Father’s own nature.' },
     { label: 'Not made, like a house', at: 0.22, caption: 'What is made is another, lesser kind, as a house differs from its builder.' },
     { label: 'Without beginning', at: 0.46, caption: 'This begetting has no beginning: there was never a time the Son was not.' },

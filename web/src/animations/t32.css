@@ -1,5 +1,5 @@
-/* Teaching 32, The Father and Son send the Holy Spirit: 40 seconds in four scenes. */
-.anim-t32 * { animation-duration: 40s; }
+/* Teaching 32, The Father and Son send the Holy Spirit: 30 seconds in four scenes. */
+.anim-t32 * { animation-duration: 30s; }
 .anim-t32 .a-trail, .anim-t32 .a-returns, .anim-t32 .a-servant, .anim-t32 .a-servantstrike { opacity: 0; }
 .anim-t32 .a-church { animation-name: t32-church; }
 .anim-t32 .a-people { animation-name: t32-church; }

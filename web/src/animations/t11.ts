@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t11.css';
 
 // ---------- Teaching 11: The Son is God ----------
-// 40 seconds: the Word before the beginning of time, with God and God; the Son set among made things or
+// 30 seconds: the Word before the beginning of time, with God and God; the Son set among made things or
 // half-divine or as a second god, each struck out, and of one nature with the Father; Thomas says "My Lord
 // and my God!" and Jesus accepts it; the Son is God.
 
@@ -17,7 +17,7 @@ const strike11 = (cls: string, x1: number, y1: number, x2: number, y2: number) =
   `<line class="${cls}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" pathLength="1" stroke-dasharray="1 1" stroke="#B3261E" stroke-width="4" stroke-linecap="round"></line>`;
 
 function theSonIsGod(): string {
-  return frame(11, 40000, [
+  return frame(11, 30000, [
     { label: 'In the beginning', at: 0, caption: 'In the beginning the Word already was; He was with God, and He was God.' },
     { label: 'Not made, not lesser', at: 0.22, caption: 'Not the greatest thing God made, nor half-divine, nor a second god.' },
     { label: '“My Lord and my God!”', at: 0.46, caption: 'Thomas calls the risen Jesus “My Lord and my God!”, and Jesus accepts it.' },

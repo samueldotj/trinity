@@ -1,5 +1,5 @@
-/* Teaching 7, God is Omnipresent: 40 seconds in four scenes. */
-.anim-t7 * { animation-duration: 40s; }
+/* Teaching 7, God is Omnipresent: 30 seconds in four scenes. */
+.anim-t7 * { animation-duration: 30s; }
 .anim-t7 .a-place, .anim-t7 .a-here1, .anim-t7 .a-here2, .anim-t7 .a-here3, .anim-t7 .a-stretch, .anim-t7 .a-stretchtag, .anim-t7 .a-stretchstrike, .anim-t7 .a-spot, .anim-t7 .a-whole, .anim-t7 .a-wholepill, .anim-t7 .a-world, .anim-t7 .a-ghost, .anim-t7 .a-ghosttag, .anim-t7 .a-ghoststrike, .anim-t7 .a-distinct, .anim-t7 .a-pulse1, .anim-t7 .a-pulse2, .anim-t7 .a-pulse3 { opacity: 0; }
 .anim-t7 .a-god { animation-name: t7-god; }
 .anim-t7 .a-ripples { animation-name: t7-ripples; }

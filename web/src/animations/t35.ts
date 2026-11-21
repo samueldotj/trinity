@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t35.css';
 
 // ---------- Teaching 35: The Son prays to the Father ----------
-// 40 seconds: the Son speaks to the Father face to face; one actor with three masks is struck out; "not My
+// 30 seconds: the Son speaks to the Father face to face; one actor with three masks is struck out; "not My
 // will, but Yours" over the cup; one God, the Son with the Father in glory before the world existed.
 
 function sonPraysToFather(): string {
-  return frame(35, 40000, [
+  return frame(35, 30000, [
     { label: 'Face to face', at: 0, caption: 'Jesus prays as a real Person speaking to another, the Father, with love.' },
     { label: 'Not three masks', at: 0.22, caption: 'Father, Son and Spirit are not three masks or roles worn by one Person.' },
     { label: 'Not My will, but Yours', at: 0.46, caption: '“Not My will, but Yours”: as man the Son freely obeys; God has one will.' },

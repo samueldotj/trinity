@@ -1,5 +1,5 @@
-/* Teaching 17, each Person is fully God: 40 seconds in four scenes. */
-.anim-t17 * { animation-duration: 40s; }
+/* Teaching 17, each Person is fully God: 30 seconds in four scenes. */
+.anim-t17 * { animation-duration: 30s; }
 .anim-t17 .a-wedge, .anim-t17 .a-pieces, .anim-t17 .a-strike1, .anim-t17 .a-attr, .anim-t17 .a-token, .anim-t17 .a-chip, .anim-t17 .a-chipstrike, .anim-t17 .a-three, .anim-t17 .a-threestrike, .anim-t17 .a-godsub1 { opacity: 0; }
 .anim-t17 .a-wedge { animation-name: t17-wedge; }
 .anim-t17 .a-pieces { animation-name: t17-pieces; }

@@ -1,5 +1,5 @@
-/* Teaching 21, The Persons mutually indwell one another: 40 seconds in four scenes. */
-.anim-t21 * { animation-duration: 40s; }
+/* Teaching 21, The Persons mutually indwell one another: 30 seconds in four scenes. */
+.anim-t21 * { animation-duration: 30s; }
 .anim-t21 .a-quote, .anim-t21 .a-blend, .anim-t21 .a-blendstrike, .anim-t21 .a-friends, .anim-t21 .a-friendsstrike { opacity: 0; }
 .anim-t21 .a-person { animation-name: t21-person; }
 .anim-t21 .a-pin { animation-name: t21-pin; }

@@ -1,5 +1,5 @@
-/* Teaching 2, God is Spirit: 40 seconds in four scenes. */
-.anim-t2 * { animation-duration: 40s; }
+/* Teaching 2, God is Spirit: 30 seconds in four scenes. */
+.anim-t2 * { animation-duration: 30s; }
 .anim-t2 .a-piece, .anim-t2 .a-human, .anim-t2 .a-humantag, .anim-t2 .a-strike, .anim-t2 .a-icon, .anim-t2 .a-word { opacity: 0; }
 .anim-t2 .a-god { animation-name: t2-god; }
 .anim-t2 .a-ringspin { animation-name: t2-spin; animation-timing-function: linear; }

@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t28.css';
 
 // ---------- Teaching 28: The three Persons have one divine will ----------
-// 40 seconds: one will at the centre of the one God; three separate wishes struck out; each Person flows
+// 30 seconds: one will at the centre of the one God; three separate wishes struck out; each Person flows
 // into the one will, which goes out as one purpose; the Son’s human will swings round to follow it.
 
 function oneDivineWill(): string {
-  return frame(28, 40000, [
+  return frame(28, 30000, [
     { label: 'One will in God', at: 0, caption: 'A will is the power to choose and want; it belongs to God’s one essence.' },
     { label: 'Not three wishes', at: 0.22, caption: 'Not three with their own wishes who must agree, bargain or overrule.' },
     { label: 'Each in His own way', at: 0.46, caption: 'They share one divine will, though each Person wills in His own way.' },

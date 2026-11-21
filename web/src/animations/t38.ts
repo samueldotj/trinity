@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t38.css';
 
 // ---------- Teaching 38: Creation is the work of the one Triune God ----------
-// 40 seconds: the work split into three shares is struck out and made whole; the Spirit hovers over the dark
+// 30 seconds: the work split into three shares is struck out and made whole; the Spirit hovers over the dark
 // waters; from the Father, through the Son, by the Spirit the world fills with light; "helper?" struck out.
 
 function creationTriuneWork(): string {
-  return frame(38, 40000, [
+  return frame(38, 30000, [
     { label: 'Not three shares', at: 0, caption: 'Father, Son and Spirit did not each do a separate share of the work.' },
     { label: 'Over the waters', at: 0.22, caption: 'God created the heavens and the earth; His Spirit hovered over the waters.' },
     { label: 'From, through, by', at: 0.46, caption: 'One act: the Father made all things through the Son and by the Spirit.' },

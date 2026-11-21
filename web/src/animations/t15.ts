@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t15.css';
 
 // ---------- Teaching 15: The Son is not the Holy Spirit ----------
-// 40 seconds: the Son and "another Advocate" with the disciples; the Son sends, the Spirit testifies about
+// 30 seconds: the Son and "another Advocate" with the disciples; the Son sends, the Spirit testifies about
 // Him; on a level beam, "greater?" and "another kind?" are struck out; begotten, and proceeds, "is not".
 
 const r1 = (v: number) => Math.round(v * 10) / 10;
@@ -35,7 +35,7 @@ const figure = (x: number) =>
   `<g transform="translate(${x},460)"><circle cy="-50" r="10" fill="#6B7080"></circle><path d="M-15,-37 Q0,-42 15,-37 L17,-14 L9,-14 L8,0 L2,0 L0,-12 L-2,0 L-8,0 L-9,-14 L-17,-14 Z" fill="#6B7080"></path></g>`;
 
 function sonNotSpirit(): string {
-  return frame(15, 40000, [
+  return frame(15, 30000, [
     { label: 'Another Advocate', at: 0, caption: 'Jesus promises “another Advocate”: the Spirit is someone other than Jesus.' },
     { label: 'Sends and testifies', at: 0.22, caption: 'The Son sends the Spirit, and the Spirit testifies about Him: two Persons.' },
     { label: 'Neither is greater', at: 0.46, caption: 'Both are fully God: not different kinds of God, and neither one greater.' },

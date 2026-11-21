@@ -1,5 +1,5 @@
-/* Teaching 11, The Son is God: 40 seconds in four scenes. */
-.anim-t11 * { animation-duration: 40s; }
+/* Teaching 11, The Son is God: 30 seconds in four scenes. */
+.anim-t11 * { animation-duration: 30s; }
 .anim-t11 .a-time, .anim-t11 .a-timemark, .anim-t11 .a-word, .anim-t11 .a-with, .anim-t11 .a-withlabel, .anim-t11 .a-flit, .anim-t11 .a-bands, .anim-t11 .a-ftoken, .anim-t11 .a-stoken, .anim-t11 .a-same, .anim-t11 .a-samelabel, .anim-t11 .a-tag1, .anim-t11 .a-tag2, .anim-t11 .a-tag3, .anim-t11 .a-strike1, .anim-t11 .a-strike2, .anim-t11 .a-strike3, .anim-t11 .a-jesus, .anim-t11 .a-glow, .anim-t11 .a-thomas, .anim-t11 .a-thomaslabel, .anim-t11 .a-bubble, .anim-t11 .a-accepts { opacity: 0; }
 .anim-t11 .a-son { animation-name: t11-son; }
 .anim-t11 .a-word { animation-name: t11-word; }

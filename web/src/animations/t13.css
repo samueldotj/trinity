@@ -1,5 +1,5 @@
-/* Teaching 13, distinct Persons: 40 seconds in four scenes. */
-.anim-t13 * { animation-duration: 40s; }
+/* Teaching 13, distinct Persons: 30 seconds in four scenes. */
+.anim-t13 * { animation-duration: 30s; }
 .anim-t13 .a-who, .anim-t13 .a-water, .anim-t13 .a-waterfront, .anim-t13 .a-json, .anim-t13 .a-father2, .anim-t13 .a-voiceline, .anim-t13 .a-voice, .anim-t13 .a-dove, .anim-t13 .a-dovelabel, .anim-t13 .a-actor, .anim-t13 .a-masks, .anim-t13 .a-strike { opacity: 0; }
 .anim-t13 .a-person { animation-name: t13-person; }
 .anim-t13 .a-who { animation-name: t13-who; }
