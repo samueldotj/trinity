@@ -44,8 +44,11 @@ export interface Deck {
   slides: Slide[];
   /** The bubble for a link on a slide, or null to follow the link as usual. */
   explain?: (link: HTMLAnchorElement) => Bubble | null;
-  /** Called after the presentation closes, with the slide it closed on. */
-  onClose?: (last: Slide) => void;
+  /** The deck's language, and how to make the same deck in another, for the English | தமிழ் switch. */
+  lang?: 'en' | 'ta';
+  relang?: (lang: 'en' | 'ta') => Deck;
+  /** Called after the presentation closes, with the slide it closed on and the language it ended in. */
+  onClose?: (last: Slide, lang?: 'en' | 'ta') => void;
 }
 
 const W = 1280, H = 720, INK_SCALE = 2;
@@ -69,7 +72,7 @@ const toolIcon = {
 };
 
 export function present(deck: Deck): void {
-  const { slides } = deck;
+  let slides = deck.slides;
   if (!slides.length) return;
   let at = 0;
 
@@ -80,7 +83,10 @@ export function present(deck: Deck): void {
     <div class="present-stage">
       <div class="slide" tabindex="-1">
         <header class="slide-top">
-          <span class="slide-where"><span class="tri" aria-hidden="true"></span><span class="slide-where-text">${esc(deck.where)} · <span class="slide-where-title">${esc(deck.title)}</span></span></span>
+          <span class="slide-where"><span class="tri" aria-hidden="true"></span><span class="slide-where-text"></span></span>
+          ${deck.relang ? `<div class="slide-lang" role="group" aria-label="Language (L)" title="Language (L)">
+            <button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="ta" lang="ta">தமிழ்</button>
+          </div>` : ''}
           <div class="slide-tools" role="toolbar" aria-label="Drawing">
             <button type="button" class="ink-tool" data-tool="pen" aria-pressed="false" aria-label="Pen (P)" title="Pen (P)">${toolIcon.pen}</button>
             <span class="ink-colors" hidden>${PEN_COLORS.map((c, i) => `<button type="button" class="ink-color" data-color="${c.value}" aria-pressed="${i === 0}" aria-label="${c.name} pen" style="--ink: ${c.value}"><span></span></button>`).join('')}</span>
@@ -93,7 +99,7 @@ export function present(deck: Deck): void {
         <div class="slide-body" aria-live="polite"></div>
         <canvas class="slide-ink" width="${W * INK_SCALE}" height="${H * INK_SCALE}" aria-hidden="true"></canvas>
         <footer class="slide-foot">
-          <ol class="slide-steps" aria-label="Slides">${slides.map((_, i) => `<li><button type="button" aria-label="Slide ${i + 1}"><span></span></button></li>`).join('')}</ol>
+          <ol class="slide-steps" aria-label="Slides"></ol>
           <span class="slide-count"></span>
           <button type="button" class="slide-prev" aria-label="Previous slide">${icon.left}</button>
           <button type="button" class="slide-next" aria-label="Next slide">${icon.right}</button>
@@ -109,7 +115,19 @@ export function present(deck: Deck): void {
   const count = $<HTMLElement>('.slide-count');
   const prevBtn = $<HTMLButtonElement>('.slide-prev');
   const nextBtn = $<HTMLButtonElement>('.slide-next');
-  const steps = [...dlg.querySelectorAll<HTMLButtonElement>('.slide-steps button')];
+  let steps: HTMLButtonElement[] = [];
+  const whereEl = $<HTMLElement>('.slide-where-text');
+  const langBtns = [...dlg.querySelectorAll<HTMLButtonElement>('.slide-lang button')];
+  /** The parts that depend on the deck: title in the top bar, progress steps, language switch. */
+  const setUpDeck = () => {
+    whereEl.innerHTML = `${esc(deck.where)} · <span class="slide-where-title"${deck.lang === 'ta' ? ' lang="ta"' : ''}>${esc(deck.title)}</span>`;
+    dlg.setAttribute('aria-label', `Presentation: ${deck.where}, ${deck.title}`);
+    const ol = $<HTMLOListElement>('.slide-steps');
+    ol.innerHTML = slides.map((_, i) => `<li><button type="button" aria-label="Slide ${i + 1}"><span></span></button></li>`).join('');
+    steps = [...ol.querySelectorAll<HTMLButtonElement>('button')];
+    steps.forEach((b, k) => b.addEventListener('click', () => show(k)));
+    langBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === (deck.lang || 'en'))));
+  };
 
   const scale = () => {
     const s = Math.min(stage.clientWidth / W, stage.clientHeight / H);
@@ -138,7 +156,7 @@ export function present(deck: Deck): void {
   const canvas = $<HTMLCanvasElement>('.slide-ink');
   const ctx = canvas.getContext('2d')!;
   ctx.scale(INK_SCALE, INK_SCALE);
-  const ink: Stroke[][] = slides.map(() => []);
+  let ink: Stroke[][] = slides.map(() => []);
   let tool: Tool = null, penColor = PEN_COLORS[0].value, drawing: Stroke | null = null, queued = false;
   const toolBtns = [...dlg.querySelectorAll<HTMLButtonElement>('.ink-tool')];
   const colorBtns = [...dlg.querySelectorAll<HTMLButtonElement>('.ink-color')];
@@ -360,8 +378,22 @@ export function present(deck: Deck): void {
 
   prevBtn.addEventListener('click', () => show(at - 1));
   nextBtn.addEventListener('click', next);
-  steps.forEach((b, k) => b.addEventListener('click', () => show(k)));
   $('.slide-exit').addEventListener('click', close);
+
+  // English | தமிழ்: the same deck in the other language, on the same slide. Drawings stay when the two
+  // decks have the same slides; if not (the explanation may split into a different number of paragraphs),
+  // they are cleared rather than left on the wrong slide.
+  const switchLang = (lang: 'en' | 'ta') => {
+    if (!deck.relang || lang === (deck.lang || 'en')) return;
+    closeBubble();
+    deck = deck.relang(lang);
+    const same = deck.slides.length === slides.length;
+    slides = deck.slides;
+    if (!same) ink = slides.map(() => []);
+    setUpDeck();
+    show(at);
+  };
+  langBtns.forEach((b) => b.addEventListener('click', () => switchLang(b.dataset.lang as 'en' | 'ta')));
 
   // ---------- leaving ----------
   // Esc is easy to press by accident, so it asks first. The Exit and Finish buttons leave at once.
@@ -420,6 +452,7 @@ export function present(deck: Deck): void {
     else if (k === 'End') { e.preventDefault(); show(slides.length - 1); }
     else if (k === 'p' || k === 'P') setTool(tool === 'pen' ? null : 'pen');
     else if (k === 'h' || k === 'H') setTool(tool === 'marker' ? null : 'marker');
+    else if (k === 'l' || k === 'L') switchLang(deck.lang === 'ta' ? 'en' : 'ta');
     else if (k === 'k' || k === 'K') body.querySelector<HTMLButtonElement>('.anim-toggle')?.click();  // pause or play an animation
   });
   // The keydown above normally stops Esc from closing the dialog; this catches any other way it is asked to.
@@ -436,12 +469,13 @@ export function present(deck: Deck): void {
     document.removeEventListener('fullscreenchange', onFullscreen);
     if (document.fullscreenElement) void document.exitFullscreen().catch(() => {});
     dlg.remove();
-    deck.onClose?.(slides[at]);
+    deck.onClose?.(slides[at], deck.lang);
   });
 
   dlg.showModal();
   ro.observe(stage);
   scale();
+  setUpDeck();
   show(0);
   slideEl.focus();
   void document.fonts?.ready.then(() => { if (dlg.open) { fitText(); slides[at].onShow?.(body); } });

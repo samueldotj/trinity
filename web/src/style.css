@@ -459,6 +459,15 @@ p { margin: 0; }
 .slide-top { position: relative; z-index: 4; flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 26px 48px 0; }
 .slide-where { display: flex; align-items: center; gap: 14px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .slide-where .tri { width: 40px; }
+/* English | தமிழ் in the slide's top bar, like the page's own language switch. */
+.slide-lang { margin-left: auto; display: inline-flex; padding: 3px; border: 1px solid var(--control); border-radius: 999px; background: var(--surface); }
+.slide-lang ~ .slide-tools { margin-left: 0; }
+.slide-lang button { min-height: 38px; padding: 0 14px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-2); font-size: 14px; font-weight: 600; }
+.slide-lang button:lang(ta) { font-family: 'Mukta Malar', system-ui, sans-serif; }
+.slide-lang button[aria-pressed="true"] { background: var(--night); color: #fff; }
+.slide.is-dark .slide-lang { background: var(--night-2); border-color: var(--night-line); }
+.slide.is-dark .slide-lang button { color: var(--on-night); }
+.slide.is-dark .slide-lang button[aria-pressed="true"] { background: #fff; color: var(--night); }
 .slide-exit { min-height: 44px; padding: 0 8px 0 16px; display: inline-flex; align-items: center; gap: 10px; border-radius: 999px; border: 1px solid var(--control); background: var(--surface); color: var(--ink); font-size: 14px; font-weight: 600; }
 .slide-exit kbd { font-family: inherit; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 6px; background: var(--mist); color: var(--link-ink); }
 .slide-body { flex: 1 1 auto; min-height: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: 26px; padding: 12px 160px; }

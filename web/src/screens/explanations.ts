@@ -210,7 +210,9 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   });
 
   const presentBtn = root.querySelector<HTMLButtonElement>('.present-btn')!;
-  presentBtn.addEventListener('click', () => present(deckFor(cur, data, lang, (s) => {
+  presentBtn.addEventListener('click', () => present(deckFor(cur, data, lang, (s, endLang) => {
+    // Switched language while presenting: the page follows, in that language.
+    if (endLang && endLang !== lang) { navigate('explanations', { t: cur.n, lang: endLang }); return; }
     // Back on the page, at the part the last slide showed.
     const at = s.kind === 'text' ? '.explain' : s.kind === 'diagram' ? '.diagram-card' : s.kind === 'verses' ? '.verses-section' : s.kind === 'heresies' ? '.denied-by' : '';
     const el = at ? root.querySelector<HTMLElement>(at) : null;
@@ -393,7 +395,10 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     return null;
   };
 
-  return { where: `Teaching ${cur.n}`, title: cur.short, slides, explain, onClose };
+  return {
+    where: `Teaching ${cur.n}`, title: lang === 'ta' && cur.title_ta ? cur.title_ta : cur.short, slides, explain, onClose,
+    lang, relang: (l) => deckFor(cur, data, l, onClose),
+  };
 }
 
 /**
