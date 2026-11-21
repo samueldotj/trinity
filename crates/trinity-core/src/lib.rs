@@ -18,6 +18,7 @@ pub type Params = HashMap<String, String>;
 pub fn handle(route: &str, params: &Params) -> Result<Value, String> {
     match route {
         "teachings" => Ok(teachings_with_edits()),
+        "heresies" => Ok(heresies()),
         "themes" => Ok(themes()),
         "theme" => theme(arg(params, "key")?),
         "topic" => find_topic(params),
@@ -91,6 +92,7 @@ dataset!(teachings, "teachings.json");
 dataset!(topics_data, "topics.json");
 dataset!(verses_data, "verses.json");
 dataset!(questions_data, "questions.json");
+dataset!(heresies_data, "heresies.json");
 
 /// Short one- or two-word labels for the 26 themes, keyed by theme key.
 const SHORT_LABELS: &[(&str, &str)] = &[
@@ -397,6 +399,31 @@ fn question(id: &str) -> Result<Value, String> {
                "edited": { "text": text_edited, "synthesis": syn_edited, "answers": answers_edited } }))
 }
 
+// ---------- heresies ----------
+
+/// The heresies page: every entry, with the title of each teaching it denies.
+fn heresies() -> Value {
+    let mut out = heresies_data().clone();
+    let titles: HashMap<u64, Value> = teachings()["teachings"].as_array().into_iter().flatten()
+        .filter_map(|t| Some((t["n"].as_u64()?, json!({ "n": t["n"], "short": t["short"], "title": t["title"] }))))
+        .collect();
+    for h in out["heresies"].as_array_mut().into_iter().flatten() {
+        let denied: Vec<Value> = h["denies"].as_array().into_iter().flatten()
+            .filter_map(|n| titles.get(&n.as_u64()?).cloned())
+            .collect();
+        h["denies"] = Value::Array(denied);
+    }
+    out
+}
+
+/// The heresies that deny teaching `n`, in the page's order: `{ id, name }` each.
+fn heresies_denying(n: u64) -> Vec<Value> {
+    heresies_data()["heresies"].as_array().into_iter().flatten()
+        .filter(|h| h["denies"].as_array().is_some_and(|d| d.iter().any(|x| x.as_u64() == Some(n))))
+        .map(|h| json!({ "id": h["id"], "name": h["name"] }))
+        .collect()
+}
+
 // ---------- edits ----------
 
 /// The teachings and glossary, with your edits laid over the generated text.
@@ -422,6 +449,7 @@ fn teachings_with_edits() -> Value {
             edited.insert(key.replace(":ta", "_ta"), json!(was_edited));
         }
         t["edited"] = Value::Object(edited);
+        t["heresies"] = Value::Array(heresies_denying(n));
     }
     for (field, suffix) in [("glossary", ""), ("glossary_ta", ":ta")] {
         if let Some(gl) = out.get_mut(field).and_then(Value::as_object_mut) {
@@ -624,6 +652,19 @@ mod tests {
     #[test]
     fn every_route_answers() {
         assert_eq!(handle("teachings", &p(&[])).unwrap()["teachings"].as_array().unwrap().len(), 46);
+        // Teaching 11 (the Son is God) lists Arianism among the heresies that deny it.
+        let t = handle("teachings", &p(&[])).unwrap();
+        assert!(t["teachings"][10]["heresies"].as_array().unwrap().iter().any(|h| h["id"] == "arianism"));
+        let h = handle("heresies", &p(&[])).unwrap();
+        let all = h["heresies"].as_array().unwrap();
+        assert!(all.len() >= 30);
+        // Every teaching number a heresy denies exists, so each resolves to a title.
+        for x in all {
+            assert!(x["denies"].as_array().unwrap().iter().all(|d| d["title"].is_string()), "{}", x["id"]);
+            for k in ["name", "year", "place", "founder", "summary"] {
+                assert!(!s(&x[k]).is_empty(), "{} has no {k}", x["id"]);
+            }
+        }
         assert_eq!(handle("themes", &p(&[])).unwrap().as_array().unwrap().len(), 26);
         assert!(handle("theme", &p(&[("key", "one-god-three-persons")])).unwrap()["topics"].is_array());
         assert_eq!(handle("topic", &p(&[("id", "1003")])).unwrap()["theme"], "one-god-three-persons");

@@ -8,6 +8,7 @@ import { renderQA } from './screens/qa';
 import { renderWritings } from './screens/writings';
 import { renderReader } from './screens/reader';
 import { renderKeywords } from './screens/keywords';
+import { renderHeresies } from './screens/heresies';
 
 export type Screen = (root: HTMLElement, params: URLSearchParams) => void | Promise<void>;
 
@@ -17,6 +18,7 @@ const ICONS: Record<string, string> = {
   topics: '<path d="M3 5h14 M3 10h14 M3 15h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',
   qa: '<path d="M4 4h12v9H9l-4 3v-3H4V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
   keywords: '<path d="M5 3h10v14l-5-3-5 3V3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+  heresies: '<path d="M10 2.5 17.5 16h-15L10 2.5Z M10 8v3.5 M10 13.6v.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>',
 };
 
 const SCREENS: Record<string, { title: string; render: Screen; nav?: string; reading?: boolean }> = {
@@ -25,6 +27,7 @@ const SCREENS: Record<string, { title: string; render: Screen; nav?: string; rea
   topics: { title: 'Topics', render: renderTopics, nav: 'Topics' },
   qa: { title: 'Q&A', render: renderQA, nav: 'Q&A' },
   keywords: { title: 'Key words', render: renderKeywords, nav: 'Key words' },
+  heresies: { title: 'Heresies', render: renderHeresies, nav: 'Heresies' },
   writings: { title: 'Early Writings', render: renderWritings },
   reader: { title: 'Reader', render: renderReader, reading: true },
 };

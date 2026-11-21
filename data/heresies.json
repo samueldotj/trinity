@@ -1,0 +1,580 @@
+{
+ "intro": "Teachings and movements that the historic church has judged to fall outside the doctrine of the Trinity, or of Christ, as the creeds of Nicaea (325), Constantinople (381) and Chalcedon (451) set it out. Some were condemned by church councils; others are philosophies or later religious movements that deny one or more of the teachings in this course. Each entry says what was taught, what it denies, and which teachings it contradicts.",
+ "kinds": {
+  "heresy": "Early heresy",
+  "philosophy": "Philosophical teaching",
+  "movement": "Unorthodox movement"
+ },
+ "eras": [
+  {
+   "title": "The early church",
+   "note": "First to third centuries: before the Council of Nicaea."
+  },
+  {
+   "title": "The Nicene age",
+   "note": "Fourth century: the debates over the Son and the Spirit settled at Nicaea (325) and Constantinople (381)."
+  },
+  {
+   "title": "The person of Christ",
+   "note": "Fifth to seventh centuries: how Christ is both God and man, settled at Ephesus (431), Chalcedon (451) and Constantinople (681)."
+  },
+  {
+   "title": "Reformation and Enlightenment",
+   "note": "Sixteenth to eighteenth centuries: anti-Trinitarian and rationalist challenges."
+  },
+  {
+   "title": "Modern movements",
+   "note": "Nineteenth century to today."
+  }
+ ],
+ "heresies": [
+  {
+   "id": "ebionism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Ebionism",
+   "year": "Late 1st century",
+   "place": "Judea and the lands east of the Jordan",
+   "founder": "No known founder (later writers invented an “Ebion”)",
+   "summary": "The Ebionites were Jewish followers of Jesus who kept the Law of Moses and regarded Jesus as the Messiah and a true prophet, but only as a man. Most held that he was the natural son of Joseph and Mary, and that he was chosen by God because of his perfect keeping of the Law; some said the Spirit or “the Christ” came upon him at his baptism.\n\nThey denied that the Son existed before he was born, that he is God, and that he is eternally begotten of the Father. Irenaeus, Hippolytus and Origen all describe them, and their name comes from the Hebrew word for “the poor”.",
+   "denies": [
+    11,
+    18,
+    23,
+    42
+   ]
+  },
+  {
+   "id": "docetism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Docetism",
+   "year": "Late 1st century",
+   "place": "Syria and Asia Minor",
+   "founder": "No single founder; a tendency in several groups",
+   "summary": "Docetism (from the Greek dokein, “to seem”) taught that Christ only seemed to have a real body and only seemed to suffer and die. Matter was thought unworthy of God, so the divine Christ could not truly be born, hunger, bleed or die.\n\nIt denies that the Son took a real, created human nature, and so that Jesus is one Person who is truly God and truly man. The New Testament already warns against those who deny that Jesus Christ “has come in the flesh” (1 John 4:2), and Ignatius of Antioch wrote against Docetists around AD 110.",
+   "denies": [
+    43,
+    44
+   ]
+  },
+  {
+   "id": "cerinthianism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Cerinthianism",
+   "year": "c. 100",
+   "place": "Asia Minor (Ephesus, by tradition)",
+   "founder": "Cerinthus",
+   "summary": "Cerinthus taught that the world was made not by the supreme God but by a lower power that did not know him. Jesus was an ordinary man, the son of Joseph and Mary; at his baptism “the Christ” descended on him as a dove and enabled him to work miracles and reveal the unknown Father, but the Christ left him before the crucifixion, so that only the man Jesus suffered and rose.\n\nThis denies that the one God made the world, that the Son is God, and that the eternal Son himself became man and remained one Person through his suffering. Irenaeus records the tradition that the apostle John opposed him at Ephesus.",
+   "denies": [
+    11,
+    38,
+    42,
+    43
+   ]
+  },
+  {
+   "id": "valentinian-gnosticism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Valentinian Gnosticism",
+   "year": "c. 140",
+   "place": "Rome (Valentinus was trained in Alexandria, Egypt)",
+   "founder": "Valentinus",
+   "summary": "Valentinus and his followers taught that the unknowable supreme Father sent out a series of paired divine beings (aeons) that together made up the “Fullness” (Pleroma). The fall of the last aeon, Wisdom, led to the making of the material world by an ignorant Craftsman (the Demiurge), whom they identified with the God of the Old Testament. Salvation is secret knowledge (gnosis) that frees the spiritual seed from matter; their Saviour had a spiritual, not a fleshly, body.\n\nThis divides the Godhead into many emanations and separates the Creator from the true God. It denies that God is one and undivided, that the Father is the Creator, and that the Son took real flesh. Irenaeus’s Against Heresies is mainly a refutation of the Valentinians.",
+   "denies": [
+    1,
+    8,
+    10,
+    38,
+    44
+   ]
+  },
+  {
+   "id": "marcionism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Marcionism",
+   "year": "c. 144",
+   "place": "Rome (Marcion came from Sinope in Pontus, modern Turkey)",
+   "founder": "Marcion of Sinope",
+   "summary": "Marcion set two gods against each other: the just but harsh Creator and Lawgiver of the Old Testament, and the good, previously unknown Father revealed by Jesus. He rejected the whole Old Testament and kept only an edited Gospel of Luke and ten letters of Paul. His Christ came suddenly from heaven with only the appearance of a body.\n\nMarcion thus denies that there is one God, that the Father of Jesus is the Creator and the source of all things, and that creation is the work of the one God. His Christ was not truly human. The church at Rome expelled him in 144, and Irenaeus and Tertullian wrote at length against him.",
+   "denies": [
+    1,
+    10,
+    38,
+    43
+   ]
+  },
+  {
+   "id": "adoptionism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Adoptionism (Dynamic Monarchianism)",
+   "year": "c. 190",
+   "place": "Rome (Theodotus came from Byzantium)",
+   "founder": "Theodotus the Tanner",
+   "summary": "Theodotus taught that Jesus was a man born of the virgin who lived a life of perfect holiness, and that at his baptism the Spirit or “the Christ” came upon him with divine power. Some of his followers said Jesus became God only after his resurrection. God is a single Person; the Son is a man adopted and empowered by God.\n\nIt denies that the Son is God by nature, that he is eternal and eternally begotten, and that he remained fully God when he became man. Bishop Victor of Rome excommunicated Theodotus around 190.",
+   "denies": [
+    11,
+    18,
+    23,
+    42
+   ]
+  },
+  {
+   "id": "patripassianism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Patripassianism (Modal Monarchianism)",
+   "year": "c. 190–200",
+   "place": "Smyrna, Asia Minor; then Rome",
+   "founder": "Noetus of Smyrna (also Praxeas)",
+   "summary": "Noetus taught that there is only one Person in God, the Father, and that this same Father was born of the virgin, called himself the Son, suffered and died on the cross. “Father” and “Son” are only two names for one Person at different times. The name Patripassianism means “the Father suffered”.\n\nThis denies that the Father and the Son are distinct Persons, that only the Son became incarnate, and that the Father did not suffer on the cross. When the Son prays to the Father, on this view, he is praying to himself. Hippolytus’s Against Noetus and Tertullian’s Against Praxeas answer it.",
+   "denies": [
+    13,
+    14,
+    20,
+    35,
+    36,
+    41,
+    45
+   ]
+  },
+  {
+   "id": "sabellianism",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Sabellianism (Modalism)",
+   "year": "c. 215",
+   "place": "Rome (Sabellius came from Libya)",
+   "founder": "Sabellius",
+   "summary": "Sabellius taught that God is a single Person who shows himself in three successive modes or roles: as Father in creation and the giving of the Law, as Son in the incarnation, and as Holy Spirit in sanctifying the church. The three names are like the faces or masks of one actor, not three Persons.\n\nIt denies that Father, Son and Spirit are three distinct Persons, eternally related to one another, and that their distinctions are real relations within God. Bishop Callistus of Rome excommunicated Sabellius around 220, and “Sabellian” became the general name for every teaching that merges the Persons.",
+   "denies": [
+    13,
+    14,
+    15,
+    16,
+    20,
+    22,
+    25,
+    41
+   ]
+  },
+  {
+   "id": "manichaeism",
+   "era": 0,
+   "kind": "philosophy",
+   "name": "Manichaeism",
+   "year": "c. 240",
+   "place": "Ctesiphon, Persia (in modern Iraq)",
+   "founder": "Mani",
+   "summary": "Mani taught two eternal, opposed principles: a kingdom of Light, which is good, and a kingdom of Darkness, which is matter and evil. In a primal battle, particles of the Light were swallowed by Darkness and became trapped in the material world; salvation is freeing that Light. Jesus appears as a heavenly revealer who did not take real flesh.\n\nThis denies that there is one God who made all things good, that God’s nature cannot be divided or harmed, and that the Son became truly human. Augustine was a Manichaean hearer for nine years before his conversion and later wrote many works against it.",
+   "denies": [
+    1,
+    5,
+    8,
+    38,
+    43
+   ]
+  },
+  {
+   "id": "neoplatonism",
+   "era": 0,
+   "kind": "philosophy",
+   "name": "Neoplatonism",
+   "year": "c. 244",
+   "place": "Rome (Plotinus came from Egypt)",
+   "founder": "Plotinus",
+   "summary": "Plotinus taught a descending series of three divine levels: the One, utterly simple and beyond being; Mind (Nous), which flows from the One; and the World-Soul, which flows from Mind. Each lower level is less than the one it comes from, and everything else flows out from the One by necessity, not by free creation.\n\nIts three are not equal: they are ranked by degree of divinity. That denies that the three Persons are coequal and that none is more divine than another, and it makes the world a necessary overflow rather than God’s free work. Arius and others carried this ranking into their thinking about the Son, while the Fathers borrowed Neoplatonic language but insisted on full equality.",
+   "denies": [
+    19,
+    30,
+    38
+   ]
+  },
+  {
+   "id": "paul-of-samosata",
+   "era": 0,
+   "kind": "heresy",
+   "name": "Paul of Samosata’s teaching",
+   "year": "c. 260",
+   "place": "Antioch, Syria",
+   "founder": "Paul of Samosata, bishop of Antioch",
+   "summary": "Paul taught that the Word (Logos) is not a Person but an attribute or power in God, like reason in a man. This Word dwelt in the man Jesus, born of Mary, more fully than in any prophet, and Jesus was raised to divine honour because of his moral union with God.\n\nIt denies that the Son is a distinct, eternal Person begotten of the Father, and that the Son himself is God. Councils at Antioch condemned and deposed Paul in 268, and the Council of Nicaea required his followers to be rebaptised.",
+   "denies": [
+    11,
+    13,
+    18,
+    23
+   ]
+  },
+  {
+   "id": "arianism",
+   "era": 1,
+   "kind": "heresy",
+   "name": "Arianism",
+   "year": "c. 318",
+   "place": "Alexandria, Egypt",
+   "founder": "Arius, a priest of Alexandria",
+   "summary": "Arius taught that only the Father is unbegotten and truly eternal. The Son was made by the Father out of nothing before the world, as the first and highest creature, through whom everything else was made: “there was when he was not”. The Son can be called “God” only in a lesser, honorary sense, and he does not share the Father’s essence or fully know him.\n\nThis denies that the Son is fully God, of the same essence as the Father, eternal, and equal; that he is begotten rather than made; and that the Father has always been Father. The Council of Nicaea (325) answered it with the confession that the Son is “of one essence” (homoousios) with the Father, and Athanasius spent his life opposing it.",
+   "denies": [
+    9,
+    11,
+    17,
+    18,
+    19,
+    22,
+    23,
+    27,
+    30
+   ]
+  },
+  {
+   "id": "audianism",
+   "era": 1,
+   "kind": "heresy",
+   "name": "Anthropomorphism (the Audians)",
+   "year": "c. 340",
+   "place": "Mesopotamia (Edessa region)",
+   "founder": "Audius",
+   "summary": "Audius and his followers read the statement that man is made “in the image of God” literally, as meaning that God has a bodily form like a human being, with face, hands and eyes. Biblical language of God’s arm, eyes or footsteps was taken at face value.\n\nThis denies that God is spirit and not a bodily being, that the divine essence is invisible, and that God is not limited by space. Epiphanius describes the group, and the Fathers answered that such language is a way of speaking to us, not a description of God’s nature.",
+   "denies": [
+    2,
+    6,
+    7
+   ]
+  },
+  {
+   "id": "anomoeanism",
+   "era": 1,
+   "kind": "heresy",
+   "name": "Anomoeanism (Eunomianism)",
+   "year": "c. 355",
+   "place": "Antioch, Syria",
+   "founder": "Aetius of Antioch and Eunomius of Cyzicus",
+   "summary": "Aetius and his disciple Eunomius held that God’s very essence is “unbegottenness”, and that this can be fully known and defined. Since the Son is begotten, he must be of a different and unlike essence (anomoios, “unlike”) from the Father, a creature produced by the Father’s will. The Spirit is lower still, a creature made by the Son.\n\nThis denies that the three Persons share one divine essence, that the Son and the Spirit are God, and that the Persons are distinguished only by their relations rather than by different natures. Basil of Caesarea and Gregory of Nyssa (Against Eunomius) wrote the main replies.",
+   "denies": [
+    9,
+    11,
+    12,
+    19,
+    25,
+    30
+   ]
+  },
+  {
+   "id": "semi-arianism",
+   "era": 1,
+   "kind": "heresy",
+   "name": "Semi-Arianism (Homoiousianism)",
+   "year": "358",
+   "place": "Ancyra (modern Ankara, Turkey)",
+   "founder": "Basil of Ancyra",
+   "summary": "The Homoiousians rejected the Arian claim that the Son is a creature from nothing, but they also distrusted the Nicene word homoousios (“of the same essence”) as Sabellian. They confessed instead that the Son is homoiousios, “of like essence” with the Father: similar in every respect, but not the same one God.\n\nBy making the Son’s essence only like the Father’s, it denies that the three Persons possess one and the same undivided divine being. Many in this group, through the work of Athanasius and the Cappadocian Fathers, came to accept the Nicene faith, which was confirmed at Constantinople in 381.",
+   "denies": [
+    9,
+    30
+   ]
+  },
+  {
+   "id": "pneumatomachianism",
+   "era": 1,
+   "kind": "heresy",
+   "name": "Pneumatomachianism (Macedonianism)",
+   "year": "c. 360",
+   "place": "Constantinople and Asia Minor",
+   "founder": "Associated with Macedonius of Constantinople and Eustathius of Sebaste",
+   "summary": "The Pneumatomachi (“fighters against the Spirit”) often accepted that the Son is God, but they denied that the Holy Spirit is. The Spirit, they said, is a ministering spirit or a creature of a higher order, neither God nor a mere angel, and should not be worshipped and glorified together with the Father and the Son.\n\nThis denies that the Holy Spirit is fully God, coequal with the Father and the Son, and that he eternally proceeds from God rather than being made. Basil’s On the Holy Spirit and Ambrose’s work of the same name answer them, and the Council of Constantinople (381) confessed the Spirit as “the Lord, the giver of life… worshipped and glorified together with the Father and the Son”.",
+   "denies": [
+    12,
+    17,
+    19,
+    24,
+    30
+   ]
+  },
+  {
+   "id": "apollinarianism",
+   "era": 1,
+   "kind": "heresy",
+   "name": "Apollinarianism",
+   "year": "c. 360–370",
+   "place": "Laodicea, Syria",
+   "founder": "Apollinaris of Laodicea",
+   "summary": "Apollinaris, a strong opponent of Arianism, wanted to protect the unity of Christ. He taught that in Jesus the divine Word took the place of a human mind or rational soul: Christ had a human body and animal life, but his mind was the Word itself.\n\nThis denies that the Son took a complete human nature, body and rational soul, and so that he is truly man as well as truly God. Gregory of Nazianzus answered with the principle that “what has not been assumed has not been healed”. The Council of Constantinople (381) condemned it.",
+   "denies": [
+    43,
+    44
+   ]
+  },
+  {
+   "id": "nestorianism",
+   "era": 2,
+   "kind": "heresy",
+   "name": "Nestorianism",
+   "year": "428",
+   "place": "Constantinople (Nestorius was trained in Antioch, Syria)",
+   "founder": "Nestorius, archbishop of Constantinople",
+   "summary": "Nestorius objected to calling Mary Theotokos, “God-bearer”, preferring “Christ-bearer”. As his opponents understood him, and as the teaching came to be defined, the divine Word and the man Jesus were joined by a close moral union of will and honour, so that what is said of the man (born, suffered, died) could not properly be said of God the Son.\n\nThe position condemned as Nestorianism divides Christ into two subjects, and so denies that Jesus Christ is one single Person who is both God and man. The Council of Ephesus (431) condemned Nestorius, and Chalcedon (451) confessed one Person in two natures.",
+   "denies": [
+    43
+   ]
+  },
+  {
+   "id": "eutychianism",
+   "era": 2,
+   "kind": "heresy",
+   "name": "Eutychianism",
+   "year": "448",
+   "place": "Constantinople",
+   "founder": "Eutyches, an abbot in Constantinople",
+   "summary": "Eutyches taught that after the union Christ had only one nature, the divine, in which his humanity was absorbed “like a drop of honey in the sea”. He would not say that Christ’s human nature is of the same essence as ours.\n\nThis denies that Christ has two complete natures, divine and human, without mixture or change, and implies that the divine nature was changed by mixing with the human. The Council of Chalcedon (451) confessed one Christ “in two natures, without confusion, without change, without division, without separation”. (The Oriental Orthodox churches, often called “miaphysite”, also reject Eutyches.)",
+   "denies": [
+    43,
+    44,
+    46
+   ]
+  },
+  {
+   "id": "tritheism",
+   "era": 2,
+   "kind": "philosophy",
+   "name": "Tritheism",
+   "year": "c. 560s",
+   "place": "Alexandria, Egypt",
+   "founder": "John Philoponus",
+   "summary": "Philoponus, a Christian Aristotelian philosopher, argued that a “nature” exists in reality only as individual things. If the Father, Son and Spirit are three individuals sharing the divine nature, then there are three particular divine natures, just as Peter, James and John are three men, united only by the general idea of Godhead.\n\nThis effectively makes three Gods. It denies that God is one, that the one divine essence is undivided, and that the Persons share one will and act inseparably, indwelling one another. Gregory of Nyssa’s On “Not Three Gods” had already answered the argument from “three men”, and Philoponus was condemned at Constantinople in 680–681.",
+   "denies": [
+    1,
+    8,
+    9,
+    21,
+    28,
+    29
+   ]
+  },
+  {
+   "id": "monothelitism",
+   "era": 2,
+   "kind": "heresy",
+   "name": "Monothelitism",
+   "year": "638",
+   "place": "Constantinople",
+   "founder": "Sergius I, patriarch of Constantinople",
+   "summary": "Seeking to reconcile the churches divided after Chalcedon, Sergius taught (in the Ecthesis of 638, issued by Emperor Heraclius) that Christ, though he has two natures, has only one will, the divine. His human nature had no will of its own.\n\nThis denies that Christ’s human nature is complete, since willing belongs to a true human nature, and so blurs the two natures. Maximus the Confessor opposed it, pointing to Gethsemane: “not my will, but yours, be done”. The Third Council of Constantinople (680–681) confessed two wills in Christ, the human always obeying the divine.",
+   "denies": [
+    43
+   ]
+  },
+  {
+   "id": "servetus",
+   "era": 3,
+   "kind": "movement",
+   "name": "Servetus’s anti-Trinitarianism",
+   "year": "1531",
+   "place": "Hagenau, Alsace (Servetus was from Aragon, Spain)",
+   "founder": "Michael Servetus",
+   "summary": "In On the Errors of the Trinity (1531), Servetus attacked the doctrine of three Persons as unbiblical. He taught that the Word was a mode of God’s self-expression rather than an eternal Person, and that the Son of God is the man Jesus, who began to exist at his conception; the Spirit is God’s power at work in the world.\n\nIt denies that Father, Son and Spirit are three eternal Persons, and that the Son is eternally begotten. Both Catholic and Protestant authorities condemned him, and he was executed in Geneva in 1553, an act widely condemned since.",
+   "denies": [
+    13,
+    18,
+    20,
+    23
+   ]
+  },
+  {
+   "id": "unitarianism",
+   "era": 3,
+   "kind": "movement",
+   "name": "Unitarianism",
+   "year": "1568",
+   "place": "Kolozsvár (Cluj), Transylvania; later London (1774) and Boston (1819)",
+   "founder": "Francis Dávid (Transylvania); Theophilus Lindsey (England); William Ellery Channing (America)",
+   "summary": "Unitarians hold that God is one Person only, the Father. Jesus is honoured as a great teacher and example, in early forms as a uniquely divinely-commissioned man, but not as God; the Holy Spirit is God’s influence rather than a Person. Later Unitarianism became more broadly liberal and today often has no fixed creed.\n\nIt denies that the Son and the Spirit are God, that there are three Persons, and that the Son existed with the Father, loved and glorified by him, before the world began.",
+   "denies": [
+    11,
+    12,
+    13,
+    20,
+    23,
+    26,
+    27
+   ]
+  },
+  {
+   "id": "socinianism",
+   "era": 3,
+   "kind": "movement",
+   "name": "Socinianism",
+   "year": "1579",
+   "place": "Kraków and Raków, Poland (the Sozzinis came from Siena, Italy)",
+   "founder": "Faustus Socinus (Fausto Sozzini), following his uncle Lelio",
+   "summary": "The Socinians, or Polish Brethren, set out their faith in the Racovian Catechism (1605). Christ is a true man, conceived by the virgin, who did not exist before his birth; God raised him and gave him divine authority, so that he may be honoured and prayed to. The Holy Spirit is not a Person but the power of God. They also denied that Christ’s death satisfied God’s justice.\n\nIt denies that the Son is eternal and God by nature, that the Spirit is a divine Person, and that the three Persons are distinct and coeternal. John Owen’s Brief Declaration of the Trinity was written largely against Socinian teaching.",
+   "denies": [
+    11,
+    12,
+    13,
+    17,
+    18,
+    23,
+    26,
+    27,
+    37
+   ]
+  },
+  {
+   "id": "deism",
+   "era": 3,
+   "kind": "philosophy",
+   "name": "Deism",
+   "year": "1624",
+   "place": "England (Herbert’s De Veritate was printed in Paris)",
+   "founder": "Edward, Lord Herbert of Cherbury",
+   "summary": "Deists held that reason alone can know all the religion people need: that there is one supreme God, who should be worshipped by virtue and who rewards and punishes. God made the world and its laws but does not reveal himself in special ways or intervene by miracles. Doctrines known only by revelation, such as the Trinity and the incarnation, were set aside.\n\nIt denies that God has made himself known in the Son, that the Son and the Spirit are God, and that God is three Persons. Deism was influential in eighteenth-century England, France and America.",
+   "denies": [
+    11,
+    12,
+    13,
+    33
+   ]
+  },
+  {
+   "id": "spinozism",
+   "era": 3,
+   "kind": "philosophy",
+   "name": "Pantheism (Spinozism)",
+   "year": "1677",
+   "place": "Amsterdam, Dutch Republic",
+   "founder": "Baruch Spinoza",
+   "summary": "In his Ethics, Spinoza argued that there is only one substance, “God or Nature”, and that everything that exists is a mode of this one substance. Thought and physical extension are both attributes of God. God does not act by will or purpose and is not a Person who loves; everything follows from his nature by necessity.\n\nThis denies that God is distinct from and independent of creation, that God is spirit and not material, and that God is personal at all, let alone three Persons.",
+   "denies": [
+    2,
+    4,
+    13
+   ]
+  },
+  {
+   "id": "swedenborgianism",
+   "era": 3,
+   "kind": "movement",
+   "name": "Swedenborgianism (the New Church)",
+   "year": "1749",
+   "place": "London, England (Swedenborg was Swedish)",
+   "founder": "Emanuel Swedenborg",
+   "summary": "Swedenborg, a scientist who claimed visions of heaven and hell, taught that God is one Person, the Lord Jesus Christ. Within him there is a trinity like the soul, body and activity of a man: the Father is the divine soul, the Son the divine humanity, and the Spirit the divine activity going out from him. He rejected a trinity of Persons as belief in three Gods.\n\nIt denies that Father, Son and Spirit are three distinct Persons and that the Father and Son are not the same Person. Followers organised the New Church in London in 1787.",
+   "denies": [
+    13,
+    14,
+    16,
+    20
+   ]
+  },
+  {
+   "id": "lds",
+   "era": 4,
+   "kind": "movement",
+   "name": "Latter-day Saints (Mormonism)",
+   "year": "1830",
+   "place": "Fayette, New York, USA",
+   "founder": "Joseph Smith",
+   "summary": "Latter-day Saint teaching describes the “Godhead” as three separate beings, united in purpose. The Father and the Son each have a glorified body of flesh and bone, while the Holy Ghost is a personage of spirit. Joseph Smith taught that God was once a man who became exalted, and that faithful humans may also become gods.\n\nThis denies that there is one God of one divine essence, that God is spirit and not bodily, and that God has always been God without change. The church also rejects the Nicene and later creeds.",
+   "denies": [
+    1,
+    2,
+    3,
+    5,
+    9
+   ]
+  },
+  {
+   "id": "christadelphians",
+   "era": 4,
+   "kind": "movement",
+   "name": "Christadelphians",
+   "year": "c. 1848",
+   "place": "United States",
+   "founder": "John Thomas",
+   "summary": "Christadelphians (“brothers of Christ”) hold that God is one, the Father. Jesus is the Son of God, born of the virgin, but did not exist before his birth except in God’s plan; he became immortal at his resurrection. The Holy Spirit is God’s power, not a Person.\n\nThey deny that the Son is God and eternal, that the Spirit is God and a Person who speaks and wills, and that there are three Persons.",
+   "denies": [
+    11,
+    12,
+    13,
+    18,
+    37
+   ]
+  },
+  {
+   "id": "kenoticism",
+   "era": 4,
+   "kind": "philosophy",
+   "name": "Kenotic Christology",
+   "year": "1853",
+   "place": "Erlangen, Germany",
+   "founder": "Gottfried Thomasius",
+   "summary": "From Paul’s words that Christ “emptied himself” (Greek kenōsis, Philippians 2:7), kenotic theologians taught that in becoming man the Son laid aside some of his divine attributes, such as being all-knowing, all-powerful and everywhere present, so that he could live a genuinely human life.\n\nIn its stronger forms, this denies that the Son remained fully God when he became man, and that becoming man did not change the divine nature. Classical theology reads Philippians 2 as the Son adding the form of a servant, not subtracting divinity.",
+   "denies": [
+    5,
+    42,
+    46
+   ]
+  },
+  {
+   "id": "jehovahs-witnesses",
+   "era": 4,
+   "kind": "movement",
+   "name": "Jehovah’s Witnesses",
+   "year": "1879",
+   "place": "Allegheny (Pittsburgh), Pennsylvania, USA",
+   "founder": "Charles Taze Russell",
+   "summary": "Jehovah’s Witnesses teach that Jehovah, the Father, alone is Almighty God. Jesus is God’s first creation, identified with the archangel Michael, through whom everything else was made; he is “a god” but not Jehovah. The holy spirit is God’s active force, not a Person. Their New World Translation renders John 1:1 “the Word was a god”.\n\nThis denies that the Son is God, eternal and eternally begotten, that the Spirit is God and a Person, and that there are three coequal Persons. It closely resembles ancient Arianism.",
+   "denies": [
+    11,
+    12,
+    13,
+    18,
+    19,
+    23,
+    37
+   ]
+  },
+  {
+   "id": "oneness-pentecostalism",
+   "era": 4,
+   "kind": "movement",
+   "name": "Oneness Pentecostalism",
+   "year": "1913",
+   "place": "Los Angeles, California, USA",
+   "founder": "R. E. McAlister and Frank Ewart",
+   "summary": "At a camp meeting at Arroyo Seco in 1913, some Pentecostals concluded that the apostles baptised only “in the name of Jesus”. They came to teach that God is one Person whose name is Jesus: the Father is the divine Spirit in Jesus, the Son is his humanity, and the Holy Spirit is the same God acting in believers. Baptism is administered in the name of Jesus only.\n\nThis is a modern form of modalism. It denies that Father, Son and Spirit are three distinct Persons, eternally related, and that only the Son, not the Father, became incarnate. It also rejects baptism into the name of the Father, Son and Holy Spirit.",
+   "denies": [
+    13,
+    14,
+    15,
+    16,
+    20,
+    22,
+    35,
+    36,
+    40,
+    41
+   ]
+  },
+  {
+   "id": "process-theology",
+   "era": 4,
+   "kind": "philosophy",
+   "name": "Process theology",
+   "year": "1929",
+   "place": "Cambridge, Massachusetts, USA",
+   "founder": "Alfred North Whitehead (developed by Charles Hartshorne)",
+   "summary": "Process thought holds that reality is made of events and becoming rather than unchanging substance. God has an unchanging “primordial” side but also a “consequent” side that grows and changes as God takes in the experience of the world. God persuades rather than controls, and God and the world need each other.\n\nThis denies that God is immutable, that he exists independently of creation, and that the divine nature cannot change. Most process theologians also do not hold to a Trinity of three Persons.",
+   "denies": [
+    4,
+    5,
+    46
+   ]
+  }
+ ]
+}

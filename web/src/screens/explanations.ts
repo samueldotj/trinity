@@ -21,6 +21,8 @@ interface Teaching {
   support_ta?: string;
   edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean; meaning_ta?: boolean; support_ta?: boolean };
   topic: { id: number; title: string; theme: string; q: number };
+  /** Heresies that deny this teaching, from the Heresies page. */
+  heresies?: { id: string; name: string }[];
 }
 interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
@@ -148,6 +150,12 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       ${support}
       <div class="verse-grid">${verses}</div>
     </section>
+
+    ${cur.heresies?.length ? `<section class="denied-by" aria-labelledby="denied-h">
+      <h2 id="denied-h" class="small-caps">Heresies that deny this teaching</h2>
+      <ul>${cur.heresies.map((h) => `<li><a href="${href('heresies', { h: h.id, t: cur.n })}">${esc(h.name)}</a></li>`).join('')}</ul>
+      <a class="denied-all" href="${href('heresies', { t: cur.n })}">Read what each one teaches →</a>
+    </section>` : ''}
 
     <section class="explore" aria-label="Keep exploring">
       <a class="topic-link" href="${href('topics', { topic: cur.topic.id })}"><span class="small-caps">Topic · ${esc(cur.topic.theme)}</span><span>${esc(cur.topic.title)}</span></a>

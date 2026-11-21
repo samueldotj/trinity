@@ -420,3 +420,31 @@ p { margin: 0; }
 .complete-part a { margin-top: auto; padding-top: 6px; font-size: 14px; font-weight: 600; }
 .complete-next { display: flex; flex-direction: column; gap: 12px; }
 .complete-next h2 { font-size: 26px; }
+
+/* Heresies: the page, and the red-ruled list on each teaching of the heresies that deny it. */
+:root { --heresy: #B3261E; --heresy-soft: #FBEDEC; }
+.denied-by { border-left: 4px solid var(--heresy); background: var(--heresy-soft); border-radius: 0 16px 16px 0; padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; }
+.denied-by h2 { color: var(--heresy); }
+.denied-by ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.denied-by li a { min-height: 36px; display: inline-flex; align-items: center; padding: 0 12px; border: 1px solid #E5B9B5; border-radius: 999px; background: var(--surface); color: var(--ink); font-size: 14px; text-decoration: none; }
+.denied-by li a:hover { border-color: var(--heresy); color: var(--heresy); }
+.denied-by .denied-all { align-self: flex-start; font-size: 14px; font-weight: 600; color: var(--heresy); }
+.heresy-filters { display: flex; flex-wrap: wrap; gap: 12px; width: min(100%, 360px); }
+.heresy-era { display: flex; flex-direction: column; gap: 14px; }
+.heresy-era-head { display: flex; flex-direction: column; gap: 4px; padding-top: 8px; }
+.heresy-era-head h2 { font-size: 28px; }
+.heresy-era-head p { color: var(--muted); font-size: 15px; }
+.heresy { padding: 22px 24px; display: flex; flex-direction: column; gap: 12px; scroll-margin-top: 16px; border-left: 4px solid var(--heresy); }
+.heresy.is-target { box-shadow: 0 0 0 3px var(--heresy); }
+.heresy:focus { outline: none; }
+.heresy-head { display: flex; flex-direction: column; gap: 8px; padding-bottom: 12px; border-bottom: 1px solid var(--line-2); }
+.heresy-kind { color: var(--heresy); }
+.heresy-head h3 { font-family: var(--display); font-size: 26px; line-height: 1.15; }
+.heresy-facts { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 0; font-size: 14px; }
+.heresy-facts div { display: flex; gap: 6px; min-width: 0; }
+.heresy-facts dt { font-weight: 600; color: var(--muted); }
+.heresy-facts dd { margin: 0; color: var(--ink); }
+.heresy-text { font-family: var(--read); font-size: 17px; line-height: 1.6; color: var(--ink); }
+.heresy-denies { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; }
+.heresy-denies .small-caps { margin-right: 4px; color: var(--heresy); }
+.heresy-denies a[aria-current] { font-weight: 700; }
