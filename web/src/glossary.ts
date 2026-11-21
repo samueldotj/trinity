@@ -91,15 +91,20 @@ function tamilForms(glossary: Glossary) {
   return got;
 }
 
-/** Like `linkTerms`, for Tamil text and the Tamil glossary; the links open the Key words page in Tamil. */
-export function linkTermsTa(text: string, glossary: Glossary, seen: Set<string>, from?: number): string {
+/**
+ * Like `linkTerms`, for Tamil text and the Tamil glossary; the links open the Key words page in Tamil.
+ * With `english` (the English glossary), each linked word is followed by its English term in brackets.
+ */
+export function linkTermsTa(text: string, glossary: Glossary, seen: Set<string>, from?: number, english?: Glossary): string {
   const { re, keys } = tamilForms(glossary);
   const html = esc(text);
   return html.replace(re, (found, offset: number) => {
     const key = keys.find((k) => k.re.test(html.slice(offset)))?.key;
     if (!key || seen.has(key)) return found;
     seen.add(key);
-    return `<a class="term-link" href="${href('keywords', { term: key, from, lang: 'ta' })}" title="${esc(glossary[key].def)}">${found}</a>`;
+    // The English term links to the English Key words entry, with the English definition as its tooltip.
+    const en = english?.[key] ? ` <span class="term-en" lang="en">(<a class="term-link" href="${href('keywords', { term: key, from, lang: 'en' })}" title="${esc(english[key].def)}">${esc(english[key].term)}</a>)</span>` : '';
+    return `<a class="term-link" href="${href('keywords', { term: key, from, lang: 'ta' })}" title="${esc(glossary[key].def)}">${found}</a>${en}`;
   });
 }
 

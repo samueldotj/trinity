@@ -79,12 +79,12 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   const meaning = meaningText ? `<section class="explain" aria-labelledby="explain-h"${ta ? ' lang="ta"' : ''}>
           <h2 id="explain-h" class="small-caps">${ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?'}</h2>
           ${ta
-            ? editable(`teaching:${cur.n}:meaning:ta`, `<p class="explain-text">${linkTermsTa(meaningText, glTa, seenTa, cur.n)}</p>`, { text: meaningText, edited: cur.edited?.meaning_ta, label: 'explanation (Tamil)' })
+            ? editable(`teaching:${cur.n}:meaning:ta`, `<p class="explain-text">${linkTermsTa(meaningText, glTa, seenTa, cur.n, gl)}</p>`, { text: meaningText, edited: cur.edited?.meaning_ta, label: 'explanation (Tamil)' })
             : editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${linkTerms(meaningText, gl, seen, cur.n)}</p>`, { text: meaningText, edited: cur.edited?.meaning, label: 'explanation' })}
         </section>` : '';
   const supportTa = lang === 'ta' && cur.support_ta;
   const support = supportTa
-    ? `<div lang="ta">${editable(`teaching:${cur.n}:support:ta`, `<p class="support">${linkTermsTa(supportTa, glTa, seenTa, cur.n)}</p>`, { text: supportTa, edited: cur.edited?.support_ta, label: 'how the passages support it (Tamil)' })}</div>`
+    ? `<div lang="ta">${editable(`teaching:${cur.n}:support:ta`, `<p class="support">${linkTermsTa(supportTa, glTa, seenTa, cur.n, gl)}</p>`, { text: supportTa, edited: cur.edited?.support_ta, label: 'how the passages support it (Tamil)' })}</div>`
     : cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support">${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
 
   // On the Tamil page the passages are shown in the Tamil Indian Revised Version, where it has them.

@@ -147,6 +147,8 @@ p { margin: 0; }
 /* A key word in an explanation: links to its definition on the Key words page. */
 .term-link { color: inherit; text-decoration: underline dotted var(--link); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .term-link:hover { color: var(--link-ink); text-decoration-style: solid; }
+/* The English term after a Tamil key word: 1pt smaller than the text around it. */
+.term-en { font-size: calc(1em - 1pt); color: var(--ink-2); white-space: nowrap; }
 
 /* ---------- Key words ---------- */
 .kw-head { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
