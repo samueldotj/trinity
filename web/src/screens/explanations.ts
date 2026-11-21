@@ -270,8 +270,6 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     html: `<div class="slide-diagram">
         <div class="slide-diagram-fit" role="img" aria-label="${esc(mdPlain(draw(cur.n, cur.notes, cur.cap).alt))}">${diagramHtml(cur, 'wide')}</div>
         <div class="slide-diagram-side">
-          <p class="slide-eyebrow">Illustration</p>
-          <p class="slide-caption">${mdInline(cur.cap)}</p>
           <div class="legend">
             <span><i style="background: #1B1E27"></i>is</span>
             <span><i style="height: 0; border-top: 3px dashed #6B7080"></i>is not</span>
