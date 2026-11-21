@@ -57,9 +57,8 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
         ${tp.ans ? editable(`topic:${tp.id}:answer`, mdParas(tp.ans.text, 'read-text'), { text: tp.ans.text, edited: tp.edited?.answer, label: 'answer' }) + `<div class="row">${verses}</div>` : ''}
         <div class="soft">
           <span class="small-caps">What earlier Christian writers thought</span>
-          ${editable(`topic:${tp.id}:cmp`, `<div style="font-size: 15px; color: var(--ink-2)">${mdParas(tp.cmp, '')}</div>`, { text: tp.cmp, edited: tp.edited?.cmp, label: 'summary of the earlier writers' })}
           ${refs}
-          <a href="${href('qa', { topic: tp.title })}" style="font-weight: 600">${tp.q} questions answered by the writers →</a>
+          <a href="${href('qa', { topic: tp.title })}" style="font-weight: 600">Similar ${tp.q} questions asked for thousands of years, and answers from early Christians →</a>
         </div>
       </div>` : '';
     return `<article class="card topic${tp.id === focus ? ' focus' : ''}" id="topic-${tp.id}" data-title="${esc(tp.title.toLowerCase())}">
