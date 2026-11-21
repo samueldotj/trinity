@@ -325,7 +325,7 @@ fn questions(p: &Params) -> Value {
         let want = normalize(t);
         topics.iter().position(|x| normalize(s(x)) == want)
     });
-    let sort = p.get("sort").map(String::as_str).unwrap_or("many");
+    let sort = p.get("sort").map(String::as_str).unwrap_or("deep");
     let offset = num(p, "offset", 0);
     let limit = num(p, "limit", 25).min(200);
 
@@ -340,10 +340,13 @@ fn questions(p: &Params) -> Value {
         .filter(|(i, x)| words.iter().all(|w| texts[*i].contains(w.as_str()) || question_number(w) == x[0].as_u64()))
         .collect();
     let nwriters = |x: &Value| x[5].as_array().map_or(0, Vec::len);
-    if sort == "many" {
-        list.sort_by_key(|(_, x)| (std::cmp::Reverse(nwriters(x)), x[3].as_u64(), x[4].as_u64()));
-    } else {
-        list.sort_by_key(|(_, x)| (x[3].as_u64(), x[4].as_u64()));
+    // How thought-provoking the question is, 1-10 (0 when unscored).
+    let depth = |x: &Value| x[7].as_u64().unwrap_or(0);
+    use std::cmp::Reverse;
+    match sort {
+        "many" => list.sort_by_key(|(_, x)| (Reverse(nwriters(x)), Reverse(depth(x)), x[3].as_u64(), x[4].as_u64())),
+        "theme" => list.sort_by_key(|(_, x)| (x[3].as_u64(), x[4].as_u64(), Reverse(depth(x)), Reverse(nwriters(x)))),
+        _ => list.sort_by_key(|(_, x)| (Reverse(depth(x)), Reverse(nwriters(x)), x[3].as_u64(), x[4].as_u64())),
     }
 
     let name = |v: &[Value], i: &Value| i.as_u64().and_then(|n| v.get(n as usize)).cloned().unwrap_or(Value::Null);

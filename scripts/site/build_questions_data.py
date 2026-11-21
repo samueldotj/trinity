@@ -2,6 +2,8 @@
 import json, os, re, sys
 
 qs_path, kb_path, out_path = sys.argv[1:4]
+# Optional: {"<question id>": 1-10}, how thought-provoking each question is; the app lists the highest first.
+scores = json.load(open(sys.argv[4], encoding='utf8')) if len(sys.argv) > 4 else {}
 CHUNKS = 1
 qs = json.load(open(qs_path, encoding='utf8'))
 kb = json.load(open(kb_path, encoding='utf8'))
@@ -77,7 +79,7 @@ for n, q in enumerate(qs):
     srcs = q['sources']
     a = sorted({aidx(s['author']) for s in srcs})
     index.append([q['id'], fix(q['question']), cats.index(q['category']) if q['category'] in cats else 0,
-                  q_theme.get(q['id'], -1), q_topic.get(q['id'], -1), a, n % CHUNKS])
+                  q_theme.get(q['id'], -1), q_topic.get(q['id'], -1), a, n % CHUNKS, scores.get(str(q['id']), 0)])
     chunks[n % CHUNKS][str(q['id'])] = {
         's': fix(q.get('synthesis')),
         'a': [[aidx(s['author']), SHORT.get(s['work_id'], s['work']), place(s['section']), fix(s['answer']),

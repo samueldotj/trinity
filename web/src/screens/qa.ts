@@ -25,7 +25,7 @@ const answersLabel = (answers: number, writers: number) =>
 export async function renderQA(root: HTMLElement, params: URLSearchParams): Promise<void> {
   const state = {
     q: params.get('q') || '', theme: params.get('theme') || '', writer: params.get('writer') || '',
-    cat: params.get('cat') || '', sort: params.get('sort') || 'many', topic: params.get('topic') || '',
+    cat: params.get('cat') || '', sort: params.get('sort') || 'deep', topic: params.get('topic') || '',
     open: params.get('open') || '', shown: Number(params.get('shown') || PAGE),
   };
   const set = (patch: Partial<typeof state>) => navigate('qa', { ...state, shown: PAGE, open: '', ...patch }, true);
@@ -90,7 +90,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
       <label class="field">Theme<select id="qa-theme">${opt(res.themes.map((t, i) => ({ v: String(i), label: t })), state.theme, 'All themes')}</select></label>
       <label class="field">Writer<select id="qa-writer">${opt(res.writers.map((w) => ({ v: String(w.id), label: w.name })), state.writer, 'All writers')}</select></label>
       <label class="field">Kind<select id="qa-cat">${opt(res.cats.map((c, i) => ({ v: String(i), label: cap(c) })), state.cat, 'All kinds')}</select></label>
-      <label class="field">Order<select id="qa-sort"><option value="many"${state.sort === 'many' ? ' selected' : ''}>Most writers first</option><option value="theme"${state.sort === 'theme' ? ' selected' : ''}>By theme</option></select></label>
+      <label class="field">Order<select id="qa-sort"><option value="deep"${state.sort === 'deep' ? ' selected' : ''}>Most thought-provoking first</option><option value="many"${state.sort === 'many' ? ' selected' : ''}>Most writers first</option><option value="theme"${state.sort === 'theme' ? ' selected' : ''}>By theme</option></select></label>
     </div>
     ${res.topicName ? `<div class="banner"><span>Questions on the topic <strong>${esc(res.topicName)}</strong></span><button type="button" id="qa-clear">Show all questions</button></div>` : ''}
     <p class="status" role="status">${status}</p>
