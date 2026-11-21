@@ -602,6 +602,13 @@ p { margin: 0; }
 .anim-svg { flex: 0 1 auto; width: auto; height: 448px; max-width: 100%; }
 .anim-caps { position: relative; width: 100%; height: 44px; }
 .anim-caps p { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--read); font-size: 30px; line-height: 1.35; color: var(--ink); opacity: 0; }
+/* Tamil captions run longer: up to two lines, in Mukta Malar, with the picture a little smaller to make room.
+   One that still does not fit is set smaller by wireAnimation(). */
+.anim.is-ta .anim-svg { height: 420px; }
+.anim.is-ta .anim-caps { height: 72px; }
+.anim-caps p:lang(ta) { font-family: 'Mukta Malar', system-ui, sans-serif; font-size: 26px; line-height: 1.35; text-wrap: balance; }
+.anim-steps button:lang(ta) { font-family: 'Mukta Malar', system-ui, sans-serif; font-size: 13px; padding: 0 9px; }
+.anim.is-ta .anim-bar, .anim.is-ta .anim-steps { gap: 6px; }
 .anim .a-tag, .anim .a-not { opacity: 0; }
 .anim * { animation-iteration-count: infinite; animation-fill-mode: both; animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
 /* Every animation has four scenes starting at 0, 22%, 46% and 72% of its loop (Scene.at in animations/frame.ts). */

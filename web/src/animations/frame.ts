@@ -55,6 +55,17 @@ export function wireAnimation(body: HTMLElement): void {
   if (!box) return;
   const toggle = box.querySelector<HTMLButtonElement>('.anim-toggle')!;
   const all = () => box.getAnimations({ subtree: true });
+  // A caption too long for its strip (Tamil can be) is set smaller until it fits; again once fonts load.
+  const fitCaptions = () => box.querySelectorAll<HTMLElement>('.anim-caps p').forEach((p) => {
+    p.style.fontSize = '';
+    const text = document.createRange();
+    text.selectNodeContents(p);
+    for (let size = parseFloat(getComputedStyle(p).fontSize); text.getBoundingClientRect().height > p.getBoundingClientRect().height + 1 && size > 16; size -= 1) {
+      p.style.fontSize = `${size - 1}px`;
+    }
+  });
+  fitCaptions();
+  void document.fonts?.ready.then(() => { if (box.isConnected) fitCaptions(); });
   const speed = box.querySelector<HTMLSelectElement>('.anim-speed select')!;
   const setSpeed = (r: number) => all().forEach((a) => { a.playbackRate = r; });
   setSpeed(Number(speed.value));

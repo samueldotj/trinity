@@ -292,7 +292,7 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
   }
 
   // A teaching with an animated illustration shows that; the others, the diagram from the page.
-  const animation = animationFor(cur.n);
+  const animation = animationFor(cur.n, lang);
   slides.push(animation ? { kind: 'diagram', html: animation, onShow: wireAnimation } : {
     kind: 'diagram',
     onShow: fitSlideDiagram,
