@@ -597,6 +597,15 @@ p { margin: 0; }
 .anim-caps p { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--read); font-size: 30px; line-height: 1.35; color: var(--ink); opacity: 0; }
 .anim .a-tag, .anim .a-not { opacity: 0; }
 .anim * { animation-iteration-count: infinite; animation-fill-mode: both; animation-timing-function: cubic-bezier(.45, 0, .2, 1); }
+/* Every animation has four scenes starting at 0, 22%, 46% and 72% of its loop (Scene.at in animations.ts). */
+.anim .anim-cap1 { animation-name: scene-cap1; }
+.anim .anim-step1 { animation-name: scene-step1; }
+.anim .anim-cap2 { animation-name: scene-cap2; }
+.anim .anim-step2 { animation-name: scene-step2; }
+.anim .anim-cap3 { animation-name: scene-cap3; }
+.anim .anim-step3 { animation-name: scene-step3; }
+.anim .anim-cap4 { animation-name: scene-cap4; }
+.anim .anim-step4 { animation-name: scene-step4; }
 /* Reduced motion: the finished picture and the last caption, still. */
 @media (prefers-reduced-motion: reduce) {
   .anim * { animation: none !important; }
@@ -616,14 +625,6 @@ p { margin: 0; }
 .anim-t1 .a-pill, .anim-t1 .a-tri { animation-name: t1-pill; }
 .anim-t1 .a-tag { animation-name: t1-tag; }
 .anim-t1 .a-not { animation-name: t1-not; }
-.anim-t1 .anim-cap1 { animation-name: t1-cap1; }
-.anim-t1 .anim-cap2 { animation-name: t1-cap2; }
-.anim-t1 .anim-cap3 { animation-name: t1-cap3; }
-.anim-t1 .anim-cap4 { animation-name: t1-cap4; }
-.anim-t1 .anim-step1 { animation-name: t1-step1; }
-.anim-t1 .anim-step2 { animation-name: t1-step2; }
-.anim-t1 .anim-step3 { animation-name: t1-step3; }
-.anim-t1 .anim-step4 { animation-name: t1-step4; }
 @keyframes t1-god { 0% { transform: scale(0); opacity: 0; } 5% { transform: scale(1.08); opacity: 1; } 7% { transform: scale(1); } 46% { opacity: 1; } 52% { opacity: .16; } 70% { opacity: .16; } 76% { opacity: 1; } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
 @keyframes t1-ring { 0%, 8% { stroke-dashoffset: 1; opacity: 1; } 20% { stroke-dashoffset: 0; } 46% { opacity: 1; } 51% { opacity: 0; stroke-dashoffset: 0; } 74% { opacity: 0; stroke-dashoffset: 1; } 75% { opacity: 1; } 86% { stroke-dashoffset: 0; } 95% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
 @keyframes t1-ringlabel { 0%, 14% { opacity: 0; } 19% { opacity: 1; } 46% { opacity: 1; } 50% { opacity: 0; } 84% { opacity: 0; } 88%, 95% { opacity: 1; } 100% { opacity: 0; } }
@@ -634,11 +635,35 @@ p { margin: 0; }
 @keyframes t1-pill { 0%, 37% { opacity: 0; } 41% { opacity: 1; } 46% { opacity: 1; } 50% { opacity: 0; } 83% { opacity: 0; } 87%, 95% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes t1-tag { 0%, 55% { opacity: 0; transform: translateY(-6px); } 59% { opacity: 1; transform: translateY(0px); } 67% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
 @keyframes t1-not { 0%, 58% { opacity: 0; transform: scale(.6); } 61% { opacity: 1; transform: scale(1.06); } 62.5% { transform: scale(1); } 68% { opacity: 1; } 71% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes t1-cap1 { 0% { opacity: 0; } 3%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
-@keyframes t1-cap2 { 0%, 22% { opacity: 0; } 24%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
-@keyframes t1-cap3 { 0%, 46% { opacity: 0; } 48%, 70% { opacity: 1; } 72%, 100% { opacity: 0; } }
-@keyframes t1-cap4 { 0%, 72% { opacity: 0; } 74%, 95% { opacity: 1; } 100% { opacity: 0; } }
-@keyframes t1-step1 { 0%, 21% { color: #12172B; border-color: #12172B; } 23%, 100% { color: #6B7290; border-color: #D6D9E4; } }
-@keyframes t1-step2 { 0%, 22% { color: #6B7290; border-color: #D6D9E4; } 24%, 45% { color: #12172B; border-color: #12172B; } 47%, 100% { color: #6B7290; border-color: #D6D9E4; } }
-@keyframes t1-step3 { 0%, 46% { color: #6B7290; border-color: #D6D9E4; } 48%, 71% { color: #12172B; border-color: #12172B; } 73%, 100% { color: #6B7290; border-color: #D6D9E4; } }
-@keyframes t1-step4 { 0%, 72% { color: #6B7290; border-color: #D6D9E4; } 74%, 100% { color: #12172B; border-color: #12172B; } }
+@keyframes scene-cap1 { 0% { opacity: 0; } 3%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes scene-cap2 { 0%, 22% { opacity: 0; } 24%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes scene-cap3 { 0%, 46% { opacity: 0; } 48%, 70% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes scene-cap4 { 0%, 72% { opacity: 0; } 74%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes scene-step1 { 0%, 21% { color: #12172B; border-color: #12172B; } 23%, 100% { color: #6B7290; border-color: #D6D9E4; } }
+@keyframes scene-step2 { 0%, 22% { color: #6B7290; border-color: #D6D9E4; } 24%, 45% { color: #12172B; border-color: #12172B; } 47%, 100% { color: #6B7290; border-color: #D6D9E4; } }
+@keyframes scene-step3 { 0%, 46% { color: #6B7290; border-color: #D6D9E4; } 48%, 71% { color: #12172B; border-color: #12172B; } 73%, 100% { color: #6B7290; border-color: #D6D9E4; } }
+@keyframes scene-step4 { 0%, 72% { color: #6B7290; border-color: #D6D9E4; } 74%, 100% { color: #12172B; border-color: #12172B; } }
+
+/* Teaching 2, God is Spirit: 24 seconds in four scenes. */
+.anim-t2 * { animation-duration: 24s; }
+.anim-t2 .a-piece, .anim-t2 .a-human, .anim-t2 .a-humantag, .anim-t2 .a-strike, .anim-t2 .a-icon, .anim-t2 .a-word { opacity: 0; }
+.anim-t2 .a-god { animation-name: t2-god; }
+.anim-t2 .a-ringspin { animation-name: t2-spin; animation-timing-function: linear; }
+.anim-t2 .a-ring { animation-name: t2-ring; }
+.anim-t2 .a-piece { animation-name: t2-piece; }
+.anim-t2 .a-human { animation-name: t2-human; }
+.anim-t2 .a-humantag { animation-name: t2-humantag; }
+.anim-t2 .a-strike { animation-name: t2-strike; }
+.anim-t2 .a-icon { animation-name: t2-icon; }
+.anim-t2 .a-word { animation-name: t2-word; }
+.anim-t2 .a-spiritlabel { animation-name: t2-spiritlabel; }
+@keyframes t2-god { 0%, 9% { opacity: 0; transform: scale(.85); } 13% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t2-spin { from { transform: rotate(0deg); } to { transform: rotate(40deg); } }
+@keyframes t2-ring { 0%, 10% { opacity: 0; stroke-width: 4; } 14%, 22% { opacity: 1; } 25%, 43% { opacity: .25; } 47% { opacity: 1; } 76% { stroke-width: 4; } 80% { stroke-width: 7; } 84% { stroke-width: 4; } 95% { opacity: 1; } 100% { opacity: 0; stroke-width: 4; } }
+@keyframes t2-piece { 0% { opacity: 0; transform: translate(0px, 0px) rotate(0deg) scale(.6); } 3% { opacity: 1; transform: translate(0px, 0px) rotate(0deg) scale(1); } 8% { transform: translate(0px, 0px) rotate(0deg) scale(1); } 9% { transform: translate(calc(var(--dx) * .06), calc(var(--dy) * .06)) rotate(0deg) scale(1); } 10% { transform: translate(0px, 0px) rotate(0deg) scale(1); } 15% { opacity: 1; transform: translate(var(--dx), var(--dy)) rotate(var(--r)) scale(1); } 20%, 100% { opacity: 0; transform: translate(var(--dx), calc(var(--dy) + 60px)) rotate(var(--r)) scale(1); } }
+@keyframes t2-human { 0%, 23% { opacity: 0; transform: scale(.6); } 26% { opacity: 1; transform: scale(.6); } 36% { opacity: 1; transform: scale(2.6); } 41% { opacity: 1; transform: scale(2.6); } 45%, 100% { opacity: 0; transform: scale(2.6); } }
+@keyframes t2-humantag { 0%, 32% { opacity: 0; transform: translateY(-6px); } 35%, 41% { opacity: 1; transform: translateY(0px); } 45%, 100% { opacity: 0; } }
+@keyframes t2-strike { 0%, 37% { opacity: 1; stroke-dashoffset: 1; } 40% { stroke-dashoffset: 0; } 42% { opacity: 1; stroke-dashoffset: 0; } 45%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t2-icon { 0%, 47% { opacity: 0; transform: scale(.7); } 50% { opacity: 1; transform: scale(1); } 56% { opacity: 1; transform: scale(1); } 59%, 100% { opacity: 0; transform: scale(1.15); } }
+@keyframes t2-word { 0%, 57% { opacity: 0; transform: scale(.7); } 60% { opacity: 1; transform: scale(1.06); } 61.5% { transform: scale(1); } 69% { opacity: 1; } 72%, 100% { opacity: 0; } }
+@keyframes t2-spiritlabel { 0%, 74% { opacity: 0; } 78%, 95% { opacity: 1; } 100% { opacity: 0; } }
