@@ -1,15 +1,14 @@
 import { api } from '../api';
 import { editable, wireEditing } from '../edit';
 import { type Glossary, termsIn } from '../glossary';
+import { type Lang, langSwitch, pickLang, tamilCredit } from '../lang';
 import { esc, failure, href, icon, loading } from '../util';
 
 interface Teaching { n: number; short: string; title: string; meaning?: string; support?: string }
 interface Data { glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
-type Lang = 'en' | 'ta';
-
-// The page's own words in each language. The teachings themselves are in English only for now,
-// so their titles in "Used in" stay English (marked lang="en").
+// The page's own words in each language. Teaching titles stay English (marked lang="en"): only the
+// teachings' explanations are translated.
 const UI: Record<Lang, { title: string; intro: string; used: string; back: (n: number) => string; index: string; loading: string }> = {
   en: {
     title: 'Key words',
@@ -21,25 +20,13 @@ const UI: Record<Lang, { title: string; intro: string; used: string; back: (n: n
   },
   ta: {
     title: 'முக்கியச் சொற்கள்',
-    intro: 'போதனைகளில் பயன்படுத்தப்படும் இறையியல் சொற்கள். ஒவ்வொரு போதனையின் விளக்கத்திலும் இந்தச் சொற்கள் இந்தப் பக்கத்துடன் இணைக்கப்பட்டுள்ளன. போதனைகள் தற்போது ஆங்கிலத்தில் மட்டுமே உள்ளன.',
+    intro: 'போதனைகளில் பயன்படுத்தப்படும் இறையியல் சொற்கள். ஒவ்வொரு போதனையின் விளக்கத்திலும் இந்தச் சொற்கள் இந்தப் பக்கத்துடன் இணைக்கப்பட்டுள்ளன. போதனைகளின் தலைப்புகள் ஆங்கிலத்தில் உள்ளன; அவற்றின் விளக்கங்கள் தமிழிலும் உள்ளன.',
     used: 'இவற்றில் வருகிறது',
     back: (n) => `போதனை ${n}-க்குத் திரும்பு`,
     index: 'முக்கியச் சொற்கள்',
     loading: 'முக்கியச் சொற்கள் ஏற்றப்படுகின்றன…',
   },
 };
-
-const LANG_KEY = 'keywords-lang';
-
-/** The language to show: the address says, else the reader's last choice, else English. */
-function pickLang(params: URLSearchParams): Lang {
-  const asked = params.get('lang');
-  if (asked === 'en' || asked === 'ta') {
-    try { localStorage.setItem(LANG_KEY, asked); } catch { /* ignore */ }
-    return asked;
-  }
-  try { return localStorage.getItem(LANG_KEY) === 'ta' ? 'ta' : 'en'; } catch { return 'en'; }
-}
 
 /** Key words: every theological word the teachings use, defined, with the teachings that use it. */
 export async function renderKeywords(root: HTMLElement, params: URLSearchParams): Promise<void> {
@@ -80,14 +67,8 @@ export async function renderKeywords(root: HTMLElement, params: URLSearchParams)
   }).join('');
 
   const index = sorted.map(([k, g]) => `<a href="${here({ term: k })}">${esc(g.term)}</a>`).join('');
-  const switcher = `<nav class="lang-switch" aria-label="Language / மொழி">
-      <a href="${here({ lang: 'en' })}" lang="en"${lang === 'en' ? ' aria-current="true"' : ''}>English</a>
-      <a href="${here({ lang: 'ta' })}" lang="ta"${lang === 'ta' ? ' aria-current="true"' : ''}>தமிழ்</a>
-    </nav>`;
-  const credit = lang === 'ta' ? `<p class="kw-credit" lang="en">Tamil Bible wording follows the
-      <a href="https://ebible.org/details.php?id=tam2017">Tamil Indian Revised Version (IRV)</a>,
-      © 2017, 2019 Bridge Connectivity Solutions, licensed
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The definitions are translated from the English.</p>` : '';
+  const switcher = langSwitch(lang, (l) => here({ lang: l }));
+  const credit = lang === 'ta' ? tamilCredit('The definitions are') : '';
 
   root.innerHTML = `<div class="page keywords" lang="${lang}">
     <header class="kw-head">

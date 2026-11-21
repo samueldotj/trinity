@@ -204,6 +204,7 @@ QA = Path(__file__).resolve().parents[2] / 'corpus' / 'qa'
 EXPLAIN = json.load(open(QA / 'teaching_explanations.json', encoding='utf8')) if (QA / 'teaching_explanations.json').exists() else {}
 GLOSSARY = json.load(open(QA / 'glossary.json', encoding='utf8')) if (QA / 'glossary.json').exists() else {}
 GLOSSARY_TA = json.load(open(QA / 'glossary.ta.json', encoding='utf8')) if (QA / 'glossary.ta.json').exists() else {}  # Tamil
+EXPLAIN_TA = json.load(open(QA / 'teaching_explanations.ta.json', encoding='utf8')) if (QA / 'teaching_explanations.ta.json').exists() else {}  # Tamil
 
 out, problems = [], []
 for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
@@ -218,6 +219,7 @@ for i, (g, short, title, detail, refs, tid, mode, notes) in enumerate(T):
                 'refs': refs, 'cap': CAPTIONS[i + 1],
                 **({'note': dict(zip(('title', 'text', 'see'), TEACHING_NOTES[i + 1]))} if i + 1 in TEACHING_NOTES else {}),
                 **({'meaning': EXPLAIN[str(i + 1)]['meaning'], 'support': EXPLAIN[str(i + 1)]['support']} if str(i + 1) in EXPLAIN else {}),
+                **({'meaning_ta': EXPLAIN_TA[str(i + 1)]['meaning'], 'support_ta': EXPLAIN_TA[str(i + 1)]['support']} if str(i + 1) in EXPLAIN_TA else {}),
                 'verses': verses, 'mode': mode, 'notes': notes,
                 'topic': {'id': tid, 'title': tp['title'], 'theme': theme, 'q': tp['q'], 'cmp': first_sentence(tp['cmp'])},
                 'quote': ref and {'author': ref['author'], 'work': ref['work'], 'workId': ref['workId'],

@@ -24,6 +24,10 @@ pub enum Field {
     TeachingMeaning,
     /// "How these passages support it", above a teaching's verses: `teaching:<n>:support`.
     TeachingSupport,
+    /// The Tamil translation of "What does this mean?": `teaching:<n>:meaning:ta`.
+    TeachingMeaningTa,
+    /// The Tamil translation of "How these passages support it": `teaching:<n>:support:ta`.
+    TeachingSupportTa,
     /// A glossary definition shown in the teachings' key words: `term:<key>:def`.
     TermDef,
     /// The Tamil translation of a glossary definition, on the Key words page: `term:<key>:def:ta`.
@@ -57,6 +61,8 @@ impl Key {
             ["teaching", _, "detail"] => Field::TeachingDetail,
             ["teaching", _, "meaning"] => Field::TeachingMeaning,
             ["teaching", _, "support"] => Field::TeachingSupport,
+            ["teaching", _, "meaning", "ta"] => Field::TeachingMeaningTa,
+            ["teaching", _, "support", "ta"] => Field::TeachingSupportTa,
             ["term", _, "def"] => Field::TermDef,
             ["term", _, "def", "ta"] => Field::TermDefTa,
             ["topic", _, "answer"] => Field::TopicAnswer,

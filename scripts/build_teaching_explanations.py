@@ -9,6 +9,8 @@ Each teaching gets "What does this mean?" (3-4 sentences), "How do these passage
                                                                        # writes corpus/qa/teaching_explanations.json
     python scripts/build_teaching_explanations.py translate [--ids person,trinity]
                                                                        # writes corpus/qa/glossary.ta.json (Tamil)
+    python scripts/build_teaching_explanations.py translate-teachings [--ids 1,24] [--dry-run]
+                                                                       # writes corpus/qa/teaching_explanations.ta.json (Tamil)
 Then rebuild the site data:  python scripts/site/build_teachings_data.py ...  (or scripts/site/build_all.py)
 
 Reads data/teachings.json for each teaching's statement and its Bible passages (BSB text).
@@ -278,9 +280,118 @@ def translate(args):
     print(f"Wrote {len(out)} Tamil terms to {GLOSSARY_TA}; cost ${c:.2f}")
 
 
+OUT_TA = QA_DIR / "teaching_explanations.ta.json"
+
+# Bible book names as the Tamil IRV spells them, for references in the translated "support" text.
+BOOKS_TA = {
+    "Genesis": "ஆதியாகமம்", "Deuteronomy": "உபாகமம்", "Psalm": "சங்கீதம்", "Psalms": "சங்கீதம்",
+    "Isaiah": "ஏசாயா", "Jeremiah": "எரேமியா", "Malachi": "மல்கியா", "Matthew": "மத்தேயு", "Luke": "லூக்கா",
+    "John": "யோவான்", "Acts": "அப்போஸ்தலர்", "1 Corinthians": "1 கொரிந்தியர்", "2 Corinthians": "2 கொரிந்தியர்",
+    "Galatians": "கலாத்தியர்", "Ephesians": "எபேசியர்", "Philippians": "பிலிப்பியர்", "Colossians": "கொலோசெயர்",
+    "1 Timothy": "1 தீமோத்தேயு", "Hebrews": "எபிரெயர்", "James": "யாக்கோபு", "1 Peter": "1 பேதுரு",
+    "Revelation": "வெளிப்படுத்தின விசேஷம்",
+}
+
+TRANSLATE_TEACHING = TRANSLATE.replace(
+    "You translate a glossary of Christian theological words",
+    "You translate short explanations of the church’s teaching on the Trinity",
+) + """
+
+- Bible book names: use the IRV names given with each explanation, keeping chapter and verse numbers as they are (e.g. “யோவான் 15:26”).
+- Where the English quotes a Bible passage in words not found in the IRV wording above, do not make up a Tamil quotation: give its sense in your own words without quotation marks.
+- Keep the same number of sentences as the English where natural Tamil allows, and keep every reference the English makes."""
+
+TA_TEACHING_SCHEMA = {
+    "type": "object",
+    "properties": {"meaning": {"type": "string"}, "support": {"type": "string"}},
+    "required": ["meaning", "support"], "additionalProperties": False,
+}
+
+
+def english_explanations():
+    """The English explanations as the site shows them: the AI text with any edits from data/edits.json on top."""
+    ex = json.loads(OUT.read_text(encoding="utf8"))
+    edits_path = DATA / "edits.json"
+    edits = json.loads(edits_path.read_text(encoding="utf8")) if edits_path.exists() else {}
+    for n, e in ex.items():
+        for field in ("meaning", "support"):
+            v = edits.get(f"teaching:{n}:{field}")
+            if isinstance(v, dict):  # tolerate {"text": ...} style values
+                v = v.get("text") or v.get("value")
+            if isinstance(v, str) and v.strip():
+                e[field] = v
+    return ex
+
+
+def teaching_translate_prompt(t, e, gl):
+    books = sorted({b for b in BOOKS_TA if any(v["label"].startswith(b + " ") for v in t["verses"])
+                    or b + " " in e["support"]}, key=len, reverse=True)
+    used = [k for k in TERMS if k in e.get("terms", [])]
+    parts = [
+        f"Teaching {t['n']} of 46. Statement (stays in English on the page, for context only): {t['title']}",
+        "Fixed Tamil terms for all the key words (use these exact terms whenever the idea appears):\n"
+        + "\n".join(f"- {gl[k]['term']}: {TERMS_TA[k]}" for k in TERMS),
+    ]
+    if used:
+        parts.append("Key words this teaching relies on: " + ", ".join(f"{gl[k]['term']} = {TERMS_TA[k]}" for k in used))
+    if books:
+        parts.append("IRV book names for the references here:\n" + "\n".join(f"- {b} → {BOOKS_TA[b]}" for b in books))
+    parts.append("Bible passages on the page (BSB, for context; do not quote these English words in Tamil):\n"
+                 + "\n".join(f"- {v['label']}: {v['text']}" for v in t["verses"]))
+    parts.append(f"Translate both fields.\n\nmeaning (“What does this mean?”):\n{e['meaning']}\n\n"
+                 f"support (“How do these passages support it?”):\n{e['support']}")
+    return "\n\n".join(parts)
+
+
+def translate_teachings(args):
+    """Translate every teaching's meaning and support into Tamil (or only --ids), keeping the others."""
+    gl = json.loads(GLOSSARY.read_text(encoding="utf8"))
+    ex = english_explanations()
+    data = json.load(open(DATA / "teachings.json", encoding="utf8"))
+    want = {int(x) for x in args.ids.split(",")} if args.ids else None
+    todo = [t for t in data["teachings"] if str(t["n"]) in ex and (not want or t["n"] in want)]
+    if args.dry_run:
+        t = todo[0]
+        print(TRANSLATE_TEACHING, "\n\n=====\n\n", teaching_translate_prompt(t, ex[str(t["n"])], gl), sep="")
+        print(f"\n[dry run: {len(todo)} teaching(s) would be translated into {OUT_TA}]")
+        return
+    client = anthropic.Anthropic()
+    out = json.loads(OUT_TA.read_text(encoding="utf8")) if OUT_TA.exists() else {}
+
+    def one(t):
+        e = ex[str(t["n"])]
+        try:
+            res, c = call(client, TRANSLATE_TEACHING, teaching_translate_prompt(t, e, gl), TA_TEACHING_SCHEMA)
+            # Keep the English this was made from, so a later edit to the English shows up as stale.
+            res["en"] = {"meaning": e["meaning"], "support": e["support"]}
+            return t["n"], res, c, None
+        except Exception as err:  # report and carry on; rerun with --ids for the failures
+            return t["n"], None, 0.0, repr(err)
+
+    total, failed = 0.0, []
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for n, res, c, err in pool.map(one, todo):
+            total += c
+            if err:
+                failed.append((n, err))
+                print(f"{n}: FAILED {err}", flush=True)
+            else:
+                out[str(n)] = res
+                print(f"{n}: ok (${c:.2f})", flush=True)
+                # Write as we go, so an interrupted run keeps what it has done.
+                OUT_TA.write_text(json.dumps(dict(sorted(out.items(), key=lambda kv: int(kv[0]))),
+                                             ensure_ascii=False, indent=1), encoding="utf8")
+    stale = [n for n, r in out.items() if n in ex and r.get("en") != {"meaning": ex[n]["meaning"], "support": ex[n]["support"]}]
+    print(f"Wrote {len(out)} Tamil explanations to {OUT_TA}; cost ${total:.2f}; failed: {failed}")
+    if stale:
+        print(f"Out of date with the English (rerun with --ids {','.join(stale)}): {stale}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["glossary", "teachings", "translate"])
+    ap.add_argument("cmd", choices=["glossary", "teachings", "translate", "translate-teachings"])
     ap.add_argument("--ids", default="")
+    ap.add_argument("--dry-run", action="store_true", help="translate-teachings: print the prompt, call nothing")
     args = ap.parse_args()
-    {"glossary": glossary, "teachings": teachings, "translate": translate}[args.cmd](args)
+    {"glossary": glossary, "teachings": teachings, "translate": translate,
+     "translate-teachings": translate_teachings}[args.cmd](args)

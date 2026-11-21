@@ -1,7 +1,8 @@
 import { api } from '../api';
 import { draw, LAYOUT } from '../diagram';
 import { editable, wireEditing } from '../edit';
-import { type Glossary, linkTerms } from '../glossary';
+import { type Glossary, linkTerms, linkTermsTa } from '../glossary';
+import { langSwitch, pickLang, tamilCredit } from '../lang';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
@@ -13,10 +14,13 @@ interface Teaching {
   /** "What does this mean?" and how the supporting verses support it (AI-written). */
   meaning?: string;
   support?: string;
-  edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean };
+  /** The same two, translated into Tamil. */
+  meaning_ta?: string;
+  support_ta?: string;
+  edited?: { caption: boolean; detail: boolean; meaning?: boolean; support?: boolean; meaning_ta?: boolean; support_ta?: boolean };
   topic: { id: number; title: string; theme: string; q: number };
 }
-interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; teachings: Teaching[] }
+interface Data { groups: { title: string; note: string }[]; glossary?: Glossary; glossary_ta?: Glossary; teachings: Teaching[] }
 
 let lastShown = '';
 
@@ -30,6 +34,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     return;
   }
   const T = data.teachings;
+  const lang = pickLang(params);
   // Moving to another teaching (or the completion page) starts at the top, like turning a page.
   // Re-rendering the same one, e.g. after an edit, keeps the reader's place.
   const shown = params.has('done') ? 'done' : String(Math.min(Math.max(Number(params.get('t') || 1), 1), T.length));
@@ -64,11 +69,22 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
   const gl = data.glossary || {};
   const seen = new Set<string>();
   const title = linkTerms(cur.title, gl, seen, cur.n);
-  const meaning = cur.meaning ? `<section class="explain" aria-labelledby="explain-h">
-          <h2 id="explain-h" class="small-caps">What does this mean?</h2>
-          ${editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${linkTerms(cur.meaning, gl, seen, cur.n)}</p>`, { text: cur.meaning, edited: cur.edited?.meaning, label: 'explanation' })}
+  // In Tamil, only the explanation and how the passages support it are translated; the rest stays English.
+  // A teaching without a translation shows its English.
+  const ta = lang === 'ta' && !!cur.meaning_ta;
+  const glTa = data.glossary_ta || {};
+  const seenTa = new Set<string>();
+  const meaningText = ta ? cur.meaning_ta! : cur.meaning;
+  const meaning = meaningText ? `<section class="explain" aria-labelledby="explain-h"${ta ? ' lang="ta"' : ''}>
+          <h2 id="explain-h" class="small-caps">${ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?'}</h2>
+          ${ta
+            ? editable(`teaching:${cur.n}:meaning:ta`, `<p class="explain-text">${linkTermsTa(meaningText, glTa, seenTa, cur.n)}</p>`, { text: meaningText, edited: cur.edited?.meaning_ta, label: 'explanation (Tamil)' })
+            : editable(`teaching:${cur.n}:meaning`, `<p class="explain-text">${linkTerms(meaningText, gl, seen, cur.n)}</p>`, { text: meaningText, edited: cur.edited?.meaning, label: 'explanation' })}
         </section>` : '';
-  const support = cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support">${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
+  const supportTa = lang === 'ta' && cur.support_ta;
+  const support = supportTa
+    ? `<div lang="ta">${editable(`teaching:${cur.n}:support:ta`, `<p class="support">${linkTermsTa(supportTa, glTa, seenTa, cur.n)}</p>`, { text: supportTa, edited: cur.edited?.support_ta, label: 'how the passages support it (Tamil)' })}</div>`
+    : cur.support ? editable(`teaching:${cur.n}:support`, `<p class="support">${linkTerms(cur.support, gl, seen, cur.n)}</p>`, { text: cur.support, edited: cur.edited?.support, label: 'how the passages support it' }) : '';
 
   const verses = cur.verses.map((v) => `<a class="card verse-card" href="${href('reference', { exact: v.ref })}"><b>${esc(v.label)}</b><span class="verse-text">${esc(v.text)}</span></a>`).join('');
 
@@ -76,7 +92,10 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
     <div class="lesson-top">
       <div class="row">
         <p class="course-progress"><b>Teaching ${cur.n} of ${T.length}</b><span class="eyebrow">Part ${cur.g + 1} of ${data.groups.length} · ${esc(grp.title)}</span></p>
-        <label class="jump">Jump to <select id="jump">${jump}</select></label>
+        <div class="lesson-tools">
+          ${langSwitch(lang, (l) => href('explanations', { t: cur.n, lang: l }))}
+          <label class="jump">Jump to <select id="jump">${jump}</select></label>
+        </div>
       </div>
       <ol class="steps" aria-label="Teachings in this part">${steps}</ol>
       <details class="outline">
@@ -127,6 +146,7 @@ export async function renderExplanations(root: HTMLElement, params: URLSearchPar
       <a class="topic-link" href="${href('topics', { topic: cur.topic.id })}"><span class="small-caps">Topic · ${esc(cur.topic.theme)}</span><span>${esc(cur.topic.title)}</span></a>
       <a class="q-link" href="${href('qa', { topic: cur.topic.title })}"><span class="small-caps">Questions</span><b>${cur.topic.q}</b><span>Read the answers →</span></a>
     </section>
+    ${ta || supportTa ? tamilCredit('The explanations are') : ''}
   </div>`;
 
   const open = root.querySelector<HTMLButtonElement>('.diagram-open')!;

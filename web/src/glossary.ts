@@ -56,6 +56,53 @@ export function termsIn(text: string, glossary: Glossary): string[] {
   return out;
 }
 
+// Tamil: the wordings come from the fixed Tamil terms themselves. Tamil adds endings to a word, so a
+// wording matches at the start of a word and may run on. A term ending in a bare consonant (்) also
+// matches with a vowel after it (ஆள்தத்துவமும்), and one ending in ம் also matches its forms in த்
+// (சாராம்சத்தை) and its adjective before a space (நித்திய ஜெனிப்பித்தல்). A bracketed part such as
+// (பெரிகொரேசிஸ்) is only a gloss and is left out. Verb roots link procession and eternal generation.
+const TA_ROOTS: Record<string, string[]> = { procession: ['புறப்படு'], 'eternal-generation': ['ஜெனிப்பி'] };
+const taCache = new WeakMap<Glossary, { re: RegExp; keys: { re: RegExp; key: string }[] }>();
+
+function tamilForms(glossary: Glossary) {
+  let got = taCache.get(glossary);
+  if (got) return got;
+  const list: { src: string; key: string; len: number }[] = [];
+  for (const [key, { term }] of Object.entries(glossary)) {
+    const base = esc(term.replace(/\s*\(.*\)\s*$/, '').trim());
+    if (!base) continue;
+    const add = (src: string, len: number) => list.push({ src, key, len });
+    add(escapeRe(base), base.length);
+    if (base.endsWith('்')) add(`${escapeRe(base.slice(0, -1))}(?=\\p{M})`, base.length - 1);
+    if (base.endsWith('ம்')) {
+      add(escapeRe(`${base.slice(0, -2)}த்`), base.length);
+      add(`${escapeRe(base.slice(0, -2))}(?=\\s)`, base.length - 2);
+    }
+    for (const root of TA_ROOTS[key] || []) add(escapeRe(root), root.length);
+  }
+  list.sort((a, b) => b.len - a.len);  // longest first, so a whole phrase wins over a word inside it
+  const lead = '(?<![\\p{L}\\p{M}\\p{N}])';
+  got = {
+    // The link takes in the rest of the word too, so it never ends partway through a letter.
+    re: new RegExp(`${lead}(?:${list.map((f) => f.src).join('|')})[\\p{L}\\p{M}]*`, 'gu'),
+    keys: list.map((f) => ({ re: new RegExp(`^(?:${f.src})`, 'u'), key: f.key })),
+  };
+  taCache.set(glossary, got);
+  return got;
+}
+
+/** Like `linkTerms`, for Tamil text and the Tamil glossary; the links open the Key words page in Tamil. */
+export function linkTermsTa(text: string, glossary: Glossary, seen: Set<string>, from?: number): string {
+  const { re, keys } = tamilForms(glossary);
+  const html = esc(text);
+  return html.replace(re, (found, offset: number) => {
+    const key = keys.find((k) => k.re.test(html.slice(offset)))?.key;
+    if (!key || seen.has(key)) return found;
+    seen.add(key);
+    return `<a class="term-link" href="${href('keywords', { term: key, from, lang: 'ta' })}" title="${esc(glossary[key].def)}">${found}</a>`;
+  });
+}
+
 /**
  * Escape `text` for HTML and link the first mention of each key word to the Key words page.
  * `seen` carries over between paragraphs of one page, so a word is linked once per page.

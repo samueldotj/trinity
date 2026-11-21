@@ -392,13 +392,21 @@ fn teachings_with_edits() -> Value {
     for t in out["teachings"].as_array_mut().into_iter().flatten() {
         let n = t["n"].as_u64().unwrap_or(0);
         let mut edited = serde_json::Map::new();
-        for (field, name) in [("cap", "caption"), ("detail", "detail"), ("meaning", "meaning"), ("support", "support")] {
+        for (field, key) in [
+            ("cap", "caption"),
+            ("detail", "detail"),
+            ("meaning", "meaning"),
+            ("support", "support"),
+            ("meaning_ta", "meaning:ta"),
+            ("support_ta", "support:ta"),
+        ] {
             if t.get(field).is_none() {
                 continue;
             }
-            let (text, was_edited) = overlay(format!("teaching:{n}:{name}"), &t[field]);
+            let (text, was_edited) = overlay(format!("teaching:{n}:{key}"), &t[field]);
             t[field] = text;
-            edited.insert(name.to_string(), json!(was_edited));
+            // The flag is named like the key, with "_ta" for Tamil: caption, meaning, meaning_ta, …
+            edited.insert(key.replace(":ta", "_ta"), json!(was_edited));
         }
         t["edited"] = Value::Object(edited);
     }
@@ -432,12 +440,19 @@ pub fn original(key: &str) -> Option<String> {
     let text = match k.field {
         Field::ThemeDesc => theme_list().iter().find(|t| s(&t["key"]) == k.item)?["desc"].clone(),
         Field::ThemeShort => json!(builtin_label(&k.item)?),
-        Field::TeachingCaption | Field::TeachingDetail | Field::TeachingMeaning | Field::TeachingSupport => {
+        Field::TeachingCaption
+        | Field::TeachingDetail
+        | Field::TeachingMeaning
+        | Field::TeachingSupport
+        | Field::TeachingMeaningTa
+        | Field::TeachingSupportTa => {
             let n: u64 = k.item.parse().ok()?;
             let field = match k.field {
                 Field::TeachingCaption => "cap",
                 Field::TeachingDetail => "detail",
                 Field::TeachingMeaning => "meaning",
+                Field::TeachingMeaningTa => "meaning_ta",
+                Field::TeachingSupportTa => "support_ta",
                 _ => "support",
             };
             teachings()["teachings"].as_array()?.iter().find(|t| t["n"].as_u64() == Some(n))?.get(field)?.clone()
@@ -680,6 +695,15 @@ mod tests {
         assert_eq!(t["glossary_ta"]["person"]["edited"], true);
         assert_eq!(t["glossary"]["person"]["edited"], false);
         set_edit("term:person:def:ta", None).unwrap();
+        set_edit("teaching:24:meaning:ta", Some("என் விளக்கம்.")).unwrap();
+        let t = handle("teachings", &p(&[])).unwrap();
+        let t24 = &t["teachings"].as_array().unwrap()[23];
+        assert_eq!(t24["meaning_ta"], "என் விளக்கம்.");
+        assert_eq!(t24["edited"]["meaning_ta"], true);
+        assert_eq!(t24["edited"]["meaning"], false);
+        assert_eq!(t24["edited"]["support_ta"], false);
+        set_edit("teaching:24:meaning:ta", None).unwrap();
+        assert!(set_edit("teaching:99:support:ta", Some("x")).is_err());
         assert!(set_edit("term:no-such-term:def:ta", Some("x")).is_err());
         assert!(set_edit("theme:no-such-theme:short", Some("x")).is_err());
     }
