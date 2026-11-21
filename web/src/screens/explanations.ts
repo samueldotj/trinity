@@ -4,7 +4,7 @@ import { editable, wireEditing } from '../edit';
 import { type Glossary, linkTerms, linkTermsTa } from '../glossary';
 import { type Lang, langSwitch, pickLang, tamilCredit } from '../lang';
 import { mdInline, mdParas, mdPlain } from '../markdown';
-import { type Deck, present, type Slide } from '../present';
+import { type Bubble, type Deck, present, type Slide } from '../present';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Teaching {
@@ -232,10 +232,13 @@ function renderComplete(root: HTMLElement, data: Data): void {
 function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']): Deck {
   const T = data.teachings;
   const gl = data.glossary || {}, glTa = data.glossary_ta || {};
-  const seen = new Set<string>(), seenTa = new Set<string>();
+  // Each slide links the first mention of a key word on it, so every slide can open its bubbles.
+  let seen = new Set<string>(), seenTa = new Set<string>();
+  const fresh = () => { seen = new Set(); seenTa = new Set(); };
   const ta = lang === 'ta' && !!cur.meaning_ta;
   const linkEn = (p: string) => linkTerms(p, gl, seen, cur.n);
   const linkTa = (p: string) => linkTermsTa(p, glTa, seenTa, cur.n, gl);
+  const verseHref = (v: Teaching['verses'][number]) => href('reference', { exact: v.ref });
   const slides: Slide[] = [{
     kind: 'title', fit: true,
     html: `<p class="slide-eyebrow">Teaching ${cur.n} of ${T.length} · Part ${cur.g + 1} · ${esc(data.groups[cur.g].title)}</p>
@@ -247,11 +250,14 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
   if (meaning) {
     const paras = meaning.split(/\n[ \t]*\n+/);
     const head = ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?';
-    paras.forEach((p, i) => slides.push({
-      kind: 'text', fit: true,
-      html: `<p class="slide-eyebrow"${ta ? ' lang="ta"' : ''}>${head}${paras.length > 1 ? ` · ${i + 1} of ${paras.length}` : ''}</p>
-        <div class="slide-fit slide-text"${ta ? ' lang="ta"' : ''}>${mdParas(p, 'slide-para', ta ? linkTa : linkEn)}</div>`,
-    }));
+    paras.forEach((p, i) => {
+      fresh();
+      slides.push({
+        kind: 'text', fit: true,
+        html: `<p class="slide-eyebrow"${ta ? ' lang="ta"' : ''}>${head}${paras.length > 1 ? ` · ${i + 1} of ${paras.length}` : ''}</p>
+          <div class="slide-fit slide-text"${ta ? ' lang="ta"' : ''}>${mdParas(p, 'slide-para', ta ? linkTa : linkEn)}</div>`,
+      });
+    });
   }
 
   slides.push({
@@ -273,10 +279,26 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
   const supportTa = lang === 'ta' && cur.support_ta;
   const support = supportTa || cur.support;
   const versesTa = lang === 'ta' && cur.verses.every((v) => v.text_ta);
-  const chips = cur.verses.map((v) => `<a class="chip" href="${href('reference', { exact: v.ref })}"${versesTa ? ' lang="ta"' : ''}>${esc(versesTa ? v.label_ta! : v.label)}</a>`).join('');
+  const chips = cur.verses.map((v) => `<a class="chip" href="${verseHref(v)}"${versesTa ? ' lang="ta"' : ''}>${esc(versesTa ? v.label_ta! : v.label)}</a>`).join('');
+  // The passages named in the text link too (the first mention of each), so they open in a bubble.
+  const labelled = cur.verses.map((v) => ({ label: esc((supportTa ? v.label_ta : v.label) || v.label), href: verseHref(v) }));
+  const linkVerses = (html: string) => {
+    const done = new Set<string>();
+    return html.split(/(<[^>]*>)/).map((part, i, all) => {
+      // Text only: not inside a tag, and not inside a link already.
+      if (part.startsWith('<') || all.slice(0, i).filter((p) => p.startsWith('<a ')).length > all.slice(0, i).filter((p) => p === '</a>').length) return part;
+      for (const l of labelled) {
+        if (done.has(l.href) || !part.includes(l.label)) continue;
+        done.add(l.href);
+        part = part.replace(l.label, `<a class="verse-link" href="${l.href}">${l.label}</a>`);
+      }
+      return part;
+    }).join('');
+  };
+  fresh();
   // Without the written explanation of how the passages support it, the slide shows the passages themselves.
   const body = support
-    ? mdParas(support, 'slide-para', supportTa ? linkTa : linkEn)
+    ? linkVerses(mdParas(support, 'slide-para', supportTa ? linkTa : linkEn))
     : cur.verses.map((v) => `<p class="slide-para"${versesTa ? ' lang="ta"' : ''}><b>${esc(versesTa ? v.label_ta! : v.label)}</b> ${esc(versesTa ? v.text_ta! : v.text)}</p>`).join('');
   slides.push({
     kind: 'verses', fit: true,
@@ -297,7 +319,26 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
     });
   }
 
-  return { where: `Teaching ${cur.n} · ${cur.short}`, slides, onClose };
+  // A key word opens its definition, and a passage its text, in a thought bubble on the slide.
+  const explain = (a: HTMLAnchorElement): Bubble | null => {
+    const [route, query = ''] = (a.getAttribute('href') || '').replace(/^#\//, '').split('?');
+    const q = new URLSearchParams(query);
+    if (route === 'keywords') {
+      const inTa = q.get('lang') === 'ta';
+      const term = (inTa ? glTa : gl)[q.get('term') || ''];
+      return term ? { title: term.term, html: mdParas(term.def, 'bubble-para'), lang: inTa ? 'ta' : 'en' } : null;
+    }
+    if (route === 'reference') {
+      const v = cur.verses.find((x) => x.ref === q.get('exact'));
+      if (!v) return null;
+      return versesTa
+        ? { title: v.label_ta!, html: `<p class="bubble-para">${esc(v.text_ta!)}</p>`, cite: 'Tamil Indian Revised Version (IRV)', lang: 'ta' }
+        : { title: v.label, html: `<p class="bubble-para">${esc(v.text)}</p>`, cite: 'Berean Standard Bible', lang: 'en' };
+    }
+    return null;
+  };
+
+  return { where: `Teaching ${cur.n} · ${cur.short}`, slides, explain, onClose };
 }
 
 type Layout = 'wide' | 'compact';

@@ -3,6 +3,10 @@
 // Each slide is drawn on a fixed 1280 x 720 stage and scaled to fit the screen, so it looks the same on a
 // laptop and a projector. → / Space / PageDown go forward, ← / PageUp back, Home / End to the ends; Esc (or
 // Exit) leaves full screen and returns to the page.
+//
+// The presenter can draw on a slide with a pen (P) or highlighter (H); each slide keeps its drawing until
+// the presentation ends. Clicking a key word or a verse opens it in a thought bubble; the next click
+// anywhere closes it.
 
 import { esc, icon } from './util';
 
@@ -16,15 +20,44 @@ export interface Slide {
   fit?: boolean;
 }
 
+/** What a thought bubble shows: a key word's definition or a verse's text. */
+export interface Bubble {
+  title: string;
+  /** Already-safe HTML. */
+  html: string;
+  /** A line under the text, e.g. the Bible translation. */
+  cite?: string;
+  lang?: string;
+}
+
 export interface Deck {
   /** Shown at the top of every slide but the first, e.g. "Teaching 1 · God is One". */
   where: string;
   slides: Slide[];
+  /** The bubble for a link on a slide, or null to follow the link as usual. */
+  explain?: (link: HTMLAnchorElement) => Bubble | null;
   /** Called after the presentation closes, with the slide it closed on. */
   onClose?: (last: Slide) => void;
 }
 
-const W = 1280, H = 720;
+const W = 1280, H = 720, INK_SCALE = 2;
+
+type Tool = 'pen' | 'marker' | null;
+interface Stroke { tool: 'pen' | 'marker'; color: string; points: [number, number][] }
+
+const PEN_COLORS = [
+  { name: 'Red', value: '#D42A3C' },
+  { name: 'Blue', value: '#2849B8' },
+  { name: 'Green', value: '#157A6E' },
+];
+const MARKER = '#FFD43B';
+
+const toolIcon = {
+  pen: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1-4L16.5 4.5a2.1 2.1 0 0 1 3 3L8 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14.5 6.5l3 3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>',
+  marker: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 15l-3 3v2h5l2-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 15l8.5-8.5a2.1 2.1 0 0 1 3 3L12 18z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 21h18" stroke="#E0B000" stroke-width="3" stroke-linecap="round"/></svg>',
+  undo: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7L4 12l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12h10a6 6 0 0 1 0 12h-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" transform="translate(0 -4)"/></svg>',
+  clear: '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+};
 
 export function present(deck: Deck): void {
   const { slides } = deck;
@@ -39,9 +72,17 @@ export function present(deck: Deck): void {
       <div class="slide" tabindex="-1">
         <header class="slide-top">
           <span class="slide-where"><span class="tri" aria-hidden="true"></span><span class="slide-where-text">${esc(deck.where)}</span></span>
+          <div class="slide-tools" role="toolbar" aria-label="Drawing">
+            <button type="button" class="ink-tool" data-tool="pen" aria-pressed="false" aria-label="Pen (P)" title="Pen (P)">${toolIcon.pen}</button>
+            <span class="ink-colors" hidden>${PEN_COLORS.map((c, i) => `<button type="button" class="ink-color" data-color="${c.value}" aria-pressed="${i === 0}" aria-label="${c.name} pen" style="--ink: ${c.value}"><span></span></button>`).join('')}</span>
+            <button type="button" class="ink-tool" data-tool="marker" aria-pressed="false" aria-label="Highlighter (H)" title="Highlighter (H)">${toolIcon.marker}</button>
+            <button type="button" class="ink-undo" aria-label="Undo (Ctrl+Z)" title="Undo (Ctrl+Z)" disabled>${toolIcon.undo}</button>
+            <button type="button" class="ink-clear" aria-label="Clear this slide's drawing" title="Clear drawing" disabled>${toolIcon.clear}</button>
+          </div>
           <button type="button" class="slide-exit">${icon.close}Exit <kbd>Esc</kbd></button>
         </header>
         <div class="slide-body" aria-live="polite"></div>
+        <canvas class="slide-ink" width="${W * INK_SCALE}" height="${H * INK_SCALE}" aria-hidden="true"></canvas>
         <footer class="slide-foot">
           <ol class="slide-steps" aria-label="Slides">${slides.map((_, i) => `<li><button type="button" aria-label="Slide ${i + 1}"><span></span></button></li>`).join('')}</ol>
           <span class="slide-count"></span>
@@ -52,23 +93,28 @@ export function present(deck: Deck): void {
     </div>`;
   document.body.appendChild(dlg);
 
-  const stage = dlg.querySelector<HTMLElement>('.present-stage')!;
-  const slideEl = dlg.querySelector<HTMLElement>('.slide')!;
-  const body = dlg.querySelector<HTMLElement>('.slide-body')!;
-  const count = dlg.querySelector<HTMLElement>('.slide-count')!;
-  const prevBtn = dlg.querySelector<HTMLButtonElement>('.slide-prev')!;
-  const nextBtn = dlg.querySelector<HTMLButtonElement>('.slide-next')!;
+  const $ = <T extends Element>(sel: string) => dlg.querySelector<T>(sel)!;
+  const stage = $<HTMLElement>('.present-stage');
+  const slideEl = $<HTMLElement>('.slide');
+  const body = $<HTMLElement>('.slide-body');
+  const count = $<HTMLElement>('.slide-count');
+  const prevBtn = $<HTMLButtonElement>('.slide-prev');
+  const nextBtn = $<HTMLButtonElement>('.slide-next');
   const steps = [...dlg.querySelectorAll<HTMLButtonElement>('.slide-steps button')];
 
   const scale = () => {
     const s = Math.min(stage.clientWidth / W, stage.clientHeight / H);
     slideEl.style.transform = `translate(-50%, -50%) scale(${s})`;
   };
+  /** A point on the screen, in the slide's own 1280 x 720 pixels. */
+  const toSlide = (x: number, y: number): [number, number] => {
+    const r = slideEl.getBoundingClientRect();
+    return [(x - r.left) * W / r.width, (y - r.top) * H / r.height];
+  };
 
   // Long paragraphs (and Tamil, which runs longer) are set smaller until they fit the slide.
   const fitText = () => {
-    const s = slides[at];
-    if (!s.fit) return;
+    if (!slides[at].fit) return;
     const text = body.querySelector<HTMLElement>('.slide-fit');
     if (!text) return;
     text.style.fontSize = '';
@@ -79,12 +125,195 @@ export function present(deck: Deck): void {
     }
   };
 
+  // ---------- drawing ----------
+  const canvas = $<HTMLCanvasElement>('.slide-ink');
+  const ctx = canvas.getContext('2d')!;
+  ctx.scale(INK_SCALE, INK_SCALE);
+  const ink: Stroke[][] = slides.map(() => []);
+  let tool: Tool = null, penColor = PEN_COLORS[0].value, drawing: Stroke | null = null, queued = false;
+  const toolBtns = [...dlg.querySelectorAll<HTMLButtonElement>('.ink-tool')];
+  const colorBtns = [...dlg.querySelectorAll<HTMLButtonElement>('.ink-color')];
+  const colorsEl = $<HTMLElement>('.ink-colors');
+  const undoBtn = $<HTMLButtonElement>('.ink-undo');
+  const clearBtn = $<HTMLButtonElement>('.ink-clear');
+
+  const paint = () => {
+    queued = false;
+    ctx.clearRect(0, 0, W, H);
+    const dark = slides[at].kind === 'title';
+    for (const s of ink[at]) {
+      const pts = s.points;
+      ctx.save();
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      if (s.tool === 'marker') {
+        // Multiplying keeps the text under the highlight dark and readable; on the dark title slide it would vanish.
+        ctx.globalCompositeOperation = dark ? 'source-over' : 'multiply';
+        ctx.globalAlpha = dark ? 0.35 : 0.55;
+        ctx.lineWidth = 30;
+        ctx.lineCap = 'butt';
+      } else {
+        ctx.lineWidth = 5;
+      }
+      ctx.strokeStyle = s.color;
+      ctx.beginPath();
+      ctx.moveTo(pts[0][0], pts[0][1]);
+      if (pts.length === 1) ctx.lineTo(pts[0][0] + 0.1, pts[0][1]);
+      // Smooth the line through the midpoints of the points the pointer reported.
+      for (let i = 1; i < pts.length - 1; i++) {
+        const [x, y] = pts[i], [nx, ny] = pts[i + 1];
+        ctx.quadraticCurveTo(x, y, (x + nx) / 2, (y + ny) / 2);
+      }
+      if (pts.length > 1) ctx.lineTo(pts[pts.length - 1][0], pts[pts.length - 1][1]);
+      ctx.stroke();
+      ctx.restore();
+    }
+    undoBtn.disabled = clearBtn.disabled = !ink[at].length;
+  };
+  const repaint = () => { if (!queued) { queued = true; requestAnimationFrame(paint); } };
+
+  const setTool = (t: Tool) => {
+    tool = t;
+    toolBtns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.tool === t)));
+    colorsEl.hidden = t !== 'pen';
+    slideEl.classList.toggle('is-inking', !!t);
+    slideEl.dataset.tool = t || '';
+    closeBubble();
+  };
+  toolBtns.forEach((b) => b.addEventListener('click', () => setTool(tool === b.dataset.tool ? null : b.dataset.tool as Tool)));
+  colorBtns.forEach((b) => b.addEventListener('click', () => {
+    penColor = b.dataset.color!;
+    colorBtns.forEach((c) => c.setAttribute('aria-pressed', String(c === b)));
+  }));
+  const undo = () => { ink[at].pop(); repaint(); };
+  undoBtn.addEventListener('click', undo);
+  clearBtn.addEventListener('click', () => { ink[at] = []; repaint(); });
+
+  canvas.addEventListener('pointerdown', (e) => {
+    if (!tool || e.button !== 0) return;
+    e.preventDefault();
+    canvas.setPointerCapture(e.pointerId);
+    drawing = { tool, color: tool === 'pen' ? penColor : MARKER, points: [toSlide(e.clientX, e.clientY)] };
+    ink[at].push(drawing);
+    repaint();
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (!drawing) return;
+    const events = e.getCoalescedEvents?.() ?? [e];
+    for (const ev of events.length ? events : [e]) drawing.points.push(toSlide(ev.clientX, ev.clientY));
+    repaint();
+  });
+  const endStroke = () => { drawing = null; };
+  canvas.addEventListener('pointerup', endStroke);
+  canvas.addEventListener('pointercancel', endStroke);
+
+  // ---------- thought bubble ----------
+  let bubbleEls: HTMLElement[] = [];
+  let swallowClick = false;
+  function closeBubble(): void {
+    const els = bubbleEls;
+    if (!els.length) return;
+    bubbleEls = [];
+    els.forEach((el) => el.classList.add('is-leaving'));
+    setTimeout(() => els.forEach((el) => el.remove()), 200);
+  }
+  const openBubble = (link: HTMLAnchorElement, b: Bubble) => {
+    closeBubble();
+    const r = link.getBoundingClientRect();
+    const [x1, y1] = toSlide(r.left, r.top), [x2, y2] = toSlide(r.right, r.bottom);
+    const ax = (x1 + x2) / 2;
+
+    const card = document.createElement('div');
+    card.className = 'bubble';
+    card.setAttribute('role', 'note');
+    if (b.lang) card.lang = b.lang;
+    card.innerHTML = `<p class="bubble-title">${esc(b.title)}</p><div class="bubble-text">${b.html}</div>${b.cite ? `<p class="bubble-cite">${esc(b.cite)}</p>` : ''}`;
+    slideEl.appendChild(card);
+    // Where it goes, in order: above or below the word at full size; beside it (left or right, whichever
+    // has more room); else on the larger of above and below with its text made smaller until it fits.
+    // Never over the word itself, the slide's edges or its controls.
+    const gap = 56, top = 84, bottom = H - 84, edge = 48;
+    const text = card.querySelector<HTMLElement>('.bubble-text')!;
+    const size = (w: number) => { card.style.width = `${w}px`; return card.offsetHeight; };
+    let side: 'above' | 'below' | 'left' | 'right';
+    let h = size(640);
+    if (y1 - gap - h >= top) side = 'above';
+    else if (y2 + gap + h <= bottom) side = 'below';
+    else {
+      const roomL = x1 - gap - edge, roomR = W - edge - x2 - gap;
+      const sideW = Math.min(640, Math.max(roomL, roomR));
+      if (sideW >= 400 && (h = size(sideW)) <= bottom - top) side = roomL >= roomR ? 'left' : 'right';
+      else {
+        side = y1 - top >= bottom - y2 ? 'above' : 'below';
+        const room = side === 'above' ? y1 - gap - top : bottom - y2 - gap;
+        h = size(860);
+        for (let f = parseFloat(getComputedStyle(text).fontSize); h > room && f > 18; f -= 2) {
+          text.style.fontSize = `${f - 2}px`;
+          h = card.offsetHeight;
+        }
+      }
+    }
+    const w = card.offsetWidth;
+    const clampX = (x: number) => Math.min(Math.max(x, edge), W - edge - w);
+    const clampY = (y: number) => Math.min(Math.max(y, top), bottom - h);
+    const ay = (y1 + y2) / 2;
+    const [left, ty] =
+      side === 'above' ? [clampX(ax - w / 2), y1 - gap - h]
+      : side === 'below' ? [clampX(ax - w / 2), y2 + gap]
+      : side === 'left' ? [x1 - gap - w, clampY(ay - h / 2)]
+      : [x2 + gap, clampY(ay - h / 2)];
+    card.style.left = `${left}px`;
+    card.style.top = `${Math.max(top, ty)}px`;
+    // The bubble grows out of the point on its edge nearest the word; the puffs lead there from the word.
+    const vertical = side === 'above' || side === 'below';
+    const ex = vertical ? Math.min(Math.max(ax, left + 48), left + w - 48) : side === 'left' ? left + w : left;
+    const ey = vertical ? (side === 'above' ? ty + h : ty) : Math.min(Math.max(ay, ty + 48), ty + h - 48);
+    card.style.transformOrigin = `${ex - left}px ${ey - ty}px`;
+    const sx = vertical ? ax : side === 'left' ? x1 - 6 : x2 + 6;
+    const sy = vertical ? (side === 'above' ? y1 - 6 : y2 + 6) : ay;
+    const puffs = [[0.3, 14], [0.66, 24]].map(([t, d], i) => {
+      const p = document.createElement('span');
+      p.className = 'bubble-puff';
+      p.style.cssText = `left: ${sx + (ex - sx) * t - d / 2}px; top: ${sy + (ey - sy) * t - d / 2}px; width: ${d}px; height: ${d}px; animation-delay: ${i * 70}ms`;
+      slideEl.appendChild(p);
+      return p;
+    });
+    bubbleEls = [...puffs, card];
+  };
+
+  // While a bubble is open, the next press anywhere closes it and does nothing else.
+  dlg.addEventListener('pointerdown', (e) => {
+    if (!bubbleEls.length) return;
+    e.preventDefault();
+    e.stopPropagation();
+    swallowClick = true;
+    closeBubble();
+  }, true);
+  dlg.addEventListener('click', (e) => {
+    if (swallowClick) {
+      swallowClick = false;
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    const a = (e.target as Element).closest<HTMLAnchorElement>('.slide-body a[href]');
+    const b = a && deck.explain?.(a);
+    if (a && b) {
+      e.preventDefault();
+      openBubble(a, b);
+    }
+  }, true);
+
+  // ---------- slides ----------
   const show = (i: number) => {
+    closeBubble();
     at = Math.min(Math.max(i, 0), slides.length - 1);
     const s = slides[at];
     slideEl.dataset.kind = s.kind;
     slideEl.classList.toggle('is-dark', s.kind === 'title');
     body.innerHTML = s.html;
+    // No hover tooltips while presenting: a click opens the bubble instead.
+    body.querySelectorAll('a[title]').forEach((a) => a.removeAttribute('title'));
     count.textContent = `${at + 1} / ${slides.length}`;
     steps.forEach((b, k) => {
       b.className = k < at ? 'done' : '';
@@ -96,6 +325,7 @@ export function present(deck: Deck): void {
     nextBtn.innerHTML = last ? 'Finish' : icon.right;
     nextBtn.setAttribute('aria-label', last ? 'Finish the presentation' : 'Next slide');
     fitText();
+    paint();
   };
 
   const close = () => { if (dlg.open) dlg.close(); };
@@ -104,11 +334,12 @@ export function present(deck: Deck): void {
   prevBtn.addEventListener('click', () => show(at - 1));
   nextBtn.addEventListener('click', next);
   steps.forEach((b, k) => b.addEventListener('click', () => show(k)));
-  dlg.querySelector('.slide-exit')!.addEventListener('click', close);
+  $('.slide-exit').addEventListener('click', close);
 
   dlg.addEventListener('keydown', (e) => {
-    if (e.altKey || e.ctrlKey || e.metaKey) return;
     const k = e.key;
+    if ((e.ctrlKey || e.metaKey) && !e.altKey && k.toLowerCase() === 'z') { e.preventDefault(); undo(); return; }
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
     if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) {
       e.preventDefault();
       if (at < slides.length - 1) show(at + 1);
@@ -117,12 +348,19 @@ export function present(deck: Deck): void {
       show(at - 1);
     } else if (k === 'Home') { e.preventDefault(); show(0); }
     else if (k === 'End') { e.preventDefault(); show(slides.length - 1); }
+    else if (k === 'p' || k === 'P') setTool(tool === 'pen' ? null : 'pen');
+    else if (k === 'h' || k === 'H') setTool(tool === 'marker' ? null : 'marker');
+  });
+  // Outside full screen, Esc first closes an open bubble or puts the pen down, then leaves.
+  dlg.addEventListener('cancel', (e) => {
+    if (bubbleEls.length) { e.preventDefault(); closeBubble(); }
+    else if (tool) { e.preventDefault(); setTool(null); }
   });
 
   // In full screen the browser takes the first Esc to leave full screen: that ends the presentation too.
   const onFullscreen = () => { if (!document.fullscreenElement) close(); };
   const ro = new ResizeObserver(scale);
-  window.addEventListener('hashchange', close);  // a key word or verse link was followed
+  window.addEventListener('hashchange', close);  // a link was followed
   dlg.addEventListener('close', () => {
     ro.disconnect();
     window.removeEventListener('hashchange', close);
