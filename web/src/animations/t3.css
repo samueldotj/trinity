@@ -1,0 +1,34 @@
+/* Teaching 3, God is Eternal: 24 seconds in four scenes. */
+.anim-t3 * { animation-duration: 24s; }
+.anim-t3 .a-ringlabel, .anim-t3 .a-timelabel, .anim-t3 .a-candle, .anim-t3 .a-flame, .anim-t3 .a-wears, .anim-t3 .a-oldtag, .anim-t3 .a-oldstrike { opacity: 0; }
+.anim-t3 .a-god { animation-name: t3-god; }
+.anim-t3 .a-ring { animation-name: t3-ring; }
+.anim-t3 .a-orbit { animation-name: t3-orbit; }
+.anim-t3 .a-ringlabel { animation-name: t3-ringlabel; }
+.anim-t3 .a-time { animation-name: t3-time; }
+.anim-t3 .a-timeextra { animation-name: t3-timeextra; }
+.anim-t3 .a-timelabel { animation-name: t3-timelabel; }
+.anim-t3 .a-candle { animation-name: t3-candle; }
+.anim-t3 .a-flame { animation-name: t3-flame; }
+.anim-t3 .a-wears { animation-name: t3-wears; }
+.anim-t3 .a-oldtag { animation-name: t3-oldtag; }
+.anim-t3 .a-oldstrike { animation-name: t3-oldstrike; }
+.anim-t3 .a-letter { animation-name: t3-letter; }
+.anim-t3 .a-drop { animation-name: t3-drop; }
+.anim-t3 .a-wasis { animation-name: t3-wasis; }
+.anim-t3 .a-orbit { animation-timing-function: linear; }
+@keyframes t3-god { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t3-ring { 0%, 2% { stroke-dashoffset: 1; opacity: 1; } 12% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t3-orbit { 0% { transform: rotate(0deg); opacity: 0; } 12% { opacity: 0; } 14% { opacity: 1; } 95% { opacity: 1; } 100% { transform: rotate(1080deg); opacity: 0; } }
+@keyframes t3-ringlabel { 0%, 11% { opacity: 0; } 14%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t3-time { 0%, 23% { stroke-dashoffset: 1; opacity: 1; } 30% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t3-timeextra { 0%, 29% { opacity: 0; } 32%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t3-timelabel { 0%, 30% { opacity: 0; } 33%, 44% { opacity: 1; } 47%, 100% { opacity: 0; } }
+@keyframes t3-candle { 0%, 46% { opacity: 0; transform: scaleY(1); } 49% { opacity: 1; transform: scaleY(1); } 64% { opacity: 1; transform: scaleY(.15); } 68% { opacity: 1; transform: scaleY(.15); } 71%, 100% { opacity: 0; transform: scaleY(.15); } }
+@keyframes t3-flame { 0%, 46% { opacity: 0; transform: translateY(0px); } 49% { opacity: 1; transform: translateY(0px); } 63% { opacity: 1; transform: translateY(53px); } 65%, 100% { opacity: 0; transform: translateY(53px); } }
+@keyframes t3-wears { 0%, 52% { opacity: 0; } 55%, 68% { opacity: 1; } 71%, 100% { opacity: 0; } }
+@keyframes t3-oldtag { 0%, 50% { opacity: 0; transform: translateY(-6px); } 53%, 68% { opacity: 1; transform: translateY(0px); } 71%, 100% { opacity: 0; } }
+@keyframes t3-oldstrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 68% { opacity: 1; stroke-dashoffset: 0; } 71%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t3-letter { 0%, 73% { opacity: 0; transform: scale(.6); } 77% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t3-drop { 0%, 76% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t3-wasis { 0%, 78% { opacity: 0; } 82%, 95% { opacity: 1; } 100% { opacity: 0; } }

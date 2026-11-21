@@ -1,0 +1,38 @@
+/* Teaching 4, God is Uncreated: 24 seconds in four scenes. */
+.anim-t4 * { animation-duration: 24s; }
+.anim-t4 .a-godtext, .anim-t4 .a-q, .anim-t4 .a-qstrike, .anim-t4 .a-noone, .anim-t4 .a-life, .anim-t4 .a-lifelabel, .anim-t4 .a-ghost, .anim-t4 .a-ghosttag, .anim-t4 .a-ghoststrike { opacity: 0; }
+.anim-t4 .a-god { animation-name: t4-god; }
+.anim-t4 .a-godtext { animation-name: t4-godtext; }
+.anim-t4 .a-persons { animation-name: t4-persons; }
+.anim-t4 .a-trilabel { animation-name: t4-trilabel; }
+.anim-t4 .a-q { animation-name: t4-q; }
+.anim-t4 .a-qstrike { animation-name: t4-qstrike; }
+.anim-t4 .a-noone { animation-name: t4-noone; }
+.anim-t4 .a-arrow { animation-name: t4-arrow; }
+.anim-t4 .a-madeby { animation-name: t4-madeby; }
+.anim-t4 .a-box { animation-name: t4-box; }
+.anim-t4 .a-item { animation-name: t4-item; }
+.anim-t4 .a-life { animation-name: t4-life; }
+.anim-t4 .a-lifelabel { animation-name: t4-lifelabel; }
+.anim-t4 .a-ghost { animation-name: t4-ghost; }
+.anim-t4 .a-ghosttag { animation-name: t4-ghosttag; }
+.anim-t4 .a-ghoststrike { animation-name: t4-ghoststrike; }
+.anim-t4 .a-divider { animation-name: t4-divider; }
+.anim-t4 .a-life { animation-timing-function: linear; }
+@keyframes t4-god { 0% { opacity: 0; transform: scale(.6); } 4% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t4-godtext { 0%, 3% { opacity: 0; } 6%, 74% { opacity: 1; } 77%, 100% { opacity: 0; } }
+@keyframes t4-persons { 0%, 76% { opacity: 0; transform: scale(.5); } 80% { opacity: 1; transform: scale(1); } 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t4-trilabel { 0%, 79% { opacity: 0; } 83%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t4-q { 0%, 5% { opacity: 0; } 8%, 17% { opacity: 1; } 20%, 100% { opacity: 0; } }
+@keyframes t4-qstrike { 0%, 11% { opacity: 1; stroke-dashoffset: 1; } 14% { stroke-dashoffset: 0; } 17% { opacity: 1; stroke-dashoffset: 0; } 20%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t4-noone { 0%, 14% { opacity: 0; } 16%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
+@keyframes t4-arrow { 0%, 23% { opacity: 1; stroke-dashoffset: 1; } 29% { stroke-dashoffset: 0; } 95% { opacity: 1; stroke-dashoffset: 0; } 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t4-madeby { 0%, 28% { opacity: 0; } 31%, 95% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes t4-box { 0%, 22% { opacity: 0; transform: translateY(12px); } 26% { opacity: 1; transform: translateY(0px); } 95% { opacity: 1; transform: translateY(0px); } 100% { opacity: 0; transform: translateY(0px); } }
+@keyframes t4-item { 0%, 26% { opacity: 0; transform: scale(.4); } 30% { opacity: 1; transform: scale(1); } 46% { opacity: 1; transform: scale(1); } 49%, 69% { opacity: .3; transform: scale(1); } 72%, 95% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1); } }
+@keyframes t4-life { 0% { stroke-dashoffset: 0; opacity: 0; } 31% { opacity: 0; } 34%, 44% { opacity: 1; } 47% { opacity: 0; } 100% { stroke-dashoffset: -520; opacity: 0; } }
+@keyframes t4-lifelabel { 0%, 33% { opacity: 0; } 36%, 44% { opacity: 1; } 47%, 100% { opacity: 0; } }
+@keyframes t4-ghost { 0%, 48% { opacity: 0; transform: scale(.8); } 52% { opacity: 1; transform: scale(1); } 68% { opacity: 1; transform: scale(1); } 71%, 100% { opacity: 0; transform: scale(1); } }
+@keyframes t4-ghosttag { 0%, 50% { opacity: 0; transform: translateY(-6px); } 53%, 68% { opacity: 1; transform: translateY(0px); } 71%, 100% { opacity: 0; } }
+@keyframes t4-ghoststrike { 0%, 57% { opacity: 1; stroke-dashoffset: 1; } 60% { stroke-dashoffset: 0; } 68% { opacity: 1; stroke-dashoffset: 0; } 71%, 100% { opacity: 0; stroke-dashoffset: 0; } }
+@keyframes t4-divider { 0%, 76% { opacity: 0; } 80%, 95% { opacity: 1; } 100% { opacity: 0; } }
