@@ -26,8 +26,9 @@ def run(script, *args):
 def main():
     DATA.mkdir(exist_ok=True)
     answers = QA / f"topic_answers_run{RUN}.json"
+    tamil = QA / "topics.ta.json"
     run("build_topics_data.py", QA / f"kb_run{RUN}.json", DATA / "topics.json",
-        *([answers] if answers.exists() else []))
+        answers if answers.exists() else "", *([tamil] if tamil.exists() else []))
     run("build_verses_data.py", QA / f"verse_map_run{RUN}.json", QA / f"kb_run{RUN}.json", DATA / "verses.json", BSB)
     scores = QA / f"question_scores_run{RUN}.json"
     run("build_questions_data.py", QA / f"questions_run{RUN}.json", QA / f"kb_run{RUN}.json", DATA / "questions.json",

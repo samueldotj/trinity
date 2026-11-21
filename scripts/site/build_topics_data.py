@@ -2,7 +2,9 @@ import json, re, sys
 
 kb_path, out_path = sys.argv[1], sys.argv[2]
 kb = json.load(open(kb_path, encoding='utf8'))
-answers = json.load(open(sys.argv[3], encoding='utf8')) if len(sys.argv) > 3 else {}
+answers = json.load(open(sys.argv[3], encoding='utf8')) if len(sys.argv) > 3 and sys.argv[3] else {}
+# Tamil translations (corpus/qa/topics.ta.json, from scripts/translate_topics.py), shown beside the English.
+ta = json.load(open(sys.argv[4], encoding='utf8')) if len(sys.argv) > 4 else {'themes': {}, 'topics': {}}
 
 SHORT = {
     'irenaeus-against-heresies': 'Against Heresies',
@@ -83,8 +85,20 @@ for th in kb:
         a = answers.get(str(t['id']))
         if a:
             entry['ans'] = {'text': a['answer'], 'scripture': a['scripture']}
+        tt = ta['topics'].get(str(t['id']))
+        # Use a translation only if it was made from the English shown here, so a changed answer stays English.
+        if tt and tt['en']['title'] == entry['title'] and tt['en']['quotes'] == [r['quote'] for r in refs]                 and tt['en']['answer'] == entry.get('ans', {}).get('text', ''):
+            entry['title_ta'] = tt['title']
+            if 'ans' in entry:
+                entry['ans']['text_ta'] = tt['answer']
+            for r, q in zip(refs, tt['quotes']):
+                r['quote_ta'] = q
         topics.append(entry)
-    out.append({'key': th['key'], 'title': fix(th['title']), 'desc': fix(th['description']), 'topics': topics})
+    entry = {'key': th['key'], 'title': fix(th['title']), 'desc': fix(th['description']), 'topics': topics}
+    tth = ta['themes'].get(th['key'])
+    if tth and tth['en']['title'] == entry['title'] and tth['en']['desc'] == entry['desc']:
+        entry.update(title_ta=tth['title'], desc_ta=tth['desc'], short_ta=tth['short'])
+    out.append(entry)
 
 json.dump(out, open(out_path, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
 n = sum(len(x['topics']) for x in out)

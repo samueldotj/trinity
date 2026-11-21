@@ -151,6 +151,7 @@ fn themes() -> Value {
             json!({
                 "key": key, "title": th["title"], "short": short_label(key),
                 "desc": desc, "n": topics.len(), "q": q,
+                "title_ta": th["title_ta"], "short_ta": th["short_ta"], "desc_ta": th["desc_ta"],
             })
         })
         .collect();

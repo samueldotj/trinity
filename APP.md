@@ -13,6 +13,7 @@ An HTML5 app that explains the Trinity: 46 teachings with diagrams, 4,500+ Bible
 | `web/src-tauri/` | Tauri 2 desktop shell. The front end calls the Rust core through the `api` command, so it works offline. |
 | `data/` | Data the app embeds, built from the corpus by `scripts/site/build_all.py`. |
 | `data/heresies.json` | The Heresies page, written by hand (not built from the corpus): each entry's origin, founder, summary, and the teaching numbers it denies. |
+| `corpus/qa/topics.ta.json` | Tamil for the Topics page (theme names and descriptions, topic titles, answers, quotes), made by `scripts/translate_topics.py` (Batch API) and merged into `data/topics.json` as `*_ta` fields by `build_all.py`. A translation is used only while its stored English matches. |
 | `scripts/site/` | Scripts that build `data/`. |
 | `design/canvas/` | The design canvas the app was built from. |
 
