@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t1.css';
 
 // ---------- Teaching 1: God is One ----------
-// 16 seconds: God and the one essence; the three Persons come from Him, each joined by "is"; pulled apart
+// 40 seconds: God and the one essence; the three Persons come from Him, each joined by "is"; pulled apart
 // they would be three gods, which is struck out; they come back together.
 
 // `tagY`: where the "a god?" tag sits, below the Father and above the Son and the Spirit, inside the picture.
@@ -43,7 +43,7 @@ function godIsOne(): string {
         <text y="6" text-anchor="middle" font-size="17" font-weight="600" fill="#9B1C1C" text-decoration="line-through" ${P}>Not three gods</text>
       </g></g>
     </svg>`;
-  return frame(1, 16000, [
+  return frame(1, 40000, [
     { label: 'One essence', at: 0, caption: 'There is only one divine being: God is one in essence, what God is.' },
     { label: 'Three Persons', at: 0.22, caption: 'He is three in Person, who God is: the Father, the Son and the Holy Spirit.' },
     { label: 'Not three gods', at: 0.46, caption: 'Not three separate gods working together like a team.' },

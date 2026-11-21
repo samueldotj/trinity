@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t4.css';
 
 // ---------- Teaching 4: God is Uncreated ----------
-// 24 seconds: "made by?" struck out; the one-way arrow to Creation and life and breath flowing from God;
+// 40 seconds: "made by?" struck out; the one-way arrow to Creation and life and breath flowing from God;
 // a ghost of God as one part of the world struck out; God is Father, Son and Spirit, all uncreated.
 
 function godIsUncreated(): string {
-  return frame(4, 24000, [
+  return frame(4, 40000, [
     { label: 'Never made', at: 0, caption: 'God was never made, caused or brought into being by anyone or anything.' },
     { label: 'All depends on Him', at: 0.22, caption: 'He needs nothing from the world; everything else depends completely on Him.' },
     { label: 'Not part of the world', at: 0.46, caption: 'He did not grow out of the universe and is not part of it, however great.' },

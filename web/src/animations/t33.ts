@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t33.css';
 
 // ---------- Teaching 33: The Son reveals the Father ----------
-// 24 seconds: our sight cannot reach the hidden Father; the Son is at the Father’s side; the Son comes and
+// 40 seconds: our sight cannot reach the hidden Father; the Son is at the Father’s side; the Son comes and
 // the Father is seen in Him; “only a teacher” and “the Father renamed” struck out: two Persons, one God.
 
 function sonRevealsFather(): string {
-  return frame(33, 24000, [
+  return frame(33, 40000, [
     { label: 'No one has seen God', at: 0, caption: 'No one has ever seen God: the Father is beyond our sight and our reach.' },
     { label: 'At the Father’s side', at: 0.22, caption: 'The Son is Himself God, at the Father’s side, and knows Him fully.' },
     { label: 'Seen Me, seen the Father', at: 0.46, caption: '“Anyone who has seen Me has seen the Father”: in Jesus we see what He is like.' },

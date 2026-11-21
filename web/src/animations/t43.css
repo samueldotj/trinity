@@ -1,5 +1,5 @@
-/* Teaching 43, Jesus Christ has two natures, divine and human, united in one Person: 24 seconds in four scenes. */
-.anim-t43 * { animation-duration: 24s; }
+/* Teaching 43, Jesus Christ has two natures, divine and human, united in one Person: 40 seconds in four scenes. */
+.anim-t43 * { animation-duration: 40s; }
 .anim-t43 .a-whats, .anim-t43 .a-who, .anim-t43 .a-blend, .anim-t43 .a-blendtag, .anim-t43 .a-blendstrike, .anim-t43 .a-ghost, .anim-t43 .a-twotag, .anim-t43 .a-twostrike, .anim-t43 .a-did { opacity: 0; }
 .anim-t43 .a-son { animation-name: t43-son; }
 .anim-t43 .a-divine { animation-name: t43-divine; }

@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t31.css';
 
 // ---------- Teaching 31: The Father sends the Son ----------
-// 24 seconds: the eternal Son is already with the Father; He is sent down into the world and born of a
+// 40 seconds: the eternal Son is already with the Father; He is sent down into the world and born of a
 // woman; an unwilling servant struck out, one will; an angry Father won over struck out, love sends Him.
 
 function fatherSendsSon(): string {
-  return frame(31, 24000, [
+  return frame(31, 40000, [
     { label: 'Already the Son', at: 0, caption: 'The Son did not begin to exist when sent: He was already the eternal Son.' },
     { label: 'Born of a woman', at: 0.22, caption: 'When the time had fully come, God sent His Son, born of a woman.' },
     { label: 'Sent, yet free', at: 0.46, caption: 'Being sent makes Him neither lower nor unwilling: They share one will.' },

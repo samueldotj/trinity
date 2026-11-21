@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t44.css';
 
 // ---------- Teaching 44: The Son’s human nature is created, but His divine nature is eternal ----------
-// 24 seconds: the Son on an endless line, with the Father and the Spirit; history drawn below and, at one
+// 40 seconds: the Son on an endless line, with the Father and the Spirit; history drawn below and, at one
 // moment, a created human nature begins; "the Son began here?" and "humanity eternal?" struck out; one Son.
 
 /** A white pill with coloured outline and text, drawn around 0,0. */
@@ -12,7 +12,7 @@ function pill44(w: number, text: string, stroke: string, ink: string): string {
 
 function humanCreatedDivineEternal(): string {
   const ticks = [100, 150, 200, 250, 300, 350, 400, 450, 500].map((x) => `<line x1="${x}" y1="394" x2="${x}" y2="406" stroke="#8A90A6" stroke-width="2"></line>`).join('');
-  return frame(44, 24000, [
+  return frame(44, 40000, [
     { label: 'Always God', at: 0, caption: 'As God, the Son has no beginning: always with the Father and the Spirit.' },
     { label: 'A real moment', at: 0.22, caption: 'In Mary’s womb, at a real moment, He took a created human body and soul.' },
     { label: 'Two errors ruled out', at: 0.46, caption: 'He did not begin at Bethlehem, and His humanity is not eternal or divine.' },

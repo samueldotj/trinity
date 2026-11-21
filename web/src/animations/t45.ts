@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t45.css';
 
 // ---------- Teaching 45: The Father did not suffer or die on the cross ----------
-// 24 seconds: only the Son has a human body, the Father none; one Person wearing three masks is struck out;
+// 40 seconds: only the Son has a human body, the Father none; one Person wearing three masks is struck out;
 // the Father sends the Son, one in the work of saving; the Son suffers as man, the Father does not suffer.
 
 /** A white pill with coloured outline and text, drawn around 0,0. */
@@ -13,7 +13,7 @@ function pill45(w: number, text: string, stroke: string, ink: string): string {
 const BODY45 = 'M-15,-37 Q0,-42 15,-37 L17,-14 L9,-14 L8,0 L2,0 L0,-12 L-2,0 L-8,0 L-9,-14 L-17,-14 Z';
 
 function fatherDidNotSuffer(): string {
-  return frame(45, 24000, [
+  return frame(45, 40000, [
     { label: 'Only the Son had a body', at: 0, caption: 'Only the Son became man, so only He had a body that could suffer and die.' },
     { label: 'Not three masks', at: 0.22, caption: 'Father, Son and Spirit are not three masks of one Person who died.' },
     { label: 'Sent by the Father', at: 0.46, caption: 'The Father was not distant: He sent the Son, united with Him in saving us.' },

@@ -1,5 +1,5 @@
-/* Teaching 1, God is One: 16 seconds in four scenes. */
-.anim-t1 * { animation-duration: 16s; }
+/* Teaching 1, God is One: 40 seconds in four scenes. */
+.anim-t1 * { animation-duration: 40s; }
 .anim-t1 .a-god { animation-name: t1-god; }
 .anim-t1 .a-ring { animation-name: t1-ring; }
 .anim-t1 .a-ringlabel { animation-name: t1-ringlabel; }
@@ -20,11 +20,3 @@
 @keyframes t1-pill { 0%, 37% { opacity: 0; } 41% { opacity: 1; } 46% { opacity: 1; } 50% { opacity: 0; } 83% { opacity: 0; } 87%, 95% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes t1-tag { 0%, 55% { opacity: 0; transform: translateY(-6px); } 59% { opacity: 1; transform: translateY(0px); } 67% { opacity: 1; } 70% { opacity: 0; } 100% { opacity: 0; } }
 @keyframes t1-not { 0%, 58% { opacity: 0; transform: scale(.6); } 61% { opacity: 1; transform: scale(1.06); } 62.5% { transform: scale(1); } 68% { opacity: 1; } 71% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes scene-cap1 { 0% { opacity: 0; } 3%, 20% { opacity: 1; } 22%, 100% { opacity: 0; } }
-@keyframes scene-cap2 { 0%, 22% { opacity: 0; } 24%, 44% { opacity: 1; } 46%, 100% { opacity: 0; } }
-@keyframes scene-cap3 { 0%, 46% { opacity: 0; } 48%, 70% { opacity: 1; } 72%, 100% { opacity: 0; } }
-@keyframes scene-cap4 { 0%, 72% { opacity: 0; } 74%, 95% { opacity: 1; } 100% { opacity: 0; } }
-@keyframes scene-step1 { 0%, 21% { color: #12172B; border-color: #12172B; } 23%, 100% { color: #6B7290; border-color: #D6D9E4; } }
-@keyframes scene-step2 { 0%, 22% { color: #6B7290; border-color: #D6D9E4; } 24%, 45% { color: #12172B; border-color: #12172B; } 47%, 100% { color: #6B7290; border-color: #D6D9E4; } }
-@keyframes scene-step3 { 0%, 46% { color: #6B7290; border-color: #D6D9E4; } 48%, 71% { color: #12172B; border-color: #12172B; } 73%, 100% { color: #6B7290; border-color: #D6D9E4; } }
-@keyframes scene-step4 { 0%, 72% { color: #6B7290; border-color: #D6D9E4; } 74%, 100% { color: #12172B; border-color: #12172B; } }

@@ -1,5 +1,5 @@
-/* Teaching 15, the Son is not the Holy Spirit: 24 seconds in four scenes. */
-.anim-t15 * { animation-duration: 24s; }
+/* Teaching 15, the Son is not the Holy Spirit: 40 seconds in four scenes. */
+.anim-t15 * { animation-duration: 40s; }
 .anim-t15 .a-people, .anim-t15 .a-help, .anim-t15 .a-help2, .anim-t15 .a-adv1, .anim-t15 .a-adv2, .anim-t15 .a-testify, .anim-t15 .a-testifyhead, .anim-t15 .a-testifylabel, .anim-t15 .a-sends, .anim-t15 .a-sendshead, .anim-t15 .a-sendslabel, .anim-t15 .a-stand, .anim-t15 .a-beam, .anim-t15 .a-fully, .anim-t15 .a-chip, .anim-t15 .a-chipstrike, .anim-t15 .a-sub1 { opacity: 0; }
 .anim-t15 .a-son { animation-name: t15-son; }
 .anim-t15 .a-spirit { animation-name: t15-spirit; }

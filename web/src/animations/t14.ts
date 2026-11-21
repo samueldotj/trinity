@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t14.css';
 
 // ---------- Teaching 14: The Father is not the Son ----------
-// 24 seconds: the Father begets, the Son is begotten, and the roles will not swap; the Son prays to the
+// 40 seconds: the Father begets, the Son is begotten, and the roles will not swap; the Son prays to the
 // Father and shares His glory; two witnesses; "is not", and two Gods struck out for the one God.
 
 const person = (x: number, y: number, fill: string, name: string) =>
@@ -20,7 +20,7 @@ const badge = (x: number, y: number, n: string, delay: string) =>
   `<g transform="translate(${x},${y})"><g class="a-badge" style="animation-delay: ${delay}"><circle r="17" fill="#FFFFFF" stroke="#12172B" stroke-width="2.5"></circle><text y="7" text-anchor="middle" font-size="20" font-weight="600" fill="#12172B" ${F}>${n}</text></g></g>`;
 
 function fatherNotSon(): string {
-  return frame(14, 24000, [
+  return frame(14, 40000, [
     { label: 'Begets and begotten', at: 0, caption: 'The Father is the One who begets; the Son is begotten. The roles cannot swap.' },
     { label: 'Prays to the Father', at: 0.22, caption: 'Jesus prays to the Father as “You,” asking for the glory He had “with” Him.' },
     { label: 'Two witnesses', at: 0.46, caption: 'Jesus counts Himself and the Father as two witnesses: two distinct Persons.' },

@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t39.css';
 
 // ---------- Teaching 39: Salvation is the work of the Father, Son, and Holy Spirit ----------
-// 24 seconds: the Father chooses each believer before the world; the Son's cross breaks the chain; the Spirit's
+// 40 seconds: the Father chooses each believer before the world; the Son's cross breaks the chain; the Spirit's
 // seal comes down and changes them; "a stern Father?" struck out, the Father sends the Son in love.
 
 function salvationTriuneWork(): string {
-  return frame(39, 24000, [
+  return frame(39, 40000, [
     { label: 'The Father chooses', at: 0, caption: 'The Father plans and chooses: He chose us in Christ before the world began.' },
     { label: 'The Son redeems', at: 0.22, caption: 'The Son comes and gives His life: in Him we have redemption through His blood.' },
     { label: 'The Spirit seals', at: 0.46, caption: 'The Spirit brings the rescue home: He seals us and changes us from within.' },

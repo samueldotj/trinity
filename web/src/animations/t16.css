@@ -1,5 +1,5 @@
-/* Teaching 16, the Holy Spirit is not the Father: 24 seconds in four scenes. */
-.anim-t16 * { animation-duration: 24s; }
+/* Teaching 16, the Holy Spirit is not the Father: 40 seconds in four scenes. */
+.anim-t16 * { animation-duration: 40s; }
 .anim-t16 .a-people, .anim-t16 .a-asks, .anim-t16 .a-askshead, .anim-t16 .a-askslabel, .anim-t16 .a-sendline, .anim-t16 .a-gives, .anim-t16 .a-advocate, .anim-t16 .a-giver, .anim-t16 .a-given, .anim-t16 .a-same, .anim-t16 .a-samestrike, .anim-t16 .a-another, .anim-t16 .a-tag, .anim-t16 .a-tagstrike { opacity: 0; }
 .anim-t16 .a-father { animation-name: t16-father; }
 .anim-t16 .a-son { animation-name: t16-son; }

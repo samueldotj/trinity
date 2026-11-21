@@ -1,5 +1,5 @@
-/* Teaching 8, God is Indivisible: 24 seconds in four scenes. */
-.anim-t8 * { animation-duration: 24s; }
+/* Teaching 8, God is Indivisible: 40 seconds in four scenes. */
+.anim-t8 * { animation-duration: 40s; }
 .anim-t8 .a-wedge, .anim-t8 .a-piecetag, .anim-t8 .a-piecestrike, .anim-t8 .a-knife, .anim-t8 .a-nosplit, .anim-t8 .a-slice, .anim-t8 .a-pietag, .anim-t8 .a-piestrike, .anim-t8 .a-spoke, .anim-t8 .a-is, .anim-t8 .a-person, .anim-t8 .a-third, .anim-t8 .a-thirdstrike, .anim-t8 .a-whole, .anim-t8 .a-attr { opacity: 0; }
 .anim-t8 .a-god { animation-name: t8-god; }
 .anim-t8 .a-ring { animation-name: t8-ring; }

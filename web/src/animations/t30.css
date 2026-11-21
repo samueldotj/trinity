@@ -1,5 +1,5 @@
-/* Teaching 30, No Person is more divine than another: 24 seconds in four scenes. */
-.anim-t30 * { animation-duration: 24s; }
+/* Teaching 30, No Person is more divine than another: 40 seconds in four scenes. */
+.anim-t30 * { animation-duration: 40s; }
 .anim-t30 .a-being, .anim-t30 .a-slice, .anim-t30 .a-share, .anim-t30 .a-slicestrike, .anim-t30 .a-fully, .anim-t30 .a-rankpill, .anim-t30 .a-rankstrike { opacity: 0; }
 .anim-t30 .a-being { animation-name: t30-being; }
 .anim-t30 .a-slice { animation-name: t30-slice; }

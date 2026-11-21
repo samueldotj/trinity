@@ -14,11 +14,30 @@ export interface Scene { label: string; caption: string; at: number }
 const PAUSE = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" rx="1" fill="currentColor"/></svg>';
 const PLAY = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z" fill="currentColor"/></svg>';
 
+/** Playback speeds, slowest first; "Normal" plays each loop in its own time (40 seconds). */
+const SPEEDS: [string, number][] = [
+  ['Slowest', 0.25], ['Slower', 0.5], ['Slow', 0.75], ['Normal', 1], ['Fast', 1.5], ['Faster', 2], ['Fastest', 3],
+];
+const SPEED_KEY = 'trinity.animationSpeed';
+/** The speed last chosen, kept between slides, teachings and visits. */
+function savedSpeed(): number {
+  try {
+    const r = Number(localStorage.getItem(SPEED_KEY));
+    if (SPEEDS.some(([, s]) => s === r)) return r;
+  } catch { /* storage unavailable: normal speed */ }
+  return 1;
+}
+
 /** `ms`: the loop's length, as in the .anim-t<n> rule in t<n>.css. */
 export function frame(n: number, ms: number, scenes: Scene[], svg: string): string {
+  const speed = savedSpeed();
   return `<div class="anim anim-t${n}">
       <div class="anim-bar">
         <button type="button" class="anim-toggle" aria-pressed="false" aria-label="Pause (K)" title="Pause (K)">${PAUSE}</button>
+        <label class="anim-speed" title="Animation speed"><span class="sr-only">Animation speed</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 11a5.5 5.5 0 1 1 11 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 11l3-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <select>${SPEEDS.map(([name, r]) => `<option value="${r}"${r === speed ? ' selected' : ''}>${name}</option>`).join('')}</select>
+        </label>
         <ol class="anim-steps" aria-label="Scenes">${scenes.map((s, i) => `<li><button type="button" class="anim-step${i + 1}" data-at="${Math.round(s.at * ms)}" title="Go to this scene">${i + 1} · ${s.label}</button></li>`).join('')}</ol>
       </div>
       ${svg}
@@ -28,13 +47,21 @@ export function frame(n: number, ms: number, scenes: Scene[], svg: string): stri
 
 /**
  * Pause and play, for explaining a scene: the button, K, or a click on the picture. A scene's label goes
- * to the start of that scene, keeping it paused if it was. Runs each time the slide is shown.
+ * to the start of that scene, keeping it paused if it was. The speed menu slows or quickens the whole
+ * animation, captions and labels with it, from where it is. Runs each time the slide is shown.
  */
 export function wireAnimation(body: HTMLElement): void {
   const box = body.querySelector<HTMLElement>('.anim');
   if (!box) return;
   const toggle = box.querySelector<HTMLButtonElement>('.anim-toggle')!;
   const all = () => box.getAnimations({ subtree: true });
+  const speed = box.querySelector<HTMLSelectElement>('.anim-speed select')!;
+  const setSpeed = (r: number) => all().forEach((a) => { a.playbackRate = r; });
+  setSpeed(Number(speed.value));
+  speed.addEventListener('change', () => {
+    setSpeed(Number(speed.value));
+    try { localStorage.setItem(SPEED_KEY, speed.value); } catch { /* not remembered */ }
+  });
   let paused = false;
   const set = (p: boolean) => {
     paused = p;

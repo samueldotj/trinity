@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t21.css';
 
 // ---------- Teaching 21: The Persons mutually indwell one another ----------
-// 24 seconds: the Father in the Son and the Son in the Father; the Spirit too, and all move as one; blended
+// 40 seconds: the Father in the Son and the Son in the Father; the Spirit too, and all move as one; blended
 // into one Person, struck out; three separate friends, struck out; each in the others, one God.
 
 function mutualIndwelling(): string {
-  return frame(21, 24000, [
+  return frame(21, 40000, [
     { label: 'I in You, You in Me', at: 0, caption: '“I am in the Father and the Father is in Me”: each dwells in the other.' },
     { label: 'Where One is, all are', at: 0.22, caption: 'The Spirit too: each is wholly in the others, and They are never apart.' },
     { label: 'Not blended into one', at: 0.46, caption: 'Yet They do not blend: the Father is still the Father, the Son still the Son.' },

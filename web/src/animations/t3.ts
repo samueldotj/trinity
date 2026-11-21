@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t3.css';
 
 // ---------- Teaching 3: God is Eternal ----------
-// 24 seconds: an unbroken circle round God with a point going round it; time drawn in beneath, made by
+// 40 seconds: an unbroken circle round God with a point going round it; time drawn in beneath, made by
 // God; a candle on it burns out while "very old?" is struck out; Alpha and Omega over the start and finish.
 
 function godIsEternal(): string {
-  return frame(3, 24000, [
+  return frame(3, 40000, [
     { label: 'No beginning or end', at: 0, caption: 'There was never a time when God did not exist, and there never will be.' },
     { label: 'Time is made', at: 0.22, caption: 'Time is something He created, not something that rules over Him.' },
     { label: 'Not merely old', at: 0.46, caption: 'He is not merely very old: He does not grow older or wear out.' },

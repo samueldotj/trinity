@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t41.css';
 
 // ---------- Teaching 41: Only the Son became incarnate ----------
-// 24 seconds: the Father sends, the Spirit forms a body, the Son comes; only the Son is joined to human
+// 40 seconds: the Father sends, the Spirit forms a body, the Son comes; only the Son is joined to human
 // nature; "the Father born in Bethlehem?" is struck out; the Persons stand distinct, not three masks.
 
 /** A white pill with coloured outline and text, drawn around 0,0. */
@@ -21,7 +21,7 @@ function person41(x: number, name: string, full: string, bg: string, border: str
 }
 
 function onlyTheSonBecameIncarnate(): string {
-  return frame(41, 24000, [
+  return frame(41, 40000, [
     { label: 'All three at work', at: 0, caption: 'The Father sent the Son; the Spirit formed His body; the Son came.' },
     { label: 'Only the Son joined', at: 0.22, caption: 'Of the three Persons, only the Son took a human body and soul.' },
     { label: 'Not the Father', at: 0.46, caption: 'It is wrong to say the Father was born in Bethlehem or died on the cross.' },

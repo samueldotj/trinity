@@ -406,6 +406,7 @@ export function present(deck: Deck): void {
   dlg.addEventListener('keydown', (e) => {
     const k = e.key;
     if (k === 'Escape') { e.preventDefault(); onEscape(); return; }
+    if ((e.target as Element).closest('select')) return;  // the speed menu's own arrow keys and Space
     if (!ask.hidden) return;  // the question's own buttons take Enter, Space and Tab
     if ((e.ctrlKey || e.metaKey) && !e.altKey && k.toLowerCase() === 'z') { e.preventDefault(); undo(); return; }
     if (e.altKey || e.ctrlKey || e.metaKey) return;

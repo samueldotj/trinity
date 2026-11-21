@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t46.css';
 
 // ---------- Teaching 46: The incarnation did not change the divine nature ----------
-// 24 seconds: human nature added while eternal, all-powerful and all-knowing stay; God turning into a man and
+// 40 seconds: human nature added while eternal, all-powerful and all-knowing stay; God turning into a man and
 // deity set aside are struck out; the same Son before the world, in the manger, on the cross; the Trinity unchanged.
 
 /** A white pill with coloured outline and text, drawn around 0,0. */
@@ -19,7 +19,7 @@ function station46(x: number, w: number, label: string, man: boolean, delay: num
 }
 
 function incarnationDidNotChangeGod(): string {
-  return frame(46, 24000, [
+  return frame(46, 40000, [
     { label: 'Added, nothing lost', at: 0, caption: 'He added a human nature; His divine nature stayed exactly as it always was.' },
     { label: 'Not turned into man', at: 0.22, caption: 'God did not turn into a man, nor set aside His divinity for a time.' },
     { label: 'Always the same', at: 0.46, caption: 'As fully God in the manger and on the cross as before the world began.' },

@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t5.css';
 
 // ---------- Teaching 5: God is Immutable ----------
-// 24 seconds: more and less bounce off; a sun crosses and a shadow swings while God has none; goodness,
+// 40 seconds: more and less bounce off; a sun crosses and a shadow swings while God has none; goodness,
 // faithfulness and love the same in every age; people change and pray, God answers and stays the same.
 
 function godIsImmutable(): string {
-  return frame(5, 24000, [
+  return frame(5, 40000, [
     { label: 'Not more or less', at: 0, caption: 'God never becomes more or less than He is: He does not grow, weaken or age.' },
     { label: 'No shifting shadow', at: 0.22, caption: 'Unlike the sun, with its moving shadows, God is always the same.' },
     { label: 'Always faithful', at: 0.46, caption: 'His faithfulness and love never change: His promises can be relied on.' },

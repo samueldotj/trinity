@@ -1,5 +1,5 @@
-/* Teaching 10, The Father is God: 24 seconds in four scenes. */
-.anim-t10 * { animation-duration: 24s; }
+/* Teaching 10, The Father is God: 40 seconds in four scenes. */
+.anim-t10 * { animation-duration: 40s; }
 .anim-t10 .a-attr, .anim-t10 .a-noone, .anim-t10 .a-beget, .anim-t10 .a-begethead, .anim-t10 .a-begetlabel, .anim-t10 .a-box, .anim-t10 .a-flow, .anim-t10 .a-flowhead, .anim-t10 .a-flowlabel, .anim-t10 .a-slit, .anim-t10 .a-plit, .anim-t10 .a-tag1, .anim-t10 .a-tag2, .anim-t10 .a-strike1, .anim-t10 .a-strike2 { opacity: 0; }
 .anim-t10 .a-god { animation-name: t10-god; }
 .anim-t10 .a-father { animation-name: t10-father; }

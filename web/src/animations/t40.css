@@ -1,5 +1,5 @@
-/* Teaching 40, Baptism identifies believers with the Father, Son, and Holy Spirit: 24 seconds in four scenes. */
-.anim-t40 * { animation-duration: 24s; }
+/* Teaching 40, Baptism identifies believers with the Father, Son, and Holy Spirit: 40 seconds in four scenes. */
+.anim-t40 * { animation-duration: 40s; }
 .anim-t40 .a-split, .anim-t40 .a-splitstrike, .anim-t40 .a-dim, .anim-t40 .a-helper, .anim-t40 .a-helperstrike, .anim-t40 .a-glow, .anim-t40 .a-ripple { opacity: 0; }
 .anim-t40 .a-water { animation-name: t40-water; }
 .anim-t40 .a-believer { animation-name: t40-believer; }

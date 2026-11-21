@@ -1,5 +1,5 @@
-/* Teaching 4, God is Uncreated: 24 seconds in four scenes. */
-.anim-t4 * { animation-duration: 24s; }
+/* Teaching 4, God is Uncreated: 40 seconds in four scenes. */
+.anim-t4 * { animation-duration: 40s; }
 .anim-t4 .a-godtext, .anim-t4 .a-q, .anim-t4 .a-qstrike, .anim-t4 .a-noone, .anim-t4 .a-life, .anim-t4 .a-lifelabel, .anim-t4 .a-ghost, .anim-t4 .a-ghosttag, .anim-t4 .a-ghoststrike { opacity: 0; }
 .anim-t4 .a-god { animation-name: t4-god; }
 .anim-t4 .a-godtext { animation-name: t4-godtext; }

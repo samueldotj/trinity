@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t42.css';
 
 // ---------- Teaching 42: The Son remained fully God when He became man ----------
-// 24 seconds: human nature is added to the Son, nothing swapped; "power given up?" and "knowledge given up?"
+// 40 seconds: human nature is added to the Son, nothing swapped; "power given up?" and "knowledge given up?"
 // are struck out; God and man pressed into one blend is struck out; even as a baby the Son is still God.
 
 /** A white pill with coloured outline and text, drawn around 0,0. */
@@ -11,7 +11,7 @@ function pill42(w: number, text: string, stroke: string, ink: string): string {
 }
 
 function sonRemainedFullyGod(): string {
-  return frame(42, 24000, [
+  return frame(42, 40000, [
     { label: 'Added, not swapped', at: 0, caption: 'Becoming man was an adding, not a swapping: He took on a full human nature.' },
     { label: 'Nothing given up', at: 0.22, caption: 'His divine power and knowledge were not reduced, set aside or changed.' },
     { label: 'Not a blend', at: 0.46, caption: 'He was not a blend, partly God and partly man, but wholly God and truly man.' },

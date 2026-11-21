@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t24.css';
 
 // ---------- Teaching 24: The Holy Spirit eternally proceeds from the Father and the Son ----------
-// 24 seconds: the Son begotten of the Father alone; two streams, from the Father and the Son, join as one source
+// 40 seconds: the Son begotten of the Father alone; two streams, from the Father and the Son, join as one source
 // and flow to the Spirit; the Father gives the Son all that is His; "less God?" struck out, all three ringed in gold.
 
 function spiritProceeds(): string {
-  return frame(24, 24000, [
+  return frame(24, 40000, [
     { label: 'The Son: Father alone', at: 0, caption: 'The Son is begotten of the Father alone. The Spirit comes forth differently.' },
     { label: 'From both, as one source', at: 0.22, caption: 'The Spirit proceeds from the Father and the Son together, as from one source.' },
     { label: 'Given by the Father', at: 0.46, caption: 'The Son has this from the Father, who gives Him everything that is His.' },

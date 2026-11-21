@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t29.css';
 
 // ---------- Teaching 29: The three Persons act inseparably in divine works ----------
-// 24 seconds: three separate jobs struck out; one work runs from the Father, through the Son, in the Spirit;
+// 40 seconds: three separate jobs struck out; one work runs from the Father, through the Son, in the Spirit;
 // creation, redemption and holiness each lit with one Person; the same God works all things.
 
 function inseparableWorks(): string {
-  return frame(29, 24000, [
+  return frame(29, 40000, [
     { label: 'Not three jobs', at: 0, caption: 'God’s work is not split into three separate jobs, like a team’s tasks.' },
     { label: 'From, through, in', at: 0.22, caption: 'One work together: from the Father, through the Son, in the Spirit.' },
     { label: 'Fitting to each', at: 0.46, caption: 'Creation, redemption and holiness each fit one Person; none works alone.' },

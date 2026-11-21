@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t10.css';
 
 // ---------- Teaching 10: The Father is God ----------
-// 24 seconds: the Father joined to God, eternal, all-powerful, all-knowing; from no one, He begets the Son;
+// 40 seconds: the Father joined to God, eternal, all-powerful, all-knowing; from no one, He begets the Son;
 // all things come from Him; "more God" and "only a role" are struck out, leaving the Father is God.
 
 const pill10 = (cls: string, x: number, y: number, w: number, text: string, stroke = '#33449A', ink = '#33449A', fill = '#FFFFFF') =>
@@ -15,7 +15,7 @@ const attr10 = (y: number, text: string, delay: number) =>
   `<g transform="translate(452,${y})"><g class="a-attr" style="animation-delay: ${delay}s"><rect x="-64" y="-15" width="128" height="30" rx="15" fill="#E3E9F7" stroke="#2849B8"></rect><text y="5" text-anchor="middle" font-size="14" font-weight="600" fill="#1A3285" ${P}>${text}</text></g></g>`;
 
 function theFatherIsGod(): string {
-  return frame(10, 24000, [
+  return frame(10, 40000, [
     { label: 'Fully God', at: 0, caption: 'The Father has the whole divine essence: eternal, all-powerful, all-knowing.' },
     { label: 'Father of the Son', at: 0.22, caption: 'He comes from no one, and eternally begets the Son: always Father.' },
     { label: 'Source of all things', at: 0.46, caption: 'He is the “one God … from whom all things came,” the source of everything.' },

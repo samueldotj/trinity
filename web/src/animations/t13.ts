@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t13.css';
 
 // ---------- Teaching 13: The Father, Son, and Holy Spirit are distinct Persons ----------
-// 24 seconds: three real Whos side by side; at the Jordan the Son rises, the Spirit descends, the Father
+// 40 seconds: three real Whos side by side; at the Jordan the Son rises, the Spirit descends, the Father
 // speaks; one actor in three masks, struck out; three distinct Persons, "is not", round the one God.
 
 const person = (x: number, y: number, fill: string, name: string, style: string) =>
@@ -26,7 +26,7 @@ function isNot(ax: number, ay: number, bx: number, by: number, delay: string): s
 const wave = (y: number) => `<path d="M150,${y} q25,-10 50,0 t50,0 t50,0 t50,0 t50,0 t50,0" fill="none" stroke="#8FA6D9" stroke-width="3" stroke-linecap="round"></path>`;
 
 function distinctPersons(): string {
-  return frame(13, 24000, [
+  return frame(13, 40000, [
     { label: 'Three real Whos', at: 0, caption: 'A Person is who someone is: Father, Son and Spirit are three real “Whos.”' },
     { label: 'At the Jordan', at: 0.22, caption: 'At once: the Son rises from the water, the Spirit descends, the Father speaks.' },
     { label: 'Not one actor', at: 0.46, caption: 'Not one Person taking turns as Father, Son, Spirit, like an actor in masks.' },

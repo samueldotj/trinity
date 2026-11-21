@@ -1,5 +1,5 @@
-/* Teaching 19, the three Persons are coequal in deity: 24 seconds in four scenes. */
-.anim-t19 * { animation-duration: 24s; }
+/* Teaching 19, the three Persons are coequal in deity: 40 seconds in four scenes. */
+.anim-t19 * { animation-duration: 40s; }
 .anim-t19 .a-step, .anim-t19 .a-chip, .anim-t19 .a-strike, .anim-t19 .a-column, .anim-t19 .a-levelline, .anim-t19 .a-essence, .anim-t19 .a-equally, .anim-t19 .a-people, .anim-t19 .a-honour, .anim-t19 .a-honourpill, .anim-t19 .a-glow, .anim-t19 .a-sub1 { opacity: 0; }
 .anim-t19 .a-person { animation-name: t19-person; }
 .anim-t19 .a-sub1 { animation-name: t19-sub1; }

@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t18.css';
 
 // ---------- Teaching 18: The three Persons are coeternal ----------
-// 24 seconds: the Father first and the others later, on lines of time, struck out; three lines running back
+// 40 seconds: the Father first and the others later, on lines of time, struck out; three lines running back
 // forever; the world's making, with the Word who "was" and the eternal Spirit; "always", side by side.
 
 const LANES: [number, string, string, string][] = [[60, '#2E5AAC', 'Father', '#22437F'], [190, '#AE4C17', 'Son', '#7E3A10'], [320, '#157A6E', 'Spirit', '#0E5A51']];
@@ -31,7 +31,7 @@ const person = ([y, c, name]: [number, string, string, string]) =>
 
 function coeternal(): string {
   const [f, s, p] = LANES;
-  return frame(18, 24000, [
+  return frame(18, 40000, [
     { label: 'Not the Father first', at: 0, caption: 'The Father did not exist alone, then bring the Son and the Spirit into being.' },
     { label: 'No beginning', at: 0.22, caption: 'Father, Son and Holy Spirit have each existed forever, with no beginning.' },
     { label: 'Before the world', at: 0.46, caption: 'Before anything was made, the Word already “was”; the Spirit is “eternal.”' },

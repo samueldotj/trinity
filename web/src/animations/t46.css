@@ -1,5 +1,5 @@
-/* Teaching 46, The incarnation did not change the divine nature: 24 seconds in four scenes. */
-.anim-t46 * { animation-duration: 24s; }
+/* Teaching 46, The incarnation did not change the divine nature: 40 seconds in four scenes. */
+.anim-t46 * { animation-duration: 40s; }
 .anim-t46 .a-godnote, .anim-t46 .a-addv, .anim-t46 .a-addvlab, .anim-t46 .a-attr, .anim-t46 .a-morphgod, .anim-t46 .a-morphman, .anim-t46 .a-morphtag, .anim-t46 .a-morphstrike, .anim-t46 .a-asidetag, .anim-t46 .a-asidestrike, .anim-t46 .a-station, .anim-t46 .a-mini, .anim-t46 .a-hebrews { opacity: 0; }
 .anim-t46 .a-son { animation-name: t46-son; }
 .anim-t46 .a-godnote { animation-name: t46-godnote; }

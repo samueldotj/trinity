@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t16.css';
 
 // ---------- Teaching 16: The Holy Spirit is not the Father ----------
-// 24 seconds: the Son asks, the Father gives the Spirit to the disciples; giver and given; a "Spirit?"
+// 40 seconds: the Son asks, the Father gives the Spirit to the disciples; giver and given; a "Spirit?"
 // name tag stuck on the Father is struck off; from no one and proceeds, level on "equally God".
 
 const pill = (cls: string, x: number, y: number, w: number, text: string, stroke: string, ink: string, fill = '#FFFFFF') =>
@@ -17,7 +17,7 @@ const disc = (fill: string, name: string, ink = '#FFFFFF', stroke = '') =>
         <text y="21" text-anchor="middle" font-size="12" fill="${ink}" ${P}>Person</text>`;
 
 function spiritNotFather(): string {
-  return frame(16, 24000, [
+  return frame(16, 40000, [
     { label: 'Asks and gives', at: 0, caption: 'Jesus asks the Father, and the Father gives “another Advocate,” the Spirit.' },
     { label: 'Giver and given', at: 0.22, caption: 'The Father gives and sends; the Spirit is given and sent: not one Person.' },
     { label: 'Not another name', at: 0.46, caption: 'The Spirit is not the Father under another name, or acting another way.' },

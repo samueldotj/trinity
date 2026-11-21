@@ -1,5 +1,5 @@
-/* Teaching 9, God has one divine essence: 24 seconds in four scenes. */
-.anim-t9 * { animation-duration: 24s; }
+/* Teaching 9, God has one divine essence: 40 seconds in four scenes. */
+.anim-t9 * { animation-duration: 40s; }
 .anim-t9 .a-what, .anim-t9 .a-who, .anim-t9 .a-room, .anim-t9 .a-roomtag, .anim-t9 .a-roomstrike, .anim-t9 .a-figure, .anim-t9 .a-mask1, .anim-t9 .a-mask2, .anim-t9 .a-mask3, .anim-t9 .a-masktag, .anim-t9 .a-maskstrike { opacity: 0; }
 .anim-t9 .a-god { animation-name: t9-god; }
 .anim-t9 .a-person { animation-name: t9-person; }

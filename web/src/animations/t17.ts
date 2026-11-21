@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t17.css';
 
 // ---------- Teaching 17: Each Person is fully God ----------
-// 24 seconds: God cut into three thirds, struck out, made whole; His power, wisdom, holiness and life, all
+// 40 seconds: God cut into three thirds, struck out, made whole; His power, wisdom, holiness and life, all
 // of it carried to each Person; "lesser", "partial" and "three Gods" struck out; prayer to the whole God.
 
 const pill = (cls: string, x: number, y: number, w: number, text: string, stroke: string, ink: string, style = '', fill = '#FFFFFF') =>
@@ -27,7 +27,7 @@ const token = (dx: number, dy: number) =>
   `<g transform="translate(300,215)"><g class="a-token" style="--dx: ${dx}px; --dy: ${dy}px"><circle r="18" fill="#12172B" stroke="#FFFFFF" stroke-width="2"></circle><text y="4.5" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" ${P}>all</text></g></g>`;
 
 function eachFullyGod(): string {
-  return frame(17, 24000, [
+  return frame(17, 40000, [
     { label: 'Not a third each', at: 0, caption: 'God is not split into three pieces, with each Person holding a share.' },
     { label: 'All of what God is', at: 0.22, caption: 'God has no parts: each Person has all His power, wisdom, holiness and life.' },
     { label: 'Not lesser, not three', at: 0.46, caption: 'So the Son and the Spirit are not lesser or partial gods, nor three Gods.' },

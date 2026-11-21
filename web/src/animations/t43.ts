@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t43.css';
 
 // ---------- Teaching 43: Jesus Christ has two natures, divine and human, united in one Person ----------
-// 24 seconds: one Son, the "who", above two natures, the "whats"; the natures pressed into a blend, struck
+// 40 seconds: one Son, the "who", above two natures, the "whats"; the natures pressed into a blend, struck
 // out; the Son pulled apart into two people, struck out; what He did and suffered goes back to the one Son.
 
 /** A white pill with coloured outline and text, drawn around 0,0. */
@@ -11,7 +11,7 @@ function pill43(w: number, text: string, stroke: string, ink: string): string {
 }
 
 function twoNaturesOnePerson(): string {
-  return frame(43, 24000, [
+  return frame(43, 40000, [
     { label: 'One who, two whats', at: 0, caption: 'In Jesus there is one “who,” the eternal Son, but two “whats.”' },
     { label: 'Not mixed', at: 0.22, caption: 'The natures are not mixed into a blend that is neither fully God nor man.' },
     { label: 'Not separated', at: 0.46, caption: 'Nor are they separated, as if Jesus were two people sharing one body.' },

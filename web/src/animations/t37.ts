@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t37.css';
 
 // ---------- Teaching 37: The Holy Spirit speaks, teaches, and wills ----------
-// 24 seconds: the Spirit says "Set apart for Me Barnabas and Saul" and two are called; He teaches from an
+// 40 seconds: the Spirit says "Set apart for Me Barnabas and Saul" and two are called; He teaches from an
 // open book; He gives each one a different gift as He chooses; "only a force?" struck out: a Person.
 
 function spiritSpeaksTeachesWills(): string {
-  return frame(37, 24000, [
+  return frame(37, 40000, [
     { label: 'He speaks', at: 0, caption: 'The Spirit speaks: “Set apart for Me Barnabas and Saul,” whom He has called.' },
     { label: 'He teaches', at: 0.22, caption: 'He teaches all things and reminds the disciples of everything Jesus said.' },
     { label: 'He chooses', at: 0.46, caption: 'He gives out gifts to each one as He determines: He makes choices.' },

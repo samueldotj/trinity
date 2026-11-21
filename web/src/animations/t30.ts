@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t30.css';
 
 // ---------- Teaching 30: No Person is more divine than another ----------
-// 24 seconds: God’s being cut into bigger and smaller shares, struck out; the whole goes to each Person;
+// 40 seconds: God’s being cut into bigger and smaller shares, struck out; the whole goes to each Person;
 // a ranking with the Father on top struck out, leaving relations that only tell Them apart; equal honour.
 
 function noPersonMoreDivine(): string {
-  return frame(30, 24000, [
+  return frame(30, 40000, [
     { label: 'Not shared out', at: 0, caption: 'God’s being cannot be shared out in larger and smaller amounts.' },
     { label: 'Each fully God', at: 0.22, caption: 'Each Person has the whole divine essence: the same power, glory, majesty.' },
     { label: 'Relations, not ranks', at: 0.46, caption: 'Begetting and proceeding tell Them apart; they rank no Person higher.' },

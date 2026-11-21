@@ -2,11 +2,11 @@ import { frame } from './frame';
 import './t20.css';
 
 // ---------- Teaching 20: There are exactly three divine Persons ----------
-// 24 seconds: one Person taking turns as Father, Son and Spirit, struck out; three Persons at once, each
+// 40 seconds: one Person taking turns as Father, Son and Spirit, struck out; three Persons at once, each
 // not the others; They speak to, love and know one another; counted one, two, three, and no fourth.
 
 function exactlyThreePersons(): string {
-  return frame(20, 24000, [
+  return frame(20, 40000, [
     { label: 'Not one in three roles', at: 0, caption: 'God is not one Person who takes turns as Father, then Son, then Spirit.' },
     { label: 'All three at once', at: 0.22, caption: 'The Father, Son and Spirit are truly distinct, always and at the same time.' },
     { label: 'Relating to one another', at: 0.46, caption: 'They really know, love and speak to one another: real Persons, not roles.' },

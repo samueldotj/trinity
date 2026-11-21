@@ -1,5 +1,5 @@
-/* Teaching 28, The three Persons have one divine will: 24 seconds in four scenes. */
-.anim-t28 * { animation-duration: 24s; }
+/* Teaching 28, The three Persons have one divine will: 40 seconds in four scenes. */
+.anim-t28 * { animation-duration: 40s; }
 .anim-t28 .a-flow, .anim-t28 .a-wish, .anim-t28 .a-wishstrike, .anim-t28 .a-three, .anim-t28 .a-threestrike { opacity: 0; }
 .anim-t28 .a-spokes { animation-name: t28-spokes; }
 .anim-t28 .a-flow { animation-name: t28-flow; }

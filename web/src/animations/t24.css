@@ -1,5 +1,5 @@
-/* Teaching 24, The Holy Spirit eternally proceeds from the Father and the Son: 24 seconds in four scenes. */
-.anim-t24 * { animation-duration: 24s; }
+/* Teaching 24, The Holy Spirit eternally proceeds from the Father and the Son: 40 seconds in four scenes. */
+.anim-t24 * { animation-duration: 40s; }
 .anim-t24 .a-fs, .anim-t24 .a-give, .anim-t24 .a-begets, .anim-t24 .a-alone, .anim-t24 .a-gives, .anim-t24 .a-songlow, .anim-t24 .a-less, .anim-t24 .a-lessstrike { opacity: 0; }
 .anim-t24 .a-f { animation-name: t24-f; }
 .anim-t24 .a-s { animation-name: t24-s; }

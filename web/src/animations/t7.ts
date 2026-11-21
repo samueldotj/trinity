@@ -2,7 +2,7 @@ import { F, P, frame } from './frame';
 import './t7.css';
 
 // ---------- Teaching 7: God is Omnipresent ----------
-// 24 seconds: a person goes up to the heavens, down to Sheol and out to the farthest sea, and God is there;
+// 40 seconds: a person goes up to the heavens, down to Sheol and out to the farthest sea, and God is there;
 // God stretched thin in pieces is struck out, the whole of Him in a room and at a star; God shut inside the
 // world is struck out; waves spread from God and reach someone hiding behind a wall.
 
@@ -25,7 +25,7 @@ function place7(x: number, y: number, icon: string, name: string, nameY: number,
 }
 
 function godIsOmnipresent(): string {
-  return frame(7, 24000, [
+  return frame(7, 40000, [
     { label: 'Already there', at: 0, caption: 'Up to the heavens, down to Sheol, out to the farthest sea: God is there.' },
     { label: 'The whole of God', at: 0.22, caption: 'Not stretched out, a little here and there: the whole God is in every place.' },
     { label: 'Not the world', at: 0.46, caption: 'God is not the world, and the world does not contain Him: He made it.' },

@@ -1,5 +1,5 @@
-/* Teaching 25, The Persons are distinguished by eternal relations of origin: 24 seconds in four scenes. */
-.anim-t25 * { animation-duration: 24s; }
+/* Teaching 25, The Persons are distinguished by eternal relations of origin: 40 seconds in four scenes. */
+.anim-t25 * { animation-duration: 40s; }
 .anim-t25 .a-chip, .anim-t25 .a-rank, .anim-t25 .a-rankstrike, .anim-t25 .a-start, .anim-t25 .a-startstrike, .anim-t25 .a-lessgod, .anim-t25 .a-lessgodstrike { opacity: 0; }
 .anim-t25 .a-person { animation-name: t25-person; }
 .anim-t25 .a-nature { animation-name: t25-nature; }

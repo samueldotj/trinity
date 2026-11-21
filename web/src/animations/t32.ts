@@ -2,11 +2,11 @@ import { frame, F, P } from './frame';
 import './t32.css';
 
 // ---------- Teaching 32: The Father and Son send the Holy Spirit ----------
-// 24 seconds: the Son rises from His people back to the Father; Father and Son send the Spirit in one act;
+// 40 seconds: the Son rises from His people back to the Father; Father and Son send the Spirit in one act;
 // at Pentecost He comes down and flames rest on the Church; “lesser servant” struck out: fully God.
 
 function fatherAndSonSendSpirit(): string {
-  return frame(32, 24000, [
+  return frame(32, 40000, [
     { label: 'Jesus returns', at: 0, caption: 'After Jesus returned to the Father, the Spirit was sent to live in His people.' },
     { label: 'Sent by both', at: 0.22, caption: 'The Father and the Son send Him: not one without the other, but one act.' },
     { label: 'Pentecost', at: 0.46, caption: 'At Pentecost the Spirit came to live in His people: a sending in time.' },

@@ -1,5 +1,5 @@
-/* Teaching 33, The Son reveals the Father: 24 seconds in four scenes. */
-.anim-t33 * { animation-duration: 24s; }
+/* Teaching 33, The Son reveals the Father: 40 seconds in four scenes. */
+.anim-t33 * { animation-duration: 40s; }
 .anim-t33 .a-sight, .anim-t33 .a-block, .anim-t33 .a-nosee, .anim-t33 .a-side, .anim-t33 .a-teacher, .anim-t33 .a-teacherstrike, .anim-t33 .a-renamed, .anim-t33 .a-renamedstrike { opacity: 0; }
 .anim-t33 .a-veil { animation-name: t33-veil; }
 .anim-t33 .a-us { animation-name: t33-us; }

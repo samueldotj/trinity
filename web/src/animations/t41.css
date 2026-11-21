@@ -1,5 +1,5 @@
-/* Teaching 41, Only the Son became incarnate: 24 seconds in four scenes. */
-.anim-t41 * { animation-duration: 24s; }
+/* Teaching 41, Only the Son became incarnate: 40 seconds in four scenes. */
+.anim-t41 * { animation-duration: 40s; }
 .anim-t41 .a-full, .anim-t41 .a-sends, .anim-t41 .a-sendslab, .anim-t41 .a-flow, .anim-t41 .a-flowlab, .anim-t41 .a-ghost, .anim-t41 .a-ghosttag, .anim-t41 .a-ghoststrike { opacity: 0; }
 .anim-t41 .a-person { animation-name: t41-person; }
 .anim-t41 .a-full { animation-name: t41-full; }
