@@ -265,8 +265,9 @@ function renderComplete(root: HTMLElement, data: Data): void {
 }
 
 /**
- * The teaching as slides: its title; one slide per paragraph of "What does this mean?"; the diagram;
- * the supporting verses; and the heresies that deny it (when there are any). Key words stay linked.
+ * The teaching as slides: its title; its illustration (the animation, or else the diagram); one slide per
+ * paragraph of "What does this mean?"; the verses; and the heresies that deny it (when there are any).
+ * Key words stay linked.
  */
 function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']): Deck {
   const T = data.teachings;
@@ -286,21 +287,8 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
       ${slideDetail ? `<p class="slide-sub"${taAttr(slideDetail === cur.detail_ta)}>${mdInline(slideDetail)}</p>` : ''}`,
   }];
 
-  const meaning = (ta ? cur.meaning_ta : cur.meaning)?.trim();
-  if (meaning) {
-    const paras = meaning.split(/\n[ \t]*\n+/);
-    const head = ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?';
-    paras.forEach((p, i) => {
-      fresh();
-      slides.push({
-        kind: 'text', fit: true,
-        html: `<p class="slide-eyebrow"${ta ? ' lang="ta"' : ''}>${head}${paras.length > 1 ? ` · ${i + 1} of ${paras.length}` : ''}</p>
-          <div class="slide-fit slide-text"${ta ? ' lang="ta"' : ''}>${mdParas(p, 'slide-para', ta ? linkTa : linkEn)}</div>`,
-      });
-    });
-  }
-
-  // A teaching with an animated illustration shows that; the others, the diagram from the page.
+  // Slide 2, straight after the title: the illustration. A teaching with an animated illustration shows
+  // that; the others, the diagram from the page.
   const animation = animationFor(cur.n, lang);
   slides.push(animation ? { kind: 'diagram', html: animation, onShow: wireAnimation } : {
     kind: 'diagram',
@@ -316,6 +304,20 @@ function deckFor(cur: Teaching, data: Data, lang: Lang, onClose: Deck['onClose']
         </div>
       </div>`,
   });
+
+  const meaning = (ta ? cur.meaning_ta : cur.meaning)?.trim();
+  if (meaning) {
+    const paras = meaning.split(/\n[ \t]*\n+/);
+    const head = ta ? 'இதன் பொருள் என்ன?' : 'What does this mean?';
+    paras.forEach((p, i) => {
+      fresh();
+      slides.push({
+        kind: 'text', fit: true,
+        html: `<p class="slide-eyebrow"${ta ? ' lang="ta"' : ''}>${head}${paras.length > 1 ? ` · ${i + 1} of ${paras.length}` : ''}</p>
+          <div class="slide-fit slide-text"${ta ? ' lang="ta"' : ''}>${mdParas(p, 'slide-para', ta ? linkTa : linkEn)}</div>`,
+      });
+    });
+  }
 
   const supportTa = lang === 'ta' && cur.support_ta;
   const support = supportTa || cur.support;
