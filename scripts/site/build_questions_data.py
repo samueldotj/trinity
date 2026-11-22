@@ -3,7 +3,7 @@ import json, os, re, sys
 
 qs_path, kb_path, out_path = sys.argv[1:4]
 # Optional: {"<question id>": 1-10}, how thought-provoking each question is; the app lists the highest first.
-scores = json.load(open(sys.argv[4], encoding='utf8')) if len(sys.argv) > 4 else {}
+scores = json.load(open(sys.argv[4], encoding='utf8')) if len(sys.argv) > 4 and sys.argv[4] else {}
 CHUNKS = 1
 qs = json.load(open(qs_path, encoding='utf8'))
 kb = json.load(open(kb_path, encoding='utf8'))
@@ -88,4 +88,14 @@ for n, q in enumerate(qs):
 
 json.dump({'themes': themes, 'topics': topics, 'cats': cats, 'authors': authors, 'q': index, 'details': chunks[0]},
           open(out_path, 'w', encoding='utf8'), ensure_ascii=False, separators=(',', ':'))
-print('questions', len(index), 'no theme', sum(1 for x in index if x[3] < 0), 'size', os.path.getsize(out_path))
+# Tamil (corpus/qa/questions.ta.json, from scripts/translate_questions.py) goes to its own file beside this one,
+# keeping only translations made from the English as it stands, so a changed question or answer stays English.
+ta = json.load(open(sys.argv[5], encoding='utf8')) if len(sys.argv) > 5 else {}
+details = chunks[0]
+qtext = {str(x[0]): x[1] for x in index}
+ta_out = {k: {'q': v['q'], 'a': v['a']} for k, v in ta.items()
+          if k in details and v['en'] == {'q': qtext[k],
+                                          'a': [a[3] for a in details[k]['a']]}}
+json.dump(ta_out, open(os.path.join(os.path.dirname(out_path), 'questions.ta.json'), 'w', encoding='utf8'),
+          ensure_ascii=False, separators=(',', ':'))
+print('questions', len(index), 'tamil', len(ta_out), 'no theme', sum(1 for x in index if x[3] < 0), 'size', os.path.getsize(out_path))

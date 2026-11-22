@@ -253,7 +253,7 @@ p { margin: 0; }
 /* ---------- Topics ---------- */
 .topics-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
 .topics-head .search { flex: 0 1 340px; }
-.topics-head .lang-switch { align-self: flex-start; }
+.topics-head .lang-switch, .intro .lang-switch { align-self: flex-start; }
 .topic { scroll-margin-top: 24px; padding: 18px 26px; display: flex; flex-direction: column; gap: 18px; }
 .topic.focus { box-shadow: 0 0 0 3px var(--link); }
 .topic-toggle { width: 100%; min-height: 44px; display: flex; align-items: center; gap: 16px; padding: 0; border: 0; background: transparent; color: var(--ink); text-align: left; }

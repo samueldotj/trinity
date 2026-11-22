@@ -32,7 +32,7 @@ def main():
     run("build_verses_data.py", QA / f"verse_map_run{RUN}.json", QA / f"kb_run{RUN}.json", DATA / "verses.json", BSB)
     scores = QA / f"question_scores_run{RUN}.json"
     run("build_questions_data.py", QA / f"questions_run{RUN}.json", QA / f"kb_run{RUN}.json", DATA / "questions.json",
-        *([scores] if scores.exists() else []))
+        scores if scores.exists() else "", *([QA / "questions.ta.json"] if (QA / "questions.ta.json").exists() else []))
     run("build_books_data.py", ROOT / "corpus" / "trinity.db", DATA / "books")
     run("build_teachings_data.py", BSB, DATA / "topics.json", DATA / "teachings.json")
 

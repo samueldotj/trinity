@@ -14,6 +14,7 @@ An HTML5 app that explains the Trinity: 46 teachings with diagrams, 4,500+ Bible
 | `data/` | Data the app embeds, built from the corpus by `scripts/site/build_all.py`. |
 | `data/heresies.json` | The Heresies page, written by hand (not built from the corpus): each entry's origin, founder, summary, and the teaching numbers it denies. |
 | `corpus/qa/topics.ta.json` | Tamil for the Topics page (theme names and descriptions, topic titles, answers, quotes), made by `scripts/translate_topics.py` (Batch API) and merged into `data/topics.json` as `*_ta` fields by `build_all.py`. A translation is used only while its stored English matches. |
+| `corpus/qa/questions.ta.json` | Tamil for the Q&A page (each question and every writer's answer; quotes stay English), made by `scripts/translate_questions.py` (Batch API). `build_questions_data.py` writes the ones still matching the English to `data/questions.ta.json`. |
 | `scripts/site/` | Scripts that build `data/`. |
 | `design/canvas/` | The design canvas the app was built from. |
 

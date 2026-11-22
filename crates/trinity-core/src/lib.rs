@@ -92,6 +92,8 @@ dataset!(teachings, "teachings.json");
 dataset!(topics_data, "topics.json");
 dataset!(verses_data, "verses.json");
 dataset!(questions_data, "questions.json");
+// Tamil for the Q&A page: {id: {q, a: [answer, ...]}}, only where made from the English as it stands.
+dataset!(questions_ta, "questions.ta.json");
 dataset!(heresies_data, "heresies.json");
 
 /// Short one- or two-word labels for the 26 themes, keyed by theme key.
@@ -302,6 +304,15 @@ fn question_texts() -> &'static Vec<String> {
     })
 }
 
+/// Each question's Tamil wording, in the same order as `question_texts` ("" where there is none), for search.
+fn question_texts_ta() -> &'static Vec<String> {
+    static CELL: OnceLock<Vec<String>> = OnceLock::new();
+    CELL.get_or_init(|| {
+        questions_data()["q"].as_array().into_iter().flatten()
+            .map(|x| s(&questions_ta()[x[0].to_string()]["q"]).to_lowercase()).collect()
+    })
+}
+
 /// The question number in a search word such as "505", "q505" or "#505".
 fn question_number(word: &str) -> Option<u64> {
     let digits = word.trim_start_matches(['q', '#']);
@@ -319,6 +330,7 @@ fn questions(p: &Params) -> Value {
     let cats = d["cats"].as_array().map(Vec::as_slice).unwrap_or(&[]);
     let index = d["q"].as_array().map(Vec::as_slice).unwrap_or(&[]);
     let texts = question_texts();
+    let texts_ta = question_texts_ta();
 
     let words: Vec<String> = p.get("q").map(|q| q.to_lowercase()).unwrap_or_default()
         .split_whitespace().map(String::from).collect();
@@ -340,7 +352,8 @@ fn questions(p: &Params) -> Value {
         .filter(|(_, x)| cat.is_none_or(|c| x[2].as_u64() == Some(c)))
         .filter(|(_, x)| writer.is_none_or(|w| x[5].as_array().is_some_and(|a| a.iter().any(|i| i.as_u64() == Some(w)))))
         // A search word can also be a question's number, as the page shows it: "505", "q505" or "#505".
-        .filter(|(i, x)| words.iter().all(|w| texts[*i].contains(w.as_str()) || question_number(w) == x[0].as_u64()))
+        .filter(|(i, x)| words.iter().all(|w| texts[*i].contains(w.as_str()) || texts_ta[*i].contains(w.as_str())
+            || question_number(w) == x[0].as_u64()))
         .collect();
     let nwriters = |x: &Value| x[5].as_array().map_or(0, Vec::len);
     // How thought-provoking the question is, 1-10 (0 when unscored).
@@ -359,10 +372,12 @@ fn questions(p: &Params) -> Value {
         .take(limit)
         .map(|(_, x)| {
             let writers: Vec<Value> = x[5].as_array().into_iter().flatten().map(|i| name(authors, i)).collect();
-            let (text, _) = overlay(format!("question:{}:text", x[0]), &x[1]);
+            let (text, edited) = overlay(format!("question:{}:text", x[0]), &x[1]);
+            // The Tamil is of the generated English, so an edited question has none.
+            let ta = if edited { Value::Null } else { questions_ta()[x[0].to_string()]["q"].clone() };
             json!({
                 "id": x[0], "question": text, "cat": name(cats, &x[2]), "theme": name(themes, &x[3]),
-                "topic": name(topics, &x[4]), "writers": writers,
+                "topic": name(topics, &x[4]), "writers": writers, "question_ta": ta,
             })
         })
         .collect();
@@ -380,6 +395,7 @@ fn question(id: &str) -> Result<Value, String> {
     let d = questions_data();
     let det = d["details"].get(id).ok_or("no such question")?;
     let authors = d["authors"].as_array().map(Vec::as_slice).unwrap_or(&[]);
+    let ta = &questions_ta()[id];
     let mut answers_edited = Vec::new();
     let answers: Vec<Value> = det["a"]
         .as_array()
@@ -390,13 +406,16 @@ fn question(id: &str) -> Result<Value, String> {
             let author = a[0].as_u64().and_then(|i| authors.get(i as usize)).cloned().unwrap_or(Value::Null);
             let (answer, e) = overlay(format!("question:{id}:answer:{n}"), &a[3]);
             answers_edited.push(e);
-            json!({ "author": author, "work": a[1], "place": a[2], "answer": answer, "quote": a[4], "scripture": a[5], "workId": a[6] })
+            let answer_ta = if e { Value::Null } else { ta["a"][n].clone() };
+            json!({ "author": author, "work": a[1], "place": a[2], "answer": answer, "quote": a[4], "scripture": a[5],
+                    "workId": a[6], "answer_ta": answer_ta })
         })
         .collect();
     let text = d["q"].as_array().and_then(|q| q.iter().find(|x| x[0].to_string() == id)).map(|x| x[1].clone()).unwrap_or(Value::Null);
     let (text, text_edited) = overlay(format!("question:{id}:text"), &text);
     let (synthesis, syn_edited) = overlay(format!("question:{id}:synthesis"), &det["s"]);
-    Ok(json!({ "id": id, "question": text, "synthesis": synthesis, "answers": answers,
+    let question_ta = if text_edited { Value::Null } else { ta["q"].clone() };
+    Ok(json!({ "id": id, "question": text, "question_ta": question_ta, "synthesis": synthesis, "answers": answers,
                "edited": { "text": text_edited, "synthesis": syn_edited, "answers": answers_edited } }))
 }
 
