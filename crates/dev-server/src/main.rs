@@ -9,28 +9,42 @@
 //! It also turns on edit mode: `POST /api/edit` with `{"key": "...", "value": "..." | null}`
 //! changes one AI-written field and saves all edits to `data/edits.json` (or `$TRINITY_EDITS`).
 //! The Vercel function has no such route, so the deployed site is read-only.
+//!
+//!     cargo run -p dev-server --release -- path/to/site --read-only
+//!
+//! `--read-only` turns edit mode off, as on Vercel. Use it when serving a site that embeds the
+//! app (one that has its own `data/` folder, say), so nothing is saved there.
+//!
+//! Static files are served the way Vercel serves them: a folder URL loads its `index.html`
+//! (`/trinity` redirects to `/trinity/`), and a missing file is a 404 (`404.html` if present).
 
 use std::io::Read;
-use std::path::{Path, PathBuf};
+use std::path::{Component, Path, PathBuf};
 use tiny_http::{Header, Method, Request, Response, Server};
 
 type Reply = Response<std::io::Cursor<Vec<u8>>>;
 
 fn main() {
     let port = std::env::var("PORT").unwrap_or_else(|_| "3001".into());
-    let root: Option<PathBuf> = std::env::args().nth(1).map(PathBuf::from);
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    let read_only = args.iter().any(|a| a == "--read-only");
+    let root: Option<PathBuf> = args.iter().find(|a| !a.starts_with("--")).map(PathBuf::from);
     let edits_path = PathBuf::from(std::env::var("TRINITY_EDITS").unwrap_or_else(|_| "data/edits.json".into()));
     let server = Server::http(format!("127.0.0.1:{port}")).expect("port is free");
-    println!("dev-server on http://localhost:{port}  (edits save to {})", edits_path.display());
+    if read_only {
+        println!("dev-server on http://localhost:{port}  (read-only)");
+    } else {
+        println!("dev-server on http://localhost:{port}  (edits save to {})", edits_path.display());
+    }
     for mut req in server.incoming_requests() {
         let url = req.url().to_string();
         let (path, query) = url.split_once('?').unwrap_or((url.as_str(), ""));
-        let response = if path == "/api/edit" {
+        let response = if path == "/api/edit" && !read_only {
             save_edit(&mut req, &edits_path)
         } else if path == "/api/handler" {
             let params: trinity_core::Params = form_urlencoded::parse(query.as_bytes()).into_owned().collect();
             let route = params.get("route").cloned().unwrap_or_default();
-            let body = if route == "editing" {
+            let body = if route == "editing" && !read_only {
                 serde_json::json!({ "enabled": true, "edits": trinity_core::edits::count() })
             } else {
                 trinity_core::handle(&route, &params).unwrap_or_else(|e| serde_json::json!({ "error": e }))
@@ -97,22 +111,52 @@ fn save_edit(req: &mut Request, edits_path: &Path) -> Reply {
 }
 
 fn static_file(root: &Path, path: &str) -> Reply {
-    let rel = path.trim_start_matches('/');
-    let mut file = root.join(if rel.is_empty() { "index.html" } else { rel });
-    if rel.contains("..") || !file.is_file() {
-        file = root.join("index.html");
+    // Percent-decode the path (`+` stays a plus, as in a URL path).
+    let decoded = form_urlencoded::parse(format!("p={}", path.replace('+', "%2B")).as_bytes())
+        .next()
+        .map(|(_, v)| v.into_owned())
+        .unwrap_or_default();
+    let rel = Path::new(decoded.trim_start_matches('/'));
+    if rel.components().any(|c| !matches!(c, Component::Normal(_))) {
+        return not_found(root);
     }
-    let kind = match file.extension().and_then(|e| e.to_str()) {
-        Some("html") => "text/html; charset=utf-8",
-        Some("js") => "text/javascript",
-        Some("css") => "text/css",
-        Some("svg") => "image/svg+xml",
-        Some("png") => "image/png",
-        Some("ico") => "image/x-icon",
-        _ => "application/octet-stream",
-    };
+    let mut file = root.join(rel);
+    if file.is_dir() {
+        if !path.ends_with('/') {
+            return Response::from_data(Vec::new())
+                .with_status_code(308)
+                .with_header(header("Location", &format!("{path}/")));
+        }
+        file = file.join("index.html");
+    }
     match std::fs::read(&file) {
-        Ok(bytes) => Response::from_data(bytes).with_header(header("Content-Type", kind)),
-        Err(_) => Response::from_data(b"not found".to_vec()).with_status_code(404),
+        Ok(bytes) => Response::from_data(bytes).with_header(header("Content-Type", content_type(&file))),
+        Err(_) => not_found(root),
+    }
+}
+
+fn not_found(root: &Path) -> Reply {
+    let page = std::fs::read(root.join("404.html")).unwrap_or_else(|_| b"not found".to_vec());
+    Response::from_data(page)
+        .with_status_code(404)
+        .with_header(header("Content-Type", "text/html; charset=utf-8"))
+}
+
+fn content_type(file: &Path) -> &'static str {
+    match file.extension().and_then(|e| e.to_str()).unwrap_or("") {
+        "html" => "text/html; charset=utf-8",
+        "js" | "mjs" => "text/javascript",
+        "css" => "text/css",
+        "json" => "application/json",
+        "xml" => "application/xml",
+        "txt" => "text/plain; charset=utf-8",
+        "svg" => "image/svg+xml",
+        "png" => "image/png",
+        "jpg" | "jpeg" => "image/jpeg",
+        "webp" => "image/webp",
+        "avif" => "image/avif",
+        "ico" => "image/x-icon",
+        "woff2" => "font/woff2",
+        _ => "application/octet-stream",
     }
 }

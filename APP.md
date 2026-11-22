@@ -8,7 +8,7 @@ An HTML5 app that explains the Trinity: 46 teachings with diagrams, 4,500+ Bible
 |---|---|
 | `crates/trinity-core/` | Rust library: the data in `data/` compiled in, and every query the screens make (`handle(route, params)`). |
 | `api/handler.rs` | Vercel Rust function: `GET /api/handler?route=…` → `trinity_core::handle`. |
-| `crates/dev-server/` | Local server with the same API, and it can also serve the built site. |
+| `crates/dev-server/` | Local server with the same API, and it can also serve a built site (`--read-only` turns edit mode off, for sites that embed the app). |
 | `web/` | Front end: Vite + TypeScript, no UI framework. Hash routes `#/explanations`, `#/reference`, `#/topics`, `#/qa`, `#/writings`, `#/reader`, `#/heresies`. |
 | `web/src-tauri/` | Tauri 2 desktop shell. The front end calls the Rust core through the `api` command, so it works offline. |
 | `data/` | Data the app embeds, built from the corpus by `scripts/site/build_all.py`. |
