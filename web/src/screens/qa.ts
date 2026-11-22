@@ -1,4 +1,5 @@
 import { api } from '../api';
+import { book, writer } from '../writers';
 import { editable, editingOn, wireEditing } from '../edit';
 import { mdParas } from '../markdown';
 import { debounce, esc, failure, href, icon, loading, navigate } from '../util';
@@ -47,15 +48,15 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
 
   const items = res.items.map((x) => {
     const isOpen = String(x.id) === state.open;
-    const writers = (x.writers.length === 1 ? 'Answered by ' : `${x.writers.length} writers: `) + x.writers.join(', ');
+    const writers = (x.writers.length === 1 ? 'Answered by ' : `${x.writers.length} writers: `) + x.writers.map(writer).join(', ');
     let body = '';
     if (isOpen && detail) {
       const d = detail;
       const answers = d.answers.map((a, n) => `<li class="answer">
           <span class="a-badge" aria-hidden="true">A</span>
           <div class="answer-main">
-            <div class="answer-head"><b>${esc(a.author)}</b>
-              <a href="${href('reader', { work: a.workId, quote: a.quote })}">${esc(a.place ? `${a.work} · ${a.place}` : a.work)} →</a></div>
+            <div class="answer-head"><b>${esc(writer(a.author))}</b>
+              <a href="${href('reader', { work: a.workId, quote: a.quote })}">${esc(a.place ? `${book(a.work, a.workId)} · ${a.place}` : book(a.work, a.workId))} →</a></div>
             ${editable(`question:${x.id}:answer:${n}`, mdParas(a.answer, 'answer-text'), { text: a.answer, edited: d.edited?.answers[n], label: `${a.author}’s answer` })}
             <blockquote class="quote">“${esc(a.quote)}”</blockquote>
             ${a.scripture.length ? `<div class="row">${a.scripture.map((r) => `<a class="chip" href="${href('reference', { exact: r })}">${esc(r)}</a>`).join('')}</div>` : ''}
@@ -88,7 +89,7 @@ export async function renderQA(root: HTMLElement, params: URLSearchParams): Prom
     <div class="card filters">
       <label class="field wide">Search questions<input id="qa-q" type="search" value="${esc(state.q)}" placeholder="Ask about the Son, the Spirit, a verse, or a number like Q505…"></label>
       <label class="field">Theme<select id="qa-theme">${opt(res.themes.map((t, i) => ({ v: String(i), label: t })), state.theme, 'All themes')}</select></label>
-      <label class="field">Writer<select id="qa-writer">${opt(res.writers.map((w) => ({ v: String(w.id), label: w.name })), state.writer, 'All writers')}</select></label>
+      <label class="field">Writer<select id="qa-writer">${opt(res.writers.map((w) => ({ v: String(w.id), label: writer(w.name) })), state.writer, 'All writers')}</select></label>
       <label class="field">Kind<select id="qa-cat">${opt(res.cats.map((c, i) => ({ v: String(i), label: cap(c) })), state.cat, 'All kinds')}</select></label>
       <label class="field">Order<select id="qa-sort"><option value="deep"${state.sort === 'deep' ? ' selected' : ''}>Most thought-provoking first</option><option value="many"${state.sort === 'many' ? ' selected' : ''}>Most writers first</option><option value="theme"${state.sort === 'theme' ? ' selected' : ''}>By theme</option></select></label>
     </div>

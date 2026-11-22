@@ -1,4 +1,5 @@
 import { esc, href } from '../util';
+import { writer } from '../writers';
 
 // The library: [era, id, title, author, date, tradition, words, Bible references].
 const BOOKS: [string, string, string, string, string, string, string, string][] = [
@@ -34,7 +35,7 @@ export function renderWritings(root: HTMLElement, params: URLSearchParams): void
     const cards = BOOKS.filter((b) => b[0] === id).map(([, bid, title, author, date, trad, words, refs]) => `
       <a class="card book" href="${href('reader', { work: bid })}">
         <div class="cover" style="background: ${color}"><small>${esc(date)}</small><b>${esc(title)}</b></div>
-        <div class="info"><b>${esc(author)}</b><span>${esc(trad)}</span><span>${words} words · ${refs} Bible references</span><span class="go">Read the book →</span></div>
+        <div class="info"><b>${esc(writer(author))}</b><span>${esc(trad)}</span><span>${words} words · ${refs} Bible references</span><span class="go">Read the book →</span></div>
       </a>`).join('');
     return `<section class="era" style="display: flex; flex-direction: column; gap: 14px">
       <div class="row" style="align-items: baseline; gap: 12px"><h2>${esc(label)}</h2><span style="font-size: 14px; color: var(--faint)">${esc(range)}</span></div>

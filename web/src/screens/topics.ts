@@ -1,4 +1,5 @@
 import { api } from '../api';
+import { book, writer } from '../writers';
 import { editable, editingOn, wireEditing } from '../edit';
 import { mdParas } from '../markdown';
 import { type Lang, langSwitch, pickLang, tamilCredit } from '../lang';
@@ -86,7 +87,7 @@ export async function renderTopics(root: HTMLElement, params: URLSearchParams): 
     const open = toggled.has(tp.id) ? toggled.get(tp.id)! : tp.id === focus;
     const verses = (tp.ans?.scripture || []).map((r) => `<a class="chip" href="${href('reference', { exact: r })}">${esc(r)}</a>`).join('');
     const refs = tp.refs.map((r) => `<a class="ref-row" href="${href('reader', { work: r.workId, quote: r.quote })}">
-        <span class="who"><b>${esc(r.author)}</b><span>${esc(r.place ? `${r.work} · ${r.place}` : r.work)}</span></span>
+        <span class="who"><b>${esc(writer(r.author))}</b><span>${esc(r.place ? `${book(r.work, r.workId)} · ${r.place}` : book(r.work, r.workId))}</span></span>
         <span class="quote">“${esc(tr(r.quote, r.quote_ta))}”</span></a>`).join('');
     const answer = ta && tp.ans?.text_ta ? mdParas(tp.ans.text_ta, 'read-text')
       : tp.ans ? editable(`topic:${tp.id}:answer`, mdParas(tp.ans.text, 'read-text'), { text: tp.ans.text, edited: tp.edited?.answer, label: 'answer' }) : '';

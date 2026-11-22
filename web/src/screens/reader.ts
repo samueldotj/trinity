@@ -1,4 +1,5 @@
 import { api } from '../api';
+import { writer } from '../writers';
 import { esc, failure, href, icon, loading, navigate } from '../util';
 
 interface Toc { id: string; title: string; author: string; date: string; translator: string; edition: string; source: string; toc: { t: string; d: number; r: string }[] }
@@ -86,7 +87,7 @@ export async function renderReader(root: HTMLElement, params: URLSearchParams): 
       <div class="inner">
         <div class="row" style="gap: 10px 20px">
           <a class="back" href="${href('writings')}" id="rd-back">${icon.left}${canGoBack ? 'Back' : 'All early writings'}</a>
-          <span class="reader-title"><b>${esc(toc.title)}</b><small>${esc(toc.author)} · ${esc(toc.date)}</small></span>
+          <span class="reader-title"><b>${esc(toc.title)}</b><small>${esc(writer(toc.author))} · ${esc(toc.date)}</small></span>
         </div>
         <div class="row" style="gap: 8px">
           <button type="button" class="bar-btn" id="rd-toc" aria-expanded="${tocOpen}" aria-controls="rd-toc-panel"><svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14 M3 10h14 M3 15h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Contents</button>
