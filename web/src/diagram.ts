@@ -3,7 +3,7 @@
 export function spec(n: number): any {
   // hi: Persons lit (F S P G); spk: [which Persons join the centre, label]; e: [from, to, label, arrows '>' '<' '<>' '', kind]
   // kinds: is (solid dark), not (dashed grey), rel (blue arrow), eq (solid grey)
-  // ring: eternal | spirit | unchanging | invisible | everywhere | single; box: a thing outside God; split: Son shown as God and man
+  // ring: eternal (a straight line, not a circle) | spirit | unchanging | invisible | everywhere | single; box: a thing outside God; split: Son shown as God and man
   const not3 = [['F', 'S', 'is not', '', 'not'], ['F', 'P', 'is not', '', 'not'], ['S', 'P', 'is not', '', 'not']];
   const eq3 = (l) => [['F', 'S', l, '', 'eq'], ['F', 'P', l, '', 'eq'], ['S', 'P', l, '', 'eq']];
   const S = {
@@ -129,8 +129,18 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
     const rx = compact ? r * 186 / 250 : r;
     return 'position: absolute; z-index: 0; box-sizing: border-box; left: ' + (cx - rx) + 'px; top: ' + (cy - r) + 'px; width: ' + 2 * rx + 'px; height: ' + 2 * r + 'px; border-radius: 50%; ' + extra;
   };
+  // Eternity is drawn as a straight line with an arrow at each end, never as a circle, so that it
+  // cannot be read as time going round in cycles. It runs across the foot of the drawing, under its label.
+  const lineY = 436, lx0 = compact ? 8 : 12, lx1 = 2 * cx - lx0;
+  const head = (x, side) => 'position: absolute; z-index: 0; left: ' + (side === 'left' ? x : x - 16) + 'px; top: ' + (lineY - 10) + 'px; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; ' +
+    (side === 'left' ? 'border-right' : 'border-left') + ': 16px solid #33449A;';
+  const LINES = {
+    eternal: [
+      'position: absolute; z-index: 0; left: ' + (lx0 + 12) + 'px; top: ' + (lineY - 2) + 'px; width: ' + (lx1 - lx0 - 24) + 'px; height: 4px; background: #33449A;',
+      head(lx0, 'left'), head(lx1, 'right')
+    ]
+  };
   const RINGS = {
-    eternal: [[250, 'border: 4px solid #33449A;']],
     spirit: [[250, 'border: 3px dotted #33449A;']],
     unchanging: [[250, 'border: 6px double #33449A;']],
     invisible: [[250, 'border: 2px dashed #9AA0AD;']],
@@ -146,7 +156,7 @@ export function draw(n: number, fallbackNotes: string[], caption = '', compact =
   const alt = 'Diagram: ' + caption;
   return {
     alt, cap: caption, edges, labels, fs,
-    rings: (RINGS[sp.ring] || []).map(([r, css, cy]) => ({ style: ringBase(r, css, cy) })),
+    rings: LINES[sp.ring] ? LINES[sp.ring].map((style) => ({ style })) : (RINGS[sp.ring] || []).map(([r, css, cy]) => ({ style: ringBase(r, css, cy) })),
     hasRingLabel: !!sp.ring, ringLabel: RLABEL[sp.ring] || '',
     ringLabelStyle: 'position: absolute; z-index: 3; left: ' + cx + 'px; top: 436px; transform: translate(-50%, -50%); white-space: nowrap; padding: 3px 10px; border-radius: 999px; background: #FFFFFF; border: 1px solid #33449A; color: #33449A; font-size: ' + fs.label + 'px; font-weight: 600;',
     nF: node('F', '#2E5AAC', '#2E5AAC', '#FFFFFF'),
